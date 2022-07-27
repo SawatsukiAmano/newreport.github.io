@@ -73,6 +73,30 @@
       </tags>
   </entry>
   <entry>
+    <title>图床&quot;永久链&quot;</title>
+    <url>/newreport.github.io/2021/01/06/2021-01-06%20%E5%9B%BE%E5%BA%8A%E6%90%AD%E5%BB%BA/</url>
+    <content><![CDATA[<p>&amp;#8195;&amp;#8195;需要准备对象存储及域名，理论”永久链”图床，可在各云服务商或个人服务器间迁移数据<br>&amp;#8195;&amp;#8195;如果你是国外的域名，markdown是国内使用，需要绑定国内第三方dns，这里以<a href="https://www.namesilo.com/">namesilo</a>域名绑定<a href="https://www.dnspod.cn/">dnspod</a>为例。</p>
+<span id="more"></span>  
+
+<h1 id="namesilo配置-国内备案域名可跳过此步骤"><a href="#namesilo配置-国内备案域名可跳过此步骤" class="headerlink" title="namesilo配置(国内备案域名可跳过此步骤)"></a>namesilo配置(国内备案域名可跳过此步骤)</h1><p><img src="https://img.自新世界.com/blog/cn/281BCA8978E663D1AA05423137C07932E35E89FDDDCA7A23445455A7723F219C.png"></p>
+<p>进入域名管理页面<br>将原有三个dns删除替换为以下内容，提交</p>
+<blockquote>
+<p>f1g1ns1.dnspod.net<br>  f1g1ns2.dnspod.net</p>
+</blockquote>
+<p>返回域名管理页面，点击域名所在行右侧蓝色地球，进入域名解析页面，删除所有的解析内容即可。</p>
+<h1 id="dnspod配置"><a href="#dnspod配置" class="headerlink" title="dnspod配置"></a>dnspod配置</h1><p>进入dnspod管理页面，添加你的域名，点击dns刷新<br>创建公有读私有写存储桶，并复制存储桶域名<br><img src="https://img.自新世界.com/blog/cn/5C3AE90E330110085424836989AC2F904D961280A441B32B909654094DCFE2B2.png" alt="添加自定义源站域名"><br>到dnspod解析页面，添加CNAME解析<br>需要注意的是，namesilo的dns可能需要等几十分钟才会刷新，在此之前访问域名可能是到达不了存储桶的<br><img src="https://img.自新世界.com/blog/cn/E315A71C14F3F94218BC781296F5F37A1B1996BCEF1D797ECA20A64597AFD18F.png"></p>
+<h1 id="ssl证书以及防盗链设置"><a href="#ssl证书以及防盗链设置" class="headerlink" title="ssl证书以及防盗链设置"></a>ssl证书以及防盗链设置</h1><p>在dnspod或者腾讯云域名注册界面申请免费ssl证书并下载，解压。在存储桶域名绑定页面进行证书绑定，用记事本打开Nginx里的文本并复制到对应区域<br><img src="https://img.自新世界.com/blog/cn/6B12C37D45ECE58C98F26DA67CDFC60F73ADB472ECBD37D20EFC839F64BD4A39.png"></p>
+<p>测试一下，不挂t的情况下自定义域名可以访问图片，以后的迁移只需copy文件，域名重新对应一下CNAME即可，markdown文章的图片地址不需要变动。<br><img src="https://img.自新世界.com/blog/cn/4DEED59F8DC599B65736DFA4B81C4DB1C4028557408CFBA90B1691DDDE70D6EB.png"></p>
+<p>存储桶防盗链设置如下，配置完防盗链之后本地预览和网页地址栏输入是访问不了对象存储的，只有白名单内的ip才能访问<br><img src="https://img.自新世界.com/blog/cn/358EF065F5956500257330DDE1493957881F0BD1C0294CB5E6115CDF7805CE40.png"></p>
+]]></content>
+      <categories>
+        <category>博客搭建</category>
+      </categories>
+      <tags>
+        <tag>对象存储</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>网盘搭建</title>
     <url>/newreport.github.io/2021/01/07/2021-01-07%20%E7%BD%91%E7%9B%98%E6%90%AD%E5%BB%BA/</url>
     <content><![CDATA[<h1 id="NAS"><a href="#NAS" class="headerlink" title="NAS"></a>NAS</h1><p>demo：null<br>优势：没有审查，自用隐私安全性最高</p>
@@ -98,30 +122,6 @@
       <tags>
         <tag>对象存储</tag>
         <tag>待补充</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>图床&quot;永久链&quot;</title>
-    <url>/newreport.github.io/2021/01/06/2021-01-06%20%E5%9B%BE%E5%BA%8A%E6%90%AD%E5%BB%BA/</url>
-    <content><![CDATA[<p>&amp;#8195;&amp;#8195;需要准备对象存储及域名，理论”永久链”图床，可在各云服务商或个人服务器间迁移数据<br>&amp;#8195;&amp;#8195;如果你是国外的域名，markdown是国内使用，需要绑定国内第三方dns，这里以<a href="https://www.namesilo.com/">namesilo</a>域名绑定<a href="https://www.dnspod.cn/">dnspod</a>为例。</p>
-<span id="more"></span>  
-
-<h1 id="namesilo配置-国内备案域名可跳过此步骤"><a href="#namesilo配置-国内备案域名可跳过此步骤" class="headerlink" title="namesilo配置(国内备案域名可跳过此步骤)"></a>namesilo配置(国内备案域名可跳过此步骤)</h1><p><img src="https://img.自新世界.com/blog/cn/281BCA8978E663D1AA05423137C07932E35E89FDDDCA7A23445455A7723F219C.png"></p>
-<p>进入域名管理页面<br>将原有三个dns删除替换为以下内容，提交</p>
-<blockquote>
-<p>f1g1ns1.dnspod.net<br>  f1g1ns2.dnspod.net</p>
-</blockquote>
-<p>返回域名管理页面，点击域名所在行右侧蓝色地球，进入域名解析页面，删除所有的解析内容即可。</p>
-<h1 id="dnspod配置"><a href="#dnspod配置" class="headerlink" title="dnspod配置"></a>dnspod配置</h1><p>进入dnspod管理页面，添加你的域名，点击dns刷新<br>创建公有读私有写存储桶，并复制存储桶域名<br><img src="https://img.自新世界.com/blog/cn/5C3AE90E330110085424836989AC2F904D961280A441B32B909654094DCFE2B2.png" alt="添加自定义源站域名"><br>到dnspod解析页面，添加CNAME解析<br>需要注意的是，namesilo的dns可能需要等几十分钟才会刷新，在此之前访问域名可能是到达不了存储桶的<br><img src="https://img.自新世界.com/blog/cn/E315A71C14F3F94218BC781296F5F37A1B1996BCEF1D797ECA20A64597AFD18F.png"></p>
-<h1 id="ssl证书以及防盗链设置"><a href="#ssl证书以及防盗链设置" class="headerlink" title="ssl证书以及防盗链设置"></a>ssl证书以及防盗链设置</h1><p>在dnspod或者腾讯云域名注册界面申请免费ssl证书并下载，解压。在存储桶域名绑定页面进行证书绑定，用记事本打开Nginx里的文本并复制到对应区域<br><img src="https://img.自新世界.com/blog/cn/6B12C37D45ECE58C98F26DA67CDFC60F73ADB472ECBD37D20EFC839F64BD4A39.png"></p>
-<p>测试一下，不挂t的情况下自定义域名可以访问图片，以后的迁移只需copy文件，域名重新对应一下CNAME即可，markdown文章的图片地址不需要变动。<br><img src="https://img.自新世界.com/blog/cn/4DEED59F8DC599B65736DFA4B81C4DB1C4028557408CFBA90B1691DDDE70D6EB.png"></p>
-<p>存储桶防盗链设置如下，配置完防盗链之后本地预览和网页地址栏输入是访问不了对象存储的，只有白名单内的ip才能访问<br><img src="https://img.自新世界.com/blog/cn/358EF065F5956500257330DDE1493957881F0BD1C0294CB5E6115CDF7805CE40.png"></p>
-]]></content>
-      <categories>
-        <category>博客搭建</category>
-      </categories>
-      <tags>
-        <tag>对象存储</tag>
       </tags>
   </entry>
   <entry>
@@ -154,54 +154,6 @@
 ]]></content>
       <categories>
         <category>Kubernetes</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>英语词性</title>
-    <url>/newreport.github.io/2021/06/23/english/2021-06-23-2%20%E8%8B%B1%E8%AF%AD%E8%AF%8D%E6%80%A7/</url>
-    <content><![CDATA[<p>定义：词性又称为词类，英语单词根据其在句中的作用，分为<strong>十大类</strong></p>
-<span id="more"></span>  
-
-<h1 id="名词-n"><a href="#名词-n" class="headerlink" title="名词(n.)"></a>名词(n.)</h1><ul>
-<li>作用：表示事务的名称</li>
-<li>分类：<ul>
-<li>专有名词：指<strong>特定或独一无二的人或物</strong>，表示人、地方、事物、组织等的专有名词，，第一个首字母大写。例：Mary、Jane、China</li>
-<li>普通名词：指某类人、事物或抽象概念的名称<ul>
-<li>可数名词<ul>
-<li>个体名词：用来指单人或事物的名词。例：book、key</li>
-<li>集体名词：用来指一群人或一些事物总称的名词。例：people、army</li>
-</ul>
-</li>
-<li>不可数名词<ul>
-<li>物质名词：用来表示物质的名称，包括材料、液体、气体等具体实物的名词。例：water、glass</li>
-<li>抽象名词：用来指人或事物的品质、情感、状态、动作等抽象概念的名词。例：love、anger</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>名词由单数变复数的基本方法</li>
-</ul>
-<ol>
-<li>在单数名词词尾 +s。例：bag-bags、car-cars</li>
-<li>s,x,sh,ch结尾和以辅音字母+o结尾的名词 +es。例：watch-watches、potati-potatoes、tomato-tomatoes、echo-echoes、hero-heroes</li>
-<li>以元音字母 +o 结尾，部分以辅音字母 +o 结尾的外来名词或缩写名词 +s。例：photo-photos、piano-pianos、bamboo-bamboos、zoo-zoos</li>
-<li>以辅音字母 +y 结尾，变 y 为 i 再 +es。例：baby-babies、city-cities</li>
-<li>以元音字母 +y 结尾， +s。例：boy-boys、toy-toys</li>
-<li>以 f、fe 结尾，变 f、fe 为 v 再 +es。例：leaf-leaves、shelf-shelves、wife-wives</li>
-<li>不规则变化。例：man-men、woman-women、child-children、sheep-sheep</li>
-</ol>
-<h1 id="代词-pron"><a href="#代词-pron" class="headerlink" title="代词(pron.)"></a>代词(pron.)</h1><ul>
-<li>作用：为了避免重复用来代替名词或名词词组的词</li>
-<li>补充：<ul>
-<li></li>
-</ul>
-</li>
-</ul>
-]]></content>
-      <categories>
-        <category>English</category>
       </categories>
   </entry>
   <entry>
@@ -395,6 +347,54 @@
       </categories>
   </entry>
   <entry>
+    <title>英语词性</title>
+    <url>/newreport.github.io/2021/06/23/english/2021-06-23-2%20%E8%8B%B1%E8%AF%AD%E8%AF%8D%E6%80%A7/</url>
+    <content><![CDATA[<p>定义：词性又称为词类，英语单词根据其在句中的作用，分为<strong>十大类</strong></p>
+<span id="more"></span>  
+
+<h1 id="名词-n"><a href="#名词-n" class="headerlink" title="名词(n.)"></a>名词(n.)</h1><ul>
+<li>作用：表示事务的名称</li>
+<li>分类：<ul>
+<li>专有名词：指<strong>特定或独一无二的人或物</strong>，表示人、地方、事物、组织等的专有名词，，第一个首字母大写。例：Mary、Jane、China</li>
+<li>普通名词：指某类人、事物或抽象概念的名称<ul>
+<li>可数名词<ul>
+<li>个体名词：用来指单人或事物的名词。例：book、key</li>
+<li>集体名词：用来指一群人或一些事物总称的名词。例：people、army</li>
+</ul>
+</li>
+<li>不可数名词<ul>
+<li>物质名词：用来表示物质的名称，包括材料、液体、气体等具体实物的名词。例：water、glass</li>
+<li>抽象名词：用来指人或事物的品质、情感、状态、动作等抽象概念的名词。例：love、anger</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>名词由单数变复数的基本方法</li>
+</ul>
+<ol>
+<li>在单数名词词尾 +s。例：bag-bags、car-cars</li>
+<li>s,x,sh,ch结尾和以辅音字母+o结尾的名词 +es。例：watch-watches、potati-potatoes、tomato-tomatoes、echo-echoes、hero-heroes</li>
+<li>以元音字母 +o 结尾，部分以辅音字母 +o 结尾的外来名词或缩写名词 +s。例：photo-photos、piano-pianos、bamboo-bamboos、zoo-zoos</li>
+<li>以辅音字母 +y 结尾，变 y 为 i 再 +es。例：baby-babies、city-cities</li>
+<li>以元音字母 +y 结尾， +s。例：boy-boys、toy-toys</li>
+<li>以 f、fe 结尾，变 f、fe 为 v 再 +es。例：leaf-leaves、shelf-shelves、wife-wives</li>
+<li>不规则变化。例：man-men、woman-women、child-children、sheep-sheep</li>
+</ol>
+<h1 id="代词-pron"><a href="#代词-pron" class="headerlink" title="代词(pron.)"></a>代词(pron.)</h1><ul>
+<li>作用：为了避免重复用来代替名词或名词词组的词</li>
+<li>补充：<ul>
+<li></li>
+</ul>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>English</category>
+      </categories>
+  </entry>
+  <entry>
     <title></title>
     <url>/newreport.github.io/2022/07/03/%E9%A9%AC%E5%85%8B%E6%80%9D%E4%B8%BB%E4%B9%89%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86/%E9%A9%AC%E5%85%8B%E6%80%9D%E4%B8%BB%E4%B9%89%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86%E4%B8%B2%E8%AE%B2/</url>
     <content><![CDATA[]]></content>
@@ -484,6 +484,163 @@
 <li>Linux的起源</li>
 <li>红帽的各个发行版</li>
 <li>Linux的基本原则</li>
+</ul>
+]]></content>
+      <categories>
+        <category>linux for rhel8</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>Linux的基本使用</title>
+    <url>/newreport.github.io/2021/01/02/rhel8/2021-01-02%2002%E3%80%81Linux%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/</url>
+    <content><![CDATA[<h1 id="学习目标"><a href="#学习目标" class="headerlink" title="学习目标"></a>学习目标</h1><ul>
+<li>登录Red Hat Enterprise Linux系统</li>
+<li>从控制台启动图形</li>
+<li>执行简单的linux命令</li>
+<li>编辑纯文本文件</li>
+<li>掌握root特性</li>
+</ul>
+<h1 id="简单的命令"><a href="#简单的命令" class="headerlink" title="简单的命令"></a>简单的命令</h1><table>
+<thead>
+<tr>
+<th>命令</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>date</td>
+<td>显示日期</td>
+</tr>
+<tr>
+<td>cal</td>
+<td>显示日历</td>
+</tr>
+<tr>
+<td>passwd</td>
+<td>修改密码</td>
+</tr>
+<tr>
+<td>id</td>
+<td>显示当前用户信息</td>
+</tr>
+<tr>
+<td>useradd</td>
+<td>创建用户</td>
+</tr>
+<tr>
+<td>su -</td>
+<td>切换用户</td>
+</tr>
+<tr>
+<td>vim</td>
+<td>文本编辑器的使用</td>
+</tr>
+</tbody></table>
+<span id="more"></span>  
+
+<h1 id="历史记录（history）"><a href="#历史记录（history）" class="headerlink" title="历史记录（history）"></a>历史记录（history）</h1><table>
+<thead>
+<tr>
+<th>操作</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>History</td>
+<td>查看所有历史记录</td>
+</tr>
+<tr>
+<td>history N</td>
+<td>列出最近的N条历史记录</td>
+</tr>
+<tr>
+<td>!N</td>
+<td>调用第N条历史记录</td>
+</tr>
+<tr>
+<td>!string</td>
+<td>调用最近一条以string开头的命令</td>
+</tr>
+<tr>
+<td>!$</td>
+<td>调用最后一条命令</td>
+</tr>
+<tr>
+<td>上下键</td>
+<td>查找历史记录</td>
+</tr>
+<tr>
+<td>Ctrl+r</td>
+<td>搜索历史记录</td>
+</tr>
+<tr>
+<td>Alt+.</td>
+<td>调用上一条命令的最后一个参数</td>
+</tr>
+<tr>
+<td>Esc+.</td>
+<td>调用上一条命令的最后一个参数</td>
+</tr>
+</tbody></table>
+<h1 id="图形界面"><a href="#图形界面" class="headerlink" title="图形界面"></a>图形界面</h1><p>&amp;#8195;&amp;#8195;如果最开始没有装GUI图形界面，还需要装X-window，有两种桌面工具 GNOME和KDE<br>&amp;#8195;&amp;#8195;控制台（以前）：键盘、鼠标、显示器等硬件<br>&amp;#8195;&amp;#8195;控制台（现在）：即命令行、图形界面等操作界面</p>
+<ul>
+<li>典型的Linux系统运行5个虚拟控制台和1个图形控制台</li>
+<li>按CTRL-ALT-F1键可进入图形控制台</li>
+<li>使用CTRL-ALT-F[2-6]键可切换不同虚拟控制台</li>
+<li>在虚拟控制台执行startx可以运行图形，前提是装了图形界面（startx没有切换控制台，只是在当前</li>
+<li>控制台开启了图形应用程序）</li>
+</ul>
+<h1 id="gnome-terminal桌面工具"><a href="#gnome-terminal桌面工具" class="headerlink" title="gnome-terminal桌面工具"></a>gnome-terminal桌面工具</h1><table>
+<thead>
+<tr>
+<th>操作</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Ctrl-Shift-t</td>
+<td>创建标签页</td>
+</tr>
+<tr>
+<td>Ctrl-PgUp&#x2F;PgDn</td>
+<td>在标签页之间切换</td>
+</tr>
+<tr>
+<td>Alt+[123…]</td>
+<td>在标签页之间切换</td>
+</tr>
+<tr>
+<td>Ctrl-Shift-c</td>
+<td>复制已选内容</td>
+</tr>
+<tr>
+<td>Ctrl-Shift-v</td>
+<td>粘贴复制的内容</td>
+</tr>
+<tr>
+<td>Shift-PgUp&#x2F;PgDn</td>
+<td>在标签页上下滚动</td>
+</tr>
+<tr>
+<td>Ctrl+l</td>
+<td>清屏</td>
+</tr>
+<tr>
+<td>Ctrl+Shift++</td>
+<td>放大</td>
+</tr>
+<tr>
+<td>Ctrl+-</td>
+<td>缩小</td>
+</tr>
+</tbody></table>
+<h1 id="单元小结"><a href="#单元小结" class="headerlink" title="单元小结"></a>单元小结</h1><ul>
+<li>登录操作系统</li>
+<li>掌握桌面图形工具的使用</li>
+<li>root用户的本质</li>
+<li>一些简单命令的执行</li>
+<li>tab的使用</li>
+<li>历史记录的调用</li>
 </ul>
 ]]></content>
       <categories>
@@ -686,163 +843,6 @@
 <li>man帮助使用</li>
 <li>系统内其他帮助资源</li>
 <li>红帽在线文档查阅</li>
-</ul>
-]]></content>
-      <categories>
-        <category>linux for rhel8</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>Linux的基本使用</title>
-    <url>/newreport.github.io/2021/01/02/rhel8/2021-01-02%2002%E3%80%81Linux%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/</url>
-    <content><![CDATA[<h1 id="学习目标"><a href="#学习目标" class="headerlink" title="学习目标"></a>学习目标</h1><ul>
-<li>登录Red Hat Enterprise Linux系统</li>
-<li>从控制台启动图形</li>
-<li>执行简单的linux命令</li>
-<li>编辑纯文本文件</li>
-<li>掌握root特性</li>
-</ul>
-<h1 id="简单的命令"><a href="#简单的命令" class="headerlink" title="简单的命令"></a>简单的命令</h1><table>
-<thead>
-<tr>
-<th>命令</th>
-<th>功能</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>date</td>
-<td>显示日期</td>
-</tr>
-<tr>
-<td>cal</td>
-<td>显示日历</td>
-</tr>
-<tr>
-<td>passwd</td>
-<td>修改密码</td>
-</tr>
-<tr>
-<td>id</td>
-<td>显示当前用户信息</td>
-</tr>
-<tr>
-<td>useradd</td>
-<td>创建用户</td>
-</tr>
-<tr>
-<td>su -</td>
-<td>切换用户</td>
-</tr>
-<tr>
-<td>vim</td>
-<td>文本编辑器的使用</td>
-</tr>
-</tbody></table>
-<span id="more"></span>  
-
-<h1 id="历史记录（history）"><a href="#历史记录（history）" class="headerlink" title="历史记录（history）"></a>历史记录（history）</h1><table>
-<thead>
-<tr>
-<th>操作</th>
-<th>功能</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>History</td>
-<td>查看所有历史记录</td>
-</tr>
-<tr>
-<td>history N</td>
-<td>列出最近的N条历史记录</td>
-</tr>
-<tr>
-<td>!N</td>
-<td>调用第N条历史记录</td>
-</tr>
-<tr>
-<td>!string</td>
-<td>调用最近一条以string开头的命令</td>
-</tr>
-<tr>
-<td>!$</td>
-<td>调用最后一条命令</td>
-</tr>
-<tr>
-<td>上下键</td>
-<td>查找历史记录</td>
-</tr>
-<tr>
-<td>Ctrl+r</td>
-<td>搜索历史记录</td>
-</tr>
-<tr>
-<td>Alt+.</td>
-<td>调用上一条命令的最后一个参数</td>
-</tr>
-<tr>
-<td>Esc+.</td>
-<td>调用上一条命令的最后一个参数</td>
-</tr>
-</tbody></table>
-<h1 id="图形界面"><a href="#图形界面" class="headerlink" title="图形界面"></a>图形界面</h1><p>&amp;#8195;&amp;#8195;如果最开始没有装GUI图形界面，还需要装X-window，有两种桌面工具 GNOME和KDE<br>&amp;#8195;&amp;#8195;控制台（以前）：键盘、鼠标、显示器等硬件<br>&amp;#8195;&amp;#8195;控制台（现在）：即命令行、图形界面等操作界面</p>
-<ul>
-<li>典型的Linux系统运行5个虚拟控制台和1个图形控制台</li>
-<li>按CTRL-ALT-F1键可进入图形控制台</li>
-<li>使用CTRL-ALT-F[2-6]键可切换不同虚拟控制台</li>
-<li>在虚拟控制台执行startx可以运行图形，前提是装了图形界面（startx没有切换控制台，只是在当前</li>
-<li>控制台开启了图形应用程序）</li>
-</ul>
-<h1 id="gnome-terminal桌面工具"><a href="#gnome-terminal桌面工具" class="headerlink" title="gnome-terminal桌面工具"></a>gnome-terminal桌面工具</h1><table>
-<thead>
-<tr>
-<th>操作</th>
-<th>功能</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>Ctrl-Shift-t</td>
-<td>创建标签页</td>
-</tr>
-<tr>
-<td>Ctrl-PgUp&#x2F;PgDn</td>
-<td>在标签页之间切换</td>
-</tr>
-<tr>
-<td>Alt+[123…]</td>
-<td>在标签页之间切换</td>
-</tr>
-<tr>
-<td>Ctrl-Shift-c</td>
-<td>复制已选内容</td>
-</tr>
-<tr>
-<td>Ctrl-Shift-v</td>
-<td>粘贴复制的内容</td>
-</tr>
-<tr>
-<td>Shift-PgUp&#x2F;PgDn</td>
-<td>在标签页上下滚动</td>
-</tr>
-<tr>
-<td>Ctrl+l</td>
-<td>清屏</td>
-</tr>
-<tr>
-<td>Ctrl+Shift++</td>
-<td>放大</td>
-</tr>
-<tr>
-<td>Ctrl+-</td>
-<td>缩小</td>
-</tr>
-</tbody></table>
-<h1 id="单元小结"><a href="#单元小结" class="headerlink" title="单元小结"></a>单元小结</h1><ul>
-<li>登录操作系统</li>
-<li>掌握桌面图形工具的使用</li>
-<li>root用户的本质</li>
-<li>一些简单命令的执行</li>
-<li>tab的使用</li>
-<li>历史记录的调用</li>
 </ul>
 ]]></content>
       <categories>
