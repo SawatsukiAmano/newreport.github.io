@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>NewReport</title>
-  <icon>https://newreport.github.io/newreport.github.io/icon.png</icon>
+  <icon>https://newreport.github.io/icon.png</icon>
   
-  <link href="https://newreport.github.io/newreport.github.io/atom.xml" rel="self"/>
+  <link href="https://newreport.github.io/atom.xml" rel="self"/>
   
-  <link href="https://newreport.github.io/newreport.github.io/"/>
+  <link href="https://newreport.github.io/"/>
   <updated>2022-07-27T16:14:20.679Z</updated>
-  <id>https://newreport.github.io/newreport.github.io/</id>
+  <id>https://newreport.github.io/</id>
   
   <author>
     <name>haruki</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>Kubernetes1.24部署</title>
-    <link href="https://newreport.github.io/newreport.github.io/2022/07/27/Kubernetes/2022-07-27%20Kubernetes%201.24%E9%83%A8%E7%BD%B2/"/>
-    <id>https://newreport.github.io/newreport.github.io/2022/07/27/Kubernetes/2022-07-27%20Kubernetes%201.24%E9%83%A8%E7%BD%B2/</id>
+    <link href="https://newreport.github.io/2022/07/27/Kubernetes/2022-07-27%20Kubernetes%201.24%E9%83%A8%E7%BD%B2/"/>
+    <id>https://newreport.github.io/2022/07/27/Kubernetes/2022-07-27%20Kubernetes%201.24%E9%83%A8%E7%BD%B2/</id>
     <published>2022-07-26T16:00:01.000Z</published>
     <updated>2022-07-27T16:14:20.679Z</updated>
     
@@ -33,15 +33,15 @@
     
     
     
-    <category term="Kubernetes" scheme="https://newreport.github.io/newreport.github.io/categories/Kubernetes/"/>
+    <category term="Kubernetes" scheme="https://newreport.github.io/categories/Kubernetes/"/>
     
     
   </entry>
   
   <entry>
     <title></title>
-    <link href="https://newreport.github.io/newreport.github.io/2022/07/03/%E9%A9%AC%E5%85%8B%E6%80%9D%E4%B8%BB%E4%B9%89%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86/%E9%A9%AC%E5%85%8B%E6%80%9D%E4%B8%BB%E4%B9%89%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86%E4%B8%B2%E8%AE%B2/"/>
-    <id>https://newreport.github.io/newreport.github.io/2022/07/03/%E9%A9%AC%E5%85%8B%E6%80%9D%E4%B8%BB%E4%B9%89%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86/%E9%A9%AC%E5%85%8B%E6%80%9D%E4%B8%BB%E4%B9%89%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86%E4%B8%B2%E8%AE%B2/</id>
+    <link href="https://newreport.github.io/2022/07/03/%E9%A9%AC%E5%85%8B%E6%80%9D%E4%B8%BB%E4%B9%89%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86/%E9%A9%AC%E5%85%8B%E6%80%9D%E4%B8%BB%E4%B9%89%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86%E4%B8%B2%E8%AE%B2/"/>
+    <id>https://newreport.github.io/2022/07/03/%E9%A9%AC%E5%85%8B%E6%80%9D%E4%B8%BB%E4%B9%89%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86/%E9%A9%AC%E5%85%8B%E6%80%9D%E4%B8%BB%E4%B9%89%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86%E4%B8%B2%E8%AE%B2/</id>
     <published>2022-07-02T18:18:47.002Z</published>
     <updated>2021-07-03T06:44:18.000Z</updated>
     
@@ -53,8 +53,8 @@
   
   <entry>
     <title>无限容量相册</title>
-    <link href="https://newreport.github.io/newreport.github.io/2021/06/28/2021-06-28%20%E6%97%A0%E9%99%90%E5%AE%B9%E9%87%8F%E7%9B%B8%E5%86%8C/"/>
-    <id>https://newreport.github.io/newreport.github.io/2021/06/28/2021-06-28%20%E6%97%A0%E9%99%90%E5%AE%B9%E9%87%8F%E7%9B%B8%E5%86%8C/</id>
+    <link href="https://newreport.github.io/2021/06/28/2021-06-28%20%E6%97%A0%E9%99%90%E5%AE%B9%E9%87%8F%E7%9B%B8%E5%86%8C/"/>
+    <id>https://newreport.github.io/2021/06/28/2021-06-28%20%E6%97%A0%E9%99%90%E5%AE%B9%E9%87%8F%E7%9B%B8%E5%86%8C/</id>
     <published>2021-06-27T16:00:00.000Z</published>
     <updated>2022-07-02T18:49:54.807Z</updated>
     
@@ -69,19 +69,19 @@
     
     
     
-    <category term="杂物箱" scheme="https://newreport.github.io/newreport.github.io/categories/%E6%9D%82%E7%89%A9%E7%AE%B1/"/>
+    <category term="杂物箱" scheme="https://newreport.github.io/categories/%E6%9D%82%E7%89%A9%E7%AE%B1/"/>
     
     
-    <category term="对象存储" scheme="https://newreport.github.io/newreport.github.io/tags/%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8/"/>
+    <category term="对象存储" scheme="https://newreport.github.io/tags/%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8/"/>
     
-    <category term="待补充" scheme="https://newreport.github.io/newreport.github.io/tags/%E5%BE%85%E8%A1%A5%E5%85%85/"/>
+    <category term="待补充" scheme="https://newreport.github.io/tags/%E5%BE%85%E8%A1%A5%E5%85%85/"/>
     
   </entry>
   
   <entry>
     <title>附页</title>
-    <link href="https://newreport.github.io/newreport.github.io/2021/06/23/english/2021-06-23-3%20%E9%99%84%E9%A1%B5/"/>
-    <id>https://newreport.github.io/newreport.github.io/2021/06/23/english/2021-06-23-3%20%E9%99%84%E9%A1%B5/</id>
+    <link href="https://newreport.github.io/2021/06/23/english/2021-06-23-3%20%E9%99%84%E9%A1%B5/"/>
+    <id>https://newreport.github.io/2021/06/23/english/2021-06-23-3%20%E9%99%84%E9%A1%B5/</id>
     <published>2021-06-22T16:00:02.000Z</published>
     <updated>2021-06-23T12:43:21.000Z</updated>
     
@@ -96,15 +96,15 @@
     
     
     
-    <category term="English" scheme="https://newreport.github.io/newreport.github.io/categories/English/"/>
+    <category term="English" scheme="https://newreport.github.io/categories/English/"/>
     
     
   </entry>
   
   <entry>
     <title>英语词性</title>
-    <link href="https://newreport.github.io/newreport.github.io/2021/06/23/english/2021-06-23-2%20%E8%8B%B1%E8%AF%AD%E8%AF%8D%E6%80%A7/"/>
-    <id>https://newreport.github.io/newreport.github.io/2021/06/23/english/2021-06-23-2%20%E8%8B%B1%E8%AF%AD%E8%AF%8D%E6%80%A7/</id>
+    <link href="https://newreport.github.io/2021/06/23/english/2021-06-23-2%20%E8%8B%B1%E8%AF%AD%E8%AF%8D%E6%80%A7/"/>
+    <id>https://newreport.github.io/2021/06/23/english/2021-06-23-2%20%E8%8B%B1%E8%AF%AD%E8%AF%8D%E6%80%A7/</id>
     <published>2021-06-22T16:00:01.000Z</published>
     <updated>2021-06-23T12:27:09.000Z</updated>
     
@@ -113,15 +113,15 @@
     
     
     
-    <category term="English" scheme="https://newreport.github.io/newreport.github.io/categories/English/"/>
+    <category term="English" scheme="https://newreport.github.io/categories/English/"/>
     
     
   </entry>
   
   <entry>
     <title>列表简介</title>
-    <link href="https://newreport.github.io/newreport.github.io/2021/06/23/python3/2021-06-23%2003%E3%80%81%E5%88%97%E8%A1%A8%E7%AE%80%E4%BB%8B/"/>
-    <id>https://newreport.github.io/newreport.github.io/2021/06/23/python3/2021-06-23%2003%E3%80%81%E5%88%97%E8%A1%A8%E7%AE%80%E4%BB%8B/</id>
+    <link href="https://newreport.github.io/2021/06/23/python3/2021-06-23%2003%E3%80%81%E5%88%97%E8%A1%A8%E7%AE%80%E4%BB%8B/"/>
+    <id>https://newreport.github.io/2021/06/23/python3/2021-06-23%2003%E3%80%81%E5%88%97%E8%A1%A8%E7%AE%80%E4%BB%8B/</id>
     <published>2021-06-22T16:00:00.000Z</published>
     <updated>2021-06-23T11:56:38.000Z</updated>
     
@@ -133,15 +133,15 @@
     
     
     
-    <category term="python" scheme="https://newreport.github.io/newreport.github.io/categories/python/"/>
+    <category term="python" scheme="https://newreport.github.io/categories/python/"/>
     
     
   </entry>
   
   <entry>
     <title>变量和简单数据类型</title>
-    <link href="https://newreport.github.io/newreport.github.io/2021/06/22/python3/2021-06-22%2002%E3%80%81%E5%8F%98%E9%87%8F%E5%92%8C%E7%AE%80%E5%8D%95%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/"/>
-    <id>https://newreport.github.io/newreport.github.io/2021/06/22/python3/2021-06-22%2002%E3%80%81%E5%8F%98%E9%87%8F%E5%92%8C%E7%AE%80%E5%8D%95%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/</id>
+    <link href="https://newreport.github.io/2021/06/22/python3/2021-06-22%2002%E3%80%81%E5%8F%98%E9%87%8F%E5%92%8C%E7%AE%80%E5%8D%95%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/"/>
+    <id>https://newreport.github.io/2021/06/22/python3/2021-06-22%2002%E3%80%81%E5%8F%98%E9%87%8F%E5%92%8C%E7%AE%80%E5%8D%95%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/</id>
     <published>2021-06-21T16:00:00.000Z</published>
     <updated>2021-06-23T08:55:22.000Z</updated>
     
@@ -152,15 +152,15 @@
     
     
     
-    <category term="python" scheme="https://newreport.github.io/newreport.github.io/categories/python/"/>
+    <category term="python" scheme="https://newreport.github.io/categories/python/"/>
     
     
   </entry>
   
   <entry>
     <title>Python基础知识</title>
-    <link href="https://newreport.github.io/newreport.github.io/2021/06/21/python3/2021-06-21%2001%E3%80%81%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/"/>
-    <id>https://newreport.github.io/newreport.github.io/2021/06/21/python3/2021-06-21%2001%E3%80%81%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/</id>
+    <link href="https://newreport.github.io/2021/06/21/python3/2021-06-21%2001%E3%80%81%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/"/>
+    <id>https://newreport.github.io/2021/06/21/python3/2021-06-21%2001%E3%80%81%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/</id>
     <published>2021-06-20T16:00:00.000Z</published>
     <updated>2022-07-03T14:52:13.029Z</updated>
     
@@ -176,17 +176,17 @@
     
     
     
-    <category term="python" scheme="https://newreport.github.io/newreport.github.io/categories/python/"/>
+    <category term="python" scheme="https://newreport.github.io/categories/python/"/>
     
-    <category term="python3" scheme="https://newreport.github.io/newreport.github.io/categories/python/python3/"/>
+    <category term="python3" scheme="https://newreport.github.io/categories/python/python3/"/>
     
     
   </entry>
   
   <entry>
     <title>网盘搭建</title>
-    <link href="https://newreport.github.io/newreport.github.io/2021/01/07/2021-01-07%20%E7%BD%91%E7%9B%98%E6%90%AD%E5%BB%BA/"/>
-    <id>https://newreport.github.io/newreport.github.io/2021/01/07/2021-01-07%20%E7%BD%91%E7%9B%98%E6%90%AD%E5%BB%BA/</id>
+    <link href="https://newreport.github.io/2021/01/07/2021-01-07%20%E7%BD%91%E7%9B%98%E6%90%AD%E5%BB%BA/"/>
+    <id>https://newreport.github.io/2021/01/07/2021-01-07%20%E7%BD%91%E7%9B%98%E6%90%AD%E5%BB%BA/</id>
     <published>2021-01-06T16:00:01.000Z</published>
     <updated>2022-07-02T18:23:42.779Z</updated>
     
@@ -202,19 +202,19 @@
     
     
     
-    <category term="杂物箱" scheme="https://newreport.github.io/newreport.github.io/categories/%E6%9D%82%E7%89%A9%E7%AE%B1/"/>
+    <category term="杂物箱" scheme="https://newreport.github.io/categories/%E6%9D%82%E7%89%A9%E7%AE%B1/"/>
     
     
-    <category term="对象存储" scheme="https://newreport.github.io/newreport.github.io/tags/%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8/"/>
+    <category term="对象存储" scheme="https://newreport.github.io/tags/%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8/"/>
     
-    <category term="待补充" scheme="https://newreport.github.io/newreport.github.io/tags/%E5%BE%85%E8%A1%A5%E5%85%85/"/>
+    <category term="待补充" scheme="https://newreport.github.io/tags/%E5%BE%85%E8%A1%A5%E5%85%85/"/>
     
   </entry>
   
   <entry>
     <title>图床&quot;永久链&quot;</title>
-    <link href="https://newreport.github.io/newreport.github.io/2021/01/06/2021-01-06%20%E5%9B%BE%E5%BA%8A%E6%90%AD%E5%BB%BA/"/>
-    <id>https://newreport.github.io/newreport.github.io/2021/01/06/2021-01-06%20%E5%9B%BE%E5%BA%8A%E6%90%AD%E5%BB%BA/</id>
+    <link href="https://newreport.github.io/2021/01/06/2021-01-06%20%E5%9B%BE%E5%BA%8A%E6%90%AD%E5%BB%BA/"/>
+    <id>https://newreport.github.io/2021/01/06/2021-01-06%20%E5%9B%BE%E5%BA%8A%E6%90%AD%E5%BB%BA/</id>
     <published>2021-01-05T16:00:01.000Z</published>
     <updated>2022-07-02T18:23:20.501Z</updated>
     
@@ -223,17 +223,17 @@
     
     
     
-    <category term="博客搭建" scheme="https://newreport.github.io/newreport.github.io/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
+    <category term="博客搭建" scheme="https://newreport.github.io/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
     
     
-    <category term="对象存储" scheme="https://newreport.github.io/newreport.github.io/tags/%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8/"/>
+    <category term="对象存储" scheme="https://newreport.github.io/tags/%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8/"/>
     
   </entry>
   
   <entry>
     <title>云函数</title>
-    <link href="https://newreport.github.io/newreport.github.io/2021/01/05/2021-01-05-2%20%E4%BA%91%E5%87%BD%E6%95%B0/"/>
-    <id>https://newreport.github.io/newreport.github.io/2021/01/05/2021-01-05-2%20%E4%BA%91%E5%87%BD%E6%95%B0/</id>
+    <link href="https://newreport.github.io/2021/01/05/2021-01-05-2%20%E4%BA%91%E5%87%BD%E6%95%B0/"/>
+    <id>https://newreport.github.io/2021/01/05/2021-01-05-2%20%E4%BA%91%E5%87%BD%E6%95%B0/</id>
     <published>2021-01-04T16:00:02.000Z</published>
     <updated>2021-06-22T12:04:49.000Z</updated>
     
@@ -243,17 +243,17 @@
     
     
     
-    <category term="杂物箱" scheme="https://newreport.github.io/newreport.github.io/categories/%E6%9D%82%E7%89%A9%E7%AE%B1/"/>
+    <category term="杂物箱" scheme="https://newreport.github.io/categories/%E6%9D%82%E7%89%A9%E7%AE%B1/"/>
     
     
-    <category term="云服务" scheme="https://newreport.github.io/newreport.github.io/tags/%E4%BA%91%E6%9C%8D%E5%8A%A1/"/>
+    <category term="云服务" scheme="https://newreport.github.io/tags/%E4%BA%91%E6%9C%8D%E5%8A%A1/"/>
     
   </entry>
   
   <entry>
     <title>域名的使用</title>
-    <link href="https://newreport.github.io/newreport.github.io/2021/01/05/2021-01-05-1%20%E5%9F%9F%E5%90%8D%E6%B3%A8%E5%86%8C/"/>
-    <id>https://newreport.github.io/newreport.github.io/2021/01/05/2021-01-05-1%20%E5%9F%9F%E5%90%8D%E6%B3%A8%E5%86%8C/</id>
+    <link href="https://newreport.github.io/2021/01/05/2021-01-05-1%20%E5%9F%9F%E5%90%8D%E6%B3%A8%E5%86%8C/"/>
+    <id>https://newreport.github.io/2021/01/05/2021-01-05-1%20%E5%9F%9F%E5%90%8D%E6%B3%A8%E5%86%8C/</id>
     <published>2021-01-04T16:00:01.000Z</published>
     <updated>2021-02-05T10:53:58.000Z</updated>
     
@@ -276,15 +276,15 @@
     
     
     
-    <category term="博客搭建" scheme="https://newreport.github.io/newreport.github.io/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
+    <category term="博客搭建" scheme="https://newreport.github.io/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
     
     
   </entry>
   
   <entry>
     <title>C#基础</title>
-    <link href="https://newreport.github.io/newreport.github.io/2021/01/05/C#/2021-07-01%20C#%E5%9F%BA%E7%A1%80/"/>
-    <id>https://newreport.github.io/newreport.github.io/2021/01/05/C#/2021-07-01%20C#%E5%9F%BA%E7%A1%80/</id>
+    <link href="https://newreport.github.io/2021/01/05/C#/2021-07-01%20C#%E5%9F%BA%E7%A1%80/"/>
+    <id>https://newreport.github.io/2021/01/05/C#/2021-07-01%20C#%E5%9F%BA%E7%A1%80/</id>
     <published>2021-01-04T16:00:01.000Z</published>
     <updated>2021-07-02T11:32:01.000Z</updated>
     
@@ -296,15 +296,15 @@
     
     
     
-    <category term="C#" scheme="https://newreport.github.io/newreport.github.io/categories/C/"/>
+    <category term="C#" scheme="https://newreport.github.io/categories/C/"/>
     
     
   </entry>
   
   <entry>
     <title>了解文件系统的和基本操作</title>
-    <link href="https://newreport.github.io/newreport.github.io/2021/01/04/rhel8/2021-01-04%2004%E3%80%81%E4%BA%86%E8%A7%A3%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%92%8C%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/"/>
-    <id>https://newreport.github.io/newreport.github.io/2021/01/04/rhel8/2021-01-04%2004%E3%80%81%E4%BA%86%E8%A7%A3%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%92%8C%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/</id>
+    <link href="https://newreport.github.io/2021/01/04/rhel8/2021-01-04%2004%E3%80%81%E4%BA%86%E8%A7%A3%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%92%8C%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/"/>
+    <id>https://newreport.github.io/2021/01/04/rhel8/2021-01-04%2004%E3%80%81%E4%BA%86%E8%A7%A3%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%92%8C%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/</id>
     <published>2021-01-03T16:00:00.000Z</published>
     <updated>2021-07-02T05:05:42.000Z</updated>
     
@@ -326,15 +326,15 @@
     
     
     
-    <category term="linux for rhel8" scheme="https://newreport.github.io/newreport.github.io/categories/linux-for-rhel8/"/>
+    <category term="linux for rhel8" scheme="https://newreport.github.io/categories/linux-for-rhel8/"/>
     
     
   </entry>
   
   <entry>
     <title>运行命令和获取帮助</title>
-    <link href="https://newreport.github.io/newreport.github.io/2021/01/03/rhel8/2021-01-03%2003%E3%80%81%E8%BF%90%E8%A1%8C%E5%91%BD%E4%BB%A4%E5%92%8C%E8%8E%B7%E5%8F%96%E5%B8%AE%E5%8A%A9/"/>
-    <id>https://newreport.github.io/newreport.github.io/2021/01/03/rhel8/2021-01-03%2003%E3%80%81%E8%BF%90%E8%A1%8C%E5%91%BD%E4%BB%A4%E5%92%8C%E8%8E%B7%E5%8F%96%E5%B8%AE%E5%8A%A9/</id>
+    <link href="https://newreport.github.io/2021/01/03/rhel8/2021-01-03%2003%E3%80%81%E8%BF%90%E8%A1%8C%E5%91%BD%E4%BB%A4%E5%92%8C%E8%8E%B7%E5%8F%96%E5%B8%AE%E5%8A%A9/"/>
+    <id>https://newreport.github.io/2021/01/03/rhel8/2021-01-03%2003%E3%80%81%E8%BF%90%E8%A1%8C%E5%91%BD%E4%BB%A4%E5%92%8C%E8%8E%B7%E5%8F%96%E5%B8%AE%E5%8A%A9/</id>
     <published>2021-01-02T16:00:00.000Z</published>
     <updated>2021-06-22T13:04:44.000Z</updated>
     
@@ -374,15 +374,15 @@
     
     
     
-    <category term="linux for rhel8" scheme="https://newreport.github.io/newreport.github.io/categories/linux-for-rhel8/"/>
+    <category term="linux for rhel8" scheme="https://newreport.github.io/categories/linux-for-rhel8/"/>
     
     
   </entry>
   
   <entry>
     <title>Linux的基本使用</title>
-    <link href="https://newreport.github.io/newreport.github.io/2021/01/02/rhel8/2021-01-02%2002%E3%80%81Linux%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/"/>
-    <id>https://newreport.github.io/newreport.github.io/2021/01/02/rhel8/2021-01-02%2002%E3%80%81Linux%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/</id>
+    <link href="https://newreport.github.io/2021/01/02/rhel8/2021-01-02%2002%E3%80%81Linux%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/"/>
+    <id>https://newreport.github.io/2021/01/02/rhel8/2021-01-02%2002%E3%80%81Linux%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/</id>
     <published>2021-01-01T16:00:00.000Z</published>
     <updated>2021-06-22T13:04:38.000Z</updated>
     
@@ -433,15 +433,15 @@
     
     
     
-    <category term="linux for rhel8" scheme="https://newreport.github.io/newreport.github.io/categories/linux-for-rhel8/"/>
+    <category term="linux for rhel8" scheme="https://newreport.github.io/categories/linux-for-rhel8/"/>
     
     
   </entry>
   
   <entry>
     <title>Linux的简介和安装</title>
-    <link href="https://newreport.github.io/newreport.github.io/2021/01/01/rhel8/2021-01-01%2001%E3%80%81Linux%E7%9A%84%E7%AE%80%E4%BB%8B%E5%92%8C%E5%AE%89%E8%A3%85/"/>
-    <id>https://newreport.github.io/newreport.github.io/2021/01/01/rhel8/2021-01-01%2001%E3%80%81Linux%E7%9A%84%E7%AE%80%E4%BB%8B%E5%92%8C%E5%AE%89%E8%A3%85/</id>
+    <link href="https://newreport.github.io/2021/01/01/rhel8/2021-01-01%2001%E3%80%81Linux%E7%9A%84%E7%AE%80%E4%BB%8B%E5%92%8C%E5%AE%89%E8%A3%85/"/>
+    <id>https://newreport.github.io/2021/01/01/rhel8/2021-01-01%2001%E3%80%81Linux%E7%9A%84%E7%AE%80%E4%BB%8B%E5%92%8C%E5%AE%89%E8%A3%85/</id>
     <published>2020-12-31T16:00:00.000Z</published>
     <updated>2021-07-02T04:42:55.000Z</updated>
     
@@ -459,15 +459,15 @@
     
     
     
-    <category term="linux for rhel8" scheme="https://newreport.github.io/newreport.github.io/categories/linux-for-rhel8/"/>
+    <category term="linux for rhel8" scheme="https://newreport.github.io/categories/linux-for-rhel8/"/>
     
     
   </entry>
   
   <entry>
     <title>hexo-next7食用方法</title>
-    <link href="https://newreport.github.io/newreport.github.io/2020/12/21/2020-12-21%20hexo-next7%E9%A3%9F%E7%94%A8%E6%96%B9%E6%B3%95/"/>
-    <id>https://newreport.github.io/newreport.github.io/2020/12/21/2020-12-21%20hexo-next7%E9%A3%9F%E7%94%A8%E6%96%B9%E6%B3%95/</id>
+    <link href="https://newreport.github.io/2020/12/21/2020-12-21%20hexo-next7%E9%A3%9F%E7%94%A8%E6%96%B9%E6%B3%95/"/>
+    <id>https://newreport.github.io/2020/12/21/2020-12-21%20hexo-next7%E9%A3%9F%E7%94%A8%E6%96%B9%E6%B3%95/</id>
     <published>2020-12-20T16:00:00.000Z</published>
     <updated>2022-07-02T18:57:13.564Z</updated>
     
@@ -476,10 +476,10 @@
     
     
     
-    <category term="博客搭建" scheme="https://newreport.github.io/newreport.github.io/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
+    <category term="博客搭建" scheme="https://newreport.github.io/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
     
     
-    <category term="tools" scheme="https://newreport.github.io/newreport.github.io/tags/tools/"/>
+    <category term="tools" scheme="https://newreport.github.io/tags/tools/"/>
     
   </entry>
   
