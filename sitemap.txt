@@ -1,3 +1,4 @@
+https://newreport.github.io/newreport.github.io/2022/07/27/Kubernetes/2022-07-27%20Kubernetes%201.24%E9%83%A8%E7%BD%B2/
 https://newreport.github.io/newreport.github.io/2021/06/21/python3/2021-06-21%2001%E3%80%81%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/
 https://newreport.github.io/newreport.github.io/2020/12/21/2020-12-21%20hexo-next7%E9%A3%9F%E7%94%A8%E6%96%B9%E6%B3%95/
 https://newreport.github.io/newreport.github.io/2021/06/28/2021-06-28%20%E6%97%A0%E9%99%90%E5%AE%B9%E9%87%8F%E7%9B%B8%E5%86%8C/
@@ -22,13 +23,14 @@ https://newreport.github.io/newreport.github.io/categories/index.html
 https://newreport.github.io/newreport.github.io/404.html
 https://newreport.github.io/newreport.github.io
 https://newreport.github.io/newreport.github.io/tags/tools/
+https://newreport.github.io/newreport.github.io/tags/%E4%BA%91%E6%9C%8D%E5%8A%A1/
 https://newreport.github.io/newreport.github.io/tags/%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8/
 https://newreport.github.io/newreport.github.io/tags/%E5%BE%85%E8%A1%A5%E5%85%85/
-https://newreport.github.io/newreport.github.io/tags/%E4%BA%91%E6%9C%8D%E5%8A%A1/
 https://newreport.github.io/newreport.github.io/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/
 https://newreport.github.io/newreport.github.io/categories/%E6%9D%82%E7%89%A9%E7%AE%B1/
-https://newreport.github.io/newreport.github.io/categories/English/
 https://newreport.github.io/newreport.github.io/categories/C/
+https://newreport.github.io/newreport.github.io/categories/Kubernetes/
+https://newreport.github.io/newreport.github.io/categories/English/
 https://newreport.github.io/newreport.github.io/categories/python/
 https://newreport.github.io/newreport.github.io/categories/linux-for-rhel8/
 https://newreport.github.io/newreport.github.io/categories/python/python3/
