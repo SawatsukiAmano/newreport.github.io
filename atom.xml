@@ -6,7 +6,7 @@
   <link href="https://newreport.top/atom.xml" rel="self"/>
   
   <link href="https://newreport.top/"/>
-  <updated>2022-08-01T17:43:16.419Z</updated>
+  <updated>2022-08-01T17:51:13.161Z</updated>
   <id>https://newreport.top/</id>
   
   <author>
@@ -17,11 +17,35 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Podman的安装及使用</title>
+    <link href="https://newreport.top/2022/08/02/CloudComputing/2022-08-02%20Podman%E7%9A%84%E5%AE%89%E8%A3%85%E5%8F%8A%E4%BD%BF%E7%94%A8/"/>
+    <id>https://newreport.top/2022/08/02/CloudComputing/2022-08-02%20Podman%E7%9A%84%E5%AE%89%E8%A3%85%E5%8F%8A%E4%BD%BF%E7%94%A8/</id>
+    <published>2022-08-01T16:00:01.000Z</published>
+    <updated>2022-08-01T17:51:13.161Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;环境&quot;&gt;&lt;a href=&quot;#环境&quot; class=&quot;headerlink&quot; title=&quot;环境&quot;&gt;&lt;/a&gt;环境&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;主机1：腾讯云 新加坡 2核4G CentOS Stream8&lt;br&gt;主机2：本地 Intel N3540</summary>
+        
+      
+    
+    
+    
+    <category term="CloudComputing" scheme="https://newreport.top/categories/CloudComputing/"/>
+    
+    
+  </entry>
+  
+  <entry>
     <title>Kubernetes1.24内网部署</title>
-    <link href="https://newreport.top/2022/07/27/Kubernetes/2022-07-27%20Kubernetes%201.24%E9%83%A8%E7%BD%B2/"/>
-    <id>https://newreport.top/2022/07/27/Kubernetes/2022-07-27%20Kubernetes%201.24%E9%83%A8%E7%BD%B2/</id>
+    <link href="https://newreport.top/2022/07/27/CloudComputing/2022-07-27%20Kubernetes%201.24%E9%83%A8%E7%BD%B2/"/>
+    <id>https://newreport.top/2022/07/27/CloudComputing/2022-07-27%20Kubernetes%201.24%E9%83%A8%E7%BD%B2/</id>
     <published>2022-07-26T16:00:01.000Z</published>
-    <updated>2022-08-01T17:43:16.419Z</updated>
+    <updated>2022-08-01T17:46:46.684Z</updated>
     
     
     <summary type="html">&lt;h1 id=&quot;环境介绍&quot;&gt;&lt;a href=&quot;#环境介绍&quot; class=&quot;headerlink&quot; title=&quot;环境介绍&quot;&gt;&lt;/a&gt;环境介绍&lt;/h1&gt;&lt;blockquote&gt;
@@ -30,7 +54,7 @@
     
     
     
-    <category term="Kubernetes" scheme="https://newreport.top/categories/Kubernetes/"/>
+    <category term="CloudComputing" scheme="https://newreport.top/categories/CloudComputing/"/>
     
     
   </entry>
@@ -213,7 +237,7 @@
     <link href="https://newreport.top/2021/01/06/2021-01-06%20%E5%9B%BE%E5%BA%8A%E6%90%AD%E5%BB%BA/"/>
     <id>https://newreport.top/2021/01/06/2021-01-06%20%E5%9B%BE%E5%BA%8A%E6%90%AD%E5%BB%BA/</id>
     <published>2021-01-05T16:00:01.000Z</published>
-    <updated>2022-07-02T18:23:20.501Z</updated>
+    <updated>2022-08-01T17:47:30.595Z</updated>
     
     
     <summary type="html">&lt;p&gt;&amp;amp;#8195;&amp;amp;#8195;需要准备对象存储及域名，理论”永久链”图床，可在各云服务商或个人服务器间迁移数据&lt;br&gt;&amp;amp;#8195;&amp;amp;#8195;如果你是国外的域名，markdown是国内使用，需要绑定国内第三方dns，这里以&lt;a href=&quot;https://www.namesilo.com/&quot;&gt;namesilo&lt;/a&gt;域名绑定&lt;a href=&quot;https://www.dnspod.cn/&quot;&gt;dnspod&lt;/a&gt;为例。&lt;/p&gt;</summary>
