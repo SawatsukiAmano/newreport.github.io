@@ -54,6 +54,53 @@
       </categories>
   </entry>
   <entry>
+    <title>云函数</title>
+    <url>/2021/01/05/2021-01-05-2%20%E4%BA%91%E5%87%BD%E6%95%B0/</url>
+    <content><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p><a href="https://developers.weixin.qq.com/miniprogram/dev/wxcloud/guide/functions.html">云函数简介</a><br>长不看结论：总之就是跑脚本，也可以跑微信的推送等事件。目前我只用它在跑签到脚本。</p>
+<h1 id="server酱"><a href="#server酱" class="headerlink" title="server酱"></a>server酱</h1><p>原版server酱：<a href="http://sc.ftqq.com/">http://sc.ftqq.com/</a><br>自搭server酱：<a href="https://www.v2ex.com/t/567927">https://www.v2ex.com/t/567927</a></p>
+<span id="more"></span>
+
+<h1 id="哔哩哔哩签到"><a href="#哔哩哔哩签到" class="headerlink" title="哔哩哔哩签到"></a>哔哩哔哩签到</h1><p>项目地址：<a href="https://github.com/happy888888/BiliExp">https://github.com/happy888888/BiliExp</a><br>油猴脚本：<a href="https://greasyfork.org/zh-CN/scripts/393096-bilibiliexp/versions">https://greasyfork.org/zh-CN/scripts/393096-bilibiliexp/versions</a><br>注意事项：云函数方式为cookie签到</p>
+<h1 id="天翼云盘签到和抽奖"><a href="#天翼云盘签到和抽奖" class="headerlink" title="天翼云盘签到和抽奖"></a>天翼云盘签到和抽奖</h1><p>项目地址：<a href="https://github.com/FingerSword/Cloud189-Sign-In">https://github.com/FingerSword/Cloud189-Sign-In</a><br>注意事项：不改密码就ok  </p>
+<h1 id="网易云音乐签到"><a href="#网易云音乐签到" class="headerlink" title="网易云音乐签到"></a>网易云音乐签到</h1><p>地址：<a href="https://www.coolapk.com/feed/22733317">https://www.coolapk.com/feed/22733317</a><br>注意事项：不改密码就ok  </p>
+<h1 id="有道云笔记签到"><a href="#有道云笔记签到" class="headerlink" title="有道云笔记签到"></a>有道云笔记签到</h1><p>签到1.0：<a href="https://www.coolapk.com/feed/18049127">https://www.coolapk.com/feed/18049127</a><br>签到2.0：<a href="https://www.coolapk.com/feed/19750209">https://www.coolapk.com/feed/19750209</a><br>注意事项：均为cookie，我用qq登录的账号一天就掉了，用手机号登录的应该能管一个月</p>
+]]></content>
+      <categories>
+        <category>杂物箱</category>
+      </categories>
+      <tags>
+        <tag>云服务</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>无限容量相册</title>
+    <url>/2021/06/28/2021-06-28%20%E6%97%A0%E9%99%90%E5%AE%B9%E9%87%8F%E7%9B%B8%E5%86%8C/</url>
+    <content><![CDATA[<p>基于：pixel&#x2F;pixel xl（即pixel一代），1微力同步，服务器一台（非必须，中继使用）</p>
+]]></content>
+      <categories>
+        <category>杂物箱</category>
+      </categories>
+      <tags>
+        <tag>对象存储</tag>
+        <tag>待补充</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>网盘搭建</title>
+    <url>/2021/01/07/2021-01-07%20%E7%BD%91%E7%9B%98%E6%90%AD%E5%BB%BA/</url>
+    <content><![CDATA[<h1 id="NAS"><a href="#NAS" class="headerlink" title="NAS"></a>NAS</h1><p>demo：null<br>优势：没有审查，自用隐私安全性最高</p>
+<h2 id="群晖"><a href="#群晖" class="headerlink" title="群晖"></a>群晖</h2><h1 id="公共网盘-api-可视化"><a href="#公共网盘-api-可视化" class="headerlink" title="公共网盘-api-可视化"></a>公共网盘-api-可视化</h1><p>demo：null<br>优势：免费<br>缺点：审查机制由云存储服务商判断、隐私性最低、会河蟹某些内容</p>
+<h2 id="Onedrive-Oneindex"><a href="#Onedrive-Oneindex" class="headerlink" title="Onedrive-Oneindex"></a>Onedrive-Oneindex</h2><h2 id="和彩云-x2F-天翼云"><a href="#和彩云-x2F-天翼云" class="headerlink" title="和彩云&#x2F;天翼云"></a>和彩云&#x2F;天翼云</h2><h1 id="服务器-对象存储"><a href="#服务器-对象存储" class="headerlink" title="服务器-对象存储"></a>服务器-对象存储</h1><p>demo：null<br>优势：没有审查,可靠性最高<br>缺点：付费服务</p>
+<h2 id="seafile"><a href="#seafile" class="headerlink" title="seafile"></a>seafile</h2><h2 id="nextcloud"><a href="#nextcloud" class="headerlink" title="nextcloud"></a>nextcloud</h2><h2 id="owncloud"><a href="#owncloud" class="headerlink" title="owncloud"></a>owncloud</h2>]]></content>
+      <categories>
+        <category>杂物箱</category>
+      </categories>
+      <tags>
+        <tag>对象存储</tag>
+        <tag>待补充</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>图床&quot;永久链&quot;</title>
     <url>/2021/01/06/2021-01-06%20%E5%9B%BE%E5%BA%8A%E6%90%AD%E5%BB%BA/</url>
     <content><![CDATA[<p>&amp;#8195;&amp;#8195;需要准备对象存储及域名，理论”永久链”图床，可在各云服务商或个人服务器间迁移数据<br>&amp;#8195;&amp;#8195;如果你是国外的域名，markdown是国内使用，需要绑定国内第三方dns，这里以<a href="https://www.namesilo.com/">namesilo</a>域名绑定<a href="https://www.dnspod.cn/">dnspod</a>为例。</p>
@@ -78,129 +125,6 @@
       </tags>
   </entry>
   <entry>
-    <title>云函数</title>
-    <url>/2021/01/05/2021-01-05-2%20%E4%BA%91%E5%87%BD%E6%95%B0/</url>
-    <content><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p><a href="https://developers.weixin.qq.com/miniprogram/dev/wxcloud/guide/functions.html">云函数简介</a><br>长不看结论：总之就是跑脚本，也可以跑微信的推送等事件。目前我只用它在跑签到脚本。</p>
-<h1 id="server酱"><a href="#server酱" class="headerlink" title="server酱"></a>server酱</h1><p>原版server酱：<a href="http://sc.ftqq.com/">http://sc.ftqq.com/</a><br>自搭server酱：<a href="https://www.v2ex.com/t/567927">https://www.v2ex.com/t/567927</a></p>
-<span id="more"></span>
-
-<h1 id="哔哩哔哩签到"><a href="#哔哩哔哩签到" class="headerlink" title="哔哩哔哩签到"></a>哔哩哔哩签到</h1><p>项目地址：<a href="https://github.com/happy888888/BiliExp">https://github.com/happy888888/BiliExp</a><br>油猴脚本：<a href="https://greasyfork.org/zh-CN/scripts/393096-bilibiliexp/versions">https://greasyfork.org/zh-CN/scripts/393096-bilibiliexp/versions</a><br>注意事项：云函数方式为cookie签到</p>
-<h1 id="天翼云盘签到和抽奖"><a href="#天翼云盘签到和抽奖" class="headerlink" title="天翼云盘签到和抽奖"></a>天翼云盘签到和抽奖</h1><p>项目地址：<a href="https://github.com/FingerSword/Cloud189-Sign-In">https://github.com/FingerSword/Cloud189-Sign-In</a><br>注意事项：不改密码就ok  </p>
-<h1 id="网易云音乐签到"><a href="#网易云音乐签到" class="headerlink" title="网易云音乐签到"></a>网易云音乐签到</h1><p>地址：<a href="https://www.coolapk.com/feed/22733317">https://www.coolapk.com/feed/22733317</a><br>注意事项：不改密码就ok  </p>
-<h1 id="有道云笔记签到"><a href="#有道云笔记签到" class="headerlink" title="有道云笔记签到"></a>有道云笔记签到</h1><p>签到1.0：<a href="https://www.coolapk.com/feed/18049127">https://www.coolapk.com/feed/18049127</a><br>签到2.0：<a href="https://www.coolapk.com/feed/19750209">https://www.coolapk.com/feed/19750209</a><br>注意事项：均为cookie，我用qq登录的账号一天就掉了，用手机号登录的应该能管一个月</p>
-]]></content>
-      <categories>
-        <category>杂物箱</category>
-      </categories>
-      <tags>
-        <tag>云服务</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>网盘搭建</title>
-    <url>/2021/01/07/2021-01-07%20%E7%BD%91%E7%9B%98%E6%90%AD%E5%BB%BA/</url>
-    <content><![CDATA[<h1 id="NAS"><a href="#NAS" class="headerlink" title="NAS"></a>NAS</h1><p>demo：null<br>优势：没有审查，自用隐私安全性最高</p>
-<h2 id="群晖"><a href="#群晖" class="headerlink" title="群晖"></a>群晖</h2><h1 id="公共网盘-api-可视化"><a href="#公共网盘-api-可视化" class="headerlink" title="公共网盘-api-可视化"></a>公共网盘-api-可视化</h1><p>demo：null<br>优势：免费<br>缺点：审查机制由云存储服务商判断、隐私性最低、会河蟹某些内容</p>
-<h2 id="Onedrive-Oneindex"><a href="#Onedrive-Oneindex" class="headerlink" title="Onedrive-Oneindex"></a>Onedrive-Oneindex</h2><h2 id="和彩云-x2F-天翼云"><a href="#和彩云-x2F-天翼云" class="headerlink" title="和彩云&#x2F;天翼云"></a>和彩云&#x2F;天翼云</h2><h1 id="服务器-对象存储"><a href="#服务器-对象存储" class="headerlink" title="服务器-对象存储"></a>服务器-对象存储</h1><p>demo：null<br>优势：没有审查,可靠性最高<br>缺点：付费服务</p>
-<h2 id="seafile"><a href="#seafile" class="headerlink" title="seafile"></a>seafile</h2><h2 id="nextcloud"><a href="#nextcloud" class="headerlink" title="nextcloud"></a>nextcloud</h2><h2 id="owncloud"><a href="#owncloud" class="headerlink" title="owncloud"></a>owncloud</h2>]]></content>
-      <categories>
-        <category>杂物箱</category>
-      </categories>
-      <tags>
-        <tag>对象存储</tag>
-        <tag>待补充</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>无限容量相册</title>
-    <url>/2021/06/28/2021-06-28%20%E6%97%A0%E9%99%90%E5%AE%B9%E9%87%8F%E7%9B%B8%E5%86%8C/</url>
-    <content><![CDATA[<p>基于：pixel&#x2F;pixel xl（即pixel一代），1微力同步，服务器一台（非必须，中继使用）</p>
-]]></content>
-      <categories>
-        <category>杂物箱</category>
-      </categories>
-      <tags>
-        <tag>对象存储</tag>
-        <tag>待补充</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Kubernetes1.24部署</title>
-    <url>/2022/07/27/Kubernetes/2022-07-27%20Kubernetes%201.24%E9%83%A8%E7%BD%B2/</url>
-    <content><![CDATA[<blockquote>
-<p>环境介绍</p>
-</blockquote>
-<ol>
-<li>设置hostname<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># master节点 成都1</span></span><br><span class="line"><span class="built_in">cat</span> &gt;&gt;  /etc/sysconfig/network &lt;&lt;<span class="string">EOF</span></span><br><span class="line"><span class="string">hostname=master</span></span><br><span class="line"><span class="string">EOF</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">cat</span> &gt;&gt;  /etc/sysconfig/network &lt;&lt;<span class="string">EOF</span></span><br><span class="line"><span class="string">hostname=node1</span></span><br><span class="line"><span class="string">EOF</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">cat</span> &gt;&gt;  /etc/sysconfig/network &lt;&lt;<span class="string">EOF</span></span><br><span class="line"><span class="string">hostname=node1</span></span><br><span class="line"><span class="string">EOF</span></span><br><span class="line"></span><br></pre></td></tr></table></figure></li>
-</ol>
-<span id="more"></span>  
-
-]]></content>
-      <categories>
-        <category>Kubernetes</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>英语词性</title>
-    <url>/2021/06/23/english/2021-06-23-2%20%E8%8B%B1%E8%AF%AD%E8%AF%8D%E6%80%A7/</url>
-    <content><![CDATA[<p>定义：词性又称为词类，英语单词根据其在句中的作用，分为<strong>十大类</strong></p>
-<span id="more"></span>  
-
-<h1 id="名词-n"><a href="#名词-n" class="headerlink" title="名词(n.)"></a>名词(n.)</h1><ul>
-<li>作用：表示事务的名称</li>
-<li>分类：<ul>
-<li>专有名词：指<strong>特定或独一无二的人或物</strong>，表示人、地方、事物、组织等的专有名词，，第一个首字母大写。例：Mary、Jane、China</li>
-<li>普通名词：指某类人、事物或抽象概念的名称<ul>
-<li>可数名词<ul>
-<li>个体名词：用来指单人或事物的名词。例：book、key</li>
-<li>集体名词：用来指一群人或一些事物总称的名词。例：people、army</li>
-</ul>
-</li>
-<li>不可数名词<ul>
-<li>物质名词：用来表示物质的名称，包括材料、液体、气体等具体实物的名词。例：water、glass</li>
-<li>抽象名词：用来指人或事物的品质、情感、状态、动作等抽象概念的名词。例：love、anger</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>名词由单数变复数的基本方法</li>
-</ul>
-<ol>
-<li>在单数名词词尾 +s。例：bag-bags、car-cars</li>
-<li>s,x,sh,ch结尾和以辅音字母+o结尾的名词 +es。例：watch-watches、potati-potatoes、tomato-tomatoes、echo-echoes、hero-heroes</li>
-<li>以元音字母 +o 结尾，部分以辅音字母 +o 结尾的外来名词或缩写名词 +s。例：photo-photos、piano-pianos、bamboo-bamboos、zoo-zoos</li>
-<li>以辅音字母 +y 结尾，变 y 为 i 再 +es。例：baby-babies、city-cities</li>
-<li>以元音字母 +y 结尾， +s。例：boy-boys、toy-toys</li>
-<li>以 f、fe 结尾，变 f、fe 为 v 再 +es。例：leaf-leaves、shelf-shelves、wife-wives</li>
-<li>不规则变化。例：man-men、woman-women、child-children、sheep-sheep</li>
-</ol>
-<h1 id="代词-pron"><a href="#代词-pron" class="headerlink" title="代词(pron.)"></a>代词(pron.)</h1><ul>
-<li>作用：为了避免重复用来代替名词或名词词组的词</li>
-<li>补充：<ul>
-<li></li>
-</ul>
-</li>
-</ul>
-]]></content>
-      <categories>
-        <category>English</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>附页</title>
-    <url>/2021/06/23/english/2021-06-23-3%20%E9%99%84%E9%A1%B5/</url>
-    <content><![CDATA[<h1 id="元音辅音"><a href="#元音辅音" class="headerlink" title="元音辅音"></a>元音辅音</h1><ul>
-<li>元音：a、e、i、o、u</li>
-<li>辅音：b、c、d、f、g、h、j、k、l、m、n、p、q、r、s、t、v、w、x、y、z（除开元音的）</li>
-</ul>
-]]></content>
-      <categories>
-        <category>English</category>
-      </categories>
-  </entry>
-  <entry>
     <title>C#基础</title>
     <url>/2021/01/05/C#/2021-07-01%20C#%E5%9F%BA%E7%A1%80/</url>
     <content><![CDATA[<h1 id="C-语言及特点"><a href="#C-语言及特点" class="headerlink" title="C#语言及特点"></a>C#语言及特点</h1><ul>
@@ -217,181 +141,47 @@
       </categories>
   </entry>
   <entry>
-    <title>Python基础知识</title>
-    <url>/2021/06/21/python3/2021-06-21%2001%E3%80%81%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/</url>
-    <content><![CDATA[<h1 id="运行环境"><a href="#运行环境" class="headerlink" title="运行环境"></a>运行环境</h1><p>CentOS8.2 &amp;&amp; Python 3</p>
-<figure class="highlight txt"><table><tr><td class="code"><pre><span class="line">Python 3.6.8 (default, Apr 16 2020, 01:36:27)</span><br><span class="line">[GCC 8.3.1 20191121 (Red Hat 8.3.1-5)] on linux</span><br><span class="line">Type &quot;help&quot;, &quot;copyright&quot;, &quot;credits&quot; or &quot;license&quot; for more information.</span><br></pre></td></tr></table></figure>
-<p>微信图片_20220702225327.png</p>
+    <title>Kubernetes1.24内网部署</title>
+    <url>/2022/07/27/Kubernetes/2022-07-27%20Kubernetes%201.24%E9%83%A8%E7%BD%B2/</url>
+    <content><![CDATA[<h1 id="环境介绍"><a href="#环境介绍" class="headerlink" title="环境介绍"></a>环境介绍</h1><blockquote>
+<p>master：成都区 2核4G    10.0.0.17<br>cd001：成都区 2核4G     10.0.0.11<br>主机：两台腾讯云轻量云，系统为CentOS Stream8，轻量云不支持EIP故不能公网搭K8s<br>Kubernetes版本：V1.24.3（截至2022-08-02，当前k8s最新版本为 1.24.3）</p>
+</blockquote>
+<span id="more"></span>  
+<h1 id="Master节点安装"><a href="#Master节点安装" class="headerlink" title="Master节点安装"></a>Master节点安装</h1><ol>
+<li><p>主机配置</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"> <span class="comment"># 设置主机名</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;master&quot;</span> &gt; /etc/hostname</span><br><span class="line">yum -y tc</span><br><span class="line">yum -y update </span><br><span class="line"></span><br><span class="line"><span class="comment"># 重启使master主机名生效</span></span><br><span class="line">reboot </span><br><span class="line"></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;1&quot;</span> &gt;&gt; /proc/sys/net/ipv4/ip_forward <span class="comment"># 开启ip转发</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 设置hosts 注意，每次重启后该文件会恢复，需要重新添加</span></span><br><span class="line"><span class="built_in">cat</span> &gt;&gt; /etc/hosts &lt;&lt;<span class="string">EOF</span></span><br><span class="line"><span class="string">10.0.0.17 master</span></span><br><span class="line"><span class="string">10.0.0.11 cd001</span></span><br><span class="line"><span class="string">EOF</span></span><br><span class="line"></span><br><span class="line">systemctl restart NetworkManager.service</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>配置镜像、使用containerd作为k8s的容器引擎</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 阿里镜像源</span></span><br><span class="line">wget -O /etc/yum.repos.d/docker-ce.repo https://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo</span><br><span class="line"></span><br><span class="line"><span class="built_in">cat</span> &lt;&lt; <span class="string">EOF &gt; /etc/modules-load.d/containerd.conf</span></span><br><span class="line"><span class="string">overlay</span></span><br><span class="line"><span class="string">br_netfilter</span></span><br><span class="line"><span class="string">EOF</span></span><br><span class="line"></span><br><span class="line">modprobe overlay</span><br><span class="line">modprobe br_netfilter</span><br><span class="line"></span><br><span class="line">yum install -y containerd.io --allowerasing</span><br><span class="line"></span><br><span class="line"><span class="built_in">mkdir</span>  -p /etc/containerd </span><br><span class="line"><span class="built_in">rm</span> -rf /etc/containerd/config.toml</span><br><span class="line"></span><br><span class="line">containerd config default &gt; /etc/containerd/config.toml</span><br><span class="line"></span><br><span class="line"> sed -i <span class="string">&#x27;s#sandbox_image = &quot;k8s.gcr.io/pause:#sandbox_image = &quot;registry.aliyuncs.com/google_containers/pause:#g&#x27;</span> /etc/containerd/config.toml</span><br><span class="line"><span class="comment"># sed -i &#x27;s/systemd_cgroup = false/systemd_cgroup = true/g&#x27; /etc/containerd/config.toml</span></span><br><span class="line">systemctl restart containerd</span><br><span class="line"></span><br><span class="line">systemctl <span class="built_in">enable</span> containerd</span><br><span class="line">systemctl start containerd</span><br></pre></td></tr></table></figure></li>
+<li><p>检测runc 和ctrcli、配置k8s源</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ctr version</span><br><span class="line">runc -version </span><br><span class="line"></span><br><span class="line"><span class="built_in">cat</span> &lt;&lt;<span class="string">EOF &gt; /etc/yum.repos.d/kubernetes.repo</span></span><br><span class="line"><span class="string">[kubernetes]</span></span><br><span class="line"><span class="string">name=Kubernetes</span></span><br><span class="line"><span class="string">baseurl=https://mirrors.aliyun.com/kubernetes/yum/repos/kubernetes-el7-x86_64/</span></span><br><span class="line"><span class="string">enabled=1</span></span><br><span class="line"><span class="string">gpgcheck=0</span></span><br><span class="line"><span class="string">repo_gpgcheck=0</span></span><br><span class="line"><span class="string">gpgkey=https://mirrors.aliyun.com/kubernetes/yum/doc/yum-key.gpg https://mirrors.aliyun.com/kubernetes/yum/doc/rpm-package-key.gpg</span></span><br><span class="line"><span class="string">EOF</span></span><br><span class="line"></span><br><span class="line">yum clean all </span><br><span class="line">yum makecache</span><br><span class="line"><span class="comment"># k8s init时需要此应用进行网络测试</span></span><br><span class="line">yum install -y tc   </span><br></pre></td></tr></table></figure></li>
+<li><p>安装配置k8s三件套并配置</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">yum install -y kubectl kubelet kubeadm</span><br><span class="line"></span><br><span class="line"><span class="comment"># 兼容性处理 systemd</span></span><br><span class="line"><span class="built_in">echo</span>  <span class="string">&#x27;KUBELET_EXTRA_ARGS=&quot;--cgroup-driver=systemd&quot;&#x27;</span> &gt; /etc/sysconfig/kubelet</span><br><span class="line"></span><br><span class="line">systemctl <span class="built_in">enable</span> kubelet</span><br><span class="line">systemctl start kubelet</span><br><span class="line"></span><br><span class="line"><span class="comment"># 配置cricl 的endpoint</span></span><br><span class="line">crictl config runtime-endpoint unix:///run/containerd/containerd.sock</span><br><span class="line">crictl config image-endpoint unix:///run/containerd/containerd.sock</span><br><span class="line"></span><br><span class="line"><span class="comment"># 配置k8s镜像版本（不配置默认拉去latest 最新版）</span></span><br><span class="line"><span class="comment"># kubeadm config images list --kubernetes-version=v1.24.3</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>k8s初始化</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment"># 错误处理</span></span><br><span class="line"><span class="comment"># kubeadm reset</span></span><br><span class="line"><span class="comment"># rm -fr  ~/.kube/config</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># --apiserver-advertise-address和--control-plane-endpoint # 分别为apiServer和控制面板的ip地址，内网部署使用master节点内网ip，公网部署使用master节点公网ip</span></span><br><span class="line">kubeadm init --pod-network-cidr=10.224.0.0/16 --apiserver-advertise-address=10.0.0.17 --control-plane-endpoint=10.0.0.17 --image-repository registry.aliyuncs.com/google_containers --v=5</span><br><span class="line"></span><br><span class="line"><span class="built_in">mkdir</span> -p <span class="variable">$HOME</span>/.kube</span><br><span class="line">sudo <span class="built_in">cp</span> -i /etc/kubernetes/admin.conf <span class="variable">$HOME</span>/.kube/config</span><br><span class="line">sudo <span class="built_in">chown</span> $(<span class="built_in">id</span> -u):$(<span class="built_in">id</span> -g) <span class="variable">$HOME</span>/.kube/config</span><br><span class="line"></span><br><span class="line"><span class="built_in">export</span> KUBECONFIG=/etc/kubernetes/admin.conf</span><br><span class="line"></span><br><span class="line"><span class="comment"># kubeadm join 10.0.0.17:6443 --token 9t45vv.40lt4exfxmirt7q2 --discovery-token-ca-cert-hash sha256:65cfa9a08c89e81357f3e394757ebb6c6c8000020c2e7411248cac2c4ef79c2e</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 可以看到master是NotReady状态</span></span><br><span class="line">kubectl get node -o wide</span><br><span class="line"></span><br><span class="line"><span class="comment"># 可以看到coredns是pending状态</span></span><br><span class="line">kubectl get pod -A -o wide</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure></li>
+</ol>
+<h1 id="Node节点安装"><a href="#Node节点安装" class="headerlink" title="Node节点安装"></a>Node节点安装</h1><ol>
+<li><p>主机配置</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"> <span class="comment"># 设置主机名</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;cd001&quot;</span> &gt; /etc/hostname</span><br><span class="line"></span><br><span class="line">yum install -y tc</span><br><span class="line"></span><br><span class="line">yum -y update </span><br><span class="line"></span><br><span class="line"><span class="comment"># 重启使master主机名生效</span></span><br><span class="line">reboot </span><br><span class="line"></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;1&quot;</span> &gt;&gt; /proc/sys/net/ipv4/ip_forward <span class="comment"># 开启ip转发</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 设置hosts 注意，每次重启后该文件会恢复，需要重新添加</span></span><br><span class="line"><span class="built_in">cat</span> &gt;&gt; /etc/hosts &lt;&lt;<span class="string">EOF</span></span><br><span class="line"><span class="string">10.0.0.17 master</span></span><br><span class="line"><span class="string">10.0.0.11 cd001</span></span><br><span class="line"><span class="string">EOF</span></span><br><span class="line"></span><br><span class="line">systemctl restart NetworkManager.service</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>配置镜像、使用containerd作为k8s的容器引擎</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 阿里镜像源</span></span><br><span class="line">wget -O /etc/yum.repos.d/docker-ce.repo https://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo</span><br><span class="line"></span><br><span class="line"><span class="built_in">cat</span> &lt;&lt; <span class="string">EOF &gt; /etc/modules-load.d/containerd.conf</span></span><br><span class="line"><span class="string">overlay</span></span><br><span class="line"><span class="string">br_netfilter</span></span><br><span class="line"><span class="string">EOF</span></span><br><span class="line"></span><br><span class="line">modprobe overlay</span><br><span class="line">modprobe br_netfilter</span><br><span class="line"></span><br><span class="line">yum install -y containerd.io --allowerasing</span><br><span class="line"></span><br><span class="line"><span class="built_in">mkdir</span>  -p /etc/containerd </span><br><span class="line"><span class="built_in">rm</span> -rf /etc/containerd/config.toml</span><br><span class="line"></span><br><span class="line">containerd config default &gt; /etc/containerd/config.toml</span><br><span class="line"></span><br><span class="line"> sed -i <span class="string">&#x27;s#sandbox_image = &quot;k8s.gcr.io/pause:#sandbox_image = &quot;registry.aliyuncs.com/google_containers/pause:#g&#x27;</span> /etc/containerd/config.toml</span><br><span class="line"><span class="comment"># sed -i &#x27;s/systemd_cgroup = false/systemd_cgroup = true/g&#x27; /etc/containerd/config.toml</span></span><br><span class="line">systemctl restart containerd</span><br><span class="line"></span><br><span class="line">systemctl <span class="built_in">enable</span> containerd</span><br><span class="line">systemctl start containerd</span><br></pre></td></tr></table></figure></li>
+<li><p>检测runc 和ctrcli、配置k8s源</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ctr version</span><br><span class="line">runc -version </span><br><span class="line"></span><br><span class="line"><span class="built_in">cat</span> &lt;&lt;<span class="string">EOF &gt; /etc/yum.repos.d/kubernetes.repo</span></span><br><span class="line"><span class="string">[kubernetes]</span></span><br><span class="line"><span class="string">name=Kubernetes</span></span><br><span class="line"><span class="string">baseurl=https://mirrors.aliyun.com/kubernetes/yum/repos/kubernetes-el7-x86_64/</span></span><br><span class="line"><span class="string">enabled=1</span></span><br><span class="line"><span class="string">gpgcheck=0</span></span><br><span class="line"><span class="string">repo_gpgcheck=0</span></span><br><span class="line"><span class="string">gpgkey=https://mirrors.aliyun.com/kubernetes/yum/doc/yum-key.gpg https://mirrors.aliyun.com/kubernetes/yum/doc/rpm-package-key.gpg</span></span><br><span class="line"><span class="string">EOF</span></span><br><span class="line"></span><br><span class="line">yum clean all </span><br><span class="line">yum makecache</span><br><span class="line"></span><br><span class="line">yum install -y tc</span><br></pre></td></tr></table></figure></li>
+<li><p>安装配置k8s二件套并配置</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">yum install -y  kubelet kubeadm</span><br><span class="line"></span><br><span class="line"><span class="comment"># 兼容性处理 systemd</span></span><br><span class="line"><span class="built_in">echo</span>  <span class="string">&#x27;KUBELET_EXTRA_ARGS=&quot;--cgroup-driver=systemd&quot;&#x27;</span> &gt; /etc/sysconfig/kubelet</span><br><span class="line"></span><br><span class="line">systemctl <span class="built_in">enable</span> kubelet</span><br><span class="line">systemctl start kubelet</span><br><span class="line"></span><br><span class="line"><span class="comment"># 配置cricl 的endpoint</span></span><br><span class="line">crictl config runtime-endpoint unix:///run/containerd/containerd.sock</span><br><span class="line">crictl config image-endpoint unix:///run/containerd/containerd.sock</span><br><span class="line"></span><br><span class="line"><span class="comment"># 配置k8s镜像版本（不配置默认拉去latest 最新版）</span></span><br><span class="line"><span class="comment"># kubeadm config images list --kubernetes-version=v1.24.3</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>加入到集群</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment"># 错误处理</span></span><br><span class="line"><span class="comment"># kubeadm reset</span></span><br><span class="line"><span class="comment"># rm -fr  ~/.kube/config</span></span><br><span class="line"></span><br><span class="line">kubeadm <span class="built_in">join</span> 10.0.0.17:6443 --token 9t45vv.40lt4exfxmirt7q2 --discovery-token-ca-cert-hash sha256:65cfa9a08c89e81357f3e394757ebb6c6c8000020c2e7411248cac2c4ef79c2e</span><br><span class="line"></span><br></pre></td></tr></table></figure></li>
+</ol>
+<h1 id="配置K8s网络和安装NFS持久化应用"><a href="#配置K8s网络和安装NFS持久化应用" class="headerlink" title="配置K8s网络和安装NFS持久化应用"></a>配置K8s网络和安装NFS持久化应用</h1><ol>
+<li>安装容器网络<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">wget https://docs.projectcalico.org/manifests/calico.yaml --no-check-certificate</span><br><span class="line">vim calico.yaml</span><br><span class="line"><span class="comment"># /CALICO_IPV4POOL_CIDR 进行查找，讲值改为pod-network-cidr的值</span></span><br><span class="line"><span class="comment"># ...</span></span><br><span class="line"><span class="comment"># - name: CALICO_IPV4POOL_CIDR</span></span><br><span class="line"><span class="comment">#   value: &quot;10.244.0.0/16&quot;</span></span><br><span class="line"><span class="comment"># /k8s,bgp</span></span><br><span class="line"><span class="comment">#             - name: IP_AUTODETECTION_METHOD</span></span><br><span class="line"><span class="comment">#              value: &quot;interface=eth0:1&quot;</span></span><br><span class="line"><span class="comment"># ...</span></span><br><span class="line"></span><br><span class="line">kubectl apply -f calico.yaml</span><br></pre></td></tr></table></figure></li>
+</ol>
+<h1 id="部署NodePort公网nginx和mysql"><a href="#部署NodePort公网nginx和mysql" class="headerlink" title="部署NodePort公网nginx和mysql"></a>部署NodePort公网nginx和mysql</h1><h1 id="由于集群在公网搭建，所以需要添加一张虚拟网卡-公网ip，仅master节点，如果集群为内网搭建，可省略该步骤）"><a href="#由于集群在公网搭建，所以需要添加一张虚拟网卡-公网ip，仅master节点，如果集群为内网搭建，可省略该步骤）" class="headerlink" title="由于集群在公网搭建，所以需要添加一张虚拟网卡(公网ip，仅master节点，如果集群为内网搭建，可省略该步骤）"></a>由于集群在公网搭建，所以需要添加一张虚拟网卡(公网ip，仅master节点，如果集群为内网搭建，可省略该步骤）</h1><p>tee &#x2F;etc&#x2F;sysconfig&#x2F;network-scripts&#x2F;ifcfg-eth0:1 &lt;&lt;-‘EOF’<br>DEVICE&#x3D;eth0:1<br>ONBOOT&#x3D;yes<br>BOOTPROTO&#x3D;static<br>IPADDR&#x3D;公网IP<br>NETMASK&#x3D;255.255.255.0<br>EOF</p>
 ]]></content>
       <categories>
-        <category>python</category>
-        <category>python3</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>变量和简单数据类型</title>
-    <url>/2021/06/22/python3/2021-06-22%2002%E3%80%81%E5%8F%98%E9%87%8F%E5%92%8C%E7%AE%80%E5%8D%95%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/</url>
-    <content><![CDATA[<h1 id="运行hello-world"><a href="#运行hello-world" class="headerlink" title="运行hello world"></a>运行hello world</h1><p>vim 1.py</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="string">&quot;hello Python world!&quot;</span>)</span><br></pre></td></tr></table></figure>
-<figure class="highlight txt"><table><tr><td class="code"><pre><span class="line">hello Python world!</span><br></pre></td></tr></table></figure>
-<span id="more"></span>  
-
-<h1 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h1><p>vim 2.py</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">message = <span class="string">&quot;Hello Python world!&quot;</span></span><br><span class="line"><span class="built_in">print</span>(message)</span><br></pre></td></tr></table></figure>
-<figure class="highlight txt"><table><tr><td class="code"><pre><span class="line">hello Python world!</span><br></pre></td></tr></table></figure>
-<p>vim 3.py</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">message = <span class="string">&quot;Hello Python world!&quot;</span></span><br><span class="line"><span class="built_in">print</span>(message)</span><br><span class="line">message = <span class="string">&quot;Hello world!&quot;</span></span><br><span class="line"><span class="built_in">print</span>(message)</span><br></pre></td></tr></table></figure>
-<figure class="highlight txt"><table><tr><td class="code"><pre><span class="line">hello Python world!</span><br><span class="line">Hello world!</span><br></pre></td></tr></table></figure>
-
-<h2 id="变量命名和使用"><a href="#变量命名和使用" class="headerlink" title="变量命名和使用"></a>变量命名和使用</h2><ul>
-<li><p>变量名只能包含<strong>字母、数字</strong>和<strong>下划线</strong>。变量名只能是<strong>字母</strong>或<strong>下划线</strong>开头。例：message_1</p>
-</li>
-<li><p>变量名不能包含<strong>空格</strong>，但可以使用<strong>下划线</strong>来分隔单词</p>
-</li>
-<li><p>不能将<strong>Python关键字</strong>和<strong>函数名</strong>作为变量名使用，如：print</p>
-</li>
-</ul>
-<h2 id="使用变量时的错误"><a href="#使用变量时的错误" class="headerlink" title="使用变量时的错误"></a>使用变量时的错误</h2><p>vim 4.py</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">message = <span class="string">&quot;Hello world!&quot;</span></span><br><span class="line"><span class="built_in">print</span>(mesage)</span><br></pre></td></tr></table></figure>
-<figure class="highlight txt"><table><tr><td class="code"><pre><span class="line">Traceback (most recent call last):</span><br><span class="line">  File &quot;4.py&quot;, line 2, in &lt;module&gt;      //第二行代码错误</span><br><span class="line">    print(mesage)       //列出了这个错误</span><br><span class="line">NameError: name &#x27;mesage&#x27; is not defined     //mesage无法识别</span><br></pre></td></tr></table></figure>
-<h1 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h1><p>字符串就是一系列字符。在Python中，用引号括起来的都是字符串，其中的引号可以是<strong>单引号</strong>也可以是<strong>双引号</strong></p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="string">&quot;This is a string.&quot;</span></span><br><span class="line"><span class="string">&#x27;This is also a string.&quot;</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="使用方法修改字符串大小写"><a href="#使用方法修改字符串大小写" class="headerlink" title="使用方法修改字符串大小写"></a>使用方法修改字符串大小写</h2><p>vim 5.py</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">name = <span class="string">&quot;ada lovelace&quot;</span></span><br><span class="line"><span class="built_in">print</span>(name.title())</span><br></pre></td></tr></table></figure>
-<figure class="highlight txt"><table><tr><td class="code"><pre><span class="line">Ada Lovelace</span><br></pre></td></tr></table></figure>
-<p>titile（）以首字母大写的方式显示每个单词，即将每个单词的首字母都改为大写。</p>
-<p>vim 6.py</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">name = <span class="string">&quot;ada lovelace&quot;</span></span><br><span class="line"><span class="built_in">print</span>(name.title())</span><br><span class="line"><span class="built_in">print</span>(name.lower())</span><br><span class="line"><span class="built_in">print</span>(name)</span><br></pre></td></tr></table></figure>
-<figure class="highlight txt"><table><tr><td class="code"><pre><span class="line">Ada Lovelace</span><br><span class="line">ada lovelace</span><br><span class="line">ada lovelace</span><br></pre></td></tr></table></figure>
-
-<h2 id="合并字符串"><a href="#合并字符串" class="headerlink" title="合并字符串"></a>合并字符串</h2><p>vim 7.py</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">first_name = <span class="string">&quot;ada&quot;</span></span><br><span class="line">last_name = <span class="string">&quot;lovelace&quot;</span></span><br><span class="line">full_name = first_name + <span class="string">&quot; &quot;</span> + last_name</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(full_name)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;Hello,&quot;</span> + full_name + <span class="string">&quot;!&quot;</span>)</span><br><span class="line">message = <span class="string">&quot;Hello,&quot;</span> + full_name.title() + <span class="string">&quot;!&quot;</span></span><br><span class="line"><span class="built_in">print</span>(message)</span><br></pre></td></tr></table></figure>
-<figure class="highlight txt"><table><tr><td class="code"><pre><span class="line">ada lovelace</span><br><span class="line">Hello,ada lovelace!</span><br><span class="line">Hello,Ada Lovelace!</span><br></pre></td></tr></table></figure>
-
-<h2 id="使用制表符或换行符来添加空白"><a href="#使用制表符或换行符来添加空白" class="headerlink" title="使用制表符或换行符来添加空白"></a>使用制表符或换行符来添加空白</h2><p>vim 8.py</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="string">&quot;Python&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;Languages:\nPython\nC\nJava&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;Languages:\n\tPython\n\tC\n\tJava&quot;</span>)</span><br></pre></td></tr></table></figure>
-<figure class="highlight txt"><table><tr><td class="code"><pre><span class="line">Python</span><br><span class="line">Languages:</span><br><span class="line">Python</span><br><span class="line">C</span><br><span class="line">Java</span><br><span class="line">Languages:</span><br><span class="line">        Python</span><br><span class="line">        C</span><br><span class="line">        Java</span><br></pre></td></tr></table></figure>
-
-<h2 id="删除空白"><a href="#删除空白" class="headerlink" title="删除空白"></a>删除空白</h2><p>vim 9.py</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">favorite_language = <span class="string">&#x27; python &#x27;</span></span><br><span class="line"><span class="built_in">print</span>(favorite_language)</span><br><span class="line"><span class="built_in">print</span>(favorite_language.rstrip())</span><br><span class="line"><span class="built_in">print</span>(favorite_language.strip())</span><br></pre></td></tr></table></figure>
-<figure class="highlight txt"><table><tr><td class="code"><pre><span class="line"> python </span><br><span class="line"> python</span><br><span class="line">python </span><br></pre></td></tr></table></figure>
-
-<h2 id="使用字符串时避免语法错误"><a href="#使用字符串时避免语法错误" class="headerlink" title="使用字符串时避免语法错误"></a>使用字符串时避免语法错误</h2><p>vim 10.py</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">message = <span class="string">&#x27;One of Python&#x27;</span>s strengths <span class="keyword">is</span> its diverse community.<span class="string">&#x27;</span></span><br><span class="line"><span class="string">print(message)</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight txt"><table><tr><td class="code"><pre><span class="line">  File &quot;10.py&quot;, line 1</span><br><span class="line">    message = &#x27;One of Python&#x27;s strengths is its diverse community.&#x27;</span><br><span class="line">                             ^</span><br><span class="line">SyntaxError: invalid syntax</span><br></pre></td></tr></table></figure>
-
-<p>vim 11.py</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">message = <span class="string">&quot;One of Python&#x27;s strengths is its diverse community.&quot;</span></span><br><span class="line"><span class="built_in">print</span>(message)</span><br></pre></td></tr></table></figure>
-<figure class="highlight txt"><table><tr><td class="code"><pre><span class="line">One of Python&#x27;s strengths is its diverse community.</span><br></pre></td></tr></table></figure>
-
-<h2 id="Python-2-中的print语句"><a href="#Python-2-中的print语句" class="headerlink" title="Python 2 中的print语句"></a>Python 2 中的print语句</h2><p>vim 12.py</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="built_in">print</span> <span class="string">&quot;Hello Python 2.7 World!&quot;</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight txt"><table><tr><td class="code"><pre><span class="line">Hello Python 2.7 World!</span><br></pre></td></tr></table></figure>
-
-<h1 id="数字"><a href="#数字" class="headerlink" title="数字"></a>数字</h1><h2 id="整数"><a href="#整数" class="headerlink" title="整数"></a>整数</h2><p>vim 13.py</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="built_in">print</span>( <span class="number">2</span> + <span class="number">3</span> )</span><br><span class="line"><span class="built_in">print</span>( <span class="number">3</span> - <span class="number">2</span> )</span><br><span class="line"><span class="built_in">print</span>( <span class="number">2</span> * <span class="number">3</span> )</span><br><span class="line"><span class="built_in">print</span>( <span class="number">3</span> / <span class="number">2</span> )</span><br></pre></td></tr></table></figure>
-<figure class="highlight txt"><table><tr><td class="code"><pre><span class="line">5</span><br><span class="line">1</span><br><span class="line">6</span><br><span class="line">1.5</span><br></pre></td></tr></table></figure>
-
-<p>vim 14.py</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="built_in">print</span>( <span class="number">3</span> ** <span class="number">2</span> )</span><br><span class="line"><span class="built_in">print</span>( <span class="number">3</span> ** <span class="number">3</span> )</span><br><span class="line"><span class="built_in">print</span>( <span class="number">10</span> ** <span class="number">6</span> )</span><br><span class="line"><span class="built_in">print</span>( <span class="number">2</span> + <span class="number">3</span> * <span class="number">4</span> )</span><br><span class="line"><span class="built_in">print</span>( ( <span class="number">2</span> + <span class="number">3</span> ) * <span class="number">4</span> )</span><br></pre></td></tr></table></figure>
-<figure class="highlight txt"><table><tr><td class="code"><pre><span class="line">9</span><br><span class="line">27</span><br><span class="line">1000000</span><br><span class="line">14</span><br><span class="line">20</span><br></pre></td></tr></table></figure>
-
-<h2 id="浮点型"><a href="#浮点型" class="headerlink" title="浮点型"></a>浮点型</h2><p>vim 15.py</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="built_in">print</span>( <span class="number">0.1</span> + <span class="number">0.1</span> )</span><br><span class="line"><span class="built_in">print</span>( <span class="number">0.2</span> + <span class="number">0.2</span> )</span><br><span class="line"><span class="built_in">print</span>( <span class="number">2</span> * <span class="number">0.1</span> )</span><br><span class="line"><span class="built_in">print</span>( <span class="number">2</span> * <span class="number">0.2</span> )</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;-------------------&quot;</span>)       <span class="comment">#结果包含的小数可能是不确定的</span></span><br><span class="line"><span class="built_in">print</span>( <span class="number">0.2</span> + <span class="number">0.1</span> )</span><br><span class="line"><span class="built_in">print</span>( <span class="number">3</span> * <span class="number">0.1</span> )</span><br></pre></td></tr></table></figure>
-<figure class="highlight txt"><table><tr><td class="code"><pre><span class="line">0.2</span><br><span class="line">0.4</span><br><span class="line">0.2</span><br><span class="line">0.4</span><br><span class="line">-------------------</span><br><span class="line">0.30000000000000004</span><br><span class="line">0.30000000000000004</span><br></pre></td></tr></table></figure>
-
-<h2 id="使用函数str-避免类型错误"><a href="#使用函数str-避免类型错误" class="headerlink" title="使用函数str()避免类型错误"></a>使用函数str()避免类型错误</h2><p>vim 16.py</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">age = <span class="number">23</span></span><br><span class="line">message = <span class="string">&quot;Happy &quot;</span> + age + <span class="string">&quot;rd Birthday!&quot;</span>   <span class="comment">#类型错误</span></span><br><span class="line"><span class="built_in">print</span>(message)</span><br></pre></td></tr></table></figure>
-<figure class="highlight txt"><table><tr><td class="code"><pre><span class="line">Traceback (most recent call last):</span><br><span class="line">  File &quot;16.py&quot;, line 2, in &lt;module&gt;</span><br><span class="line">    message = &quot;Happy &quot; + age + &quot;rd Birthday!&quot;</span><br><span class="line">TypeError: must be str, not int</span><br></pre></td></tr></table></figure>
-
-<p>vim 17.py</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">age = <span class="number">23</span></span><br><span class="line">message = <span class="string">&quot;Happy &quot;</span> + <span class="built_in">str</span>(age) + <span class="string">&quot;rd Birthday!&quot;</span></span><br><span class="line"><span class="built_in">print</span>(message)</span><br></pre></td></tr></table></figure>
-<figure class="highlight txt"><table><tr><td class="code"><pre><span class="line">Happy 23rd Birthday!</span><br></pre></td></tr></table></figure>
-
-<h2 id="Python-2-中的整数"><a href="#Python-2-中的整数" class="headerlink" title="Python 2 中的整数"></a>Python 2 中的整数</h2><p>与c语言类似，3&#x2F;2&#x3D;1而不是1.5</p>
-<h1 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h1><p>vim 18.py</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 向大家问好</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;Hello Python people!&quot;</span>)</span><br></pre></td></tr></table></figure>
-<figure class="highlight txt"><table><tr><td class="code"><pre><span class="line">Hello Python people!</span><br></pre></td></tr></table></figure>
-
-<h1 id="Python-之禅"><a href="#Python-之禅" class="headerlink" title="Python 之禅"></a>Python 之禅</h1><p>vim 19.py</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> this</span><br></pre></td></tr></table></figure>
-<figure class="highlight txt"><table><tr><td class="code"><pre><span class="line">The Zen of Python, by Tim Peters</span><br><span class="line"></span><br><span class="line">Beautiful is better than ugly.</span><br><span class="line">Explicit is better than implicit.</span><br><span class="line">Simple is better than complex.</span><br><span class="line">Complex is better than complicated.</span><br><span class="line">Flat is better than nested.</span><br><span class="line">Sparse is better than dense.</span><br><span class="line">Readability counts.</span><br><span class="line">Special cases aren&#x27;t special enough to break the rules.</span><br><span class="line">Although practicality beats purity.</span><br><span class="line">Errors should never pass silently.</span><br><span class="line">Unless explicitly silenced.</span><br><span class="line">In the face of ambiguity, refuse the temptation to guess.</span><br><span class="line">There should be one-- and preferably only one --obvious way to do it.</span><br><span class="line">Although that way may not be obvious at first unless you&#x27;re Dutch.</span><br><span class="line">Now is better than never.</span><br><span class="line">Although never is often better than *right* now.</span><br><span class="line">If the implementation is hard to explain, it&#x27;s a bad idea.</span><br><span class="line">If the implementation is easy to explain, it may be a good idea.</span><br><span class="line">Namespaces are one honking great idea -- let&#x27;s do more of those!</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>python</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>列表简介</title>
-    <url>/2021/06/23/python3/2021-06-23%2003%E3%80%81%E5%88%97%E8%A1%A8%E7%AE%80%E4%BB%8B/</url>
-    <content><![CDATA[<h1 id="列表是什么"><a href="#列表是什么" class="headerlink" title="列表是什么"></a>列表是什么</h1><p>类似于c的数组</p>
-<p>vim 19.py</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">bicycles = [<span class="string">&#x27;trek&#x27;</span>,<span class="string">&#x27;cannondale&#x27;</span>,<span class="string">&#x27;redline&#x27;</span>,<span class="string">&#x27;specialized&#x27;</span>]</span><br><span class="line"><span class="built_in">print</span>(bicycles)</span><br></pre></td></tr></table></figure>
-<figure class="highlight txt"><table><tr><td class="code"><pre><span class="line">[&#x27;trek&#x27;, &#x27;cannondale&#x27;, &#x27;redline&#x27;, &#x27;specialized&#x27;]</span><br></pre></td></tr></table></figure>
-<span id="more"></span>  
-
-<h2 id="访问列表元素"><a href="#访问列表元素" class="headerlink" title="访问列表元素"></a>访问列表元素</h2><p>vim 21.py</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">bicycles = [<span class="string">&#x27;trek&#x27;</span>,<span class="string">&#x27;cannondale&#x27;</span>,<span class="string">&#x27;redline&#x27;</span>,<span class="string">&#x27;specialized&#x27;</span>]</span><br><span class="line"><span class="built_in">print</span>(bicycles[<span class="number">0</span>])</span><br><span class="line"><span class="built_in">print</span>(bicycles[<span class="number">0</span>].title())</span><br></pre></td></tr></table></figure>
-<figure class="highlight txt"><table><tr><td class="code"><pre><span class="line">trek</span><br><span class="line">Trek</span><br></pre></td></tr></table></figure>
-
-<h2 id="索引从0而不是1开始"><a href="#索引从0而不是1开始" class="headerlink" title="索引从0而不是1开始"></a>索引从0而不是1开始</h2><p>vim 22.py</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">bicycles = [<span class="string">&#x27;trek&#x27;</span>,<span class="string">&#x27;cannondale&#x27;</span>,<span class="string">&#x27;redline&#x27;</span>,<span class="string">&#x27;specialized&#x27;</span>]</span><br><span class="line"><span class="built_in">print</span>(bicycles[<span class="number">1</span>])      <span class="comment">#访问第二个元素</span></span><br><span class="line"><span class="built_in">print</span>(bicycles[<span class="number">3</span>])      <span class="comment">#访问第四个元素</span></span><br><span class="line"><span class="built_in">print</span>(bicycles[-<span class="number">1</span>])     <span class="comment">#访问最后一个元素</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight txt"><table><tr><td class="code"><pre><span class="line">cannondale</span><br><span class="line">specialized</span><br><span class="line">specialized</span><br></pre></td></tr></table></figure>
-
-<h2 id="使用列表中的各个值"><a href="#使用列表中的各个值" class="headerlink" title="使用列表中的各个值"></a>使用列表中的各个值</h2><p>vim 23.py</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">bicycles = [<span class="string">&#x27;trek&#x27;</span>,<span class="string">&#x27;cannondale&#x27;</span>,<span class="string">&#x27;redline&#x27;</span>,<span class="string">&#x27;specialized&#x27;</span>]</span><br><span class="line">message = <span class="string">&quot;My first bicycle was a &quot;</span> + bicycles[<span class="number">1</span>].title() + <span class="string">&quot;.&quot;</span></span><br><span class="line"><span class="built_in">print</span>(message)</span><br></pre></td></tr></table></figure>
-<figure class="highlight txt"><table><tr><td class="code"><pre><span class="line">My first bicycle was a Cannondale.</span><br></pre></td></tr></table></figure>
-
-<h1 id="修改、添加和删除元素"><a href="#修改、添加和删除元素" class="headerlink" title="修改、添加和删除元素"></a>修改、添加和删除元素</h1><p>大多数列表都是动态的，列表创建后，会随着程序的运行而增删元素。</p>
-<h2 id="修改列表元素"><a href="#修改列表元素" class="headerlink" title="修改列表元素"></a>修改列表元素</h2><p>vim 24.py</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">motorcycles = [<span class="string">&#x27;honda&#x27;</span>,<span class="string">&#x27;yamaha&#x27;</span>,<span class="string">&#x27;suzukli&#x27;</span>]</span><br><span class="line"><span class="built_in">print</span>(motorcycles)</span><br><span class="line">motorcycles[<span class="number">0</span>] = <span class="string">&#x27;ducati&#x27;</span></span><br><span class="line"><span class="built_in">print</span>(motorcycles)</span><br></pre></td></tr></table></figure>
-<figure class="highlight txt"><table><tr><td class="code"><pre><span class="line">[&#x27;honda&#x27;, &#x27;yamaha&#x27;, &#x27;suzukli&#x27;]</span><br><span class="line">[&#x27;ducati&#x27;, &#x27;yamaha&#x27;, &#x27;suzukli&#x27;]</span><br></pre></td></tr></table></figure>
-
-<h2 id="在列表中添加元素"><a href="#在列表中添加元素" class="headerlink" title="在列表中添加元素"></a>在列表中添加元素</h2><h3 id="在列表末尾添加元素"><a href="#在列表末尾添加元素" class="headerlink" title="在列表末尾添加元素"></a>在列表末尾添加元素</h3><p>vim 25.py</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">motorcycles = [<span class="string">&#x27;honda&#x27;</span>,<span class="string">&#x27;yamaha&#x27;</span>,<span class="string">&#x27;suzuki&#x27;</span>]</span><br><span class="line"><span class="built_in">print</span>(motorcycles)</span><br><span class="line">motorcycles.append(<span class="string">&#x27;ducati&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(motorcycles)</span><br><span class="line">mt = []</span><br><span class="line">mt.append(<span class="string">&#x27;honda&#x27;</span>)</span><br><span class="line">mt.append(<span class="string">&#x27;yamaha&#x27;</span>)</span><br><span class="line">mt.append(<span class="string">&#x27;suzuki&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(mt)</span><br></pre></td></tr></table></figure>
-<figure class="highlight txt"><table><tr><td class="code"><pre><span class="line">[&#x27;honda&#x27;, &#x27;yamaha&#x27;, &#x27;suzuki&#x27;]</span><br><span class="line">[&#x27;honda&#x27;, &#x27;yamaha&#x27;, &#x27;suzuki&#x27;, &#x27;ducati&#x27;]</span><br><span class="line">[&#x27;honda&#x27;, &#x27;yamaha&#x27;, &#x27;suzuki&#x27;]</span><br></pre></td></tr></table></figure>
-
-<h3 id="在列表中插入元素"><a href="#在列表中插入元素" class="headerlink" title="在列表中插入元素"></a>在列表中插入元素</h3><p>vim 26.py</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">motorcycles = [<span class="string">&#x27;honda&#x27;</span>,<span class="string">&#x27;yamaha&#x27;</span>,<span class="string">&#x27;suzuki&#x27;</span>]</span><br><span class="line">motorcycles.insert(<span class="number">0</span>,<span class="string">&#x27;ducati&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(motorcycles)</span><br></pre></td></tr></table></figure>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">[&#x27;ducati&#x27;, &#x27;honda&#x27;, &#x27;yamaha&#x27;, &#x27;suzuki&#x27;]</span><br></pre></td></tr></table></figure>
-
-<h2 id="从列表中删除元素"><a href="#从列表中删除元素" class="headerlink" title="从列表中删除元素"></a>从列表中删除元素</h2><h3 id="使用del语句删除元素"><a href="#使用del语句删除元素" class="headerlink" title="使用del语句删除元素"></a>使用del语句删除元素</h3><p>vim 27.py</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">motorcycles = [<span class="string">&#x27;honda&#x27;</span>,<span class="string">&#x27;yamaha&#x27;</span>,<span class="string">&#x27;suzuki&#x27;</span>]</span><br><span class="line"><span class="built_in">print</span>(motorcycles)</span><br><span class="line"><span class="keyword">del</span> motorcycles[<span class="number">0</span>]</span><br><span class="line"><span class="built_in">print</span>(motorcycles)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;-----------------------------&quot;</span>)</span><br><span class="line">mt = [<span class="string">&#x27;honda&#x27;</span>,<span class="string">&#x27;yamaha&#x27;</span>,<span class="string">&#x27;suzuki&#x27;</span>]</span><br><span class="line"><span class="built_in">print</span>(mt)</span><br><span class="line"><span class="keyword">del</span> mt[<span class="number">1</span>]</span><br><span class="line"><span class="built_in">print</span>(mt)</span><br></pre></td></tr></table></figure>
-<figure class="highlight txt"><table><tr><td class="code"><pre><span class="line">[&#x27;honda&#x27;, &#x27;yamaha&#x27;, &#x27;suzuki&#x27;]</span><br><span class="line">[&#x27;yamaha&#x27;, &#x27;suzuki&#x27;]</span><br><span class="line">-----------------------------</span><br><span class="line">[&#x27;honda&#x27;, &#x27;yamaha&#x27;, &#x27;suzuki&#x27;]</span><br><span class="line">[&#x27;honda&#x27;, &#x27;suzuki&#x27;]</span><br></pre></td></tr></table></figure>
-
-<h3 id="使用方法pop-删除元素"><a href="#使用方法pop-删除元素" class="headerlink" title="使用方法pop()删除元素"></a>使用方法pop()删除元素</h3><p>vim 28.py</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">motorcycles = [<span class="string">&#x27;honda&#x27;</span>,<span class="string">&#x27;yamaha&#x27;</span>,<span class="string">&#x27;suzuki&#x27;</span>]</span><br><span class="line"><span class="built_in">print</span>(motorcycles)</span><br><span class="line">popped_motorcycle = motorcycles.pop()</span><br><span class="line"><span class="built_in">print</span>(motorcycles)</span><br><span class="line"><span class="built_in">print</span>(motorcycles.pop())</span><br><span class="line"><span class="built_in">print</span>(motorcycles)</span><br><span class="line"><span class="built_in">print</span>(popped_motorcycle)</span><br></pre></td></tr></table></figure>
-<figure class="highlight txt"><table><tr><td class="code"><pre><span class="line">[&#x27;honda&#x27;, &#x27;yamaha&#x27;, &#x27;suzuki&#x27;]       //原列表输出</span><br><span class="line">[&#x27;honda&#x27;, &#x27;yamaha&#x27;]     //删除suzuki后原列表输出</span><br><span class="line">yamaha      //输出删除一项后原列表最后一项</span><br><span class="line">[&#x27;honda&#x27;]       //输出两次删除后的原列表</span><br><span class="line">suzuki      //输出被赋值列表</span><br></pre></td></tr></table></figure>
-
-<h3 id="弹出列表中任何位置处元素"><a href="#弹出列表中任何位置处元素" class="headerlink" title="弹出列表中任何位置处元素"></a>弹出列表中任何位置处元素</h3><p>vim 29.py</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">motorcycles = [<span class="string">&#x27;honda&#x27;</span>,<span class="string">&#x27;yamaha&#x27;</span>,<span class="string">&#x27;suzuki&#x27;</span>]</span><br><span class="line">first_owned = motorcycles.pop(<span class="number">0</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;The last motorcycle I owned was a &quot;</span> + first_owned.title() + <span class="string">&quot;.&quot;</span>)</span><br></pre></td></tr></table></figure>
-<figure class="highlight txt"><table><tr><td class="code"><pre><span class="line">The last motorcycle I owned was a Honda.</span><br></pre></td></tr></table></figure>
-
-<h3 id="根据值删除元素"><a href="#根据值删除元素" class="headerlink" title="根据值删除元素"></a>根据值删除元素</h3><p>vim 30.py</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">motorcycles = [<span class="string">&#x27;honda&#x27;</span>,<span class="string">&#x27;yamaha&#x27;</span>,<span class="string">&#x27;suzukli&#x27;</span>,<span class="string">&#x27;ducati&#x27;</span>]</span><br><span class="line"><span class="built_in">print</span>(motorcycles)</span><br><span class="line">motorcycles.remove(<span class="string">&#x27;ducati&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(motorcycles)</span><br><span class="line">dd = <span class="string">&#x27;yamaha&#x27;</span></span><br><span class="line">motorcycles.remove(dd)</span><br><span class="line"><span class="built_in">print</span>(motorcycles)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;\nA &quot;</span> + dd.title() + <span class="string">&quot; is too expensive for me.&quot;</span>)</span><br></pre></td></tr></table></figure>
-<figure class="highlight txt"><table><tr><td class="code"><pre><span class="line">[&#x27;honda&#x27;, &#x27;yamaha&#x27;, &#x27;suzukli&#x27;, &#x27;ducati&#x27;]</span><br><span class="line">[&#x27;honda&#x27;, &#x27;yamaha&#x27;, &#x27;suzukli&#x27;]</span><br><span class="line">[&#x27;honda&#x27;, &#x27;suzukli&#x27;]</span><br><span class="line"></span><br><span class="line">A Yamaha is too expensive for me.</span><br></pre></td></tr></table></figure>
-
-<h1 id="组织列表"><a href="#组织列表" class="headerlink" title="组织列表"></a>组织列表</h1><p>创建的列表中，元素的排序应用</p>
-<h2 id="使用方法sort-对列表进行永久性排序"><a href="#使用方法sort-对列表进行永久性排序" class="headerlink" title="使用方法sort()对列表进行永久性排序"></a>使用方法sort()对列表进行永久性排序</h2><p>vim 31.py</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">cars = [<span class="string">&#x27;bmw&#x27;</span>,<span class="string">&#x27;audi&#x27;</span>,<span class="string">&#x27;toyota&#x27;</span>,<span class="string">&#x27;subaru&#x27;</span>]</span><br><span class="line">cars.sort()</span><br><span class="line"><span class="built_in">print</span>(cars)</span><br><span class="line">cars.sort(reverse=<span class="literal">True</span>)</span><br><span class="line"><span class="built_in">print</span>(cars)</span><br></pre></td></tr></table></figure>
-<figure class="highlight txt"><table><tr><td class="code"><pre><span class="line">[&#x27;audi&#x27;, &#x27;bmw&#x27;, &#x27;subaru&#x27;, &#x27;toyota&#x27;]</span><br><span class="line">[&#x27;toyota&#x27;, &#x27;subaru&#x27;, &#x27;bmw&#x27;, &#x27;audi&#x27;]</span><br></pre></td></tr></table></figure>
-
-<h2 id="使用函数sorted-对列表进行临时排序"><a href="#使用函数sorted-对列表进行临时排序" class="headerlink" title="使用函数sorted()对列表进行临时排序"></a>使用函数sorted()对列表进行临时排序</h2><p>vim 32.py</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">cars = [<span class="string">&#x27;bmw&#x27;</span>,<span class="string">&#x27;audi&#x27;</span>,<span class="string">&#x27;toyota&#x27;</span>,<span class="string">&#x27;subaru&#x27;</span>]</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;Here is the original list:&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(cars)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;\nHere is the sorted list:&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">sorted</span>(cars))</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;\nHere os the original list again:&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(cars)</span><br></pre></td></tr></table></figure>
-<figure class="highlight txt"><table><tr><td class="code"><pre><span class="line">Here is the original list:</span><br><span class="line">[&#x27;bmw&#x27;, &#x27;audi&#x27;, &#x27;toyota&#x27;, &#x27;subaru&#x27;]</span><br><span class="line"></span><br><span class="line">Here is the sorted list:</span><br><span class="line">[&#x27;audi&#x27;, &#x27;bmw&#x27;, &#x27;subaru&#x27;, &#x27;toyota&#x27;]</span><br><span class="line"></span><br><span class="line">Here os the original list again:</span><br><span class="line">[&#x27;bmw&#x27;, &#x27;audi&#x27;, &#x27;toyota&#x27;, &#x27;subaru&#x27;]</span><br></pre></td></tr></table></figure>
-
-<h2 id="倒着打印列表"><a href="#倒着打印列表" class="headerlink" title="倒着打印列表"></a>倒着打印列表</h2><p>vim 33.py</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">cars = [<span class="string">&#x27;bmw&#x27;</span>,<span class="string">&#x27;audi&#x27;</span>,<span class="string">&#x27;toyota&#x27;</span>,<span class="string">&#x27;subaru&#x27;</span>]</span><br><span class="line"><span class="built_in">print</span>(cars)</span><br><span class="line">cars.reverse()      <span class="comment">#永久性的修改顺序</span></span><br><span class="line"><span class="built_in">print</span>(cars)</span><br></pre></td></tr></table></figure>
-<figure class="highlight txt"><table><tr><td class="code"><pre><span class="line">[&#x27;bmw&#x27;, &#x27;audi&#x27;, &#x27;toyota&#x27;, &#x27;subaru&#x27;]</span><br><span class="line">[&#x27;subaru&#x27;, &#x27;toyota&#x27;, &#x27;audi&#x27;, &#x27;bmw&#x27;]</span><br></pre></td></tr></table></figure>
-
-<h2 id="确定列表的长度"><a href="#确定列表的长度" class="headerlink" title="确定列表的长度"></a>确定列表的长度</h2><p>vim 34.py</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">cars = [<span class="string">&#x27;bmw&#x27;</span>,<span class="string">&#x27;audi&#x27;</span>,<span class="string">&#x27;toyota&#x27;</span>,<span class="string">&#x27;subaru&#x27;</span>]</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">len</span>(cars))</span><br></pre></td></tr></table></figure>
-<figure class="highlight txt"><table><tr><td class="code"><pre><span class="line">4</span><br></pre></td></tr></table></figure>
-
-<h1 id="使用列表时避免索引错误"><a href="#使用列表时避免索引错误" class="headerlink" title="使用列表时避免索引错误"></a>使用列表时避免索引错误</h1><p>列表从0开始索引，-1为倒数第一个元素，列表为空-1报错</p>
-]]></content>
-      <categories>
-        <category>python</category>
+        <category>Kubernetes</category>
       </categories>
   </entry>
   <entry>
@@ -1023,6 +813,244 @@
 ]]></content>
       <categories>
         <category>linux for rhel8</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>变量和简单数据类型</title>
+    <url>/2021/06/22/python3/2021-06-22%2002%E3%80%81%E5%8F%98%E9%87%8F%E5%92%8C%E7%AE%80%E5%8D%95%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/</url>
+    <content><![CDATA[<h1 id="运行hello-world"><a href="#运行hello-world" class="headerlink" title="运行hello world"></a>运行hello world</h1><p>vim 1.py</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="string">&quot;hello Python world!&quot;</span>)</span><br></pre></td></tr></table></figure>
+<figure class="highlight txt"><table><tr><td class="code"><pre><span class="line">hello Python world!</span><br></pre></td></tr></table></figure>
+<span id="more"></span>  
+
+<h1 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h1><p>vim 2.py</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">message = <span class="string">&quot;Hello Python world!&quot;</span></span><br><span class="line"><span class="built_in">print</span>(message)</span><br></pre></td></tr></table></figure>
+<figure class="highlight txt"><table><tr><td class="code"><pre><span class="line">hello Python world!</span><br></pre></td></tr></table></figure>
+<p>vim 3.py</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">message = <span class="string">&quot;Hello Python world!&quot;</span></span><br><span class="line"><span class="built_in">print</span>(message)</span><br><span class="line">message = <span class="string">&quot;Hello world!&quot;</span></span><br><span class="line"><span class="built_in">print</span>(message)</span><br></pre></td></tr></table></figure>
+<figure class="highlight txt"><table><tr><td class="code"><pre><span class="line">hello Python world!</span><br><span class="line">Hello world!</span><br></pre></td></tr></table></figure>
+
+<h2 id="变量命名和使用"><a href="#变量命名和使用" class="headerlink" title="变量命名和使用"></a>变量命名和使用</h2><ul>
+<li><p>变量名只能包含<strong>字母、数字</strong>和<strong>下划线</strong>。变量名只能是<strong>字母</strong>或<strong>下划线</strong>开头。例：message_1</p>
+</li>
+<li><p>变量名不能包含<strong>空格</strong>，但可以使用<strong>下划线</strong>来分隔单词</p>
+</li>
+<li><p>不能将<strong>Python关键字</strong>和<strong>函数名</strong>作为变量名使用，如：print</p>
+</li>
+</ul>
+<h2 id="使用变量时的错误"><a href="#使用变量时的错误" class="headerlink" title="使用变量时的错误"></a>使用变量时的错误</h2><p>vim 4.py</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">message = <span class="string">&quot;Hello world!&quot;</span></span><br><span class="line"><span class="built_in">print</span>(mesage)</span><br></pre></td></tr></table></figure>
+<figure class="highlight txt"><table><tr><td class="code"><pre><span class="line">Traceback (most recent call last):</span><br><span class="line">  File &quot;4.py&quot;, line 2, in &lt;module&gt;      //第二行代码错误</span><br><span class="line">    print(mesage)       //列出了这个错误</span><br><span class="line">NameError: name &#x27;mesage&#x27; is not defined     //mesage无法识别</span><br></pre></td></tr></table></figure>
+<h1 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h1><p>字符串就是一系列字符。在Python中，用引号括起来的都是字符串，其中的引号可以是<strong>单引号</strong>也可以是<strong>双引号</strong></p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="string">&quot;This is a string.&quot;</span></span><br><span class="line"><span class="string">&#x27;This is also a string.&quot;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="使用方法修改字符串大小写"><a href="#使用方法修改字符串大小写" class="headerlink" title="使用方法修改字符串大小写"></a>使用方法修改字符串大小写</h2><p>vim 5.py</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">name = <span class="string">&quot;ada lovelace&quot;</span></span><br><span class="line"><span class="built_in">print</span>(name.title())</span><br></pre></td></tr></table></figure>
+<figure class="highlight txt"><table><tr><td class="code"><pre><span class="line">Ada Lovelace</span><br></pre></td></tr></table></figure>
+<p>titile（）以首字母大写的方式显示每个单词，即将每个单词的首字母都改为大写。</p>
+<p>vim 6.py</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">name = <span class="string">&quot;ada lovelace&quot;</span></span><br><span class="line"><span class="built_in">print</span>(name.title())</span><br><span class="line"><span class="built_in">print</span>(name.lower())</span><br><span class="line"><span class="built_in">print</span>(name)</span><br></pre></td></tr></table></figure>
+<figure class="highlight txt"><table><tr><td class="code"><pre><span class="line">Ada Lovelace</span><br><span class="line">ada lovelace</span><br><span class="line">ada lovelace</span><br></pre></td></tr></table></figure>
+
+<h2 id="合并字符串"><a href="#合并字符串" class="headerlink" title="合并字符串"></a>合并字符串</h2><p>vim 7.py</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">first_name = <span class="string">&quot;ada&quot;</span></span><br><span class="line">last_name = <span class="string">&quot;lovelace&quot;</span></span><br><span class="line">full_name = first_name + <span class="string">&quot; &quot;</span> + last_name</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(full_name)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;Hello,&quot;</span> + full_name + <span class="string">&quot;!&quot;</span>)</span><br><span class="line">message = <span class="string">&quot;Hello,&quot;</span> + full_name.title() + <span class="string">&quot;!&quot;</span></span><br><span class="line"><span class="built_in">print</span>(message)</span><br></pre></td></tr></table></figure>
+<figure class="highlight txt"><table><tr><td class="code"><pre><span class="line">ada lovelace</span><br><span class="line">Hello,ada lovelace!</span><br><span class="line">Hello,Ada Lovelace!</span><br></pre></td></tr></table></figure>
+
+<h2 id="使用制表符或换行符来添加空白"><a href="#使用制表符或换行符来添加空白" class="headerlink" title="使用制表符或换行符来添加空白"></a>使用制表符或换行符来添加空白</h2><p>vim 8.py</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="string">&quot;Python&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;Languages:\nPython\nC\nJava&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;Languages:\n\tPython\n\tC\n\tJava&quot;</span>)</span><br></pre></td></tr></table></figure>
+<figure class="highlight txt"><table><tr><td class="code"><pre><span class="line">Python</span><br><span class="line">Languages:</span><br><span class="line">Python</span><br><span class="line">C</span><br><span class="line">Java</span><br><span class="line">Languages:</span><br><span class="line">        Python</span><br><span class="line">        C</span><br><span class="line">        Java</span><br></pre></td></tr></table></figure>
+
+<h2 id="删除空白"><a href="#删除空白" class="headerlink" title="删除空白"></a>删除空白</h2><p>vim 9.py</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">favorite_language = <span class="string">&#x27; python &#x27;</span></span><br><span class="line"><span class="built_in">print</span>(favorite_language)</span><br><span class="line"><span class="built_in">print</span>(favorite_language.rstrip())</span><br><span class="line"><span class="built_in">print</span>(favorite_language.strip())</span><br></pre></td></tr></table></figure>
+<figure class="highlight txt"><table><tr><td class="code"><pre><span class="line"> python </span><br><span class="line"> python</span><br><span class="line">python </span><br></pre></td></tr></table></figure>
+
+<h2 id="使用字符串时避免语法错误"><a href="#使用字符串时避免语法错误" class="headerlink" title="使用字符串时避免语法错误"></a>使用字符串时避免语法错误</h2><p>vim 10.py</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">message = <span class="string">&#x27;One of Python&#x27;</span>s strengths <span class="keyword">is</span> its diverse community.<span class="string">&#x27;</span></span><br><span class="line"><span class="string">print(message)</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight txt"><table><tr><td class="code"><pre><span class="line">  File &quot;10.py&quot;, line 1</span><br><span class="line">    message = &#x27;One of Python&#x27;s strengths is its diverse community.&#x27;</span><br><span class="line">                             ^</span><br><span class="line">SyntaxError: invalid syntax</span><br></pre></td></tr></table></figure>
+
+<p>vim 11.py</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">message = <span class="string">&quot;One of Python&#x27;s strengths is its diverse community.&quot;</span></span><br><span class="line"><span class="built_in">print</span>(message)</span><br></pre></td></tr></table></figure>
+<figure class="highlight txt"><table><tr><td class="code"><pre><span class="line">One of Python&#x27;s strengths is its diverse community.</span><br></pre></td></tr></table></figure>
+
+<h2 id="Python-2-中的print语句"><a href="#Python-2-中的print语句" class="headerlink" title="Python 2 中的print语句"></a>Python 2 中的print语句</h2><p>vim 12.py</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="built_in">print</span> <span class="string">&quot;Hello Python 2.7 World!&quot;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight txt"><table><tr><td class="code"><pre><span class="line">Hello Python 2.7 World!</span><br></pre></td></tr></table></figure>
+
+<h1 id="数字"><a href="#数字" class="headerlink" title="数字"></a>数字</h1><h2 id="整数"><a href="#整数" class="headerlink" title="整数"></a>整数</h2><p>vim 13.py</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="built_in">print</span>( <span class="number">2</span> + <span class="number">3</span> )</span><br><span class="line"><span class="built_in">print</span>( <span class="number">3</span> - <span class="number">2</span> )</span><br><span class="line"><span class="built_in">print</span>( <span class="number">2</span> * <span class="number">3</span> )</span><br><span class="line"><span class="built_in">print</span>( <span class="number">3</span> / <span class="number">2</span> )</span><br></pre></td></tr></table></figure>
+<figure class="highlight txt"><table><tr><td class="code"><pre><span class="line">5</span><br><span class="line">1</span><br><span class="line">6</span><br><span class="line">1.5</span><br></pre></td></tr></table></figure>
+
+<p>vim 14.py</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="built_in">print</span>( <span class="number">3</span> ** <span class="number">2</span> )</span><br><span class="line"><span class="built_in">print</span>( <span class="number">3</span> ** <span class="number">3</span> )</span><br><span class="line"><span class="built_in">print</span>( <span class="number">10</span> ** <span class="number">6</span> )</span><br><span class="line"><span class="built_in">print</span>( <span class="number">2</span> + <span class="number">3</span> * <span class="number">4</span> )</span><br><span class="line"><span class="built_in">print</span>( ( <span class="number">2</span> + <span class="number">3</span> ) * <span class="number">4</span> )</span><br></pre></td></tr></table></figure>
+<figure class="highlight txt"><table><tr><td class="code"><pre><span class="line">9</span><br><span class="line">27</span><br><span class="line">1000000</span><br><span class="line">14</span><br><span class="line">20</span><br></pre></td></tr></table></figure>
+
+<h2 id="浮点型"><a href="#浮点型" class="headerlink" title="浮点型"></a>浮点型</h2><p>vim 15.py</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="built_in">print</span>( <span class="number">0.1</span> + <span class="number">0.1</span> )</span><br><span class="line"><span class="built_in">print</span>( <span class="number">0.2</span> + <span class="number">0.2</span> )</span><br><span class="line"><span class="built_in">print</span>( <span class="number">2</span> * <span class="number">0.1</span> )</span><br><span class="line"><span class="built_in">print</span>( <span class="number">2</span> * <span class="number">0.2</span> )</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;-------------------&quot;</span>)       <span class="comment">#结果包含的小数可能是不确定的</span></span><br><span class="line"><span class="built_in">print</span>( <span class="number">0.2</span> + <span class="number">0.1</span> )</span><br><span class="line"><span class="built_in">print</span>( <span class="number">3</span> * <span class="number">0.1</span> )</span><br></pre></td></tr></table></figure>
+<figure class="highlight txt"><table><tr><td class="code"><pre><span class="line">0.2</span><br><span class="line">0.4</span><br><span class="line">0.2</span><br><span class="line">0.4</span><br><span class="line">-------------------</span><br><span class="line">0.30000000000000004</span><br><span class="line">0.30000000000000004</span><br></pre></td></tr></table></figure>
+
+<h2 id="使用函数str-避免类型错误"><a href="#使用函数str-避免类型错误" class="headerlink" title="使用函数str()避免类型错误"></a>使用函数str()避免类型错误</h2><p>vim 16.py</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">age = <span class="number">23</span></span><br><span class="line">message = <span class="string">&quot;Happy &quot;</span> + age + <span class="string">&quot;rd Birthday!&quot;</span>   <span class="comment">#类型错误</span></span><br><span class="line"><span class="built_in">print</span>(message)</span><br></pre></td></tr></table></figure>
+<figure class="highlight txt"><table><tr><td class="code"><pre><span class="line">Traceback (most recent call last):</span><br><span class="line">  File &quot;16.py&quot;, line 2, in &lt;module&gt;</span><br><span class="line">    message = &quot;Happy &quot; + age + &quot;rd Birthday!&quot;</span><br><span class="line">TypeError: must be str, not int</span><br></pre></td></tr></table></figure>
+
+<p>vim 17.py</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">age = <span class="number">23</span></span><br><span class="line">message = <span class="string">&quot;Happy &quot;</span> + <span class="built_in">str</span>(age) + <span class="string">&quot;rd Birthday!&quot;</span></span><br><span class="line"><span class="built_in">print</span>(message)</span><br></pre></td></tr></table></figure>
+<figure class="highlight txt"><table><tr><td class="code"><pre><span class="line">Happy 23rd Birthday!</span><br></pre></td></tr></table></figure>
+
+<h2 id="Python-2-中的整数"><a href="#Python-2-中的整数" class="headerlink" title="Python 2 中的整数"></a>Python 2 中的整数</h2><p>与c语言类似，3&#x2F;2&#x3D;1而不是1.5</p>
+<h1 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h1><p>vim 18.py</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 向大家问好</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;Hello Python people!&quot;</span>)</span><br></pre></td></tr></table></figure>
+<figure class="highlight txt"><table><tr><td class="code"><pre><span class="line">Hello Python people!</span><br></pre></td></tr></table></figure>
+
+<h1 id="Python-之禅"><a href="#Python-之禅" class="headerlink" title="Python 之禅"></a>Python 之禅</h1><p>vim 19.py</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> this</span><br></pre></td></tr></table></figure>
+<figure class="highlight txt"><table><tr><td class="code"><pre><span class="line">The Zen of Python, by Tim Peters</span><br><span class="line"></span><br><span class="line">Beautiful is better than ugly.</span><br><span class="line">Explicit is better than implicit.</span><br><span class="line">Simple is better than complex.</span><br><span class="line">Complex is better than complicated.</span><br><span class="line">Flat is better than nested.</span><br><span class="line">Sparse is better than dense.</span><br><span class="line">Readability counts.</span><br><span class="line">Special cases aren&#x27;t special enough to break the rules.</span><br><span class="line">Although practicality beats purity.</span><br><span class="line">Errors should never pass silently.</span><br><span class="line">Unless explicitly silenced.</span><br><span class="line">In the face of ambiguity, refuse the temptation to guess.</span><br><span class="line">There should be one-- and preferably only one --obvious way to do it.</span><br><span class="line">Although that way may not be obvious at first unless you&#x27;re Dutch.</span><br><span class="line">Now is better than never.</span><br><span class="line">Although never is often better than *right* now.</span><br><span class="line">If the implementation is hard to explain, it&#x27;s a bad idea.</span><br><span class="line">If the implementation is easy to explain, it may be a good idea.</span><br><span class="line">Namespaces are one honking great idea -- let&#x27;s do more of those!</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>python</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>列表简介</title>
+    <url>/2021/06/23/python3/2021-06-23%2003%E3%80%81%E5%88%97%E8%A1%A8%E7%AE%80%E4%BB%8B/</url>
+    <content><![CDATA[<h1 id="列表是什么"><a href="#列表是什么" class="headerlink" title="列表是什么"></a>列表是什么</h1><p>类似于c的数组</p>
+<p>vim 19.py</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">bicycles = [<span class="string">&#x27;trek&#x27;</span>,<span class="string">&#x27;cannondale&#x27;</span>,<span class="string">&#x27;redline&#x27;</span>,<span class="string">&#x27;specialized&#x27;</span>]</span><br><span class="line"><span class="built_in">print</span>(bicycles)</span><br></pre></td></tr></table></figure>
+<figure class="highlight txt"><table><tr><td class="code"><pre><span class="line">[&#x27;trek&#x27;, &#x27;cannondale&#x27;, &#x27;redline&#x27;, &#x27;specialized&#x27;]</span><br></pre></td></tr></table></figure>
+<span id="more"></span>  
+
+<h2 id="访问列表元素"><a href="#访问列表元素" class="headerlink" title="访问列表元素"></a>访问列表元素</h2><p>vim 21.py</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">bicycles = [<span class="string">&#x27;trek&#x27;</span>,<span class="string">&#x27;cannondale&#x27;</span>,<span class="string">&#x27;redline&#x27;</span>,<span class="string">&#x27;specialized&#x27;</span>]</span><br><span class="line"><span class="built_in">print</span>(bicycles[<span class="number">0</span>])</span><br><span class="line"><span class="built_in">print</span>(bicycles[<span class="number">0</span>].title())</span><br></pre></td></tr></table></figure>
+<figure class="highlight txt"><table><tr><td class="code"><pre><span class="line">trek</span><br><span class="line">Trek</span><br></pre></td></tr></table></figure>
+
+<h2 id="索引从0而不是1开始"><a href="#索引从0而不是1开始" class="headerlink" title="索引从0而不是1开始"></a>索引从0而不是1开始</h2><p>vim 22.py</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">bicycles = [<span class="string">&#x27;trek&#x27;</span>,<span class="string">&#x27;cannondale&#x27;</span>,<span class="string">&#x27;redline&#x27;</span>,<span class="string">&#x27;specialized&#x27;</span>]</span><br><span class="line"><span class="built_in">print</span>(bicycles[<span class="number">1</span>])      <span class="comment">#访问第二个元素</span></span><br><span class="line"><span class="built_in">print</span>(bicycles[<span class="number">3</span>])      <span class="comment">#访问第四个元素</span></span><br><span class="line"><span class="built_in">print</span>(bicycles[-<span class="number">1</span>])     <span class="comment">#访问最后一个元素</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight txt"><table><tr><td class="code"><pre><span class="line">cannondale</span><br><span class="line">specialized</span><br><span class="line">specialized</span><br></pre></td></tr></table></figure>
+
+<h2 id="使用列表中的各个值"><a href="#使用列表中的各个值" class="headerlink" title="使用列表中的各个值"></a>使用列表中的各个值</h2><p>vim 23.py</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">bicycles = [<span class="string">&#x27;trek&#x27;</span>,<span class="string">&#x27;cannondale&#x27;</span>,<span class="string">&#x27;redline&#x27;</span>,<span class="string">&#x27;specialized&#x27;</span>]</span><br><span class="line">message = <span class="string">&quot;My first bicycle was a &quot;</span> + bicycles[<span class="number">1</span>].title() + <span class="string">&quot;.&quot;</span></span><br><span class="line"><span class="built_in">print</span>(message)</span><br></pre></td></tr></table></figure>
+<figure class="highlight txt"><table><tr><td class="code"><pre><span class="line">My first bicycle was a Cannondale.</span><br></pre></td></tr></table></figure>
+
+<h1 id="修改、添加和删除元素"><a href="#修改、添加和删除元素" class="headerlink" title="修改、添加和删除元素"></a>修改、添加和删除元素</h1><p>大多数列表都是动态的，列表创建后，会随着程序的运行而增删元素。</p>
+<h2 id="修改列表元素"><a href="#修改列表元素" class="headerlink" title="修改列表元素"></a>修改列表元素</h2><p>vim 24.py</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">motorcycles = [<span class="string">&#x27;honda&#x27;</span>,<span class="string">&#x27;yamaha&#x27;</span>,<span class="string">&#x27;suzukli&#x27;</span>]</span><br><span class="line"><span class="built_in">print</span>(motorcycles)</span><br><span class="line">motorcycles[<span class="number">0</span>] = <span class="string">&#x27;ducati&#x27;</span></span><br><span class="line"><span class="built_in">print</span>(motorcycles)</span><br></pre></td></tr></table></figure>
+<figure class="highlight txt"><table><tr><td class="code"><pre><span class="line">[&#x27;honda&#x27;, &#x27;yamaha&#x27;, &#x27;suzukli&#x27;]</span><br><span class="line">[&#x27;ducati&#x27;, &#x27;yamaha&#x27;, &#x27;suzukli&#x27;]</span><br></pre></td></tr></table></figure>
+
+<h2 id="在列表中添加元素"><a href="#在列表中添加元素" class="headerlink" title="在列表中添加元素"></a>在列表中添加元素</h2><h3 id="在列表末尾添加元素"><a href="#在列表末尾添加元素" class="headerlink" title="在列表末尾添加元素"></a>在列表末尾添加元素</h3><p>vim 25.py</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">motorcycles = [<span class="string">&#x27;honda&#x27;</span>,<span class="string">&#x27;yamaha&#x27;</span>,<span class="string">&#x27;suzuki&#x27;</span>]</span><br><span class="line"><span class="built_in">print</span>(motorcycles)</span><br><span class="line">motorcycles.append(<span class="string">&#x27;ducati&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(motorcycles)</span><br><span class="line">mt = []</span><br><span class="line">mt.append(<span class="string">&#x27;honda&#x27;</span>)</span><br><span class="line">mt.append(<span class="string">&#x27;yamaha&#x27;</span>)</span><br><span class="line">mt.append(<span class="string">&#x27;suzuki&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(mt)</span><br></pre></td></tr></table></figure>
+<figure class="highlight txt"><table><tr><td class="code"><pre><span class="line">[&#x27;honda&#x27;, &#x27;yamaha&#x27;, &#x27;suzuki&#x27;]</span><br><span class="line">[&#x27;honda&#x27;, &#x27;yamaha&#x27;, &#x27;suzuki&#x27;, &#x27;ducati&#x27;]</span><br><span class="line">[&#x27;honda&#x27;, &#x27;yamaha&#x27;, &#x27;suzuki&#x27;]</span><br></pre></td></tr></table></figure>
+
+<h3 id="在列表中插入元素"><a href="#在列表中插入元素" class="headerlink" title="在列表中插入元素"></a>在列表中插入元素</h3><p>vim 26.py</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">motorcycles = [<span class="string">&#x27;honda&#x27;</span>,<span class="string">&#x27;yamaha&#x27;</span>,<span class="string">&#x27;suzuki&#x27;</span>]</span><br><span class="line">motorcycles.insert(<span class="number">0</span>,<span class="string">&#x27;ducati&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(motorcycles)</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">[&#x27;ducati&#x27;, &#x27;honda&#x27;, &#x27;yamaha&#x27;, &#x27;suzuki&#x27;]</span><br></pre></td></tr></table></figure>
+
+<h2 id="从列表中删除元素"><a href="#从列表中删除元素" class="headerlink" title="从列表中删除元素"></a>从列表中删除元素</h2><h3 id="使用del语句删除元素"><a href="#使用del语句删除元素" class="headerlink" title="使用del语句删除元素"></a>使用del语句删除元素</h3><p>vim 27.py</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">motorcycles = [<span class="string">&#x27;honda&#x27;</span>,<span class="string">&#x27;yamaha&#x27;</span>,<span class="string">&#x27;suzuki&#x27;</span>]</span><br><span class="line"><span class="built_in">print</span>(motorcycles)</span><br><span class="line"><span class="keyword">del</span> motorcycles[<span class="number">0</span>]</span><br><span class="line"><span class="built_in">print</span>(motorcycles)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;-----------------------------&quot;</span>)</span><br><span class="line">mt = [<span class="string">&#x27;honda&#x27;</span>,<span class="string">&#x27;yamaha&#x27;</span>,<span class="string">&#x27;suzuki&#x27;</span>]</span><br><span class="line"><span class="built_in">print</span>(mt)</span><br><span class="line"><span class="keyword">del</span> mt[<span class="number">1</span>]</span><br><span class="line"><span class="built_in">print</span>(mt)</span><br></pre></td></tr></table></figure>
+<figure class="highlight txt"><table><tr><td class="code"><pre><span class="line">[&#x27;honda&#x27;, &#x27;yamaha&#x27;, &#x27;suzuki&#x27;]</span><br><span class="line">[&#x27;yamaha&#x27;, &#x27;suzuki&#x27;]</span><br><span class="line">-----------------------------</span><br><span class="line">[&#x27;honda&#x27;, &#x27;yamaha&#x27;, &#x27;suzuki&#x27;]</span><br><span class="line">[&#x27;honda&#x27;, &#x27;suzuki&#x27;]</span><br></pre></td></tr></table></figure>
+
+<h3 id="使用方法pop-删除元素"><a href="#使用方法pop-删除元素" class="headerlink" title="使用方法pop()删除元素"></a>使用方法pop()删除元素</h3><p>vim 28.py</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">motorcycles = [<span class="string">&#x27;honda&#x27;</span>,<span class="string">&#x27;yamaha&#x27;</span>,<span class="string">&#x27;suzuki&#x27;</span>]</span><br><span class="line"><span class="built_in">print</span>(motorcycles)</span><br><span class="line">popped_motorcycle = motorcycles.pop()</span><br><span class="line"><span class="built_in">print</span>(motorcycles)</span><br><span class="line"><span class="built_in">print</span>(motorcycles.pop())</span><br><span class="line"><span class="built_in">print</span>(motorcycles)</span><br><span class="line"><span class="built_in">print</span>(popped_motorcycle)</span><br></pre></td></tr></table></figure>
+<figure class="highlight txt"><table><tr><td class="code"><pre><span class="line">[&#x27;honda&#x27;, &#x27;yamaha&#x27;, &#x27;suzuki&#x27;]       //原列表输出</span><br><span class="line">[&#x27;honda&#x27;, &#x27;yamaha&#x27;]     //删除suzuki后原列表输出</span><br><span class="line">yamaha      //输出删除一项后原列表最后一项</span><br><span class="line">[&#x27;honda&#x27;]       //输出两次删除后的原列表</span><br><span class="line">suzuki      //输出被赋值列表</span><br></pre></td></tr></table></figure>
+
+<h3 id="弹出列表中任何位置处元素"><a href="#弹出列表中任何位置处元素" class="headerlink" title="弹出列表中任何位置处元素"></a>弹出列表中任何位置处元素</h3><p>vim 29.py</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">motorcycles = [<span class="string">&#x27;honda&#x27;</span>,<span class="string">&#x27;yamaha&#x27;</span>,<span class="string">&#x27;suzuki&#x27;</span>]</span><br><span class="line">first_owned = motorcycles.pop(<span class="number">0</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;The last motorcycle I owned was a &quot;</span> + first_owned.title() + <span class="string">&quot;.&quot;</span>)</span><br></pre></td></tr></table></figure>
+<figure class="highlight txt"><table><tr><td class="code"><pre><span class="line">The last motorcycle I owned was a Honda.</span><br></pre></td></tr></table></figure>
+
+<h3 id="根据值删除元素"><a href="#根据值删除元素" class="headerlink" title="根据值删除元素"></a>根据值删除元素</h3><p>vim 30.py</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">motorcycles = [<span class="string">&#x27;honda&#x27;</span>,<span class="string">&#x27;yamaha&#x27;</span>,<span class="string">&#x27;suzukli&#x27;</span>,<span class="string">&#x27;ducati&#x27;</span>]</span><br><span class="line"><span class="built_in">print</span>(motorcycles)</span><br><span class="line">motorcycles.remove(<span class="string">&#x27;ducati&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(motorcycles)</span><br><span class="line">dd = <span class="string">&#x27;yamaha&#x27;</span></span><br><span class="line">motorcycles.remove(dd)</span><br><span class="line"><span class="built_in">print</span>(motorcycles)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;\nA &quot;</span> + dd.title() + <span class="string">&quot; is too expensive for me.&quot;</span>)</span><br></pre></td></tr></table></figure>
+<figure class="highlight txt"><table><tr><td class="code"><pre><span class="line">[&#x27;honda&#x27;, &#x27;yamaha&#x27;, &#x27;suzukli&#x27;, &#x27;ducati&#x27;]</span><br><span class="line">[&#x27;honda&#x27;, &#x27;yamaha&#x27;, &#x27;suzukli&#x27;]</span><br><span class="line">[&#x27;honda&#x27;, &#x27;suzukli&#x27;]</span><br><span class="line"></span><br><span class="line">A Yamaha is too expensive for me.</span><br></pre></td></tr></table></figure>
+
+<h1 id="组织列表"><a href="#组织列表" class="headerlink" title="组织列表"></a>组织列表</h1><p>创建的列表中，元素的排序应用</p>
+<h2 id="使用方法sort-对列表进行永久性排序"><a href="#使用方法sort-对列表进行永久性排序" class="headerlink" title="使用方法sort()对列表进行永久性排序"></a>使用方法sort()对列表进行永久性排序</h2><p>vim 31.py</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">cars = [<span class="string">&#x27;bmw&#x27;</span>,<span class="string">&#x27;audi&#x27;</span>,<span class="string">&#x27;toyota&#x27;</span>,<span class="string">&#x27;subaru&#x27;</span>]</span><br><span class="line">cars.sort()</span><br><span class="line"><span class="built_in">print</span>(cars)</span><br><span class="line">cars.sort(reverse=<span class="literal">True</span>)</span><br><span class="line"><span class="built_in">print</span>(cars)</span><br></pre></td></tr></table></figure>
+<figure class="highlight txt"><table><tr><td class="code"><pre><span class="line">[&#x27;audi&#x27;, &#x27;bmw&#x27;, &#x27;subaru&#x27;, &#x27;toyota&#x27;]</span><br><span class="line">[&#x27;toyota&#x27;, &#x27;subaru&#x27;, &#x27;bmw&#x27;, &#x27;audi&#x27;]</span><br></pre></td></tr></table></figure>
+
+<h2 id="使用函数sorted-对列表进行临时排序"><a href="#使用函数sorted-对列表进行临时排序" class="headerlink" title="使用函数sorted()对列表进行临时排序"></a>使用函数sorted()对列表进行临时排序</h2><p>vim 32.py</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">cars = [<span class="string">&#x27;bmw&#x27;</span>,<span class="string">&#x27;audi&#x27;</span>,<span class="string">&#x27;toyota&#x27;</span>,<span class="string">&#x27;subaru&#x27;</span>]</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;Here is the original list:&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(cars)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;\nHere is the sorted list:&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">sorted</span>(cars))</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;\nHere os the original list again:&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(cars)</span><br></pre></td></tr></table></figure>
+<figure class="highlight txt"><table><tr><td class="code"><pre><span class="line">Here is the original list:</span><br><span class="line">[&#x27;bmw&#x27;, &#x27;audi&#x27;, &#x27;toyota&#x27;, &#x27;subaru&#x27;]</span><br><span class="line"></span><br><span class="line">Here is the sorted list:</span><br><span class="line">[&#x27;audi&#x27;, &#x27;bmw&#x27;, &#x27;subaru&#x27;, &#x27;toyota&#x27;]</span><br><span class="line"></span><br><span class="line">Here os the original list again:</span><br><span class="line">[&#x27;bmw&#x27;, &#x27;audi&#x27;, &#x27;toyota&#x27;, &#x27;subaru&#x27;]</span><br></pre></td></tr></table></figure>
+
+<h2 id="倒着打印列表"><a href="#倒着打印列表" class="headerlink" title="倒着打印列表"></a>倒着打印列表</h2><p>vim 33.py</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">cars = [<span class="string">&#x27;bmw&#x27;</span>,<span class="string">&#x27;audi&#x27;</span>,<span class="string">&#x27;toyota&#x27;</span>,<span class="string">&#x27;subaru&#x27;</span>]</span><br><span class="line"><span class="built_in">print</span>(cars)</span><br><span class="line">cars.reverse()      <span class="comment">#永久性的修改顺序</span></span><br><span class="line"><span class="built_in">print</span>(cars)</span><br></pre></td></tr></table></figure>
+<figure class="highlight txt"><table><tr><td class="code"><pre><span class="line">[&#x27;bmw&#x27;, &#x27;audi&#x27;, &#x27;toyota&#x27;, &#x27;subaru&#x27;]</span><br><span class="line">[&#x27;subaru&#x27;, &#x27;toyota&#x27;, &#x27;audi&#x27;, &#x27;bmw&#x27;]</span><br></pre></td></tr></table></figure>
+
+<h2 id="确定列表的长度"><a href="#确定列表的长度" class="headerlink" title="确定列表的长度"></a>确定列表的长度</h2><p>vim 34.py</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">cars = [<span class="string">&#x27;bmw&#x27;</span>,<span class="string">&#x27;audi&#x27;</span>,<span class="string">&#x27;toyota&#x27;</span>,<span class="string">&#x27;subaru&#x27;</span>]</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">len</span>(cars))</span><br></pre></td></tr></table></figure>
+<figure class="highlight txt"><table><tr><td class="code"><pre><span class="line">4</span><br></pre></td></tr></table></figure>
+
+<h1 id="使用列表时避免索引错误"><a href="#使用列表时避免索引错误" class="headerlink" title="使用列表时避免索引错误"></a>使用列表时避免索引错误</h1><p>列表从0开始索引，-1为倒数第一个元素，列表为空-1报错</p>
+]]></content>
+      <categories>
+        <category>python</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>英语词性</title>
+    <url>/2021/06/23/english/2021-06-23-2%20%E8%8B%B1%E8%AF%AD%E8%AF%8D%E6%80%A7/</url>
+    <content><![CDATA[<p>定义：词性又称为词类，英语单词根据其在句中的作用，分为<strong>十大类</strong></p>
+<span id="more"></span>  
+
+<h1 id="名词-n"><a href="#名词-n" class="headerlink" title="名词(n.)"></a>名词(n.)</h1><ul>
+<li>作用：表示事务的名称</li>
+<li>分类：<ul>
+<li>专有名词：指<strong>特定或独一无二的人或物</strong>，表示人、地方、事物、组织等的专有名词，，第一个首字母大写。例：Mary、Jane、China</li>
+<li>普通名词：指某类人、事物或抽象概念的名称<ul>
+<li>可数名词<ul>
+<li>个体名词：用来指单人或事物的名词。例：book、key</li>
+<li>集体名词：用来指一群人或一些事物总称的名词。例：people、army</li>
+</ul>
+</li>
+<li>不可数名词<ul>
+<li>物质名词：用来表示物质的名称，包括材料、液体、气体等具体实物的名词。例：water、glass</li>
+<li>抽象名词：用来指人或事物的品质、情感、状态、动作等抽象概念的名词。例：love、anger</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>名词由单数变复数的基本方法</li>
+</ul>
+<ol>
+<li>在单数名词词尾 +s。例：bag-bags、car-cars</li>
+<li>s,x,sh,ch结尾和以辅音字母+o结尾的名词 +es。例：watch-watches、potati-potatoes、tomato-tomatoes、echo-echoes、hero-heroes</li>
+<li>以元音字母 +o 结尾，部分以辅音字母 +o 结尾的外来名词或缩写名词 +s。例：photo-photos、piano-pianos、bamboo-bamboos、zoo-zoos</li>
+<li>以辅音字母 +y 结尾，变 y 为 i 再 +es。例：baby-babies、city-cities</li>
+<li>以元音字母 +y 结尾， +s。例：boy-boys、toy-toys</li>
+<li>以 f、fe 结尾，变 f、fe 为 v 再 +es。例：leaf-leaves、shelf-shelves、wife-wives</li>
+<li>不规则变化。例：man-men、woman-women、child-children、sheep-sheep</li>
+</ol>
+<h1 id="代词-pron"><a href="#代词-pron" class="headerlink" title="代词(pron.)"></a>代词(pron.)</h1><ul>
+<li>作用：为了避免重复用来代替名词或名词词组的词</li>
+<li>补充：<ul>
+<li></li>
+</ul>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>English</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>附页</title>
+    <url>/2021/06/23/english/2021-06-23-3%20%E9%99%84%E9%A1%B5/</url>
+    <content><![CDATA[<h1 id="元音辅音"><a href="#元音辅音" class="headerlink" title="元音辅音"></a>元音辅音</h1><ul>
+<li>元音：a、e、i、o、u</li>
+<li>辅音：b、c、d、f、g、h、j、k、l、m、n、p、q、r、s、t、v、w、x、y、z（除开元音的）</li>
+</ul>
+]]></content>
+      <categories>
+        <category>English</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>Python基础知识</title>
+    <url>/2021/06/21/python3/2021-06-21%2001%E3%80%81%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/</url>
+    <content><![CDATA[<h1 id="运行环境"><a href="#运行环境" class="headerlink" title="运行环境"></a>运行环境</h1><p>CentOS8.2 &amp;&amp; Python 3</p>
+<figure class="highlight txt"><table><tr><td class="code"><pre><span class="line">Python 3.6.8 (default, Apr 16 2020, 01:36:27)</span><br><span class="line">[GCC 8.3.1 20191121 (Red Hat 8.3.1-5)] on linux</span><br><span class="line">Type &quot;help&quot;, &quot;copyright&quot;, &quot;credits&quot; or &quot;license&quot; for more information.</span><br></pre></td></tr></table></figure>
+<p>微信图片_20220702225327.png</p>
+]]></content>
+      <categories>
+        <category>python</category>
+        <category>python3</category>
       </categories>
   </entry>
   <entry>
