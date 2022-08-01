@@ -2,7 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://newreport.top/2022/08/02/%E5%AE%B9%E5%99%A8/Docker/2022-08-02%20Docker%E7%9A%84%E5%AE%89%E8%A3%85%E5%8F%8A%E4%BD%BF%E7%94%A8/</loc>
+    <loc>https://newreport.top/2022/07/27/Kubernetes/2022-08-03%20Kubernetes1.24%E5%85%AC%E7%BD%91%E9%83%A8%E7%BD%B2/</loc>
+    
+    <lastmod>2022-08-01</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://newreport.top/2022/07/27/Kubernetes/2022-07-27%20Kubernetes1.24%E5%86%85%E7%BD%91%E9%83%A8%E7%BD%B2/</loc>
     
     <lastmod>2022-08-01</lastmod>
     
@@ -20,7 +29,7 @@
   </url>
   
   <url>
-    <loc>https://newreport.top/2022/07/27/Kubernetes/2022-08-03%20Kubernetes1.24%E5%85%AC%E7%BD%91%E9%83%A8%E7%BD%B2/</loc>
+    <loc>https://newreport.top/2022/08/02/%E5%AE%B9%E5%99%A8/Docker/2022-08-02%20Docker%E7%9A%84%E5%AE%89%E8%A3%85%E5%8F%8A%E4%BD%BF%E7%94%A8/</loc>
     
     <lastmod>2022-08-01</lastmod>
     
@@ -39,15 +48,6 @@
   
   <url>
     <loc>https://newreport.top/2021/01/06/2021-01-06%20%E5%9B%BE%E5%BA%8A%E6%90%AD%E5%BB%BA/</loc>
-    
-    <lastmod>2022-08-01</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://newreport.top/2022/07/27/Kubernetes/2022-07-27%20Kubernetes1.24%E5%86%85%E7%BD%91%E9%83%A8%E7%BD%B2/</loc>
     
     <lastmod>2022-08-01</lastmod>
     
@@ -252,13 +252,6 @@
   </url>
   
   <url>
-    <loc>https://newreport.top/tags/%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8/</loc>
-    <lastmod>2022-08-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://newreport.top/tags/%E4%BA%91%E6%9C%8D%E5%8A%A1/</loc>
     <lastmod>2022-08-01</lastmod>
     <changefreq>weekly</changefreq>
@@ -266,7 +259,21 @@
   </url>
   
   <url>
+    <loc>https://newreport.top/tags/%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8/</loc>
+    <lastmod>2022-08-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://newreport.top/tags/%E5%BE%85%E8%A1%A5%E5%85%85/</loc>
+    <lastmod>2022-08-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://newreport.top/tags/%E4%BA%91%E8%AE%A1%E7%AE%97/</loc>
     <lastmod>2022-08-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -296,21 +303,14 @@
   </url>
   
   <url>
+    <loc>https://newreport.top/categories/Kubernetes/</loc>
+    <lastmod>2022-08-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://newreport.top/categories/C/</loc>
-    <lastmod>2022-08-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://newreport.top/categories/CloudComputing/</loc>
-    <lastmod>2022-08-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://newreport.top/categories/python/</loc>
     <lastmod>2022-08-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -331,14 +331,7 @@
   </url>
   
   <url>
-    <loc>https://newreport.top/categories/python/python3/</loc>
-    <lastmod>2022-08-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://newreport.top/categories/Kubernetes/</loc>
+    <loc>https://newreport.top/categories/python/</loc>
     <lastmod>2022-08-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -346,6 +339,13 @@
   
   <url>
     <loc>https://newreport.top/categories/%E5%AE%B9%E5%99%A8/</loc>
+    <lastmod>2022-08-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://newreport.top/categories/python/python3/</loc>
     <lastmod>2022-08-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
