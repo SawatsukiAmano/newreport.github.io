@@ -6,7 +6,7 @@
   <link href="https://newreport.top/atom.xml" rel="self"/>
   
   <link href="https://newreport.top/"/>
-  <updated>2022-08-01T17:51:13.161Z</updated>
+  <updated>2022-08-01T17:59:59.187Z</updated>
   <id>https://newreport.top/</id>
   
   <author>
@@ -17,11 +17,30 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Docker的安装及使用</title>
+    <link href="https://newreport.top/2022/08/02/%E5%AE%B9%E5%99%A8/Docker/2022-08-02%20Docker%E7%9A%84%E5%AE%89%E8%A3%85%E5%8F%8A%E4%BD%BF%E7%94%A8/"/>
+    <id>https://newreport.top/2022/08/02/%E5%AE%B9%E5%99%A8/Docker/2022-08-02%20Docker%E7%9A%84%E5%AE%89%E8%A3%85%E5%8F%8A%E4%BD%BF%E7%94%A8/</id>
+    <published>2022-08-01T16:00:02.000Z</published>
+    <updated>2022-08-01T17:59:59.187Z</updated>
+    
+    
+    
+    
+    <category term="容器" scheme="https://newreport.top/categories/%E5%AE%B9%E5%99%A8/"/>
+    
+    <category term="Docker" scheme="https://newreport.top/categories/%E5%AE%B9%E5%99%A8/Docker/"/>
+    
+    
+    <category term="CloudComputing" scheme="https://newreport.top/tags/CloudComputing/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Podman的安装及使用</title>
-    <link href="https://newreport.top/2022/08/02/CloudComputing/2022-08-02%20Podman%E7%9A%84%E5%AE%89%E8%A3%85%E5%8F%8A%E4%BD%BF%E7%94%A8/"/>
-    <id>https://newreport.top/2022/08/02/CloudComputing/2022-08-02%20Podman%E7%9A%84%E5%AE%89%E8%A3%85%E5%8F%8A%E4%BD%BF%E7%94%A8/</id>
+    <link href="https://newreport.top/2022/08/02/%E5%AE%B9%E5%99%A8/Podman/2022-08-02%20Podman%E7%9A%84%E5%AE%89%E8%A3%85%E5%8F%8A%E4%BD%BF%E7%94%A8/"/>
+    <id>https://newreport.top/2022/08/02/%E5%AE%B9%E5%99%A8/Podman/2022-08-02%20Podman%E7%9A%84%E5%AE%89%E8%A3%85%E5%8F%8A%E4%BD%BF%E7%94%A8/</id>
     <published>2022-08-01T16:00:01.000Z</published>
-    <updated>2022-08-01T17:51:13.161Z</updated>
+    <updated>2022-08-01T17:59:08.807Z</updated>
     
     
       
@@ -35,15 +54,19 @@
     
     
     
-    <category term="CloudComputing" scheme="https://newreport.top/categories/CloudComputing/"/>
+    <category term="容器" scheme="https://newreport.top/categories/%E5%AE%B9%E5%99%A8/"/>
     
+    <category term="Podman" scheme="https://newreport.top/categories/%E5%AE%B9%E5%99%A8/Podman/"/>
+    
+    
+    <category term="CloudComputing" scheme="https://newreport.top/tags/CloudComputing/"/>
     
   </entry>
   
   <entry>
     <title>Kubernetes1.24内网部署</title>
-    <link href="https://newreport.top/2022/07/27/CloudComputing/2022-07-27%20Kubernetes%201.24%E9%83%A8%E7%BD%B2/"/>
-    <id>https://newreport.top/2022/07/27/CloudComputing/2022-07-27%20Kubernetes%201.24%E9%83%A8%E7%BD%B2/</id>
+    <link href="https://newreport.top/2022/07/27/Kubernetes/2022-07-27%20Kubernetes1.24%E5%86%85%E7%BD%91%E9%83%A8%E7%BD%B2/"/>
+    <id>https://newreport.top/2022/07/27/Kubernetes/2022-07-27%20Kubernetes1.24%E5%86%85%E7%BD%91%E9%83%A8%E7%BD%B2/</id>
     <published>2022-07-26T16:00:01.000Z</published>
     <updated>2022-08-01T17:46:46.684Z</updated>
     
@@ -56,6 +79,23 @@
     
     <category term="CloudComputing" scheme="https://newreport.top/categories/CloudComputing/"/>
     
+    
+  </entry>
+  
+  <entry>
+    <title>Kubernetes1.24公网部署</title>
+    <link href="https://newreport.top/2022/07/27/Kubernetes/2022-08-03%20Kubernetes1.24%E5%85%AC%E7%BD%91%E9%83%A8%E7%BD%B2/"/>
+    <id>https://newreport.top/2022/07/27/Kubernetes/2022-08-03%20Kubernetes1.24%E5%85%AC%E7%BD%91%E9%83%A8%E7%BD%B2/</id>
+    <published>2022-07-26T16:00:01.000Z</published>
+    <updated>2022-08-01T17:58:07.640Z</updated>
+    
+    
+    
+    
+    <category term="Kubernetes" scheme="https://newreport.top/categories/Kubernetes/"/>
+    
+    
+    <category term="CloudComputing" scheme="https://newreport.top/tags/CloudComputing/"/>
     
   </entry>
   
@@ -141,10 +181,10 @@
   
   <entry>
     <title>列表简介</title>
-    <link href="https://newreport.top/2021/06/23/python3/2021-06-23%2003%E3%80%81%E5%88%97%E8%A1%A8%E7%AE%80%E4%BB%8B/"/>
-    <id>https://newreport.top/2021/06/23/python3/2021-06-23%2003%E3%80%81%E5%88%97%E8%A1%A8%E7%AE%80%E4%BB%8B/</id>
+    <link href="https://newreport.top/2021/06/23/python/python3/2021-06-23%2003%E3%80%81%E5%88%97%E8%A1%A8%E7%AE%80%E4%BB%8B/"/>
+    <id>https://newreport.top/2021/06/23/python/python3/2021-06-23%2003%E3%80%81%E5%88%97%E8%A1%A8%E7%AE%80%E4%BB%8B/</id>
     <published>2021-06-22T16:00:00.000Z</published>
-    <updated>2021-06-23T11:56:38.000Z</updated>
+    <updated>2022-08-01T17:54:38.803Z</updated>
     
     
     <summary type="html">&lt;h1 id=&quot;列表是什么&quot;&gt;&lt;a href=&quot;#列表是什么&quot; class=&quot;headerlink&quot; title=&quot;列表是什么&quot;&gt;&lt;/a&gt;列表是什么&lt;/h1&gt;&lt;p&gt;类似于c的数组&lt;/p&gt;
@@ -156,13 +196,15 @@
     
     <category term="python" scheme="https://newreport.top/categories/python/"/>
     
+    <category term="python3" scheme="https://newreport.top/categories/python/python3/"/>
+    
     
   </entry>
   
   <entry>
     <title>变量和简单数据类型</title>
-    <link href="https://newreport.top/2021/06/22/python3/2021-06-22%2002%E3%80%81%E5%8F%98%E9%87%8F%E5%92%8C%E7%AE%80%E5%8D%95%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/"/>
-    <id>https://newreport.top/2021/06/22/python3/2021-06-22%2002%E3%80%81%E5%8F%98%E9%87%8F%E5%92%8C%E7%AE%80%E5%8D%95%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/</id>
+    <link href="https://newreport.top/2021/06/22/python/python3/2021-06-22%2002%E3%80%81%E5%8F%98%E9%87%8F%E5%92%8C%E7%AE%80%E5%8D%95%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/"/>
+    <id>https://newreport.top/2021/06/22/python/python3/2021-06-22%2002%E3%80%81%E5%8F%98%E9%87%8F%E5%92%8C%E7%AE%80%E5%8D%95%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/</id>
     <published>2021-06-21T16:00:00.000Z</published>
     <updated>2021-06-23T08:55:22.000Z</updated>
     
@@ -180,8 +222,8 @@
   
   <entry>
     <title>Python基础知识</title>
-    <link href="https://newreport.top/2021/06/21/python3/2021-06-21%2001%E3%80%81%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/"/>
-    <id>https://newreport.top/2021/06/21/python3/2021-06-21%2001%E3%80%81%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/</id>
+    <link href="https://newreport.top/2021/06/21/python/python3/2021-06-21%2001%E3%80%81%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/"/>
+    <id>https://newreport.top/2021/06/21/python/python3/2021-06-21%2001%E3%80%81%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/</id>
     <published>2021-06-20T16:00:00.000Z</published>
     <updated>2022-07-03T14:52:13.029Z</updated>
     
@@ -482,25 +524,6 @@
     
     <category term="linux for rhel8" scheme="https://newreport.top/categories/linux-for-rhel8/"/>
     
-    
-  </entry>
-  
-  <entry>
-    <title>hexo-next7食用方法</title>
-    <link href="https://newreport.top/2020/12/21/2020-12-21%20hexo-next7%E9%A3%9F%E7%94%A8%E6%96%B9%E6%B3%95/"/>
-    <id>https://newreport.top/2020/12/21/2020-12-21%20hexo-next7%E9%A3%9F%E7%94%A8%E6%96%B9%E6%B3%95/</id>
-    <published>2020-12-20T16:00:00.000Z</published>
-    <updated>2022-07-02T18:57:13.564Z</updated>
-    
-    
-    <summary type="html">&lt;h1 id=&quot;博客启用（前略环境搭建）&quot;&gt;&lt;a href=&quot;#博客启用（前略环境搭建）&quot; class=&quot;headerlink&quot; title=&quot;博客启用（前略环境搭建）&quot;&gt;&lt;/a&gt;博客启用（前略环境搭建）&lt;/h1&gt;&lt;p&gt;&amp;amp;#8195;&amp;amp;#8195;新建文件夹，之后在其中执行：hexo init。&lt;br&gt;&amp;amp;#8195;&amp;amp;#8195;hexo-next7官方git：&lt;a href=&quot;https://github.com/theme-next/hexo-theme-next&quot;&gt;https://github.com/theme-next/hexo-theme-next&lt;/a&gt;&lt;br&gt;&amp;amp;#8195;&amp;amp;#8195;hexo-next8官方git：&lt;a href=&quot;https://github.com/next-theme/hexo-theme-next&quot;&gt;https://github.com/next-theme/hexo-theme-next&lt;/a&gt;&lt;br&gt;&amp;amp;#8195;&amp;amp;#8195;git配置：npm install –save hexo-deployer-git；多用户指定其一：githubgit config –global user.email “邮箱”和git config –global user.name “用户名”&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="博客搭建" scheme="https://newreport.top/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
-    
-    
-    <category term="tools" scheme="https://newreport.top/tags/tools/"/>
     
   </entry>
   
