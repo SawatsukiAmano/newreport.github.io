@@ -30,7 +30,7 @@ https://newreport.top/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/
 https://newreport.top/categories/%E6%9D%82%E7%89%A9%E7%AE%B1/
 https://newreport.top/categories/C/
 https://newreport.top/categories/Kubernetes/
-https://newreport.top/categories/linux-for-rhel8/
-https://newreport.top/categories/python/
 https://newreport.top/categories/English/
+https://newreport.top/categories/python/
+https://newreport.top/categories/linux-for-rhel8/
 https://newreport.top/categories/python/python3/
