@@ -6,7 +6,7 @@
   <link href="https://newreport.top/atom.xml" rel="self"/>
   
   <link href="https://newreport.top/"/>
-  <updated>2022-08-01T18:03:12.470Z</updated>
+  <updated>2022-08-02T15:59:19.991Z</updated>
   <id>https://newreport.top/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Kubernetes1.24公网部署</title>
+    <link href="https://newreport.top/2022/08/03/kubernetes/2022-08-03%20Kubernetes1.24%E5%85%AC%E7%BD%91%E9%83%A8%E7%BD%B2/"/>
+    <id>https://newreport.top/2022/08/03/kubernetes/2022-08-03%20Kubernetes1.24%E5%85%AC%E7%BD%91%E9%83%A8%E7%BD%B2/</id>
+    <published>2022-08-02T16:00:01.000Z</published>
+    <updated>2022-08-02T15:59:19.991Z</updated>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;环境介绍&quot;&gt;&lt;a href=&quot;#环境介绍&quot; class=&quot;headerlink&quot; title=&quot;环境介绍&quot;&gt;&lt;/a&gt;环境介绍&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;master：成都区 2核4G&lt;br&gt;cd001：成都区 2核4G&lt;br&gt;hk001: 香港区 2核4G&lt;br&gt;sg001: 新加坡 2核4G&lt;br&gt;主机：四台腾讯云服务器，系统为CentOS Stream9&lt;br&gt;Kubernetes版本：V1.24.3（截至2022-08-03，当前k8s最新版本为 1.24.3）&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="Kubernetes" scheme="https://newreport.top/categories/Kubernetes/"/>
+    
+    
+    <category term="CloudComputing" scheme="https://newreport.top/tags/CloudComputing/"/>
+    
+  </entry>
   
   <entry>
     <title>Docker的安装及使用</title>
@@ -40,7 +61,7 @@
     <link href="https://newreport.top/2022/08/02/%E5%AE%B9%E5%99%A8/Podman/2022-08-02%20Podman%E7%9A%84%E5%AE%89%E8%A3%85%E5%8F%8A%E4%BD%BF%E7%94%A8/"/>
     <id>https://newreport.top/2022/08/02/%E5%AE%B9%E5%99%A8/Podman/2022-08-02%20Podman%E7%9A%84%E5%AE%89%E8%A3%85%E5%8F%8A%E4%BD%BF%E7%94%A8/</id>
     <published>2022-08-01T16:00:01.000Z</published>
-    <updated>2022-08-01T18:03:14.822Z</updated>
+    <updated>2022-08-02T15:59:40.610Z</updated>
     
     
       
@@ -59,16 +80,16 @@
     <category term="Podman" scheme="https://newreport.top/categories/%E5%AE%B9%E5%99%A8/Podman/"/>
     
     
-    <category term="云计算" scheme="https://newreport.top/tags/%E4%BA%91%E8%AE%A1%E7%AE%97/"/>
+    <category term="CloudComputing" scheme="https://newreport.top/tags/CloudComputing/"/>
     
   </entry>
   
   <entry>
     <title>Kubernetes1.24内网部署</title>
-    <link href="https://newreport.top/2022/07/27/Kubernetes/2022-07-27%20Kubernetes1.24%E5%86%85%E7%BD%91%E9%83%A8%E7%BD%B2/"/>
-    <id>https://newreport.top/2022/07/27/Kubernetes/2022-07-27%20Kubernetes1.24%E5%86%85%E7%BD%91%E9%83%A8%E7%BD%B2/</id>
+    <link href="https://newreport.top/2022/07/27/kubernetes/2022-07-27%20Kubernetes1.24%E5%86%85%E7%BD%91%E9%83%A8%E7%BD%B2/"/>
+    <id>https://newreport.top/2022/07/27/kubernetes/2022-07-27%20Kubernetes1.24%E5%86%85%E7%BD%91%E9%83%A8%E7%BD%B2/</id>
     <published>2022-07-26T16:00:01.000Z</published>
-    <updated>2022-08-01T18:03:23.257Z</updated>
+    <updated>2022-08-02T16:14:39.902Z</updated>
     
     
     <summary type="html">&lt;h1 id=&quot;环境介绍&quot;&gt;&lt;a href=&quot;#环境介绍&quot; class=&quot;headerlink&quot; title=&quot;环境介绍&quot;&gt;&lt;/a&gt;环境介绍&lt;/h1&gt;&lt;blockquote&gt;
@@ -79,27 +100,6 @@
     
     <category term="Kubernetes" scheme="https://newreport.top/categories/Kubernetes/"/>
     
-    
-    <category term="云计算" scheme="https://newreport.top/tags/%E4%BA%91%E8%AE%A1%E7%AE%97/"/>
-    
-    <category term="CloudComputing" scheme="https://newreport.top/tags/CloudComputing/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Kubernetes1.24公网部署</title>
-    <link href="https://newreport.top/2022/07/27/Kubernetes/2022-08-03%20Kubernetes1.24%E5%85%AC%E7%BD%91%E9%83%A8%E7%BD%B2/"/>
-    <id>https://newreport.top/2022/07/27/Kubernetes/2022-08-03%20Kubernetes1.24%E5%85%AC%E7%BD%91%E9%83%A8%E7%BD%B2/</id>
-    <published>2022-07-26T16:00:01.000Z</published>
-    <updated>2022-08-01T18:03:28.618Z</updated>
-    
-    
-    
-    
-    <category term="Kubernetes" scheme="https://newreport.top/categories/Kubernetes/"/>
-    
-    
-    <category term="云计算" scheme="https://newreport.top/tags/%E4%BA%91%E8%AE%A1%E7%AE%97/"/>
     
     <category term="CloudComputing" scheme="https://newreport.top/tags/CloudComputing/"/>
     
@@ -372,10 +372,10 @@
   
   <entry>
     <title>了解文件系统的和基本操作</title>
-    <link href="https://newreport.top/2021/01/04/rhel8/2021-01-04%2004%E3%80%81%E4%BA%86%E8%A7%A3%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%92%8C%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/"/>
-    <id>https://newreport.top/2021/01/04/rhel8/2021-01-04%2004%E3%80%81%E4%BA%86%E8%A7%A3%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%92%8C%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/</id>
+    <link href="https://newreport.top/2021/01/04/linux/rhel8/2021-01-04%2004%E3%80%81%E4%BA%86%E8%A7%A3%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%92%8C%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/"/>
+    <id>https://newreport.top/2021/01/04/linux/rhel8/2021-01-04%2004%E3%80%81%E4%BA%86%E8%A7%A3%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%92%8C%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/</id>
     <published>2021-01-03T16:00:00.000Z</published>
-    <updated>2021-07-02T05:05:42.000Z</updated>
+    <updated>2022-08-02T15:48:15.391Z</updated>
     
     
     <summary type="html">&lt;h1 id=&quot;学习目标&quot;&gt;&lt;a href=&quot;#学习目标&quot; class=&quot;headerlink&quot; title=&quot;学习目标&quot;&gt;&lt;/a&gt;学习目标&lt;/h1&gt;&lt;ul&gt;
@@ -395,15 +395,17 @@
     
     
     
-    <category term="linux for rhel8" scheme="https://newreport.top/categories/linux-for-rhel8/"/>
+    <category term="linux" scheme="https://newreport.top/categories/linux/"/>
+    
+    <category term="rhel8" scheme="https://newreport.top/categories/linux/rhel8/"/>
     
     
   </entry>
   
   <entry>
     <title>运行命令和获取帮助</title>
-    <link href="https://newreport.top/2021/01/03/rhel8/2021-01-03%2003%E3%80%81%E8%BF%90%E8%A1%8C%E5%91%BD%E4%BB%A4%E5%92%8C%E8%8E%B7%E5%8F%96%E5%B8%AE%E5%8A%A9/"/>
-    <id>https://newreport.top/2021/01/03/rhel8/2021-01-03%2003%E3%80%81%E8%BF%90%E8%A1%8C%E5%91%BD%E4%BB%A4%E5%92%8C%E8%8E%B7%E5%8F%96%E5%B8%AE%E5%8A%A9/</id>
+    <link href="https://newreport.top/2021/01/03/linux/rhel8/2021-01-03%2003%E3%80%81%E8%BF%90%E8%A1%8C%E5%91%BD%E4%BB%A4%E5%92%8C%E8%8E%B7%E5%8F%96%E5%B8%AE%E5%8A%A9/"/>
+    <id>https://newreport.top/2021/01/03/linux/rhel8/2021-01-03%2003%E3%80%81%E8%BF%90%E8%A1%8C%E5%91%BD%E4%BB%A4%E5%92%8C%E8%8E%B7%E5%8F%96%E5%B8%AE%E5%8A%A9/</id>
     <published>2021-01-02T16:00:00.000Z</published>
     <updated>2021-06-22T13:04:44.000Z</updated>
     
@@ -450,8 +452,8 @@
   
   <entry>
     <title>Linux的基本使用</title>
-    <link href="https://newreport.top/2021/01/02/rhel8/2021-01-02%2002%E3%80%81Linux%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/"/>
-    <id>https://newreport.top/2021/01/02/rhel8/2021-01-02%2002%E3%80%81Linux%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/</id>
+    <link href="https://newreport.top/2021/01/02/linux/rhel8/2021-01-02%2002%E3%80%81Linux%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/"/>
+    <id>https://newreport.top/2021/01/02/linux/rhel8/2021-01-02%2002%E3%80%81Linux%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/</id>
     <published>2021-01-01T16:00:00.000Z</published>
     <updated>2021-06-22T13:04:38.000Z</updated>
     
@@ -509,8 +511,8 @@
   
   <entry>
     <title>Linux的简介和安装</title>
-    <link href="https://newreport.top/2021/01/01/rhel8/2021-01-01%2001%E3%80%81Linux%E7%9A%84%E7%AE%80%E4%BB%8B%E5%92%8C%E5%AE%89%E8%A3%85/"/>
-    <id>https://newreport.top/2021/01/01/rhel8/2021-01-01%2001%E3%80%81Linux%E7%9A%84%E7%AE%80%E4%BB%8B%E5%92%8C%E5%AE%89%E8%A3%85/</id>
+    <link href="https://newreport.top/2021/01/01/linux/rhel8/2021-01-01%2001%E3%80%81Linux%E7%9A%84%E7%AE%80%E4%BB%8B%E5%92%8C%E5%AE%89%E8%A3%85/"/>
+    <id>https://newreport.top/2021/01/01/linux/rhel8/2021-01-01%2001%E3%80%81Linux%E7%9A%84%E7%AE%80%E4%BB%8B%E5%92%8C%E5%AE%89%E8%A3%85/</id>
     <published>2020-12-31T16:00:00.000Z</published>
     <updated>2021-07-02T04:42:55.000Z</updated>
     

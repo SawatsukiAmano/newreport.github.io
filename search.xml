@@ -17,25 +17,6 @@
       </tags>
   </entry>
   <entry>
-    <title>云函数</title>
-    <url>/2021/01/05/2021-01-05-2%20%E4%BA%91%E5%87%BD%E6%95%B0/</url>
-    <content><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p><a href="https://developers.weixin.qq.com/miniprogram/dev/wxcloud/guide/functions.html">云函数简介</a><br>长不看结论：总之就是跑脚本，也可以跑微信的推送等事件。目前我只用它在跑签到脚本。</p>
-<h1 id="server酱"><a href="#server酱" class="headerlink" title="server酱"></a>server酱</h1><p>原版server酱：<a href="http://sc.ftqq.com/">http://sc.ftqq.com/</a><br>自搭server酱：<a href="https://www.v2ex.com/t/567927">https://www.v2ex.com/t/567927</a></p>
-<span id="more"></span>
-
-<h1 id="哔哩哔哩签到"><a href="#哔哩哔哩签到" class="headerlink" title="哔哩哔哩签到"></a>哔哩哔哩签到</h1><p>项目地址：<a href="https://github.com/happy888888/BiliExp">https://github.com/happy888888/BiliExp</a><br>油猴脚本：<a href="https://greasyfork.org/zh-CN/scripts/393096-bilibiliexp/versions">https://greasyfork.org/zh-CN/scripts/393096-bilibiliexp/versions</a><br>注意事项：云函数方式为cookie签到</p>
-<h1 id="天翼云盘签到和抽奖"><a href="#天翼云盘签到和抽奖" class="headerlink" title="天翼云盘签到和抽奖"></a>天翼云盘签到和抽奖</h1><p>项目地址：<a href="https://github.com/FingerSword/Cloud189-Sign-In">https://github.com/FingerSword/Cloud189-Sign-In</a><br>注意事项：不改密码就ok  </p>
-<h1 id="网易云音乐签到"><a href="#网易云音乐签到" class="headerlink" title="网易云音乐签到"></a>网易云音乐签到</h1><p>地址：<a href="https://www.coolapk.com/feed/22733317">https://www.coolapk.com/feed/22733317</a><br>注意事项：不改密码就ok  </p>
-<h1 id="有道云笔记签到"><a href="#有道云笔记签到" class="headerlink" title="有道云笔记签到"></a>有道云笔记签到</h1><p>签到1.0：<a href="https://www.coolapk.com/feed/18049127">https://www.coolapk.com/feed/18049127</a><br>签到2.0：<a href="https://www.coolapk.com/feed/19750209">https://www.coolapk.com/feed/19750209</a><br>注意事项：均为cookie，我用qq登录的账号一天就掉了，用手机号登录的应该能管一个月</p>
-]]></content>
-      <categories>
-        <category>杂物箱</category>
-      </categories>
-      <tags>
-        <tag>云服务</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>域名的使用</title>
     <url>/2021/01/05/2021-01-05-1%20%E5%9F%9F%E5%90%8D%E6%B3%A8%E5%86%8C/</url>
     <content><![CDATA[<h1 id="域名服务商"><a href="#域名服务商" class="headerlink" title="域名服务商"></a>域名服务商</h1><p>&amp;#8195;&amp;#8195;个人站除开com、net这两个域名，其他推荐选择国外服务商进行注册。以下仅列举一些我接触过的，还有很多其他的服务商就不一一列举了  </p>
@@ -73,16 +54,22 @@
       </categories>
   </entry>
   <entry>
-    <title>无限容量相册</title>
-    <url>/2021/06/28/2021-06-28%20%E6%97%A0%E9%99%90%E5%AE%B9%E9%87%8F%E7%9B%B8%E5%86%8C/</url>
-    <content><![CDATA[<p>基于：pixel&#x2F;pixel xl（即pixel一代），1微力同步，服务器一台（非必须，中继使用）</p>
+    <title>云函数</title>
+    <url>/2021/01/05/2021-01-05-2%20%E4%BA%91%E5%87%BD%E6%95%B0/</url>
+    <content><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p><a href="https://developers.weixin.qq.com/miniprogram/dev/wxcloud/guide/functions.html">云函数简介</a><br>长不看结论：总之就是跑脚本，也可以跑微信的推送等事件。目前我只用它在跑签到脚本。</p>
+<h1 id="server酱"><a href="#server酱" class="headerlink" title="server酱"></a>server酱</h1><p>原版server酱：<a href="http://sc.ftqq.com/">http://sc.ftqq.com/</a><br>自搭server酱：<a href="https://www.v2ex.com/t/567927">https://www.v2ex.com/t/567927</a></p>
+<span id="more"></span>
+
+<h1 id="哔哩哔哩签到"><a href="#哔哩哔哩签到" class="headerlink" title="哔哩哔哩签到"></a>哔哩哔哩签到</h1><p>项目地址：<a href="https://github.com/happy888888/BiliExp">https://github.com/happy888888/BiliExp</a><br>油猴脚本：<a href="https://greasyfork.org/zh-CN/scripts/393096-bilibiliexp/versions">https://greasyfork.org/zh-CN/scripts/393096-bilibiliexp/versions</a><br>注意事项：云函数方式为cookie签到</p>
+<h1 id="天翼云盘签到和抽奖"><a href="#天翼云盘签到和抽奖" class="headerlink" title="天翼云盘签到和抽奖"></a>天翼云盘签到和抽奖</h1><p>项目地址：<a href="https://github.com/FingerSword/Cloud189-Sign-In">https://github.com/FingerSword/Cloud189-Sign-In</a><br>注意事项：不改密码就ok  </p>
+<h1 id="网易云音乐签到"><a href="#网易云音乐签到" class="headerlink" title="网易云音乐签到"></a>网易云音乐签到</h1><p>地址：<a href="https://www.coolapk.com/feed/22733317">https://www.coolapk.com/feed/22733317</a><br>注意事项：不改密码就ok  </p>
+<h1 id="有道云笔记签到"><a href="#有道云笔记签到" class="headerlink" title="有道云笔记签到"></a>有道云笔记签到</h1><p>签到1.0：<a href="https://www.coolapk.com/feed/18049127">https://www.coolapk.com/feed/18049127</a><br>签到2.0：<a href="https://www.coolapk.com/feed/19750209">https://www.coolapk.com/feed/19750209</a><br>注意事项：均为cookie，我用qq登录的账号一天就掉了，用手机号登录的应该能管一个月</p>
 ]]></content>
       <categories>
         <category>杂物箱</category>
       </categories>
       <tags>
-        <tag>对象存储</tag>
-        <tag>待补充</tag>
+        <tag>云服务</tag>
       </tags>
   </entry>
   <entry>
@@ -125,73 +112,16 @@
       </tags>
   </entry>
   <entry>
-    <title>Kubernetes1.24内网部署</title>
-    <url>/2022/07/27/Kubernetes/2022-07-27%20Kubernetes1.24%E5%86%85%E7%BD%91%E9%83%A8%E7%BD%B2/</url>
-    <content><![CDATA[<h1 id="环境介绍"><a href="#环境介绍" class="headerlink" title="环境介绍"></a>环境介绍</h1><blockquote>
-<p>master：成都区 2核4G    10.0.0.17<br>cd001：成都区 2核4G     10.0.0.11<br>主机：两台腾讯云轻量云，系统为CentOS Stream8，轻量云不支持EIP故不能公网搭K8s<br>Kubernetes版本：V1.24.3（截至2022-08-02，当前k8s最新版本为 1.24.3）</p>
-</blockquote>
-<span id="more"></span>  
-<h1 id="Master节点安装"><a href="#Master节点安装" class="headerlink" title="Master节点安装"></a>Master节点安装</h1><h2 id="主机配置"><a href="#主机配置" class="headerlink" title="主机配置"></a>主机配置</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"> <span class="comment"># 设置主机名</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;master&quot;</span> &gt; /etc/hostname</span><br><span class="line">yum -y tc</span><br><span class="line">yum -y update </span><br><span class="line"></span><br><span class="line"><span class="comment"># 重启使master主机名生效</span></span><br><span class="line">reboot </span><br><span class="line"></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;1&quot;</span> &gt;&gt; /proc/sys/net/ipv4/ip_forward <span class="comment"># 开启ip转发</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 设置hosts 注意，每次重启后该文件会恢复，需要重新添加</span></span><br><span class="line"><span class="built_in">cat</span> &gt;&gt; /etc/hosts &lt;&lt;<span class="string">EOF</span></span><br><span class="line"><span class="string">10.0.0.17 master</span></span><br><span class="line"><span class="string">10.0.0.11 cd001</span></span><br><span class="line"><span class="string">EOF</span></span><br><span class="line"></span><br><span class="line">systemctl restart NetworkManager.service</span><br></pre></td></tr></table></figure>
-
-<h2 id="配置containerd"><a href="#配置containerd" class="headerlink" title="配置containerd"></a>配置containerd</h2><blockquote>
-<p>将containerd作为k8s的容器引擎</p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 阿里镜像源</span></span><br><span class="line">wget -O /etc/yum.repos.d/docker-ce.repo https://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo</span><br><span class="line"></span><br><span class="line"><span class="built_in">cat</span> &lt;&lt; <span class="string">EOF &gt; /etc/modules-load.d/containerd.conf</span></span><br><span class="line"><span class="string">overlay</span></span><br><span class="line"><span class="string">br_netfilter</span></span><br><span class="line"><span class="string">EOF</span></span><br><span class="line"></span><br><span class="line">modprobe overlay</span><br><span class="line">modprobe br_netfilter</span><br><span class="line"></span><br><span class="line">yum install -y containerd.io --allowerasing</span><br><span class="line"></span><br><span class="line"><span class="built_in">mkdir</span>  -p /etc/containerd </span><br><span class="line"><span class="built_in">rm</span> -rf /etc/containerd/config.toml</span><br><span class="line"></span><br><span class="line">containerd config default &gt; /etc/containerd/config.toml</span><br><span class="line"></span><br><span class="line">sed -i <span class="string">&#x27;s#sandbox_image = &quot;k8s.gcr.io/pause:#sandbox_image = &quot;registry.aliyuncs.com/google_containers/pause:#g&#x27;</span> /etc/containerd/config.toml</span><br><span class="line"><span class="comment"># sed -i &#x27;s/systemd_cgroup = false/systemd_cgroup = true/g&#x27; /etc/containerd/config.toml</span></span><br><span class="line">systemctl restart containerd</span><br><span class="line"></span><br><span class="line">systemctl <span class="built_in">enable</span> containerd</span><br><span class="line">systemctl start containerd</span><br></pre></td></tr></table></figure>
-<h2 id="runc命令行配置"><a href="#runc命令行配置" class="headerlink" title="runc命令行配置"></a>runc命令行配置</h2><blockquote>
-<p>检测runc、ctrcli、配置k8s源</p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ctr version</span><br><span class="line">runc -version </span><br><span class="line"></span><br><span class="line"><span class="built_in">cat</span> &lt;&lt;<span class="string">EOF &gt; /etc/yum.repos.d/kubernetes.repo</span></span><br><span class="line"><span class="string">[kubernetes]</span></span><br><span class="line"><span class="string">name=Kubernetes</span></span><br><span class="line"><span class="string">baseurl=https://mirrors.aliyun.com/kubernetes/yum/repos/kubernetes-el7-x86_64/</span></span><br><span class="line"><span class="string">enabled=1</span></span><br><span class="line"><span class="string">gpgcheck=0</span></span><br><span class="line"><span class="string">repo_gpgcheck=0</span></span><br><span class="line"><span class="string">gpgkey=https://mirrors.aliyun.com/kubernetes/yum/doc/yum-key.gpg https://mirrors.aliyun.com/kubernetes/yum/doc/rpm-package-key.gpg</span></span><br><span class="line"><span class="string">EOF</span></span><br><span class="line"></span><br><span class="line">yum clean all </span><br><span class="line">yum makecache</span><br><span class="line"><span class="comment"># k8s init时需要此应用进行网络测试</span></span><br><span class="line">yum install -y tc   </span><br></pre></td></tr></table></figure>
-<h2 id="k8s组件安装"><a href="#k8s组件安装" class="headerlink" title="k8s组件安装"></a>k8s组件安装</h2><blockquote>
-<p>安装配置k8s三件套并配置</p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">yum install -y kubectl kubelet kubeadm</span><br><span class="line"></span><br><span class="line"><span class="comment"># 兼容性处理 systemd</span></span><br><span class="line"><span class="built_in">echo</span>  <span class="string">&#x27;KUBELET_EXTRA_ARGS=&quot;--cgroup-driver=systemd&quot;&#x27;</span> &gt; /etc/sysconfig/kubelet</span><br><span class="line"></span><br><span class="line">systemctl <span class="built_in">enable</span> kubelet</span><br><span class="line">systemctl start kubelet</span><br><span class="line"></span><br><span class="line"><span class="comment"># 配置cricl 的endpoint</span></span><br><span class="line">crictl config runtime-endpoint unix:///run/containerd/containerd.sock</span><br><span class="line">crictl config image-endpoint unix:///run/containerd/containerd.sock</span><br><span class="line"></span><br><span class="line"><span class="comment"># 配置k8s镜像版本（不配置默认拉去latest 最新版）</span></span><br><span class="line"><span class="comment"># kubeadm config images list --kubernetes-version=v1.24.3</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="kubernetes初始化"><a href="#kubernetes初始化" class="headerlink" title="kubernetes初始化"></a>kubernetes初始化</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment"># 错误处理</span></span><br><span class="line"><span class="comment"># kubeadm reset</span></span><br><span class="line"><span class="comment"># rm -fr  ~/.kube/config</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># --apiserver-advertise-address和--control-plane-endpoint 分别为apiServer和控制面板的ip地址，内网部署使用master节点内网ip，公网部署使用master节点公网ip</span></span><br><span class="line">kubeadm init --pod-network-cidr=10.224.0.0/16 --apiserver-advertise-address=10.0.0.17 --control-plane-endpoint=10.0.0.17 --image-repository registry.aliyuncs.com/google_containers --v=5</span><br><span class="line"></span><br><span class="line"><span class="built_in">mkdir</span> -p <span class="variable">$HOME</span>/.kube</span><br><span class="line">sudo <span class="built_in">cp</span> -i /etc/kubernetes/admin.conf <span class="variable">$HOME</span>/.kube/config</span><br><span class="line">sudo <span class="built_in">chown</span> $(<span class="built_in">id</span> -u):$(<span class="built_in">id</span> -g) <span class="variable">$HOME</span>/.kube/config</span><br><span class="line"></span><br><span class="line"><span class="built_in">export</span> KUBECONFIG=/etc/kubernetes/admin.conf</span><br><span class="line"></span><br><span class="line"><span class="comment"># kubeadm join 10.0.0.17:6443 --token 9t45vv.40lt4exfxmirt7q2 --discovery-token-ca-cert-hash sha256:65cfa9a08c89e81357f3e394757ebb6c6c8000020c2e7411248cac2c4ef79c2e</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 可以看到master是NotReady状态</span></span><br><span class="line">kubectl get node -o wide</span><br><span class="line"></span><br><span class="line"><span class="comment"># 可以看到coredns是pending状态</span></span><br><span class="line">kubectl get pod -A -o wide</span><br><span class="line"></span><br><span class="line"><span class="comment"># 之后安装calico或者flannel网络插件后会恢复正常</span></span><br><span class="line"></span><br><span class="line">crictl images</span><br><span class="line"></span><br><span class="line">crictl ps -a</span><br></pre></td></tr></table></figure>
-<h1 id="Node节点安装"><a href="#Node节点安装" class="headerlink" title="Node节点安装"></a>Node节点安装</h1><h2 id="主机配置-1"><a href="#主机配置-1" class="headerlink" title="主机配置"></a>主机配置</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"> <span class="comment"># 设置主机名</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;cd001&quot;</span> &gt; /etc/hostname</span><br><span class="line"></span><br><span class="line">yum install -y tc</span><br><span class="line"></span><br><span class="line">yum -y update </span><br><span class="line"></span><br><span class="line"><span class="comment"># 重启使master主机名生效</span></span><br><span class="line">reboot </span><br><span class="line"></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;1&quot;</span> &gt;&gt; /proc/sys/net/ipv4/ip_forward <span class="comment"># 开启ip转发</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 设置hosts 注意，每次重启后该文件会恢复，需要重新添加</span></span><br><span class="line"><span class="built_in">cat</span> &gt;&gt; /etc/hosts &lt;&lt;<span class="string">EOF</span></span><br><span class="line"><span class="string">10.0.0.17 master</span></span><br><span class="line"><span class="string">10.0.0.11 cd001</span></span><br><span class="line"><span class="string">EOF</span></span><br><span class="line"></span><br><span class="line">systemctl restart NetworkManager.service</span><br></pre></td></tr></table></figure>
-
-<h2 id="配置containerd-1"><a href="#配置containerd-1" class="headerlink" title="配置containerd"></a>配置containerd</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 阿里镜像源</span></span><br><span class="line">wget -O /etc/yum.repos.d/docker-ce.repo https://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo</span><br><span class="line"></span><br><span class="line"><span class="built_in">cat</span> &lt;&lt; <span class="string">EOF &gt; /etc/modules-load.d/containerd.conf</span></span><br><span class="line"><span class="string">overlay</span></span><br><span class="line"><span class="string">br_netfilter</span></span><br><span class="line"><span class="string">EOF</span></span><br><span class="line"></span><br><span class="line">modprobe overlay</span><br><span class="line">modprobe br_netfilter</span><br><span class="line"></span><br><span class="line">yum install -y containerd.io --allowerasing</span><br><span class="line"></span><br><span class="line"><span class="built_in">mkdir</span>  -p /etc/containerd </span><br><span class="line"><span class="built_in">rm</span> -rf /etc/containerd/config.toml</span><br><span class="line"></span><br><span class="line">containerd config default &gt; /etc/containerd/config.toml</span><br><span class="line"></span><br><span class="line"> sed -i <span class="string">&#x27;s#sandbox_image = &quot;k8s.gcr.io/pause:#sandbox_image = &quot;registry.aliyuncs.com/google_containers/pause:#g&#x27;</span> /etc/containerd/config.toml</span><br><span class="line"><span class="comment"># sed -i &#x27;s/systemd_cgroup = false/systemd_cgroup = true/g&#x27; /etc/containerd/config.toml</span></span><br><span class="line">systemctl restart containerd</span><br><span class="line"></span><br><span class="line">systemctl <span class="built_in">enable</span> containerd</span><br><span class="line">systemctl start containerd</span><br></pre></td></tr></table></figure>
-<h2 id="runc命令行配置-1"><a href="#runc命令行配置-1" class="headerlink" title="runc命令行配置"></a>runc命令行配置</h2><blockquote>
-<p>检测runc 和ctrcli、配置k8s源</p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ctr version</span><br><span class="line">runc -version </span><br><span class="line"></span><br><span class="line"><span class="built_in">cat</span> &lt;&lt;<span class="string">EOF &gt; /etc/yum.repos.d/kubernetes.repo</span></span><br><span class="line"><span class="string">[kubernetes]</span></span><br><span class="line"><span class="string">name=Kubernetes</span></span><br><span class="line"><span class="string">baseurl=https://mirrors.aliyun.com/kubernetes/yum/repos/kubernetes-el7-x86_64/</span></span><br><span class="line"><span class="string">enabled=1</span></span><br><span class="line"><span class="string">gpgcheck=0</span></span><br><span class="line"><span class="string">repo_gpgcheck=0</span></span><br><span class="line"><span class="string">gpgkey=https://mirrors.aliyun.com/kubernetes/yum/doc/yum-key.gpg https://mirrors.aliyun.com/kubernetes/yum/doc/rpm-package-key.gpg</span></span><br><span class="line"><span class="string">EOF</span></span><br><span class="line"></span><br><span class="line">yum clean all </span><br><span class="line">yum makecache</span><br><span class="line"></span><br><span class="line">yum install -y tc</span><br></pre></td></tr></table></figure>
-<h2 id="k8s-node组件安装"><a href="#k8s-node组件安装" class="headerlink" title="k8s node组件安装"></a>k8s node组件安装</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">yum install -y  kubelet kubeadm</span><br><span class="line"></span><br><span class="line"><span class="comment"># 兼容性处理 systemd</span></span><br><span class="line"><span class="built_in">echo</span>  <span class="string">&#x27;KUBELET_EXTRA_ARGS=&quot;--cgroup-driver=systemd&quot;&#x27;</span> &gt; /etc/sysconfig/kubelet</span><br><span class="line"></span><br><span class="line">systemctl <span class="built_in">enable</span> kubelet</span><br><span class="line">systemctl start kubelet</span><br><span class="line"></span><br><span class="line"><span class="comment"># 配置cricl 的endpoint</span></span><br><span class="line">crictl config runtime-endpoint unix:///run/containerd/containerd.sock</span><br><span class="line">crictl config image-endpoint unix:///run/containerd/containerd.sock</span><br><span class="line"></span><br><span class="line"><span class="comment"># 配置k8s镜像版本（不配置默认拉去latest 最新版）</span></span><br><span class="line"><span class="comment"># kubeadm config images list --kubernetes-version=v1.24.3</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="加入到集群"><a href="#加入到集群" class="headerlink" title="加入到集群"></a>加入到集群</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment"># 错误处理</span></span><br><span class="line"><span class="comment"># kubeadm reset</span></span><br><span class="line"><span class="comment"># rm -fr  ~/.kube/config</span></span><br><span class="line"></span><br><span class="line">kubeadm <span class="built_in">join</span> 10.0.0.17:6443 --token 9t45vv.40lt4exfxmirt7q2 --discovery-token-ca-cert-hash sha256:65cfa9a08c89e81357f3e394757ebb6c6c8000020c2e7411248cac2c4ef79c2e</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<h1 id="配置K8s容器网络"><a href="#配置K8s容器网络" class="headerlink" title="配置K8s容器网络"></a>配置K8s容器网络</h1><blockquote>
-<p>master节点执行</p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">wget https://docs.projectcalico.org/manifests/calico.yaml --no-check-certificate</span><br><span class="line">vim calico.yaml</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>配置yaml文件,正确的虚拟ip和网卡</p>
-</blockquote>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># /CALICO_IPV4POOL_CIDR 进行查找，取消注释，将值改为pod-network-cidr的值</span></span><br><span class="line"><span class="comment"># The default IPv4 pool to create on startup if none exists. Pod IPs will be</span></span><br><span class="line"><span class="comment"># chosen from this range. Changing this value after installation will have</span></span><br><span class="line"><span class="comment"># no effect. This should fall within `--cluster-cidr`.</span></span><br><span class="line"> <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">CALICO_IPV4POOL_CIDR</span></span><br><span class="line">   <span class="attr">value:</span> <span class="string">&quot;10.244.0.0/16&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># ....</span></span><br><span class="line"><span class="comment"># /k8s,bgp 查找,同级新增如下</span></span><br><span class="line"> <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">CLUSTER_TYPE</span></span><br><span class="line">   <span class="attr">value:</span> <span class="string">&quot;k8s,bgp&quot;</span></span><br><span class="line"> <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">IP_AUTODETECTION_METHOD</span></span><br><span class="line">   <span class="attr">value:</span> <span class="string">&quot;interface=eth0&quot;</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">kubectl apply -f calico.yaml</span><br><span class="line"></span><br><span class="line"><span class="comment"># 如果执行后没反应或者拉去calio镜像过慢，可以在master和node上手动拉取镜像</span></span><br><span class="line"><span class="comment"># crictl pull docker.io/calico/cni</span></span><br><span class="line"><span class="comment"># crictl pull docker.io/calico/node</span></span><br><span class="line">crictl pull docker.io/calico/cni:v3.23.3</span><br><span class="line">crictl pull docker.io/calico/node:v3.23.3</span><br></pre></td></tr></table></figure>
-<h1 id="配置NFS共享存储"><a href="#配置NFS共享存储" class="headerlink" title="配置NFS共享存储"></a>配置NFS共享存储</h1><blockquote>
-<p>由于ceph消耗太大，服务器数量和性能都不够，只能用NFS了</p>
-</blockquote>
-<h1 id="部署Nginx和MySql"><a href="#部署Nginx和MySql" class="headerlink" title="部署Nginx和MySql"></a>部署Nginx和MySql</h1><blockquote>
-<p>部署可以公网访问的nginx和持久化存储的mysql服务</p>
-</blockquote>
-<h4 id="由于集群在公网搭建，所以需要添加一张虚拟网卡-公网ip，仅master节点，如果集群为内网搭建，可省略该步骤）"><a href="#由于集群在公网搭建，所以需要添加一张虚拟网卡-公网ip，仅master节点，如果集群为内网搭建，可省略该步骤）" class="headerlink" title="由于集群在公网搭建，所以需要添加一张虚拟网卡(公网ip，仅master节点，如果集群为内网搭建，可省略该步骤）"></a>由于集群在公网搭建，所以需要添加一张虚拟网卡(公网ip，仅master节点，如果集群为内网搭建，可省略该步骤）</h4><p>tee &#x2F;etc&#x2F;sysconfig&#x2F;network-scripts&#x2F;ifcfg-eth0:1 &lt;&lt;-‘EOF’<br>DEVICE&#x3D;eth0:1<br>ONBOOT&#x3D;yes<br>BOOTPROTO&#x3D;static<br>IPADDR&#x3D;公网IP<br>NETMASK&#x3D;255.255.255.0<br>EOF</p>
+    <title>无限容量相册</title>
+    <url>/2021/06/28/2021-06-28%20%E6%97%A0%E9%99%90%E5%AE%B9%E9%87%8F%E7%9B%B8%E5%86%8C/</url>
+    <content><![CDATA[<p>基于：pixel&#x2F;pixel xl（即pixel一代），1微力同步，服务器一台（非必须，中继使用）</p>
 ]]></content>
       <categories>
-        <category>Kubernetes</category>
+        <category>杂物箱</category>
       </categories>
       <tags>
-        <tag>云计算</tag>
-        <tag>CloudComputing</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Kubernetes1.24公网部署</title>
-    <url>/2022/07/27/Kubernetes/2022-08-03%20Kubernetes1.24%E5%85%AC%E7%BD%91%E9%83%A8%E7%BD%B2/</url>
-    <content><![CDATA[]]></content>
-      <categories>
-        <category>Kubernetes</category>
-      </categories>
-      <tags>
-        <tag>云计算</tag>
-        <tag>CloudComputing</tag>
+        <tag>对象存储</tag>
+        <tag>待补充</tag>
       </tags>
   </entry>
   <entry>
@@ -208,6 +138,18 @@
 <figure class="highlight c#"><table><tr><td class="code"><pre><span class="line"><span class="keyword">namespace</span> <span class="title">WindowsFormsApp1</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">partial</span> <span class="keyword">class</span> <span class="title">Form1</span> : <span class="title">Form</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="title">Form1</span>()</span></span><br><span class="line">        &#123;</span><br><span class="line">            InitializeComponent();</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">Label1_Click</span>(<span class="params"><span class="built_in">object</span> sender, EventArgs e</span>)</span></span><br><span class="line">        &#123;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
       <categories>
         <category>C#</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>附页</title>
+    <url>/2021/06/23/english/2021-06-23-3%20%E9%99%84%E9%A1%B5/</url>
+    <content><![CDATA[<h1 id="元音辅音"><a href="#元音辅音" class="headerlink" title="元音辅音"></a>元音辅音</h1><ul>
+<li>元音：a、e、i、o、u</li>
+<li>辅音：b、c、d、f、g、h、j、k、l、m、n、p、q、r、s、t、v、w、x、y、z（除开元音的）</li>
+</ul>
+]]></content>
+      <categories>
+        <category>English</category>
       </categories>
   </entry>
   <entry>
@@ -259,20 +201,111 @@
       </categories>
   </entry>
   <entry>
-    <title>附页</title>
-    <url>/2021/06/23/english/2021-06-23-3%20%E9%99%84%E9%A1%B5/</url>
-    <content><![CDATA[<h1 id="元音辅音"><a href="#元音辅音" class="headerlink" title="元音辅音"></a>元音辅音</h1><ul>
-<li>元音：a、e、i、o、u</li>
-<li>辅音：b、c、d、f、g、h、j、k、l、m、n、p、q、r、s、t、v、w、x、y、z（除开元音的）</li>
-</ul>
+    <title>Kubernetes1.24公网部署</title>
+    <url>/2022/08/03/kubernetes/2022-08-03%20Kubernetes1.24%E5%85%AC%E7%BD%91%E9%83%A8%E7%BD%B2/</url>
+    <content><![CDATA[<h1 id="环境介绍"><a href="#环境介绍" class="headerlink" title="环境介绍"></a>环境介绍</h1><blockquote>
+<p>master：成都区 2核4G<br>cd001：成都区 2核4G<br>hk001: 香港区 2核4G<br>sg001: 新加坡 2核4G<br>主机：四台腾讯云服务器，系统为CentOS Stream9<br>Kubernetes版本：V1.24.3（截至2022-08-03，当前k8s最新版本为 1.24.3）</p>
+</blockquote>
+<span id="more"></span>  ]]></content>
+      <categories>
+        <category>Kubernetes</category>
+      </categories>
+      <tags>
+        <tag>CloudComputing</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Kubernetes1.24内网部署</title>
+    <url>/2022/07/27/kubernetes/2022-07-27%20Kubernetes1.24%E5%86%85%E7%BD%91%E9%83%A8%E7%BD%B2/</url>
+    <content><![CDATA[<h1 id="环境介绍"><a href="#环境介绍" class="headerlink" title="环境介绍"></a>环境介绍</h1><blockquote>
+<p>master：成都区 2核4G    10.0.0.17<br>cd001：成都区 2核4G     10.0.0.11<br>主机：两台腾讯云轻量云，系统为CentOS Stream8，轻量云不支持EIP故不能公网搭K8s<br>Kubernetes版本：V1.24.3（截至2022-08-02，当前k8s最新版本为 1.24.3）</p>
+</blockquote>
+<span id="more"></span>  
+<h1 id="Master节点安装"><a href="#Master节点安装" class="headerlink" title="Master节点安装"></a>Master节点安装</h1><h2 id="主机配置"><a href="#主机配置" class="headerlink" title="主机配置"></a>主机配置</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"> <span class="comment"># 设置主机名</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;master&quot;</span> &gt; /etc/hostname</span><br><span class="line">yum -y tc</span><br><span class="line">yum -y update </span><br><span class="line"></span><br><span class="line"><span class="comment"># 重启使master主机名生效</span></span><br><span class="line">reboot </span><br><span class="line"></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;1&quot;</span> &gt;&gt; /proc/sys/net/ipv4/ip_forward <span class="comment"># 开启ip转发</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 设置hosts 注意，每次重启后该文件会恢复，需要重新添加</span></span><br><span class="line"><span class="built_in">cat</span> &gt;&gt; /etc/hosts &lt;&lt;<span class="string">EOF</span></span><br><span class="line"><span class="string">10.0.0.17 master</span></span><br><span class="line"><span class="string">10.0.0.11 cd001</span></span><br><span class="line"><span class="string">EOF</span></span><br><span class="line"></span><br><span class="line">systemctl restart NetworkManager.service</span><br></pre></td></tr></table></figure>
+
+<h2 id="配置containerd"><a href="#配置containerd" class="headerlink" title="配置containerd"></a>配置containerd</h2><blockquote>
+<p>将containerd作为k8s的容器引擎</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 阿里镜像源</span></span><br><span class="line">wget -O /etc/yum.repos.d/docker-ce.repo https://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo</span><br><span class="line"></span><br><span class="line"><span class="built_in">cat</span> &lt;&lt; <span class="string">EOF &gt; /etc/modules-load.d/containerd.conf</span></span><br><span class="line"><span class="string">overlay</span></span><br><span class="line"><span class="string">br_netfilter</span></span><br><span class="line"><span class="string">EOF</span></span><br><span class="line"></span><br><span class="line">modprobe overlay</span><br><span class="line">modprobe br_netfilter</span><br><span class="line"></span><br><span class="line">yum install -y containerd.io --allowerasing</span><br><span class="line"></span><br><span class="line"><span class="built_in">mkdir</span>  -p /etc/containerd </span><br><span class="line"><span class="built_in">rm</span> -rf /etc/containerd/config.toml</span><br><span class="line"></span><br><span class="line">containerd config default &gt; /etc/containerd/config.toml</span><br><span class="line"></span><br><span class="line">sed -i <span class="string">&#x27;s#sandbox_image = &quot;k8s.gcr.io/pause:#sandbox_image = &quot;registry.aliyuncs.com/google_containers/pause:#g&#x27;</span> /etc/containerd/config.toml</span><br><span class="line"><span class="comment"># sed -i &#x27;s/systemd_cgroup = false/systemd_cgroup = true/g&#x27; /etc/containerd/config.toml</span></span><br><span class="line">systemctl restart containerd</span><br><span class="line"></span><br><span class="line">systemctl <span class="built_in">enable</span> containerd</span><br><span class="line">systemctl start containerd</span><br></pre></td></tr></table></figure>
+<h2 id="runc命令行配置"><a href="#runc命令行配置" class="headerlink" title="runc命令行配置"></a>runc命令行配置</h2><blockquote>
+<p>检测runc、ctrcli、配置k8s源</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ctr version</span><br><span class="line">runc -version </span><br><span class="line"></span><br><span class="line"><span class="built_in">cat</span> &lt;&lt;<span class="string">EOF &gt; /etc/yum.repos.d/kubernetes.repo</span></span><br><span class="line"><span class="string">[kubernetes]</span></span><br><span class="line"><span class="string">name=Kubernetes</span></span><br><span class="line"><span class="string">baseurl=https://mirrors.aliyun.com/kubernetes/yum/repos/kubernetes-el7-x86_64/</span></span><br><span class="line"><span class="string">enabled=1</span></span><br><span class="line"><span class="string">gpgcheck=0</span></span><br><span class="line"><span class="string">repo_gpgcheck=0</span></span><br><span class="line"><span class="string">gpgkey=https://mirrors.aliyun.com/kubernetes/yum/doc/yum-key.gpg https://mirrors.aliyun.com/kubernetes/yum/doc/rpm-package-key.gpg</span></span><br><span class="line"><span class="string">EOF</span></span><br><span class="line"></span><br><span class="line">yum clean all </span><br><span class="line">yum makecache</span><br><span class="line"><span class="comment"># k8s init时需要此应用进行网络测试</span></span><br><span class="line">yum install -y tc   </span><br></pre></td></tr></table></figure>
+<h2 id="k8s组件安装"><a href="#k8s组件安装" class="headerlink" title="k8s组件安装"></a>k8s组件安装</h2><blockquote>
+<p>安装配置k8s三件套并配置</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">yum install -y kubectl kubelet kubeadm</span><br><span class="line"></span><br><span class="line"><span class="comment"># 兼容性处理 systemd</span></span><br><span class="line"><span class="built_in">echo</span>  <span class="string">&#x27;KUBELET_EXTRA_ARGS=&quot;--cgroup-driver=systemd&quot;&#x27;</span> &gt; /etc/sysconfig/kubelet</span><br><span class="line"></span><br><span class="line">systemctl <span class="built_in">enable</span> kubelet</span><br><span class="line">systemctl start kubelet</span><br><span class="line"></span><br><span class="line"><span class="comment"># 配置cricl 的endpoint</span></span><br><span class="line">crictl config runtime-endpoint unix:///run/containerd/containerd.sock</span><br><span class="line">crictl config image-endpoint unix:///run/containerd/containerd.sock</span><br><span class="line"></span><br><span class="line"><span class="comment"># 配置k8s镜像版本（不配置默认拉去latest 最新版）</span></span><br><span class="line"><span class="comment"># kubeadm config images list --kubernetes-version=v1.24.3</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="kubernetes初始化"><a href="#kubernetes初始化" class="headerlink" title="kubernetes初始化"></a>kubernetes初始化</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment"># 错误处理</span></span><br><span class="line"><span class="comment"># kubeadm reset</span></span><br><span class="line"><span class="comment"># rm -fr  ~/.kube/config</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># --apiserver-advertise-address和--control-plane-endpoint 分别为apiServer和控制面板的ip地址，内网部署使用master节点内网ip，公网部署使用master节点公网ip</span></span><br><span class="line">kubeadm init --pod-network-cidr=10.224.0.0/16 --apiserver-advertise-address=10.0.0.17 --control-plane-endpoint=10.0.0.17 --image-repository registry.aliyuncs.com/google_containers --v=5</span><br><span class="line"></span><br><span class="line"><span class="built_in">mkdir</span> -p <span class="variable">$HOME</span>/.kube</span><br><span class="line">sudo <span class="built_in">cp</span> -i /etc/kubernetes/admin.conf <span class="variable">$HOME</span>/.kube/config</span><br><span class="line">sudo <span class="built_in">chown</span> $(<span class="built_in">id</span> -u):$(<span class="built_in">id</span> -g) <span class="variable">$HOME</span>/.kube/config</span><br><span class="line"></span><br><span class="line"><span class="built_in">export</span> KUBECONFIG=/etc/kubernetes/admin.conf</span><br><span class="line"></span><br><span class="line"><span class="comment"># kubeadm join 10.0.0.17:6443 --token 9t45vv.40lt4exfxmirt7q2 --discovery-token-ca-cert-hash sha256:65cfa9a08c89e81357f3e394757ebb6c6c8000020c2e7411248cac2c4ef79c2e</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 可以看到master是NotReady状态</span></span><br><span class="line">kubectl get node -o wide</span><br><span class="line"></span><br><span class="line"><span class="comment"># 可以看到coredns是pending状态</span></span><br><span class="line">kubectl get pod -A -o wide</span><br><span class="line"></span><br><span class="line"><span class="comment"># 之后安装calico或者flannel网络插件后会恢复正常</span></span><br><span class="line"></span><br><span class="line">crictl images</span><br><span class="line"></span><br><span class="line">crictl ps -a</span><br></pre></td></tr></table></figure>
+<h1 id="Node节点安装"><a href="#Node节点安装" class="headerlink" title="Node节点安装"></a>Node节点安装</h1><h2 id="主机配置-1"><a href="#主机配置-1" class="headerlink" title="主机配置"></a>主机配置</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"> <span class="comment"># 设置主机名</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;cd001&quot;</span> &gt; /etc/hostname</span><br><span class="line"></span><br><span class="line">yum install -y tc</span><br><span class="line"></span><br><span class="line">yum -y update </span><br><span class="line"></span><br><span class="line"><span class="comment"># 重启使master主机名生效</span></span><br><span class="line">reboot </span><br><span class="line"></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;1&quot;</span> &gt;&gt; /proc/sys/net/ipv4/ip_forward <span class="comment"># 开启ip转发</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 设置hosts 注意，每次重启后该文件会恢复，需要重新添加</span></span><br><span class="line"><span class="built_in">cat</span> &gt;&gt; /etc/hosts &lt;&lt;<span class="string">EOF</span></span><br><span class="line"><span class="string">10.0.0.17 master</span></span><br><span class="line"><span class="string">10.0.0.11 cd001</span></span><br><span class="line"><span class="string">EOF</span></span><br><span class="line"></span><br><span class="line">systemctl restart NetworkManager.service</span><br></pre></td></tr></table></figure>
+
+<h2 id="配置containerd-1"><a href="#配置containerd-1" class="headerlink" title="配置containerd"></a>配置containerd</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 阿里镜像源</span></span><br><span class="line">wget -O /etc/yum.repos.d/docker-ce.repo https://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo</span><br><span class="line"></span><br><span class="line"><span class="built_in">cat</span> &lt;&lt; <span class="string">EOF &gt; /etc/modules-load.d/containerd.conf</span></span><br><span class="line"><span class="string">overlay</span></span><br><span class="line"><span class="string">br_netfilter</span></span><br><span class="line"><span class="string">EOF</span></span><br><span class="line"></span><br><span class="line">modprobe overlay</span><br><span class="line">modprobe br_netfilter</span><br><span class="line"></span><br><span class="line">yum install -y containerd.io --allowerasing</span><br><span class="line"></span><br><span class="line"><span class="built_in">mkdir</span>  -p /etc/containerd </span><br><span class="line"><span class="built_in">rm</span> -rf /etc/containerd/config.toml</span><br><span class="line"></span><br><span class="line">containerd config default &gt; /etc/containerd/config.toml</span><br><span class="line"></span><br><span class="line"> sed -i <span class="string">&#x27;s#sandbox_image = &quot;k8s.gcr.io/pause:#sandbox_image = &quot;registry.aliyuncs.com/google_containers/pause:#g&#x27;</span> /etc/containerd/config.toml</span><br><span class="line"><span class="comment"># sed -i &#x27;s/systemd_cgroup = false/systemd_cgroup = true/g&#x27; /etc/containerd/config.toml</span></span><br><span class="line">systemctl restart containerd</span><br><span class="line"></span><br><span class="line">systemctl <span class="built_in">enable</span> containerd</span><br><span class="line">systemctl start containerd</span><br></pre></td></tr></table></figure>
+<h2 id="runc命令行配置-1"><a href="#runc命令行配置-1" class="headerlink" title="runc命令行配置"></a>runc命令行配置</h2><blockquote>
+<p>检测runc 和ctrcli、配置k8s源</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ctr version</span><br><span class="line">runc -version </span><br><span class="line"></span><br><span class="line"><span class="built_in">cat</span> &lt;&lt;<span class="string">EOF &gt; /etc/yum.repos.d/kubernetes.repo</span></span><br><span class="line"><span class="string">[kubernetes]</span></span><br><span class="line"><span class="string">name=Kubernetes</span></span><br><span class="line"><span class="string">baseurl=https://mirrors.aliyun.com/kubernetes/yum/repos/kubernetes-el7-x86_64/</span></span><br><span class="line"><span class="string">enabled=1</span></span><br><span class="line"><span class="string">gpgcheck=0</span></span><br><span class="line"><span class="string">repo_gpgcheck=0</span></span><br><span class="line"><span class="string">gpgkey=https://mirrors.aliyun.com/kubernetes/yum/doc/yum-key.gpg https://mirrors.aliyun.com/kubernetes/yum/doc/rpm-package-key.gpg</span></span><br><span class="line"><span class="string">EOF</span></span><br><span class="line"></span><br><span class="line">yum clean all </span><br><span class="line">yum makecache</span><br><span class="line"></span><br><span class="line">yum install -y tc</span><br></pre></td></tr></table></figure>
+<h2 id="k8s-node组件安装"><a href="#k8s-node组件安装" class="headerlink" title="k8s node组件安装"></a>k8s node组件安装</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">yum install -y  kubelet kubeadm</span><br><span class="line"></span><br><span class="line"><span class="comment"># 兼容性处理 systemd</span></span><br><span class="line"><span class="built_in">echo</span>  <span class="string">&#x27;KUBELET_EXTRA_ARGS=&quot;--cgroup-driver=systemd&quot;&#x27;</span> &gt; /etc/sysconfig/kubelet</span><br><span class="line"></span><br><span class="line">systemctl <span class="built_in">enable</span> kubelet</span><br><span class="line">systemctl start kubelet</span><br><span class="line"></span><br><span class="line"><span class="comment"># 配置cricl 的endpoint</span></span><br><span class="line">crictl config runtime-endpoint unix:///run/containerd/containerd.sock</span><br><span class="line">crictl config image-endpoint unix:///run/containerd/containerd.sock</span><br><span class="line"></span><br><span class="line"><span class="comment"># 配置k8s镜像版本（不配置默认拉去latest 最新版）</span></span><br><span class="line"><span class="comment"># kubeadm config images list --kubernetes-version=v1.24.3</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="加入到集群"><a href="#加入到集群" class="headerlink" title="加入到集群"></a>加入到集群</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment"># 错误处理</span></span><br><span class="line"><span class="comment"># kubeadm reset</span></span><br><span class="line"><span class="comment"># rm -fr  ~/.kube/config</span></span><br><span class="line"></span><br><span class="line">kubeadm <span class="built_in">join</span> 10.0.0.17:6443 --token 9t45vv.40lt4exfxmirt7q2 --discovery-token-ca-cert-hash sha256:65cfa9a08c89e81357f3e394757ebb6c6c8000020c2e7411248cac2c4ef79c2e</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h1 id="配置K8s容器网络"><a href="#配置K8s容器网络" class="headerlink" title="配置K8s容器网络"></a>配置K8s容器网络</h1><blockquote>
+<p>master节点执行</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">wget https://docs.projectcalico.org/manifests/calico.yaml --no-check-certificate</span><br><span class="line">vim calico.yaml</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>配置yaml文件,正确的虚拟ip和网卡</p>
+</blockquote>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># /CALICO_IPV4POOL_CIDR 进行查找，取消注释，将值改为pod-network-cidr的值</span></span><br><span class="line"><span class="comment"># The default IPv4 pool to create on startup if none exists. Pod IPs will be</span></span><br><span class="line"><span class="comment"># chosen from this range. Changing this value after installation will have</span></span><br><span class="line"><span class="comment"># no effect. This should fall within `--cluster-cidr`.</span></span><br><span class="line"> <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">CALICO_IPV4POOL_CIDR</span></span><br><span class="line">   <span class="attr">value:</span> <span class="string">&quot;10.244.0.0/16&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># ....</span></span><br><span class="line"><span class="comment"># /k8s,bgp 查找,同级新增如下</span></span><br><span class="line"> <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">CLUSTER_TYPE</span></span><br><span class="line">   <span class="attr">value:</span> <span class="string">&quot;k8s,bgp&quot;</span></span><br><span class="line"> <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">IP_AUTODETECTION_METHOD</span></span><br><span class="line">   <span class="attr">value:</span> <span class="string">&quot;interface=eth0&quot;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">kubectl apply -f calico.yaml</span><br><span class="line"></span><br><span class="line"><span class="comment"># 如果执行后没反应或者拉去calio镜像过慢，可以在master和node上手动拉取镜像</span></span><br><span class="line"><span class="comment"># crictl pull docker.io/calico/cni</span></span><br><span class="line"><span class="comment"># crictl pull docker.io/calico/node</span></span><br><span class="line">crictl pull docker.io/calico/cni:v3.23.3</span><br><span class="line">crictl pull docker.io/calico/node:v3.23.3</span><br></pre></td></tr></table></figure>
+<h1 id="配置NFS共享存储"><a href="#配置NFS共享存储" class="headerlink" title="配置NFS共享存储"></a>配置NFS共享存储</h1><blockquote>
+<p>由于ceph资源消耗太大，服务器数量和性能都不够，暂时只能用NFS，之后大概会在自己电脑上开虚拟机试着搭下</p>
+</blockquote>
+<h1 id="部署Nginx和MySql"><a href="#部署Nginx和MySql" class="headerlink" title="部署Nginx和MySql"></a>部署Nginx和MySql</h1><blockquote>
+<p>部署可以公网访问的nginx和持久化存储的mysql服务</p>
+</blockquote>
+<h4 id="由于集群在公网搭建，所以需要添加一张虚拟网卡-公网ip，仅master节点，如果集群为内网搭建，可省略该步骤）"><a href="#由于集群在公网搭建，所以需要添加一张虚拟网卡-公网ip，仅master节点，如果集群为内网搭建，可省略该步骤）" class="headerlink" title="由于集群在公网搭建，所以需要添加一张虚拟网卡(公网ip，仅master节点，如果集群为内网搭建，可省略该步骤）"></a>由于集群在公网搭建，所以需要添加一张虚拟网卡(公网ip，仅master节点，如果集群为内网搭建，可省略该步骤）</h4><p>tee &#x2F;etc&#x2F;sysconfig&#x2F;network-scripts&#x2F;ifcfg-eth0:1 &lt;&lt;-‘EOF’<br>DEVICE&#x3D;eth0:1<br>ONBOOT&#x3D;yes<br>BOOTPROTO&#x3D;static<br>IPADDR&#x3D;公网IP<br>NETMASK&#x3D;255.255.255.0<br>EOF</p>
 ]]></content>
       <categories>
-        <category>English</category>
+        <category>Kubernetes</category>
       </categories>
+      <tags>
+        <tag>CloudComputing</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Docker的安装及使用</title>
+    <url>/2022/08/02/%E5%AE%B9%E5%99%A8/Docker/2022-08-02%20Docker%E7%9A%84%E5%AE%89%E8%A3%85%E5%8F%8A%E4%BD%BF%E7%94%A8/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>容器</category>
+        <category>Docker</category>
+      </categories>
+      <tags>
+        <tag>云计算</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/2022/07/03/%E9%A9%AC%E5%85%8B%E6%80%9D%E4%B8%BB%E4%B9%89%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86/%E9%A9%AC%E5%85%8B%E6%80%9D%E4%B8%BB%E4%B9%89%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86%E4%B8%B2%E8%AE%B2/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>Podman的安装及使用</title>
+    <url>/2022/08/02/%E5%AE%B9%E5%99%A8/Podman/2022-08-02%20Podman%E7%9A%84%E5%AE%89%E8%A3%85%E5%8F%8A%E4%BD%BF%E7%94%A8/</url>
+    <content><![CDATA[<h1 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h1><blockquote>
+<p>主机1：腾讯云 新加坡 2核4G CentOS Stream8<br>主机2：本地 Intel N3540 4核8G CentOS 8.5</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>容器</category>
+        <category>Podman</category>
+      </categories>
+      <tags>
+        <tag>CloudComputing</tag>
+      </tags>
   </entry>
   <entry>
     <title>Linux的简介和安装</title>
-    <url>/2021/01/01/rhel8/2021-01-01%2001%E3%80%81Linux%E7%9A%84%E7%AE%80%E4%BB%8B%E5%92%8C%E5%AE%89%E8%A3%85/</url>
+    <url>/2021/01/01/linux/rhel8/2021-01-01%2001%E3%80%81Linux%E7%9A%84%E7%AE%80%E4%BB%8B%E5%92%8C%E5%AE%89%E8%A3%85/</url>
     <content><![CDATA[<h1 id="学习目标"><a href="#学习目标" class="headerlink" title="学习目标"></a>学习目标</h1><ul>
 <li>Linux系统和红帽认证的基本介绍</li>
 <li>RHEL8.0系统的安装</li>
@@ -363,7 +396,7 @@
   </entry>
   <entry>
     <title>Linux的基本使用</title>
-    <url>/2021/01/02/rhel8/2021-01-02%2002%E3%80%81Linux%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/</url>
+    <url>/2021/01/02/linux/rhel8/2021-01-02%2002%E3%80%81Linux%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/</url>
     <content><![CDATA[<h1 id="学习目标"><a href="#学习目标" class="headerlink" title="学习目标"></a>学习目标</h1><ul>
 <li>登录Red Hat Enterprise Linux系统</li>
 <li>从控制台启动图形</li>
@@ -520,7 +553,7 @@
   </entry>
   <entry>
     <title>运行命令和获取帮助</title>
-    <url>/2021/01/03/rhel8/2021-01-03%2003%E3%80%81%E8%BF%90%E8%A1%8C%E5%91%BD%E4%BB%A4%E5%92%8C%E8%8E%B7%E5%8F%96%E5%B8%AE%E5%8A%A9/</url>
+    <url>/2021/01/03/linux/rhel8/2021-01-03%2003%E3%80%81%E8%BF%90%E8%A1%8C%E5%91%BD%E4%BB%A4%E5%92%8C%E8%8E%B7%E5%8F%96%E5%B8%AE%E5%8A%A9/</url>
     <content><![CDATA[<h1 id="学习目标"><a href="#学习目标" class="headerlink" title="学习目标"></a>学习目标</h1><ul>
 <li>在提示符下执行命令</li>
 <li>掌握命令的语法</li>
@@ -722,7 +755,7 @@
   </entry>
   <entry>
     <title>了解文件系统的和基本操作</title>
-    <url>/2021/01/04/rhel8/2021-01-04%2004%E3%80%81%E4%BA%86%E8%A7%A3%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%92%8C%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/</url>
+    <url>/2021/01/04/linux/rhel8/2021-01-04%2004%E3%80%81%E4%BA%86%E8%A7%A3%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%92%8C%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/</url>
     <content><![CDATA[<h1 id="学习目标"><a href="#学习目标" class="headerlink" title="学习目标"></a>学习目标</h1><ul>
 <li>描述分件系统重要的组成部分</li>
 <li>复制，移动和删除文件</li>
@@ -898,15 +931,78 @@
 </ul>
 ]]></content>
       <categories>
-        <category>linux for rhel8</category>
+        <category>linux</category>
+        <category>rhel8</category>
       </categories>
   </entry>
   <entry>
-    <title>Python基础知识</title>
-    <url>/2021/06/21/python/python3/2021-06-21%2001%E3%80%81%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/</url>
-    <content><![CDATA[<h1 id="运行环境"><a href="#运行环境" class="headerlink" title="运行环境"></a>运行环境</h1><p>CentOS8.2 &amp;&amp; Python 3</p>
-<figure class="highlight txt"><table><tr><td class="code"><pre><span class="line">Python 3.6.8 (default, Apr 16 2020, 01:36:27)</span><br><span class="line">[GCC 8.3.1 20191121 (Red Hat 8.3.1-5)] on linux</span><br><span class="line">Type &quot;help&quot;, &quot;copyright&quot;, &quot;credits&quot; or &quot;license&quot; for more information.</span><br></pre></td></tr></table></figure>
-<p>微信图片_20220702225327.png</p>
+    <title>列表简介</title>
+    <url>/2021/06/23/python/python3/2021-06-23%2003%E3%80%81%E5%88%97%E8%A1%A8%E7%AE%80%E4%BB%8B/</url>
+    <content><![CDATA[<h1 id="列表是什么"><a href="#列表是什么" class="headerlink" title="列表是什么"></a>列表是什么</h1><p>类似于c的数组</p>
+<p>vim 19.py</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">bicycles = [<span class="string">&#x27;trek&#x27;</span>,<span class="string">&#x27;cannondale&#x27;</span>,<span class="string">&#x27;redline&#x27;</span>,<span class="string">&#x27;specialized&#x27;</span>]</span><br><span class="line"><span class="built_in">print</span>(bicycles)</span><br></pre></td></tr></table></figure>
+<figure class="highlight txt"><table><tr><td class="code"><pre><span class="line">[&#x27;trek&#x27;, &#x27;cannondale&#x27;, &#x27;redline&#x27;, &#x27;specialized&#x27;]</span><br></pre></td></tr></table></figure>
+<span id="more"></span>  
+
+<h2 id="访问列表元素"><a href="#访问列表元素" class="headerlink" title="访问列表元素"></a>访问列表元素</h2><p>vim 21.py</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">bicycles = [<span class="string">&#x27;trek&#x27;</span>,<span class="string">&#x27;cannondale&#x27;</span>,<span class="string">&#x27;redline&#x27;</span>,<span class="string">&#x27;specialized&#x27;</span>]</span><br><span class="line"><span class="built_in">print</span>(bicycles[<span class="number">0</span>])</span><br><span class="line"><span class="built_in">print</span>(bicycles[<span class="number">0</span>].title())</span><br></pre></td></tr></table></figure>
+<figure class="highlight txt"><table><tr><td class="code"><pre><span class="line">trek</span><br><span class="line">Trek</span><br></pre></td></tr></table></figure>
+
+<h2 id="索引从0而不是1开始"><a href="#索引从0而不是1开始" class="headerlink" title="索引从0而不是1开始"></a>索引从0而不是1开始</h2><p>vim 22.py</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">bicycles = [<span class="string">&#x27;trek&#x27;</span>,<span class="string">&#x27;cannondale&#x27;</span>,<span class="string">&#x27;redline&#x27;</span>,<span class="string">&#x27;specialized&#x27;</span>]</span><br><span class="line"><span class="built_in">print</span>(bicycles[<span class="number">1</span>])      <span class="comment">#访问第二个元素</span></span><br><span class="line"><span class="built_in">print</span>(bicycles[<span class="number">3</span>])      <span class="comment">#访问第四个元素</span></span><br><span class="line"><span class="built_in">print</span>(bicycles[-<span class="number">1</span>])     <span class="comment">#访问最后一个元素</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight txt"><table><tr><td class="code"><pre><span class="line">cannondale</span><br><span class="line">specialized</span><br><span class="line">specialized</span><br></pre></td></tr></table></figure>
+
+<h2 id="使用列表中的各个值"><a href="#使用列表中的各个值" class="headerlink" title="使用列表中的各个值"></a>使用列表中的各个值</h2><p>vim 23.py</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">bicycles = [<span class="string">&#x27;trek&#x27;</span>,<span class="string">&#x27;cannondale&#x27;</span>,<span class="string">&#x27;redline&#x27;</span>,<span class="string">&#x27;specialized&#x27;</span>]</span><br><span class="line">message = <span class="string">&quot;My first bicycle was a &quot;</span> + bicycles[<span class="number">1</span>].title() + <span class="string">&quot;.&quot;</span></span><br><span class="line"><span class="built_in">print</span>(message)</span><br></pre></td></tr></table></figure>
+<figure class="highlight txt"><table><tr><td class="code"><pre><span class="line">My first bicycle was a Cannondale.</span><br></pre></td></tr></table></figure>
+
+<h1 id="修改、添加和删除元素"><a href="#修改、添加和删除元素" class="headerlink" title="修改、添加和删除元素"></a>修改、添加和删除元素</h1><p>大多数列表都是动态的，列表创建后，会随着程序的运行而增删元素。</p>
+<h2 id="修改列表元素"><a href="#修改列表元素" class="headerlink" title="修改列表元素"></a>修改列表元素</h2><p>vim 24.py</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">motorcycles = [<span class="string">&#x27;honda&#x27;</span>,<span class="string">&#x27;yamaha&#x27;</span>,<span class="string">&#x27;suzukli&#x27;</span>]</span><br><span class="line"><span class="built_in">print</span>(motorcycles)</span><br><span class="line">motorcycles[<span class="number">0</span>] = <span class="string">&#x27;ducati&#x27;</span></span><br><span class="line"><span class="built_in">print</span>(motorcycles)</span><br></pre></td></tr></table></figure>
+<figure class="highlight txt"><table><tr><td class="code"><pre><span class="line">[&#x27;honda&#x27;, &#x27;yamaha&#x27;, &#x27;suzukli&#x27;]</span><br><span class="line">[&#x27;ducati&#x27;, &#x27;yamaha&#x27;, &#x27;suzukli&#x27;]</span><br></pre></td></tr></table></figure>
+
+<h2 id="在列表中添加元素"><a href="#在列表中添加元素" class="headerlink" title="在列表中添加元素"></a>在列表中添加元素</h2><h3 id="在列表末尾添加元素"><a href="#在列表末尾添加元素" class="headerlink" title="在列表末尾添加元素"></a>在列表末尾添加元素</h3><p>vim 25.py</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">motorcycles = [<span class="string">&#x27;honda&#x27;</span>,<span class="string">&#x27;yamaha&#x27;</span>,<span class="string">&#x27;suzuki&#x27;</span>]</span><br><span class="line"><span class="built_in">print</span>(motorcycles)</span><br><span class="line">motorcycles.append(<span class="string">&#x27;ducati&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(motorcycles)</span><br><span class="line">mt = []</span><br><span class="line">mt.append(<span class="string">&#x27;honda&#x27;</span>)</span><br><span class="line">mt.append(<span class="string">&#x27;yamaha&#x27;</span>)</span><br><span class="line">mt.append(<span class="string">&#x27;suzuki&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(mt)</span><br></pre></td></tr></table></figure>
+<figure class="highlight txt"><table><tr><td class="code"><pre><span class="line">[&#x27;honda&#x27;, &#x27;yamaha&#x27;, &#x27;suzuki&#x27;]</span><br><span class="line">[&#x27;honda&#x27;, &#x27;yamaha&#x27;, &#x27;suzuki&#x27;, &#x27;ducati&#x27;]</span><br><span class="line">[&#x27;honda&#x27;, &#x27;yamaha&#x27;, &#x27;suzuki&#x27;]</span><br></pre></td></tr></table></figure>
+
+<h3 id="在列表中插入元素"><a href="#在列表中插入元素" class="headerlink" title="在列表中插入元素"></a>在列表中插入元素</h3><p>vim 26.py</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">motorcycles = [<span class="string">&#x27;honda&#x27;</span>,<span class="string">&#x27;yamaha&#x27;</span>,<span class="string">&#x27;suzuki&#x27;</span>]</span><br><span class="line">motorcycles.insert(<span class="number">0</span>,<span class="string">&#x27;ducati&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(motorcycles)</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">[&#x27;ducati&#x27;, &#x27;honda&#x27;, &#x27;yamaha&#x27;, &#x27;suzuki&#x27;]</span><br></pre></td></tr></table></figure>
+
+<h2 id="从列表中删除元素"><a href="#从列表中删除元素" class="headerlink" title="从列表中删除元素"></a>从列表中删除元素</h2><h3 id="使用del语句删除元素"><a href="#使用del语句删除元素" class="headerlink" title="使用del语句删除元素"></a>使用del语句删除元素</h3><p>vim 27.py</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">motorcycles = [<span class="string">&#x27;honda&#x27;</span>,<span class="string">&#x27;yamaha&#x27;</span>,<span class="string">&#x27;suzuki&#x27;</span>]</span><br><span class="line"><span class="built_in">print</span>(motorcycles)</span><br><span class="line"><span class="keyword">del</span> motorcycles[<span class="number">0</span>]</span><br><span class="line"><span class="built_in">print</span>(motorcycles)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;-----------------------------&quot;</span>)</span><br><span class="line">mt = [<span class="string">&#x27;honda&#x27;</span>,<span class="string">&#x27;yamaha&#x27;</span>,<span class="string">&#x27;suzuki&#x27;</span>]</span><br><span class="line"><span class="built_in">print</span>(mt)</span><br><span class="line"><span class="keyword">del</span> mt[<span class="number">1</span>]</span><br><span class="line"><span class="built_in">print</span>(mt)</span><br></pre></td></tr></table></figure>
+<figure class="highlight txt"><table><tr><td class="code"><pre><span class="line">[&#x27;honda&#x27;, &#x27;yamaha&#x27;, &#x27;suzuki&#x27;]</span><br><span class="line">[&#x27;yamaha&#x27;, &#x27;suzuki&#x27;]</span><br><span class="line">-----------------------------</span><br><span class="line">[&#x27;honda&#x27;, &#x27;yamaha&#x27;, &#x27;suzuki&#x27;]</span><br><span class="line">[&#x27;honda&#x27;, &#x27;suzuki&#x27;]</span><br></pre></td></tr></table></figure>
+
+<h3 id="使用方法pop-删除元素"><a href="#使用方法pop-删除元素" class="headerlink" title="使用方法pop()删除元素"></a>使用方法pop()删除元素</h3><p>vim 28.py</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">motorcycles = [<span class="string">&#x27;honda&#x27;</span>,<span class="string">&#x27;yamaha&#x27;</span>,<span class="string">&#x27;suzuki&#x27;</span>]</span><br><span class="line"><span class="built_in">print</span>(motorcycles)</span><br><span class="line">popped_motorcycle = motorcycles.pop()</span><br><span class="line"><span class="built_in">print</span>(motorcycles)</span><br><span class="line"><span class="built_in">print</span>(motorcycles.pop())</span><br><span class="line"><span class="built_in">print</span>(motorcycles)</span><br><span class="line"><span class="built_in">print</span>(popped_motorcycle)</span><br></pre></td></tr></table></figure>
+<figure class="highlight txt"><table><tr><td class="code"><pre><span class="line">[&#x27;honda&#x27;, &#x27;yamaha&#x27;, &#x27;suzuki&#x27;]       //原列表输出</span><br><span class="line">[&#x27;honda&#x27;, &#x27;yamaha&#x27;]     //删除suzuki后原列表输出</span><br><span class="line">yamaha      //输出删除一项后原列表最后一项</span><br><span class="line">[&#x27;honda&#x27;]       //输出两次删除后的原列表</span><br><span class="line">suzuki      //输出被赋值列表</span><br></pre></td></tr></table></figure>
+
+<h3 id="弹出列表中任何位置处元素"><a href="#弹出列表中任何位置处元素" class="headerlink" title="弹出列表中任何位置处元素"></a>弹出列表中任何位置处元素</h3><p>vim 29.py</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">motorcycles = [<span class="string">&#x27;honda&#x27;</span>,<span class="string">&#x27;yamaha&#x27;</span>,<span class="string">&#x27;suzuki&#x27;</span>]</span><br><span class="line">first_owned = motorcycles.pop(<span class="number">0</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;The last motorcycle I owned was a &quot;</span> + first_owned.title() + <span class="string">&quot;.&quot;</span>)</span><br></pre></td></tr></table></figure>
+<figure class="highlight txt"><table><tr><td class="code"><pre><span class="line">The last motorcycle I owned was a Honda.</span><br></pre></td></tr></table></figure>
+
+<h3 id="根据值删除元素"><a href="#根据值删除元素" class="headerlink" title="根据值删除元素"></a>根据值删除元素</h3><p>vim 30.py</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">motorcycles = [<span class="string">&#x27;honda&#x27;</span>,<span class="string">&#x27;yamaha&#x27;</span>,<span class="string">&#x27;suzukli&#x27;</span>,<span class="string">&#x27;ducati&#x27;</span>]</span><br><span class="line"><span class="built_in">print</span>(motorcycles)</span><br><span class="line">motorcycles.remove(<span class="string">&#x27;ducati&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(motorcycles)</span><br><span class="line">dd = <span class="string">&#x27;yamaha&#x27;</span></span><br><span class="line">motorcycles.remove(dd)</span><br><span class="line"><span class="built_in">print</span>(motorcycles)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;\nA &quot;</span> + dd.title() + <span class="string">&quot; is too expensive for me.&quot;</span>)</span><br></pre></td></tr></table></figure>
+<figure class="highlight txt"><table><tr><td class="code"><pre><span class="line">[&#x27;honda&#x27;, &#x27;yamaha&#x27;, &#x27;suzukli&#x27;, &#x27;ducati&#x27;]</span><br><span class="line">[&#x27;honda&#x27;, &#x27;yamaha&#x27;, &#x27;suzukli&#x27;]</span><br><span class="line">[&#x27;honda&#x27;, &#x27;suzukli&#x27;]</span><br><span class="line"></span><br><span class="line">A Yamaha is too expensive for me.</span><br></pre></td></tr></table></figure>
+
+<h1 id="组织列表"><a href="#组织列表" class="headerlink" title="组织列表"></a>组织列表</h1><p>创建的列表中，元素的排序应用</p>
+<h2 id="使用方法sort-对列表进行永久性排序"><a href="#使用方法sort-对列表进行永久性排序" class="headerlink" title="使用方法sort()对列表进行永久性排序"></a>使用方法sort()对列表进行永久性排序</h2><p>vim 31.py</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">cars = [<span class="string">&#x27;bmw&#x27;</span>,<span class="string">&#x27;audi&#x27;</span>,<span class="string">&#x27;toyota&#x27;</span>,<span class="string">&#x27;subaru&#x27;</span>]</span><br><span class="line">cars.sort()</span><br><span class="line"><span class="built_in">print</span>(cars)</span><br><span class="line">cars.sort(reverse=<span class="literal">True</span>)</span><br><span class="line"><span class="built_in">print</span>(cars)</span><br></pre></td></tr></table></figure>
+<figure class="highlight txt"><table><tr><td class="code"><pre><span class="line">[&#x27;audi&#x27;, &#x27;bmw&#x27;, &#x27;subaru&#x27;, &#x27;toyota&#x27;]</span><br><span class="line">[&#x27;toyota&#x27;, &#x27;subaru&#x27;, &#x27;bmw&#x27;, &#x27;audi&#x27;]</span><br></pre></td></tr></table></figure>
+
+<h2 id="使用函数sorted-对列表进行临时排序"><a href="#使用函数sorted-对列表进行临时排序" class="headerlink" title="使用函数sorted()对列表进行临时排序"></a>使用函数sorted()对列表进行临时排序</h2><p>vim 32.py</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">cars = [<span class="string">&#x27;bmw&#x27;</span>,<span class="string">&#x27;audi&#x27;</span>,<span class="string">&#x27;toyota&#x27;</span>,<span class="string">&#x27;subaru&#x27;</span>]</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;Here is the original list:&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(cars)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;\nHere is the sorted list:&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">sorted</span>(cars))</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;\nHere os the original list again:&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(cars)</span><br></pre></td></tr></table></figure>
+<figure class="highlight txt"><table><tr><td class="code"><pre><span class="line">Here is the original list:</span><br><span class="line">[&#x27;bmw&#x27;, &#x27;audi&#x27;, &#x27;toyota&#x27;, &#x27;subaru&#x27;]</span><br><span class="line"></span><br><span class="line">Here is the sorted list:</span><br><span class="line">[&#x27;audi&#x27;, &#x27;bmw&#x27;, &#x27;subaru&#x27;, &#x27;toyota&#x27;]</span><br><span class="line"></span><br><span class="line">Here os the original list again:</span><br><span class="line">[&#x27;bmw&#x27;, &#x27;audi&#x27;, &#x27;toyota&#x27;, &#x27;subaru&#x27;]</span><br></pre></td></tr></table></figure>
+
+<h2 id="倒着打印列表"><a href="#倒着打印列表" class="headerlink" title="倒着打印列表"></a>倒着打印列表</h2><p>vim 33.py</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">cars = [<span class="string">&#x27;bmw&#x27;</span>,<span class="string">&#x27;audi&#x27;</span>,<span class="string">&#x27;toyota&#x27;</span>,<span class="string">&#x27;subaru&#x27;</span>]</span><br><span class="line"><span class="built_in">print</span>(cars)</span><br><span class="line">cars.reverse()      <span class="comment">#永久性的修改顺序</span></span><br><span class="line"><span class="built_in">print</span>(cars)</span><br></pre></td></tr></table></figure>
+<figure class="highlight txt"><table><tr><td class="code"><pre><span class="line">[&#x27;bmw&#x27;, &#x27;audi&#x27;, &#x27;toyota&#x27;, &#x27;subaru&#x27;]</span><br><span class="line">[&#x27;subaru&#x27;, &#x27;toyota&#x27;, &#x27;audi&#x27;, &#x27;bmw&#x27;]</span><br></pre></td></tr></table></figure>
+
+<h2 id="确定列表的长度"><a href="#确定列表的长度" class="headerlink" title="确定列表的长度"></a>确定列表的长度</h2><p>vim 34.py</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">cars = [<span class="string">&#x27;bmw&#x27;</span>,<span class="string">&#x27;audi&#x27;</span>,<span class="string">&#x27;toyota&#x27;</span>,<span class="string">&#x27;subaru&#x27;</span>]</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">len</span>(cars))</span><br></pre></td></tr></table></figure>
+<figure class="highlight txt"><table><tr><td class="code"><pre><span class="line">4</span><br></pre></td></tr></table></figure>
+
+<h1 id="使用列表时避免索引错误"><a href="#使用列表时避免索引错误" class="headerlink" title="使用列表时避免索引错误"></a>使用列表时避免索引错误</h1><p>列表从0开始索引，-1为倒数第一个元素，列表为空-1报错</p>
 ]]></content>
       <categories>
         <category>python</category>
@@ -1007,109 +1103,15 @@
       </categories>
   </entry>
   <entry>
-    <title></title>
-    <url>/2022/07/03/%E9%A9%AC%E5%85%8B%E6%80%9D%E4%B8%BB%E4%B9%89%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86/%E9%A9%AC%E5%85%8B%E6%80%9D%E4%B8%BB%E4%B9%89%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86%E4%B8%B2%E8%AE%B2/</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
-    <title>Docker的安装及使用</title>
-    <url>/2022/08/02/%E5%AE%B9%E5%99%A8/Docker/2022-08-02%20Docker%E7%9A%84%E5%AE%89%E8%A3%85%E5%8F%8A%E4%BD%BF%E7%94%A8/</url>
-    <content><![CDATA[]]></content>
-      <categories>
-        <category>容器</category>
-        <category>Docker</category>
-      </categories>
-      <tags>
-        <tag>云计算</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>列表简介</title>
-    <url>/2021/06/23/python/python3/2021-06-23%2003%E3%80%81%E5%88%97%E8%A1%A8%E7%AE%80%E4%BB%8B/</url>
-    <content><![CDATA[<h1 id="列表是什么"><a href="#列表是什么" class="headerlink" title="列表是什么"></a>列表是什么</h1><p>类似于c的数组</p>
-<p>vim 19.py</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">bicycles = [<span class="string">&#x27;trek&#x27;</span>,<span class="string">&#x27;cannondale&#x27;</span>,<span class="string">&#x27;redline&#x27;</span>,<span class="string">&#x27;specialized&#x27;</span>]</span><br><span class="line"><span class="built_in">print</span>(bicycles)</span><br></pre></td></tr></table></figure>
-<figure class="highlight txt"><table><tr><td class="code"><pre><span class="line">[&#x27;trek&#x27;, &#x27;cannondale&#x27;, &#x27;redline&#x27;, &#x27;specialized&#x27;]</span><br></pre></td></tr></table></figure>
-<span id="more"></span>  
-
-<h2 id="访问列表元素"><a href="#访问列表元素" class="headerlink" title="访问列表元素"></a>访问列表元素</h2><p>vim 21.py</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">bicycles = [<span class="string">&#x27;trek&#x27;</span>,<span class="string">&#x27;cannondale&#x27;</span>,<span class="string">&#x27;redline&#x27;</span>,<span class="string">&#x27;specialized&#x27;</span>]</span><br><span class="line"><span class="built_in">print</span>(bicycles[<span class="number">0</span>])</span><br><span class="line"><span class="built_in">print</span>(bicycles[<span class="number">0</span>].title())</span><br></pre></td></tr></table></figure>
-<figure class="highlight txt"><table><tr><td class="code"><pre><span class="line">trek</span><br><span class="line">Trek</span><br></pre></td></tr></table></figure>
-
-<h2 id="索引从0而不是1开始"><a href="#索引从0而不是1开始" class="headerlink" title="索引从0而不是1开始"></a>索引从0而不是1开始</h2><p>vim 22.py</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">bicycles = [<span class="string">&#x27;trek&#x27;</span>,<span class="string">&#x27;cannondale&#x27;</span>,<span class="string">&#x27;redline&#x27;</span>,<span class="string">&#x27;specialized&#x27;</span>]</span><br><span class="line"><span class="built_in">print</span>(bicycles[<span class="number">1</span>])      <span class="comment">#访问第二个元素</span></span><br><span class="line"><span class="built_in">print</span>(bicycles[<span class="number">3</span>])      <span class="comment">#访问第四个元素</span></span><br><span class="line"><span class="built_in">print</span>(bicycles[-<span class="number">1</span>])     <span class="comment">#访问最后一个元素</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight txt"><table><tr><td class="code"><pre><span class="line">cannondale</span><br><span class="line">specialized</span><br><span class="line">specialized</span><br></pre></td></tr></table></figure>
-
-<h2 id="使用列表中的各个值"><a href="#使用列表中的各个值" class="headerlink" title="使用列表中的各个值"></a>使用列表中的各个值</h2><p>vim 23.py</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">bicycles = [<span class="string">&#x27;trek&#x27;</span>,<span class="string">&#x27;cannondale&#x27;</span>,<span class="string">&#x27;redline&#x27;</span>,<span class="string">&#x27;specialized&#x27;</span>]</span><br><span class="line">message = <span class="string">&quot;My first bicycle was a &quot;</span> + bicycles[<span class="number">1</span>].title() + <span class="string">&quot;.&quot;</span></span><br><span class="line"><span class="built_in">print</span>(message)</span><br></pre></td></tr></table></figure>
-<figure class="highlight txt"><table><tr><td class="code"><pre><span class="line">My first bicycle was a Cannondale.</span><br></pre></td></tr></table></figure>
-
-<h1 id="修改、添加和删除元素"><a href="#修改、添加和删除元素" class="headerlink" title="修改、添加和删除元素"></a>修改、添加和删除元素</h1><p>大多数列表都是动态的，列表创建后，会随着程序的运行而增删元素。</p>
-<h2 id="修改列表元素"><a href="#修改列表元素" class="headerlink" title="修改列表元素"></a>修改列表元素</h2><p>vim 24.py</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">motorcycles = [<span class="string">&#x27;honda&#x27;</span>,<span class="string">&#x27;yamaha&#x27;</span>,<span class="string">&#x27;suzukli&#x27;</span>]</span><br><span class="line"><span class="built_in">print</span>(motorcycles)</span><br><span class="line">motorcycles[<span class="number">0</span>] = <span class="string">&#x27;ducati&#x27;</span></span><br><span class="line"><span class="built_in">print</span>(motorcycles)</span><br></pre></td></tr></table></figure>
-<figure class="highlight txt"><table><tr><td class="code"><pre><span class="line">[&#x27;honda&#x27;, &#x27;yamaha&#x27;, &#x27;suzukli&#x27;]</span><br><span class="line">[&#x27;ducati&#x27;, &#x27;yamaha&#x27;, &#x27;suzukli&#x27;]</span><br></pre></td></tr></table></figure>
-
-<h2 id="在列表中添加元素"><a href="#在列表中添加元素" class="headerlink" title="在列表中添加元素"></a>在列表中添加元素</h2><h3 id="在列表末尾添加元素"><a href="#在列表末尾添加元素" class="headerlink" title="在列表末尾添加元素"></a>在列表末尾添加元素</h3><p>vim 25.py</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">motorcycles = [<span class="string">&#x27;honda&#x27;</span>,<span class="string">&#x27;yamaha&#x27;</span>,<span class="string">&#x27;suzuki&#x27;</span>]</span><br><span class="line"><span class="built_in">print</span>(motorcycles)</span><br><span class="line">motorcycles.append(<span class="string">&#x27;ducati&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(motorcycles)</span><br><span class="line">mt = []</span><br><span class="line">mt.append(<span class="string">&#x27;honda&#x27;</span>)</span><br><span class="line">mt.append(<span class="string">&#x27;yamaha&#x27;</span>)</span><br><span class="line">mt.append(<span class="string">&#x27;suzuki&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(mt)</span><br></pre></td></tr></table></figure>
-<figure class="highlight txt"><table><tr><td class="code"><pre><span class="line">[&#x27;honda&#x27;, &#x27;yamaha&#x27;, &#x27;suzuki&#x27;]</span><br><span class="line">[&#x27;honda&#x27;, &#x27;yamaha&#x27;, &#x27;suzuki&#x27;, &#x27;ducati&#x27;]</span><br><span class="line">[&#x27;honda&#x27;, &#x27;yamaha&#x27;, &#x27;suzuki&#x27;]</span><br></pre></td></tr></table></figure>
-
-<h3 id="在列表中插入元素"><a href="#在列表中插入元素" class="headerlink" title="在列表中插入元素"></a>在列表中插入元素</h3><p>vim 26.py</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">motorcycles = [<span class="string">&#x27;honda&#x27;</span>,<span class="string">&#x27;yamaha&#x27;</span>,<span class="string">&#x27;suzuki&#x27;</span>]</span><br><span class="line">motorcycles.insert(<span class="number">0</span>,<span class="string">&#x27;ducati&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(motorcycles)</span><br></pre></td></tr></table></figure>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">[&#x27;ducati&#x27;, &#x27;honda&#x27;, &#x27;yamaha&#x27;, &#x27;suzuki&#x27;]</span><br></pre></td></tr></table></figure>
-
-<h2 id="从列表中删除元素"><a href="#从列表中删除元素" class="headerlink" title="从列表中删除元素"></a>从列表中删除元素</h2><h3 id="使用del语句删除元素"><a href="#使用del语句删除元素" class="headerlink" title="使用del语句删除元素"></a>使用del语句删除元素</h3><p>vim 27.py</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">motorcycles = [<span class="string">&#x27;honda&#x27;</span>,<span class="string">&#x27;yamaha&#x27;</span>,<span class="string">&#x27;suzuki&#x27;</span>]</span><br><span class="line"><span class="built_in">print</span>(motorcycles)</span><br><span class="line"><span class="keyword">del</span> motorcycles[<span class="number">0</span>]</span><br><span class="line"><span class="built_in">print</span>(motorcycles)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;-----------------------------&quot;</span>)</span><br><span class="line">mt = [<span class="string">&#x27;honda&#x27;</span>,<span class="string">&#x27;yamaha&#x27;</span>,<span class="string">&#x27;suzuki&#x27;</span>]</span><br><span class="line"><span class="built_in">print</span>(mt)</span><br><span class="line"><span class="keyword">del</span> mt[<span class="number">1</span>]</span><br><span class="line"><span class="built_in">print</span>(mt)</span><br></pre></td></tr></table></figure>
-<figure class="highlight txt"><table><tr><td class="code"><pre><span class="line">[&#x27;honda&#x27;, &#x27;yamaha&#x27;, &#x27;suzuki&#x27;]</span><br><span class="line">[&#x27;yamaha&#x27;, &#x27;suzuki&#x27;]</span><br><span class="line">-----------------------------</span><br><span class="line">[&#x27;honda&#x27;, &#x27;yamaha&#x27;, &#x27;suzuki&#x27;]</span><br><span class="line">[&#x27;honda&#x27;, &#x27;suzuki&#x27;]</span><br></pre></td></tr></table></figure>
-
-<h3 id="使用方法pop-删除元素"><a href="#使用方法pop-删除元素" class="headerlink" title="使用方法pop()删除元素"></a>使用方法pop()删除元素</h3><p>vim 28.py</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">motorcycles = [<span class="string">&#x27;honda&#x27;</span>,<span class="string">&#x27;yamaha&#x27;</span>,<span class="string">&#x27;suzuki&#x27;</span>]</span><br><span class="line"><span class="built_in">print</span>(motorcycles)</span><br><span class="line">popped_motorcycle = motorcycles.pop()</span><br><span class="line"><span class="built_in">print</span>(motorcycles)</span><br><span class="line"><span class="built_in">print</span>(motorcycles.pop())</span><br><span class="line"><span class="built_in">print</span>(motorcycles)</span><br><span class="line"><span class="built_in">print</span>(popped_motorcycle)</span><br></pre></td></tr></table></figure>
-<figure class="highlight txt"><table><tr><td class="code"><pre><span class="line">[&#x27;honda&#x27;, &#x27;yamaha&#x27;, &#x27;suzuki&#x27;]       //原列表输出</span><br><span class="line">[&#x27;honda&#x27;, &#x27;yamaha&#x27;]     //删除suzuki后原列表输出</span><br><span class="line">yamaha      //输出删除一项后原列表最后一项</span><br><span class="line">[&#x27;honda&#x27;]       //输出两次删除后的原列表</span><br><span class="line">suzuki      //输出被赋值列表</span><br></pre></td></tr></table></figure>
-
-<h3 id="弹出列表中任何位置处元素"><a href="#弹出列表中任何位置处元素" class="headerlink" title="弹出列表中任何位置处元素"></a>弹出列表中任何位置处元素</h3><p>vim 29.py</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">motorcycles = [<span class="string">&#x27;honda&#x27;</span>,<span class="string">&#x27;yamaha&#x27;</span>,<span class="string">&#x27;suzuki&#x27;</span>]</span><br><span class="line">first_owned = motorcycles.pop(<span class="number">0</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;The last motorcycle I owned was a &quot;</span> + first_owned.title() + <span class="string">&quot;.&quot;</span>)</span><br></pre></td></tr></table></figure>
-<figure class="highlight txt"><table><tr><td class="code"><pre><span class="line">The last motorcycle I owned was a Honda.</span><br></pre></td></tr></table></figure>
-
-<h3 id="根据值删除元素"><a href="#根据值删除元素" class="headerlink" title="根据值删除元素"></a>根据值删除元素</h3><p>vim 30.py</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">motorcycles = [<span class="string">&#x27;honda&#x27;</span>,<span class="string">&#x27;yamaha&#x27;</span>,<span class="string">&#x27;suzukli&#x27;</span>,<span class="string">&#x27;ducati&#x27;</span>]</span><br><span class="line"><span class="built_in">print</span>(motorcycles)</span><br><span class="line">motorcycles.remove(<span class="string">&#x27;ducati&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(motorcycles)</span><br><span class="line">dd = <span class="string">&#x27;yamaha&#x27;</span></span><br><span class="line">motorcycles.remove(dd)</span><br><span class="line"><span class="built_in">print</span>(motorcycles)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;\nA &quot;</span> + dd.title() + <span class="string">&quot; is too expensive for me.&quot;</span>)</span><br></pre></td></tr></table></figure>
-<figure class="highlight txt"><table><tr><td class="code"><pre><span class="line">[&#x27;honda&#x27;, &#x27;yamaha&#x27;, &#x27;suzukli&#x27;, &#x27;ducati&#x27;]</span><br><span class="line">[&#x27;honda&#x27;, &#x27;yamaha&#x27;, &#x27;suzukli&#x27;]</span><br><span class="line">[&#x27;honda&#x27;, &#x27;suzukli&#x27;]</span><br><span class="line"></span><br><span class="line">A Yamaha is too expensive for me.</span><br></pre></td></tr></table></figure>
-
-<h1 id="组织列表"><a href="#组织列表" class="headerlink" title="组织列表"></a>组织列表</h1><p>创建的列表中，元素的排序应用</p>
-<h2 id="使用方法sort-对列表进行永久性排序"><a href="#使用方法sort-对列表进行永久性排序" class="headerlink" title="使用方法sort()对列表进行永久性排序"></a>使用方法sort()对列表进行永久性排序</h2><p>vim 31.py</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">cars = [<span class="string">&#x27;bmw&#x27;</span>,<span class="string">&#x27;audi&#x27;</span>,<span class="string">&#x27;toyota&#x27;</span>,<span class="string">&#x27;subaru&#x27;</span>]</span><br><span class="line">cars.sort()</span><br><span class="line"><span class="built_in">print</span>(cars)</span><br><span class="line">cars.sort(reverse=<span class="literal">True</span>)</span><br><span class="line"><span class="built_in">print</span>(cars)</span><br></pre></td></tr></table></figure>
-<figure class="highlight txt"><table><tr><td class="code"><pre><span class="line">[&#x27;audi&#x27;, &#x27;bmw&#x27;, &#x27;subaru&#x27;, &#x27;toyota&#x27;]</span><br><span class="line">[&#x27;toyota&#x27;, &#x27;subaru&#x27;, &#x27;bmw&#x27;, &#x27;audi&#x27;]</span><br></pre></td></tr></table></figure>
-
-<h2 id="使用函数sorted-对列表进行临时排序"><a href="#使用函数sorted-对列表进行临时排序" class="headerlink" title="使用函数sorted()对列表进行临时排序"></a>使用函数sorted()对列表进行临时排序</h2><p>vim 32.py</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">cars = [<span class="string">&#x27;bmw&#x27;</span>,<span class="string">&#x27;audi&#x27;</span>,<span class="string">&#x27;toyota&#x27;</span>,<span class="string">&#x27;subaru&#x27;</span>]</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;Here is the original list:&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(cars)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;\nHere is the sorted list:&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">sorted</span>(cars))</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;\nHere os the original list again:&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(cars)</span><br></pre></td></tr></table></figure>
-<figure class="highlight txt"><table><tr><td class="code"><pre><span class="line">Here is the original list:</span><br><span class="line">[&#x27;bmw&#x27;, &#x27;audi&#x27;, &#x27;toyota&#x27;, &#x27;subaru&#x27;]</span><br><span class="line"></span><br><span class="line">Here is the sorted list:</span><br><span class="line">[&#x27;audi&#x27;, &#x27;bmw&#x27;, &#x27;subaru&#x27;, &#x27;toyota&#x27;]</span><br><span class="line"></span><br><span class="line">Here os the original list again:</span><br><span class="line">[&#x27;bmw&#x27;, &#x27;audi&#x27;, &#x27;toyota&#x27;, &#x27;subaru&#x27;]</span><br></pre></td></tr></table></figure>
-
-<h2 id="倒着打印列表"><a href="#倒着打印列表" class="headerlink" title="倒着打印列表"></a>倒着打印列表</h2><p>vim 33.py</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">cars = [<span class="string">&#x27;bmw&#x27;</span>,<span class="string">&#x27;audi&#x27;</span>,<span class="string">&#x27;toyota&#x27;</span>,<span class="string">&#x27;subaru&#x27;</span>]</span><br><span class="line"><span class="built_in">print</span>(cars)</span><br><span class="line">cars.reverse()      <span class="comment">#永久性的修改顺序</span></span><br><span class="line"><span class="built_in">print</span>(cars)</span><br></pre></td></tr></table></figure>
-<figure class="highlight txt"><table><tr><td class="code"><pre><span class="line">[&#x27;bmw&#x27;, &#x27;audi&#x27;, &#x27;toyota&#x27;, &#x27;subaru&#x27;]</span><br><span class="line">[&#x27;subaru&#x27;, &#x27;toyota&#x27;, &#x27;audi&#x27;, &#x27;bmw&#x27;]</span><br></pre></td></tr></table></figure>
-
-<h2 id="确定列表的长度"><a href="#确定列表的长度" class="headerlink" title="确定列表的长度"></a>确定列表的长度</h2><p>vim 34.py</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">cars = [<span class="string">&#x27;bmw&#x27;</span>,<span class="string">&#x27;audi&#x27;</span>,<span class="string">&#x27;toyota&#x27;</span>,<span class="string">&#x27;subaru&#x27;</span>]</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">len</span>(cars))</span><br></pre></td></tr></table></figure>
-<figure class="highlight txt"><table><tr><td class="code"><pre><span class="line">4</span><br></pre></td></tr></table></figure>
-
-<h1 id="使用列表时避免索引错误"><a href="#使用列表时避免索引错误" class="headerlink" title="使用列表时避免索引错误"></a>使用列表时避免索引错误</h1><p>列表从0开始索引，-1为倒数第一个元素，列表为空-1报错</p>
+    <title>Python基础知识</title>
+    <url>/2021/06/21/python/python3/2021-06-21%2001%E3%80%81%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/</url>
+    <content><![CDATA[<h1 id="运行环境"><a href="#运行环境" class="headerlink" title="运行环境"></a>运行环境</h1><p>CentOS8.2 &amp;&amp; Python 3</p>
+<figure class="highlight txt"><table><tr><td class="code"><pre><span class="line">Python 3.6.8 (default, Apr 16 2020, 01:36:27)</span><br><span class="line">[GCC 8.3.1 20191121 (Red Hat 8.3.1-5)] on linux</span><br><span class="line">Type &quot;help&quot;, &quot;copyright&quot;, &quot;credits&quot; or &quot;license&quot; for more information.</span><br></pre></td></tr></table></figure>
+<p>微信图片_20220702225327.png</p>
 ]]></content>
       <categories>
         <category>python</category>
         <category>python3</category>
       </categories>
-  </entry>
-  <entry>
-    <title>Podman的安装及使用</title>
-    <url>/2022/08/02/%E5%AE%B9%E5%99%A8/Podman/2022-08-02%20Podman%E7%9A%84%E5%AE%89%E8%A3%85%E5%8F%8A%E4%BD%BF%E7%94%A8/</url>
-    <content><![CDATA[<h1 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h1><blockquote>
-<p>主机1：腾讯云 新加坡 2核4G CentOS Stream8<br>主机2：本地 Intel N3540 4核8G CentOS 8.5</p>
-</blockquote>
-<h1 id=""><a href="#" class="headerlink" title=""></a></h1>]]></content>
-      <categories>
-        <category>容器</category>
-        <category>Podman</category>
-      </categories>
-      <tags>
-        <tag>云计算</tag>
-      </tags>
   </entry>
 </search>
