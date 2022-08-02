@@ -252,13 +252,6 @@
   </url>
   
   <url>
-    <loc>https://newreport.top/tags/%E4%BA%91%E6%9C%8D%E5%8A%A1/</loc>
-    <lastmod>2022-08-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://newreport.top/tags/%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8/</loc>
     <lastmod>2022-08-02</lastmod>
     <changefreq>weekly</changefreq>
@@ -267,6 +260,13 @@
   
   <url>
     <loc>https://newreport.top/tags/%E5%BE%85%E8%A1%A5%E5%85%85/</loc>
+    <lastmod>2022-08-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://newreport.top/tags/%E4%BA%91%E6%9C%8D%E5%8A%A1/</loc>
     <lastmod>2022-08-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -324,7 +324,7 @@
   </url>
   
   <url>
-    <loc>https://newreport.top/categories/%E5%AE%B9%E5%99%A8/</loc>
+    <loc>https://newreport.top/categories/python/</loc>
     <lastmod>2022-08-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -345,7 +345,21 @@
   </url>
   
   <url>
-    <loc>https://newreport.top/categories/python/</loc>
+    <loc>https://newreport.top/categories/%E5%AE%B9%E5%99%A8/</loc>
+    <lastmod>2022-08-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://newreport.top/categories/python/python3/</loc>
+    <lastmod>2022-08-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://newreport.top/categories/linux/rhel8/</loc>
     <lastmod>2022-08-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -360,20 +374,6 @@
   
   <url>
     <loc>https://newreport.top/categories/%E5%AE%B9%E5%99%A8/Podman/</loc>
-    <lastmod>2022-08-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://newreport.top/categories/linux/rhel8/</loc>
-    <lastmod>2022-08-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://newreport.top/categories/python/python3/</loc>
     <lastmod>2022-08-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
