@@ -6,7 +6,7 @@
   <link href="https://newreport.top/atom.xml" rel="self"/>
   
   <link href="https://newreport.top/"/>
-  <updated>2022-08-02T15:59:19.991Z</updated>
+  <updated>2022-08-05T16:17:23.616Z</updated>
   <id>https://newreport.top/</id>
   
   <author>
@@ -17,11 +17,30 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Kubernetest1.24内网二进制搭建</title>
+    <link href="https://newreport.top/2022/08/06/kubernetes/2022-08-06%20Kubernetest1.24%E5%86%85%E7%BD%91%E4%BA%8C%E8%BF%9B%E5%88%B6%E6%90%AD%E5%BB%BA/"/>
+    <id>https://newreport.top/2022/08/06/kubernetes/2022-08-06%20Kubernetest1.24%E5%86%85%E7%BD%91%E4%BA%8C%E8%BF%9B%E5%88%B6%E6%90%AD%E5%BB%BA/</id>
+    <published>2022-08-05T16:00:01.000Z</published>
+    <updated>2022-08-05T16:17:23.616Z</updated>
+    
+    
+    
+    
+    <category term="Kubernetes" scheme="https://newreport.top/categories/Kubernetes/"/>
+    
+    
+    <category term="CloudComputing" scheme="https://newreport.top/tags/CloudComputing/"/>
+    
+    <category term="etcd" scheme="https://newreport.top/tags/etcd/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Kubernetes1.24公网部署</title>
     <link href="https://newreport.top/2022/08/03/kubernetes/2022-08-03%20Kubernetes1.24%E5%85%AC%E7%BD%91%E9%83%A8%E7%BD%B2/"/>
     <id>https://newreport.top/2022/08/03/kubernetes/2022-08-03%20Kubernetes1.24%E5%85%AC%E7%BD%91%E9%83%A8%E7%BD%B2/</id>
     <published>2022-08-02T16:00:01.000Z</published>
-    <updated>2022-08-02T15:59:19.991Z</updated>
+    <updated>2022-08-05T16:14:55.934Z</updated>
     
     
     <summary type="html">&lt;h1 id=&quot;环境介绍&quot;&gt;&lt;a href=&quot;#环境介绍&quot; class=&quot;headerlink&quot; title=&quot;环境介绍&quot;&gt;&lt;/a&gt;环境介绍&lt;/h1&gt;&lt;blockquote&gt;
@@ -42,7 +61,7 @@
     <link href="https://newreport.top/2022/08/02/%E5%AE%B9%E5%99%A8/Docker/2022-08-02%20Docker%E7%9A%84%E5%AE%89%E8%A3%85%E5%8F%8A%E4%BD%BF%E7%94%A8/"/>
     <id>https://newreport.top/2022/08/02/%E5%AE%B9%E5%99%A8/Docker/2022-08-02%20Docker%E7%9A%84%E5%AE%89%E8%A3%85%E5%8F%8A%E4%BD%BF%E7%94%A8/</id>
     <published>2022-08-01T16:00:02.000Z</published>
-    <updated>2022-08-01T18:03:12.470Z</updated>
+    <updated>2022-08-05T15:47:58.698Z</updated>
     
     
     
@@ -52,7 +71,7 @@
     <category term="Docker" scheme="https://newreport.top/categories/%E5%AE%B9%E5%99%A8/Docker/"/>
     
     
-    <category term="云计算" scheme="https://newreport.top/tags/%E4%BA%91%E8%AE%A1%E7%AE%97/"/>
+    <category term="CloudComputing" scheme="https://newreport.top/tags/CloudComputing/"/>
     
   </entry>
   
@@ -89,7 +108,7 @@
     <link href="https://newreport.top/2022/07/27/kubernetes/2022-07-27%20Kubernetes1.24%E5%86%85%E7%BD%91%E9%83%A8%E7%BD%B2/"/>
     <id>https://newreport.top/2022/07/27/kubernetes/2022-07-27%20Kubernetes1.24%E5%86%85%E7%BD%91%E9%83%A8%E7%BD%B2/</id>
     <published>2022-07-26T16:00:01.000Z</published>
-    <updated>2022-08-02T19:17:57.791Z</updated>
+    <updated>2022-08-05T16:57:04.508Z</updated>
     
     
     <summary type="html">&lt;h1 id=&quot;环境介绍&quot;&gt;&lt;a href=&quot;#环境介绍&quot; class=&quot;headerlink&quot; title=&quot;环境介绍&quot;&gt;&lt;/a&gt;环境介绍&lt;/h1&gt;&lt;blockquote&gt;
@@ -212,7 +231,7 @@
     <link href="https://newreport.top/2021/06/22/python/python3/2021-06-22%2002%E3%80%81%E5%8F%98%E9%87%8F%E5%92%8C%E7%AE%80%E5%8D%95%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/"/>
     <id>https://newreport.top/2021/06/22/python/python3/2021-06-22%2002%E3%80%81%E5%8F%98%E9%87%8F%E5%92%8C%E7%AE%80%E5%8D%95%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/</id>
     <published>2021-06-21T16:00:00.000Z</published>
-    <updated>2021-06-23T08:55:22.000Z</updated>
+    <updated>2022-08-05T15:48:18.880Z</updated>
     
     
     <summary type="html">&lt;h1 id=&quot;运行hello-world&quot;&gt;&lt;a href=&quot;#运行hello-world&quot; class=&quot;headerlink&quot; title=&quot;运行hello world&quot;&gt;&lt;/a&gt;运行hello world&lt;/h1&gt;&lt;p&gt;vim 1.py&lt;/p&gt;
@@ -223,6 +242,8 @@
     
     <category term="python" scheme="https://newreport.top/categories/python/"/>
     
+    <category term="python3" scheme="https://newreport.top/categories/python/python3/"/>
+    
     
   </entry>
   
@@ -231,7 +252,7 @@
     <link href="https://newreport.top/2021/06/21/python/python3/2021-06-21%2001%E3%80%81%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/"/>
     <id>https://newreport.top/2021/06/21/python/python3/2021-06-21%2001%E3%80%81%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/</id>
     <published>2021-06-20T16:00:00.000Z</published>
-    <updated>2022-07-03T14:52:13.029Z</updated>
+    <updated>2022-08-05T15:48:22.149Z</updated>
     
     
       
@@ -407,7 +428,7 @@
     <link href="https://newreport.top/2021/01/03/linux/rhel8/2021-01-03%2003%E3%80%81%E8%BF%90%E8%A1%8C%E5%91%BD%E4%BB%A4%E5%92%8C%E8%8E%B7%E5%8F%96%E5%B8%AE%E5%8A%A9/"/>
     <id>https://newreport.top/2021/01/03/linux/rhel8/2021-01-03%2003%E3%80%81%E8%BF%90%E8%A1%8C%E5%91%BD%E4%BB%A4%E5%92%8C%E8%8E%B7%E5%8F%96%E5%B8%AE%E5%8A%A9/</id>
     <published>2021-01-02T16:00:00.000Z</published>
-    <updated>2021-06-22T13:04:44.000Z</updated>
+    <updated>2022-08-05T15:48:10.650Z</updated>
     
     
     <summary type="html">&lt;h1 id=&quot;学习目标&quot;&gt;&lt;a href=&quot;#学习目标&quot; class=&quot;headerlink&quot; title=&quot;学习目标&quot;&gt;&lt;/a&gt;学习目标&lt;/h1&gt;&lt;ul&gt;
@@ -445,7 +466,9 @@
     
     
     
-    <category term="linux for rhel8" scheme="https://newreport.top/categories/linux-for-rhel8/"/>
+    <category term="linux" scheme="https://newreport.top/categories/linux/"/>
+    
+    <category term="rhel8" scheme="https://newreport.top/categories/linux/rhel8/"/>
     
     
   </entry>
@@ -455,7 +478,7 @@
     <link href="https://newreport.top/2021/01/02/linux/rhel8/2021-01-02%2002%E3%80%81Linux%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/"/>
     <id>https://newreport.top/2021/01/02/linux/rhel8/2021-01-02%2002%E3%80%81Linux%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/</id>
     <published>2021-01-01T16:00:00.000Z</published>
-    <updated>2021-06-22T13:04:38.000Z</updated>
+    <updated>2022-08-05T15:48:08.978Z</updated>
     
     
     <summary type="html">&lt;h1 id=&quot;学习目标&quot;&gt;&lt;a href=&quot;#学习目标&quot; class=&quot;headerlink&quot; title=&quot;学习目标&quot;&gt;&lt;/a&gt;学习目标&lt;/h1&gt;&lt;ul&gt;
@@ -504,33 +527,9 @@
     
     
     
-    <category term="linux for rhel8" scheme="https://newreport.top/categories/linux-for-rhel8/"/>
+    <category term="linux" scheme="https://newreport.top/categories/linux/"/>
     
-    
-  </entry>
-  
-  <entry>
-    <title>Linux的简介和安装</title>
-    <link href="https://newreport.top/2021/01/01/linux/rhel8/2021-01-01%2001%E3%80%81Linux%E7%9A%84%E7%AE%80%E4%BB%8B%E5%92%8C%E5%AE%89%E8%A3%85/"/>
-    <id>https://newreport.top/2021/01/01/linux/rhel8/2021-01-01%2001%E3%80%81Linux%E7%9A%84%E7%AE%80%E4%BB%8B%E5%92%8C%E5%AE%89%E8%A3%85/</id>
-    <published>2020-12-31T16:00:00.000Z</published>
-    <updated>2021-07-02T04:42:55.000Z</updated>
-    
-    
-    <summary type="html">&lt;h1 id=&quot;学习目标&quot;&gt;&lt;a href=&quot;#学习目标&quot; class=&quot;headerlink&quot; title=&quot;学习目标&quot;&gt;&lt;/a&gt;学习目标&lt;/h1&gt;&lt;ul&gt;
-&lt;li&gt;Linux系统和红帽认证的基本介绍&lt;/li&gt;
-&lt;li&gt;RHEL8.0系统的安装&lt;/li&gt;
-&lt;li&gt;掌握开源软件的本质&lt;/li&gt;
-&lt;li&gt;探讨linux的起源&lt;/li&gt;
-&lt;li&gt;Red Hat操作系统的发行版&lt;/li&gt;
-&lt;li&gt;其他Linux系统的发行版&lt;/li&gt;
-&lt;li&gt;了解linux的基本原理&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h1 id=&quot;linux系统安装&quot;&gt;&lt;a href=&quot;#linux系统安装&quot; class=&quot;headerlink&quot; title=&quot;linux系统安装&quot;&gt;&lt;/a&gt;linux系统安装&lt;/h1&gt;&lt;p&gt;&amp;amp;#8195;&amp;amp;#8195;CentOS下载：&lt;a href=&quot;https://www.centos.org/download/&quot;&gt;https://www.centos.org/download/&lt;/a&gt;&lt;br&gt;&amp;amp;#8195;&amp;amp;#8195;DVD ISO：标准安装版，一般下载这个就可以了（推荐）&lt;br&gt;&amp;amp;#8195;&amp;amp;#8195;Everything ISO：对完整版安装盘的软件进行补充，集成所有软件。（包含一套完整的软件包，可以用来安装系统或者填充本地镜像）&lt;br&gt;&amp;amp;#8195;&amp;amp;#8195;Minimal ISO：迷你版，小巧、安装快速、自带的软件少&lt;br&gt;&amp;amp;#8195;&amp;amp;#8195;CentOS所有历史版本的下载地址：&lt;a href=&quot;http://archive.kernel.org/centos-vault/&quot;&gt;http://archive.kernel.org/centos-vault/&lt;/a&gt;&lt;br&gt;&amp;amp;#8195;&amp;amp;#8195;&lt;a href=&quot;https://www.lofter.com/lpost/4ba01091_1cabbd565&quot;&gt;rhel8安装手册&lt;/a&gt;&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="linux for rhel8" scheme="https://newreport.top/categories/linux-for-rhel8/"/>
+    <category term="rhel8" scheme="https://newreport.top/categories/linux/rhel8/"/>
     
     
   </entry>
