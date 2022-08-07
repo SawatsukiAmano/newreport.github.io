@@ -6,7 +6,7 @@
   <link href="https://newreport.top/atom.xml" rel="self"/>
   
   <link href="https://newreport.top/"/>
-  <updated>2022-08-05T16:17:23.616Z</updated>
+  <updated>2022-08-07T15:37:46.066Z</updated>
   <id>https://newreport.top/</id>
   
   <author>
@@ -18,10 +18,10 @@
   
   <entry>
     <title>Kubernetest1.24内网二进制搭建</title>
-    <link href="https://newreport.top/2022/08/06/kubernetes/2022-08-06%20Kubernetest1.24%E5%86%85%E7%BD%91%E4%BA%8C%E8%BF%9B%E5%88%B6%E6%90%AD%E5%BB%BA/"/>
-    <id>https://newreport.top/2022/08/06/kubernetes/2022-08-06%20Kubernetest1.24%E5%86%85%E7%BD%91%E4%BA%8C%E8%BF%9B%E5%88%B6%E6%90%AD%E5%BB%BA/</id>
+    <link href="https://newreport.top/2022-08-06/kubernetes_1_24_inside_binary_install/"/>
+    <id>https://newreport.top/2022-08-06/kubernetes_1_24_inside_binary_install/</id>
     <published>2022-08-05T16:00:01.000Z</published>
-    <updated>2022-08-05T16:17:23.616Z</updated>
+    <updated>2022-08-07T15:37:46.066Z</updated>
     
     
     
@@ -37,8 +37,8 @@
   
   <entry>
     <title>Kubernetes1.24公网部署</title>
-    <link href="https://newreport.top/2022/08/03/kubernetes/2022-08-03%20Kubernetes1.24%E5%85%AC%E7%BD%91%E9%83%A8%E7%BD%B2/"/>
-    <id>https://newreport.top/2022/08/03/kubernetes/2022-08-03%20Kubernetes1.24%E5%85%AC%E7%BD%91%E9%83%A8%E7%BD%B2/</id>
+    <link href="https://newreport.top/2022-08-03/kubernetes_1_24_public_install/"/>
+    <id>https://newreport.top/2022-08-03/kubernetes_1_24_public_install/</id>
     <published>2022-08-02T16:00:01.000Z</published>
     <updated>2022-08-05T16:14:55.934Z</updated>
     
@@ -58,10 +58,10 @@
   
   <entry>
     <title>Docker的安装及使用</title>
-    <link href="https://newreport.top/2022/08/02/%E5%AE%B9%E5%99%A8/Docker/2022-08-02%20Docker%E7%9A%84%E5%AE%89%E8%A3%85%E5%8F%8A%E4%BD%BF%E7%94%A8/"/>
-    <id>https://newreport.top/2022/08/02/%E5%AE%B9%E5%99%A8/Docker/2022-08-02%20Docker%E7%9A%84%E5%AE%89%E8%A3%85%E5%8F%8A%E4%BD%BF%E7%94%A8/</id>
+    <link href="https://newreport.top/2022-08-02/docker_install_using/"/>
+    <id>https://newreport.top/2022-08-02/docker_install_using/</id>
     <published>2022-08-01T16:00:02.000Z</published>
-    <updated>2022-08-05T15:47:58.698Z</updated>
+    <updated>2022-08-07T15:38:53.308Z</updated>
     
     
     
@@ -77,10 +77,10 @@
   
   <entry>
     <title>Podman的安装及使用</title>
-    <link href="https://newreport.top/2022/08/02/%E5%AE%B9%E5%99%A8/Podman/2022-08-02%20Podman%E7%9A%84%E5%AE%89%E8%A3%85%E5%8F%8A%E4%BD%BF%E7%94%A8/"/>
-    <id>https://newreport.top/2022/08/02/%E5%AE%B9%E5%99%A8/Podman/2022-08-02%20Podman%E7%9A%84%E5%AE%89%E8%A3%85%E5%8F%8A%E4%BD%BF%E7%94%A8/</id>
+    <link href="https://newreport.top/2022-08-02/podman_install_using/"/>
+    <id>https://newreport.top/2022-08-02/podman_install_using/</id>
     <published>2022-08-01T16:00:01.000Z</published>
-    <updated>2022-08-02T15:59:40.610Z</updated>
+    <updated>2022-08-07T15:38:38.522Z</updated>
     
     
       
@@ -105,10 +105,10 @@
   
   <entry>
     <title>Kubernetes1.24内网部署</title>
-    <link href="https://newreport.top/2022/07/27/kubernetes/2022-07-27%20Kubernetes1.24%E5%86%85%E7%BD%91%E9%83%A8%E7%BD%B2/"/>
-    <id>https://newreport.top/2022/07/27/kubernetes/2022-07-27%20Kubernetes1.24%E5%86%85%E7%BD%91%E9%83%A8%E7%BD%B2/</id>
+    <link href="https://newreport.top/2022-07-27/kubernetes_1_24_inside_install/"/>
+    <id>https://newreport.top/2022-07-27/kubernetes_1_24_inside_install/</id>
     <published>2022-07-26T16:00:01.000Z</published>
-    <updated>2022-08-07T15:00:47.531Z</updated>
+    <updated>2022-08-07T15:37:53.454Z</updated>
     
     
     <summary type="html">&lt;h1 id=&quot;环境介绍&quot;&gt;&lt;a href=&quot;#环境介绍&quot; class=&quot;headerlink&quot; title=&quot;环境介绍&quot;&gt;&lt;/a&gt;环境介绍&lt;/h1&gt;&lt;blockquote&gt;
@@ -126,8 +126,8 @@
   
   <entry>
     <title></title>
-    <link href="https://newreport.top/2022/07/03/%E9%A9%AC%E5%85%8B%E6%80%9D%E4%B8%BB%E4%B9%89%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86/%E9%A9%AC%E5%85%8B%E6%80%9D%E4%B8%BB%E4%B9%89%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86%E4%B8%B2%E8%AE%B2/"/>
-    <id>https://newreport.top/2022/07/03/%E9%A9%AC%E5%85%8B%E6%80%9D%E4%B8%BB%E4%B9%89%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86/%E9%A9%AC%E5%85%8B%E6%80%9D%E4%B8%BB%E4%B9%89%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86%E4%B8%B2%E8%AE%B2/</id>
+    <link href="https://newreport.top/2022-07-03/undefined/"/>
+    <id>https://newreport.top/2022-07-03/undefined/</id>
     <published>2022-07-02T18:18:47.002Z</published>
     <updated>2021-07-03T06:44:18.000Z</updated>
     
@@ -139,8 +139,8 @@
   
   <entry>
     <title>无限容量相册</title>
-    <link href="https://newreport.top/2021/06/28/2021-06-28%20%E6%97%A0%E9%99%90%E5%AE%B9%E9%87%8F%E7%9B%B8%E5%86%8C/"/>
-    <id>https://newreport.top/2021/06/28/2021-06-28%20%E6%97%A0%E9%99%90%E5%AE%B9%E9%87%8F%E7%9B%B8%E5%86%8C/</id>
+    <link href="https://newreport.top/2021-06-28/cloud-fullall/"/>
+    <id>https://newreport.top/2021-06-28/cloud-fullall/</id>
     <published>2021-06-27T16:00:00.000Z</published>
     <updated>2022-07-02T18:49:54.807Z</updated>
     
@@ -166,8 +166,8 @@
   
   <entry>
     <title>附页</title>
-    <link href="https://newreport.top/2021/06/23/english/2021-06-23-3%20%E9%99%84%E9%A1%B5/"/>
-    <id>https://newreport.top/2021/06/23/english/2021-06-23-3%20%E9%99%84%E9%A1%B5/</id>
+    <link href="https://newreport.top/2021-06-23/English-1/"/>
+    <id>https://newreport.top/2021-06-23/English-1/</id>
     <published>2021-06-22T16:00:02.000Z</published>
     <updated>2021-06-23T12:43:21.000Z</updated>
     
@@ -189,8 +189,8 @@
   
   <entry>
     <title>英语词性</title>
-    <link href="https://newreport.top/2021/06/23/english/2021-06-23-2%20%E8%8B%B1%E8%AF%AD%E8%AF%8D%E6%80%A7/"/>
-    <id>https://newreport.top/2021/06/23/english/2021-06-23-2%20%E8%8B%B1%E8%AF%AD%E8%AF%8D%E6%80%A7/</id>
+    <link href="https://newreport.top/2021-06-23/English-part-of-speech/"/>
+    <id>https://newreport.top/2021-06-23/English-part-of-speech/</id>
     <published>2021-06-22T16:00:01.000Z</published>
     <updated>2021-06-23T12:27:09.000Z</updated>
     
@@ -206,10 +206,10 @@
   
   <entry>
     <title>列表简介</title>
-    <link href="https://newreport.top/2021/06/23/python/python3/2021-06-23%2003%E3%80%81%E5%88%97%E8%A1%A8%E7%AE%80%E4%BB%8B/"/>
-    <id>https://newreport.top/2021/06/23/python/python3/2021-06-23%2003%E3%80%81%E5%88%97%E8%A1%A8%E7%AE%80%E4%BB%8B/</id>
+    <link href="https://newreport.top/2021-06-23/list-introduction/"/>
+    <id>https://newreport.top/2021-06-23/list-introduction/</id>
     <published>2021-06-22T16:00:00.000Z</published>
-    <updated>2022-08-01T17:54:38.803Z</updated>
+    <updated>2022-08-07T15:38:25.872Z</updated>
     
     
     <summary type="html">&lt;h1 id=&quot;列表是什么&quot;&gt;&lt;a href=&quot;#列表是什么&quot; class=&quot;headerlink&quot; title=&quot;列表是什么&quot;&gt;&lt;/a&gt;列表是什么&lt;/h1&gt;&lt;p&gt;类似于c的数组&lt;/p&gt;
@@ -228,8 +228,8 @@
   
   <entry>
     <title>变量和简单数据类型</title>
-    <link href="https://newreport.top/2021/06/22/python/python3/2021-06-22%2002%E3%80%81%E5%8F%98%E9%87%8F%E5%92%8C%E7%AE%80%E5%8D%95%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/"/>
-    <id>https://newreport.top/2021/06/22/python/python3/2021-06-22%2002%E3%80%81%E5%8F%98%E9%87%8F%E5%92%8C%E7%AE%80%E5%8D%95%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/</id>
+    <link href="https://newreport.top/2021-06-22/Variables-and-simple-data-types/"/>
+    <id>https://newreport.top/2021-06-22/Variables-and-simple-data-types/</id>
     <published>2021-06-21T16:00:00.000Z</published>
     <updated>2022-08-05T15:48:18.880Z</updated>
     
@@ -249,10 +249,10 @@
   
   <entry>
     <title>Python基础知识</title>
-    <link href="https://newreport.top/2021/06/21/python/python3/2021-06-21%2001%E3%80%81%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/"/>
-    <id>https://newreport.top/2021/06/21/python/python3/2021-06-21%2001%E3%80%81%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/</id>
+    <link href="https://newreport.top/2021-06-21/python-basic-knowledge/"/>
+    <id>https://newreport.top/2021-06-21/python-basic-knowledge/</id>
     <published>2021-06-20T16:00:00.000Z</published>
-    <updated>2022-08-05T15:48:22.149Z</updated>
+    <updated>2022-08-07T15:38:17.697Z</updated>
     
     
       
@@ -275,8 +275,8 @@
   
   <entry>
     <title>网盘搭建</title>
-    <link href="https://newreport.top/2021/01/07/2021-01-07%20%E7%BD%91%E7%9B%98%E6%90%AD%E5%BB%BA/"/>
-    <id>https://newreport.top/2021/01/07/2021-01-07%20%E7%BD%91%E7%9B%98%E6%90%AD%E5%BB%BA/</id>
+    <link href="https://newreport.top/2021-01-07/cloud-make/"/>
+    <id>https://newreport.top/2021-01-07/cloud-make/</id>
     <published>2021-01-06T16:00:01.000Z</published>
     <updated>2022-07-02T18:23:42.779Z</updated>
     
@@ -303,8 +303,8 @@
   
   <entry>
     <title>图床&quot;永久链&quot;</title>
-    <link href="https://newreport.top/2021/01/06/2021-01-06%20%E5%9B%BE%E5%BA%8A%E6%90%AD%E5%BB%BA/"/>
-    <id>https://newreport.top/2021/01/06/2021-01-06%20%E5%9B%BE%E5%BA%8A%E6%90%AD%E5%BB%BA/</id>
+    <link href="https://newreport.top/2021-01-06/img-make/"/>
+    <id>https://newreport.top/2021-01-06/img-make/</id>
     <published>2021-01-05T16:00:01.000Z</published>
     <updated>2022-08-01T17:47:30.595Z</updated>
     
@@ -322,8 +322,8 @@
   
   <entry>
     <title>云函数</title>
-    <link href="https://newreport.top/2021/01/05/2021-01-05-2%20%E4%BA%91%E5%87%BD%E6%95%B0/"/>
-    <id>https://newreport.top/2021/01/05/2021-01-05-2%20%E4%BA%91%E5%87%BD%E6%95%B0/</id>
+    <link href="https://newreport.top/2021-01-05/function-cloud/"/>
+    <id>https://newreport.top/2021-01-05/function-cloud/</id>
     <published>2021-01-04T16:00:02.000Z</published>
     <updated>2021-06-22T12:04:49.000Z</updated>
     
@@ -342,8 +342,8 @@
   
   <entry>
     <title>域名的使用</title>
-    <link href="https://newreport.top/2021/01/05/2021-01-05-1%20%E5%9F%9F%E5%90%8D%E6%B3%A8%E5%86%8C/"/>
-    <id>https://newreport.top/2021/01/05/2021-01-05-1%20%E5%9F%9F%E5%90%8D%E6%B3%A8%E5%86%8C/</id>
+    <link href="https://newreport.top/2021-01-05/make-domainname/"/>
+    <id>https://newreport.top/2021-01-05/make-domainname/</id>
     <published>2021-01-04T16:00:01.000Z</published>
     <updated>2021-02-05T10:53:58.000Z</updated>
     
@@ -373,8 +373,8 @@
   
   <entry>
     <title>C#基础</title>
-    <link href="https://newreport.top/2021/01/05/C#/2021-07-01%20C#%E5%9F%BA%E7%A1%80/"/>
-    <id>https://newreport.top/2021/01/05/C#/2021-07-01%20C#%E5%9F%BA%E7%A1%80/</id>
+    <link href="https://newreport.top/2021-01-05/Csharp-base/"/>
+    <id>https://newreport.top/2021-01-05/Csharp-base/</id>
     <published>2021-01-04T16:00:01.000Z</published>
     <updated>2021-07-02T11:32:01.000Z</updated>
     
@@ -393,8 +393,8 @@
   
   <entry>
     <title>了解文件系统的和基本操作</title>
-    <link href="https://newreport.top/2021/01/04/linux/rhel8/2021-01-04%2004%E3%80%81%E4%BA%86%E8%A7%A3%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%92%8C%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/"/>
-    <id>https://newreport.top/2021/01/04/linux/rhel8/2021-01-04%2004%E3%80%81%E4%BA%86%E8%A7%A3%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%92%8C%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/</id>
+    <link href="https://newreport.top/2021-01-04/Understand-the-file-system-and-basic-operations/"/>
+    <id>https://newreport.top/2021-01-04/Understand-the-file-system-and-basic-operations/</id>
     <published>2021-01-03T16:00:00.000Z</published>
     <updated>2022-08-02T15:48:15.391Z</updated>
     
@@ -425,8 +425,8 @@
   
   <entry>
     <title>运行命令和获取帮助</title>
-    <link href="https://newreport.top/2021/01/03/linux/rhel8/2021-01-03%2003%E3%80%81%E8%BF%90%E8%A1%8C%E5%91%BD%E4%BB%A4%E5%92%8C%E8%8E%B7%E5%8F%96%E5%B8%AE%E5%8A%A9/"/>
-    <id>https://newreport.top/2021/01/03/linux/rhel8/2021-01-03%2003%E3%80%81%E8%BF%90%E8%A1%8C%E5%91%BD%E4%BB%A4%E5%92%8C%E8%8E%B7%E5%8F%96%E5%B8%AE%E5%8A%A9/</id>
+    <link href="https://newreport.top/2021-01-03/Run-commands-and-get-help/"/>
+    <id>https://newreport.top/2021-01-03/Run-commands-and-get-help/</id>
     <published>2021-01-02T16:00:00.000Z</published>
     <updated>2022-08-05T15:48:10.650Z</updated>
     
@@ -475,8 +475,8 @@
   
   <entry>
     <title>Linux的基本使用</title>
-    <link href="https://newreport.top/2021/01/02/linux/rhel8/2021-01-02%2002%E3%80%81Linux%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/"/>
-    <id>https://newreport.top/2021/01/02/linux/rhel8/2021-01-02%2002%E3%80%81Linux%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/</id>
+    <link href="https://newreport.top/2021-01-02/Linux-Basic-use/"/>
+    <id>https://newreport.top/2021-01-02/Linux-Basic-use/</id>
     <published>2021-01-01T16:00:00.000Z</published>
     <updated>2022-08-05T15:48:08.978Z</updated>
     
