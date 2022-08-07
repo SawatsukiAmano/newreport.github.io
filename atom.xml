@@ -6,7 +6,7 @@
   <link href="https://newreport.top/atom.xml" rel="self"/>
   
   <link href="https://newreport.top/"/>
-  <updated>2022-08-07T15:37:46.066Z</updated>
+  <updated>2022-08-07T18:51:36.509Z</updated>
   <id>https://newreport.top/</id>
   
   <author>
@@ -15,6 +15,25 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>cloudflare的使用</title>
+    <link href="https://newreport.top/2022-08-08/using-cloudflare/"/>
+    <id>https://newreport.top/2022-08-08/using-cloudflare/</id>
+    <published>2022-08-07T16:00:00.000Z</published>
+    <updated>2022-08-07T18:51:36.509Z</updated>
+    
+    
+    
+    
+    <category term="杂物箱" scheme="https://newreport.top/categories/%E6%9D%82%E7%89%A9%E7%AE%B1/"/>
+    
+    
+    <category term="Domain" scheme="https://newreport.top/tags/Domain/"/>
+    
+    <category term="DNS" scheme="https://newreport.top/tags/DNS/"/>
+    
+  </entry>
   
   <entry>
     <title>Kubernetest1.24内网二进制搭建</title>
@@ -29,9 +48,9 @@
     <category term="Kubernetes" scheme="https://newreport.top/categories/Kubernetes/"/>
     
     
-    <category term="CloudComputing" scheme="https://newreport.top/tags/CloudComputing/"/>
-    
     <category term="etcd" scheme="https://newreport.top/tags/etcd/"/>
+    
+    <category term="CloudComputing" scheme="https://newreport.top/tags/CloudComputing/"/>
     
   </entry>
   
@@ -345,10 +364,10 @@
     <link href="https://newreport.top/2021-01-05/make-domainname/"/>
     <id>https://newreport.top/2021-01-05/make-domainname/</id>
     <published>2021-01-04T16:00:01.000Z</published>
-    <updated>2021-02-05T10:53:58.000Z</updated>
+    <updated>2022-08-07T18:52:54.023Z</updated>
     
     
-    <summary type="html">&lt;h1 id=&quot;域名服务商&quot;&gt;&lt;a href=&quot;#域名服务商&quot; class=&quot;headerlink&quot; title=&quot;域名服务商&quot;&gt;&lt;/a&gt;域名服务商&lt;/h1&gt;&lt;p&gt;&amp;amp;#8195;&amp;amp;#8195;个人站除开com、net这两个域名，其他推荐选择国外服务商进行注册。以下仅列举一些我接触过的，还有很多其他的服务商就不一一列举了  &lt;/p&gt;
+    <summary type="html">&lt;h1 id=&quot;域名服务商&quot;&gt;&lt;a href=&quot;#域名服务商&quot; class=&quot;headerlink&quot; title=&quot;域名服务商&quot;&gt;&lt;/a&gt;域名服务商&lt;/h1&gt;&lt;p&gt;个人站除开com、net这两个域名，其他推荐选择国外服务商进行注册。以下仅列举一些我接触过的，还有很多其他的服务商就不一一列举了  &lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;国内&lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://wanwang.aliyun.com/&quot;&gt;阿里云万网&lt;/a&gt;：尚可，只提供com和net、tv、cc这四个域名的隐藏个人信息服务&lt;/li&gt;
@@ -396,7 +415,7 @@
     <link href="https://newreport.top/2021-01-04/Understand-the-file-system-and-basic-operations/"/>
     <id>https://newreport.top/2021-01-04/Understand-the-file-system-and-basic-operations/</id>
     <published>2021-01-03T16:00:00.000Z</published>
-    <updated>2022-08-02T15:48:15.391Z</updated>
+    <updated>2022-08-07T18:42:42.469Z</updated>
     
     
     <summary type="html">&lt;h1 id=&quot;学习目标&quot;&gt;&lt;a href=&quot;#学习目标&quot; class=&quot;headerlink&quot; title=&quot;学习目标&quot;&gt;&lt;/a&gt;学习目标&lt;/h1&gt;&lt;ul&gt;
@@ -405,14 +424,33 @@
 &lt;li&gt;创建文件和文件夹&lt;/li&gt;
 &lt;li&gt;了解时间戳的概念&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h1 id=&quot;Linux文件系统的组成&quot;&gt;&lt;a href=&quot;#Linux文件系统的组成&quot; class=&quot;headerlink&quot; title=&quot;Linux文件系统的组成&quot;&gt;&lt;/a&gt;Linux文件系统的组成&lt;/h1&gt;&lt;p&gt;&amp;amp;#8195;&amp;amp;#8195;整个文件系统由 分区–目录 对接&lt;br&gt;&amp;amp;#8195;&amp;amp;#8195;文件都是从根开始的，无论文件在哪个分区，都可以通过根访问到  &lt;/p&gt;
+&lt;h1 id=&quot;Linux文件系统的组成&quot;&gt;&lt;a href=&quot;#Linux文件系统的组成&quot; class=&quot;headerlink&quot; title=&quot;Linux文件系统的组成&quot;&gt;&lt;/a&gt;Linux文件系统的组成&lt;/h1&gt;&lt;p&gt;整个文件系统由 分区–目录 对接&lt;br&gt;文件都是从根开始的，无论文件在哪个分区，都可以通过根访问到  &lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;文件和目录构成单根的倒树状结构&lt;/li&gt;
 &lt;li&gt;文件系统从根目录开始，表示为一个单独的’&amp;#x2F;’(斜线)字符&lt;/li&gt;
 &lt;li&gt;命名大小写敏感&lt;/li&gt;
 &lt;li&gt;路径以’&amp;#x2F;’为分隔&lt;/li&gt;
 &lt;/ul&gt;
-&lt;figure class=&quot;highlight plaintext&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;graph TD&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;A(/)--&amp;gt;B1(bin)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;A--&amp;gt;B2(boot)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;A--&amp;gt;B3(dev)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;A--&amp;gt;B4(etc)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;A--&amp;gt;B5(home)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	B5--&amp;gt;D1(alice)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	B5--&amp;gt;D2(bob)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	B5--&amp;gt;D3(eve)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;A--&amp;gt;B6(root)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;A--&amp;gt;B7(run)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;A--&amp;gt;B8(sbin)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;A--&amp;gt;B9(tmp)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;A--&amp;gt;B10(usr)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	B10--&amp;gt;D4(bin)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	B10--&amp;gt;D5(local)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	B10--&amp;gt;D6(sbin)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	B10--&amp;gt;D7(tmp)		&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;A--&amp;gt;B11(var)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	B11--&amp;gt;D8(tmp)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
+&lt;pre class=&quot;mermaid&quot;&gt;	graph TD
+    A(/)--&gt;B1(bin)
+    A--&gt;B2(boot)
+    A--&gt;B3(dev)
+    A--&gt;B4(etc)
+    A--&gt;B5(home)
+        B5--&gt;D1(alice)
+        B5--&gt;D2(bob)
+        B5--&gt;D3(eve)
+    A--&gt;B6(root)
+    A--&gt;B7(run)
+    A--&gt;B8(sbin)
+    A--&gt;B9(tmp)
+    A--&gt;B10(usr)
+        B10--&gt;D4(bin)
+        B10--&gt;D5(local)
+        B10--&gt;D6(sbin)
+        B10--&gt;D7(tmp)		
+    A--&gt;B11(var)
+        B11--&gt;D8(tmp)&lt;/pre&gt;</summary>
     
     
     
@@ -428,7 +466,7 @@
     <link href="https://newreport.top/2021-01-03/Run-commands-and-get-help/"/>
     <id>https://newreport.top/2021-01-03/Run-commands-and-get-help/</id>
     <published>2021-01-02T16:00:00.000Z</published>
-    <updated>2022-08-05T15:48:10.650Z</updated>
+    <updated>2022-08-07T18:33:59.831Z</updated>
     
     
     <summary type="html">&lt;h1 id=&quot;学习目标&quot;&gt;&lt;a href=&quot;#学习目标&quot; class=&quot;headerlink&quot; title=&quot;学习目标&quot;&gt;&lt;/a&gt;学习目标&lt;/h1&gt;&lt;ul&gt;
@@ -461,67 +499,6 @@
 &lt;td&gt;做什么，如：passwd、ls、id&lt;/td&gt;
 &lt;td&gt;修饰命令的行为（功能），如：-a、-l、-la&lt;/td&gt;
 &lt;td&gt;具体的某个对象&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;&lt;/table&gt;</summary>
-    
-    
-    
-    <category term="linux" scheme="https://newreport.top/categories/linux/"/>
-    
-    <category term="rhel8" scheme="https://newreport.top/categories/linux/rhel8/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Linux的基本使用</title>
-    <link href="https://newreport.top/2021-01-02/Linux-Basic-use/"/>
-    <id>https://newreport.top/2021-01-02/Linux-Basic-use/</id>
-    <published>2021-01-01T16:00:00.000Z</published>
-    <updated>2022-08-05T15:48:08.978Z</updated>
-    
-    
-    <summary type="html">&lt;h1 id=&quot;学习目标&quot;&gt;&lt;a href=&quot;#学习目标&quot; class=&quot;headerlink&quot; title=&quot;学习目标&quot;&gt;&lt;/a&gt;学习目标&lt;/h1&gt;&lt;ul&gt;
-&lt;li&gt;登录Red Hat Enterprise Linux系统&lt;/li&gt;
-&lt;li&gt;从控制台启动图形&lt;/li&gt;
-&lt;li&gt;执行简单的linux命令&lt;/li&gt;
-&lt;li&gt;编辑纯文本文件&lt;/li&gt;
-&lt;li&gt;掌握root特性&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h1 id=&quot;简单的命令&quot;&gt;&lt;a href=&quot;#简单的命令&quot; class=&quot;headerlink&quot; title=&quot;简单的命令&quot;&gt;&lt;/a&gt;简单的命令&lt;/h1&gt;&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;命令&lt;/th&gt;
-&lt;th&gt;功能&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;&lt;tr&gt;
-&lt;td&gt;date&lt;/td&gt;
-&lt;td&gt;显示日期&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;cal&lt;/td&gt;
-&lt;td&gt;显示日历&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;passwd&lt;/td&gt;
-&lt;td&gt;修改密码&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;id&lt;/td&gt;
-&lt;td&gt;显示当前用户信息&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;useradd&lt;/td&gt;
-&lt;td&gt;创建用户&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;su -&lt;/td&gt;
-&lt;td&gt;切换用户&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;vim&lt;/td&gt;
-&lt;td&gt;文本编辑器的使用&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;&lt;/table&gt;</summary>
     
