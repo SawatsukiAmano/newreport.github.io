@@ -110,12 +110,10 @@
       </tags>
   </entry>
   <entry>
-    <title>网盘搭建</title>
-    <url>/2021-01-07/cloud-make/</url>
-    <content><![CDATA[<h1 id="NAS"><a href="#NAS" class="headerlink" title="NAS"></a>NAS</h1><p>demo：null<br>优势：没有审查，自用隐私安全性最高</p>
-<h2 id="群晖"><a href="#群晖" class="headerlink" title="群晖"></a>群晖</h2><h1 id="公共网盘-api-可视化"><a href="#公共网盘-api-可视化" class="headerlink" title="公共网盘-api-可视化"></a>公共网盘-api-可视化</h1><p>demo：null<br>优势：免费<br>缺点：审查机制由云存储服务商判断、隐私性最低、会河蟹某些内容</p>
-<h2 id="Onedrive-Oneindex"><a href="#Onedrive-Oneindex" class="headerlink" title="Onedrive-Oneindex"></a>Onedrive-Oneindex</h2><h2 id="和彩云-x2F-天翼云"><a href="#和彩云-x2F-天翼云" class="headerlink" title="和彩云&#x2F;天翼云"></a>和彩云&#x2F;天翼云</h2><h1 id="服务器-对象存储"><a href="#服务器-对象存储" class="headerlink" title="服务器-对象存储"></a>服务器-对象存储</h1><p>demo：null<br>优势：没有审查,可靠性最高<br>缺点：付费服务</p>
-<h2 id="seafile"><a href="#seafile" class="headerlink" title="seafile"></a>seafile</h2><h2 id="nextcloud"><a href="#nextcloud" class="headerlink" title="nextcloud"></a>nextcloud</h2><h2 id="owncloud"><a href="#owncloud" class="headerlink" title="owncloud"></a>owncloud</h2>]]></content>
+    <title>无限容量相册</title>
+    <url>/2021-06-28/cloud-fullall/</url>
+    <content><![CDATA[<p>基于：pixel&#x2F;pixel xl（即pixel一代），1微力同步，服务器一台（非必须，中继使用）</p>
+]]></content>
       <categories>
         <category>杂物箱</category>
       </categories>
@@ -125,10 +123,12 @@
       </tags>
   </entry>
   <entry>
-    <title>无限容量相册</title>
-    <url>/2021-06-28/cloud-fullall/</url>
-    <content><![CDATA[<p>基于：pixel&#x2F;pixel xl（即pixel一代），1微力同步，服务器一台（非必须，中继使用）</p>
-]]></content>
+    <title>网盘搭建</title>
+    <url>/2021-01-07/cloud-make/</url>
+    <content><![CDATA[<h1 id="NAS"><a href="#NAS" class="headerlink" title="NAS"></a>NAS</h1><p>demo：null<br>优势：没有审查，自用隐私安全性最高</p>
+<h2 id="群晖"><a href="#群晖" class="headerlink" title="群晖"></a>群晖</h2><h1 id="公共网盘-api-可视化"><a href="#公共网盘-api-可视化" class="headerlink" title="公共网盘-api-可视化"></a>公共网盘-api-可视化</h1><p>demo：null<br>优势：免费<br>缺点：审查机制由云存储服务商判断、隐私性最低、会河蟹某些内容</p>
+<h2 id="Onedrive-Oneindex"><a href="#Onedrive-Oneindex" class="headerlink" title="Onedrive-Oneindex"></a>Onedrive-Oneindex</h2><h2 id="和彩云-x2F-天翼云"><a href="#和彩云-x2F-天翼云" class="headerlink" title="和彩云&#x2F;天翼云"></a>和彩云&#x2F;天翼云</h2><h1 id="服务器-对象存储"><a href="#服务器-对象存储" class="headerlink" title="服务器-对象存储"></a>服务器-对象存储</h1><p>demo：null<br>优势：没有审查,可靠性最高<br>缺点：付费服务</p>
+<h2 id="seafile"><a href="#seafile" class="headerlink" title="seafile"></a>seafile</h2><h2 id="nextcloud"><a href="#nextcloud" class="headerlink" title="nextcloud"></a>nextcloud</h2><h2 id="owncloud"><a href="#owncloud" class="headerlink" title="owncloud"></a>owncloud</h2>]]></content>
       <categories>
         <category>杂物箱</category>
       </categories>
@@ -148,6 +148,27 @@
         <tag>Domain</tag>
         <tag>DNS</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>C#基础</title>
+    <url>/2021-01-05/Csharp-base/</url>
+    <content><![CDATA[<h1 id="C-语言及特点"><a href="#C-语言及特点" class="headerlink" title="C#语言及特点"></a>C#语言及特点</h1><ul>
+<li>C#是微软公司发布的一种<strong>面向对象</strong>的、运行于.NET Framework 和 .NET Core (完全开源，跨平台)之上的高级程序设计语言。</li>
+<li>C#是一种<strong>安全的、稳定的、简单的、优雅的</strong>，由C和C++衍生出来的面向对象的编程语言。它在继承C和C++的强大功能的同时去掉了一些它们的复杂特性。</li>
+<li>C#是<strong>面向对象</strong>的编程语言<span id="more"></span></li>
+</ul>
+<h1 id="认识-NET-Framework-x2F-NET-Core"><a href="#认识-NET-Framework-x2F-NET-Core" class="headerlink" title="认识 .NET Framework &#x2F; .NET Core"></a>认识 .NET Framework &#x2F; .NET Core</h1><pre class="mermaid">graph LR
+A[.NET平台] -->B(C#语言)
+A[.NET平台] -->C(Visual Basic语言)
+A[.NET平台] -->D(C++语言)
+A[.NET平台] -->E(F#语言)
+A[.NET平台] -->F(...语言)</pre>
+<h1 id="Visual-Studio-安装使用"><a href="#Visual-Studio-安装使用" class="headerlink" title="Visual Studio 安装使用"></a>Visual Studio 安装使用</h1><p><a href="https://visualstudio.microsoft.com/zh-hans/downloads/">https://visualstudio.microsoft.com/zh-hans/downloads/</a></p>
+<h1 id="创建第一个程序"><a href="#创建第一个程序" class="headerlink" title="创建第一个程序"></a>创建第一个程序</h1><p>Windows 窗体应用（.net framwork）</p>
+<figure class="highlight c#"><table><tr><td class="code"><pre><span class="line"><span class="keyword">namespace</span> <span class="title">WindowsFormsApp1</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">partial</span> <span class="keyword">class</span> <span class="title">Form1</span> : <span class="title">Form</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="title">Form1</span>()</span></span><br><span class="line">        &#123;</span><br><span class="line">            InitializeComponent();</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">Label1_Click</span>(<span class="params"><span class="built_in">object</span> sender, EventArgs e</span>)</span></span><br><span class="line">        &#123;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>C#</category>
+      </categories>
   </entry>
   <entry>
     <title>英语词性</title>
@@ -210,27 +231,6 @@
       </categories>
   </entry>
   <entry>
-    <title>C#基础</title>
-    <url>/2021-01-05/Csharp-base/</url>
-    <content><![CDATA[<h1 id="C-语言及特点"><a href="#C-语言及特点" class="headerlink" title="C#语言及特点"></a>C#语言及特点</h1><ul>
-<li>C#是微软公司发布的一种<strong>面向对象</strong>的、运行于.NET Framework 和 .NET Core (完全开源，跨平台)之上的高级程序设计语言。</li>
-<li>C#是一种<strong>安全的、稳定的、简单的、优雅的</strong>，由C和C++衍生出来的面向对象的编程语言。它在继承C和C++的强大功能的同时去掉了一些它们的复杂特性。</li>
-<li>C#是<strong>面向对象</strong>的编程语言<span id="more"></span></li>
-</ul>
-<h1 id="认识-NET-Framework-x2F-NET-Core"><a href="#认识-NET-Framework-x2F-NET-Core" class="headerlink" title="认识 .NET Framework &#x2F; .NET Core"></a>认识 .NET Framework &#x2F; .NET Core</h1><pre class="mermaid">graph LR
-A[.NET平台] -->B(C#语言)
-A[.NET平台] -->C(Visual Basic语言)
-A[.NET平台] -->D(C++语言)
-A[.NET平台] -->E(F#语言)
-A[.NET平台] -->F(...语言)</pre>
-<h1 id="Visual-Studio-安装使用"><a href="#Visual-Studio-安装使用" class="headerlink" title="Visual Studio 安装使用"></a>Visual Studio 安装使用</h1><p><a href="https://visualstudio.microsoft.com/zh-hans/downloads/">https://visualstudio.microsoft.com/zh-hans/downloads/</a></p>
-<h1 id="创建第一个程序"><a href="#创建第一个程序" class="headerlink" title="创建第一个程序"></a>创建第一个程序</h1><p>Windows 窗体应用（.net framwork）</p>
-<figure class="highlight c#"><table><tr><td class="code"><pre><span class="line"><span class="keyword">namespace</span> <span class="title">WindowsFormsApp1</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">partial</span> <span class="keyword">class</span> <span class="title">Form1</span> : <span class="title">Form</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="title">Form1</span>()</span></span><br><span class="line">        &#123;</span><br><span class="line">            InitializeComponent();</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">Label1_Click</span>(<span class="params"><span class="built_in">object</span> sender, EventArgs e</span>)</span></span><br><span class="line">        &#123;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>C#</category>
-      </categories>
-  </entry>
-  <entry>
     <title>Kubernetes1.24内网部署</title>
     <url>/2022-07-27/kubernetes_1_24_inside_install/</url>
     <content><![CDATA[<h1 id="环境介绍"><a href="#环境介绍" class="headerlink" title="环境介绍"></a>环境介绍</h1><blockquote>
@@ -273,7 +273,7 @@ A[.NET平台] -->F(...语言)</pre>
 </blockquote>
 <figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># /CALICO_IPV4POOL_CIDR 进行查找，取消注释，将值改为pod-network-cidr的值</span></span><br><span class="line"><span class="comment"># The default IPv4 pool to create on startup if none exists. Pod IPs will be</span></span><br><span class="line"><span class="comment"># chosen from this range. Changing this value after installation will have</span></span><br><span class="line"><span class="comment"># no effect. This should fall within `--cluster-cidr`.</span></span><br><span class="line"> <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">CALICO_IPV4POOL_CIDR</span></span><br><span class="line">   <span class="attr">value:</span> <span class="string">&quot;10.244.0.0/16&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># ....</span></span><br><span class="line"><span class="comment"># /k8s,bgp 查找,同级新增如下</span></span><br><span class="line"> <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">CLUSTER_TYPE</span></span><br><span class="line">   <span class="attr">value:</span> <span class="string">&quot;k8s,bgp&quot;</span></span><br><span class="line"> <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">IP_AUTODETECTION_METHOD</span></span><br><span class="line">   <span class="attr">value:</span> <span class="string">&quot;interface=eth0&quot;</span></span><br></pre></td></tr></table></figure>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">kubectl apply -f calico.yaml</span><br><span class="line"></span><br><span class="line"><span class="comment"># 如果执行后没反应或者拉去calio镜像过慢，可以在master和node上手动拉取镜像</span></span><br><span class="line"><span class="comment"># crictl pull docker.io/calico/cni</span></span><br><span class="line"><span class="comment"># crictl pull docker.io/calico/node</span></span><br><span class="line">crictl pull docker.io/calico/cni:v3.23.3</span><br><span class="line">crictl pull docker.io/calico/node:v3.23.3</span><br><span class="line"></span><br><span class="line"><span class="comment"># 检查node和containerd运行状态</span></span><br><span class="line">kubectl get node -o wide</span><br><span class="line"></span><br><span class="line">crictl ps -a</span><br></pre></td></tr></table></figure>
-<p><img src="https://raw.githubusercontent.com/newreport/img/main/20220807213433.png"></p>
+<p><img src="http://42.193.14.174:31001/images/haruki/blog/cn/871EFB1C13E616DBFBEC9E43A273852E08CA7EF3090D79DBE50647C24447E91D.png"></p>
 <h1 id="配置NFS共享存储"><a href="#配置NFS共享存储" class="headerlink" title="配置NFS共享存储"></a>配置NFS共享存储</h1><blockquote>
 <p>由于ceph资源消耗太大，服务器数量和性能都不够，暂时只能用NFS，之后大概会在自己电脑上开虚拟机试着搭下ceph</p>
 </blockquote>
@@ -337,11 +337,6 @@ A[.NET平台] -->F(...语言)</pre>
       <tags>
         <tag>CloudComputing</tag>
       </tags>
-  </entry>
-  <entry>
-    <title></title>
-    <url>/2022-07-03/undefined/</url>
-    <content><![CDATA[]]></content>
   </entry>
   <entry>
     <title>Linux的简介和安装</title>
@@ -592,6 +587,11 @@ A[.NET平台] -->F(...语言)</pre>
         <category>linux</category>
         <category>rhel8</category>
       </categories>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/2022-07-03/undefined/</url>
+    <content><![CDATA[]]></content>
   </entry>
   <entry>
     <title>了解文件系统的和基本操作</title>
@@ -1084,6 +1084,18 @@ A[.NET平台] -->F(...语言)</pre>
       </categories>
   </entry>
   <entry>
+    <title>Docker的安装及使用</title>
+    <url>/2022-08-02/docker_install_using/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>容器</category>
+        <category>Docker</category>
+      </categories>
+      <tags>
+        <tag>CloudComputing</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>变量和简单数据类型</title>
     <url>/2021-06-22/Variables-and-simple-data-types/</url>
     <content><![CDATA[<h1 id="运行hello-world"><a href="#运行hello-world" class="headerlink" title="运行hello world"></a>运行hello world</h1><p>vim 1.py</p>
@@ -1176,18 +1188,6 @@ A[.NET平台] -->F(...语言)</pre>
         <category>python</category>
         <category>python3</category>
       </categories>
-  </entry>
-  <entry>
-    <title>Docker的安装及使用</title>
-    <url>/2022-08-02/docker_install_using/</url>
-    <content><![CDATA[]]></content>
-      <categories>
-        <category>容器</category>
-        <category>Docker</category>
-      </categories>
-      <tags>
-        <tag>CloudComputing</tag>
-      </tags>
   </entry>
   <entry>
     <title>Podman的安装及使用</title>
