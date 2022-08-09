@@ -356,13 +356,6 @@
   </url>
   
   <url>
-    <loc>https://newreport.top/categories/linux/</loc>
-    <lastmod>2022-08-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://newreport.top/categories/python/</loc>
     <lastmod>2022-08-09</lastmod>
     <changefreq>weekly</changefreq>
@@ -377,7 +370,7 @@
   </url>
   
   <url>
-    <loc>https://newreport.top/categories/linux/rhel8/</loc>
+    <loc>https://newreport.top/categories/linux/</loc>
     <lastmod>2022-08-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -399,6 +392,13 @@
   
   <url>
     <loc>https://newreport.top/categories/%E5%AE%B9%E5%99%A8/Podman/</loc>
+    <lastmod>2022-08-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://newreport.top/categories/linux/rhel8/</loc>
     <lastmod>2022-08-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
