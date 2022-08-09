@@ -1239,7 +1239,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #50421b;
+  background: #5ec2ff;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2752,7 +2752,7 @@ ul.breadcrumb li + li:last-child {
   }
 }
 body {
-  background: url("https://raw.githubusercontent.com/newreport/img/main/bgm.jpg");
+  background: url("https://raw.githubusercontent.com/newreport/img/main/haruki-bgm.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: 50% 50%;
