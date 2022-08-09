@@ -1,7 +1,7 @@
+https://newreport.top/2021-01-06/img-make/
 https://newreport.top/2022-07-27/kubernetes_1_24_inside_install/
 https://newreport.top/2021-01-01/Linux-introduction-and-installation/
 https://newreport.top/2022-08-03/kubernetes_1_24_public_install/
-https://newreport.top/2021-01-06/img-make/
 https://newreport.top/2021-01-05/make-domainname/
 https://newreport.top/2022-08-08/using-cloudflare/
 https://newreport.top/2021-01-04/Understand-the-file-system-and-basic-operations/
@@ -28,11 +28,11 @@ https://newreport.top/categories/index.html
 https://newreport.top/404.html
 https://newreport.top/
 https://newreport.top/tags/tools/
-https://newreport.top/tags/%E4%BA%91%E6%9C%8D%E5%8A%A1/
 https://newreport.top/tags/%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8/
 https://newreport.top/tags/%E5%BE%85%E8%A1%A5%E5%85%85/
 https://newreport.top/tags/Domain/
 https://newreport.top/tags/DNS/
+https://newreport.top/tags/%E4%BA%91%E6%9C%8D%E5%8A%A1/
 https://newreport.top/tags/CloudComputing/
 https://newreport.top/tags/etcd/
 https://newreport.top/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/
@@ -40,10 +40,10 @@ https://newreport.top/categories/%E6%9D%82%E7%89%A9%E7%AE%B1/
 https://newreport.top/categories/C/
 https://newreport.top/categories/English/
 https://newreport.top/categories/Kubernetes/
+https://newreport.top/categories/linux/
 https://newreport.top/categories/python/
 https://newreport.top/categories/%E5%AE%B9%E5%99%A8/
-https://newreport.top/categories/linux/
+https://newreport.top/categories/linux/rhel8/
 https://newreport.top/categories/python/python3/
 https://newreport.top/categories/%E5%AE%B9%E5%99%A8/Docker/
 https://newreport.top/categories/%E5%AE%B9%E5%99%A8/Podman/
-https://newreport.top/categories/linux/rhel8/

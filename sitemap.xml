@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://newreport.top/2021-01-06/img-make/</loc>
+    
+    <lastmod>2022-08-09</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://newreport.top/2022-07-27/kubernetes_1_24_inside_install/</loc>
     
     <lastmod>2022-08-09</lastmod>
@@ -21,15 +30,6 @@
   
   <url>
     <loc>https://newreport.top/2022-08-03/kubernetes_1_24_public_install/</loc>
-    
-    <lastmod>2022-08-09</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://newreport.top/2021-01-06/img-make/</loc>
     
     <lastmod>2022-08-09</lastmod>
     
@@ -270,13 +270,6 @@
   </url>
   
   <url>
-    <loc>https://newreport.top/tags/%E4%BA%91%E6%9C%8D%E5%8A%A1/</loc>
-    <lastmod>2022-08-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://newreport.top/tags/%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8/</loc>
     <lastmod>2022-08-09</lastmod>
     <changefreq>weekly</changefreq>
@@ -299,6 +292,13 @@
   
   <url>
     <loc>https://newreport.top/tags/DNS/</loc>
+    <lastmod>2022-08-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://newreport.top/tags/%E4%BA%91%E6%9C%8D%E5%8A%A1/</loc>
     <lastmod>2022-08-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -356,6 +356,13 @@
   </url>
   
   <url>
+    <loc>https://newreport.top/categories/linux/</loc>
+    <lastmod>2022-08-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://newreport.top/categories/python/</loc>
     <lastmod>2022-08-09</lastmod>
     <changefreq>weekly</changefreq>
@@ -370,7 +377,7 @@
   </url>
   
   <url>
-    <loc>https://newreport.top/categories/linux/</loc>
+    <loc>https://newreport.top/categories/linux/rhel8/</loc>
     <lastmod>2022-08-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -392,13 +399,6 @@
   
   <url>
     <loc>https://newreport.top/categories/%E5%AE%B9%E5%99%A8/Podman/</loc>
-    <lastmod>2022-08-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://newreport.top/categories/linux/rhel8/</loc>
     <lastmod>2022-08-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
