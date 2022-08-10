@@ -11,7 +11,7 @@
   </url>
   
   <url>
-    <loc>https://newreport.top/2022-07-27/kubernetes_1_24_inside_install/</loc>
+    <loc>https://newreport.top/2021-01-01/Linux-introduction-and-installation/</loc>
     
     <lastmod>2022-08-10</lastmod>
     
@@ -20,7 +20,7 @@
   </url>
   
   <url>
-    <loc>https://newreport.top/2021-01-01/Linux-introduction-and-installation/</loc>
+    <loc>https://newreport.top/2022-07-27/kubernetes_1_24_inside_install/</loc>
     
     <lastmod>2022-08-10</lastmod>
     
@@ -284,13 +284,6 @@
   </url>
   
   <url>
-    <loc>https://newreport.top/tags/%E5%BE%85%E8%A1%A5%E5%85%85/</loc>
-    <lastmod>2022-08-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://newreport.top/tags/Domain/</loc>
     <lastmod>2022-08-10</lastmod>
     <changefreq>weekly</changefreq>
@@ -299,6 +292,13 @@
   
   <url>
     <loc>https://newreport.top/tags/DNS/</loc>
+    <lastmod>2022-08-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://newreport.top/tags/%E5%BE%85%E8%A1%A5%E5%85%85/</loc>
     <lastmod>2022-08-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -335,14 +335,14 @@
   </url>
   
   <url>
-    <loc>https://newreport.top/categories/C/</loc>
+    <loc>https://newreport.top/categories/English/</loc>
     <lastmod>2022-08-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://newreport.top/categories/English/</loc>
+    <loc>https://newreport.top/categories/C/</loc>
     <lastmod>2022-08-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
