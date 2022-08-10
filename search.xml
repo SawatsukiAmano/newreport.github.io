@@ -1,6 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>hexo-next7食用方法</title>
+    <url>/2020-12-21/use-hexo-next7/</url>
+    <content><![CDATA[<h1 id="博客启用（前略环境搭建）"><a href="#博客启用（前略环境搭建）" class="headerlink" title="博客启用（前略环境搭建）"></a>博客启用（前略环境搭建）</h1><p>新建文件夹，之后在其中执行：hexo init。<br>hexo-next7官方git：<a href="https://github.com/theme-next/hexo-theme-next">https://github.com/theme-next/hexo-theme-next</a><br>hexo-next8官方git：<a href="https://github.com/next-theme/hexo-theme-next">https://github.com/next-theme/hexo-theme-next</a><br>git配置：npm install –save hexo-deployer-git；多用户指定其一：githubgit config –global user.email “邮箱”和git config –global user.name “用户名”</p>
+<span id="more"></span>
+
+
+<h1 id="可能会用到的工具"><a href="#可能会用到的工具" class="headerlink" title="可能会用到的工具"></a>可能会用到的工具</h1><p>RSS订阅：npm install hexo-generator-feed；<br>参考：<a href="https://blog.csdn.net/qq_36537546/article/details/90730068">https://blog.csdn.net/qq_36537546/article/details/90730068</a>  </p>
+<p>站点地图：npm install hexo-generator-sitemap –save；<br>参考：<a href="https://www.cnblogs.com/brady-wang/p/8493181.html">https://www.cnblogs.com/brady-wang/p/8493181.html</a>  </p>
+<p>next7的搜索功能：npm install hexo-generator-searchdb –save；<br>参考：<a href="https://blog.csdn.net/qq_41086511/article/details/103537522">https://blog.csdn.net/qq_41086511/article/details/103537522</a>  </p>
+<p>背景图片及透明度调整：\themes\next-7.7.2\source\css_common\components\pages\pages.styl，能找到此页面样式文件的均可。<br>参考：<a href="https://blog.csdn.net/Louis_li51/article/details/105227430%EF%BC%9B">https://blog.csdn.net/Louis_li51/article/details/105227430；</a><br>注：带搜索框后不能开启菜单栏和搜索栏的透明度，否则会透明度过高看不清，但可以给头像的框加透明度。   </p>
+<p>next7单独友链参考：<a href="https://blog.csdn.net/Aoman_Hao/article/details/103758829">https://blog.csdn.net/Aoman_Hao/article/details/103758829</a>  </p>
+<p>文章置顶：node_modules&#x2F;hexo-generator-index&#x2F;lib&#x2F;generator；<br>参考：<a href="https://www.jianshu.com/p/42a4efcdf8d7">https://www.jianshu.com/p/42a4efcdf8d7</a>  </p>
+<p>图片压缩工具：<a href="https://tinypng.com/">https://tinypng.com/</a> 或者<a href="https://docsmall.com/image-compress">https://docsmall.com/image-compress</a>  </p>
+<p>图片批量重命名工具（可为图片hash值）：<a href="https://renamer.en.softonic.com/">ReNamer</a>  </p>
+]]></content>
+      <categories>
+        <category>博客搭建</category>
+      </categories>
+      <tags>
+        <tag>tools</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>域名的使用</title>
     <url>/2021-01-05/make-domainname/</url>
     <content><![CDATA[<h1 id="域名服务商"><a href="#域名服务商" class="headerlink" title="域名服务商"></a>域名服务商</h1><p>个人站除开com、net这两个域名，其他推荐选择国外服务商进行注册。以下仅列举一些我接触过的，还有很多其他的服务商就不一一列举了  </p>
@@ -44,29 +67,6 @@
       </categories>
   </entry>
   <entry>
-    <title>hexo-next7食用方法</title>
-    <url>/2020-12-21/use-hexo-next7/</url>
-    <content><![CDATA[<h1 id="博客启用（前略环境搭建）"><a href="#博客启用（前略环境搭建）" class="headerlink" title="博客启用（前略环境搭建）"></a>博客启用（前略环境搭建）</h1><p>新建文件夹，之后在其中执行：hexo init。<br>hexo-next7官方git：<a href="https://github.com/theme-next/hexo-theme-next">https://github.com/theme-next/hexo-theme-next</a><br>hexo-next8官方git：<a href="https://github.com/next-theme/hexo-theme-next">https://github.com/next-theme/hexo-theme-next</a><br>git配置：npm install –save hexo-deployer-git；多用户指定其一：githubgit config –global user.email “邮箱”和git config –global user.name “用户名”</p>
-<span id="more"></span>
-
-
-<h1 id="可能会用到的工具"><a href="#可能会用到的工具" class="headerlink" title="可能会用到的工具"></a>可能会用到的工具</h1><p>RSS订阅：npm install hexo-generator-feed；<br>参考：<a href="https://blog.csdn.net/qq_36537546/article/details/90730068">https://blog.csdn.net/qq_36537546/article/details/90730068</a>  </p>
-<p>站点地图：npm install hexo-generator-sitemap –save；<br>参考：<a href="https://www.cnblogs.com/brady-wang/p/8493181.html">https://www.cnblogs.com/brady-wang/p/8493181.html</a>  </p>
-<p>next7的搜索功能：npm install hexo-generator-searchdb –save；<br>参考：<a href="https://blog.csdn.net/qq_41086511/article/details/103537522">https://blog.csdn.net/qq_41086511/article/details/103537522</a>  </p>
-<p>背景图片及透明度调整：\themes\next-7.7.2\source\css_common\components\pages\pages.styl，能找到此页面样式文件的均可。<br>参考：<a href="https://blog.csdn.net/Louis_li51/article/details/105227430%EF%BC%9B">https://blog.csdn.net/Louis_li51/article/details/105227430；</a><br>注：带搜索框后不能开启菜单栏和搜索栏的透明度，否则会透明度过高看不清，但可以给头像的框加透明度。   </p>
-<p>next7单独友链参考：<a href="https://blog.csdn.net/Aoman_Hao/article/details/103758829">https://blog.csdn.net/Aoman_Hao/article/details/103758829</a>  </p>
-<p>文章置顶：node_modules&#x2F;hexo-generator-index&#x2F;lib&#x2F;generator；<br>参考：<a href="https://www.jianshu.com/p/42a4efcdf8d7">https://www.jianshu.com/p/42a4efcdf8d7</a>  </p>
-<p>图片压缩工具：<a href="https://tinypng.com/">https://tinypng.com/</a> 或者<a href="https://docsmall.com/image-compress">https://docsmall.com/image-compress</a>  </p>
-<p>图片批量重命名工具（可为图片hash值）：<a href="https://renamer.en.softonic.com/">ReNamer</a>  </p>
-]]></content>
-      <categories>
-        <category>博客搭建</category>
-      </categories>
-      <tags>
-        <tag>tools</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>云函数</title>
     <url>/2021-01-05/function-cloud/</url>
     <content><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p><a href="https://developers.weixin.qq.com/miniprogram/dev/wxcloud/guide/functions.html">云函数简介</a><br>长不看结论：总之就是跑脚本，也可以跑微信的推送等事件。目前我只用它在跑签到脚本。</p>
@@ -101,30 +101,6 @@
       </tags>
   </entry>
   <entry>
-    <title>图床&quot;永久链&quot;</title>
-    <url>/2021-01-06/img-make/</url>
-    <content><![CDATA[<p>需要准备对象存储及域名，理论”永久链”图床，可在各云服务商或个人服务器间迁移数据<br>如果你是国外的域名，markdown是国内使用，需要绑定国内第三方dns，这里以<a href="https://www.namesilo.com/">namesilo</a>域名绑定<a href="https://www.dnspod.cn/">dnspod</a>为例。</p>
-<span id="more"></span>  
-
-<h1 id="namesilo配置-国内备案域名可跳过此步骤"><a href="#namesilo配置-国内备案域名可跳过此步骤" class="headerlink" title="namesilo配置(国内备案域名可跳过此步骤)"></a>namesilo配置(国内备案域名可跳过此步骤)</h1><p><img src="https://42.193.14.174:31005/images/haruki/blog/cn/281BCA8978E663D1AA05423137C07932E35E89FDDDCA7A23445455A7723F219C.png"></p>
-<p>进入域名管理页面<br>将原有三个dns删除替换为以下内容，提交</p>
-<blockquote>
-<p>f1g1ns1.dnspod.net<br>  f1g1ns2.dnspod.net</p>
-</blockquote>
-<p>返回域名管理页面，点击域名所在行右侧蓝色地球，进入域名解析页面，删除所有的解析内容即可。</p>
-<h1 id="dnspod配置"><a href="#dnspod配置" class="headerlink" title="dnspod配置"></a>dnspod配置</h1><p>进入dnspod管理页面，添加你的域名，点击dns刷新<br>创建公有读私有写存储桶，并复制存储桶域名<br><img src="https://42.193.14.174:31005/images/haruki/blog/cn/5C3AE90E330110085424836989AC2F904D961280A441B32B909654094DCFE2B2.png" alt="添加自定义源站域名"><br>到dnspod解析页面，添加CNAME解析<br>需要注意的是，namesilo的dns可能需要等几十分钟才会刷新，在此之前访问域名可能是到达不了存储桶的<br><img src="https://42.193.14.174:31005/images/haruki/blog/cn/E315A71C14F3F94218BC781296F5F37A1B1996BCEF1D797ECA20A64597AFD18F.png"></p>
-<h1 id="ssl证书以及防盗链设置"><a href="#ssl证书以及防盗链设置" class="headerlink" title="ssl证书以及防盗链设置"></a>ssl证书以及防盗链设置</h1><p>在dnspod或者腾讯云域名注册界面申请免费ssl证书并下载，解压。在存储桶域名绑定页面进行证书绑定，用记事本打开Nginx里的文本并复制到对应区域<br><img src="https://42.193.14.174:31005/images/haruki/blog/cn/6B12C37D45ECE58C98F26DA67CDFC60F73ADB472ECBD37D20EFC839F64BD4A39.png"></p>
-<p>测试一下，不挂t的情况下自定义域名可以访问图片，以后的迁移只需copy文件，域名重新对应一下CNAME即可，markdown文章的图片地址不需要变动。<br><img src="https://42.193.14.174:31005/images/haruki/blog/cn/4DEED59F8DC599B65736DFA4B81C4DB1C4028557408CFBA90B1691DDDE70D6EB.png"></p>
-<p>存储桶防盗链设置如下，配置完防盗链之后本地预览和网页地址栏输入是访问不了对象存储的，只有白名单内的ip才能访问<br><img src="https://42.193.14.174:31005/images/haruki/blog/cn/358EF065F5956500257330DDE1493957881F0BD1C0294CB5E6115CDF7805CE40.png"></p>
-]]></content>
-      <categories>
-        <category>博客搭建</category>
-      </categories>
-      <tags>
-        <tag>对象存储</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>无限容量相册</title>
     <url>/2021-06-28/cloud-fullall/</url>
     <content><![CDATA[<p>基于：pixel&#x2F;pixel xl（即pixel一代），1微力同步，服务器一台（非必须，中继使用）</p>
@@ -135,6 +111,30 @@
       <tags>
         <tag>对象存储</tag>
         <tag>待补充</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>图床&quot;永久链&quot;</title>
+    <url>/2021-01-06/img-make/</url>
+    <content><![CDATA[<p>需要准备对象存储及域名，理论”永久链”图床，可在各云服务商或个人服务器间迁移数据<br>如果你是国外的域名，markdown是国内使用，需要绑定国内第三方dns，这里以<a href="https://www.namesilo.com/">namesilo</a>域名绑定<a href="https://www.dnspod.cn/">dnspod</a>为例。</p>
+<span id="more"></span>  
+
+<h1 id="namesilo配置-国内备案域名可跳过此步骤"><a href="#namesilo配置-国内备案域名可跳过此步骤" class="headerlink" title="namesilo配置(国内备案域名可跳过此步骤)"></a>namesilo配置(国内备案域名可跳过此步骤)</h1><p><img src="http://42.193.14.174:31001/images/haruki/blog/cn/281BCA8978E663D1AA05423137C07932E35E89FDDDCA7A23445455A7723F219C.png"></p>
+<p>进入域名管理页面<br>将原有三个dns删除替换为以下内容，提交</p>
+<blockquote>
+<p>f1g1ns1.dnspod.net<br>  f1g1ns2.dnspod.net</p>
+</blockquote>
+<p>返回域名管理页面，点击域名所在行右侧蓝色地球，进入域名解析页面，删除所有的解析内容即可。</p>
+<h1 id="dnspod配置"><a href="#dnspod配置" class="headerlink" title="dnspod配置"></a>dnspod配置</h1><p>进入dnspod管理页面，添加你的域名，点击dns刷新<br>创建公有读私有写存储桶，并复制存储桶域名<br><img src="http://42.193.14.174:31001/images/haruki/blog/cn/5C3AE90E330110085424836989AC2F904D961280A441B32B909654094DCFE2B2.png" alt="添加自定义源站域名"><br>到dnspod解析页面，添加CNAME解析<br>需要注意的是，namesilo的dns可能需要等几十分钟才会刷新，在此之前访问域名可能是到达不了存储桶的<br><img src="http://42.193.14.174:31001/images/haruki/blog/cn/E315A71C14F3F94218BC781296F5F37A1B1996BCEF1D797ECA20A64597AFD18F.png"></p>
+<h1 id="ssl证书以及防盗链设置"><a href="#ssl证书以及防盗链设置" class="headerlink" title="ssl证书以及防盗链设置"></a>ssl证书以及防盗链设置</h1><p>在dnspod或者腾讯云域名注册界面申请免费ssl证书并下载，解压。在存储桶域名绑定页面进行证书绑定，用记事本打开Nginx里的文本并复制到对应区域<br><img src="http://42.193.14.174:31001/images/haruki/blog/cn/6B12C37D45ECE58C98F26DA67CDFC60F73ADB472ECBD37D20EFC839F64BD4A39.png"></p>
+<p>测试一下，不挂t的情况下自定义域名可以访问图片，以后的迁移只需copy文件，域名重新对应一下CNAME即可，markdown文章的图片地址不需要变动。<br><img src="http://42.193.14.174:31001/images/haruki/blog/cn/4DEED59F8DC599B65736DFA4B81C4DB1C4028557408CFBA90B1691DDDE70D6EB.png"></p>
+<p>存储桶防盗链设置如下，配置完防盗链之后本地预览和网页地址栏输入是访问不了对象存储的，只有白名单内的ip才能访问<br><img src="http://42.193.14.174:31001/images/haruki/blog/cn/358EF065F5956500257330DDE1493957881F0BD1C0294CB5E6115CDF7805CE40.png"></p>
+]]></content>
+      <categories>
+        <category>博客搭建</category>
+      </categories>
+      <tags>
+        <tag>对象存储</tag>
       </tags>
   </entry>
   <entry>
@@ -169,114 +169,6 @@ A[.NET平台] -->F(...语言)</pre>
       <categories>
         <category>C#</category>
       </categories>
-  </entry>
-  <entry>
-    <title>Kubernetes1.24内网部署</title>
-    <url>/2022-07-27/kubernetes_1_24_inside_install/</url>
-    <content><![CDATA[<h1 id="环境介绍"><a href="#环境介绍" class="headerlink" title="环境介绍"></a>环境介绍</h1><blockquote>
-<p>master：成都区 2核4G    10.0.0.17<br>cd001：成都区 2核4G     10.0.0.11<br>主机：两台腾讯云轻量云，系统为CentOS Stream8，轻量云不支持EIP故不能公网搭K8s<br>Kubernetes版本：V1.24.3（截至2022-08-02，当前k8s最新版本为 1.24.3）</p>
-</blockquote>
-<span id="more"></span>  
-<h1 id="Master节点安装"><a href="#Master节点安装" class="headerlink" title="Master节点安装"></a>Master节点安装</h1><h2 id="主机配置"><a href="#主机配置" class="headerlink" title="主机配置"></a>主机配置</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"> <span class="comment"># 设置主机名</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;master&quot;</span> &gt; /etc/hostname</span><br><span class="line">yum -y tc</span><br><span class="line">yum -y update </span><br><span class="line"></span><br><span class="line"><span class="comment"># 重启使master主机名生效</span></span><br><span class="line">reboot </span><br><span class="line"></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;1&quot;</span> &gt;&gt; /proc/sys/net/ipv4/ip_forward <span class="comment"># 开启ip转发</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 设置hosts 注意，每次重启后该文件会恢复，需要重新添加</span></span><br><span class="line"><span class="built_in">cat</span> &gt;&gt; /etc/hosts &lt;&lt;<span class="string">EOF</span></span><br><span class="line"><span class="string">10.0.0.17 master</span></span><br><span class="line"><span class="string">10.0.0.11 cd001</span></span><br><span class="line"><span class="string">EOF</span></span><br><span class="line"></span><br><span class="line">systemctl restart NetworkManager.service</span><br></pre></td></tr></table></figure>
-
-<h2 id="配置containerd"><a href="#配置containerd" class="headerlink" title="配置containerd"></a>配置containerd</h2><blockquote>
-<p>将containerd作为k8s的容器引擎</p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 阿里镜像源</span></span><br><span class="line">wget -O /etc/yum.repos.d/docker-ce.repo https://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo</span><br><span class="line"></span><br><span class="line"><span class="built_in">cat</span> &lt;&lt; <span class="string">EOF &gt; /etc/modules-load.d/containerd.conf</span></span><br><span class="line"><span class="string">overlay</span></span><br><span class="line"><span class="string">br_netfilter</span></span><br><span class="line"><span class="string">EOF</span></span><br><span class="line"></span><br><span class="line">modprobe overlay</span><br><span class="line">modprobe br_netfilter</span><br><span class="line"></span><br><span class="line">yum install -y containerd.io --allowerasing</span><br><span class="line"></span><br><span class="line"><span class="built_in">mkdir</span>  -p /etc/containerd </span><br><span class="line"><span class="built_in">rm</span> -rf /etc/containerd/config.toml</span><br><span class="line"></span><br><span class="line">containerd config default &gt; /etc/containerd/config.toml</span><br><span class="line"></span><br><span class="line">sed -i <span class="string">&#x27;s#sandbox_image = &quot;k8s.gcr.io/pause:#sandbox_image = &quot;registry.aliyuncs.com/google_containers/pause:#g&#x27;</span> /etc/containerd/config.toml</span><br><span class="line"><span class="comment"># sed -i &#x27;s/systemd_cgroup = false/systemd_cgroup = true/g&#x27; /etc/containerd/config.toml</span></span><br><span class="line">systemctl restart containerd</span><br><span class="line"></span><br><span class="line">systemctl <span class="built_in">enable</span> containerd</span><br><span class="line">systemctl start containerd</span><br></pre></td></tr></table></figure>
-<h2 id="runc命令行配置"><a href="#runc命令行配置" class="headerlink" title="runc命令行配置"></a>runc命令行配置</h2><blockquote>
-<p>检测runc、ctrcli、配置k8s源</p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ctr version</span><br><span class="line">runc -version </span><br><span class="line"></span><br><span class="line"><span class="built_in">cat</span> &lt;&lt;<span class="string">EOF &gt; /etc/yum.repos.d/kubernetes.repo</span></span><br><span class="line"><span class="string">[kubernetes]</span></span><br><span class="line"><span class="string">name=Kubernetes</span></span><br><span class="line"><span class="string">baseurl=https://mirrors.aliyun.com/kubernetes/yum/repos/kubernetes-el7-x86_64/</span></span><br><span class="line"><span class="string">enabled=1</span></span><br><span class="line"><span class="string">gpgcheck=0</span></span><br><span class="line"><span class="string">repo_gpgcheck=0</span></span><br><span class="line"><span class="string">gpgkey=https://mirrors.aliyun.com/kubernetes/yum/doc/yum-key.gpg https://mirrors.aliyun.com/kubernetes/yum/doc/rpm-package-key.gpg</span></span><br><span class="line"><span class="string">EOF</span></span><br><span class="line"></span><br><span class="line">yum clean all </span><br><span class="line">yum makecache</span><br><span class="line"><span class="comment"># k8s init时需要此应用进行网络测试</span></span><br><span class="line">yum install -y tc   </span><br></pre></td></tr></table></figure>
-<h2 id="k8s组件安装"><a href="#k8s组件安装" class="headerlink" title="k8s组件安装"></a>k8s组件安装</h2><blockquote>
-<p>安装配置k8s三件套并配置</p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">yum install -y kubectl kubelet kubeadm</span><br><span class="line"></span><br><span class="line"><span class="comment"># 兼容性处理 systemd</span></span><br><span class="line"><span class="built_in">echo</span>  <span class="string">&#x27;KUBELET_EXTRA_ARGS=&quot;--cgroup-driver=systemd&quot;&#x27;</span> &gt; /etc/sysconfig/kubelet</span><br><span class="line"></span><br><span class="line">systemctl <span class="built_in">enable</span> kubelet</span><br><span class="line">systemctl start kubelet</span><br><span class="line"></span><br><span class="line"><span class="comment"># 配置cricl 的endpoint</span></span><br><span class="line">crictl config runtime-endpoint unix:///run/containerd/containerd.sock</span><br><span class="line">crictl config image-endpoint unix:///run/containerd/containerd.sock</span><br><span class="line"></span><br><span class="line"><span class="comment"># 配置k8s镜像版本（不配置默认拉去latest 最新版）</span></span><br><span class="line"><span class="comment"># kubeadm config images list --kubernetes-version=v1.24.3</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="kubernetes初始化"><a href="#kubernetes初始化" class="headerlink" title="kubernetes初始化"></a>kubernetes初始化</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment"># 错误处理</span></span><br><span class="line"><span class="comment"># kubeadm reset</span></span><br><span class="line"><span class="comment"># rm -fr  ~/.kube/config</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># --apiserver-advertise-address和--control-plane-endpoint 分别为apiServer和控制面板的ip地址，内网部署使用master节点内网ip，公网部署使用master节点公网ip</span></span><br><span class="line">kubeadm init --pod-network-cidr=10.224.0.0/16 --apiserver-advertise-address=10.0.0.17 --control-plane-endpoint=10.0.0.17 --image-repository registry.aliyuncs.com/google_containers --v=5</span><br><span class="line"></span><br><span class="line"><span class="built_in">mkdir</span> -p <span class="variable">$HOME</span>/.kube</span><br><span class="line">sudo <span class="built_in">cp</span> -i /etc/kubernetes/admin.conf <span class="variable">$HOME</span>/.kube/config</span><br><span class="line">sudo <span class="built_in">chown</span> $(<span class="built_in">id</span> -u):$(<span class="built_in">id</span> -g) <span class="variable">$HOME</span>/.kube/config</span><br><span class="line"></span><br><span class="line"><span class="built_in">export</span> KUBECONFIG=/etc/kubernetes/admin.conf</span><br><span class="line"></span><br><span class="line"><span class="comment"># kubeadm join 10.0.0.17:6443 --token 9t45vv.40lt4exfxmirt7q2 --discovery-token-ca-cert-hash sha256:65cfa9a08c89e81357f3e394757ebb6c6c8000020c2e7411248cac2c4ef79c2e</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 可以看到master是NotReady状态</span></span><br><span class="line">kubectl get node -o wide</span><br><span class="line"></span><br><span class="line"><span class="comment"># 可以看到coredns是pending状态</span></span><br><span class="line">kubectl get pod -A -o wide</span><br><span class="line"></span><br><span class="line"><span class="comment"># 之后安装calico或者flannel网络插件后会恢复正常</span></span><br><span class="line"></span><br><span class="line">crictl images</span><br><span class="line"></span><br><span class="line">crictl ps -a</span><br></pre></td></tr></table></figure>
-<h1 id="Node节点安装"><a href="#Node节点安装" class="headerlink" title="Node节点安装"></a>Node节点安装</h1><h2 id="主机配置-1"><a href="#主机配置-1" class="headerlink" title="主机配置"></a>主机配置</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"> <span class="comment"># 设置主机名</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;cd001&quot;</span> &gt; /etc/hostname</span><br><span class="line"></span><br><span class="line">yum install -y tc</span><br><span class="line"></span><br><span class="line">yum -y update </span><br><span class="line"></span><br><span class="line"><span class="comment"># 重启使master主机名生效</span></span><br><span class="line">reboot </span><br><span class="line"></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;1&quot;</span> &gt;&gt; /proc/sys/net/ipv4/ip_forward <span class="comment"># 开启ip转发</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 设置hosts 注意，每次重启后该文件会恢复，需要重新添加</span></span><br><span class="line"><span class="built_in">cat</span> &gt;&gt; /etc/hosts &lt;&lt;<span class="string">EOF</span></span><br><span class="line"><span class="string">10.0.0.17 master</span></span><br><span class="line"><span class="string">10.0.0.11 cd001</span></span><br><span class="line"><span class="string">EOF</span></span><br><span class="line"></span><br><span class="line">systemctl restart NetworkManager.service</span><br></pre></td></tr></table></figure>
-
-<h2 id="配置containerd-1"><a href="#配置containerd-1" class="headerlink" title="配置containerd"></a>配置containerd</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 阿里镜像源</span></span><br><span class="line">wget -O /etc/yum.repos.d/docker-ce.repo https://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo</span><br><span class="line"></span><br><span class="line"><span class="built_in">cat</span> &lt;&lt; <span class="string">EOF &gt; /etc/modules-load.d/containerd.conf</span></span><br><span class="line"><span class="string">overlay</span></span><br><span class="line"><span class="string">br_netfilter</span></span><br><span class="line"><span class="string">EOF</span></span><br><span class="line"></span><br><span class="line">modprobe overlay</span><br><span class="line">modprobe br_netfilter</span><br><span class="line"></span><br><span class="line">yum install -y containerd.io --allowerasing</span><br><span class="line"></span><br><span class="line"><span class="built_in">mkdir</span>  -p /etc/containerd </span><br><span class="line"><span class="built_in">rm</span> -rf /etc/containerd/config.toml</span><br><span class="line"></span><br><span class="line">containerd config default &gt; /etc/containerd/config.toml</span><br><span class="line"></span><br><span class="line"> sed -i <span class="string">&#x27;s#sandbox_image = &quot;k8s.gcr.io/pause:#sandbox_image = &quot;registry.aliyuncs.com/google_containers/pause:#g&#x27;</span> /etc/containerd/config.toml</span><br><span class="line"><span class="comment"># sed -i &#x27;s/systemd_cgroup = false/systemd_cgroup = true/g&#x27; /etc/containerd/config.toml</span></span><br><span class="line">systemctl restart containerd</span><br><span class="line"></span><br><span class="line">systemctl <span class="built_in">enable</span> containerd</span><br><span class="line">systemctl start containerd</span><br></pre></td></tr></table></figure>
-<h2 id="runc命令行配置-1"><a href="#runc命令行配置-1" class="headerlink" title="runc命令行配置"></a>runc命令行配置</h2><blockquote>
-<p>检测runc 和ctrcli、配置k8s源</p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ctr version</span><br><span class="line">runc -version </span><br><span class="line"></span><br><span class="line"><span class="built_in">cat</span> &lt;&lt;<span class="string">EOF &gt; /etc/yum.repos.d/kubernetes.repo</span></span><br><span class="line"><span class="string">[kubernetes]</span></span><br><span class="line"><span class="string">name=Kubernetes</span></span><br><span class="line"><span class="string">baseurl=https://mirrors.aliyun.com/kubernetes/yum/repos/kubernetes-el7-x86_64/</span></span><br><span class="line"><span class="string">enabled=1</span></span><br><span class="line"><span class="string">gpgcheck=0</span></span><br><span class="line"><span class="string">repo_gpgcheck=0</span></span><br><span class="line"><span class="string">gpgkey=https://mirrors.aliyun.com/kubernetes/yum/doc/yum-key.gpg https://mirrors.aliyun.com/kubernetes/yum/doc/rpm-package-key.gpg</span></span><br><span class="line"><span class="string">EOF</span></span><br><span class="line"></span><br><span class="line">yum clean all </span><br><span class="line">yum makecache</span><br><span class="line"></span><br><span class="line">yum install -y tc</span><br></pre></td></tr></table></figure>
-<h2 id="k8s-node组件安装"><a href="#k8s-node组件安装" class="headerlink" title="k8s node组件安装"></a>k8s node组件安装</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">yum install -y  kubelet kubeadm</span><br><span class="line"></span><br><span class="line"><span class="comment"># 兼容性处理 systemd</span></span><br><span class="line"><span class="built_in">echo</span>  <span class="string">&#x27;KUBELET_EXTRA_ARGS=&quot;--cgroup-driver=systemd&quot;&#x27;</span> &gt; /etc/sysconfig/kubelet</span><br><span class="line"></span><br><span class="line">systemctl <span class="built_in">enable</span> kubelet</span><br><span class="line">systemctl start kubelet</span><br><span class="line"></span><br><span class="line"><span class="comment"># 配置cricl 的endpoint</span></span><br><span class="line">crictl config runtime-endpoint unix:///run/containerd/containerd.sock</span><br><span class="line">crictl config image-endpoint unix:///run/containerd/containerd.sock</span><br><span class="line"></span><br><span class="line"><span class="comment"># 配置k8s镜像版本（不配置默认拉去latest 最新版）</span></span><br><span class="line"><span class="comment"># kubeadm config images list --kubernetes-version=v1.24.3</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="加入到集群"><a href="#加入到集群" class="headerlink" title="加入到集群"></a>加入到集群</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment"># 错误处理</span></span><br><span class="line"><span class="comment"># kubeadm reset</span></span><br><span class="line"><span class="comment"># rm -fr  ~/.kube/config</span></span><br><span class="line"></span><br><span class="line">kubeadm <span class="built_in">join</span> 10.0.0.17:6443 --token 9t45vv.40lt4exfxmirt7q2 --discovery-token-ca-cert-hash sha256:65cfa9a08c89e81357f3e394757ebb6c6c8000020c2e7411248cac2c4ef79c2e</span><br></pre></td></tr></table></figure>
-
-<h1 id="配置K8s容器网络"><a href="#配置K8s容器网络" class="headerlink" title="配置K8s容器网络"></a>配置K8s容器网络</h1><blockquote>
-<p>master节点执行</p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">wget https://docs.projectcalico.org/manifests/calico.yaml --no-check-certificate</span><br><span class="line">vim calico.yaml</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>配置yaml文件,正确的虚拟ip和网卡</p>
-</blockquote>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># /CALICO_IPV4POOL_CIDR 进行查找，取消注释，将值改为pod-network-cidr的值</span></span><br><span class="line"><span class="comment"># The default IPv4 pool to create on startup if none exists. Pod IPs will be</span></span><br><span class="line"><span class="comment"># chosen from this range. Changing this value after installation will have</span></span><br><span class="line"><span class="comment"># no effect. This should fall within `--cluster-cidr`.</span></span><br><span class="line"> <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">CALICO_IPV4POOL_CIDR</span></span><br><span class="line">   <span class="attr">value:</span> <span class="string">&quot;10.244.0.0/16&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># ....</span></span><br><span class="line"><span class="comment"># /k8s,bgp 查找,同级新增如下</span></span><br><span class="line"> <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">CLUSTER_TYPE</span></span><br><span class="line">   <span class="attr">value:</span> <span class="string">&quot;k8s,bgp&quot;</span></span><br><span class="line"> <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">IP_AUTODETECTION_METHOD</span></span><br><span class="line">   <span class="attr">value:</span> <span class="string">&quot;interface=eth0&quot;</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">kubectl apply -f calico.yaml</span><br><span class="line"></span><br><span class="line"><span class="comment"># 如果执行后没反应或者拉去calio镜像过慢，可以在master和node上手动拉取镜像</span></span><br><span class="line"><span class="comment"># crictl pull docker.io/calico/cni</span></span><br><span class="line"><span class="comment"># crictl pull docker.io/calico/node</span></span><br><span class="line">crictl pull docker.io/calico/cni:v3.23.3</span><br><span class="line">crictl pull docker.io/calico/node:v3.23.3</span><br><span class="line"></span><br><span class="line"><span class="comment"># 检查node和containerd运行状态</span></span><br><span class="line">kubectl get node -o wide</span><br><span class="line"></span><br><span class="line">crictl ps -a</span><br></pre></td></tr></table></figure>
-<p><img src="https://42.193.14.174:31005/images/haruki/blog/cn/871EFB1C13E616DBFBEC9E43A273852E08CA7EF3090D79DBE50647C24447E91D.png"></p>
-<h1 id="配置NFS共享存储"><a href="#配置NFS共享存储" class="headerlink" title="配置NFS共享存储"></a>配置NFS共享存储</h1><blockquote>
-<p>由于ceph资源消耗太大，服务器数量和性能都不够，暂时只能用NFS，之后大概会在自己电脑上开虚拟机试着搭下ceph</p>
-</blockquote>
-<blockquote>
-<p>nfs server: cd001 10.0.0.11</p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">yum install -y nfs-utils rpcbind <span class="comment"># 安装nfs和rpc</span></span><br><span class="line">systemctl <span class="built_in">enable</span> nfs-server</span><br><span class="line">sudo systemctl <span class="built_in">enable</span> --now nfs-server</span><br><span class="line"><span class="built_in">mkdir</span> -p /srv/nfs</span><br><span class="line"></span><br><span class="line"><span class="comment"># 查看支持的nfs版本</span></span><br><span class="line">sudo <span class="built_in">cat</span> /proc/fs/nfsd/versions</span><br><span class="line">userdel -r nfsuser</span><br><span class="line"></span><br><span class="line"><span class="comment"># nfsserver端新增一个用户，客户端操作nfs目录时会使用该用户权限进行读写</span></span><br><span class="line">adduser -s /sbin/nologin -u 1010 -M nfsuser</span><br><span class="line"><span class="comment"># -u : 指定用户uid</span></span><br><span class="line"><span class="comment"># -M: --no-create-home  不创建用户home目录</span></span><br><span class="line"><span class="comment"># -s : --shell    指定用户的shell</span></span><br><span class="line">passwd nfsuser </span><br><span class="line"></span><br><span class="line"><span class="built_in">mkdir</span> -p /srv/nfs/</span><br><span class="line"><span class="built_in">chown</span> nfsuser.nfsuser /srv/nfs</span><br><span class="line"></span><br><span class="line"><span class="comment"># 所有k8s集群内ip都需要添加进去</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;/srv/nfs/ 10.0.0.17(rw,sync,no_root_squash,anonuid=1001,anongid=1001)&quot;</span> &gt; /etc/exports</span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;/srv/nfs/ 10.0.0.11(rw,sync,no_root_squash,anonuid=1001,anongid=1001)&quot;</span> &gt;&gt; /etc/exports</span><br><span class="line"><span class="comment"># rw:可读写</span></span><br><span class="line"><span class="comment"># ro: 只读</span></span><br><span class="line"><span class="comment"># no_root_squash：对root用户不压制，如果客户端以root用户写入，在服务端都映射为服务端的root用户</span></span><br><span class="line"><span class="comment"># root_squash： nfs服务：默认情况使用的是相反参数root_squash，如果客户端是用户root操作，会被压制成nobody用户</span></span><br><span class="line"><span class="comment"># all_squash:     不管客户端的使用nfs的用户是谁，都会压制成nobody用户</span></span><br><span class="line"><span class="comment"># insecure:   允许从客户端过来的非授权访问</span></span><br><span class="line"><span class="comment"># sync:     数据同步写入到内存和硬盘</span></span><br><span class="line"><span class="comment"># async:    数据先写入内存，不直接写入到硬盘</span></span><br><span class="line"><span class="comment"># anonuid: 指定uid的值，此uid必须存在于/etc/passwd中</span></span><br><span class="line"><span class="comment"># anongid:指定gid的值</span></span><br><span class="line"></span><br><span class="line">exportfs -arv</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>nfs client: master 10.0.0.17</p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 查看公开的nfs</span></span><br><span class="line">showmount -e 10.0.0.11</span><br><span class="line"></span><br><span class="line"><span class="built_in">mkdir</span> -p /mnt/nfs/cd001</span><br><span class="line"><span class="comment"># 临时挂载</span></span><br><span class="line"><span class="comment"># mount 10.0.0.11:/srv/nfs    /mnt/nfs/cd001</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 永久挂载</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;10.0.0.11:/srv/nfs    /mnt/nfs/cd001  nfs4    defaults        0       0&quot;</span> &gt;&gt;  /etc/fstab</span><br><span class="line">mount -a</span><br><span class="line"><span class="built_in">df</span> -TH</span><br><span class="line"><span class="comment"># k8s集群不需要挂载，写yaml后会自动进行持久挂载</span></span><br><span class="line">umount /mnt/nfs/cd001</span><br><span class="line"><span class="built_in">df</span> -TH</span><br></pre></td></tr></table></figure>
-<p><img src="https://42.193.14.174:31005/images/haruki/blog/cn/A30C9689711F26C031325D2EE82625E7A353B232C0BF266975111C1C9CE4EC80.png"></p>
-<h1 id="部署Nginx和MySql"><a href="#部署Nginx和MySql" class="headerlink" title="部署Nginx和MySql"></a>部署Nginx和MySql</h1><blockquote>
-<p>部署可以公网访问的nginx和持久化存储的mysql服务<br>master节点</p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 新增和删除命名空间</span></span><br><span class="line"><span class="comment"># kubectl create namespace my-namespace</span></span><br><span class="line"><span class="comment"># kubectl delete namespace my-namespace</span></span><br><span class="line"><span class="comment"># kucectl apply -f my-namespace.yaml</span></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">apiVersion:</span> <span class="string">v1</span></span><br><span class="line"><span class="attr">kind:</span> <span class="string">Namespace</span></span><br><span class="line"><span class="attr">metadata:</span></span><br><span class="line">   <span class="attr">name:</span> <span class="string">public</span></span><br><span class="line">   <span class="attr">labels:</span></span><br><span class="line">     <span class="attr">name:</span> <span class="string">public</span></span><br></pre></td></tr></table></figure>
-<h2 id="Nginx"><a href="#Nginx" class="headerlink" title="Nginx"></a>Nginx</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> ~</span><br><span class="line">vim nginx.yaml</span><br></pre></td></tr></table></figure>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">apiVersion:</span> <span class="string">apps/v1</span></span><br><span class="line"><span class="attr">kind:</span> <span class="string">Deployment</span></span><br><span class="line"><span class="attr">metadata:</span></span><br><span class="line">  <span class="attr">name:</span> <span class="string">nginx-deployment</span></span><br><span class="line"><span class="attr">spec:</span></span><br><span class="line">  <span class="attr">selector:</span></span><br><span class="line">    <span class="attr">matchLabels:</span></span><br><span class="line">      <span class="attr">app:</span> <span class="string">nginx</span></span><br><span class="line">  <span class="attr">replicas:</span> <span class="number">3</span></span><br><span class="line">  <span class="attr">template:</span></span><br><span class="line">    <span class="attr">metadata:</span></span><br><span class="line">      <span class="attr">labels:</span></span><br><span class="line">        <span class="attr">app:</span> <span class="string">nginx</span></span><br><span class="line">    <span class="attr">spec:</span></span><br><span class="line">      <span class="attr">containers:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">nginx</span></span><br><span class="line">        <span class="attr">image:</span> <span class="string">nginx:alpine</span></span><br><span class="line">        <span class="attr">ports:</span></span><br><span class="line">        <span class="bullet">-</span> <span class="attr">containerPort:</span> <span class="number">80</span></span><br><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">apiVersion:</span> <span class="string">v1</span></span><br><span class="line"><span class="attr">kind:</span> <span class="string">Service</span></span><br><span class="line"><span class="attr">metadata:</span></span><br><span class="line">  <span class="attr">name:</span> <span class="string">nginx-service</span></span><br><span class="line"><span class="attr">spec:</span></span><br><span class="line">  <span class="attr">selector:</span></span><br><span class="line">    <span class="attr">app:</span> <span class="string">nginx</span></span><br><span class="line">  <span class="attr">ports:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="attr">protocol:</span> <span class="string">TCP</span></span><br><span class="line">    <span class="attr">port:</span> <span class="number">80</span></span><br><span class="line">    <span class="attr">targetPort:</span> <span class="number">80</span></span><br><span class="line">    <span class="attr">nodePort:</span> <span class="number">30080</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">NodePort</span></span><br></pre></td></tr></table></figure>
-<p><img src="https://42.193.14.174:31005/images/haruki/blog/cn/564E8CA73EF28D607516A539A84B538092DDF7F4D510372E9EF52AB14DE80D36.png"></p>
-<h2 id="MySQL"><a href="#MySQL" class="headerlink" title="MySQL"></a>MySQL</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> ~</span><br><span class="line">vim mysql.yaml</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">apiVersion:</span> <span class="string">apps/v1</span></span><br><span class="line"><span class="attr">kind:</span> <span class="string">Deployment</span></span><br><span class="line"><span class="attr">metadata:</span></span><br><span class="line">  <span class="attr">labels:</span></span><br><span class="line">    <span class="attr">app:</span> <span class="string">mysql</span> <span class="comment">#为该Deployment设置key为app，value为mysql的标签</span></span><br><span class="line">  <span class="attr">name:</span> <span class="string">mysql</span></span><br><span class="line">  <span class="attr">namespace:</span> <span class="string">default</span></span><br><span class="line"><span class="attr">spec:</span></span><br><span class="line">  <span class="attr">replicas:</span> <span class="number">1</span> <span class="comment">#副本数量</span></span><br><span class="line">  <span class="attr">selector:</span> <span class="comment">#标签选择器，与上面的标签共同作用</span></span><br><span class="line">    <span class="attr">matchLabels:</span> <span class="comment">#选择包含标签app:nginx的资源</span></span><br><span class="line">      <span class="attr">app:</span> <span class="string">mysql</span></span><br><span class="line">  <span class="attr">template:</span> <span class="comment">#这是选择或创建的Pod的模板</span></span><br><span class="line">    <span class="attr">metadata:</span> <span class="comment">#Pod的元数据</span></span><br><span class="line">      <span class="attr">labels:</span> <span class="comment">#Pod的标签，上面的selector即选择包含标签app:nginx的Pod</span></span><br><span class="line">        <span class="attr">app:</span> <span class="string">mysql</span></span><br><span class="line">    <span class="attr">spec:</span> <span class="comment">#期望Pod实现的功能（即在pod中部署）</span></span><br><span class="line">      <span class="attr">containers:</span> <span class="comment">#生成container，与docker中的container是同一种</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">mysql</span></span><br><span class="line">        <span class="attr">image:</span> <span class="string">mysql:latest</span> <span class="comment">#使用镜像mysql: 创建container，该container默认3306端口可访问</span></span><br><span class="line">        <span class="attr">ports:</span></span><br><span class="line">        <span class="bullet">-</span> <span class="attr">containerPort:</span> <span class="number">3306</span>  <span class="comment"># 开启本容器的3306端口可访问</span></span><br><span class="line">        <span class="attr">env:</span></span><br><span class="line">        <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">MYSQL_ROOT_PASSWORD</span></span><br><span class="line">          <span class="attr">value:</span> <span class="string">MTIzNDU2Cg==</span> <span class="comment"># echo &quot;123456&quot;  |base64</span></span><br><span class="line">        <span class="attr">volumeMounts:</span> <span class="comment">#挂载持久存储卷</span></span><br><span class="line">        <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">mysql-data</span>  <span class="comment">#挂载设备的名字，与volumes[*].name 需要对应</span></span><br><span class="line">          <span class="attr">mountPath:</span> <span class="string">/var/lib/mysql</span>  <span class="comment">#挂载到容器的某个路径下</span></span><br><span class="line">          </span><br><span class="line">      <span class="attr">volumes:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">mysql-data</span>  <span class="comment">#和上面保持一致 这是本地的文件路径，上面是容器内部的路径</span></span><br><span class="line">        <span class="attr">nfs:</span></span><br><span class="line">          <span class="attr">server:</span> <span class="number">10.0</span><span class="number">.0</span><span class="number">.11</span> <span class="comment">#nfs服务器地址</span></span><br><span class="line">          <span class="attr">path:</span> <span class="string">/srv/nfs/k8s_data/mysql</span>  <span class="comment">#此路径需要实现创建</span></span><br><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">apiVersion:</span> <span class="string">v1</span></span><br><span class="line"><span class="attr">kind:</span> <span class="string">Service</span> <span class="comment"># 服务类型为svc</span></span><br><span class="line"><span class="attr">metadata:</span></span><br><span class="line">  <span class="attr">name:</span> <span class="string">mysql-service</span></span><br><span class="line">  <span class="attr">namespace:</span> <span class="string">default</span></span><br><span class="line"><span class="attr">spec:</span></span><br><span class="line">  <span class="attr">selector:</span></span><br><span class="line">    <span class="attr">app:</span> <span class="string">mysql</span></span><br><span class="line">  <span class="attr">ports:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="attr">protocol:</span> <span class="string">TCP</span></span><br><span class="line">    <span class="attr">port:</span> <span class="number">3306</span>  <span class="comment"># 本service的端口</span></span><br><span class="line">    <span class="attr">targetPort:</span> <span class="number">3306</span>  <span class="comment"># 对接的容器端口</span></span><br><span class="line">    <span class="attr">nodePort:</span> <span class="number">32001</span> <span class="comment"># nodeport即主机公网访问的端口</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">NodePort</span>  <span class="comment"># svc模式为nodeport</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">kubectl apply -f mysql.yaml</span><br><span class="line"><span class="comment"># 可以正常连接mysql并且nfs服务器有持久化数据了</span></span><br></pre></td></tr></table></figure>
-<p><img src="https://42.193.14.174:31005/images/haruki/blog/cn/77781C696156A40959D4159D81D2A959A873F2A9C7AFBA72C07D9EB0DF8AF7A1.png"><br><img src="https://42.193.14.174:31005/images/haruki/blog/cn/0ED4585667FEECFEFB5A26AD2C72BE3470E6E618DBBA343D6E19402FCA5688AE.png"></p>
-]]></content>
-      <categories>
-        <category>Kubernetes</category>
-      </categories>
-      <tags>
-        <tag>CloudComputing</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Kubernetes1.24公网部署</title>
-    <url>/2022-08-03/kubernetes_1_24_public_install/</url>
-    <content><![CDATA[<h1 id="环境介绍"><a href="#环境介绍" class="headerlink" title="环境介绍"></a>环境介绍</h1><blockquote>
-<p>master：成都区 2核4G<br>cd001：成都区 2核4G<br>hk001: 香港区 2核4G<br>sg001: 新加坡 2核4G<br>主机：四台腾讯云服务器，系统为CentOS Stream9<br>Kubernetes版本：V1.24.3（截至2022-08-03，当前k8s最新版本为 1.24.3）</p>
-</blockquote>
-<span id="more"></span>  
-
-
-<h4 id="由于集群在公网搭建，所以需要添加一张虚拟网卡-公网ip，仅master节点，如果集群为内网搭建，可省略该步骤）"><a href="#由于集群在公网搭建，所以需要添加一张虚拟网卡-公网ip，仅master节点，如果集群为内网搭建，可省略该步骤）" class="headerlink" title="由于集群在公网搭建，所以需要添加一张虚拟网卡(公网ip，仅master节点，如果集群为内网搭建，可省略该步骤）"></a>由于集群在公网搭建，所以需要添加一张虚拟网卡(公网ip，仅master节点，如果集群为内网搭建，可省略该步骤）</h4><p>tee &#x2F;etc&#x2F;sysconfig&#x2F;network-scripts&#x2F;ifcfg-eth0:1 &lt;&lt;-‘EOF’<br>DEVICE&#x3D;eth0:1<br>ONBOOT&#x3D;yes<br>BOOTPROTO&#x3D;static<br>IPADDR&#x3D;公网IP<br>NETMASK&#x3D;255.255.255.0<br>EOF</p>
-]]></content>
-      <categories>
-        <category>Kubernetes</category>
-      </categories>
-      <tags>
-        <tag>CloudComputing</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Kubernetest1.24内网二进制搭建</title>
-    <url>/2022-08-06/kubernetes_1_24_inside_binary_install/</url>
-    <content><![CDATA[]]></content>
-      <categories>
-        <category>Kubernetes</category>
-      </categories>
-      <tags>
-        <tag>CloudComputing</tag>
-        <tag>etcd</tag>
-      </tags>
   </entry>
   <entry>
     <title>英语词性</title>
@@ -339,6 +231,119 @@ A[.NET平台] -->F(...语言)</pre>
       </categories>
   </entry>
   <entry>
+    <title>Kubernetes1.24内网部署</title>
+    <url>/2022-07-27/kubernetes_1_24_inside_install/</url>
+    <content><![CDATA[<h1 id="环境介绍"><a href="#环境介绍" class="headerlink" title="环境介绍"></a>环境介绍</h1><blockquote>
+<p>master：成都区 2核4G    10.0.0.17<br>cd001：成都区 2核4G     10.0.0.11<br>主机：两台腾讯云轻量云，系统为CentOS Stream8，轻量云不支持EIP故不能公网搭K8s<br>Kubernetes版本：V1.24.3（截至2022-08-02，当前k8s最新版本为 1.24.3）</p>
+</blockquote>
+<span id="more"></span>  
+<h1 id="Master节点安装"><a href="#Master节点安装" class="headerlink" title="Master节点安装"></a>Master节点安装</h1><h2 id="主机配置"><a href="#主机配置" class="headerlink" title="主机配置"></a>主机配置</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"> <span class="comment"># 设置主机名</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;master&quot;</span> &gt; /etc/hostname</span><br><span class="line">yum -y tc</span><br><span class="line">yum -y update </span><br><span class="line"></span><br><span class="line"><span class="comment"># 重启使master主机名生效</span></span><br><span class="line">reboot </span><br><span class="line"></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;1&quot;</span> &gt;&gt; /proc/sys/net/ipv4/ip_forward <span class="comment"># 开启ip转发</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 设置hosts 注意，每次重启后该文件会恢复，需要重新添加</span></span><br><span class="line"><span class="built_in">cat</span> &gt;&gt; /etc/hosts &lt;&lt;<span class="string">EOF</span></span><br><span class="line"><span class="string">10.0.0.17 master</span></span><br><span class="line"><span class="string">10.0.0.11 cd001</span></span><br><span class="line"><span class="string">EOF</span></span><br><span class="line"></span><br><span class="line">systemctl restart NetworkManager.service</span><br></pre></td></tr></table></figure>
+
+<h2 id="配置containerd"><a href="#配置containerd" class="headerlink" title="配置containerd"></a>配置containerd</h2><blockquote>
+<p>将containerd作为k8s的容器引擎</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 阿里镜像源</span></span><br><span class="line">wget -O /etc/yum.repos.d/docker-ce.repo https://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo</span><br><span class="line"></span><br><span class="line"><span class="built_in">cat</span> &lt;&lt; <span class="string">EOF &gt; /etc/modules-load.d/containerd.conf</span></span><br><span class="line"><span class="string">overlay</span></span><br><span class="line"><span class="string">br_netfilter</span></span><br><span class="line"><span class="string">EOF</span></span><br><span class="line"></span><br><span class="line">modprobe overlay</span><br><span class="line">modprobe br_netfilter</span><br><span class="line"></span><br><span class="line">yum install -y containerd.io --allowerasing</span><br><span class="line"></span><br><span class="line"><span class="built_in">mkdir</span>  -p /etc/containerd </span><br><span class="line"><span class="built_in">rm</span> -rf /etc/containerd/config.toml</span><br><span class="line"></span><br><span class="line">containerd config default &gt; /etc/containerd/config.toml</span><br><span class="line"></span><br><span class="line">sed -i <span class="string">&#x27;s#sandbox_image = &quot;k8s.gcr.io/pause:#sandbox_image = &quot;registry.aliyuncs.com/google_containers/pause:#g&#x27;</span> /etc/containerd/config.toml</span><br><span class="line"><span class="comment"># sed -i &#x27;s/systemd_cgroup = false/systemd_cgroup = true/g&#x27; /etc/containerd/config.toml</span></span><br><span class="line">systemctl restart containerd</span><br><span class="line"></span><br><span class="line">systemctl <span class="built_in">enable</span> containerd</span><br><span class="line">systemctl start containerd</span><br></pre></td></tr></table></figure>
+<h2 id="runc命令行配置"><a href="#runc命令行配置" class="headerlink" title="runc命令行配置"></a>runc命令行配置</h2><blockquote>
+<p>检测runc、ctrcli、配置k8s源</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ctr version</span><br><span class="line">runc -version </span><br><span class="line"></span><br><span class="line"><span class="built_in">cat</span> &lt;&lt;<span class="string">EOF &gt; /etc/yum.repos.d/kubernetes.repo</span></span><br><span class="line"><span class="string">[kubernetes]</span></span><br><span class="line"><span class="string">name=Kubernetes</span></span><br><span class="line"><span class="string">baseurl=https://mirrors.aliyun.com/kubernetes/yum/repos/kubernetes-el7-x86_64/</span></span><br><span class="line"><span class="string">enabled=1</span></span><br><span class="line"><span class="string">gpgcheck=0</span></span><br><span class="line"><span class="string">repo_gpgcheck=0</span></span><br><span class="line"><span class="string">gpgkey=https://mirrors.aliyun.com/kubernetes/yum/doc/yum-key.gpg https://mirrors.aliyun.com/kubernetes/yum/doc/rpm-package-key.gpg</span></span><br><span class="line"><span class="string">EOF</span></span><br><span class="line"></span><br><span class="line">yum clean all </span><br><span class="line">yum makecache</span><br><span class="line"><span class="comment"># k8s init时需要此应用进行网络测试</span></span><br><span class="line">yum install -y tc   </span><br></pre></td></tr></table></figure>
+<h2 id="k8s组件安装"><a href="#k8s组件安装" class="headerlink" title="k8s组件安装"></a>k8s组件安装</h2><blockquote>
+<p>安装配置k8s三件套并配置</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">yum install -y kubectl kubelet kubeadm</span><br><span class="line"></span><br><span class="line"><span class="comment"># 兼容性处理 systemd</span></span><br><span class="line"><span class="built_in">echo</span>  <span class="string">&#x27;KUBELET_EXTRA_ARGS=&quot;--cgroup-driver=systemd&quot;&#x27;</span> &gt; /etc/sysconfig/kubelet</span><br><span class="line"></span><br><span class="line">systemctl <span class="built_in">enable</span> kubelet</span><br><span class="line">systemctl start kubelet</span><br><span class="line"></span><br><span class="line"><span class="comment"># 配置cricl 的endpoint</span></span><br><span class="line">crictl config runtime-endpoint unix:///run/containerd/containerd.sock</span><br><span class="line">crictl config image-endpoint unix:///run/containerd/containerd.sock</span><br><span class="line"></span><br><span class="line"><span class="comment"># 配置k8s镜像版本（不配置默认拉去latest 最新版）</span></span><br><span class="line"><span class="comment"># kubeadm config images list --kubernetes-version=v1.24.3</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="kubernetes初始化"><a href="#kubernetes初始化" class="headerlink" title="kubernetes初始化"></a>kubernetes初始化</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment"># 错误处理</span></span><br><span class="line"><span class="comment"># kubeadm reset</span></span><br><span class="line"><span class="comment"># rm -fr  ~/.kube/config</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># --apiserver-advertise-address和--control-plane-endpoint 分别为apiServer和控制面板的ip地址，内网部署使用master节点内网ip，公网部署使用master节点公网ip</span></span><br><span class="line">kubeadm init --pod-network-cidr=10.224.0.0/16 --apiserver-advertise-address=10.0.0.17 --control-plane-endpoint=10.0.0.17 --image-repository registry.aliyuncs.com/google_containers --v=5</span><br><span class="line"></span><br><span class="line"><span class="built_in">mkdir</span> -p <span class="variable">$HOME</span>/.kube</span><br><span class="line">sudo <span class="built_in">cp</span> -i /etc/kubernetes/admin.conf <span class="variable">$HOME</span>/.kube/config</span><br><span class="line">sudo <span class="built_in">chown</span> $(<span class="built_in">id</span> -u):$(<span class="built_in">id</span> -g) <span class="variable">$HOME</span>/.kube/config</span><br><span class="line"></span><br><span class="line"><span class="built_in">export</span> KUBECONFIG=/etc/kubernetes/admin.conf</span><br><span class="line"></span><br><span class="line"><span class="comment"># kubeadm join 10.0.0.17:6443 --token 9t45vv.40lt4exfxmirt7q2 --discovery-token-ca-cert-hash sha256:65cfa9a08c89e81357f3e394757ebb6c6c8000020c2e7411248cac2c4ef79c2e</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 可以看到master是NotReady状态</span></span><br><span class="line">kubectl get node -o wide</span><br><span class="line"></span><br><span class="line"><span class="comment"># 可以看到coredns是pending状态</span></span><br><span class="line">kubectl get pod -A -o wide</span><br><span class="line"></span><br><span class="line"><span class="comment"># 之后安装calico或者flannel网络插件后会恢复正常</span></span><br><span class="line"></span><br><span class="line">crictl images</span><br><span class="line"></span><br><span class="line">crictl ps -a</span><br></pre></td></tr></table></figure>
+<h1 id="Node节点安装"><a href="#Node节点安装" class="headerlink" title="Node节点安装"></a>Node节点安装</h1><h2 id="主机配置-1"><a href="#主机配置-1" class="headerlink" title="主机配置"></a>主机配置</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"> <span class="comment"># 设置主机名</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;cd001&quot;</span> &gt; /etc/hostname</span><br><span class="line"></span><br><span class="line">yum install -y tc</span><br><span class="line"></span><br><span class="line">yum -y update </span><br><span class="line"></span><br><span class="line"><span class="comment"># 重启使master主机名生效</span></span><br><span class="line">reboot </span><br><span class="line"></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;1&quot;</span> &gt;&gt; /proc/sys/net/ipv4/ip_forward <span class="comment"># 开启ip转发</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 设置hosts 注意，每次重启后该文件会恢复，需要重新添加</span></span><br><span class="line"><span class="built_in">cat</span> &gt;&gt; /etc/hosts &lt;&lt;<span class="string">EOF</span></span><br><span class="line"><span class="string">10.0.0.17 master</span></span><br><span class="line"><span class="string">10.0.0.11 cd001</span></span><br><span class="line"><span class="string">EOF</span></span><br><span class="line"></span><br><span class="line">systemctl restart NetworkManager.service</span><br></pre></td></tr></table></figure>
+
+<h2 id="配置containerd-1"><a href="#配置containerd-1" class="headerlink" title="配置containerd"></a>配置containerd</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 阿里镜像源</span></span><br><span class="line">wget -O /etc/yum.repos.d/docker-ce.repo https://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo</span><br><span class="line"></span><br><span class="line"><span class="built_in">cat</span> &lt;&lt; <span class="string">EOF &gt; /etc/modules-load.d/containerd.conf</span></span><br><span class="line"><span class="string">overlay</span></span><br><span class="line"><span class="string">br_netfilter</span></span><br><span class="line"><span class="string">EOF</span></span><br><span class="line"></span><br><span class="line">modprobe overlay</span><br><span class="line">modprobe br_netfilter</span><br><span class="line"></span><br><span class="line">yum install -y containerd.io --allowerasing</span><br><span class="line"></span><br><span class="line"><span class="built_in">mkdir</span>  -p /etc/containerd </span><br><span class="line"><span class="built_in">rm</span> -rf /etc/containerd/config.toml</span><br><span class="line"></span><br><span class="line">containerd config default &gt; /etc/containerd/config.toml</span><br><span class="line"></span><br><span class="line"> sed -i <span class="string">&#x27;s#sandbox_image = &quot;k8s.gcr.io/pause:#sandbox_image = &quot;registry.aliyuncs.com/google_containers/pause:#g&#x27;</span> /etc/containerd/config.toml</span><br><span class="line"><span class="comment"># sed -i &#x27;s/systemd_cgroup = false/systemd_cgroup = true/g&#x27; /etc/containerd/config.toml</span></span><br><span class="line">systemctl restart containerd</span><br><span class="line"></span><br><span class="line">systemctl <span class="built_in">enable</span> containerd</span><br><span class="line">systemctl start containerd</span><br></pre></td></tr></table></figure>
+<h2 id="runc命令行配置-1"><a href="#runc命令行配置-1" class="headerlink" title="runc命令行配置"></a>runc命令行配置</h2><blockquote>
+<p>检测runc 和ctrcli、配置k8s源</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ctr version</span><br><span class="line">runc -version </span><br><span class="line"></span><br><span class="line"><span class="built_in">cat</span> &lt;&lt;<span class="string">EOF &gt; /etc/yum.repos.d/kubernetes.repo</span></span><br><span class="line"><span class="string">[kubernetes]</span></span><br><span class="line"><span class="string">name=Kubernetes</span></span><br><span class="line"><span class="string">baseurl=https://mirrors.aliyun.com/kubernetes/yum/repos/kubernetes-el7-x86_64/</span></span><br><span class="line"><span class="string">enabled=1</span></span><br><span class="line"><span class="string">gpgcheck=0</span></span><br><span class="line"><span class="string">repo_gpgcheck=0</span></span><br><span class="line"><span class="string">gpgkey=https://mirrors.aliyun.com/kubernetes/yum/doc/yum-key.gpg https://mirrors.aliyun.com/kubernetes/yum/doc/rpm-package-key.gpg</span></span><br><span class="line"><span class="string">EOF</span></span><br><span class="line"></span><br><span class="line">yum clean all </span><br><span class="line">yum makecache</span><br><span class="line"></span><br><span class="line">yum install -y tc</span><br></pre></td></tr></table></figure>
+<h2 id="k8s-node组件安装"><a href="#k8s-node组件安装" class="headerlink" title="k8s node组件安装"></a>k8s node组件安装</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">yum install -y  kubelet kubeadm</span><br><span class="line"></span><br><span class="line"><span class="comment"># 兼容性处理 systemd</span></span><br><span class="line"><span class="built_in">echo</span>  <span class="string">&#x27;KUBELET_EXTRA_ARGS=&quot;--cgroup-driver=systemd&quot;&#x27;</span> &gt; /etc/sysconfig/kubelet</span><br><span class="line"></span><br><span class="line">systemctl <span class="built_in">enable</span> kubelet</span><br><span class="line">systemctl start kubelet</span><br><span class="line"></span><br><span class="line"><span class="comment"># 配置cricl 的endpoint</span></span><br><span class="line">crictl config runtime-endpoint unix:///run/containerd/containerd.sock</span><br><span class="line">crictl config image-endpoint unix:///run/containerd/containerd.sock</span><br><span class="line"></span><br><span class="line"><span class="comment"># 配置k8s镜像版本（不配置默认拉去latest 最新版）</span></span><br><span class="line"><span class="comment"># kubeadm config images list --kubernetes-version=v1.24.3</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="加入到集群"><a href="#加入到集群" class="headerlink" title="加入到集群"></a>加入到集群</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment"># 错误处理</span></span><br><span class="line"><span class="comment"># kubeadm reset</span></span><br><span class="line"><span class="comment"># rm -fr  ~/.kube/config</span></span><br><span class="line"></span><br><span class="line">kubeadm <span class="built_in">join</span> 10.0.0.17:6443 --token 9t45vv.40lt4exfxmirt7q2 --discovery-token-ca-cert-hash sha256:65cfa9a08c89e81357f3e394757ebb6c6c8000020c2e7411248cac2c4ef79c2e</span><br></pre></td></tr></table></figure>
+
+<h1 id="配置K8s容器网络"><a href="#配置K8s容器网络" class="headerlink" title="配置K8s容器网络"></a>配置K8s容器网络</h1><blockquote>
+<p>master节点执行</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">wget https://docs.projectcalico.org/manifests/calico.yaml --no-check-certificate</span><br><span class="line">vim calico.yaml</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>配置yaml文件,正确的虚拟ip和网卡</p>
+</blockquote>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># /CALICO_IPV4POOL_CIDR 进行查找，取消注释，将值改为pod-network-cidr的值</span></span><br><span class="line"><span class="comment"># The default IPv4 pool to create on startup if none exists. Pod IPs will be</span></span><br><span class="line"><span class="comment"># chosen from this range. Changing this value after installation will have</span></span><br><span class="line"><span class="comment"># no effect. This should fall within `--cluster-cidr`.</span></span><br><span class="line"> <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">CALICO_IPV4POOL_CIDR</span></span><br><span class="line">   <span class="attr">value:</span> <span class="string">&quot;10.244.0.0/16&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># ....</span></span><br><span class="line"><span class="comment"># /k8s,bgp 查找,同级新增如下</span></span><br><span class="line"> <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">CLUSTER_TYPE</span></span><br><span class="line">   <span class="attr">value:</span> <span class="string">&quot;k8s,bgp&quot;</span></span><br><span class="line"> <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">IP_AUTODETECTION_METHOD</span></span><br><span class="line">   <span class="attr">value:</span> <span class="string">&quot;interface=eth0&quot;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">kubectl apply -f calico.yaml</span><br><span class="line"></span><br><span class="line"><span class="comment"># 如果执行后没反应或者拉去calio镜像过慢，可以在master和node上手动拉取镜像</span></span><br><span class="line"><span class="comment"># crictl pull docker.io/calico/cni</span></span><br><span class="line"><span class="comment"># crictl pull docker.io/calico/node</span></span><br><span class="line">crictl pull docker.io/calico/cni:v3.23.3</span><br><span class="line">crictl pull docker.io/calico/node:v3.23.3</span><br><span class="line"></span><br><span class="line"><span class="comment"># 检查node和containerd运行状态</span></span><br><span class="line">kubectl get node -o wide</span><br><span class="line"></span><br><span class="line">crictl ps -a</span><br></pre></td></tr></table></figure>
+<p><img src="http://42.193.14.174:31001/images/haruki/blog/cn/871EFB1C13E616DBFBEC9E43A273852E08CA7EF3090D79DBE50647C24447E91D.png"></p>
+<h1 id="配置NFS共享存储"><a href="#配置NFS共享存储" class="headerlink" title="配置NFS共享存储"></a>配置NFS共享存储</h1><blockquote>
+<p>由于ceph资源消耗太大，服务器数量和性能都不够，暂时只能用NFS，之后大概会在自己电脑上开虚拟机试着搭下ceph</p>
+</blockquote>
+<blockquote>
+<p>nfs server: cd001 10.0.0.11</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">yum install -y nfs-utils rpcbind <span class="comment"># 安装nfs和rpc</span></span><br><span class="line">systemctl <span class="built_in">enable</span> nfs-server</span><br><span class="line">sudo systemctl <span class="built_in">enable</span> --now nfs-server</span><br><span class="line"><span class="built_in">mkdir</span> -p /srv/nfs</span><br><span class="line"></span><br><span class="line"><span class="comment"># 查看支持的nfs版本</span></span><br><span class="line">sudo <span class="built_in">cat</span> /proc/fs/nfsd/versions</span><br><span class="line">userdel -r nfsuser</span><br><span class="line"></span><br><span class="line"><span class="comment"># nfsserver端新增一个用户，客户端操作nfs目录时会使用该用户权限进行读写</span></span><br><span class="line">adduser -s /sbin/nologin -u 1010 -M nfsuser</span><br><span class="line"><span class="comment"># -u : 指定用户uid</span></span><br><span class="line"><span class="comment"># -M: --no-create-home  不创建用户home目录</span></span><br><span class="line"><span class="comment"># -s : --shell    指定用户的shell</span></span><br><span class="line">passwd nfsuser </span><br><span class="line"></span><br><span class="line"><span class="built_in">mkdir</span> -p /srv/nfs/</span><br><span class="line"><span class="built_in">chown</span> nfsuser.nfsuser /srv/nfs</span><br><span class="line"></span><br><span class="line"><span class="comment"># 所有k8s集群内ip都需要添加进去</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;/srv/nfs/ 10.0.0.17(rw,sync,no_root_squash,anonuid=1001,anongid=1001)&quot;</span> &gt; /etc/exports</span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;/srv/nfs/ 10.0.0.11(rw,sync,no_root_squash,anonuid=1001,anongid=1001)&quot;</span> &gt;&gt; /etc/exports</span><br><span class="line"><span class="comment"># rw:可读写</span></span><br><span class="line"><span class="comment"># ro: 只读</span></span><br><span class="line"><span class="comment"># no_root_squash：对root用户不压制，如果客户端以root用户写入，在服务端都映射为服务端的root用户</span></span><br><span class="line"><span class="comment"># root_squash： nfs服务：默认情况使用的是相反参数root_squash，如果客户端是用户root操作，会被压制成nobody用户</span></span><br><span class="line"><span class="comment"># all_squash:     不管客户端的使用nfs的用户是谁，都会压制成nobody用户</span></span><br><span class="line"><span class="comment"># insecure:   允许从客户端过来的非授权访问</span></span><br><span class="line"><span class="comment"># sync:     数据同步写入到内存和硬盘</span></span><br><span class="line"><span class="comment"># async:    数据先写入内存，不直接写入到硬盘</span></span><br><span class="line"><span class="comment"># anonuid: 指定uid的值，此uid必须存在于/etc/passwd中</span></span><br><span class="line"><span class="comment"># anongid:指定gid的值</span></span><br><span class="line"></span><br><span class="line">exportfs -arv</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>nfs client: master 10.0.0.17</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 查看公开的nfs</span></span><br><span class="line">showmount -e 10.0.0.11</span><br><span class="line"></span><br><span class="line"><span class="built_in">mkdir</span> -p /mnt/nfs/cd001</span><br><span class="line"><span class="comment"># 临时挂载</span></span><br><span class="line"><span class="comment"># mount 10.0.0.11:/srv/nfs    /mnt/nfs/cd001</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 永久挂载</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;10.0.0.11:/srv/nfs    /mnt/nfs/cd001  nfs4    defaults        0       0&quot;</span> &gt;&gt;  /etc/fstab</span><br><span class="line">mount -a</span><br><span class="line"><span class="built_in">df</span> -TH</span><br><span class="line"><span class="comment"># k8s集群不需要挂载，写yaml后会自动进行持久挂载</span></span><br><span class="line">umount /mnt/nfs/cd001</span><br><span class="line"><span class="built_in">df</span> -TH</span><br></pre></td></tr></table></figure>
+<p><img src="http://42.193.14.174:31001/images/haruki/blog/cn/A30C9689711F26C031325D2EE82625E7A353B232C0BF266975111C1C9CE4EC80.png"></p>
+<h1 id="部署Nginx和MySql"><a href="#部署Nginx和MySql" class="headerlink" title="部署Nginx和MySql"></a>部署Nginx和MySql</h1><blockquote>
+<p>部署可以公网访问的nginx和持久化存储的mysql服务<br>master节点</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 新增和删除命名空间</span></span><br><span class="line"><span class="comment"># kubectl create namespace my-namespace</span></span><br><span class="line"><span class="comment"># kubectl delete namespace my-namespace</span></span><br><span class="line"><span class="comment"># kucectl apply -f my-namespace.yaml</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">apiVersion:</span> <span class="string">v1</span></span><br><span class="line"><span class="attr">kind:</span> <span class="string">Namespace</span></span><br><span class="line"><span class="attr">metadata:</span></span><br><span class="line">   <span class="attr">name:</span> <span class="string">public</span></span><br><span class="line">   <span class="attr">labels:</span></span><br><span class="line">     <span class="attr">name:</span> <span class="string">public</span></span><br></pre></td></tr></table></figure>
+<h2 id="Nginx"><a href="#Nginx" class="headerlink" title="Nginx"></a>Nginx</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> ~</span><br><span class="line">vim nginx.yaml</span><br></pre></td></tr></table></figure>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">apiVersion:</span> <span class="string">apps/v1</span></span><br><span class="line"><span class="attr">kind:</span> <span class="string">Deployment</span></span><br><span class="line"><span class="attr">metadata:</span></span><br><span class="line">  <span class="attr">name:</span> <span class="string">nginx-deployment</span></span><br><span class="line"><span class="attr">spec:</span></span><br><span class="line">  <span class="attr">selector:</span></span><br><span class="line">    <span class="attr">matchLabels:</span></span><br><span class="line">      <span class="attr">app:</span> <span class="string">nginx</span></span><br><span class="line">  <span class="attr">replicas:</span> <span class="number">3</span></span><br><span class="line">  <span class="attr">template:</span></span><br><span class="line">    <span class="attr">metadata:</span></span><br><span class="line">      <span class="attr">labels:</span></span><br><span class="line">        <span class="attr">app:</span> <span class="string">nginx</span></span><br><span class="line">    <span class="attr">spec:</span></span><br><span class="line">      <span class="attr">containers:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">nginx</span></span><br><span class="line">        <span class="attr">image:</span> <span class="string">nginx:alpine</span></span><br><span class="line">        <span class="attr">ports:</span></span><br><span class="line">        <span class="bullet">-</span> <span class="attr">containerPort:</span> <span class="number">80</span></span><br><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">apiVersion:</span> <span class="string">v1</span></span><br><span class="line"><span class="attr">kind:</span> <span class="string">Service</span></span><br><span class="line"><span class="attr">metadata:</span></span><br><span class="line">  <span class="attr">name:</span> <span class="string">nginx-service</span></span><br><span class="line"><span class="attr">spec:</span></span><br><span class="line">  <span class="attr">selector:</span></span><br><span class="line">    <span class="attr">app:</span> <span class="string">nginx</span></span><br><span class="line">  <span class="attr">ports:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="attr">protocol:</span> <span class="string">TCP</span></span><br><span class="line">    <span class="attr">port:</span> <span class="number">80</span></span><br><span class="line">    <span class="attr">targetPort:</span> <span class="number">80</span></span><br><span class="line">    <span class="attr">nodePort:</span> <span class="number">30080</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">NodePort</span></span><br></pre></td></tr></table></figure>
+<p><img src="http://42.193.14.174:31001/images/haruki/blog/cn/564E8CA73EF28D607516A539A84B538092DDF7F4D510372E9EF52AB14DE80D36.png"></p>
+<h2 id="MySQL"><a href="#MySQL" class="headerlink" title="MySQL"></a>MySQL</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> ~</span><br><span class="line">vim mysql.yaml</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">apiVersion:</span> <span class="string">apps/v1</span></span><br><span class="line"><span class="attr">kind:</span> <span class="string">Deployment</span></span><br><span class="line"><span class="attr">metadata:</span></span><br><span class="line">  <span class="attr">labels:</span></span><br><span class="line">    <span class="attr">app:</span> <span class="string">mysql</span> <span class="comment">#为该Deployment设置key为app，value为mysql的标签</span></span><br><span class="line">  <span class="attr">name:</span> <span class="string">mysql</span></span><br><span class="line">  <span class="attr">namespace:</span> <span class="string">default</span></span><br><span class="line"><span class="attr">spec:</span></span><br><span class="line">  <span class="attr">replicas:</span> <span class="number">1</span> <span class="comment">#副本数量</span></span><br><span class="line">  <span class="attr">selector:</span> <span class="comment">#标签选择器，与上面的标签共同作用</span></span><br><span class="line">    <span class="attr">matchLabels:</span> <span class="comment">#选择包含标签app:nginx的资源</span></span><br><span class="line">      <span class="attr">app:</span> <span class="string">mysql</span></span><br><span class="line">  <span class="attr">template:</span> <span class="comment">#这是选择或创建的Pod的模板</span></span><br><span class="line">    <span class="attr">metadata:</span> <span class="comment">#Pod的元数据</span></span><br><span class="line">      <span class="attr">labels:</span> <span class="comment">#Pod的标签，上面的selector即选择包含标签app:nginx的Pod</span></span><br><span class="line">        <span class="attr">app:</span> <span class="string">mysql</span></span><br><span class="line">    <span class="attr">spec:</span> <span class="comment">#期望Pod实现的功能（即在pod中部署）</span></span><br><span class="line">      <span class="attr">containers:</span> <span class="comment">#生成container，与docker中的container是同一种</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">mysql</span></span><br><span class="line">        <span class="attr">image:</span> <span class="string">mysql:latest</span> <span class="comment">#使用镜像mysql: 创建container，该container默认3306端口可访问</span></span><br><span class="line">        <span class="attr">ports:</span></span><br><span class="line">        <span class="bullet">-</span> <span class="attr">containerPort:</span> <span class="number">3306</span>  <span class="comment"># 开启本容器的3306端口可访问</span></span><br><span class="line">        <span class="attr">env:</span></span><br><span class="line">        <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">MYSQL_ROOT_PASSWORD</span></span><br><span class="line">          <span class="attr">value:</span> <span class="string">MTIzNDU2Cg==</span> <span class="comment"># echo &quot;123456&quot;  |base64</span></span><br><span class="line">        <span class="attr">volumeMounts:</span> <span class="comment">#挂载持久存储卷</span></span><br><span class="line">        <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">mysql-data</span>  <span class="comment">#挂载设备的名字，与volumes[*].name 需要对应</span></span><br><span class="line">          <span class="attr">mountPath:</span> <span class="string">/var/lib/mysql</span>  <span class="comment">#挂载到容器的某个路径下</span></span><br><span class="line">          </span><br><span class="line">      <span class="attr">volumes:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">mysql-data</span>  <span class="comment">#和上面保持一致 这是本地的文件路径，上面是容器内部的路径</span></span><br><span class="line">        <span class="attr">nfs:</span></span><br><span class="line">          <span class="attr">server:</span> <span class="number">10.0</span><span class="number">.0</span><span class="number">.11</span> <span class="comment">#nfs服务器地址</span></span><br><span class="line">          <span class="attr">path:</span> <span class="string">/srv/nfs/k8s_data/mysql</span>  <span class="comment">#此路径需要实现创建</span></span><br><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">apiVersion:</span> <span class="string">v1</span></span><br><span class="line"><span class="attr">kind:</span> <span class="string">Service</span> <span class="comment"># 服务类型为svc</span></span><br><span class="line"><span class="attr">metadata:</span></span><br><span class="line">  <span class="attr">name:</span> <span class="string">mysql-service</span></span><br><span class="line">  <span class="attr">namespace:</span> <span class="string">default</span></span><br><span class="line"><span class="attr">spec:</span></span><br><span class="line">  <span class="attr">selector:</span></span><br><span class="line">    <span class="attr">app:</span> <span class="string">mysql</span></span><br><span class="line">  <span class="attr">ports:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="attr">protocol:</span> <span class="string">TCP</span></span><br><span class="line">    <span class="attr">port:</span> <span class="number">3306</span>  <span class="comment"># 本service的端口</span></span><br><span class="line">    <span class="attr">targetPort:</span> <span class="number">3306</span>  <span class="comment"># 对接的容器端口</span></span><br><span class="line">    <span class="attr">nodePort:</span> <span class="number">32001</span> <span class="comment"># nodeport即主机公网访问的端口</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">NodePort</span>  <span class="comment"># svc模式为nodeport</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">kubectl apply -f mysql.yaml</span><br><span class="line"><span class="comment"># 可以正常连接mysql并且nfs服务器有持久化数据了</span></span><br></pre></td></tr></table></figure>
+<p><img src="http://42.193.14.174:31001/images/haruki/blog/cn/77781C696156A40959D4159D81D2A959A873F2A9C7AFBA72C07D9EB0DF8AF7A1.png"><br><img src="http://42.193.14.174:31001/images/haruki/blog/cn/0ED4585667FEECFEFB5A26AD2C72BE3470E6E618DBBA343D6E19402FCA5688AE.png"></p>
+]]></content>
+      <categories>
+        <category>Kubernetes</category>
+      </categories>
+      <tags>
+        <tag>CloudComputing</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Kubernetes1.24公网部署</title>
+    <url>/2022-08-03/kubernetes_1_24_public_install/</url>
+    <content><![CDATA[<h1 id="环境介绍"><a href="#环境介绍" class="headerlink" title="环境介绍"></a>环境介绍</h1><blockquote>
+<p>master：成都区 2核4G<br>cd001：成都区 2核4G<br>hk001: 香港区 2核4G<br>sg001: 新加坡 2核4G<br>主机：四台腾讯云服务器，系统为CentOS Stream9<br>Kubernetes版本：V1.24.3（截至2022-08-03，当前k8s最新版本为 1.24.3）</p>
+</blockquote>
+<span id="more"></span>  
+
+
+<h4 id="由于集群在公网搭建，所以需要添加一张虚拟网卡-公网ip，仅master节点，如果集群为内网搭建，可省略该步骤）"><a href="#由于集群在公网搭建，所以需要添加一张虚拟网卡-公网ip，仅master节点，如果集群为内网搭建，可省略该步骤）" class="headerlink" title="由于集群在公网搭建，所以需要添加一张虚拟网卡(公网ip，仅master节点，如果集群为内网搭建，可省略该步骤）"></a>由于集群在公网搭建，所以需要添加一张虚拟网卡(公网ip，仅master节点，如果集群为内网搭建，可省略该步骤）</h4><p>tee &#x2F;etc&#x2F;sysconfig&#x2F;network-scripts&#x2F;ifcfg-eth0:1 &lt;&lt;-‘EOF’<br>DEVICE&#x3D;eth0:1<br>ONBOOT&#x3D;yes<br>BOOTPROTO&#x3D;static<br>IPADDR&#x3D;公网IP<br>NETMASK&#x3D;255.255.255.0<br>EOF</p>
+]]></content>
+      <categories>
+        <category>Kubernetes</category>
+      </categories>
+      <tags>
+        <tag>CloudComputing</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Kubernetest1.24内网二进制搭建</title>
+    <url>/2022-08-06/kubernetes_1_24_inside_binary_install/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>Kubernetes</category>
+      </categories>
+      <tags>
+        <tag>CloudComputing</tag>
+        <tag>etcd</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/2022-07-03/undefined/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
     <title>Linux的简介和安装</title>
     <url>/2021-01-01/Linux-introduction-and-installation/</url>
     <content><![CDATA[<h1 id="学习目标"><a href="#学习目标" class="headerlink" title="学习目标"></a>学习目标</h1><ul>
@@ -354,7 +359,7 @@ A[.NET平台] -->F(...语言)</pre>
 <span id="more"></span>  
 
 <h1 id="什么是操作系统？"><a href="#什么是操作系统？" class="headerlink" title="什么是操作系统？"></a>什么是操作系统？</h1><p>操作系统，英文名称Operating System，简称OS，是计算机系统中必不可少的基础系统软件，它是应用程序运行以及用户操作必备的基础环境支撑，是计算机系统的核心。  </p>
-<p><img src="https://42.193.14.174:31005/images/haruki/blog/cn/96F0C320ADD182842FBA7D0D28146A5183660388D3149919CAB5C0163FAC9C5A.png" alt="操作系统与计算机硬件软件关系"></p>
+<p><img src="http://42.193.14.174:31001/images/haruki/blog/cn/96F0C320ADD182842FBA7D0D28146A5183660388D3149919CAB5C0163FAC9C5A.png" alt="操作系统与计算机硬件软件关系"></p>
 <h1 id="什么是Linux？"><a href="#什么是Linux？" class="headerlink" title="什么是Linux？"></a>什么是Linux？</h1><p>和Windows操作系统软件一样，Linux也是一个操作系统软件。<br>Linux内核最初只是由芬兰人李纳斯·托瓦兹（Linus Torvalds）在赫尔辛基大学上学时出于个人爱好而编写的。<br>Linux是一套免费使用和自由传播的，是一个基于POSIX（POSIX表示可移植操作系统接口，是个标准）的多用户、多任务、支持多线程和多CPU的操作系统。 </p>
 <p><strong>Linux的内核版本和发行版本</strong><br>内核版本下载地址：<a href="https://www.kernel.org/">https://www.kernel.org/</a> ，只有99M多一点是Linux操作系统的真正的核心。<br>Linux的发行版说简单点就是将Linux内核与应用软件做一个打包。<br>目前市面上较知名的发行版有：Ubuntu、RedHat、CentOS、Debian、Fedora、SuSE、OpenSUSE、TurboLinux、BluePoint、RedFlag、Xterm、SlackWare等很多很多，发行版本可能有上千种之多，各个发行版本之间的主要区别就是安装软件的方式可能不同，其他主要的操作命令啊什么的基本雷同，因为都是一个内核。  </p>
 <p><strong>Linux应用领域</strong><br>物联网、云计算、大数据使用的嵌入式、c++、JAVA、PHP等底层应用软件都是在Linux操作系统上,各种场合都有使用各种Linux发行版，通常服务器使用Linux，未来国产化服务器都是安装的Linux操作系统。</p>
@@ -792,6 +797,18 @@ A[.NET平台] -->F(...语言)</pre>
       </categories>
   </entry>
   <entry>
+    <title>Docker的安装及使用</title>
+    <url>/2022-08-02/docker_install_using/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>容器</category>
+        <category>Docker</category>
+      </categories>
+      <tags>
+        <tag>CloudComputing</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>了解文件系统的和基本操作</title>
     <url>/2021-01-04/Understand-the-file-system-and-basic-operations/</url>
     <content><![CDATA[<h1 id="学习目标"><a href="#学习目标" class="headerlink" title="学习目标"></a>学习目标</h1><ul>
@@ -993,33 +1010,6 @@ A[.NET平台] -->F(...语言)</pre>
       </categories>
   </entry>
   <entry>
-    <title>Docker的安装及使用</title>
-    <url>/2022-08-02/docker_install_using/</url>
-    <content><![CDATA[]]></content>
-      <categories>
-        <category>容器</category>
-        <category>Docker</category>
-      </categories>
-      <tags>
-        <tag>CloudComputing</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Podman的安装及使用</title>
-    <url>/2022-08-02/podman_install_using/</url>
-    <content><![CDATA[<h1 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h1><blockquote>
-<p>主机1：腾讯云 新加坡 2核4G CentOS Stream8<br>主机2：本地 Intel N3540 4核8G CentOS 8.5</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>容器</category>
-        <category>Podman</category>
-      </categories>
-      <tags>
-        <tag>CloudComputing</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Python基础知识</title>
     <url>/2021-06-21/python-basic-knowledge/</url>
     <content><![CDATA[<h1 id="运行环境"><a href="#运行环境" class="headerlink" title="运行环境"></a>运行环境</h1><p>CentOS8.2 &amp;&amp; Python 3</p>
@@ -1200,8 +1190,18 @@ A[.NET平台] -->F(...语言)</pre>
       </categories>
   </entry>
   <entry>
-    <title></title>
-    <url>/2022-07-03/undefined/</url>
-    <content><![CDATA[]]></content>
+    <title>Podman的安装及使用</title>
+    <url>/2022-08-02/podman_install_using/</url>
+    <content><![CDATA[<h1 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h1><blockquote>
+<p>主机1：腾讯云 新加坡 2核4G CentOS Stream8<br>主机2：本地 Intel N3540 4核8G CentOS 8.5</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>容器</category>
+        <category>Podman</category>
+      </categories>
+      <tags>
+        <tag>CloudComputing</tag>
+      </tags>
   </entry>
 </search>
