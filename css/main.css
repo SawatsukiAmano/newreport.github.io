@@ -1239,7 +1239,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #3df9e9;
+  background: #5898ff;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2752,7 +2752,7 @@ ul.breadcrumb li + li:last-child {
   }
 }
 body {
-  background: url("https://img.flowerdream.top/images/haruki/blog/haruki-bgm.jpg");
+  background: url("https://img.flowerdream.top/haruki/blog/haruki-bgm.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: 50% 50%;
