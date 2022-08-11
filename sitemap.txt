@@ -40,10 +40,10 @@ https://newreport.top/categories/%E6%9D%82%E7%89%A9%E7%AE%B1/
 https://newreport.top/categories/C/
 https://newreport.top/categories/English/
 https://newreport.top/categories/Kubernetes/
-https://newreport.top/categories/%E5%AE%B9%E5%99%A8/
-https://newreport.top/categories/python/
 https://newreport.top/categories/linux/
+https://newreport.top/categories/python/
+https://newreport.top/categories/%E5%AE%B9%E5%99%A8/
+https://newreport.top/categories/linux/rhel8/
+https://newreport.top/categories/python/python3/
 https://newreport.top/categories/%E5%AE%B9%E5%99%A8/Docker/
 https://newreport.top/categories/%E5%AE%B9%E5%99%A8/Podman/
-https://newreport.top/categories/python/python3/
-https://newreport.top/categories/linux/rhel8/
