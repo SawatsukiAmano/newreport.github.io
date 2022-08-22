@@ -6,7 +6,7 @@
   <link href="https://newreport.top/atom.xml" rel="self"/>
   
   <link href="https://newreport.top/"/>
-  <updated>2022-08-07T18:51:36.509Z</updated>
+  <updated>2022-08-22T15:55:31.813Z</updated>
   <id>https://newreport.top/</id>
   
   <author>
@@ -17,40 +17,21 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>cloudflare的使用</title>
-    <link href="https://newreport.top/2022-08-08/using-cloudflare/"/>
-    <id>https://newreport.top/2022-08-08/using-cloudflare/</id>
-    <published>2022-08-07T16:00:00.000Z</published>
-    <updated>2022-08-07T18:51:36.509Z</updated>
-    
-    
-    
-    
-    <category term="杂物箱" scheme="https://newreport.top/categories/%E6%9D%82%E7%89%A9%E7%AE%B1/"/>
-    
-    
-    <category term="Domain" scheme="https://newreport.top/tags/Domain/"/>
-    
-    <category term="DNS" scheme="https://newreport.top/tags/DNS/"/>
-    
-  </entry>
-  
-  <entry>
     <title>Kubernetest1.24内网二进制搭建</title>
     <link href="https://newreport.top/2022-08-06/kubernetes_1_24_inside_binary_install/"/>
     <id>https://newreport.top/2022-08-06/kubernetes_1_24_inside_binary_install/</id>
     <published>2022-08-05T16:00:01.000Z</published>
-    <updated>2022-08-07T15:37:46.066Z</updated>
+    <updated>2022-08-22T15:55:31.813Z</updated>
     
     
     
     
-    <category term="Kubernetes" scheme="https://newreport.top/categories/Kubernetes/"/>
+    <category term="kubernetes" scheme="https://newreport.top/categories/kubernetes/"/>
     
+    
+    <category term="Etcd" scheme="https://newreport.top/tags/Etcd/"/>
     
     <category term="CloudComputing" scheme="https://newreport.top/tags/CloudComputing/"/>
-    
-    <category term="etcd" scheme="https://newreport.top/tags/etcd/"/>
     
   </entry>
   
@@ -59,7 +40,7 @@
     <link href="https://newreport.top/2022-08-03/kubernetes_1_24_public_install/"/>
     <id>https://newreport.top/2022-08-03/kubernetes_1_24_public_install/</id>
     <published>2022-08-02T16:00:01.000Z</published>
-    <updated>2022-08-09T15:34:03.919Z</updated>
+    <updated>2022-08-22T15:55:15.536Z</updated>
     
     
     <summary type="html">&lt;h1 id=&quot;环境介绍&quot;&gt;&lt;a href=&quot;#环境介绍&quot; class=&quot;headerlink&quot; title=&quot;环境介绍&quot;&gt;&lt;/a&gt;环境介绍&lt;/h1&gt;&lt;blockquote&gt;
@@ -68,26 +49,7 @@
     
     
     
-    <category term="Kubernetes" scheme="https://newreport.top/categories/Kubernetes/"/>
-    
-    
-    <category term="CloudComputing" scheme="https://newreport.top/tags/CloudComputing/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Docker的安装及使用</title>
-    <link href="https://newreport.top/2022-08-02/docker_install_using/"/>
-    <id>https://newreport.top/2022-08-02/docker_install_using/</id>
-    <published>2022-08-01T16:00:02.000Z</published>
-    <updated>2022-08-07T15:38:53.308Z</updated>
-    
-    
-    
-    
-    <category term="容器" scheme="https://newreport.top/categories/%E5%AE%B9%E5%99%A8/"/>
-    
-    <category term="Docker" scheme="https://newreport.top/categories/%E5%AE%B9%E5%99%A8/Docker/"/>
+    <category term="kubernetes" scheme="https://newreport.top/categories/kubernetes/"/>
     
     
     <category term="CloudComputing" scheme="https://newreport.top/tags/CloudComputing/"/>
@@ -99,7 +61,7 @@
     <link href="https://newreport.top/2022-08-02/podman_install_using/"/>
     <id>https://newreport.top/2022-08-02/podman_install_using/</id>
     <published>2022-08-01T16:00:01.000Z</published>
-    <updated>2022-08-07T15:38:38.522Z</updated>
+    <updated>2022-08-22T15:54:18.940Z</updated>
     
     
       
@@ -113,9 +75,9 @@
     
     
     
-    <category term="容器" scheme="https://newreport.top/categories/%E5%AE%B9%E5%99%A8/"/>
+    <category term="container" scheme="https://newreport.top/categories/container/"/>
     
-    <category term="Podman" scheme="https://newreport.top/categories/%E5%AE%B9%E5%99%A8/Podman/"/>
+    <category term="podman" scheme="https://newreport.top/categories/container/podman/"/>
     
     
     <category term="CloudComputing" scheme="https://newreport.top/tags/CloudComputing/"/>
@@ -127,7 +89,7 @@
     <link href="https://newreport.top/2022-07-27/kubernetes_1_24_inside_install/"/>
     <id>https://newreport.top/2022-07-27/kubernetes_1_24_inside_install/</id>
     <published>2022-07-26T16:00:01.000Z</published>
-    <updated>2022-08-11T16:27:17.289Z</updated>
+    <updated>2022-08-22T15:55:09.323Z</updated>
     
     
     <summary type="html">&lt;h1 id=&quot;环境介绍&quot;&gt;&lt;a href=&quot;#环境介绍&quot; class=&quot;headerlink&quot; title=&quot;环境介绍&quot;&gt;&lt;/a&gt;环境介绍&lt;/h1&gt;&lt;blockquote&gt;
@@ -136,23 +98,16 @@
     
     
     
-    <category term="Kubernetes" scheme="https://newreport.top/categories/Kubernetes/"/>
+    <category term="kubernetes" scheme="https://newreport.top/categories/kubernetes/"/>
     
     
     <category term="CloudComputing" scheme="https://newreport.top/tags/CloudComputing/"/>
     
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="https://newreport.top/2022-07-03/undefined/"/>
-    <id>https://newreport.top/2022-07-03/undefined/</id>
-    <published>2022-07-02T18:18:47.002Z</published>
-    <updated>2021-07-03T06:44:18.000Z</updated>
+    <category term="Nfs" scheme="https://newreport.top/tags/Nfs/"/>
     
+    <category term="Nginx" scheme="https://newreport.top/tags/Nginx/"/>
     
-    
-    
+    <category term="MySQL" scheme="https://newreport.top/tags/MySQL/"/>
     
   </entry>
   
@@ -161,7 +116,7 @@
     <link href="https://newreport.top/2021-06-28/cloud-fullall/"/>
     <id>https://newreport.top/2021-06-28/cloud-fullall/</id>
     <published>2021-06-27T16:00:00.000Z</published>
-    <updated>2022-07-02T18:49:54.807Z</updated>
+    <updated>2022-08-22T15:51:57.275Z</updated>
     
     
       
@@ -174,21 +129,21 @@
     
     
     
-    <category term="杂物箱" scheme="https://newreport.top/categories/%E6%9D%82%E7%89%A9%E7%AE%B1/"/>
+    <category term="tools" scheme="https://newreport.top/categories/tools/"/>
     
     
-    <category term="对象存储" scheme="https://newreport.top/tags/%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8/"/>
+    <category term="object store" scheme="https://newreport.top/tags/object-store/"/>
     
-    <category term="待补充" scheme="https://newreport.top/tags/%E5%BE%85%E8%A1%A5%E5%85%85/"/>
+    <category term="sync" scheme="https://newreport.top/tags/sync/"/>
     
   </entry>
   
   <entry>
     <title>附页</title>
-    <link href="https://newreport.top/2021-06-23/English-1/"/>
-    <id>https://newreport.top/2021-06-23/English-1/</id>
+    <link href="https://newreport.top/2021-06-23/english-1/"/>
+    <id>https://newreport.top/2021-06-23/english-1/</id>
     <published>2021-06-22T16:00:02.000Z</published>
-    <updated>2021-06-23T12:43:21.000Z</updated>
+    <updated>2022-08-22T15:54:42.039Z</updated>
     
     
       
@@ -201,24 +156,24 @@
     
     
     
-    <category term="English" scheme="https://newreport.top/categories/English/"/>
+    <category term="english" scheme="https://newreport.top/categories/english/"/>
     
     
   </entry>
   
   <entry>
     <title>英语词性</title>
-    <link href="https://newreport.top/2021-06-23/English-part-of-speech/"/>
-    <id>https://newreport.top/2021-06-23/English-part-of-speech/</id>
+    <link href="https://newreport.top/2021-06-23/english-part-of-speech/"/>
+    <id>https://newreport.top/2021-06-23/english-part-of-speech/</id>
     <published>2021-06-22T16:00:01.000Z</published>
-    <updated>2021-06-23T12:27:09.000Z</updated>
+    <updated>2022-08-22T15:54:34.312Z</updated>
     
     
     <summary type="html">&lt;p&gt;定义：词性又称为词类，英语单词根据其在句中的作用，分为&lt;strong&gt;十大类&lt;/strong&gt;&lt;/p&gt;</summary>
     
     
     
-    <category term="English" scheme="https://newreport.top/categories/English/"/>
+    <category term="english" scheme="https://newreport.top/categories/english/"/>
     
     
   </entry>
@@ -228,7 +183,7 @@
     <link href="https://newreport.top/2021-06-23/list-introduction/"/>
     <id>https://newreport.top/2021-06-23/list-introduction/</id>
     <published>2021-06-22T16:00:00.000Z</published>
-    <updated>2022-08-07T15:38:25.872Z</updated>
+    <updated>2022-08-22T15:57:15.250Z</updated>
     
     
     <summary type="html">&lt;h1 id=&quot;列表是什么&quot;&gt;&lt;a href=&quot;#列表是什么&quot; class=&quot;headerlink&quot; title=&quot;列表是什么&quot;&gt;&lt;/a&gt;列表是什么&lt;/h1&gt;&lt;p&gt;类似于c的数组&lt;/p&gt;
@@ -243,14 +198,16 @@
     <category term="python3" scheme="https://newreport.top/categories/python/python3/"/>
     
     
+    <category term="Python" scheme="https://newreport.top/tags/Python/"/>
+    
   </entry>
   
   <entry>
     <title>变量和简单数据类型</title>
-    <link href="https://newreport.top/2021-06-22/Variables-and-simple-data-types/"/>
-    <id>https://newreport.top/2021-06-22/Variables-and-simple-data-types/</id>
+    <link href="https://newreport.top/2021-06-22/variables-and-simple-data-types/"/>
+    <id>https://newreport.top/2021-06-22/variables-and-simple-data-types/</id>
     <published>2021-06-21T16:00:00.000Z</published>
-    <updated>2022-08-05T15:48:18.880Z</updated>
+    <updated>2022-08-22T15:57:08.055Z</updated>
     
     
     <summary type="html">&lt;h1 id=&quot;运行hello-world&quot;&gt;&lt;a href=&quot;#运行hello-world&quot; class=&quot;headerlink&quot; title=&quot;运行hello world&quot;&gt;&lt;/a&gt;运行hello world&lt;/h1&gt;&lt;p&gt;vim 1.py&lt;/p&gt;
@@ -264,6 +221,8 @@
     <category term="python3" scheme="https://newreport.top/categories/python/python3/"/>
     
     
+    <category term="Python" scheme="https://newreport.top/tags/Python/"/>
+    
   </entry>
   
   <entry>
@@ -271,7 +230,7 @@
     <link href="https://newreport.top/2021-06-21/python-basic-knowledge/"/>
     <id>https://newreport.top/2021-06-21/python-basic-knowledge/</id>
     <published>2021-06-20T16:00:00.000Z</published>
-    <updated>2022-08-07T15:38:17.697Z</updated>
+    <updated>2022-08-22T15:56:33.046Z</updated>
     
     
       
@@ -290,6 +249,8 @@
     <category term="python3" scheme="https://newreport.top/categories/python/python3/"/>
     
     
+    <category term="Python" scheme="https://newreport.top/tags/Python/"/>
+    
   </entry>
   
   <entry>
@@ -297,7 +258,7 @@
     <link href="https://newreport.top/2021-01-07/cloud-make/"/>
     <id>https://newreport.top/2021-01-07/cloud-make/</id>
     <published>2021-01-06T16:00:01.000Z</published>
-    <updated>2022-07-02T18:23:42.779Z</updated>
+    <updated>2022-08-22T15:58:13.520Z</updated>
     
     
       
@@ -311,12 +272,10 @@
     
     
     
-    <category term="杂物箱" scheme="https://newreport.top/categories/%E6%9D%82%E7%89%A9%E7%AE%B1/"/>
+    <category term="tools" scheme="https://newreport.top/categories/tools/"/>
     
     
-    <category term="对象存储" scheme="https://newreport.top/tags/%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8/"/>
-    
-    <category term="待补充" scheme="https://newreport.top/tags/%E5%BE%85%E8%A1%A5%E5%85%85/"/>
+    <category term="object storage" scheme="https://newreport.top/tags/object-storage/"/>
     
   </entry>
   
@@ -325,17 +284,17 @@
     <link href="https://newreport.top/2021-01-06/img-make/"/>
     <id>https://newreport.top/2021-01-06/img-make/</id>
     <published>2021-01-05T16:00:01.000Z</published>
-    <updated>2022-08-10T16:22:38.985Z</updated>
+    <updated>2022-08-22T15:57:55.834Z</updated>
     
     
     <summary type="html">&lt;p&gt;需要准备对象存储及域名，理论”永久链”图床，可在各云服务商或个人服务器间迁移数据&lt;br&gt;如果你是国外的域名，markdown是国内使用，需要绑定国内第三方dns，这里以&lt;a href=&quot;https://www.namesilo.com/&quot;&gt;namesilo&lt;/a&gt;域名绑定&lt;a href=&quot;https://www.dnspod.cn/&quot;&gt;dnspod&lt;/a&gt;为例。&lt;/p&gt;</summary>
     
     
     
-    <category term="博客搭建" scheme="https://newreport.top/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
+    <category term="website" scheme="https://newreport.top/categories/website/"/>
     
     
-    <category term="对象存储" scheme="https://newreport.top/tags/%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8/"/>
+    <category term="object store" scheme="https://newreport.top/tags/object-store/"/>
     
   </entry>
   
@@ -344,7 +303,7 @@
     <link href="https://newreport.top/2021-01-05/function-cloud/"/>
     <id>https://newreport.top/2021-01-05/function-cloud/</id>
     <published>2021-01-04T16:00:02.000Z</published>
-    <updated>2021-06-22T12:04:49.000Z</updated>
+    <updated>2022-08-22T15:49:13.259Z</updated>
     
     
     <summary type="html">&lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;https://developers.weixin.qq.com/miniprogram/dev/wxcloud/guide/functions.html&quot;&gt;云函数简介&lt;/a&gt;&lt;br&gt;长不看结论：总之就是跑脚本，也可以跑微信的推送等事件。目前我只用它在跑签到脚本。&lt;/p&gt;
@@ -352,10 +311,10 @@
     
     
     
-    <category term="杂物箱" scheme="https://newreport.top/categories/%E6%9D%82%E7%89%A9%E7%AE%B1/"/>
+    <category term="website" scheme="https://newreport.top/categories/website/"/>
     
     
-    <category term="云服务" scheme="https://newreport.top/tags/%E4%BA%91%E6%9C%8D%E5%8A%A1/"/>
+    <category term="CloudService" scheme="https://newreport.top/tags/CloudService/"/>
     
   </entry>
   
@@ -364,7 +323,7 @@
     <link href="https://newreport.top/2021-01-05/make-domainname/"/>
     <id>https://newreport.top/2021-01-05/make-domainname/</id>
     <published>2021-01-04T16:00:01.000Z</published>
-    <updated>2022-08-07T18:52:54.023Z</updated>
+    <updated>2022-08-22T15:48:38.613Z</updated>
     
     
     <summary type="html">&lt;h1 id=&quot;域名服务商&quot;&gt;&lt;a href=&quot;#域名服务商&quot; class=&quot;headerlink&quot; title=&quot;域名服务商&quot;&gt;&lt;/a&gt;域名服务商&lt;/h1&gt;&lt;p&gt;个人站除开com、net这两个域名，其他推荐选择国外服务商进行注册。以下仅列举一些我接触过的，还有很多其他的服务商就不一一列举了  &lt;/p&gt;
@@ -385,7 +344,7 @@
     
     
     
-    <category term="博客搭建" scheme="https://newreport.top/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
+    <category term="website" scheme="https://newreport.top/categories/website/"/>
     
     
   </entry>
@@ -412,10 +371,10 @@
   
   <entry>
     <title>了解文件系统的和基本操作</title>
-    <link href="https://newreport.top/2021-01-04/Understand-the-file-system-and-basic-operations/"/>
-    <id>https://newreport.top/2021-01-04/Understand-the-file-system-and-basic-operations/</id>
+    <link href="https://newreport.top/2021-01-04/understand-the-file-system-and-basic-operations/"/>
+    <id>https://newreport.top/2021-01-04/understand-the-file-system-and-basic-operations/</id>
     <published>2021-01-03T16:00:00.000Z</published>
-    <updated>2022-08-07T18:42:42.469Z</updated>
+    <updated>2022-08-22T15:56:28.506Z</updated>
     
     
     <summary type="html">&lt;h1 id=&quot;学习目标&quot;&gt;&lt;a href=&quot;#学习目标&quot; class=&quot;headerlink&quot; title=&quot;学习目标&quot;&gt;&lt;/a&gt;学习目标&lt;/h1&gt;&lt;ul&gt;
@@ -459,6 +418,8 @@
     <category term="rhel8" scheme="https://newreport.top/categories/linux/rhel8/"/>
     
     
+    <category term="Linux" scheme="https://newreport.top/tags/Linux/"/>
+    
   </entry>
   
   <entry>
@@ -466,7 +427,7 @@
     <link href="https://newreport.top/2021-01-03/Run-commands-and-get-help/"/>
     <id>https://newreport.top/2021-01-03/Run-commands-and-get-help/</id>
     <published>2021-01-02T16:00:00.000Z</published>
-    <updated>2022-08-07T18:33:59.831Z</updated>
+    <updated>2022-08-22T15:44:13.222Z</updated>
     
     
     <summary type="html">&lt;h1 id=&quot;学习目标&quot;&gt;&lt;a href=&quot;#学习目标&quot; class=&quot;headerlink&quot; title=&quot;学习目标&quot;&gt;&lt;/a&gt;学习目标&lt;/h1&gt;&lt;ul&gt;
@@ -508,6 +469,118 @@
     
     <category term="rhel8" scheme="https://newreport.top/categories/linux/rhel8/"/>
     
+    
+    <category term="linux" scheme="https://newreport.top/tags/linux/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Linux的基本使用</title>
+    <link href="https://newreport.top/2021-01-02/Linux-Basic-use/"/>
+    <id>https://newreport.top/2021-01-02/Linux-Basic-use/</id>
+    <published>2021-01-01T16:00:00.000Z</published>
+    <updated>2022-08-22T15:44:08.970Z</updated>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;学习目标&quot;&gt;&lt;a href=&quot;#学习目标&quot; class=&quot;headerlink&quot; title=&quot;学习目标&quot;&gt;&lt;/a&gt;学习目标&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;登录Red Hat Enterprise Linux系统&lt;/li&gt;
+&lt;li&gt;从控制台启动图形&lt;/li&gt;
+&lt;li&gt;执行简单的linux命令&lt;/li&gt;
+&lt;li&gt;编辑纯文本文件&lt;/li&gt;
+&lt;li&gt;掌握root特性&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&quot;简单的命令&quot;&gt;&lt;a href=&quot;#简单的命令&quot; class=&quot;headerlink&quot; title=&quot;简单的命令&quot;&gt;&lt;/a&gt;简单的命令&lt;/h1&gt;&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;命令&lt;/th&gt;
+&lt;th&gt;功能&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;&lt;tr&gt;
+&lt;td&gt;date&lt;/td&gt;
+&lt;td&gt;显示日期&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;cal&lt;/td&gt;
+&lt;td&gt;显示日历&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;passwd&lt;/td&gt;
+&lt;td&gt;修改密码&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;id&lt;/td&gt;
+&lt;td&gt;显示当前用户信息&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;useradd&lt;/td&gt;
+&lt;td&gt;创建用户&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;su -&lt;/td&gt;
+&lt;td&gt;切换用户&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;vim&lt;/td&gt;
+&lt;td&gt;文本编辑器的使用&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;&lt;/table&gt;</summary>
+    
+    
+    
+    <category term="linux" scheme="https://newreport.top/categories/linux/"/>
+    
+    <category term="rhel8" scheme="https://newreport.top/categories/linux/rhel8/"/>
+    
+    
+    <category term="linux" scheme="https://newreport.top/tags/linux/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Linux的简介和安装</title>
+    <link href="https://newreport.top/2021-01-01/Linux-introduction-and-installation/"/>
+    <id>https://newreport.top/2021-01-01/Linux-introduction-and-installation/</id>
+    <published>2020-12-31T16:00:00.000Z</published>
+    <updated>2022-08-10T16:22:38.985Z</updated>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;学习目标&quot;&gt;&lt;a href=&quot;#学习目标&quot; class=&quot;headerlink&quot; title=&quot;学习目标&quot;&gt;&lt;/a&gt;学习目标&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;Linux系统和红帽认证的基本介绍&lt;/li&gt;
+&lt;li&gt;RHEL8.0系统的安装&lt;/li&gt;
+&lt;li&gt;掌握开源软件的本质&lt;/li&gt;
+&lt;li&gt;探讨linux的起源&lt;/li&gt;
+&lt;li&gt;Red Hat操作系统的发行版&lt;/li&gt;
+&lt;li&gt;其他Linux系统的发行版&lt;/li&gt;
+&lt;li&gt;了解linux的基本原理&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&quot;linux系统安装&quot;&gt;&lt;a href=&quot;#linux系统安装&quot; class=&quot;headerlink&quot; title=&quot;linux系统安装&quot;&gt;&lt;/a&gt;linux系统安装&lt;/h1&gt;&lt;p&gt;CentOS下载：&lt;a href=&quot;https://www.centos.org/download/&quot;&gt;https://www.centos.org/download/&lt;/a&gt;&lt;br&gt;DVD ISO：标准安装版，一般下载这个就可以了（推荐）&lt;br&gt;Everything ISO：对完整版安装盘的软件进行补充，集成所有软件。（包含一套完整的软件包，可以用来安装系统或者填充本地镜像）&lt;br&gt;Minimal ISO：迷你版，小巧、安装快速、自带的软件少&lt;br&gt;CentOS所有历史版本的下载地址：&lt;a href=&quot;http://archive.kernel.org/centos-vault/&quot;&gt;http://archive.kernel.org/centos-vault/&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://www.lofter.com/lpost/4ba01091_1cabbd565&quot;&gt;rhel8安装手册&lt;/a&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="linux" scheme="https://newreport.top/categories/linux/"/>
+    
+    <category term="rhel8" scheme="https://newreport.top/categories/linux/rhel8/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>hexo-next7食用方法</title>
+    <link href="https://newreport.top/2020-12-21/use-hexo-next7/"/>
+    <id>https://newreport.top/2020-12-21/use-hexo-next7/</id>
+    <published>2020-12-20T16:00:00.000Z</published>
+    <updated>2022-08-22T15:58:27.725Z</updated>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;博客启用（前略环境搭建）&quot;&gt;&lt;a href=&quot;#博客启用（前略环境搭建）&quot; class=&quot;headerlink&quot; title=&quot;博客启用（前略环境搭建）&quot;&gt;&lt;/a&gt;博客启用（前略环境搭建）&lt;/h1&gt;&lt;p&gt;新建文件夹，之后在其中执行：hexo init。&lt;br&gt;hexo-next7官方git：&lt;a href=&quot;https://github.com/theme-next/hexo-theme-next&quot;&gt;https://github.com/theme-next/hexo-theme-next&lt;/a&gt;&lt;br&gt;hexo-next8官方git：&lt;a href=&quot;https://github.com/next-theme/hexo-theme-next&quot;&gt;https://github.com/next-theme/hexo-theme-next&lt;/a&gt;&lt;br&gt;git配置：npm install –save hexo-deployer-git；多用户指定其一：githubgit config –global user.email “邮箱”和git config –global user.name “用户名”&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="website" scheme="https://newreport.top/categories/website/"/>
+    
+    
+    <category term="tools" scheme="https://newreport.top/tags/tools/"/>
     
   </entry>
   
