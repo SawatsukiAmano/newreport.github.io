@@ -1,5 +1,0 @@
-# robots.txt 
-User-agent: *
-Disallow: 
-Disallow: /bin/
-Sitemap: https://xn--rhq388ct6kcjm.com/sitemap.xml
