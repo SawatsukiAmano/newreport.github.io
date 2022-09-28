@@ -1,5 +1,5 @@
 *.js linguist-language=java
 *.css linguist-language=java
 *.html linguist-language=java
-*.styl linguist-language=go
+*.styl linguist-language=Go
 
