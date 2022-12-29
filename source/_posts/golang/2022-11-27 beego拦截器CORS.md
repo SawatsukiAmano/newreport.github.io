@@ -7,6 +7,8 @@ categories: golang
 ---
 > 跨域仅为浏览器的安全策略，对于其他形式的 http client（ postman，自己写的 python client 、java client 等 ）无效
 
+<!-- more -->  
+
 ```go
 package routers
 
