@@ -17,7 +17,7 @@ yum remove docker docker-client docker-client-latest docker-common docker-latest
 ```bash
 yum install -y yum-utils device-mapper-persistent-data lvm2
 ```
-
+<!-- more -->  
 3. 设置仓库
 ```bash
 yum-config-manager --add-repo https://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo
