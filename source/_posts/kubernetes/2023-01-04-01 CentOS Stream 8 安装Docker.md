@@ -5,7 +5,8 @@ date: 2023-01-04 00:00:01
 urlname: centos-stream-8-install-docker-and-link-portainer
 tags: 
  - Docker
-categories: docker/podman
+ - Portainer
+categories: kubernetes/docker/podman
 ---
 
 1. 卸载老版本
