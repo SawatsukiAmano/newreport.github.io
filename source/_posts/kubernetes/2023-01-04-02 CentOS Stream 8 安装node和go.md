@@ -1,5 +1,5 @@
 ---
-title: CentOS Stream 8 安装node和go
+title: CentOS Stream 8 安装 node 和 go
 copyright: true
 date: 2023-01-04 00:00:02
 urlname: centos-stream-8-install-node-and-go

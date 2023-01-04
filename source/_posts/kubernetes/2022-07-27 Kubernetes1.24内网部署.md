@@ -1,5 +1,5 @@
 ---
-title: Kubernetes1.24内网部署
+title: Kubernetes 1.24 内网部署
 copyright: true
 date: 2022-07-27 00:00:01
 urlname: kubernetes-1-24-inside-install

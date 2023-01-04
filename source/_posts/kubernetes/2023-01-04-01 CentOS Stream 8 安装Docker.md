@@ -1,5 +1,5 @@
 ---
-title: CentOS Stream 8 安装Docker并连接Portainer
+title: CentOS Stream 8 安装 Docker 并连接 Portainer
 copyright: true
 date: 2023-01-04 00:00:01
 urlname: centos-stream-8-install-docker-and-link-portainer
