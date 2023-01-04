@@ -4,7 +4,6 @@ copyright: true
 date: 2022-07-27 00:00:01
 urlname: kubernetes-1-24-inside-install
 tags: 
- - CloudComputing
  - NFS
  - Nginx
  - MySQL

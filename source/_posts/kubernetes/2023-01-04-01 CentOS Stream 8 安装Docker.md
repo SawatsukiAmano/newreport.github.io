@@ -34,7 +34,6 @@ yum install docker-ce docker-ce-cli containerd.io
 vim /usr/lib/systemd/system/docker.service
 ```
 >ExecStart=/usr/bin/dockerd **-H tcp://0.0.0.0:2375** -H unix://var/run/docker.sock
-
 6. 重启服务
 ```bash
 systemctl daemon-reload
