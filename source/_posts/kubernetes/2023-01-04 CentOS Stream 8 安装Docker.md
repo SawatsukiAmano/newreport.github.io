@@ -29,7 +29,7 @@ yum install docker-ce docker-ce-cli containerd.io
 ```
 
 5. 编辑docker.service
->找到 ExecStart字段修改如下，添加2375远程端口（粗体部分），
+>找到 ExecStart字段修改如下，添加2375远程端口（粗体部分）
 ```bash
 vim /usr/lib/systemd/system/docker.service
 ```
