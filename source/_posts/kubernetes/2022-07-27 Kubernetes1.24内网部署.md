@@ -12,12 +12,12 @@ tags:
 categories: kubernetes/docker/podman
 ---
 # 环境介绍
-> master：成都区 2核4G    10.0.0.17
-> cd001：成都区 2核4G     10.0.0.11
-> 主机：两台腾讯云轻量云，系统为CentOS Stream8，轻量云不支持EIP故不能公网搭K8s
-> Kubernetes版本：V1.24.3（截至2022-08-02，当前k8s最新版本为 1.24.3）
+> master：成都区 2 核 4G    10.0.0.17
+cd001：成都区 2 核 4G     10.0.0.11
+主机：两台腾讯云轻量云，系统为 CentOS Stream8，轻量云不支持 EIP 故不能公网搭 K8s
+Kubernetes 版本：V1.24.3（截至 2022-08-02，当前 k8s 最新版本为 1.24.3）
 <!-- more -->  
-# Master节点安装
+# Master 节点安装
 ##  主机配置
 ```bash
  # 设置主机名
@@ -39,8 +39,8 @@ EOF
 systemctl restart NetworkManager.service
 ```
 
-## 配置containerd
-> 将containerd作为k8s的容器引擎
+## 配置 containerd
+> 将 containerd 作为 k8s 的容器引擎
 ```bash
 # 阿里镜像源
 wget -O /etc/yum.repos.d/docker-ce.repo https://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo
@@ -67,8 +67,8 @@ systemctl restart containerd
 systemctl enable containerd
 systemctl start containerd
 ```
-## runc命令行配置
-> 检测runc、ctrcli、配置k8s源
+## runc 命令行配置
+> 检测 runc、ctrcli、配置 k8s 源
 ```bash
 ctr version
 runc -version 
@@ -88,8 +88,8 @@ yum makecache
 # k8s init时需要此应用进行网络测试
 yum install -y tc   
 ```
-## k8s组件安装
-> 安装配置k8s三件套并配置
+## k8s 组件安装
+> 安装配置 k8s 三件套并配置
 ```bash
 yum install -y kubectl kubelet kubeadm
 
@@ -107,7 +107,7 @@ crictl config image-endpoint unix:///run/containerd/containerd.sock
 # kubeadm config images list --kubernetes-version=v1.24.3
 ```
 
-## kubernetes初始化
+## kubernetes 初始化
 ```bash
 
 # 错误处理
@@ -137,7 +137,7 @@ crictl images
 
 crictl ps -a
 ```
-# Node节点安装
+# Node 节点安装
 ## 主机配置
 ```bash
  # 设置主机名
@@ -161,7 +161,7 @@ EOF
 systemctl restart NetworkManager.service
 ```
 
-## 配置containerd
+## 配置 containerd
 ```bash
 # 阿里镜像源
 wget -O /etc/yum.repos.d/docker-ce.repo https://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo
@@ -188,8 +188,8 @@ systemctl restart containerd
 systemctl enable containerd
 systemctl start containerd
 ```
-## runc命令行配置
-> 检测runc 和ctrcli、配置k8s源
+## runc 命令行配置
+> 检测 runc 和 ctrcli、配置 k8s 源
 ```bash
 ctr version
 runc -version 
@@ -209,7 +209,7 @@ yum makecache
 
 yum install -y tc
 ```
-## k8s node组件安装
+## k8s node 组件安装
 ```bash
 yum install -y  kubelet kubeadm
 
@@ -237,13 +237,13 @@ crictl config image-endpoint unix:///run/containerd/containerd.sock
 kubeadm join 10.0.0.17:6443 --token 9t45vv.40lt4exfxmirt7q2 --discovery-token-ca-cert-hash sha256:65cfa9a08c89e81357f3e394757ebb6c6c8000020c2e7411248cac2c4ef79c2e
 ```
 
-# 配置K8s容器网络
-> master节点执行
+# 配置 K8s 容器网络
+> master 节点执行
 ```bash
 wget https://docs.projectcalico.org/manifests/calico.yaml --no-check-certificate
 vim calico.yaml
 ```
-> 配置yaml文件,正确的虚拟ip和网卡
+> 配置 yaml 文件,正确的虚拟 ip 和网卡
 ```yaml
 # /CALICO_IPV4POOL_CIDR 进行查找，取消注释，将值改为pod-network-cidr的值
 # The default IPv4 pool to create on startup if none exists. Pod IPs will be
@@ -274,8 +274,8 @@ kubectl get node -o wide
 crictl ps -a
 ```
 ![通过 crictl 查看 containerd 的容器运行状态](https://gd-obj-001.gd2.qingstor.com/haruki/blog/cn/2022/871EFB1C13E616DBFBEC9E43A273852E08CA7EF3090D79DBE50647C24447E91D.png)
-# 配置NFS共享存储
-> 由于ceph资源消耗太大，服务器数量和性能都不够，暂时只能用NFS，之后大概会在自己电脑上开虚拟机试着搭下ceph
+# 配置 NFS 共享存储
+> 由于 ceph 资源消耗太大，服务器数量和性能都不够，暂时只能用 NFS，之后大概会在自己电脑上开虚拟机试着搭下 ceph
 
 > nfs server: cd001 10.0.0.11
 ```bash
@@ -334,9 +334,9 @@ df -TH
 ```
 ![nfs 挂载文件配置](https://gd-obj-001.gd2.qingstor.com/haruki/blog/cn/2022/A30C9689711F26C031325D2EE82625E7A353B232C0BF266975111C1C9CE4EC80.png)
 
-# 部署Nginx和MySql
-> 部署可以公网访问的nginx和持久化存储的mysql服务
-> master节点
+# 部署 Nginx 和 MySql
+> 部署可以公网访问的 nginx 和持久化存储的 mysql 服务
+master 节点
 ```bash
 # 新增和删除命名空间
 # kubectl create namespace my-namespace
