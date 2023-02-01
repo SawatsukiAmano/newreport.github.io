@@ -6,7 +6,9 @@ tags: # 标签
 urlname: use-hexo-next-8-and-ali-iconfont
 categories:  timeline
 ---
-阿里图标官网：https://iconfont.cn
+# 官网
+https://iconfont.cn
 
-将项目或者图标下载后，复制到 themes/next/source/lib/font-awesome/css/all.min.css 后面即可
 <!-- more -->
+# 步骤
+将项目或者图标下载后，将项目下的 css 文件内容复制到 themes/next/source/lib/font-awesome/css/all.min.css 后面即可
