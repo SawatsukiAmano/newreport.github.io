@@ -1,8 +1,8 @@
 ---
-title: Golang、CLDR 及国际化
+title: Golang国际化及 CLDR
 copyright: true
 date: 2023-02-09 00:00:00
-urlname: golang-CLDR-i18n
+urlname: golang-i18n-CLDR
 tags: 
  - CLDR
  - Golang
@@ -23,7 +23,7 @@ categories: golang
 
 对于人类这种高智慧性、高生命度的，则会讲你们、我们、他们、老师们、同志们、工人们。  
 
-所以中文的 CLDR 在 i18n 中很是有限，这点在日文中同理，因此在做 i18n 时，默认中日英时只用做英文的名字即可，在对待**人**时，在做中日的 CLDR 即可。
+所以中文的 CLDR 在 i18n 中很是有限，因此在做 i18n 时，默认中日英时只用做英文的复数，在对待**人**时，再做中文的 CLDR 即可。
 <!-- more -->
 
 
