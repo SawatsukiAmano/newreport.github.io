@@ -1,5 +1,5 @@
 ---
-title: Golang国际化及 CLDR
+title: Golang 国际化及 CLDR
 copyright: true
 date: 2023-02-09 00:00:00
 urlname: golang-i18n-CLDR

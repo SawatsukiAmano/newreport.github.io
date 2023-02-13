@@ -9,7 +9,7 @@ tags:
 categories: ai
 ---
 > 环境为 Ubuntu 22.04.1 LTS
-# 安装 3.10 版本python
+# 安装 3.10 版本 python
 ``` bash
 apt install git
 apt install python3.10
@@ -17,36 +17,41 @@ apt install python3.10
 alias python="python3"
 ```
 
-# 安装webui
+# 安装 webui
+> clone 项目和设置虚拟环境
 ``` bash
-# 从github拉取webui
+# 从 github 拉取 webui
 git clone https://github.com/AUTOMATIC1111/stable-diffusion-webui
 # 进入目录
 cd stable-diffusion-webui
-# 设置python虚拟环境
+# 设置 python 虚拟环境
 python -m venv venv
 # source bash
 source venv/bin/activate
-# 安装pip
+```
+> 安装 pip
+```bash
 python -m pip install --upgrade pip wheel
 
 python -m pip install xformers
 
 apt install -y miopenkernels-gfx1030-36kdb
-
-TORCH_COMMAND='pip install torch torchvision --extra-index-url https://download.pytorch.org/whl/rocm5.1.1' python launch.py --precision full --no-half --skip-torch-cuda-test 
 ```
-
+> 运行 launch 自动安装依赖
+```bash
+TORCH_COMMAND='pip install torch torchvision --extra-index-url https://download.pytorch.org/whl/rocm5.1.1' 
+python launch.py --precision full --no-half --skip-torch-cuda-test 
+```
 # 下载模型
 ``` bash
-cd Stable-diffusion/
+cd models/Stable-diffusion/
 # sd 1.5
 wget https://huggingface.co/runwayml/stable-diffusion-v1-5/resolve/main/v1-5-pruned.ckpt
 # sd 2.1
 wget https://huggingface.co/stabilityai/stable-diffusion-2-1/resolve/main/v2-1_768-ema-pruned.ckpt
 ```
 
-# 启动webui
+# 启动 webui
 ``` bash
 HSA_OVERRIDE_GFX_VERSION=10.3.0 ./venv/bin/python webui.py --listen --enable-insecure-extension-access
 ```
