@@ -8,7 +8,8 @@ tags:
  - Ubuntu
 categories: ai
 ---
-> 环境为 Ubuntu 22.04.1 LTS
+> 环境为 Ubuntu 22.04.1 LTS  
+> 注：不要买 A 卡，会变得不幸
 # 安装 3.10 版本 python
 ``` bash
 apt install git
