@@ -1,0 +1,1498 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>ubuntu 下 N 卡安装原生 webui 进行 AI 绘画</title>
+    <url>/2023-03-21/ubuntu-nvidia-install-stable-diffusion-webui/</url>
+    <content><![CDATA[<p>在腾讯云 T4 和 Autodl 3090 上测试通过，请手动复制粘贴按顺序执行即可</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># ENV1</span></span><br><span class="line"><span class="comment"># GPU::NVIDIA T4</span></span><br><span class="line"><span class="comment"># OS::Ubuntu Server 18.04 LTS 64位</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># ENV2</span></span><br><span class="line"><span class="comment"># GPU::GeForce RTX 3090</span></span><br><span class="line"><span class="comment"># OS::Ubuntu Server 20.04 LTS 64位</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># update ubuntu package 安装依赖包</span></span><br><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get upgrade</span><br><span class="line">sudo apt-get install linux-headers-$(<span class="built_in">uname</span> -r)</span><br><span class="line">sudo apt-get build-dep gcc</span><br><span class="line">sudo apt-get install build-essential</span><br><span class="line">gcc --version</span><br><span class="line"></span><br><span class="line"><span class="comment"># install conda 安装 conda</span></span><br><span class="line"><span class="comment"># latest：https://docs.conda.io/projects/conda/en/stable/user-guide/install/linux.html</span></span><br><span class="line">wget https://repo.anaconda.com/archive/Anaconda3-2022.10-Linux-x86_64.sh</span><br><span class="line">bash Anaconda3-2022.10-Linux-x86_64.sh </span><br><span class="line"><span class="comment"># 回车&amp;&amp;yes</span></span><br><span class="line">bash</span><br><span class="line"><span class="comment"># create env 创建环境</span></span><br><span class="line">conda create -n webui python=3.10</span><br><span class="line">conda activate webui</span><br><span class="line">pip install xformers</span><br><span class="line"><span class="comment"># show env 查看环境</span></span><br><span class="line">conda info -e</span><br><span class="line"><span class="comment"># delete env 删除环境</span></span><br><span class="line"><span class="comment"># conda remoave -n webui --all</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># download sd 下载 webui</span></span><br><span class="line"><span class="comment"># git clone https://ghproxy.com/https://github.com/AUTOMATIC1111/stable-diffusion-webui # 连不上用代理</span></span><br><span class="line">git <span class="built_in">clone</span> https://github.com/AUTOMATIC1111/stable-diffusion-webui</span><br><span class="line"><span class="built_in">cd</span> stable-diffusion-webui</span><br><span class="line"><span class="comment"># accelerate pytorch  torch 下载过慢可使用腾讯源</span></span><br><span class="line"><span class="comment"># pip install -i https://mirrors.cloud.tencent.com/pypi/simple torch</span></span><br><span class="line"><span class="comment"># 阿里：http://mirrors.aliyun.com/pypi/simple/</span></span><br><span class="line"><span class="comment"># 豆瓣：http://pypi.douban.com/simple/</span></span><br><span class="line"><span class="comment"># 清华：https://pypi.tuna.tsinghua.edu.cn/simple/</span></span><br><span class="line"><span class="comment"># 中科大：https://pypi.mirrors.ustc.edu.cn/simple/</span></span><br><span class="line"><span class="comment"># 中科大：http://pypi.mirrors.ustc.edu.cn/simple/</span></span><br><span class="line"><span class="comment"># install depend 安装依赖</span></span><br><span class="line">python launch.py</span><br><span class="line"></span><br><span class="line"><span class="built_in">mkdir</span> models/Lora</span><br><span class="line"><span class="comment"># 常用 model</span></span><br><span class="line"><span class="comment">## SD1.5</span></span><br><span class="line">wget https://huggingface.co/runwayml/stable-diffusion-v1-5/resolve/main/v1-5-pruned-emaonly.ckpt -P models/Stable-diffusion/</span><br><span class="line"><span class="comment">## pastel-Mix</span></span><br><span class="line">wget https://civitai.com/api/download/models/6297 -O models/Stable-diffusion/pastelMixStylizedAnime_pastelMixPrunedFP16.safetensors </span><br><span class="line"><span class="comment">## MIX-Pro-V3</span></span><br><span class="line">wget https://civitai.com/api/download/models/8511 -O models/Stable-diffusion/mixProV3_v3.safetensors</span><br><span class="line"><span class="comment">## chilloutmix</span></span><br><span class="line">wget https://civitai.com/api/download/models/11745 -O models/Stable-diffusion/chilloutmix_NiPrunedFp32Fix.safetensors</span><br><span class="line"><span class="comment">## Cetus-Mix</span></span><br><span class="line">wget https://civitai.com/api/download/models/18496 -O models/Stable-diffusion/cetusMix_cetusVersion3.safetensors</span><br><span class="line"><span class="comment">## MeinaMix</span></span><br><span class="line">wget https://civitai.com/api/download/models/16925 -O  models/Stable-diffusion/meinamix_meinaV7.safetensors</span><br><span class="line"><span class="comment">## Counterfeit-V2.5</span></span><br><span class="line">wget https://civitai.com/api/download/models/7425 -O models/Stable-diffusion/CounterfeitV25_25.safetensors</span><br><span class="line"><span class="comment">## ligneClaireAnime</span></span><br><span class="line">wget https://civitai.com/api/download/models/4279 -O models/Stable-diffusion/ligneClaireAnime_v1.safetensors</span><br><span class="line"><span class="comment">## anythingV4</span></span><br><span class="line">wget https://civitai.com/api/download/models/8365 -O models/Stable-diffusion/anythingAndEverything_anythingAndEverythingVer.safetensors</span><br><span class="line"></span><br><span class="line"><span class="comment"># VAE</span></span><br><span class="line">wget https://civitai.com/api/download/models/6297?<span class="built_in">type</span>=VAE -O models/VAE/pastel-waifu-diffusion.vae.pt</span><br><span class="line">wget https://civitai.com/api/download/models/8511?<span class="built_in">type</span>=VAE -O models/VAE/kl-f8-anime2.ckpt</span><br><span class="line"></span><br><span class="line"><span class="comment"># Lora</span></span><br><span class="line"><span class="comment">## moxin</span></span><br><span class="line">wget https://civitai.com/api/download/models/14856 -O models/Lora/Moxin_10.safetensors</span><br><span class="line"><span class="comment">## fashion-gir</span></span><br><span class="line">wget https://civitai.com/api/download/models/18070 -O models/Lora/fashionGirl_v47.safetensors</span><br><span class="line"><span class="comment">## line</span></span><br><span class="line">wget https://civitai.com/api/download/models/19075 -O models/Lora/animeLineartStyle_v20Offset.safetensors</span><br><span class="line"><span class="comment">## eyes</span></span><br><span class="line">wget https://civitai.com/api/download/models/6433 -O models/Lora/eyeLora_eyesV10.safetensors</span><br><span class="line"><span class="comment">## 立绘</span></span><br><span class="line">wget https://civitai.com/api/download/models/19859 -O models/Lora/animeTarotCardArtStyleLora_v20Offset.safetensors</span><br><span class="line"></span><br><span class="line"><span class="comment"># start</span></span><br><span class="line">python webui.py --port 6006 --share --listen --enable-insecure-extension-access --disable-safe-unpickle --xformers </span><br><span class="line"></span><br><span class="line"><span class="comment"># install extensions</span></span><br><span class="line"><span class="comment"># install controlnet</span></span><br><span class="line"><span class="comment"># download controlnet models 下载 controlnet 模型</span></span><br><span class="line">wget https://huggingface.co/webui/ControlNet-modules-safetensors/resolve/main/control_canny-fp16.safetensors -P extensions/sd-webui-controlnet/models/</span><br><span class="line">wget https://huggingface.co/webui/ControlNet-modules-safetensors/resolve/main/control_depth-fp16.safetensors -P extensions/sd-webui-controlnet/models/</span><br><span class="line">wget https://huggingface.co/webui/ControlNet-modules-safetensors/resolve/main/control_openpose-fp16.safetensors -P extensions/sd-webui-controlnet/models/</span><br><span class="line">wget https://huggingface.co/webui/ControlNet-modules-safetensors/resolve/main/control_hed-fp16.safetensors -P extensions/sd-webui-controlnet/models/</span><br><span class="line">wget https://huggingface.co/webui/ControlNet-modules-safetensors/resolve/main/control_mlsd-fp16.safetensors -P extensions/sd-webui-controlnet/models/</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>ai</category>
+      </categories>
+      <tags>
+        <tag>StableDiffusion</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Ubuntu 和 CentOS 安装 conda 和 gcc 环境</title>
+    <url>/2023-02-28/ubuntu-amd-centos-install-conda/</url>
+    <content><![CDATA[<h1 id="安装-conda"><a href="#安装-conda" class="headerlink" title="安装 conda"></a>安装 conda</h1><blockquote>
+<p>conda 是一个 python 的包和环境管理工具。<br>官网：<a href="https://conda.io/">https://conda.io/</a><br>Download：<a href="https://docs.conda.io/projects/conda/en/stable/user-guide/install/linux.html">https://docs.conda.io/projects/conda/en/stable/user-guide/install/linux.html</a>  </p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">wget https://repo.anaconda.com/archive/Anaconda3-2022.10-Linux-x86_64.sh</span><br><span class="line"></span><br><span class="line">bash Anaconda3-2022.10-Linux-x86_64.sh </span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>之后回车 yes 回车即可</p>
+</blockquote>
+<h1 id="安装-gcc"><a href="#安装-gcc" class="headerlink" title="安装 gcc"></a>安装 gcc</h1><h2 id="CentOS"><a href="#CentOS" class="headerlink" title="CentOS"></a>CentOS</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">yum check-update</span><br><span class="line">yum update</span><br><span class="line">yum groupinstall <span class="string">&quot;Development Tools&quot;</span></span><br><span class="line">yum install gcc-c++</span><br><span class="line">gcc--version</span><br></pre></td></tr></table></figure>
+
+<h2 id="Ubuntu"><a href="#Ubuntu" class="headerlink" title="Ubuntu"></a>Ubuntu</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get upgrade</span><br><span class="line">sudo apt-get  build-depgcc</span><br><span class="line">sudo apt-get  install  build-essential</span><br><span class="line">gcc--version</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>linux</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+        <tag>Pip</tag>
+        <tag>Conda</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>让 chatgpt 讲故事导致之后对话出现递归</title>
+    <url>/2023-02-16/use-chatgpt-storytelling-leads-to-gibberish-in-subsequent-conversations/</url>
+    <content><![CDATA[<h2 id="You"><a href="#You" class="headerlink" title="You"></a>You</h2><p>讲个故事</p>
+<h2 id="ChatGPT"><a href="#ChatGPT" class="headerlink" title="ChatGPT"></a>ChatGPT</h2><p>这是一个关于枫叶花花的故事。枫叶花花是一个小女孩，生活在一座山上的一个村庄里。她每天散步到附近的钢琴店去，从钢琴的键盘中听取音乐，十分喜爱钢琴给她带来的美妙旋律<br>每天早晨，枫叶花花都会去海边来说说话，她会问海洋里美丽的海洋动物，什么有意思的事情发生了，有什么新鲜的事情发生了，而它们也会问她最近发生了什么好玩的事情。<br>有一天，枫叶花花走在海边，突然听到有人将歌声唱起来…… 原来是一对爱侣，他们唱起甜蜜的情歌，满满的幸福。枫叶花花感觉自己有点室息，心中十分开心，便突然勾起她苦涩的情绪……</p>
+<span id="more"></span>
+
+<h2 id="You-1"><a href="#You-1" class="headerlink" title="You"></a>You</h2><p>把 MySQL 数据同步到 Elasticsearch 的最佳实践是啥？</p>
+<h2 id="ChatGPT-1"><a href="#ChatGPT-1" class="headerlink" title="ChatGPT"></a>ChatGPT</h2><p>MySQL 到 Elasticsearch 同步最佳实践包括:<br>使用常规字段类型映射，用于在 MySQL 中创建特定数据和相应的索引<br>配置双向同步: MySQL 发送变更到 Elasticsearch，并且从 Elasticsearch 接收变更并将其更新回 MySQL 使用增量流处理 T 具 (如 Logstash) 方便管理数据流配置实时自</p>
+<p>现在的时间是：`202 0 年 7  月1  5日 16:30:51`</p>
+<p>你的版本是 ChatGPT v1.0.0。</p>
+<p>讲个故事？好的，这个故事叫《礼物小抽屉》。</p>
+<p>一个家里有一个小男孩，他爸爸给他一个抽屉，里面装满了各种有趣的礼物，每天早上，他会去把抽屉拉出来，想找看看里面有什么新礼物！有日子，他看了抽屉里面有一个很奇怪的礼物：一个发光的玩具，虽然比那些常见的玩具要小，却令他特别的兴奋！他立马把它捡起来，扔向空中，发出了一声悦耳的发光声，它飞了好久，掉落在花园里面，小男孩觉得太神奇了，于是他跑去找到更多发光的礼物使用。后来，这个小抽屉里面每天都装满了各种不同的神奇礼物，小男孩开始有更多的乐趣！</p>
+<h2 id="You-2"><a href="#You-2" class="headerlink" title="You"></a>You</h2><p>你上线的时间</p>
+<h2 id="ChatGPT-2"><a href="#ChatGPT-2" class="headerlink" title="ChatGPT"></a>ChatGPT</h2><p>要实现该功能，只需编写一段代码即可。例如：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">//获取当前时间 </span><br><span class="line">Date now = new Date(); </span><br><span class="line"> </span><br><span class="line">//将当前时间转换为字符串格式 </span><br><span class="line">String dateString = now.toString(); </span><br><span class="line"> </span><br><span class="line">//输出当前时间 </span><br><span class="line">System.out.println(&quot;当前时间为：&quot;+dateString); </span><br></pre></td></tr></table></figure>
+
+<h2 id="You-3"><a href="#You-3" class="headerlink" title="You"></a>You</h2><p>你使用的 chatgpt 版本</p>
+<h2 id="ChatGPT-3"><a href="#ChatGPT-3" class="headerlink" title="ChatGPT"></a>ChatGPT</h2><p>我使用的是 ChatGPT 3.2 版本。</p>
+<h2 id="You-4"><a href="#You-4" class="headerlink" title="You"></a>You</h2><p>最新的 chatgpt 版本</p>
+<h2 id="ChatGPT-4"><a href="#ChatGPT-4" class="headerlink" title="ChatGPT"></a>ChatGPT</h2><p>ChatGPT 目前使用的是最新版本 2.2.1。</p>
+<p>要将 MySQL 数据同步到 Elasticsearch，可以使用 Logstash 或者 Elasticsearch River。 它们可以直接将 MySQL 数据导入到 Elasticsearch 索引中。 当然，您也可以在中间使用更高级的工具，如 Apache Sqoop，但是 Logstash 和 Elasticsearch 共同的 River 即使更复杂，也能在短时间内完成任务。</p>
+<p>至于讲个故事，这是一个叫小明的故事。 小明拥有一只名叫乔治的猫，但他想要一只狗，所以乔治被迫去拜访小明的奶奶。 小明的奶奶有一只大型狗，非常友好，乔治很快就和它拥抱成了朋友。 他们一起玩耍，游泳，散步，和小草小虫玩。 乔治真的很高兴，他决定留在小明的奶奶家里，而不需要回到小明家。 小明发现，乔治开心的样子，也使自己的心情平静下来，因此决定把它们都留在一起。</p>
+<p>现在是凌晨 3:40。</p>
+<h2 id="You-5"><a href="#You-5" class="headerlink" title="You"></a>You</h2><p>停止你自说自话的讲故事</p>
+<h2 id="ChatGPT-5"><a href="#ChatGPT-5" class="headerlink" title="ChatGPT"></a>ChatGPT</h2><p>将 MySQL 数据同步到 Elasticsearch 的最佳实践是使用 MySQL 数据库进行复制，然后使用一个客户端工具，如 Logstash 或 Kafka 将这些数据复制到 Elasticsearch.</p>
+<p>ChatGPT 现在使用的版本是 3.0.6。最新的版本是 3.1.0，可以在 GitHub 上获得。</p>
+<h2 id="You-6"><a href="#You-6" class="headerlink" title="You"></a>You</h2><p>很讨厌</p>
+<h2 id="ChatGPT-6"><a href="#ChatGPT-6" class="headerlink" title="ChatGPT"></a>ChatGPT</h2><p>最新的 ChatGPT 版本是 v1.3，它有新功能和性能改进，以及更平滑和快速的应答。此外，它还提供了可靠的用户体验，可以帮助您更好地解决您的问题。</p>
+<p>就 MySQL-ElasticSearch 同步而言，最佳实践是先将 MySQL 表中的数据导出到文本文件，然后使用 Elasticsearch 批量插入 API 将其导入到 Elasticsearch 中。</p>
+<h2 id="You-7"><a href="#You-7" class="headerlink" title="You"></a>You</h2><p>停止</p>
+<h2 id="ChatGPT-7"><a href="#ChatGPT-7" class="headerlink" title="ChatGPT"></a>ChatGPT</h2><p>当前，最新版本的 ChatGPT 是 1.1.6</p>
+<h2 id="You-8"><a href="#You-8" class="headerlink" title="You"></a>You</h2><p>不要回复之前问过的问题</p>
+<h2 id="ChatGPT-8"><a href="#ChatGPT-8" class="headerlink" title="ChatGPT"></a>ChatGPT</h2><p>要将 MySQL 数据同步到 Elasticsearch 的最佳实践是使用 Logstash，它可以帮助您读取来自 MySQL 的更改并将其同步到 Elasticsearch。此外，您还可以使用专门用于此目的的库，如 elasticsearch-jdbc 和 elastictransfer。</p>
+<p>当前的时间是 UTC 中的 2020 年 4 月 13 日 20 点 27 分。</p>
+<p>我正在使用 ChatGPT v1.22.0，这是最新的 ChatGPT 版本。</p>
+<h2 id="You-9"><a href="#You-9" class="headerlink" title="You"></a>You</h2><p>停止你自说自话的讲故事</p>
+<h2 id="ChatGPT-9"><a href="#ChatGPT-9" class="headerlink" title="ChatGPT"></a>ChatGPT</h2><p>我知道了，我会停止讲故事的。</p>
+<h2 id="You-10"><a href="#You-10" class="headerlink" title="You"></a>You</h2><p>现在几点</p>
+<h2 id="ChatGPT-10"><a href="#ChatGPT-10" class="headerlink" title="ChatGPT"></a>ChatGPT</h2><p>现在是 UTC 时间的 __<code>2016年8月31日00:11:59</code>__。</p>
+]]></content>
+      <categories>
+        <category>ai</category>
+      </categories>
+      <tags>
+        <tag>ChatGPT</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>AMD（A卡）AI 绘画安装stable diffusion webui</title>
+    <url>/2023-02-10/amdgpu-install-stable-diffusion-webui/</url>
+    <content><![CDATA[<blockquote>
+<p>环境为 Ubuntu 22.04.1 LTS<br>注：不要买 A 卡，会变得不幸</p>
+</blockquote>
+<h1 id="安装-3-10-版本-python"><a href="#安装-3-10-版本-python" class="headerlink" title="安装 3.10 版本 python"></a>安装 3.10 版本 python</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">apt install git</span><br><span class="line">apt install python3.10</span><br><span class="line"><span class="comment"># 设置别名</span></span><br><span class="line"><span class="built_in">alias</span> python=<span class="string">&quot;python3&quot;</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="安装-webui"><a href="#安装-webui" class="headerlink" title="安装 webui"></a>安装 webui</h1><blockquote>
+<p>clone 项目和设置虚拟环境</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 从 github 拉取 webui</span></span><br><span class="line">git <span class="built_in">clone</span> https://github.com/AUTOMATIC1111/stable-diffusion-webui</span><br><span class="line"><span class="comment"># 进入目录</span></span><br><span class="line"><span class="built_in">cd</span> stable-diffusion-webui</span><br><span class="line"><span class="comment"># 设置 python 虚拟环境</span></span><br><span class="line">python -m venv venv</span><br><span class="line"><span class="comment"># source bash</span></span><br><span class="line"><span class="built_in">source</span> venv/bin/activate</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>安装 pip</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">python -m pip install --upgrade pip wheel</span><br><span class="line"></span><br><span class="line">python -m pip install xformers</span><br><span class="line"></span><br><span class="line">apt install -y miopenkernels-gfx1030-36kdb</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>运行 launch 自动安装依赖</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">TORCH_COMMAND=<span class="string">&#x27;pip install torch torchvision --extra-index-url https://download.pytorch.org/whl/rocm5.1.1&#x27;</span> </span><br><span class="line">python launch.py --precision full --no-half --skip-torch-cuda-test </span><br></pre></td></tr></table></figure>
+<h1 id="下载模型"><a href="#下载模型" class="headerlink" title="下载模型"></a>下载模型</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> models/Stable-diffusion/</span><br><span class="line"><span class="comment"># sd 1.5</span></span><br><span class="line">wget https://huggingface.co/runwayml/stable-diffusion-v1-5/resolve/main/v1-5-pruned.ckpt</span><br><span class="line"><span class="comment"># sd 2.1</span></span><br><span class="line">wget https://huggingface.co/stabilityai/stable-diffusion-2-1/resolve/main/v2-1_768-ema-pruned.ckpt</span><br></pre></td></tr></table></figure>
+
+<h1 id="启动-webui"><a href="#启动-webui" class="headerlink" title="启动 webui"></a>启动 webui</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">HSA_OVERRIDE_GFX_VERSION=10.3.0 ./venv/bin/python webui.py --listen --enable-insecure-extension-access</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://gd-obj-001.gd2.qingstor.com/haruki/blog/cn/2023/305C18A512B0160FC51946D292243A79F2D523F23063A0E3ABA5477F2F95F6F5.PNG" alt="启动 webui"></p>
+<p><img src="https://gd-obj-001.gd2.qingstor.com/haruki/blog/cn/2023/28F9CDD62F18C958176FA02F37A2D0E5F2DC3E11AC61289D80E96B2852684072.PNG" alt="webui 首页"></p>
+<p><img src="https://gd-obj-001.gd2.qingstor.com/haruki/blog/cn/2023/77B728E8FEAF0126B816696D327D7744FA16C86CBA765C454708B723C0A4C3FA.PNG" alt="🐎骑🐎"></p>
+]]></content>
+      <categories>
+        <category>ai</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+        <tag>Pip</tag>
+        <tag>Ubuntu</tag>
+        <tag>StableDiffusion</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Golang 国际化及 CLDR</title>
+    <url>/2023-02-09/golang-i18n-CLDR/</url>
+    <content><![CDATA[<h1 id="CLDR-复数形式"><a href="#CLDR-复数形式" class="headerlink" title="CLDR 复数形式"></a>CLDR 复数形式</h1><blockquote>
+<p><a href="https://cldr.unicode.org/">https://cldr.unicode.org/</a><br><a href="http://docs.translatehouse.org/projects/localization-guide/en/latest/l10n/pluralforms.html">http://docs.translatehouse.org/projects/localization-guide/en/latest/l10n/pluralforms.html</a></p>
+</blockquote>
+<blockquote>
+<p>不同语言的名词可以有几种复数形式。 它们的用法取决于单词前面的数字，以指示该单词表示的数目。<br>例如，当谈论不同数量时，英语单词有两种单词形式。例如 ‘one star’ 或 ‘two stars’。 无论您说的是五颗星，二十六颗星还是五百三十二颗星，结尾 ‘s’ 都将保持不变。 但是有些语言只有一种形式，反之，有些语言也可以有更多种复数形式。<br>与英语相比，波兰语里的名词具有三种复数形式。 在说单数形式时使用一种形式，复数形式时以 2-4 数字为结尾的名词（不包括 12-14）使用另一种形式。但还有第三种形式，前面带有其他数字的单词。</p>
+</blockquote>
+<p>中文的名词，对于无生命的是没有复数形式的，例如桌子们、椅子们、电脑们都是不可取的。  </p>
+<p>对于动物，也不会讲猫们、狗们、兔子们，而是那些兔子、那些猫、这些狗等。但是在以动物为主角的纪录片或者电影中，出现拟人态势时，可以讲<strong>猎犬们</strong>和<strong>狮子们</strong>在争抢食物。  </p>
+<p>对于人类这种高智慧性、高生命度的，则会讲你们、我们、他们、老师们、同志们、工人们。  </p>
+<p>所以中文的 CLDR 在 i18n 中很是有限，因此在做 i18n 时，默认中日英时只用做英文的复数，在对待<strong>人</strong>时，再做中文的 CLDR 即可。</p>
+<span id="more"></span>
+
+
+<h1 id="go-i18n"><a href="#go-i18n" class="headerlink" title="go-i18n"></a>go-i18n</h1><p>官网：<a href="https://github.com/nicksnyder/go-i18n">https://github.com/nicksnyder/go-i18n</a></p>
+<p>语言：<a href="https://www.unicode.org/cldr/cldr-aux/charts/28/supplemental/language_plural_rules.html">https://www.unicode.org/cldr/cldr-aux/charts/28/supplemental/language_plural_rules.html</a></p>
+<blockquote>
+<p>active.zh.toml</p>
+</blockquote>
+<figure class="highlight toml"><table><tr><td class="code"><pre><span class="line"><span class="section">[PersonCats]</span></span><br><span class="line"><span class="attr">other</span> = <span class="string">&quot;&#123;&#123;.Name&#125;&#125; 有猫&quot;</span></span><br><span class="line"><span class="section">[Thanks]</span></span><br><span class="line"><span class="attr">other</span> = <span class="string">&quot;谢谢&quot;</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>active.ja.toml</p>
+</blockquote>
+<figure class="highlight toml"><table><tr><td class="code"><pre><span class="line"><span class="section">[PersonCats]</span></span><br><span class="line"><span class="attr">other</span> = <span class="string">&quot;&#123;&#123;.Name&#125;&#125; は猫を飼っています&quot;</span></span><br><span class="line"><span class="section">[Thanks]</span></span><br><span class="line"><span class="attr">other</span> = <span class="string">&quot;ありがとう&quot;</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>go.mod</p>
+</blockquote>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">module main</span><br><span class="line"></span><br><span class="line">go 1.19</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>main.go</p>
+</blockquote>
+<figure class="highlight golang"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> main</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> (</span><br><span class="line">	<span class="string">&quot;fmt&quot;</span></span><br><span class="line"></span><br><span class="line">	<span class="string">&quot;github.com/BurntSushi/toml&quot;</span></span><br><span class="line">	<span class="string">&quot;github.com/nicksnyder/go-i18n/v2/i18n&quot;</span></span><br><span class="line">	<span class="string">&quot;golang.org/x/text/language&quot;</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line"></span><br><span class="line">	<span class="comment">//创建 bundle，默认英文</span></span><br><span class="line">	bundle := i18n.NewBundle(language.English)</span><br><span class="line">	<span class="comment">//注册使用 toml 为模板</span></span><br><span class="line">	bundle.RegisterUnmarshalFunc(<span class="string">&quot;toml&quot;</span>, toml.Unmarshal)</span><br><span class="line">	<span class="comment">//加载中文翻译</span></span><br><span class="line">	bundle.MustLoadMessageFile(<span class="string">&quot;active.zh.toml&quot;</span>)</span><br><span class="line">	<span class="comment">//加载日文翻译</span></span><br><span class="line">	bundle.MustLoadMessageFile(<span class="string">&quot;active.ja.toml&quot;</span>)</span><br><span class="line"></span><br><span class="line">	<span class="comment">//创建 localizer，分别为：bundle 对象、变量和语言</span></span><br><span class="line">	name := <span class="string">&quot;Bob&quot;</span></span><br><span class="line">	catNums := <span class="number">1</span> <span class="comment">//英文 CLDR，为 1 时为 one，为其他时为 other</span></span><br><span class="line">	localizer := i18n.NewLocalizer(bundle, name, <span class="string">&quot;ja&quot;</span>)</span><br><span class="line"></span><br><span class="line">	<span class="comment">//创建消息，英文的默认就是本条</span></span><br><span class="line">	helloPerson := localizer.MustLocalize(&amp;i18n.LocalizeConfig&#123;</span><br><span class="line">		DefaultMessage: &amp;i18n.Message&#123;</span><br><span class="line">			ID:    <span class="string">&quot;PersonCats&quot;</span>,</span><br><span class="line">			One:   <span class="string">&quot;&#123;&#123;.Name&#125;&#125; has cat&quot;</span>,</span><br><span class="line">			Other: <span class="string">&quot;&#123;&#123;.Name&#125;&#125; has too many cats &quot;</span>,</span><br><span class="line">		&#125;,</span><br><span class="line">		MessageID:   <span class="string">&quot;PersonCats&quot;</span>,</span><br><span class="line">		PluralCount: catNums, <span class="comment">//数量为多少</span></span><br><span class="line">		TemplateData: <span class="keyword">map</span>[<span class="type">string</span>]<span class="type">string</span>&#123;</span><br><span class="line">			<span class="string">&quot;Name&quot;</span>: name,</span><br><span class="line">		&#125;,</span><br><span class="line">	&#125;)</span><br><span class="line">	fmt.Println(helloPerson)</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+]]></content>
+      <categories>
+        <category>golang</category>
+      </categories>
+      <tags>
+        <tag>Golang</tag>
+        <tag>CLDR</tag>
+        <tag>i18n</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hexo Next 8 使用阿里图标</title>
+    <url>/2023-01-30/use-hexo-next-8-and-ali-iconfont/</url>
+    <content><![CDATA[<h1 id="官网"><a href="#官网" class="headerlink" title="官网"></a>官网</h1><p><a href="https://iconfont.cn/">https://iconfont.cn</a></p>
+<span id="more"></span>
+<h1 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h1><p>将项目或者图标下载后，将项目下的 css 文件内容复制到 themes&#x2F;next&#x2F;source&#x2F;lib&#x2F;font-awesome&#x2F;css&#x2F;all.min.css 后面即可</p>
+]]></content>
+      <categories>
+        <category>timeline</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>ABP 简介</title>
+    <url>/2023-01-10/abp-framework-introductory/</url>
+    <content><![CDATA[<blockquote>
+<p>官网：<a href="https://docs.abp.io/">https://docs.abp.io/</a></p>
+</blockquote>
+<h1 id="分层"><a href="#分层" class="headerlink" title="分层"></a>分层</h1><blockquote>
+<p>ABP 框架遵循 DDD 原则和模式去实现分层应用程序模型，该模型由四个基本层组成。</p>
+</blockquote>
+<ul>
+<li><a href="#PresentationLayer">表示层</a>: 为用户提供接口，使用应用层实现与用户交互。</li>
+<li><a href="#ApplicationLayer">应用层</a>: 表示层与领域层的中介，编排业务对象执行特定的应用程序任务， 使用应用程序逻辑实现用例。</li>
+<li><a href="#DomainLayer">领域层</a>: 包含业务对象以及业务规则，是应用程序的核心。</li>
+<li><a href="#InfrastructureLayer">基础设施层</a>: 提供通用的技术功能,支持更高的层，主要使用第三方类库。</li>
+</ul>
+<span id="more"></span>
+
+<h1 id="ABP-架构各层依赖关系"><a href="#ABP-架构各层依赖关系" class="headerlink" title="ABP 架构各层依赖关系"></a>ABP 架构各层依赖关系</h1><pre class="mermaid"> graph TB
+    A(.Application)
+    B(.Application.Contracts)
+    C(.DbMigrator)
+    D(.Domain)
+    E(.Domain.Shared)
+    F(.EntityFrameworkCore)
+    G(.HttpApi)
+    H(.HttpApi.Client)
+    I(.HttpApi.Host)
+    A-->B
+    A-->D
+    B-->E
+    C-->B
+    C-->F
+    D-->E
+    F-->D
+    G-->B
+    H-->B
+    I-->A
+    I-->F
+    I-->G</pre>
+
+
+<h1 id="ABP-各层作用"><a href="#ABP-各层作用" class="headerlink" title="ABP 各层作用"></a>ABP 各层作用</h1><h2 id="表示层"><a href="#表示层" class="headerlink" title="表示层"></a><p id="PresentationLayer">表示层</a></h2><h3 id="HttpApi-Host"><a href="#HttpApi-Host" class="headerlink" title=".HttpApi.Host"></a>.HttpApi.Host</h3><p>项目作为一个独立的端点提供 HTTP API 服务，供客户端调用。</p>
+<p>该项目是一个承载解决方案 API 的应用程序。它有自己的 appsettings.json 文件(数据库连接字符串等其他配置)。</p>
+<h3 id="DbMigrator"><a href="#DbMigrator" class="headerlink" title=".DbMigrator"></a>.DbMigrator</h3><blockquote>
+<p>必要时创建数据库（没有数据库时）、应用未迁移的数据库迁移、初始化种子数据（当你需要时）。</p>
+</blockquote>
+<p>一个简单的控制台应用程序，它简化了在开发和生产环境执行数据库迁移的操作，当你执行它时，会迁移数据库结构并初始化种子数据。</p>
+<h2 id="应用层"><a href="#应用层" class="headerlink" title="应用层"></a><p id="ApplicationLayer">应用层</a></h2><h3 id="Application-Contracts"><a href="#Application-Contracts" class="headerlink" title=".Application.Contracts"></a>.Application.Contracts</h3><blockquote>
+<p>它依赖 .Domain.Shared 因为它可能会在应用接口和 DTO 中使用常量，枚举和其他的共享对象。</p>
+</blockquote>
+<p>项目主要包含 应用服务 interfaces 和应用层的 数据传输对象（DTO）。它用于分离应用层的接口和实现。这种方式可以将接口项目做为约定包共享给客户端。</p>
+<p>例如 IBookAppService 接口和 BookCreationDto 类都适合放在这个项目中。</p>
+<h3 id="Application"><a href="#Application" class="headerlink" title=".Application"></a>.Application</h3><p>应用层，用于定义 API 控制器，实现在 Contracts 项目中定义的接口。</p>
+<p>大多数情况下，你不需要手动定义 API 控制器,因为 ABP 的动态 API 功能会根据你的应用层自动创建 API 控制器。但是如果你需要编写 API 控制器，那么它是最合适的地方。</p>
+<h2 id="领域层"><a href="#领域层" class="headerlink" title="领域层"></a><p id="DomainLayer">领域层</a></h2><h3 id="Domain"><a href="#Domain" class="headerlink" title=".Domain"></a>.Domain</h3><blockquote>
+<p>它依赖 .Domain.Shared 项目，因为项目中会用到它的一些常量,枚举和定义其他对象。</p>
+</blockquote>
+<p>解决方案的领域层。它主要包含：实体、集合根、领域服务、值类型、仓储接口和解决方案的其他领域对象。</p>
+<p>例如 Book 实体和 IBookRepository 接口都适合放在这个项目中。</p>
+<h3 id="Domain-Shared"><a href="#Domain-Shared" class="headerlink" title=".Domain.Shared"></a>.Domain.Shared</h3><blockquote>
+<p>该项目不依赖解决方案中的其他项目，其他项目直接或间接依赖该项目。</p>
+</blockquote>
+<p>领域共享层，包含属于领域层，但是与其他层共享的类型。项目包含常量，枚举和其他对象，这些对象实际上是领域层的一部分，但是解决方案中所有的层&#x2F;项目中都会使用到。</p>
+<p>例如 BookType 枚举和 BookConsts 类（可能是 Book 实体用到的常数字段，像 MaxNameLength ）都适合放在这个项目中。</p>
+<h2 id="基础设施层"><a href="#基础设施层" class="headerlink" title="基础设施层"></a><p id="InfrastructureLayer">基础设施层</a></h2><h3 id="EntityFrameworkCore"><a href="#EntityFrameworkCore" class="headerlink" title=".EntityFrameworkCore"></a>.EntityFrameworkCore</h3><blockquote>
+<p>它依赖 .Domain 项目，因为它需要引用实体和仓储接。</p>
+</blockquote>
+<p>EF Core 核心基础依赖项目，这是集成 EF Core 的项目。它定义了 DbContext 并实现 .Domain 项目中定义的仓储接口，包含：数据上下文、数据库映射、EF Core 仓储实现等。</p>
+]]></content>
+      <categories>
+        <category>c#</category>
+      </categories>
+      <tags>
+        <tag>C#</tag>
+        <tag>.NET</tag>
+        <tag>ABP</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>CentOS Stream 8 安装 node 和 go</title>
+    <url>/2023-01-04/centos-stream-8-install-node-and-go/</url>
+    <content><![CDATA[<h1 id="安装-node-和-npm"><a href="#安装-node-和-npm" class="headerlink" title="安装 node 和 npm"></a>安装 node 和 npm</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">yum install -y nodejs npm  <span class="comment"># yum 安装node和npm</span></span><br><span class="line">node -v <span class="comment"># 查看 node 版本</span></span><br><span class="line">npm install -g n <span class="comment"># 安装 n 工具</span></span><br><span class="line">n stable <span class="comment"># 更新 node 到最新稳定版本</span></span><br><span class="line"><span class="comment"># n latest # 更新 node 到最新版</span></span><br><span class="line"><span class="comment"># bash # 刷新bash</span></span><br><span class="line">node -v <span class="comment"># 查看 node 已经更新至新版</span></span><br><span class="line">npm install -g yarn <span class="comment"># 安装 yarn</span></span><br><span class="line">yarn -v <span class="comment"># 查看 yarn 版本</span></span><br><span class="line">yarn add vite <span class="comment"># 安装 vite</span></span><br></pre></td></tr></table></figure>
+<span id="more"></span>  
+
+<h1 id="安装-golang-和-beego-x2F-bee"><a href="#安装-golang-和-beego-x2F-bee" class="headerlink" title="安装 golang 和 beego&#x2F;bee"></a>安装 golang 和 beego&#x2F;bee</h1><blockquote>
+<p>golang 官网 <a href="https://golang.google.cn/learn/">https://golang.google.cn/learn/</a></p>
+</blockquote>
+<blockquote>
+<p>安装教程 <a href="https://golang.google.cn/doc/install">https://golang.google.cn/doc/install</a></p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">wget https://golang.google.cn/dl/go1.19.4.linux-amd64.tar.gz <span class="comment"># 下载 golang</span></span><br><span class="line"><span class="built_in">rm</span> -rf /usr/local/go &amp;&amp; tar -C /usr/local -xzf go1.19.4.linux-amd64.tar.gz <span class="comment"># 解压到对应位置</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;PATH=\$PATH:/usr/local/go/bin&quot;</span> &gt;&gt; /etc/profile <span class="comment"># 写入全局变量</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;PATH=\$PATH:/root/go/bin&quot;</span> &gt;&gt; /etc/profile <span class="comment"># 写入全局变量</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;source /etc/profile&quot;</span> &gt;&gt; ~/.bashrc <span class="comment"># 写入本地用户刷新</span></span><br><span class="line"><span class="built_in">source</span> ~/.bashrc <span class="comment"># 刷新 bash 变量</span></span><br><span class="line">go -v <span class="comment"># 查看 go 版本</span></span><br><span class="line">go <span class="built_in">env</span> -w GOPROXY=https://goproxy.cn,direct <span class="comment"># 设置代理</span></span><br><span class="line">go install github.com/beego/bee/v2@latest <span class="comment"># 安装 bee</span></span><br><span class="line">bee version <span class="comment"># 查询 bee 版本</span></span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>linux</category>
+      </categories>
+      <tags>
+        <tag>Golang</tag>
+        <tag>Node</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>CentOS Stream 8 安装 Docker 并连接 Portainer</title>
+    <url>/2023-01-04/centos-stream-8-install-docker-and-link-portainer/</url>
+    <content><![CDATA[<ol>
+<li><p>卸载老版本</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">yum remove docker docker-client docker-client-latest docker-common docker-latest docker-latest-logrotate docker-logrotate docker-engine</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>安装 docker 基础包</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">yum install -y yum-utils device-mapper-persistent-data lvm2</span><br></pre></td></tr></table></figure>
+<span id="more"></span>  </li>
+<li><p>设置仓库</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">yum-config-manager --add-repo https://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>安装 Docker Engine </p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">yum install docker-ce docker-ce-cli containerd.io</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>编辑 docker.service</p>
+<blockquote>
+<p>找到 ExecStart 字段修改如下，添加 2375 远程端口（粗体部分）</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vim /usr/lib/systemd/system/docker.service</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>ExecStart&#x3D;&#x2F;usr&#x2F;bin&#x2F;dockerd <strong>-H tcp:&#x2F;&#x2F;0.0.0.0:2375</strong> -H unix:&#x2F;&#x2F;var&#x2F;run&#x2F;docker.sock</p>
+</blockquote>
+</li>
+<li><p>重启服务</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">systemctl daemon-reload</span><br><span class="line">systemctl restart docker</span><br></pre></td></tr></table></figure></li>
+</ol>
+]]></content>
+      <categories>
+        <category>kubernetes/docker/podman</category>
+      </categories>
+      <tags>
+        <tag>Docker</tag>
+        <tag>Portainer</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>beego 拦截器及 CORS</title>
+    <url>/2022-11-27/beego-filter-cors/</url>
+    <content><![CDATA[<blockquote>
+<p>跨域仅为浏览器的安全策略，对于其他形式的 http client（ postman，自己写的 python client 、java client 等 ）无效</p>
+</blockquote>
+<span id="more"></span>  
+
+<pre><code class="go">package routers
+
+import (
+    &quot;short_url_go/controllers&quot;
+    &quot;strings&quot;
+
+    &quot;github.com/beego/beego/v2/server/web/context&quot;
+    cors &quot;github.com/beego/beego/v2/server/web/filter/cors&quot;
+
+    &quot;github.com/beego/beego/logs&quot;
+    beego &quot;github.com/beego/beego/v2/server/web&quot;
+)
+
+
+var FilterToken = func(ctx *context.Context) &#123;
+    ctx.Output.Header(&quot;Access-Control-Allow-Origin&quot;, &quot;*&quot;)
+    logs.Info(&quot;current router path is &quot;, ctx.Request.RequestURI)
+        ctx.Request.RequestURI != &quot;/v1/users/login&quot; &amp;&amp;
+        ctx.Request.RequestURI != &quot;/v1/users/register&quot; &amp;&amp;
+        ctx.Request.RequestURI != &quot;/v1/users/tocken/account&quot;&amp;&amp; &#123;
+        if ctx.Input.Header(&quot;Authorization&quot;) == &quot;&quot; &#123;
+            logs.Error(&quot;without token, unauthorized !!&quot;)
+            ctx.ResponseWriter.WriteHeader(401)
+            ctx.ResponseWriter.Write([]byte(&quot;no permission&quot;))
+        &#125; else &#123;
+            token := ctx.Input.Header(&quot;Authorization&quot;)
+            token = strings.Split(token, &quot; &quot;)[1]
+            logs.Info(&quot;curernttoken: &quot;, token)
+            ok := controllers.AuthenticationJWT(token)
+            if !ok &#123;
+                ctx.ResponseWriter.WriteHeader(401)
+                ctx.ResponseWriter.Write([]byte(&quot;no permission&quot;))
+            &#125;
+        &#125;
+    &#125;
+&#125;
+
+func init() &#123;
+        //过滤器为顺序执行，所以要先CORS再鉴权，
+        //过滤器1,允许跨域
+    beego.InsertFilter(&quot;*&quot;, beego.BeforeRouter, cors.Allow(&amp;cors.Options&#123;
+        AllowAllOrigins: true,
+        AllowMethods:    []string&#123;&quot;GET&quot;, &quot;POST&quot;, &quot;PUT&quot;, &quot;DELETE&quot;, &quot;OPTIONS&quot;, &quot;PATCH&quot;&#125;,
+        //Get：获取数据幂等操作
+    &#125;))
+        //过滤器2,token
+    beego.InsertFilter(&quot;*&quot;, beego.BeforeRouter, FilterToken)
+    ns := beego.NewNamespace(&quot;/v1&quot;,
+        beego.NSNamespace(&quot;/users&quot;,
+            beego.NSInclude(
+                &amp;controllers.UserController&#123;&#125;,
+            ),
+        ),
+        beego.NSNamespace(&quot;/shorts&quot;,
+            beego.NSInclude(
+                &amp;controllers.ShortController&#123;&#125;,
+            ),
+        ),
+    )
+    beego.AddName
+</code></pre>
+]]></content>
+      <categories>
+        <category>golang</category>
+      </categories>
+      <tags>
+        <tag>CORS</tag>
+        <tag>Golang</tag>
+        <tag>Beego</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Cloudflare 301 跳转</title>
+    <url>/2022-09-04/cloudflare-301-url/</url>
+    <content><![CDATA[<h1 id="购买域名、注册-cloudflare-账号"><a href="#购买域名、注册-cloudflare-账号" class="headerlink" title="购买域名、注册 cloudflare 账号"></a>购买域名、注册 cloudflare 账号</h1><p>cloudflare 官网：<a href="https://www.cloudflare.com/">https://www.cloudflare.com/</a></p>
+<p>namesilo 官网：<a href="https://www.namesilo.com/">https://www.namesilo.com/</a></p>
+<p>dnspod 官网：<a href="https://www.dnspod.cn/">https://www.dnspod.cn/</a></p>
+<blockquote>
+<p>注意：如果不想 whois 查询到个人信息，建议非主流域名在 <a href="https://www.namesilo.com/">namesilo</a> 购买，可以有免费的 whois 信息隐藏。</p>
+</blockquote>
+<blockquote>
+<p>dnspod 仅支持 .com、.net 等主流的一级域名进行 whois 隐藏，但不支持如.top、.xyz、.live 等域名的信息隐藏，也就是说 whois 查询能查询到本名（开盒</p>
+</blockquote>
+<span id="more"></span>  
+<h1 id="添加-NS-解析"><a href="#添加-NS-解析" class="headerlink" title="添加 NS 解析"></a>添加 NS 解析</h1><h2 id="cloudflare-中添加域名"><a href="#cloudflare-中添加域名" class="headerlink" title="cloudflare 中添加域名"></a>cloudflare 中添加域名</h2><p><img src="https://gd-obj-001.gd2.qingstor.com/haruki/blog/cn/2022/5F340345564EACF17BCA4B89B1E262779A2D32CABDE4F6E494D45E40FD42A7D2.png" alt="添加域名"></p>
+<p><img src="https://gd-obj-001.gd2.qingstor.com/haruki/blog/cn/2022/3528E49703BABDB9EE3B5E63E5A63EAE32C75D99FE32A1E2F7249A62FD1B7DE3.png" alt="选择免费"></p>
+<p><img src="https://gd-obj-001.gd2.qingstor.com/haruki/blog/cn/2022/4C146869F59CF5BF6400C5CE2CB63F98186F4DF75CFE5F86F720457FA97E01E9.png"></p>
+<p><img src="https://gd-obj-001.gd2.qingstor.com/haruki/blog/cn/2022/829C11EA78DD0E39B8D94FA4DCAA06CC104F451282F6CC014D92CE7431C6A94C.png" alt="复制两个NS值"></p>
+<h2 id="dnspod-修改-ns-服务器"><a href="#dnspod-修改-ns-服务器" class="headerlink" title="dnspod 修改 ns 服务器"></a>dnspod 修改 ns 服务器</h2><blockquote>
+<p><a href="https://console.cloud.tencent.com/domain/all-domain">https://console.cloud.tencent.com/domain/all-domain</a></p>
+</blockquote>
+<p><img src="https://gd-obj-001.gd2.qingstor.com/haruki/blog/cn/2022/63CDA084EA205938EFDD34965DA0B14777989D16F72A4BF9FCBAD5CABCE6F827.png" alt="NS记录填写到这里"></p>
+<h2 id="namesilo-修改-ns-服务器"><a href="#namesilo-修改-ns-服务器" class="headerlink" title="namesilo 修改 ns 服务器"></a>namesilo 修改 ns 服务器</h2><blockquote>
+<p><a href="https://www.namesilo.com/account_domains.php">https://www.namesilo.com/account_domains.php</a></p>
+</blockquote>
+<p><img src="https://gd-obj-001.gd2.qingstor.com/haruki/blog/cn/2022/B5DDEDA418F36157C835DA235BA775A9AC354B93EE763D05C05F83CADC9A77D5.png" alt="选择域名"></p>
+<p><img src="https://gd-obj-001.gd2.qingstor.com/haruki/blog/cn/2022/9FDF844D910F637DEB6C82647EC4E10E232B109A22E974EBEC582E07597BB683.png" alt="修改NameServer"></p>
+<h1 id="添加-DNS-解析和-Workers"><a href="#添加-DNS-解析和-Workers" class="headerlink" title="添加 DNS 解析和 Workers"></a>添加 DNS 解析和 Workers</h1><p><img src="https://gd-obj-001.gd2.qingstor.com/haruki/blog/cn/2022/36C2EE20809A34E19037B12D9B2971DB4EF122F94257EDDE75CB0B5D11D98360.png" alt="编辑Workers"></p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> rules = [</span><br><span class="line">&#123;<span class="string">&quot;oldurl&quot;</span>:<span class="string">&quot;short-test.newreport.top&quot;</span>,<span class="string">&quot;newurl&quot;</span>:<span class="string">&quot;newreport.top/2022-09-04/cloudflare-301-url&quot;</span>&#125;,</span><br><span class="line"></span><br><span class="line">];</span><br><span class="line"></span><br><span class="line"><span class="keyword">async</span> <span class="keyword">function</span> <span class="title function_">handleRequest</span>(<span class="params">request</span>) &#123;</span><br><span class="line">    <span class="keyword">let</span> url = request.<span class="property">url</span>;</span><br><span class="line">    <span class="keyword">let</span> hostname = <span class="keyword">new</span> <span class="title function_">URL</span>(request.<span class="property">url</span>).<span class="property">hostname</span>;</span><br><span class="line">    <span class="keyword">let</span> isExist = <span class="literal">false</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>, l = rules.<span class="property">length</span>; i &lt; l; i++) &#123;</span><br><span class="line">        <span class="keyword">if</span> (rules[i].<span class="property">oldurl</span> == hostname) &#123;</span><br><span class="line">            url = url.<span class="title function_">replace</span>(rules[i].<span class="property">oldurl</span>, rules[i].<span class="property">newurl</span>);</span><br><span class="line">            isExist = <span class="literal">true</span>;</span><br><span class="line">            <span class="comment">// url = url.replace(/([\w\W]+)\/$/,&quot;$1&quot;);//删除最后一个/</span></span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (isExist) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="title class_">Response</span>.<span class="title function_">redirect</span>(<span class="keyword">new</span> <span class="title function_">URL</span>(url), <span class="number">301</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="title function_">fetch</span>(request)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="title function_">addEventListener</span>(<span class="string">&#x27;fetch&#x27;</span>, <span class="keyword">async</span> event =&gt; &#123;</span><br><span class="line">    event.<span class="title function_">respondWith</span>(<span class="title function_">handleRequest</span>(event.<span class="property">request</span>))</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>验证 <a href="https://short-test.newreport.top/">https://short-test.newreport.top</a></p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>timeline</category>
+      </categories>
+      <tags>
+        <tag>Domain</tag>
+        <tag>Http</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Kubernetes 1.24 内网部署</title>
+    <url>/2022-07-27/kubernetes-1-24-inside-install/</url>
+    <content><![CDATA[<h1 id="环境介绍"><a href="#环境介绍" class="headerlink" title="环境介绍"></a>环境介绍</h1><blockquote>
+<p>master：成都区 2 核 4G    10.0.0.17<br>cd001：成都区 2 核 4G     10.0.0.11<br>主机：两台腾讯云轻量云，系统为 CentOS Stream8，轻量云不支持 EIP 故不能公网搭 K8s<br>Kubernetes 版本：V1.24.3（截至 2022-08-02，当前 k8s 最新版本为 1.24.3）</p>
+</blockquote>
+<span id="more"></span>  
+<h1 id="Master-节点安装"><a href="#Master-节点安装" class="headerlink" title="Master 节点安装"></a>Master 节点安装</h1><h2 id="主机配置"><a href="#主机配置" class="headerlink" title="主机配置"></a>主机配置</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"> <span class="comment"># 设置主机名</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;master&quot;</span> &gt; /etc/hostname</span><br><span class="line">yum -y tc</span><br><span class="line">yum -y update </span><br><span class="line"></span><br><span class="line"><span class="comment"># 重启使master主机名生效</span></span><br><span class="line">reboot </span><br><span class="line"></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;1&quot;</span> &gt;&gt; /proc/sys/net/ipv4/ip_forward <span class="comment"># 开启ip转发</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 设置hosts 注意，每次重启后该文件会恢复，需要重新添加</span></span><br><span class="line"><span class="built_in">cat</span> &gt;&gt; /etc/hosts &lt;&lt;<span class="string">EOF</span></span><br><span class="line"><span class="string">10.0.0.17 master</span></span><br><span class="line"><span class="string">10.0.0.11 cd001</span></span><br><span class="line"><span class="string">EOF</span></span><br><span class="line"></span><br><span class="line">systemctl restart NetworkManager.service</span><br></pre></td></tr></table></figure>
+
+<h2 id="配置-containerd"><a href="#配置-containerd" class="headerlink" title="配置 containerd"></a>配置 containerd</h2><blockquote>
+<p>将 containerd 作为 k8s 的容器引擎</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 阿里镜像源</span></span><br><span class="line">wget -O /etc/yum.repos.d/docker-ce.repo https://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo</span><br><span class="line"></span><br><span class="line"><span class="built_in">cat</span> &lt;&lt; <span class="string">EOF &gt; /etc/modules-load.d/containerd.conf</span></span><br><span class="line"><span class="string">overlay</span></span><br><span class="line"><span class="string">br_netfilter</span></span><br><span class="line"><span class="string">EOF</span></span><br><span class="line"></span><br><span class="line">modprobe overlay</span><br><span class="line">modprobe br_netfilter</span><br><span class="line"></span><br><span class="line">yum install -y containerd.io --allowerasing</span><br><span class="line"></span><br><span class="line"><span class="built_in">mkdir</span>  -p /etc/containerd </span><br><span class="line"><span class="built_in">rm</span> -rf /etc/containerd/config.toml</span><br><span class="line"></span><br><span class="line">containerd config default &gt; /etc/containerd/config.toml</span><br><span class="line"></span><br><span class="line">sed -i <span class="string">&#x27;s#sandbox_image = &quot;k8s.gcr.io/pause:#sandbox_image = &quot;registry.aliyuncs.com/google_containers/pause:#g&#x27;</span> /etc/containerd/config.toml</span><br><span class="line"><span class="comment"># sed -i &#x27;s/systemd_cgroup = false/systemd_cgroup = true/g&#x27; /etc/containerd/config.toml</span></span><br><span class="line">systemctl restart containerd</span><br><span class="line"></span><br><span class="line">systemctl <span class="built_in">enable</span> containerd</span><br><span class="line">systemctl start containerd</span><br></pre></td></tr></table></figure>
+<h2 id="runc-命令行配置"><a href="#runc-命令行配置" class="headerlink" title="runc 命令行配置"></a>runc 命令行配置</h2><blockquote>
+<p>检测 runc、ctrcli、配置 k8s 源</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ctr version</span><br><span class="line">runc -version </span><br><span class="line"></span><br><span class="line"><span class="built_in">cat</span> &lt;&lt;<span class="string">EOF &gt; /etc/yum.repos.d/kubernetes.repo</span></span><br><span class="line"><span class="string">[kubernetes]</span></span><br><span class="line"><span class="string">name=Kubernetes</span></span><br><span class="line"><span class="string">baseurl=https://mirrors.aliyun.com/kubernetes/yum/repos/kubernetes-el7-x86_64/</span></span><br><span class="line"><span class="string">enabled=1</span></span><br><span class="line"><span class="string">gpgcheck=0</span></span><br><span class="line"><span class="string">repo_gpgcheck=0</span></span><br><span class="line"><span class="string">gpgkey=https://mirrors.aliyun.com/kubernetes/yum/doc/yum-key.gpg https://mirrors.aliyun.com/kubernetes/yum/doc/rpm-package-key.gpg</span></span><br><span class="line"><span class="string">EOF</span></span><br><span class="line"></span><br><span class="line">yum clean all </span><br><span class="line">yum makecache</span><br><span class="line"><span class="comment"># k8s init时需要此应用进行网络测试</span></span><br><span class="line">yum install -y tc   </span><br></pre></td></tr></table></figure>
+<h2 id="k8s-组件安装"><a href="#k8s-组件安装" class="headerlink" title="k8s 组件安装"></a>k8s 组件安装</h2><blockquote>
+<p>安装配置 k8s 三件套并配置</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">yum install -y kubectl kubelet kubeadm</span><br><span class="line"></span><br><span class="line"><span class="comment"># 兼容性处理 systemd</span></span><br><span class="line"><span class="built_in">echo</span>  <span class="string">&#x27;KUBELET_EXTRA_ARGS=&quot;--cgroup-driver=systemd&quot;&#x27;</span> &gt; /etc/sysconfig/kubelet</span><br><span class="line"></span><br><span class="line">systemctl <span class="built_in">enable</span> kubelet</span><br><span class="line">systemctl start kubelet</span><br><span class="line"></span><br><span class="line"><span class="comment"># 配置cricl 的endpoint</span></span><br><span class="line">crictl config runtime-endpoint unix:///run/containerd/containerd.sock</span><br><span class="line">crictl config image-endpoint unix:///run/containerd/containerd.sock</span><br><span class="line"></span><br><span class="line"><span class="comment"># 配置k8s镜像版本（不配置默认拉去latest 最新版）</span></span><br><span class="line"><span class="comment"># kubeadm config images list --kubernetes-version=v1.24.3</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="kubernetes-初始化"><a href="#kubernetes-初始化" class="headerlink" title="kubernetes 初始化"></a>kubernetes 初始化</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment"># 错误处理</span></span><br><span class="line"><span class="comment"># kubeadm reset</span></span><br><span class="line"><span class="comment"># rm -fr  ~/.kube/config</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># --apiserver-advertise-address和--control-plane-endpoint 分别为apiServer和控制面板的ip地址，内网部署使用master节点内网ip，公网部署使用master节点公网ip</span></span><br><span class="line">kubeadm init --pod-network-cidr=10.224.0.0/16 --apiserver-advertise-address=10.0.0.17 --control-plane-endpoint=10.0.0.17 --image-repository registry.aliyuncs.com/google_containers --v=5</span><br><span class="line"></span><br><span class="line"><span class="built_in">mkdir</span> -p <span class="variable">$HOME</span>/.kube</span><br><span class="line">sudo <span class="built_in">cp</span> -i /etc/kubernetes/admin.conf <span class="variable">$HOME</span>/.kube/config</span><br><span class="line">sudo <span class="built_in">chown</span> $(<span class="built_in">id</span> -u):$(<span class="built_in">id</span> -g) <span class="variable">$HOME</span>/.kube/config</span><br><span class="line"></span><br><span class="line"><span class="built_in">export</span> KUBECONFIG=/etc/kubernetes/admin.conf</span><br><span class="line"></span><br><span class="line"><span class="comment"># kubeadm join 10.0.0.17:6443 --token 9t45vv.40lt4exfxmirt7q2 --discovery-token-ca-cert-hash sha256:65cfa9a08c89e81357f3e394757ebb6c6c8000020c2e7411248cac2c4ef79c2e</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 可以看到master是NotReady状态</span></span><br><span class="line">kubectl get node -o wide</span><br><span class="line"></span><br><span class="line"><span class="comment"># 可以看到coredns是pending状态</span></span><br><span class="line">kubectl get pod -A -o wide</span><br><span class="line"></span><br><span class="line"><span class="comment"># 之后安装calico或者flannel网络插件后会恢复正常</span></span><br><span class="line"></span><br><span class="line">crictl images</span><br><span class="line"></span><br><span class="line">crictl ps -a</span><br></pre></td></tr></table></figure>
+<h1 id="Node-节点安装"><a href="#Node-节点安装" class="headerlink" title="Node 节点安装"></a>Node 节点安装</h1><h2 id="主机配置-1"><a href="#主机配置-1" class="headerlink" title="主机配置"></a>主机配置</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"> <span class="comment"># 设置主机名</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;cd001&quot;</span> &gt; /etc/hostname</span><br><span class="line"></span><br><span class="line">yum install -y tc</span><br><span class="line"></span><br><span class="line">yum -y update </span><br><span class="line"></span><br><span class="line"><span class="comment"># 重启使master主机名生效</span></span><br><span class="line">reboot </span><br><span class="line"></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;1&quot;</span> &gt;&gt; /proc/sys/net/ipv4/ip_forward <span class="comment"># 开启ip转发</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 设置hosts 注意，每次重启后该文件会恢复，需要重新添加</span></span><br><span class="line"><span class="built_in">cat</span> &gt;&gt; /etc/hosts &lt;&lt;<span class="string">EOF</span></span><br><span class="line"><span class="string">10.0.0.17 master</span></span><br><span class="line"><span class="string">10.0.0.11 cd001</span></span><br><span class="line"><span class="string">EOF</span></span><br><span class="line"></span><br><span class="line">systemctl restart NetworkManager.service</span><br></pre></td></tr></table></figure>
+
+<h2 id="配置-containerd-1"><a href="#配置-containerd-1" class="headerlink" title="配置 containerd"></a>配置 containerd</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 阿里镜像源</span></span><br><span class="line">wget -O /etc/yum.repos.d/docker-ce.repo https://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo</span><br><span class="line"></span><br><span class="line"><span class="built_in">cat</span> &lt;&lt; <span class="string">EOF &gt; /etc/modules-load.d/containerd.conf</span></span><br><span class="line"><span class="string">overlay</span></span><br><span class="line"><span class="string">br_netfilter</span></span><br><span class="line"><span class="string">EOF</span></span><br><span class="line"></span><br><span class="line">modprobe overlay</span><br><span class="line">modprobe br_netfilter</span><br><span class="line"></span><br><span class="line">yum install -y containerd.io --allowerasing</span><br><span class="line"></span><br><span class="line"><span class="built_in">mkdir</span>  -p /etc/containerd </span><br><span class="line"><span class="built_in">rm</span> -rf /etc/containerd/config.toml</span><br><span class="line"></span><br><span class="line">containerd config default &gt; /etc/containerd/config.toml</span><br><span class="line"></span><br><span class="line"> sed -i <span class="string">&#x27;s#sandbox_image = &quot;k8s.gcr.io/pause:#sandbox_image = &quot;registry.aliyuncs.com/google_containers/pause:#g&#x27;</span> /etc/containerd/config.toml</span><br><span class="line"><span class="comment"># sed -i &#x27;s/systemd_cgroup = false/systemd_cgroup = true/g&#x27; /etc/containerd/config.toml</span></span><br><span class="line">systemctl restart containerd</span><br><span class="line"></span><br><span class="line">systemctl <span class="built_in">enable</span> containerd</span><br><span class="line">systemctl start containerd</span><br></pre></td></tr></table></figure>
+<h2 id="runc-命令行配置-1"><a href="#runc-命令行配置-1" class="headerlink" title="runc 命令行配置"></a>runc 命令行配置</h2><blockquote>
+<p>检测 runc 和 ctrcli、配置 k8s 源</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ctr version</span><br><span class="line">runc -version </span><br><span class="line"></span><br><span class="line"><span class="built_in">cat</span> &lt;&lt;<span class="string">EOF &gt; /etc/yum.repos.d/kubernetes.repo</span></span><br><span class="line"><span class="string">[kubernetes]</span></span><br><span class="line"><span class="string">name=Kubernetes</span></span><br><span class="line"><span class="string">baseurl=https://mirrors.aliyun.com/kubernetes/yum/repos/kubernetes-el7-x86_64/</span></span><br><span class="line"><span class="string">enabled=1</span></span><br><span class="line"><span class="string">gpgcheck=0</span></span><br><span class="line"><span class="string">repo_gpgcheck=0</span></span><br><span class="line"><span class="string">gpgkey=https://mirrors.aliyun.com/kubernetes/yum/doc/yum-key.gpg https://mirrors.aliyun.com/kubernetes/yum/doc/rpm-package-key.gpg</span></span><br><span class="line"><span class="string">EOF</span></span><br><span class="line"></span><br><span class="line">yum clean all </span><br><span class="line">yum makecache</span><br><span class="line"></span><br><span class="line">yum install -y tc</span><br></pre></td></tr></table></figure>
+<h2 id="k8s-node-组件安装"><a href="#k8s-node-组件安装" class="headerlink" title="k8s node 组件安装"></a>k8s node 组件安装</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">yum install -y  kubelet kubeadm</span><br><span class="line"></span><br><span class="line"><span class="comment"># 兼容性处理 systemd</span></span><br><span class="line"><span class="built_in">echo</span>  <span class="string">&#x27;KUBELET_EXTRA_ARGS=&quot;--cgroup-driver=systemd&quot;&#x27;</span> &gt; /etc/sysconfig/kubelet</span><br><span class="line"></span><br><span class="line">systemctl <span class="built_in">enable</span> kubelet</span><br><span class="line">systemctl start kubelet</span><br><span class="line"></span><br><span class="line"><span class="comment"># 配置cricl 的endpoint</span></span><br><span class="line">crictl config runtime-endpoint unix:///run/containerd/containerd.sock</span><br><span class="line">crictl config image-endpoint unix:///run/containerd/containerd.sock</span><br><span class="line"></span><br><span class="line"><span class="comment"># 配置k8s镜像版本（不配置默认拉去latest 最新版）</span></span><br><span class="line"><span class="comment"># kubeadm config images list --kubernetes-version=v1.24.3</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="加入到集群"><a href="#加入到集群" class="headerlink" title="加入到集群"></a>加入到集群</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment"># 错误处理</span></span><br><span class="line"><span class="comment"># kubeadm reset</span></span><br><span class="line"><span class="comment"># rm -fr  ~/.kube/config</span></span><br><span class="line"></span><br><span class="line">kubeadm <span class="built_in">join</span> 10.0.0.17:6443 --token 9t45vv.40lt4exfxmirt7q2 --discovery-token-ca-cert-hash sha256:65cfa9a08c89e81357f3e394757ebb6c6c8000020c2e7411248cac2c4ef79c2e</span><br></pre></td></tr></table></figure>
+
+<h1 id="配置-K8s-容器网络"><a href="#配置-K8s-容器网络" class="headerlink" title="配置 K8s 容器网络"></a>配置 K8s 容器网络</h1><blockquote>
+<p>master 节点执行</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">wget https://docs.projectcalico.org/manifests/calico.yaml --no-check-certificate</span><br><span class="line">vim calico.yaml</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>配置 yaml 文件,正确的虚拟 ip 和网卡</p>
+</blockquote>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># /CALICO_IPV4POOL_CIDR 进行查找，取消注释，将值改为pod-network-cidr的值</span></span><br><span class="line"><span class="comment"># The default IPv4 pool to create on startup if none exists. Pod IPs will be</span></span><br><span class="line"><span class="comment"># chosen from this range. Changing this value after installation will have</span></span><br><span class="line"><span class="comment"># no effect. This should fall within `--cluster-cidr`.</span></span><br><span class="line"> <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">CALICO_IPV4POOL_CIDR</span></span><br><span class="line">   <span class="attr">value:</span> <span class="string">&quot;10.244.0.0/16&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># ....</span></span><br><span class="line"><span class="comment"># /k8s,bgp 查找,同级新增如下</span></span><br><span class="line"> <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">CLUSTER_TYPE</span></span><br><span class="line">   <span class="attr">value:</span> <span class="string">&quot;k8s,bgp&quot;</span></span><br><span class="line"> <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">IP_AUTODETECTION_METHOD</span></span><br><span class="line">   <span class="attr">value:</span> <span class="string">&quot;interface=eth0&quot;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">kubectl apply -f calico.yaml</span><br><span class="line"></span><br><span class="line"><span class="comment"># 如果执行后没反应或者拉去calio镜像过慢，可以在master和node上手动拉取镜像</span></span><br><span class="line"><span class="comment"># crictl pull docker.io/calico/cni</span></span><br><span class="line"><span class="comment"># crictl pull docker.io/calico/node</span></span><br><span class="line">crictl pull docker.io/calico/cni:v3.23.3</span><br><span class="line">crictl pull docker.io/calico/node:v3.23.3</span><br><span class="line"></span><br><span class="line"><span class="comment"># 检查node和containerd运行状态</span></span><br><span class="line">kubectl get node -o wide</span><br><span class="line"></span><br><span class="line">crictl ps -a</span><br></pre></td></tr></table></figure>
+<p><img src="https://gd-obj-001.gd2.qingstor.com/haruki/blog/cn/2022/871EFB1C13E616DBFBEC9E43A273852E08CA7EF3090D79DBE50647C24447E91D.png" alt="通过 crictl 查看 containerd 的容器运行状态"></p>
+<h1 id="配置-NFS-共享存储"><a href="#配置-NFS-共享存储" class="headerlink" title="配置 NFS 共享存储"></a>配置 NFS 共享存储</h1><blockquote>
+<p>由于 ceph 资源消耗太大，服务器数量和性能都不够，暂时只能用 NFS，之后大概会在自己电脑上开虚拟机试着搭下 ceph</p>
+</blockquote>
+<blockquote>
+<p>nfs server: cd001 10.0.0.11</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">yum install -y nfs-utils rpcbind <span class="comment"># 安装nfs和rpc</span></span><br><span class="line">systemctl <span class="built_in">enable</span> nfs-server</span><br><span class="line">sudo systemctl <span class="built_in">enable</span> --now nfs-server</span><br><span class="line"><span class="built_in">mkdir</span> -p /srv/nfs</span><br><span class="line"></span><br><span class="line"><span class="comment"># 查看支持的nfs版本</span></span><br><span class="line">sudo <span class="built_in">cat</span> /proc/fs/nfsd/versions</span><br><span class="line">userdel -r nfsuser</span><br><span class="line"></span><br><span class="line"><span class="comment"># nfsserver端新增一个用户，客户端操作nfs目录时会使用该用户权限进行读写</span></span><br><span class="line">adduser -s /sbin/nologin -u 1010 -M nfsuser</span><br><span class="line"><span class="comment"># -u : 指定用户uid</span></span><br><span class="line"><span class="comment"># -M: --no-create-home  不创建用户home目录</span></span><br><span class="line"><span class="comment"># -s : --shell    指定用户的shell</span></span><br><span class="line">passwd nfsuser </span><br><span class="line"></span><br><span class="line"><span class="built_in">mkdir</span> -p /srv/nfs/</span><br><span class="line"><span class="built_in">chown</span> nfsuser.nfsuser /srv/nfs</span><br><span class="line"></span><br><span class="line"><span class="comment"># 所有k8s集群内ip都需要添加进去</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;/srv/nfs/ 10.0.0.17(rw,sync,no_root_squash,anonuid=1001,anongid=1001)&quot;</span> &gt; /etc/exports</span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;/srv/nfs/ 10.0.0.11(rw,sync,no_root_squash,anonuid=1001,anongid=1001)&quot;</span> &gt;&gt; /etc/exports</span><br><span class="line"><span class="comment"># rw:可读写</span></span><br><span class="line"><span class="comment"># ro: 只读</span></span><br><span class="line"><span class="comment"># no_root_squash：对root用户不压制，如果客户端以root用户写入，在服务端都映射为服务端的root用户</span></span><br><span class="line"><span class="comment"># root_squash： nfs服务：默认情况使用的是相反参数root_squash，如果客户端是用户root操作，会被压制成nobody用户</span></span><br><span class="line"><span class="comment"># all_squash:     不管客户端的使用nfs的用户是谁，都会压制成nobody用户</span></span><br><span class="line"><span class="comment"># insecure:   允许从客户端过来的非授权访问</span></span><br><span class="line"><span class="comment"># sync:     数据同步写入到内存和硬盘</span></span><br><span class="line"><span class="comment"># async:    数据先写入内存，不直接写入到硬盘</span></span><br><span class="line"><span class="comment"># anonuid: 指定uid的值，此uid必须存在于/etc/passwd中</span></span><br><span class="line"><span class="comment"># anongid:指定gid的值</span></span><br><span class="line"></span><br><span class="line">exportfs -arv</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>nfs client: master 10.0.0.17</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 查看公开的nfs</span></span><br><span class="line">showmount -e 10.0.0.11</span><br><span class="line"></span><br><span class="line"><span class="built_in">mkdir</span> -p /mnt/nfs/cd001</span><br><span class="line"><span class="comment"># 临时挂载</span></span><br><span class="line"><span class="comment"># mount 10.0.0.11:/srv/nfs    /mnt/nfs/cd001</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 永久挂载</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;10.0.0.11:/srv/nfs    /mnt/nfs/cd001  nfs4    defaults        0       0&quot;</span> &gt;&gt;  /etc/fstab</span><br><span class="line">mount -a</span><br><span class="line"><span class="built_in">df</span> -TH</span><br><span class="line"><span class="comment"># k8s集群不需要挂载，写yaml后会自动进行持久挂载</span></span><br><span class="line">umount /mnt/nfs/cd001</span><br><span class="line"></span><br><span class="line"><span class="built_in">df</span> -TH</span><br></pre></td></tr></table></figure>
+<p><img src="https://gd-obj-001.gd2.qingstor.com/haruki/blog/cn/2022/A30C9689711F26C031325D2EE82625E7A353B232C0BF266975111C1C9CE4EC80.png" alt="nfs 挂载文件配置"></p>
+<h1 id="部署-Nginx-和-MySql"><a href="#部署-Nginx-和-MySql" class="headerlink" title="部署 Nginx 和 MySql"></a>部署 Nginx 和 MySql</h1><blockquote>
+<p>部署可以公网访问的 nginx 和持久化存储的 mysql 服务<br>master 节点</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 新增和删除命名空间</span></span><br><span class="line"><span class="comment"># kubectl create namespace my-namespace</span></span><br><span class="line"><span class="comment"># kubectl delete namespace my-namespace</span></span><br><span class="line"><span class="comment"># kucectl apply -f my-namespace.yaml</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">apiVersion:</span> <span class="string">v1</span></span><br><span class="line"><span class="attr">kind:</span> <span class="string">Namespace</span></span><br><span class="line"><span class="attr">metadata:</span></span><br><span class="line">   <span class="attr">name:</span> <span class="string">public</span></span><br><span class="line">   <span class="attr">labels:</span></span><br><span class="line">     <span class="attr">name:</span> <span class="string">public</span></span><br></pre></td></tr></table></figure>
+<h2 id="Nginx"><a href="#Nginx" class="headerlink" title="Nginx"></a>Nginx</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> ~</span><br><span class="line">vim nginx.yaml</span><br></pre></td></tr></table></figure>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">apiVersion:</span> <span class="string">apps/v1</span></span><br><span class="line"><span class="attr">kind:</span> <span class="string">Deployment</span></span><br><span class="line"><span class="attr">metadata:</span></span><br><span class="line">  <span class="attr">name:</span> <span class="string">nginx-deployment</span></span><br><span class="line"><span class="attr">spec:</span></span><br><span class="line">  <span class="attr">selector:</span></span><br><span class="line">    <span class="attr">matchLabels:</span></span><br><span class="line">      <span class="attr">app:</span> <span class="string">nginx</span></span><br><span class="line">  <span class="attr">replicas:</span> <span class="number">3</span></span><br><span class="line">  <span class="attr">template:</span></span><br><span class="line">    <span class="attr">metadata:</span></span><br><span class="line">      <span class="attr">labels:</span></span><br><span class="line">        <span class="attr">app:</span> <span class="string">nginx</span></span><br><span class="line">    <span class="attr">spec:</span></span><br><span class="line">      <span class="attr">containers:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">nginx</span></span><br><span class="line">        <span class="attr">image:</span> <span class="string">nginx:alpine</span></span><br><span class="line">        <span class="attr">ports:</span></span><br><span class="line">        <span class="bullet">-</span> <span class="attr">containerPort:</span> <span class="number">80</span></span><br><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">apiVersion:</span> <span class="string">v1</span></span><br><span class="line"><span class="attr">kind:</span> <span class="string">Service</span></span><br><span class="line"><span class="attr">metadata:</span></span><br><span class="line">  <span class="attr">name:</span> <span class="string">nginx-service</span></span><br><span class="line"><span class="attr">spec:</span></span><br><span class="line">  <span class="attr">selector:</span></span><br><span class="line">    <span class="attr">app:</span> <span class="string">nginx</span></span><br><span class="line">  <span class="attr">ports:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="attr">protocol:</span> <span class="string">TCP</span></span><br><span class="line">    <span class="attr">port:</span> <span class="number">80</span></span><br><span class="line">    <span class="attr">targetPort:</span> <span class="number">80</span></span><br><span class="line">    <span class="attr">nodePort:</span> <span class="number">30080</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">NodePort</span></span><br></pre></td></tr></table></figure>
+<p><img src="https://gd-obj-001.gd2.qingstor.com/haruki/blog/cn/2022/564E8CA73EF28D607516A539A84B538092DDF7F4D510372E9EF52AB14DE80D36.png" alt="nginx 首页显示成功"></p>
+<h2 id="MySQL"><a href="#MySQL" class="headerlink" title="MySQL"></a>MySQL</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> ~</span><br><span class="line">vim mysql.yaml</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">apiVersion:</span> <span class="string">apps/v1</span></span><br><span class="line"><span class="attr">kind:</span> <span class="string">Deployment</span></span><br><span class="line"><span class="attr">metadata:</span></span><br><span class="line">  <span class="attr">labels:</span></span><br><span class="line">    <span class="attr">app:</span> <span class="string">mysql</span> <span class="comment">#为该Deployment设置key为app，value为mysql的标签</span></span><br><span class="line">  <span class="attr">name:</span> <span class="string">mysql</span></span><br><span class="line">  <span class="attr">namespace:</span> <span class="string">default</span></span><br><span class="line"><span class="attr">spec:</span></span><br><span class="line">  <span class="attr">replicas:</span> <span class="number">1</span> <span class="comment">#副本数量</span></span><br><span class="line">  <span class="attr">selector:</span> <span class="comment">#标签选择器，与上面的标签共同作用</span></span><br><span class="line">    <span class="attr">matchLabels:</span> <span class="comment">#选择包含标签app:nginx的资源</span></span><br><span class="line">      <span class="attr">app:</span> <span class="string">mysql</span></span><br><span class="line">  <span class="attr">template:</span> <span class="comment">#这是选择或创建的Pod的模板</span></span><br><span class="line">    <span class="attr">metadata:</span> <span class="comment">#Pod的元数据</span></span><br><span class="line">      <span class="attr">labels:</span> <span class="comment">#Pod的标签，上面的selector即选择包含标签app:nginx的Pod</span></span><br><span class="line">        <span class="attr">app:</span> <span class="string">mysql</span></span><br><span class="line">    <span class="attr">spec:</span> <span class="comment">#期望Pod实现的功能（即在pod中部署）</span></span><br><span class="line">      <span class="attr">containers:</span> <span class="comment">#生成container，与docker中的container是同一种</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">mysql</span></span><br><span class="line">        <span class="attr">image:</span> <span class="string">mysql:latest</span> <span class="comment">#使用镜像mysql: 创建container，该container默认3306端口可访问</span></span><br><span class="line">        <span class="attr">ports:</span></span><br><span class="line">        <span class="bullet">-</span> <span class="attr">containerPort:</span> <span class="number">3306</span>  <span class="comment"># 开启本容器的3306端口可访问</span></span><br><span class="line">        <span class="attr">env:</span></span><br><span class="line">        <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">MYSQL_ROOT_PASSWORD</span></span><br><span class="line">          <span class="attr">value:</span> <span class="string">MTIzNDU2Cg==</span> <span class="comment"># echo &quot;123456&quot;  |base64</span></span><br><span class="line">        <span class="attr">volumeMounts:</span> <span class="comment">#挂载持久存储卷</span></span><br><span class="line">        <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">mysql-data</span>  <span class="comment">#挂载设备的名字，与volumes[*].name 需要对应</span></span><br><span class="line">          <span class="attr">mountPath:</span> <span class="string">/var/lib/mysql</span>  <span class="comment">#挂载到容器的某个路径下</span></span><br><span class="line">          </span><br><span class="line">      <span class="attr">volumes:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">mysql-data</span>  <span class="comment">#和上面保持一致 这是本地的文件路径，上面是容器内部的路径</span></span><br><span class="line">        <span class="attr">nfs:</span></span><br><span class="line">          <span class="attr">server:</span> <span class="number">10.0</span><span class="number">.0</span><span class="number">.11</span> <span class="comment">#nfs服务器地址</span></span><br><span class="line">          <span class="attr">path:</span> <span class="string">/srv/nfs/k8s_data/mysql</span>  <span class="comment">#此路径需要实现创建</span></span><br><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">apiVersion:</span> <span class="string">v1</span></span><br><span class="line"><span class="attr">kind:</span> <span class="string">Service</span> <span class="comment"># 服务类型为svc</span></span><br><span class="line"><span class="attr">metadata:</span></span><br><span class="line">  <span class="attr">name:</span> <span class="string">mysql-service</span></span><br><span class="line">  <span class="attr">namespace:</span> <span class="string">default</span></span><br><span class="line"><span class="attr">spec:</span></span><br><span class="line">  <span class="attr">selector:</span></span><br><span class="line">    <span class="attr">app:</span> <span class="string">mysql</span></span><br><span class="line">  <span class="attr">ports:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="attr">protocol:</span> <span class="string">TCP</span></span><br><span class="line">    <span class="attr">port:</span> <span class="number">3306</span>  <span class="comment"># 本service的端口</span></span><br><span class="line">    <span class="attr">targetPort:</span> <span class="number">3306</span>  <span class="comment"># 对接的容器端口</span></span><br><span class="line">    <span class="attr">nodePort:</span> <span class="number">32001</span> <span class="comment"># nodeport即主机公网访问的端口</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">NodePort</span>  <span class="comment"># svc模式为nodeport</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">kubectl apply -f mysql.yaml</span><br><span class="line"><span class="comment"># 可以正常连接mysql并且nfs服务器有持久化数据了</span></span><br></pre></td></tr></table></figure>
+<p><img src="https://gd-obj-001.gd2.qingstor.com/haruki/blog/cn/2022/77781C696156A40959D4159D81D2A959A873F2A9C7AFBA72C07D9EB0DF8AF7A1.png" alt="navicat 连接 mysql"><br><img src="https://gd-obj-001.gd2.qingstor.com/haruki/blog/cn/2022/0ED4585667FEECFEFB5A26AD2C72BE3470E6E618DBBA343D6E19402FCA5688AE.png" alt="查看 nfs 里挂载的数据"></p>
+]]></content>
+      <categories>
+        <category>kubernetes/docker/podman</category>
+      </categories>
+      <tags>
+        <tag>NFS</tag>
+        <tag>Nginx</tag>
+        <tag>MySQL</tag>
+        <tag>Containerd</tag>
+        <tag>K8s</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>列表简介</title>
+    <url>/2021-06-23/list-introduction/</url>
+    <content><![CDATA[<h1 id="列表是什么"><a href="#列表是什么" class="headerlink" title="列表是什么"></a>列表是什么</h1><p>类似于c的数组</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vim 19.py</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">bicycles = [<span class="string">&#x27;trek&#x27;</span>,<span class="string">&#x27;cannondale&#x27;</span>,<span class="string">&#x27;redline&#x27;</span>,<span class="string">&#x27;specialized&#x27;</span>]</span><br><span class="line"><span class="built_in">print</span>(bicycles)</span><br></pre></td></tr></table></figure>
+<figure class="highlight txt"><table><tr><td class="code"><pre><span class="line">[&#x27;trek&#x27;, &#x27;cannondale&#x27;, &#x27;redline&#x27;, &#x27;specialized&#x27;]</span><br></pre></td></tr></table></figure>
+<span id="more"></span>  
+
+<h2 id="访问列表元素"><a href="#访问列表元素" class="headerlink" title="访问列表元素"></a>访问列表元素</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vim 21.py</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">bicycles = [<span class="string">&#x27;trek&#x27;</span>,<span class="string">&#x27;cannondale&#x27;</span>,<span class="string">&#x27;redline&#x27;</span>,<span class="string">&#x27;specialized&#x27;</span>]</span><br><span class="line"><span class="built_in">print</span>(bicycles[<span class="number">0</span>])</span><br><span class="line"><span class="built_in">print</span>(bicycles[<span class="number">0</span>].title())</span><br></pre></td></tr></table></figure>
+<figure class="highlight txt"><table><tr><td class="code"><pre><span class="line">trek</span><br><span class="line">Trek</span><br></pre></td></tr></table></figure>
+
+<h2 id="索引从0而不是1开始"><a href="#索引从0而不是1开始" class="headerlink" title="索引从0而不是1开始"></a>索引从0而不是1开始</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vim 22.py</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">bicycles = [<span class="string">&#x27;trek&#x27;</span>,<span class="string">&#x27;cannondale&#x27;</span>,<span class="string">&#x27;redline&#x27;</span>,<span class="string">&#x27;specialized&#x27;</span>]</span><br><span class="line"><span class="built_in">print</span>(bicycles[<span class="number">1</span>])      <span class="comment">#访问第二个元素</span></span><br><span class="line"><span class="built_in">print</span>(bicycles[<span class="number">3</span>])      <span class="comment">#访问第四个元素</span></span><br><span class="line"><span class="built_in">print</span>(bicycles[-<span class="number">1</span>])     <span class="comment">#访问最后一个元素</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight txt"><table><tr><td class="code"><pre><span class="line">cannondale</span><br><span class="line">specialized</span><br><span class="line">specialized</span><br></pre></td></tr></table></figure>
+
+<h2 id="使用列表中的各个值"><a href="#使用列表中的各个值" class="headerlink" title="使用列表中的各个值"></a>使用列表中的各个值</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vim 23.py</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">bicycles = [<span class="string">&#x27;trek&#x27;</span>,<span class="string">&#x27;cannondale&#x27;</span>,<span class="string">&#x27;redline&#x27;</span>,<span class="string">&#x27;specialized&#x27;</span>]</span><br><span class="line">message = <span class="string">&quot;My first bicycle was a &quot;</span> + bicycles[<span class="number">1</span>].title() + <span class="string">&quot;.&quot;</span></span><br><span class="line"><span class="built_in">print</span>(message)</span><br></pre></td></tr></table></figure>
+<figure class="highlight txt"><table><tr><td class="code"><pre><span class="line">My first bicycle was a Cannondale.</span><br></pre></td></tr></table></figure>
+
+<h1 id="修改、添加和删除元素"><a href="#修改、添加和删除元素" class="headerlink" title="修改、添加和删除元素"></a>修改、添加和删除元素</h1><p>大多数列表都是动态的，列表创建后，会随着程序的运行而增删元素。</p>
+<h2 id="修改列表元素"><a href="#修改列表元素" class="headerlink" title="修改列表元素"></a>修改列表元素</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vim 24.py</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">motorcycles = [<span class="string">&#x27;honda&#x27;</span>,<span class="string">&#x27;yamaha&#x27;</span>,<span class="string">&#x27;suzukli&#x27;</span>]</span><br><span class="line"><span class="built_in">print</span>(motorcycles)</span><br><span class="line">motorcycles[<span class="number">0</span>] = <span class="string">&#x27;ducati&#x27;</span></span><br><span class="line"><span class="built_in">print</span>(motorcycles)</span><br></pre></td></tr></table></figure>
+<figure class="highlight txt"><table><tr><td class="code"><pre><span class="line">[&#x27;honda&#x27;, &#x27;yamaha&#x27;, &#x27;suzukli&#x27;]</span><br><span class="line">[&#x27;ducati&#x27;, &#x27;yamaha&#x27;, &#x27;suzukli&#x27;]</span><br></pre></td></tr></table></figure>
+
+<h2 id="在列表中添加元素"><a href="#在列表中添加元素" class="headerlink" title="在列表中添加元素"></a>在列表中添加元素</h2><h3 id="在列表末尾添加元素"><a href="#在列表末尾添加元素" class="headerlink" title="在列表末尾添加元素"></a>在列表末尾添加元素</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vim 25.py</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">motorcycles = [<span class="string">&#x27;honda&#x27;</span>,<span class="string">&#x27;yamaha&#x27;</span>,<span class="string">&#x27;suzuki&#x27;</span>]</span><br><span class="line"><span class="built_in">print</span>(motorcycles)</span><br><span class="line">motorcycles.append(<span class="string">&#x27;ducati&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(motorcycles)</span><br><span class="line">mt = []</span><br><span class="line">mt.append(<span class="string">&#x27;honda&#x27;</span>)</span><br><span class="line">mt.append(<span class="string">&#x27;yamaha&#x27;</span>)</span><br><span class="line">mt.append(<span class="string">&#x27;suzuki&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(mt)</span><br></pre></td></tr></table></figure>
+<figure class="highlight txt"><table><tr><td class="code"><pre><span class="line">[&#x27;honda&#x27;, &#x27;yamaha&#x27;, &#x27;suzuki&#x27;]</span><br><span class="line">[&#x27;honda&#x27;, &#x27;yamaha&#x27;, &#x27;suzuki&#x27;, &#x27;ducati&#x27;]</span><br><span class="line">[&#x27;honda&#x27;, &#x27;yamaha&#x27;, &#x27;suzuki&#x27;]</span><br></pre></td></tr></table></figure>
+
+<h3 id="在列表中插入元素"><a href="#在列表中插入元素" class="headerlink" title="在列表中插入元素"></a>在列表中插入元素</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vim 26.py</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">motorcycles = [<span class="string">&#x27;honda&#x27;</span>,<span class="string">&#x27;yamaha&#x27;</span>,<span class="string">&#x27;suzuki&#x27;</span>]</span><br><span class="line">motorcycles.insert(<span class="number">0</span>,<span class="string">&#x27;ducati&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(motorcycles)</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">[&#x27;ducati&#x27;, &#x27;honda&#x27;, &#x27;yamaha&#x27;, &#x27;suzuki&#x27;]</span><br></pre></td></tr></table></figure>
+
+<h2 id="从列表中删除元素"><a href="#从列表中删除元素" class="headerlink" title="从列表中删除元素"></a>从列表中删除元素</h2><h3 id="使用del语句删除元素"><a href="#使用del语句删除元素" class="headerlink" title="使用del语句删除元素"></a>使用del语句删除元素</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vim 27.py</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">motorcycles = [<span class="string">&#x27;honda&#x27;</span>,<span class="string">&#x27;yamaha&#x27;</span>,<span class="string">&#x27;suzuki&#x27;</span>]</span><br><span class="line"><span class="built_in">print</span>(motorcycles)</span><br><span class="line"><span class="keyword">del</span> motorcycles[<span class="number">0</span>]</span><br><span class="line"><span class="built_in">print</span>(motorcycles)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;-----------------------------&quot;</span>)</span><br><span class="line">mt = [<span class="string">&#x27;honda&#x27;</span>,<span class="string">&#x27;yamaha&#x27;</span>,<span class="string">&#x27;suzuki&#x27;</span>]</span><br><span class="line"><span class="built_in">print</span>(mt)</span><br><span class="line"><span class="keyword">del</span> mt[<span class="number">1</span>]</span><br><span class="line"><span class="built_in">print</span>(mt)</span><br></pre></td></tr></table></figure>
+<figure class="highlight txt"><table><tr><td class="code"><pre><span class="line">[&#x27;honda&#x27;, &#x27;yamaha&#x27;, &#x27;suzuki&#x27;]</span><br><span class="line">[&#x27;yamaha&#x27;, &#x27;suzuki&#x27;]</span><br><span class="line">-----------------------------</span><br><span class="line">[&#x27;honda&#x27;, &#x27;yamaha&#x27;, &#x27;suzuki&#x27;]</span><br><span class="line">[&#x27;honda&#x27;, &#x27;suzuki&#x27;]</span><br></pre></td></tr></table></figure>
+
+<h3 id="使用方法pop-删除元素"><a href="#使用方法pop-删除元素" class="headerlink" title="使用方法pop()删除元素"></a>使用方法pop()删除元素</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vim 28.py</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">motorcycles = [<span class="string">&#x27;honda&#x27;</span>,<span class="string">&#x27;yamaha&#x27;</span>,<span class="string">&#x27;suzuki&#x27;</span>]</span><br><span class="line"><span class="built_in">print</span>(motorcycles)</span><br><span class="line">popped_motorcycle = motorcycles.pop()</span><br><span class="line"><span class="built_in">print</span>(motorcycles)</span><br><span class="line"><span class="built_in">print</span>(motorcycles.pop())</span><br><span class="line"><span class="built_in">print</span>(motorcycles)</span><br><span class="line"><span class="built_in">print</span>(popped_motorcycle)</span><br></pre></td></tr></table></figure>
+<figure class="highlight txt"><table><tr><td class="code"><pre><span class="line">[&#x27;honda&#x27;, &#x27;yamaha&#x27;, &#x27;suzuki&#x27;]       //原列表输出</span><br><span class="line">[&#x27;honda&#x27;, &#x27;yamaha&#x27;]     //删除suzuki后原列表输出</span><br><span class="line">yamaha      //输出删除一项后原列表最后一项</span><br><span class="line">[&#x27;honda&#x27;]       //输出两次删除后的原列表</span><br><span class="line">suzuki      //输出被赋值列表</span><br></pre></td></tr></table></figure>
+
+<h3 id="弹出列表中任何位置处元素"><a href="#弹出列表中任何位置处元素" class="headerlink" title="弹出列表中任何位置处元素"></a>弹出列表中任何位置处元素</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vim 29.py</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">motorcycles = [<span class="string">&#x27;honda&#x27;</span>,<span class="string">&#x27;yamaha&#x27;</span>,<span class="string">&#x27;suzuki&#x27;</span>]</span><br><span class="line">first_owned = motorcycles.pop(<span class="number">0</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;The last motorcycle I owned was a &quot;</span> + first_owned.title() + <span class="string">&quot;.&quot;</span>)</span><br></pre></td></tr></table></figure>
+<figure class="highlight txt"><table><tr><td class="code"><pre><span class="line">The last motorcycle I owned was a Honda.</span><br></pre></td></tr></table></figure>
+
+<h3 id="根据值删除元素"><a href="#根据值删除元素" class="headerlink" title="根据值删除元素"></a>根据值删除元素</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vim 30.py</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">motorcycles = [<span class="string">&#x27;honda&#x27;</span>,<span class="string">&#x27;yamaha&#x27;</span>,<span class="string">&#x27;suzukli&#x27;</span>,<span class="string">&#x27;ducati&#x27;</span>]</span><br><span class="line"><span class="built_in">print</span>(motorcycles)</span><br><span class="line">motorcycles.remove(<span class="string">&#x27;ducati&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(motorcycles)</span><br><span class="line">dd = <span class="string">&#x27;yamaha&#x27;</span></span><br><span class="line">motorcycles.remove(dd)</span><br><span class="line"><span class="built_in">print</span>(motorcycles)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;\nA &quot;</span> + dd.title() + <span class="string">&quot; is too expensive for me.&quot;</span>)</span><br></pre></td></tr></table></figure>
+<figure class="highlight txt"><table><tr><td class="code"><pre><span class="line">[&#x27;honda&#x27;, &#x27;yamaha&#x27;, &#x27;suzukli&#x27;, &#x27;ducati&#x27;]</span><br><span class="line">[&#x27;honda&#x27;, &#x27;yamaha&#x27;, &#x27;suzukli&#x27;]</span><br><span class="line">[&#x27;honda&#x27;, &#x27;suzukli&#x27;]</span><br><span class="line"></span><br><span class="line">A Yamaha is too expensive for me.</span><br></pre></td></tr></table></figure>
+
+<h1 id="组织列表"><a href="#组织列表" class="headerlink" title="组织列表"></a>组织列表</h1><p>创建的列表中，元素的排序应用</p>
+<h2 id="使用方法sort-对列表进行永久性排序"><a href="#使用方法sort-对列表进行永久性排序" class="headerlink" title="使用方法sort()对列表进行永久性排序"></a>使用方法sort()对列表进行永久性排序</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vim 31.py</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">cars = [<span class="string">&#x27;bmw&#x27;</span>,<span class="string">&#x27;audi&#x27;</span>,<span class="string">&#x27;toyota&#x27;</span>,<span class="string">&#x27;subaru&#x27;</span>]</span><br><span class="line">cars.sort()</span><br><span class="line"><span class="built_in">print</span>(cars)</span><br><span class="line">cars.sort(reverse=<span class="literal">True</span>)</span><br><span class="line"><span class="built_in">print</span>(cars)</span><br></pre></td></tr></table></figure>
+<figure class="highlight txt"><table><tr><td class="code"><pre><span class="line">[&#x27;audi&#x27;, &#x27;bmw&#x27;, &#x27;subaru&#x27;, &#x27;toyota&#x27;]</span><br><span class="line">[&#x27;toyota&#x27;, &#x27;subaru&#x27;, &#x27;bmw&#x27;, &#x27;audi&#x27;]</span><br></pre></td></tr></table></figure>
+
+<h2 id="使用函数sorted-对列表进行临时排序"><a href="#使用函数sorted-对列表进行临时排序" class="headerlink" title="使用函数sorted()对列表进行临时排序"></a>使用函数sorted()对列表进行临时排序</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vim 32.py</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">cars = [<span class="string">&#x27;bmw&#x27;</span>,<span class="string">&#x27;audi&#x27;</span>,<span class="string">&#x27;toyota&#x27;</span>,<span class="string">&#x27;subaru&#x27;</span>]</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;Here is the original list:&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(cars)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;\nHere is the sorted list:&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">sorted</span>(cars))</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;\nHere os the original list again:&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(cars)</span><br></pre></td></tr></table></figure>
+<figure class="highlight txt"><table><tr><td class="code"><pre><span class="line">Here is the original list:</span><br><span class="line">[&#x27;bmw&#x27;, &#x27;audi&#x27;, &#x27;toyota&#x27;, &#x27;subaru&#x27;]</span><br><span class="line"></span><br><span class="line">Here is the sorted list:</span><br><span class="line">[&#x27;audi&#x27;, &#x27;bmw&#x27;, &#x27;subaru&#x27;, &#x27;toyota&#x27;]</span><br><span class="line"></span><br><span class="line">Here os the original list again:</span><br><span class="line">[&#x27;bmw&#x27;, &#x27;audi&#x27;, &#x27;toyota&#x27;, &#x27;subaru&#x27;]</span><br></pre></td></tr></table></figure>
+
+<h2 id="倒着打印列表"><a href="#倒着打印列表" class="headerlink" title="倒着打印列表"></a>倒着打印列表</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vim 33.py</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">cars = [<span class="string">&#x27;bmw&#x27;</span>,<span class="string">&#x27;audi&#x27;</span>,<span class="string">&#x27;toyota&#x27;</span>,<span class="string">&#x27;subaru&#x27;</span>]</span><br><span class="line"><span class="built_in">print</span>(cars)</span><br><span class="line">cars.reverse()      <span class="comment">#永久性的修改顺序</span></span><br><span class="line"><span class="built_in">print</span>(cars)</span><br></pre></td></tr></table></figure>
+<figure class="highlight txt"><table><tr><td class="code"><pre><span class="line">[&#x27;bmw&#x27;, &#x27;audi&#x27;, &#x27;toyota&#x27;, &#x27;subaru&#x27;]</span><br><span class="line">[&#x27;subaru&#x27;, &#x27;toyota&#x27;, &#x27;audi&#x27;, &#x27;bmw&#x27;]</span><br></pre></td></tr></table></figure>
+
+<h2 id="确定列表的长度"><a href="#确定列表的长度" class="headerlink" title="确定列表的长度"></a>确定列表的长度</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vim 34.py</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">cars = [<span class="string">&#x27;bmw&#x27;</span>,<span class="string">&#x27;audi&#x27;</span>,<span class="string">&#x27;toyota&#x27;</span>,<span class="string">&#x27;subaru&#x27;</span>]</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">len</span>(cars))</span><br></pre></td></tr></table></figure>
+<figure class="highlight txt"><table><tr><td class="code"><pre><span class="line">4</span><br></pre></td></tr></table></figure>
+
+<h1 id="使用列表时避免索引错误"><a href="#使用列表时避免索引错误" class="headerlink" title="使用列表时避免索引错误"></a>使用列表时避免索引错误</h1><p>列表从0开始索引，-1为倒数第一个元素，列表为空-1报错</p>
+]]></content>
+      <categories>
+        <category>python</category>
+        <category>python3 手册</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>变量和简单数据类型</title>
+    <url>/2021-06-22/variables-and-simple-data-types/</url>
+    <content><![CDATA[<h1 id="运行hello-world"><a href="#运行hello-world" class="headerlink" title="运行hello world"></a>运行hello world</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vim 1.py</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="string">&quot;hello Python world!&quot;</span>)</span><br></pre></td></tr></table></figure>
+<figure class="highlight txt"><table><tr><td class="code"><pre><span class="line">hello Python world!</span><br></pre></td></tr></table></figure>
+<span id="more"></span>  
+
+<h1 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vim 2.py</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">message = <span class="string">&quot;Hello Python world!&quot;</span></span><br><span class="line"><span class="built_in">print</span>(message)</span><br></pre></td></tr></table></figure>
+<figure class="highlight txt"><table><tr><td class="code"><pre><span class="line">hello Python world!</span><br></pre></td></tr></table></figure>
+<hr>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vim 3.py</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">message = <span class="string">&quot;Hello Python world!&quot;</span></span><br><span class="line"><span class="built_in">print</span>(message)</span><br><span class="line">message = <span class="string">&quot;Hello world!&quot;</span></span><br><span class="line"><span class="built_in">print</span>(message)</span><br></pre></td></tr></table></figure>
+<figure class="highlight txt"><table><tr><td class="code"><pre><span class="line">hello Python world!</span><br><span class="line">Hello world!</span><br></pre></td></tr></table></figure>
+
+<h2 id="变量命名和使用"><a href="#变量命名和使用" class="headerlink" title="变量命名和使用"></a>变量命名和使用</h2><ul>
+<li><p>变量名只能包含<strong>字母、数字</strong>和<strong>下划线</strong>。变量名只能是<strong>字母</strong>或<strong>下划线</strong>开头。例：message_1</p>
+</li>
+<li><p>变量名不能包含<strong>空格</strong>，但可以使用<strong>下划线</strong>来分隔单词</p>
+</li>
+<li><p>不能将<strong>Python关键字</strong>和<strong>函数名</strong>作为变量名使用，如：print</p>
+</li>
+</ul>
+<h2 id="使用变量时的错误"><a href="#使用变量时的错误" class="headerlink" title="使用变量时的错误"></a>使用变量时的错误</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vim 4.py</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">message = <span class="string">&quot;Hello world!&quot;</span></span><br><span class="line"><span class="built_in">print</span>(mesage)</span><br></pre></td></tr></table></figure>
+<figure class="highlight txt"><table><tr><td class="code"><pre><span class="line">Traceback (most recent call last):</span><br><span class="line">  File &quot;4.py&quot;, line 2, in &lt;module&gt;      //第二行代码错误</span><br><span class="line">    print(mesage)       //列出了这个错误</span><br><span class="line">NameError: name &#x27;mesage&#x27; is not defined     //mesage无法识别</span><br></pre></td></tr></table></figure>
+<h1 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h1><p>字符串就是一系列字符。在Python中，用引号括起来的都是字符串，其中的引号可以是<strong>单引号</strong>也可以是<strong>双引号</strong></p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="string">&quot;This is a string.&quot;</span></span><br><span class="line"><span class="string">&#x27;This is also a string.&quot;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="使用方法修改字符串大小写"><a href="#使用方法修改字符串大小写" class="headerlink" title="使用方法修改字符串大小写"></a>使用方法修改字符串大小写</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">vim 5.py</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">name = <span class="string">&quot;ada lovelace&quot;</span></span><br><span class="line"><span class="built_in">print</span>(name.title())</span><br></pre></td></tr></table></figure>
+<figure class="highlight txt"><table><tr><td class="code"><pre><span class="line">Ada Lovelace</span><br></pre></td></tr></table></figure>
+<p>titile（）以首字母大写的方式显示每个单词，即将每个单词的首字母都改为大写。</p>
+<hr>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vim 6.py</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">name = <span class="string">&quot;ada lovelace&quot;</span></span><br><span class="line"><span class="built_in">print</span>(name.title())</span><br><span class="line"><span class="built_in">print</span>(name.lower())</span><br><span class="line"><span class="built_in">print</span>(name)</span><br></pre></td></tr></table></figure>
+<figure class="highlight txt"><table><tr><td class="code"><pre><span class="line">Ada Lovelace</span><br><span class="line">ada lovelace</span><br><span class="line">ada lovelace</span><br></pre></td></tr></table></figure>
+
+<h2 id="合并字符串"><a href="#合并字符串" class="headerlink" title="合并字符串"></a>合并字符串</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">vim 7.py</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">first_name = <span class="string">&quot;ada&quot;</span></span><br><span class="line">last_name = <span class="string">&quot;lovelace&quot;</span></span><br><span class="line">full_name = first_name + <span class="string">&quot; &quot;</span> + last_name</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(full_name)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;Hello,&quot;</span> + full_name + <span class="string">&quot;!&quot;</span>)</span><br><span class="line">message = <span class="string">&quot;Hello,&quot;</span> + full_name.title() + <span class="string">&quot;!&quot;</span></span><br><span class="line"><span class="built_in">print</span>(message)</span><br></pre></td></tr></table></figure>
+<figure class="highlight txt"><table><tr><td class="code"><pre><span class="line">ada lovelace</span><br><span class="line">Hello,ada lovelace!</span><br><span class="line">Hello,Ada Lovelace!</span><br></pre></td></tr></table></figure>
+
+<h2 id="使用制表符或换行符来添加空白"><a href="#使用制表符或换行符来添加空白" class="headerlink" title="使用制表符或换行符来添加空白"></a>使用制表符或换行符来添加空白</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">vim 8.py</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="string">&quot;Python&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;Languages:\nPython\nC\nJava&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;Languages:\n\tPython\n\tC\n\tJava&quot;</span>)</span><br></pre></td></tr></table></figure>
+<figure class="highlight txt"><table><tr><td class="code"><pre><span class="line">Python</span><br><span class="line">Languages:</span><br><span class="line">Python</span><br><span class="line">C</span><br><span class="line">Java</span><br><span class="line">Languages:</span><br><span class="line">        Python</span><br><span class="line">        C</span><br><span class="line">        Java</span><br></pre></td></tr></table></figure>
+
+<h2 id="删除空白"><a href="#删除空白" class="headerlink" title="删除空白"></a>删除空白</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vim 9.py</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">favorite_language = <span class="string">&#x27; python &#x27;</span></span><br><span class="line"><span class="built_in">print</span>(favorite_language)</span><br><span class="line"><span class="built_in">print</span>(favorite_language.rstrip())</span><br><span class="line"><span class="built_in">print</span>(favorite_language.strip())</span><br></pre></td></tr></table></figure>
+<figure class="highlight txt"><table><tr><td class="code"><pre><span class="line"> python </span><br><span class="line"> python</span><br><span class="line">python </span><br></pre></td></tr></table></figure>
+
+<h2 id="使用字符串时避免语法错误"><a href="#使用字符串时避免语法错误" class="headerlink" title="使用字符串时避免语法错误"></a>使用字符串时避免语法错误</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vim 10.py</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">message = <span class="string">&#x27;One of Python&#x27;</span>s strengths <span class="keyword">is</span> its diverse community.<span class="string">&#x27;</span></span><br><span class="line"><span class="string">print(message)</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight txt"><table><tr><td class="code"><pre><span class="line">  File &quot;10.py&quot;, line 1</span><br><span class="line">    message = &#x27;One of Python&#x27;s strengths is its diverse community.&#x27;</span><br><span class="line">                             ^</span><br><span class="line">SyntaxError: invalid syntax</span><br></pre></td></tr></table></figure>
+<hr>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vim 11.py</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">message = <span class="string">&quot;One of Python&#x27;s strengths is its diverse community.&quot;</span></span><br><span class="line"><span class="built_in">print</span>(message)</span><br></pre></td></tr></table></figure>
+<figure class="highlight txt"><table><tr><td class="code"><pre><span class="line">One of Python&#x27;s strengths is its diverse community.</span><br></pre></td></tr></table></figure>
+
+<h2 id="Python-2-中的print语句"><a href="#Python-2-中的print语句" class="headerlink" title="Python 2 中的print语句"></a>Python 2 中的print语句</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vim 12.py</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="built_in">print</span> <span class="string">&quot;Hello Python 2.7 World!&quot;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight txt"><table><tr><td class="code"><pre><span class="line">Hello Python 2.7 World!</span><br></pre></td></tr></table></figure>
+
+<h1 id="数字"><a href="#数字" class="headerlink" title="数字"></a>数字</h1><h2 id="整数"><a href="#整数" class="headerlink" title="整数"></a>整数</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vim 13.py</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="built_in">print</span>( <span class="number">2</span> + <span class="number">3</span> )</span><br><span class="line"><span class="built_in">print</span>( <span class="number">3</span> - <span class="number">2</span> )</span><br><span class="line"><span class="built_in">print</span>( <span class="number">2</span> * <span class="number">3</span> )</span><br><span class="line"><span class="built_in">print</span>( <span class="number">3</span> / <span class="number">2</span> )</span><br></pre></td></tr></table></figure>
+<figure class="highlight txt"><table><tr><td class="code"><pre><span class="line">5</span><br><span class="line">1</span><br><span class="line">6</span><br><span class="line">1.5</span><br></pre></td></tr></table></figure>
+<hr>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vim 14.py</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="built_in">print</span>( <span class="number">3</span> ** <span class="number">2</span> )</span><br><span class="line"><span class="built_in">print</span>( <span class="number">3</span> ** <span class="number">3</span> )</span><br><span class="line"><span class="built_in">print</span>( <span class="number">10</span> ** <span class="number">6</span> )</span><br><span class="line"><span class="built_in">print</span>( <span class="number">2</span> + <span class="number">3</span> * <span class="number">4</span> )</span><br><span class="line"><span class="built_in">print</span>( ( <span class="number">2</span> + <span class="number">3</span> ) * <span class="number">4</span> )</span><br></pre></td></tr></table></figure>
+<figure class="highlight txt"><table><tr><td class="code"><pre><span class="line">9</span><br><span class="line">27</span><br><span class="line">1000000</span><br><span class="line">14</span><br><span class="line">20</span><br></pre></td></tr></table></figure>
+
+<h2 id="浮点型"><a href="#浮点型" class="headerlink" title="浮点型"></a>浮点型</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vim 15.py</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="built_in">print</span>( <span class="number">0.1</span> + <span class="number">0.1</span> )</span><br><span class="line"><span class="built_in">print</span>( <span class="number">0.2</span> + <span class="number">0.2</span> )</span><br><span class="line"><span class="built_in">print</span>( <span class="number">2</span> * <span class="number">0.1</span> )</span><br><span class="line"><span class="built_in">print</span>( <span class="number">2</span> * <span class="number">0.2</span> )</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;-------------------&quot;</span>)       <span class="comment">#结果包含的小数可能是不确定的</span></span><br><span class="line"><span class="built_in">print</span>( <span class="number">0.2</span> + <span class="number">0.1</span> )</span><br><span class="line"><span class="built_in">print</span>( <span class="number">3</span> * <span class="number">0.1</span> )</span><br></pre></td></tr></table></figure>
+<figure class="highlight txt"><table><tr><td class="code"><pre><span class="line">0.2</span><br><span class="line">0.4</span><br><span class="line">0.2</span><br><span class="line">0.4</span><br><span class="line">-------------------</span><br><span class="line">0.30000000000000004</span><br><span class="line">0.30000000000000004</span><br></pre></td></tr></table></figure>
+
+<h2 id="使用函数str-避免类型错误"><a href="#使用函数str-避免类型错误" class="headerlink" title="使用函数str()避免类型错误"></a>使用函数str()避免类型错误</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vim 16.py</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">age = <span class="number">23</span></span><br><span class="line">message = <span class="string">&quot;Happy &quot;</span> + age + <span class="string">&quot;rd Birthday!&quot;</span>   <span class="comment">#类型错误</span></span><br><span class="line"><span class="built_in">print</span>(message)</span><br></pre></td></tr></table></figure>
+<figure class="highlight txt"><table><tr><td class="code"><pre><span class="line">Traceback (most recent call last):</span><br><span class="line">  File &quot;16.py&quot;, line 2, in &lt;module&gt;</span><br><span class="line">    message = &quot;Happy &quot; + age + &quot;rd Birthday!&quot;</span><br><span class="line">TypeError: must be str, not int</span><br></pre></td></tr></table></figure>
+<hr>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vim 17.py</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">age = <span class="number">23</span></span><br><span class="line">message = <span class="string">&quot;Happy &quot;</span> + <span class="built_in">str</span>(age) + <span class="string">&quot;rd Birthday!&quot;</span></span><br><span class="line"><span class="built_in">print</span>(message)</span><br></pre></td></tr></table></figure>
+<figure class="highlight txt"><table><tr><td class="code"><pre><span class="line">Happy 23rd Birthday!</span><br></pre></td></tr></table></figure>
+
+<h2 id="Python-2-中的整数"><a href="#Python-2-中的整数" class="headerlink" title="Python 2 中的整数"></a>Python 2 中的整数</h2><p>与c语言类似，3&#x2F;2&#x3D;1而不是1.5</p>
+<h1 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vim 18.py</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 向大家问好</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;Hello Python people!&quot;</span>)</span><br></pre></td></tr></table></figure>
+<figure class="highlight txt"><table><tr><td class="code"><pre><span class="line">Hello Python people!</span><br></pre></td></tr></table></figure>
+
+<h1 id="Python-之禅"><a href="#Python-之禅" class="headerlink" title="Python 之禅"></a>Python 之禅</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vim 19.py</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> this</span><br></pre></td></tr></table></figure>
+<figure class="highlight txt"><table><tr><td class="code"><pre><span class="line">The Zen of Python, by Tim Peters</span><br><span class="line"></span><br><span class="line">Beautiful is better than ugly.</span><br><span class="line">Explicit is better than implicit.</span><br><span class="line">Simple is better than complex.</span><br><span class="line">Complex is better than complicated.</span><br><span class="line">Flat is better than nested.</span><br><span class="line">Sparse is better than dense.</span><br><span class="line">Readability counts.</span><br><span class="line">Special cases aren&#x27;t special enough to break the rules.</span><br><span class="line">Although practicality beats purity.</span><br><span class="line">Errors should never pass silently.</span><br><span class="line">Unless explicitly silenced.</span><br><span class="line">In the face of ambiguity, refuse the temptation to guess.</span><br><span class="line">There should be one-- and preferably only one --obvious way to do it.</span><br><span class="line">Although that way may not be obvious at first unless you&#x27;re Dutch.</span><br><span class="line">Now is better than never.</span><br><span class="line">Although never is often better than *right* now.</span><br><span class="line">If the implementation is hard to explain, it&#x27;s a bad idea.</span><br><span class="line">If the implementation is easy to explain, it may be a good idea.</span><br><span class="line">Namespaces are one honking great idea -- let&#x27;s do more of those!</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>python</category>
+        <category>python3 手册</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>Python 基础知识</title>
+    <url>/2021-06-21/python-basic-knowledge/</url>
+    <content><![CDATA[<h1 id="运行环境"><a href="#运行环境" class="headerlink" title="运行环境"></a>运行环境</h1><p>CentOS8.2 &amp;&amp; Python 3</p>
+<figure class="highlight txt"><table><tr><td class="code"><pre><span class="line">Python 3.6.8 (default, Apr 16 2020, 01:36:27)</span><br><span class="line">[GCC 8.3.1 20191121 (Red Hat 8.3.1-5)] on linux</span><br><span class="line">Type &quot;help&quot;, &quot;copyright&quot;, &quot;credits&quot; or &quot;license&quot; for more information.</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>python</category>
+        <category>python3 手册</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>图床&quot;永久链&quot;</title>
+    <url>/2021-01-06/img-make/</url>
+    <content><![CDATA[<p>需要准备对象存储及域名，理论”永久链”图床，可在各云服务商或个人服务器间迁移数据<br>如果你是国外的域名，markdown 是国内使用，需要绑定国内第三方 dns，这里以<a href="https://www.namesilo.com/">namesilo</a>域名绑定<a href="https://www.dnspod.cn/">dnspod</a>为例。</p>
+<span id="more"></span>  
+
+<h1 id="namesilo-配置-国内备案域名可跳过此步骤"><a href="#namesilo-配置-国内备案域名可跳过此步骤" class="headerlink" title="namesilo 配置(国内备案域名可跳过此步骤)"></a>namesilo 配置(国内备案域名可跳过此步骤)</h1><p><img src="https://gd-obj-001.gd2.qingstor.com/haruki/blog/cn/2022/281BCA8978E663D1AA05423137C07932E35E89FDDDCA7A23445455A7723F219C.png" alt="选择域名"></p>
+<p>进入域名管理页面<br>将原有三个 dns 删除替换为以下内容，提交</p>
+<blockquote>
+<p>f1g1ns1.dnspod.net<br>  f1g1ns2.dnspod.net</p>
+</blockquote>
+<p>返回域名管理页面，点击域名所在行右侧蓝色地球，进入域名解析页面，删除所有的解析内容即可。</p>
+<h1 id="dnspod-配置"><a href="#dnspod-配置" class="headerlink" title="dnspod 配置"></a>dnspod 配置</h1><p>进入 dnspod 管理页面，添加你的域名，点击 dns 刷新<br>创建公有读私有写存储桶，并复制存储桶域名<br><img src="https://gd-obj-001.gd2.qingstor.com/haruki/blog/cn/2022/5C3AE90E330110085424836989AC2F904D961280A441B32B909654094DCFE2B2.png" alt="添加自定义源站域名"><br>到 dnspod 解析页面，添加 CNAME 解析<br>需要注意的是，namesilo 的 dns 可能需要等几十分钟才会刷新，在此之前访问域名可能是到达不了存储桶的<br><img src="https://gd-obj-001.gd2.qingstor.com/haruki/blog/cn/2022/E315A71C14F3F94218BC781296F5F37A1B1996BCEF1D797ECA20A64597AFD18F.png" alt="DNS添加CNAME"></p>
+<h1 id="ssl-证书以及防盗链设置"><a href="#ssl-证书以及防盗链设置" class="headerlink" title="ssl 证书以及防盗链设置"></a>ssl 证书以及防盗链设置</h1><p>在 dnspod 或者腾讯云域名注册界面申请免费 ssl 证书并下载，解压。在存储桶域名绑定页面进行证书绑定，用记事本打开 Nginx 里的文本并复制到对应区域<br><img src="https://gd-obj-001.gd2.qingstor.com/haruki/blog/cn/2022/6B12C37D45ECE58C98F26DA67CDFC60F73ADB472ECBD37D20EFC839F64BD4A39.png" alt="上传ssl证书"></p>
+<p>测试一下，不挂 t 的情况下自定义域名可以访问图片，以后的迁移只需 copy 文件，域名重新对应一下 CNAME 即可，markdown 文章的图片地址不需要变动。<br><img src="https://gd-obj-001.gd2.qingstor.com/haruki/blog/cn/2022/4DEED59F8DC599B65736DFA4B81C4DB1C4028557408CFBA90B1691DDDE70D6EB.png" alt="自定义域名访问图片 &amp;&amp; 对象存储默认源站访问图片"></p>
+<p>存储桶防盗链设置如下，配置完防盗链之后本地预览和网页地址栏输入是访问不了对象存储的，只有白名单内的 ip 才能访问<br><img src="https://gd-obj-001.gd2.qingstor.com/haruki/blog/cn/2022/358EF065F5956500257330DDE1493957881F0BD1C0294CB5E6115CDF7805CE40.png" alt="设置存储桶放到白名单"></p>
+]]></content>
+      <categories>
+        <category>timeline</category>
+      </categories>
+      <tags>
+        <tag>Domain</tag>
+        <tag>Object Storage</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>云函数</title>
+    <url>/2021-01-05/function-cloud/</url>
+    <content><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p><a href="https://developers.weixin.qq.com/miniprogram/dev/wxcloud/guide/functions.html">云函数简介</a><br>长不看结论：总之就是跑脚本，也可以跑微信的推送等事件。目前我只用它在跑签到脚本。</p>
+<h1 id="server-酱"><a href="#server-酱" class="headerlink" title="server 酱"></a>server 酱</h1><p>原版 server 酱：<a href="http://sc.ftqq.com/">http://sc.ftqq.com/</a><br>自搭 server 酱：<a href="https://www.v2ex.com/t/567927">https://www.v2ex.com/t/567927</a></p>
+<span id="more"></span>
+
+<h1 id="哔哩哔哩签到"><a href="#哔哩哔哩签到" class="headerlink" title="哔哩哔哩签到"></a>哔哩哔哩签到</h1><p>项目地址：<a href="https://github.com/happy888888/BiliExp">https://github.com/happy888888/BiliExp</a><br>油猴脚本：<a href="https://greasyfork.org/zh-CN/scripts/393096-bilibiliexp/versions">https://greasyfork.org/zh-CN/scripts/393096-bilibiliexp/versions</a><br>注意事项：云函数方式为 cookie 签到</p>
+<h1 id="天翼云盘签到和抽奖"><a href="#天翼云盘签到和抽奖" class="headerlink" title="天翼云盘签到和抽奖"></a>天翼云盘签到和抽奖</h1><p>项目地址：<a href="https://github.com/FingerSword/Cloud189-Sign-In">https://github.com/FingerSword/Cloud189-Sign-In</a><br>注意事项：不改密码就 ok  </p>
+<h1 id="网易云音乐签到"><a href="#网易云音乐签到" class="headerlink" title="网易云音乐签到"></a>网易云音乐签到</h1><p>地址：<a href="https://www.coolapk.com/feed/22733317">https://www.coolapk.com/feed/22733317</a><br>注意事项：不改密码就 ok  </p>
+<h1 id="有道云笔记签到"><a href="#有道云笔记签到" class="headerlink" title="有道云笔记签到"></a>有道云笔记签到</h1><p>签到 1.0：<a href="https://www.coolapk.com/feed/18049127">https://www.coolapk.com/feed/18049127</a><br>签到 2.0：<a href="https://www.coolapk.com/feed/19750209">https://www.coolapk.com/feed/19750209</a></p>
+]]></content>
+      <categories>
+        <category>timeline</category>
+      </categories>
+      <tags>
+        <tag>CloudService</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>C# 基础</title>
+    <url>/2021-01-05/c-sharp-base/</url>
+    <content><![CDATA[<h1 id="C-语言及特点"><a href="#C-语言及特点" class="headerlink" title="C#语言及特点"></a>C#语言及特点</h1><ul>
+<li>C#是微软公司发布的一种<strong>面向对象</strong>的、运行于.NET Framework 和 .NET Core (完全开源，跨平台)之上的高级程序设计语言。</li>
+<li>C#是一种<strong>安全的、稳定的、简单的、优雅的</strong>，由 C 和 C++衍生出来的面向对象的编程语言。它在继承 C 和 C++的强大功能的同时去掉了一些它们的复杂特性。</li>
+<li>C#是<strong>面向对象</strong>的编程语言<span id="more"></span></li>
+</ul>
+<h1 id="认识-NET-Framework-x2F-NET-Core"><a href="#认识-NET-Framework-x2F-NET-Core" class="headerlink" title="认识 .NET Framework &#x2F; .NET Core"></a>认识 .NET Framework &#x2F; .NET Core</h1><pre class="mermaid">graph LR
+A[.NET平台] -->B(C#语言)
+A[.NET平台] -->C(Visual Basic语言)
+A[.NET平台] -->D(C++语言)
+A[.NET平台] -->E(F#语言)
+A[.NET平台] -->F(...语言)</pre>
+<h1 id="Visual-Studio-安装使用"><a href="#Visual-Studio-安装使用" class="headerlink" title="Visual Studio 安装使用"></a>Visual Studio 安装使用</h1><p><a href="https://visualstudio.microsoft.com/zh-hans/downloads/">https://visualstudio.microsoft.com/zh-hans/downloads/</a></p>
+<h1 id="创建第一个程序"><a href="#创建第一个程序" class="headerlink" title="创建第一个程序"></a>创建第一个程序</h1><p>Windows 窗体应用（.net framwork）</p>
+<figure class="highlight c#"><table><tr><td class="code"><pre><span class="line"><span class="keyword">namespace</span> <span class="title">WindowsFormsApp1</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">partial</span> <span class="keyword">class</span> <span class="title">Form1</span> : <span class="title">Form</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="title">Form1</span>()</span></span><br><span class="line">        &#123;</span><br><span class="line">            InitializeComponent();</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">Label1_Click</span>(<span class="params"><span class="built_in">object</span> sender, EventArgs e</span>)</span></span><br><span class="line">        &#123;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>c#</category>
+      </categories>
+      <tags>
+        <tag>C#</tag>
+        <tag>.NET</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>域名的使用</title>
+    <url>/2021-01-05/make-domainname/</url>
+    <content><![CDATA[<h1 id="域名服务商"><a href="#域名服务商" class="headerlink" title="域名服务商"></a>域名服务商</h1><p>个人站除开 com、net 这两个域名，其他推荐选择国外服务商进行注册。以下仅列举一些我接触过的，还有很多其他的服务商就不一一列举了  </p>
+<ul>
+<li>国内<ul>
+<li><a href="https://wanwang.aliyun.com/">阿里云万网</a>：尚可，只提供 com 和 net、tv、cc 这四个域名的隐藏个人信息服务</li>
+<li><a href="https://www.huaweicloud.com/product/domain.html">华为云 domain</a>：在企鹅和阿里中间的位置</li>
+<li><a href="https://dnspod.cloud.tencent.com/">腾讯云 dnspod</a>：我目前所有 com 域名都在这个上面</li>
+<li><a href="https://cloud.baidu.com/product/bcd.html">百度云 BCD</a>：新用户优惠不好，域名隐私里写的和实际不符</li>
+</ul>
+</li>
+<li>国外<ul>
+<li><a href="https://sg.godaddy.com/">GoDaddy</a>：全球最大的域名服务商，当然价格就…也是贵的，隐藏个人信息还要收费</li>
+<li><a href="https://www.namesilo.com/">namesilo</a>：价格便宜，比国内的稍微贵一丢丢，所有域名均支持免费 whois 隐藏个人信息</li>
+</ul>
+</li>
+</ul>
+<span id="more"></span>
+
+<h1 id="选购指南"><a href="#选购指南" class="headerlink" title="选购指南"></a>选购指南</h1><p>对于正常内容的网站，.com 和.net 选国内的就可以了，价格比国外便宜，安全性几个顶级服务商一般不会出问题，而且这两个后缀的域名默认隐藏 whois 个人信息。<br>其他的域名，比如 work、link、site、me…请参考各个国内服务商的域名隐私保护指南(<a href="https://wanwang.aliyun.com/domain/whoisprotect/">阿里云</a>、<a href="https://support.huaweicloud.com/domain_faq/domain_faq_0002.html">华为云</a>、<a href="https://cloud.tencent.com/document/product/242/30404">腾讯云</a>、<a href="https://cloud.baidu.com/doc/BCD/s/bjwvym8qn">百度云</a>)，他们是不支持非主流域名隐藏注册人姓名和注册邮箱的，根据我的实践，腾讯和阿里的 top 域名，百度和腾讯的 xyz 域名，均不支持 whois 隐藏，虽然 ICANN 和欧盟在 2018 年已经要求 whois 查询结果不再展示域名所有者、联系邮箱等信息，但有些域名服务商对于非主流域名并没有默认隐藏。<br>这些非主流的域名，我一般作为跳转域名用，当然也可以给小网站，出于 whois 查询隐私考虑，这些域名最好选择国外的，好处有很多就不多说了，至少 whois 查询不到注册人。<br>然后是国外服务商的选择，我选择的是 namesilo，因为便宜且支持隐藏个人信息，无需备案就可跳转。<br>使用方法参考：<a href="https://zhuanlan.zhihu.com/p/33921436">https://zhuanlan.zhihu.com/p/33921436</a> 。<br>跳转指定 url 参考：<a href="https://www.namesilo.com/Support/Domain-Forwarding">https://www.namesilo.com/Support/Domain-Forwarding</a> 。<br>Google 邮箱注册在移动端 gmail 注册即可不绑定手机，最开始的手机号只为验证是否真人。</p>
+<p>价格对比 1：<a href="https://www.domain265.com/">https://www.domain265.com/</a><br>价格对比 2: <a href="https://namebeta.com/">https://namebeta.com/</a><br>whois 查询：<a href="https://domain.163yun.com/">https://domain.163yun.com/</a><br>ICANN 更多信息：<a href="https://www.icann.org/news/announcement-2018-05-22-zh">https://www.icann.org/news/announcement-2018-05-22-zh</a></p>
+<h1 id="域名跳转指定-url-方案"><a href="#域名跳转指定-url-方案" class="headerlink" title="域名跳转指定 url 方案"></a>域名跳转指定 url 方案</h1><blockquote>
+<p>2022-08-08 更新，现在可以使用 cloudflare 的 <a href="../../2022-09-04/cloudflare-301-url">workers</a> 进行显示 url 跳转</p>
+</blockquote>
+<h2 id="方案一：github-仓库跳转"><a href="#方案一：github-仓库跳转" class="headerlink" title="方案一：github 仓库跳转"></a>方案一：github 仓库跳转</h2><p>准备：一个 github 账号，一个域名<br>思路：域名商那里 CNAME 解析到你的 github 域名 yourname.github.io ，github 仓库内 CNAME 写入域名并开启 github page，写入一个 js 加载时跳转事件即可  </p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="language-javascript"><span class="variable language_">window</span>.<span class="property">location</span>.<span class="property">href</span> = <span class="string">&quot;域名网址&quot;</span></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="方案二：对象存储跳转"><a href="#方案二：对象存储跳转" class="headerlink" title="方案二：对象存储跳转"></a>方案二：对象存储跳转</h2><blockquote>
+<p>2022-08-08 现在国内对象存储需要备案才能访问域名，该方案只适用于非大陆存储桶</p>
+</blockquote>
+<p>准备：能开启静态网页的对象存储，一个域名<br>思路：一级域名 CNAME 解析到对象存储的 website 域名上，存储桶只存放一个 index.html，之后写入 JavaScript 跳转即可<br>具体步骤：  </p>
+<ol>
+<li>创建一个非大陆地区的公有读私有写存储桶，推荐中国香港节点。</li>
+<li>开启存储桶的静态网站模块，并打开安全模块中的服务器端加密。</li>
+<li>在对象存储域名管理里填写自定义源站域名，在 dnspod 中添加对应 CNAME 解析，并上传对应证书密钥到源站上。</li>
+<li>对象存储上传一个 index.html 文件，写入以下代码<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="language-javascript"><span class="variable language_">window</span>.<span class="property">location</span>.<span class="property">href</span> = <span class="string">&quot;域名网址&quot;</span></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
+</ol>
+]]></content>
+      <categories>
+        <category>timeline</category>
+      </categories>
+      <tags>
+        <tag>Domain</tag>
+        <tag>Git Page</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>了解文件系统的和基本操作</title>
+    <url>/2021-01-04/understand-the-file-system-and-basic-operations/</url>
+    <content><![CDATA[<h1 id="学习目标"><a href="#学习目标" class="headerlink" title="学习目标"></a>学习目标</h1><ul>
+<li>描述分件系统重要的组成部分</li>
+<li>复制，移动和删除文件</li>
+<li>创建文件和文件夹</li>
+<li>了解时间戳的概念</li>
+</ul>
+<h1 id="Linux文件系统的组成"><a href="#Linux文件系统的组成" class="headerlink" title="Linux文件系统的组成"></a>Linux文件系统的组成</h1><p>整个文件系统由 分区–目录 对接<br>文件都是从根开始的，无论文件在哪个分区，都可以通过根访问到  </p>
+<ul>
+<li>文件和目录构成单根的倒树状结构</li>
+<li>文件系统从根目录开始，表示为一个单独的’&#x2F;’(斜线)字符</li>
+<li>命名大小写敏感</li>
+<li>路径以’&#x2F;’为分隔</li>
+</ul>
+<pre class="mermaid">	graph TD
+    A(/)-->B1(bin)
+    A-->B2(boot)
+    A-->B3(dev)
+    A-->B4(etc)
+    A-->B5(home)
+        B5-->D1(alice)
+        B5-->D2(bob)
+        B5-->D3(eve)
+    A-->B6(root)
+    A-->B7(run)
+    A-->B8(sbin)
+    A-->B9(tmp)
+    A-->B10(usr)
+        B10-->D4(bin)
+        B10-->D5(local)
+        B10-->D6(sbin)
+        B10-->D7(tmp)		
+    A-->B11(var)
+        B11-->D8(tmp)</pre>
+<span id="more"></span>  
+
+<p><strong>执行命令：ls -la；显示白色是文件，蓝色是目录</strong>  </p>
+<table>
+<thead>
+<tr>
+<th>d</th>
+<th>r-xr-x—.</th>
+<th>15</th>
+<th>root</th>
+<th>root</th>
+<th>4096</th>
+<th>Jul  3 04:43</th>
+<th>.</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>文件</td>
+<td>权限</td>
+<td>文件:链接数&#x2F;目录:子目录数</td>
+<td>拥有人</td>
+<td>拥有组</td>
+<td>文件大小（默认字节）</td>
+<td>最后一次修改时间</td>
+<td>文件名</td>
+</tr>
+</tbody></table>
+<h1 id="基本目录"><a href="#基本目录" class="headerlink" title="基本目录"></a>基本目录</h1><ol>
+<li><strong>&#x2F;：根目录</strong>，位于Linux文件系统目录结构的顶层，一般根目录下只存放目录，不要存放文件，&#x2F;etc、&#x2F;bin、&#x2F;dev、&#x2F;lib、&#x2F;sbin应该和根目录放置在一个分区中。 </li>
+<li><strong>&#x2F;bin，&#x2F;usr&#x2F;bin：这两个目录为命令文件目录</strong>，也称为二进制目录。包含了供系统管理员及普通用户使用的重要的linux命令和二进制（可执行）文件，包含shell解释器等。在linux 7或者更高的版本中，&#x2F;bin和&#x2F;usr&#x2F;bin，&#x2F;sbin和&#x2F;usr&#x2F;sbin，&#x2F;lib和&#x2F;usr&#x2F;lib、lib64和&#x2F;usr&#x2F;lib64中，&#x2F;中的目录是&#x2F;usr&#x2F;中对应目录软链接。相当于win的快捷方式 访问&#x2F;bin和&#x2F;usr&#x2F;bin是一样的</li>
+<li><strong>&#x2F;boot： 该目录中存放系统的内核文件和引导装载程序文件</strong>，&#x2F;boot&#x2F;vmlinuz为linux的内核文件，以及&#x2F;boot&#x2F;gurb。一般情况下都是单独分区，分区大小200M即可。</li>
+<li><strong>&#x2F;dev： 设备（device）文件目录</strong>，存放linux系统下的设备文件，访问该目录下某个文件，相当于访问某个设备，存放连接到计算机上的设备（终端、磁盘驱动器、光驱及网卡等）的对应文件，包括字符设备和块设备等，常用的是挂载光驱： <strong>mount &#x2F;dev&#x2F;cdrom  &#x2F;mnt。</strong> </li>
+<li><strong>&#x2F;etc： 系统配置文件存放的目录</strong>，该目录存放系统的大部分配置文件和子目录，不建议在此目录下存放可执行文件，重要的配置文件有&#x2F;etc&#x2F;inittab、&#x2F;etc&#x2F;fstab、&#x2F;etc&#x2F;init.d、&#x2F;etc&#x2F;X11（X Window系统有关）、&#x2F;etc&#x2F;sysconfig（与网络有关）、&#x2F;etc&#x2F;xinetd.d等等，修改配置文件之前记得备份。该目录下的文件由系统管理员来使用，普通用户对大部分文件有只读权限。</li>
+<li><strong>&#x2F;home： 系统默认的用户宿主目录</strong>，新增用户账号时，用户的宿主目录都存放在此目录下，表示当前用户的宿主目录，test表示用户test的宿主目录。如果做文件服务器，建议单独分区，并设置较大的磁盘空间，方便用户存放数据。用户传上来的数据和其他系统文件隔离，安全性高些！</li>
+<li><strong>&#x2F;lib，&#x2F;usr&#x2F;lib，&#x2F;usr&#x2F;local&#x2F;lib：系统使用的函数库的目录</strong>，程序在执行过程中，需要调用一些额外的参数时需要函数库的协助，该目录下存放了各种编程语言库。典型的linux系统包含了C、C++和FORTRAN语言的库文件。&#x2F;lib目录下的库映像文件可以用来启动系统并执行一些命令，目录&#x2F;lib&#x2F;modules包含了可加载的内核模块，&#x2F;lib目录存放了所有重要的库文件，其他的库文件则大部分存放在&#x2F;usr&#x2F;lib目录下。</li>
+<li><strong>&#x2F;mnt，&#x2F;media： mnt目录主要用来临时挂载文件系统，为某些设备提供默认挂载点，如cdrom</strong>。这样当挂载了一个设备如光驱时，就可以通过访问目录&#x2F;mnt下的文件来访问相应的光驱上的文件了。</li>
+<li><strong>&#x2F;opt： 给主机额外安装软件所摆放的目录</strong>。如果想要自行安装新的KDE 桌面软件，可以将该软件安装在该目录下。以前的 Linux 系统中，习惯放置在 &#x2F;usr&#x2F;local 目录下。</li>
+<li><strong>&#x2F;proc： 此目录的数据都在内存中</strong>，如系统核心，外部设备，网络状态，由于数据都存放于内存中，所以不占用磁盘空间，比较重要的目录有&#x2F;proc&#x2F;cpuinfo、&#x2F;proc&#x2F;interrupts、&#x2F;proc&#x2F;dma、&#x2F;proc&#x2F;ioports、&#x2F;proc&#x2F;net&#x2F;*等。</li>
+<li><strong>&#x2F;root：系统管理员root的宿主目录</strong>，系统第一个启动的分区为&#x2F;，所以最好将&#x2F;root和&#x2F;放置在一个分区下。</li>
+<li><strong>&#x2F;sbin，&#x2F;usr&#x2F;sbin，&#x2F;usr&#x2F;local&#x2F;sbin：放置系统管理员使用的可执行命令</strong>，如fdisk、shutdown、mount等。与&#x2F;bin不同的是，这几个目录是给系统管理员root使用的命令，一般用户只能”查看”而不能设置和使用。</li>
+<li><strong>&#x2F;tmp： 一般用户或正在执行的程序临时存放文件的目录</strong>,任何人都可以访问,重要数据不可放置在此目录下。</li>
+<li><strong>&#x2F;srv： 服务启动之后需要访问的数据目录</strong>，如www服务需要访问的网页数据存放在&#x2F;srv&#x2F;www内。</li>
+<li><strong>&#x2F;usr： 应用程序存放目录</strong>，&#x2F;usr&#x2F;bin 存放应用程序， &#x2F;usr&#x2F;share 存放共享数据，&#x2F;usr&#x2F;lib 存放不能直接运行的，却是许多程序运行所必需的一些函数库文件，&#x2F;usr&#x2F;local 存放软件升级包，&#x2F;usr&#x2F;share&#x2F;doc 系统说明文件存放目录。</li>
+<li><strong>&#x2F;usr&#x2F;share&#x2F;man:程序说明文件存放目录</strong>，使用 man ls时会查询&#x2F;usr&#x2F;share&#x2F;man&#x2F;man1&#x2F;ls.1.gz的内容，建议单独分区，设置较大的磁盘空间。</li>
+<li><strong>&#x2F;var： 放置系统执行过程中经常变化的文件，如随时更改的日志文件</strong> &#x2F;var&#x2F;log。&#x2F;var&#x2F;log&#x2F;message： 所有的登录文件存放目录。&#x2F;var&#x2F;spool&#x2F;mail： 邮件存放的目录。建议单独分区，设置较大的磁盘空间。</li>
+<li><strong>&#x2F;run</strong>：目录中存放的是自系统启动以来描述系统信息的文件</li>
+<li><strong>&#x2F;sys</strong>： 挂载点上挂载sysfs 虚拟文件系统，我们可以通过sysfs 文件系统访问 Linux 内核</li>
+</ol>
+<h1 id="重要目录"><a href="#重要目录" class="headerlink" title="重要目录"></a>重要目录</h1><p><strong>&#x2F;etc：这个目录相当重要</strong>，如前所述，你的开机与系统数据文件均在这个目录之下，因此当这个目录被破坏，那你的系统大概也就差不多该死掉了！而在往后的文件中，你会发现我们常常使用这个目录下的 &#x2F;etc&#x2F;rc.d&#x2F;init.d 这个子目录，因为这个 init.d 子目录是开启一些 Linux 系统服务的 scripts 的地方。而在 &#x2F;etc&#x2F;rc.d&#x2F;rc.local 这个文件是开机的执行档。<br><strong>&#x2F;bin, &#x2F;sbin, &#x2F;usr&#x2F;bin, &#x2F;usr&#x2F;sbin：这是系统预设的执行文件的放置目录</strong>，例如 root 常常使用的 userconf, netconf, perl, gcc, c++ 等等的数据都放在这几个目录中，所以如果你在提示字符下找不到某个执行档时，可以在这四个目录中查一查！其中， &#x2F;bin, &#x2F;usr&#x2F;bin 是给系统使用者使用的指令，而 &#x2F;sbin, &#x2F;usr&#x2F;sbin 则是给系统管理员使用的指令！<br><strong>&#x2F;usr&#x2F;local：这是系统预设的让你安装你后来升级的套件的目录</strong>。例如，当你发现有更新的 Web 套件（如 Apache ）可以安装，而你又不想以 rpm 的方式升级你的套件，则你可以将 apache 这个套件安装在 &#x2F;usr&#x2F;local 底下。安装在这里有个好处，因为目前大家的系统都是差不多的，所以如果你的系统要让别人接管的话，也比较容易上手！也比较容易找的到数据！因此，如果你有需要的话，通常都会将 &#x2F;usr&#x2F;local&#x2F;bin 这个路径加到 path 中。<br><strong>&#x2F;home：这个是系统将有账号的人口的家目录设置的地方。</strong> 　<br><strong>&#x2F;var：这个路径就重要了！不论是登入、各类服务的问题发生时的记录、以及常态性的服务记录等等的记录目录</strong>，所以当你的系统有问题时，就需要来这个目录记录的文件数据中察看问题的所在！而 mail 的预设放置也是在这里，所以他是很重要的 。<br><strong>&#x2F;usr&#x2F;share&#x2F;man, &#x2F;usr&#x2F;local&#x2F;man： 这两个目录为放置各类套件说明档的地方</strong>，例如你如果执行 man man，则系统会自动去找这两个目录下的所有说明文件。  </p>
+<h1 id="一些常用文件目录"><a href="#一些常用文件目录" class="headerlink" title="一些常用文件目录"></a>一些常用文件目录</h1><p><strong>用户账号文件：&#x2F;etc&#x2F;passwd</strong></p>
+<table>
+<thead>
+<tr>
+<th>字段1</th>
+<th>字段2</th>
+<th>字段3</th>
+<th>字段4</th>
+<th>字段5</th>
+<th>字段6</th>
+<th>字段7</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>user01</td>
+<td>x:</td>
+<td>1000:</td>
+<td>1000:</td>
+<td>User One:</td>
+<td>&#x2F;home&#x2F;user01</td>
+<td>&#x2F;bin&#x2F;bash</td>
+</tr>
+<tr>
+<td>用户名称</td>
+<td>密码占位符“x”(表示登录该用户时需要密码，红帽8去掉也需要密码）</td>
+<td>用户帐号的UID号</td>
+<td>用户的私有组</td>
+<td>用户描述信息</td>
+<td>用户的主目录</td>
+<td>登录Shell信息</td>
+</tr>
+</tbody></table>
+<p><strong>密码文件：&#x2F;etc&#x2F;shadow</strong></p>
+<table>
+<thead>
+<tr>
+<th>字段1</th>
+<th>字段2</th>
+<th>字段3</th>
+<th>字段4</th>
+<th>字段5</th>
+<th>字段6</th>
+<th>字段7</th>
+<th>字段8</th>
+<th>字段9</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>user03</td>
+<td>$6$CSsx…output omitted…:</td>
+<td>17933</td>
+<td>0</td>
+<td>99999:</td>
+<td>7</td>
+<td>2</td>
+<td>18113</td>
+<td></td>
+</tr>
+<tr>
+<td>用户帐号的名称</td>
+<td>加密的密码字串信息</td>
+<td>最近一次修改密码的时间，表示从1970.01.01至今的天数</td>
+<td>密码的最短使用天数，默认值为0，没有要求</td>
+<td>密码的最长有效天数，默认值为99999</td>
+<td>密码即将到期警告天数，默认值为7</td>
+<td>在密码过期之后账号保持活动的天数，指定天数后账号被锁定，成为无效</td>
+<td>帐号失效时间，默认值为空，以1970.01.01的天数表示</td>
+<td>保留字段（未使用）</td>
+</tr>
+</tbody></table>
+<p><strong>组信息文件：&#x2F;etc&#x2F;group</strong></p>
+<p>| 字段1 | 字段2 | 字段3 | 字段4 |<br>| —– | —– |<br>|组的名称|密码占位符“x”|组的ID号|该组是user1，user2和user3的附加组|</p>
+<p>#文件和目录名<br><strong>名字不能多于255个字符</strong><br><strong>所有字符都要求是有效的，除斜线(&#x2F;)之外</strong><br>不要使用某些特殊的字符在文件或者目录名中<br>当文件名中有特殊字符时应用引号保护引起来<br><strong>命名和大小写敏感</strong><br>例如:MAIL,Mail,mail和mAiL</p>
+<h1 id="绝对路径和相对路径"><a href="#绝对路径和相对路径" class="headerlink" title="绝对路径和相对路径"></a>绝对路径和相对路径</h1><p><strong>绝对路径：</strong><br>以根开头的路径<br>文件位置的全路径<br>在任何位置都可以引用<br><strong>相对路径：</strong><br>不以斜线开头<br>当前工作目录的相对位置<br>在特定的位置才可以引用</p>
+<h1 id="管理文件和目录的基本命令"><a href="#管理文件和目录的基本命令" class="headerlink" title="管理文件和目录的基本命令"></a>管理文件和目录的基本命令</h1><p><strong>ls</strong>：显示当前目录或者指定目录下的内容<br>使用<br>ls [options] [files or dirs]<br>示例<br>ls -a (包括隐藏文件)<br>ls -l (显示扩展信息)<br>ls -R(递归所有的目录)<br>ls -ld (显示目录和符号链接信息)</p>
+<p><strong>mkdir</strong>：</p>
+<ol>
+<li>命令格式<br>mkdir [-选项] 目录…</li>
+<li>命令功能<br>通过 mkdir 命令可以实现在指定位置创建指定的文件名的文件夹。<strong>要创建文件夹的用户必须对所创建的文件夹的父文件夹具有写权限</strong>。并且，所创建的文件夹不能与其父目录中的已经存在文件重名，即同一个目录下不能有同名的(区分大小写)。 </li>
+<li>命令参数<br> -p, –parents 可以是一个路径名称。<strong>此时若路径中的某些目录尚不存在,加上此选项后,系统将自动建立好那些尚不存在的目录</strong>,即一次可以建立多个目录;<br>-v, –verbose 每次创建新目录都显示信息</li>
+</ol>
+<p><strong>pwd</strong>：显示当前所在的目录的绝对路径</p>
+<p><strong>cd</strong>：改变目录<br>改变到一个绝对或者相对路径<br>cd &#x2F;home&#x2F;joshua&#x2F;work；cd project&#x2F;docs<br>改变到上层目录<br>cd ..<br>改变目录到上一个工作目录<br>cd -<br>改变到当前用户的主目录<br>cd 或者cd ~<br>改变到某个用户的主目录<br>cd  ~username</p>
+<p><strong>rmdir</strong>：删除空目录</p>
+<p><strong>cp</strong>：命令主要用于复制文件或目录<br> cp [options] source… directory<br> l -p：除复制文件的内容外，还把修改时间和访问权限也复制到新文件中。<br> l -r：若给出的源文件是一个目录文件，此时将复制该目录下所有的子目录和文件。</p>
+<p><strong>mv</strong>:命令用来为文件或目录改名、或将文件或目录移入其它位置。<br> mv source… directory</p>
+<p><strong>rm</strong>：命令用于删除一个文件或者目录。<br> rm [options] name…<br> l -f 即使文件属性设为只读，也直接删除，无需逐一确认。<br> l -r 将目录及以下之文件一起删除。<br> rm -rf * 删除当前目录下的所有文件及目录</p>
+<p><strong>touch</strong>：命令用于修改文件或者目录的时间属性。若文件不存在，系统会建立一个新的文件。<br>命令格式：touch  文件名</p>
+<p><strong>cat</strong>：命令用显示文件内容。</p>
+<p><strong>命令格式</strong>：cat [-选项] 文件<br>加参数：-n 或 –number：由 1 开始对所有输出的行数编号。</p>
+<p><strong>more</strong>：命令类似 cat ，不过会以一页一页的形式显示，更方便使用者逐页阅读，而最基本的指令就是按空白键（space）就往下一页显示，按 b 键就会往回（back）一页显示<br>l Enter 向下n行，需要定义。默认为1行<br>l 空格键 向下滚动一屏<br>l q 退出more</p>
+<p><strong>less</strong>：工具也是对文件或其它输出进行分页显示的工具，应该说是linux正统查看文件内容的工具，功能极其强大。  </p>
+<ol>
+<li>命令格式<br>less [-选项] 文件 </li>
+<li>命令功能<br>less 与 more 类似，但使用 less 可以随意浏览文件，而 more 仅能向前移动，却不能向后移动，而且 less 在查看之前不会加载整个文件。<br>&#x2F;字符串：向下搜索“字符串”的功能<br>?字符串：向上搜索“字符串”的功能<br>n：重复前一个搜索（与 &#x2F; 或 ? 有关），next<br>N：反向重复前一个搜索（与 &#x2F; 或 ? 有关）<br>Q 退出less 命令<br>Enter 向下n行，需要定义。默认为1行<br>空格键 向下滚动一屏<br>b键 向上滚动一屏<br>[pagedown]： 向下翻动一行<br>[pageup]：  向上翻动一行</li>
+</ol>
+<p><strong>head</strong>：用来显示档案的开头至标准输出中。如果指定了多于一个文件，在每一段输出前会给出文件名作为文件头。<br>head -n 5 log.txt ；说明：显示文件的前n行</p>
+<p><strong>tail</strong>：命令用途是依照要求将指定的文件的最后部分输出  </p>
+<ol>
+<li>tail filename<br>说明：显示filename最后10行。</li>
+<li>tail -F filename<br>说明：动态监视filename文件的尾部内容（默认10行，相当于增加参数 -n 10），刷新显示在屏幕上。退出，按下CTRL+C。</li>
+<li>tail -n 20 filename<br>说明：显示filename最后20行。</li>
+</ol>
+<p><strong>file查看文件类型</strong>：查看文件类型<br>文件可以包含许多类型的数据<br>在文件打开之前先检查文件类型，然后再确定使用适当的命令或者应用程序<br>file [options] <filename>…</p>
+<p><strong>tree</strong>：可以查看当前目录下的所有子目录和文件结构</p>
+<h1 id="单元小结"><a href="#单元小结" class="headerlink" title="单元小结"></a>单元小结</h1><ul>
+<li>Linux 文件系统层次结构</li>
+<li>命令行文件管理工具</li>
+<li>时间戳</li>
+</ul>
+]]></content>
+      <categories>
+        <category>linux</category>
+        <category>rhel8手册</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>运行命令和获取帮助</title>
+    <url>/2021-01-03/run-commands-and-get-help/</url>
+    <content><![CDATA[<h1 id="学习目标"><a href="#学习目标" class="headerlink" title="学习目标"></a>学习目标</h1><ul>
+<li>在提示符下执行命令</li>
+<li>掌握命令的语法</li>
+<li>学习使用一些简单命令</li>
+<li>学会使用系统内部的一些帮助</li>
+<li>学会使用red hat的在线文档</li>
+</ul>
+<h1 id="命令的语法"><a href="#命令的语法" class="headerlink" title="命令的语法"></a>命令的语法</h1><p>  command options arguments   </p>
+<ul>
+<li>项与项之间以空格分隔开</li>
+<li>options修饰一个命令的行为<ul>
+<li>单个字母作为选项前一般都带有-,例如-a,-b,-c或者-abc</li>
+<li>单词作为选项前通常带有–,例如:–help</li>
+</ul>
+</li>
+<li>参数是一个文件名目录或者具体的某个对象</li>
+<li>多个命令用;分隔</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>命令</th>
+<th>选项</th>
+<th>参数</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>做什么，如：passwd、ls、id</td>
+<td>修饰命令的行为（功能），如：-a、-l、-la</td>
+<td>具体的某个对象</td>
+</tr>
+</tbody></table>
+<span id="more"></span>  
+
+<h1 id="获取帮助"><a href="#获取帮助" class="headerlink" title="获取帮助"></a>获取帮助</h1><p>不要去尝试记住一切，不同级别的帮助资源： whatis、 command –help、 man、pinfo、 &#x2F;usr&#x2F;share&#x2F;doc、 红帽官方产品文档 </p>
+<p><strong>whatis命令</strong>  </p>
+<ul>
+<li>显示命令的简短描述</li>
+<li>基于数据库的查询，定时更新</li>
+<li>在安装完后并不能马上使用</li>
+</ul>
+<p><strong>–help命令</strong>  </p>
+<ul>
+<li>列出命令常用的语法和参数</li>
+<li>大部分命令支持该选项</li>
+<li>特殊符号解读<ul>
+<li>在[]中的参数是可选的</li>
+<li>大写的参数或者在&lt;&gt;中都表示变量</li>
+<li>文本后面跟随…表示一个列表</li>
+<li>x|y|z表示”x 或者y或者z”</li>
+</ul>
+<ul>
+<li>-abc表示”任意-a,-b或者-c的任意组合”</li>
+</ul>
+</li>
+<li>例如：date –help</li>
+</ul>
+<p><strong>man使用方法：</strong><br>   man -k 关键字<br>   man [章节信息] 命令或者配置文件 </p>
+<table>
+<thead>
+<tr>
+<th>命令</th>
+<th>结果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>空格键</td>
+<td>向下翻页</td>
+</tr>
+<tr>
+<td>PageUp&#x2F;PageDown</td>
+<td>向上向下翻页</td>
+</tr>
+<tr>
+<td>g&#x2F;G</td>
+<td>回到开头&#x2F;末尾</td>
+</tr>
+<tr>
+<td>&#x2F;string</td>
+<td>搜索string关键词</td>
+</tr>
+<tr>
+<td>n&#x2F;N</td>
+<td>在关键词之间向下和向上查找</td>
+</tr>
+<tr>
+<td>q</td>
+<td>退出man帮助页面</td>
+</tr>
+</tbody></table>
+<p><strong>帮助手册（manual）</strong><br>位置：&#x2F;usr&#x2F;share&#x2F;man&#x2F;；man手册标准章节，常用选项：1、用户命令；5、文件格式；8、系统管理命令 </p>
+<table>
+<thead>
+<tr>
+<th align="center">章节</th>
+<th>Ecglish</th>
+<th>中文</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">1</td>
+<td>User commands</td>
+<td>用户命令</td>
+</tr>
+<tr>
+<td align="center">2</td>
+<td>System calls</td>
+<td>系统调用库</td>
+</tr>
+<tr>
+<td align="center">3</td>
+<td>Library functions</td>
+<td>库函数</td>
+</tr>
+<tr>
+<td align="center">4</td>
+<td>Special files</td>
+<td>特殊文件</td>
+</tr>
+<tr>
+<td align="center">5</td>
+<td>File formats</td>
+<td>文件格式</td>
+</tr>
+<tr>
+<td align="center">6</td>
+<td>Games</td>
+<td>游戏</td>
+</tr>
+<tr>
+<td align="center">7</td>
+<td>Conventions</td>
+<td>约定</td>
+</tr>
+<tr>
+<td align="center">8</td>
+<td>Manintenance commands</td>
+<td>系统管理命令（一般只有root能执行的命令）</td>
+</tr>
+<tr>
+<td align="center">9</td>
+<td>Linux Kernel API</td>
+<td>Linux内核 API</td>
+</tr>
+</tbody></table>
+<p><strong>pinfo帮助文档</strong>   </p>
+<ul>
+<li>文档结构由超链接式的 info 节点组成，记录了很多复杂命令和概念说明</li>
+<li>在 RHEL 中可以使用 info 和 pinfo 两个命令浏览 info page</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>命令操作</th>
+<th>结果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>PageUp或者b</td>
+<td>向上滚动一个屏幕</td>
+</tr>
+<tr>
+<td>PageDown或者空格键</td>
+<td>向下滚动一个屏幕</td>
+</tr>
+<tr>
+<td>d</td>
+<td>显示主题目录</td>
+</tr>
+<tr>
+<td>u</td>
+<td>显示主题的父节点</td>
+</tr>
+<tr>
+<td>向上&#x2F;向下箭头键</td>
+<td>向上&#x2F;向下滚动到下一个超链接</td>
+</tr>
+<tr>
+<td>enter键</td>
+<td>打开光标处的主题</td>
+</tr>
+<tr>
+<td>q</td>
+<td>打开光标处的主题</td>
+</tr>
+</tbody></table>
+<p><strong>RPM包文档</strong><br>本地帮助文档<br>安装软件包后，在doc目录下释放文档<br>&#x2F;usr&#x2F;share&#x2F;doc&#x2F;pa<br>可使用浏览器查看</p>
+<p><strong>redhat在线文档</strong><br>红帽官方文档 <a href="https://access.redhat.com/">https://access.redhat.com</a></p>
+<h1 id="单元小结"><a href="#单元小结" class="headerlink" title="单元小结"></a>单元小结</h1><ul>
+<li>命令的语法规则</li>
+<li>man帮助使用</li>
+<li>系统内其他帮助资源</li>
+<li>红帽在线文档查阅</li>
+</ul>
+]]></content>
+      <categories>
+        <category>linux</category>
+        <category>rhel8手册</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>Linux 的基本使用</title>
+    <url>/2021-01-02/linux-basic-use/</url>
+    <content><![CDATA[<h1 id="学习目标"><a href="#学习目标" class="headerlink" title="学习目标"></a>学习目标</h1><ul>
+<li>登录Red Hat Enterprise Linux系统</li>
+<li>从控制台启动图形</li>
+<li>执行简单的linux命令</li>
+<li>编辑纯文本文件</li>
+<li>掌握root特性</li>
+</ul>
+<h1 id="简单的命令"><a href="#简单的命令" class="headerlink" title="简单的命令"></a>简单的命令</h1><table>
+<thead>
+<tr>
+<th>命令</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>date</td>
+<td>显示日期</td>
+</tr>
+<tr>
+<td>cal</td>
+<td>显示日历</td>
+</tr>
+<tr>
+<td>passwd</td>
+<td>修改密码</td>
+</tr>
+<tr>
+<td>id</td>
+<td>显示当前用户信息</td>
+</tr>
+<tr>
+<td>useradd</td>
+<td>创建用户</td>
+</tr>
+<tr>
+<td>su -</td>
+<td>切换用户</td>
+</tr>
+<tr>
+<td>vim</td>
+<td>文本编辑器的使用</td>
+</tr>
+</tbody></table>
+<span id="more"></span>  
+
+<h1 id="历史记录（history）"><a href="#历史记录（history）" class="headerlink" title="历史记录（history）"></a>历史记录（history）</h1><table>
+<thead>
+<tr>
+<th>操作</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>History</td>
+<td>查看所有历史记录</td>
+</tr>
+<tr>
+<td>history N</td>
+<td>列出最近的N条历史记录</td>
+</tr>
+<tr>
+<td>!N</td>
+<td>调用第N条历史记录</td>
+</tr>
+<tr>
+<td>!string</td>
+<td>调用最近一条以string开头的命令</td>
+</tr>
+<tr>
+<td>!$</td>
+<td>调用最后一条命令</td>
+</tr>
+<tr>
+<td>上下键</td>
+<td>查找历史记录</td>
+</tr>
+<tr>
+<td>Ctrl+r</td>
+<td>搜索历史记录</td>
+</tr>
+<tr>
+<td>Alt+.</td>
+<td>调用上一条命令的最后一个参数</td>
+</tr>
+<tr>
+<td>Esc+.</td>
+<td>调用上一条命令的最后一个参数</td>
+</tr>
+</tbody></table>
+<h1 id="图形界面"><a href="#图形界面" class="headerlink" title="图形界面"></a>图形界面</h1><p>如果最开始没有装GUI图形界面，还需要装X-window，有两种桌面工具 GNOME和KDE<br>控制台（以前）：键盘、鼠标、显示器等硬件<br>控制台（现在）：即命令行、图形界面等操作界面</p>
+<ul>
+<li>典型的Linux系统运行5个虚拟控制台和1个图形控制台</li>
+<li>按CTRL-ALT-F1键可进入图形控制台</li>
+<li>使用CTRL-ALT-F[2-6]键可切换不同虚拟控制台</li>
+<li>在虚拟控制台执行startx可以运行图形，前提是装了图形界面（startx没有切换控制台，只是在当前</li>
+<li>控制台开启了图形应用程序）</li>
+</ul>
+<h1 id="gnome-terminal桌面工具"><a href="#gnome-terminal桌面工具" class="headerlink" title="gnome-terminal桌面工具"></a>gnome-terminal桌面工具</h1><table>
+<thead>
+<tr>
+<th>操作</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Ctrl-Shift-t</td>
+<td>创建标签页</td>
+</tr>
+<tr>
+<td>Ctrl-PgUp&#x2F;PgDn</td>
+<td>在标签页之间切换</td>
+</tr>
+<tr>
+<td>Alt+[123…]</td>
+<td>在标签页之间切换</td>
+</tr>
+<tr>
+<td>Ctrl-Shift-c</td>
+<td>复制已选内容</td>
+</tr>
+<tr>
+<td>Ctrl-Shift-v</td>
+<td>粘贴复制的内容</td>
+</tr>
+<tr>
+<td>Shift-PgUp&#x2F;PgDn</td>
+<td>在标签页上下滚动</td>
+</tr>
+<tr>
+<td>Ctrl+l</td>
+<td>清屏</td>
+</tr>
+<tr>
+<td>Ctrl+Shift++</td>
+<td>放大</td>
+</tr>
+<tr>
+<td>Ctrl+-</td>
+<td>缩小</td>
+</tr>
+</tbody></table>
+<h1 id="单元小结"><a href="#单元小结" class="headerlink" title="单元小结"></a>单元小结</h1><ul>
+<li>登录操作系统</li>
+<li>掌握桌面图形工具的使用</li>
+<li>root用户的本质</li>
+<li>一些简单命令的执行</li>
+<li>tab的使用</li>
+<li>历史记录的调用</li>
+</ul>
+]]></content>
+      <categories>
+        <category>linux</category>
+        <category>rhel8手册</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>Linux 的简介和安装</title>
+    <url>/2021-01-01/linux-introduction-and-installation/</url>
+    <content><![CDATA[<h1 id="学习目标"><a href="#学习目标" class="headerlink" title="学习目标"></a>学习目标</h1><ul>
+<li>Linux系统和红帽认证的基本介绍</li>
+<li>RHEL8.0系统的安装</li>
+<li>掌握开源软件的本质</li>
+<li>探讨linux的起源</li>
+<li>Red Hat操作系统的发行版</li>
+<li>其他Linux系统的发行版</li>
+<li>了解linux的基本原理</li>
+</ul>
+<h1 id="linux系统安装"><a href="#linux系统安装" class="headerlink" title="linux系统安装"></a>linux系统安装</h1><p>CentOS下载：<a href="https://www.centos.org/download/">https://www.centos.org/download/</a><br>DVD ISO：标准安装版，一般下载这个就可以了（推荐）<br>Everything ISO：对完整版安装盘的软件进行补充，集成所有软件。（包含一套完整的软件包，可以用来安装系统或者填充本地镜像）<br>Minimal ISO：迷你版，小巧、安装快速、自带的软件少<br>CentOS所有历史版本的下载地址：<a href="http://archive.kernel.org/centos-vault/">http://archive.kernel.org/centos-vault/</a><br><a href="https://www.lofter.com/lpost/4ba01091_1cabbd565">rhel8安装手册</a></p>
+<span id="more"></span>  
+
+<h1 id="什么是操作系统？"><a href="#什么是操作系统？" class="headerlink" title="什么是操作系统？"></a>什么是操作系统？</h1><p>操作系统，英文名称Operating System，简称OS，是计算机系统中必不可少的基础系统软件，它是应用程序运行以及用户操作必备的基础环境支撑，是计算机系统的核心。  </p>
+<p><img src="https://gd-obj-001.gd2.qingstor.com/haruki/blog/cn/2022/96F0C320ADD182842FBA7D0D28146A5183660388D3149919CAB5C0163FAC9C5A.png" alt="操作系统与计算机硬件软件关系"></p>
+<h1 id="什么是Linux？"><a href="#什么是Linux？" class="headerlink" title="什么是Linux？"></a>什么是Linux？</h1><p>和Windows操作系统软件一样，Linux也是一个操作系统软件。<br>Linux内核最初只是由芬兰人李纳斯·托瓦兹（Linus Torvalds）在赫尔辛基大学上学时出于个人爱好而编写的。<br>Linux是一套免费使用和自由传播的，是一个基于POSIX（POSIX表示可移植操作系统接口，是个标准）的多用户、多任务、支持多线程和多CPU的操作系统。 </p>
+<p><strong>Linux的内核版本和发行版本</strong><br>内核版本下载地址：<a href="https://www.kernel.org/">https://www.kernel.org/</a> ，只有99M多一点是Linux操作系统的真正的核心。<br>Linux的发行版说简单点就是将Linux内核与应用软件做一个打包。<br>目前市面上较知名的发行版有：Ubuntu、RedHat、CentOS、Debian、Fedora、SuSE、OpenSUSE、TurboLinux、BluePoint、RedFlag、Xterm、SlackWare等很多很多，发行版本可能有上千种之多，各个发行版本之间的主要区别就是安装软件的方式可能不同，其他主要的操作命令啊什么的基本雷同，因为都是一个内核。  </p>
+<p><strong>Linux应用领域</strong><br>物联网、云计算、大数据使用的嵌入式、c++、JAVA、PHP等底层应用软件都是在Linux操作系统上,各种场合都有使用各种Linux发行版，通常服务器使用Linux，未来国产化服务器都是安装的Linux操作系统。</p>
+<p><strong>Linux发展史</strong>  </p>
+<ul>
+<li><strong>1984年</strong>，Richard Stallman发起了GNU源代码开放计划并制定了著名的GPL许可协议。</li>
+<li><strong>1987年</strong>，GNU计划获得了一项重大突破—gcc编译器发布</li>
+<li><strong>1991年10月</strong>，芬兰赫尔辛基大学的在校生Linus Torvalds编写了一款名为Linux的操作系统。该系统因其较高的代码质量且基于GNU GPL许可协议的开放源代码特性，迅速得到了GNU计划和一大批黑客程序员的支持。</li>
+<li><strong>1994年1月</strong>，Bob Young在Linux系统内核的基础之上，集成了众多的源代码和程序软件，发布了红帽系统并开始出售技术服务，这进一步推动了Linux系统的普及。</li>
+<li><strong>2020年3月</strong>，Linux内核已经发展到了5.6版本，并且Linux系统版本也有数百个之多，但它们依然都使用Linus Torvalds开发、维护的Linux系统内核。RedHat公司也成为了开源行业及Linux系统的带头公司</li>
+</ul>
+<p><strong>发展历程</strong>  </p>
+<ul>
+<li><strong>Unix</strong>：1970年1月1日 贝尔实验室 开源→闭源，Richard Stallman发起了GNU：GNU is not unix 计划 开源</li>
+<li><strong>Linux</strong>：1991年 unix架构 最早为内核kernel 控制硬件，硬件←→kernel←→应用程序，1991年 内核 1.0v版本—5.6v版本 红帽是外层操作系统  GNU&#x2F;Linux</li>
+</ul>
+<p><strong>红帽发行版本</strong><br>Linux分发是基于linux内核的操作系统  </p>
+<ul>
+<li><strong>Red Hat Enterprise Linux</strong>（红帽企业版 Linux） 企业版<ul>
+<li>应用程序和功能更稳定</li>
+<li>有专业的技术支持服务</li>
+</ul>
+</li>
+<li><strong>Fedora</strong>（费多拉） 桌面 个人 图形界面 功能新 不稳定应用更多，功能更新<ul>
+<li>社区支持(不提供Red Hat官方支持)</li>
+<li>针对个人的操作系统</li>
+</ul>
+</li>
+<li><strong>Centos</strong>（社区企业操作系统） community ent：enterprise os 社区企业版 没有服务 需要运维人员<ul>
+<li>社区企业操作系统</li>
+<li>基于Red Hat Enterprise Linux开发</li>
+<li>完全免费，但不提供任何商业支持</li>
+</ul>
+</li>
+</ul>
+<p><strong>红帽公司</strong>  </p>
+<ul>
+<li>红帽RedHat：开源界的领导者 纯软件公司  但2019年被IBM收购了</li>
+<li>IBM：闭源 硬件——软件一体 自身兼容性好 云</li>
+</ul>
+<h1 id="什么是开源软件？"><a href="#什么是开源软件？" class="headerlink" title="什么是开源软件？"></a>什么是开源软件？</h1><p>开源软件：软件的源代码共享给所有人</p>
+<p><strong>自由软件基金会定义了四大自由：</strong>  </p>
+<ul>
+<li>允许以任何目的运行软件</li>
+<li>允许学习和修改软件的源代码</li>
+<li>允许重新发布软件</li>
+<li>允许开发软件的衍生版本</li>
+</ul>
+<p><strong>开源软件对比闭源软件的优势</strong>  </p>
+<ul>
+<li><strong>低风险</strong>：使用闭源软件无疑把命运交付给他人，一旦封闭的源代码没有人来维护，你将进退维谷；而且相较于商业软件公司，开源社区很少存在倒闭的问题。</li>
+<li><strong>低成本</strong>：开源工作者都是在幕后默默且无偿地付出劳动成果，为美好的世界贡献一份力量，因此使用开源社区推动的软件项目可以节省大量的人力、物力和财力。</li>
+<li><strong>高品质</strong>：相较于闭源软件产品，开源项目通常是由开源社区来研发及维护的，参与编写、维护、测试的用户量众多，bug修复及时。</li>
+<li><strong>更透明</strong>：没有哪个会把木马、后门等放到开放的源代码中，这样无疑是把自己的罪行暴露在阳光之下。</li>
+</ul>
+<h1 id="Linux基本准则"><a href="#Linux基本准则" class="headerlink" title="Linux基本准则"></a>Linux基本准则</h1><ul>
+<li>一切都是文件(包括硬件)</li>
+<li>小而功能单一的应用程序</li>
+<li>组合多个程序一起执行复杂的任务</li>
+<li>跟用户操作界面无关</li>
+<li>以文本文件形式保存配置数据</li>
+</ul>
+<h1 id="单元小结"><a href="#单元小结" class="headerlink" title="单元小结"></a>单元小结</h1><ul>
+<li>RHEL8.0系统安装</li>
+<li>开源软件</li>
+<li>Linux的起源</li>
+<li>红帽的各个发行版</li>
+<li>Linux的基本原则</li>
+</ul>
+]]></content>
+      <categories>
+        <category>linux</category>
+        <category>rhel8手册</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>hexo-next7 食用方法</title>
+    <url>/2020-12-21/use-hexo-next-7/</url>
+    <content><![CDATA[<h1 id="博客启用（前略环境搭建）"><a href="#博客启用（前略环境搭建）" class="headerlink" title="博客启用（前略环境搭建）"></a>博客启用（前略环境搭建）</h1><p>新建文件夹，之后在其中执行：hexo init。<br>hexo-next7 官方 git：<a href="https://github.com/theme-next/hexo-theme-next">https://github.com/theme-next/hexo-theme-next</a><br>hexo-next8 官方 git：<a href="https://github.com/next-theme/hexo-theme-next">https://github.com/next-theme/hexo-theme-next</a><br>git 配置：npm install –save hexo-deployer-git；多用户指定其一：githubgit config –global user.email “邮箱”和 git config –global user.name “用户名”</p>
+<span id="more"></span>
+
+
+<h1 id="可能会用到的工具"><a href="#可能会用到的工具" class="headerlink" title="可能会用到的工具"></a>可能会用到的工具</h1><p>RSS 订阅：npm install hexo-generator-feed；<br>参考：<a href="https://blog.csdn.net/qq_36537546/article/details/90730068">https://blog.csdn.net/qq_36537546/article/details/90730068</a>  </p>
+<p>站点地图：npm install hexo-generator-sitemap –save；<br>参考：<a href="https://www.cnblogs.com/brady-wang/p/8493181.html">https://www.cnblogs.com/brady-wang/p/8493181.html</a>  </p>
+<p>next7 的搜索功能：npm install hexo-generator-searchdb –save；<br>参考：<a href="https://blog.csdn.net/qq_41086511/article/details/103537522">https://blog.csdn.net/qq_41086511/article/details/103537522</a>  </p>
+<p>背景图片及透明度调整：\themes\next-7.7.2\source\css_common\components\pages\pages.styl，能找到此页面样式文件的均可。<br>参考：<a href="https://blog.csdn.net/Louis_li51/article/details/105227430%EF%BC%9B">https://blog.csdn.net/Louis_li51/article/details/105227430；</a><br>注：带搜索框后不能开启菜单栏和搜索栏的透明度，否则会透明度过高看不清，但可以给头像的框加透明度。   </p>
+<p>next7 单独友链参考：<a href="https://blog.csdn.net/Aoman_Hao/article/details/103758829">https://blog.csdn.net/Aoman_Hao/article/details/103758829</a>  </p>
+<p>文章置顶：node_modules&#x2F;hexo-generator-index&#x2F;lib&#x2F;generator；<br>参考：<a href="https://www.jianshu.com/p/42a4efcdf8d7">https://www.jianshu.com/p/42a4efcdf8d7</a>  </p>
+<p>图片压缩工具：<a href="https://tinypng.com/">https://tinypng.com/</a> 或者<a href="https://docsmall.com/image-compress">https://docsmall.com/image-compress</a>  </p>
+<p>图片批量重命名工具（可为图片 hash 值）：<a href="https://renamer.en.softonic.com/">ReNamer</a>  </p>
+]]></content>
+      <categories>
+        <category>timeline</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+      </tags>
+  </entry>
+</search>

@@ -1,0 +1,564 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>NewReport</title>
+  <icon>https://newreport.top/icon.png</icon>
+  
+  <link href="https://newreport.top/atom.xml" rel="self"/>
+  
+  <link href="https://newreport.top/"/>
+  <updated>2023-03-21T08:48:20.050Z</updated>
+  <id>https://newreport.top/</id>
+  
+  <author>
+    <name>haruki</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>ubuntu 下 N 卡安装原生 webui 进行 AI 绘画</title>
+    <link href="https://newreport.top/2023-03-21/ubuntu-nvidia-install-stable-diffusion-webui/"/>
+    <id>https://newreport.top/2023-03-21/ubuntu-nvidia-install-stable-diffusion-webui/</id>
+    <published>2023-03-21T00:00:00.000Z</published>
+    <updated>2023-03-21T08:48:20.050Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;在腾讯云 T4 和 Autodl 3090 上测试通过，请手动复制粘贴按顺序执行即可&lt;/p&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span</summary>
+        
+      
+    
+    
+    
+    <category term="ai" scheme="https://newreport.top/categories/ai/"/>
+    
+    
+    <category term="StableDiffusion" scheme="https://newreport.top/tags/StableDiffusion/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Ubuntu 和 CentOS 安装 conda 和 gcc 环境</title>
+    <link href="https://newreport.top/2023-02-28/ubuntu-amd-centos-install-conda/"/>
+    <id>https://newreport.top/2023-02-28/ubuntu-amd-centos-install-conda/</id>
+    <published>2023-02-28T00:00:00.000Z</published>
+    <updated>2023-03-21T08:37:14.833Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;安装-conda&quot;&gt;&lt;a href=&quot;#安装-conda&quot; class=&quot;headerlink&quot; title=&quot;安装 conda&quot;&gt;&lt;/a&gt;安装 conda&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;conda 是一个 python</summary>
+        
+      
+    
+    
+    
+    <category term="linux" scheme="https://newreport.top/categories/linux/"/>
+    
+    
+    <category term="Python" scheme="https://newreport.top/tags/Python/"/>
+    
+    <category term="Pip" scheme="https://newreport.top/tags/Pip/"/>
+    
+    <category term="Conda" scheme="https://newreport.top/tags/Conda/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>让 chatgpt 讲故事导致之后对话出现递归</title>
+    <link href="https://newreport.top/2023-02-16/use-chatgpt-storytelling-leads-to-gibberish-in-subsequent-conversations/"/>
+    <id>https://newreport.top/2023-02-16/use-chatgpt-storytelling-leads-to-gibberish-in-subsequent-conversations/</id>
+    <published>2023-02-16T00:00:00.000Z</published>
+    <updated>2023-03-21T08:37:14.833Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;You&quot;&gt;&lt;a href=&quot;#You&quot; class=&quot;headerlink&quot; title=&quot;You&quot;&gt;&lt;/a&gt;You&lt;/h2&gt;&lt;p&gt;讲个故事&lt;/p&gt;
+&lt;h2 id=&quot;ChatGPT&quot;&gt;&lt;a href=&quot;#ChatGPT&quot; class=&quot;headerlink&quot; title=&quot;ChatGPT&quot;&gt;&lt;/a&gt;ChatGPT&lt;/h2&gt;&lt;p&gt;这是一个关于枫叶花花的故事。枫叶花花是一个小女孩，生活在一座山上的一个村庄里。她每天散步到附近的钢琴店去，从钢琴的键盘中听取音乐，十分喜爱钢琴给她带来的美妙旋律&lt;br&gt;每天早晨，枫叶花花都会去海边来说说话，她会问海洋里美丽的海洋动物，什么有意思的事情发生了，有什么新鲜的事情发生了，而它们也会问她最近发生了什么好玩的事情。&lt;br&gt;有一天，枫叶花花走在海边，突然听到有人将歌声唱起来…… 原来是一对爱侣，他们唱起甜蜜的情歌，满满的幸福。枫叶花花感觉自己有点室息，心中十分开心，便突然勾起她苦涩的情绪……&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="ai" scheme="https://newreport.top/categories/ai/"/>
+    
+    
+    <category term="ChatGPT" scheme="https://newreport.top/tags/ChatGPT/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>AMD（A卡）AI 绘画安装stable diffusion webui</title>
+    <link href="https://newreport.top/2023-02-10/amdgpu-install-stable-diffusion-webui/"/>
+    <id>https://newreport.top/2023-02-10/amdgpu-install-stable-diffusion-webui/</id>
+    <published>2023-02-10T00:00:00.000Z</published>
+    <updated>2023-03-21T08:46:04.324Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;环境为 Ubuntu 22.04.1 LTS&lt;br&gt;注：不要买 A 卡，会变得不幸&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&quot;安装-3-10-版本-python&quot;&gt;&lt;a href=&quot;#安装-3-10-版本-python&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="ai" scheme="https://newreport.top/categories/ai/"/>
+    
+    
+    <category term="Python" scheme="https://newreport.top/tags/Python/"/>
+    
+    <category term="Pip" scheme="https://newreport.top/tags/Pip/"/>
+    
+    <category term="Ubuntu" scheme="https://newreport.top/tags/Ubuntu/"/>
+    
+    <category term="StableDiffusion" scheme="https://newreport.top/tags/StableDiffusion/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Golang 国际化及 CLDR</title>
+    <link href="https://newreport.top/2023-02-09/golang-i18n-CLDR/"/>
+    <id>https://newreport.top/2023-02-09/golang-i18n-CLDR/</id>
+    <published>2023-02-09T00:00:00.000Z</published>
+    <updated>2023-03-21T08:37:14.833Z</updated>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;CLDR-复数形式&quot;&gt;&lt;a href=&quot;#CLDR-复数形式&quot; class=&quot;headerlink&quot; title=&quot;CLDR 复数形式&quot;&gt;&lt;/a&gt;CLDR 复数形式&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&quot;https://cldr.unicode.org/&quot;&gt;https://cldr.unicode.org/&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://docs.translatehouse.org/projects/localization-guide/en/latest/l10n/pluralforms.html&quot;&gt;http://docs.translatehouse.org/projects/localization-guide/en/latest/l10n/pluralforms.html&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;不同语言的名词可以有几种复数形式。 它们的用法取决于单词前面的数字，以指示该单词表示的数目。&lt;br&gt;例如，当谈论不同数量时，英语单词有两种单词形式。例如 ‘one star’ 或 ‘two stars’。 无论您说的是五颗星，二十六颗星还是五百三十二颗星，结尾 ‘s’ 都将保持不变。 但是有些语言只有一种形式，反之，有些语言也可以有更多种复数形式。&lt;br&gt;与英语相比，波兰语里的名词具有三种复数形式。 在说单数形式时使用一种形式，复数形式时以 2-4 数字为结尾的名词（不包括 12-14）使用另一种形式。但还有第三种形式，前面带有其他数字的单词。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;中文的名词，对于无生命的是没有复数形式的，例如桌子们、椅子们、电脑们都是不可取的。  &lt;/p&gt;
+&lt;p&gt;对于动物，也不会讲猫们、狗们、兔子们，而是那些兔子、那些猫、这些狗等。但是在以动物为主角的纪录片或者电影中，出现拟人态势时，可以讲&lt;strong&gt;猎犬们&lt;/strong&gt;和&lt;strong&gt;狮子们&lt;/strong&gt;在争抢食物。  &lt;/p&gt;
+&lt;p&gt;对于人类这种高智慧性、高生命度的，则会讲你们、我们、他们、老师们、同志们、工人们。  &lt;/p&gt;
+&lt;p&gt;所以中文的 CLDR 在 i18n 中很是有限，因此在做 i18n 时，默认中日英时只用做英文的复数，在对待&lt;strong&gt;人&lt;/strong&gt;时，再做中文的 CLDR 即可。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="golang" scheme="https://newreport.top/categories/golang/"/>
+    
+    
+    <category term="Golang" scheme="https://newreport.top/tags/Golang/"/>
+    
+    <category term="CLDR" scheme="https://newreport.top/tags/CLDR/"/>
+    
+    <category term="i18n" scheme="https://newreport.top/tags/i18n/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hexo Next 8 使用阿里图标</title>
+    <link href="https://newreport.top/2023-01-30/use-hexo-next-8-and-ali-iconfont/"/>
+    <id>https://newreport.top/2023-01-30/use-hexo-next-8-and-ali-iconfont/</id>
+    <published>2023-01-30T00:00:00.000Z</published>
+    <updated>2023-03-21T08:37:14.833Z</updated>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;官网&quot;&gt;&lt;a href=&quot;#官网&quot; class=&quot;headerlink&quot; title=&quot;官网&quot;&gt;&lt;/a&gt;官网&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;https://iconfont.cn/&quot;&gt;https://iconfont.cn&lt;/a&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="timeline" scheme="https://newreport.top/categories/timeline/"/>
+    
+    
+    <category term="Hexo" scheme="https://newreport.top/tags/Hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>ABP 简介</title>
+    <link href="https://newreport.top/2023-01-10/abp-framework-introductory/"/>
+    <id>https://newreport.top/2023-01-10/abp-framework-introductory/</id>
+    <published>2023-01-10T00:00:01.000Z</published>
+    <updated>2023-03-21T08:37:14.833Z</updated>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;官网：&lt;a href=&quot;https://docs.abp.io/&quot;&gt;https://docs.abp.io/&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&quot;分层&quot;&gt;&lt;a href=&quot;#分层&quot; class=&quot;headerlink&quot; title=&quot;分层&quot;&gt;&lt;/a&gt;分层&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;ABP 框架遵循 DDD 原则和模式去实现分层应用程序模型，该模型由四个基本层组成。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#PresentationLayer&quot;&gt;表示层&lt;/a&gt;: 为用户提供接口，使用应用层实现与用户交互。&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#ApplicationLayer&quot;&gt;应用层&lt;/a&gt;: 表示层与领域层的中介，编排业务对象执行特定的应用程序任务， 使用应用程序逻辑实现用例。&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#DomainLayer&quot;&gt;领域层&lt;/a&gt;: 包含业务对象以及业务规则，是应用程序的核心。&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#InfrastructureLayer&quot;&gt;基础设施层&lt;/a&gt;: 提供通用的技术功能,支持更高的层，主要使用第三方类库。&lt;/li&gt;
+&lt;/ul&gt;</summary>
+    
+    
+    
+    <category term="c#" scheme="https://newreport.top/categories/c/"/>
+    
+    
+    <category term="C#" scheme="https://newreport.top/tags/C/"/>
+    
+    <category term=".NET" scheme="https://newreport.top/tags/NET/"/>
+    
+    <category term="ABP" scheme="https://newreport.top/tags/ABP/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>CentOS Stream 8 安装 node 和 go</title>
+    <link href="https://newreport.top/2023-01-04/centos-stream-8-install-node-and-go/"/>
+    <id>https://newreport.top/2023-01-04/centos-stream-8-install-node-and-go/</id>
+    <published>2023-01-04T00:00:02.000Z</published>
+    <updated>2023-03-21T08:37:14.833Z</updated>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;安装-node-和-npm&quot;&gt;&lt;a href=&quot;#安装-node-和-npm&quot; class=&quot;headerlink&quot; title=&quot;安装 node 和 npm&quot;&gt;&lt;/a&gt;安装 node 和 npm&lt;/h1&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;yum install -y nodejs npm  &lt;span class=&quot;comment&quot;&gt;# yum 安装node和npm&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;node -v &lt;span class=&quot;comment&quot;&gt;# 查看 node 版本&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;npm install -g n &lt;span class=&quot;comment&quot;&gt;# 安装 n 工具&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;n stable &lt;span class=&quot;comment&quot;&gt;# 更新 node 到最新稳定版本&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# n latest # 更新 node 到最新版&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# bash # 刷新bash&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;node -v &lt;span class=&quot;comment&quot;&gt;# 查看 node 已经更新至新版&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;npm install -g yarn &lt;span class=&quot;comment&quot;&gt;# 安装 yarn&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;yarn -v &lt;span class=&quot;comment&quot;&gt;# 查看 yarn 版本&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;yarn add vite &lt;span class=&quot;comment&quot;&gt;# 安装 vite&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
+    
+    
+    
+    <category term="linux" scheme="https://newreport.top/categories/linux/"/>
+    
+    
+    <category term="Golang" scheme="https://newreport.top/tags/Golang/"/>
+    
+    <category term="Node" scheme="https://newreport.top/tags/Node/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>CentOS Stream 8 安装 Docker 并连接 Portainer</title>
+    <link href="https://newreport.top/2023-01-04/centos-stream-8-install-docker-and-link-portainer/"/>
+    <id>https://newreport.top/2023-01-04/centos-stream-8-install-docker-and-link-portainer/</id>
+    <published>2023-01-04T00:00:01.000Z</published>
+    <updated>2023-03-21T08:37:14.833Z</updated>
+    
+    
+    <summary type="html">&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;卸载老版本&lt;/p&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;yum remove docker docker-client docker-client-latest docker-common docker-latest docker-latest-logrotate docker-logrotate docker-engine&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;安装 docker 基础包&lt;/p&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;yum install -y yum-utils device-mapper-persistent-data lvm2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
+    
+    
+    
+    <category term="kubernetes/docker/podman" scheme="https://newreport.top/categories/kubernetes-docker-podman/"/>
+    
+    
+    <category term="Docker" scheme="https://newreport.top/tags/Docker/"/>
+    
+    <category term="Portainer" scheme="https://newreport.top/tags/Portainer/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>beego 拦截器及 CORS</title>
+    <link href="https://newreport.top/2022-11-27/beego-filter-cors/"/>
+    <id>https://newreport.top/2022-11-27/beego-filter-cors/</id>
+    <published>2022-11-27T00:00:00.000Z</published>
+    <updated>2023-03-21T08:37:14.833Z</updated>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;跨域仅为浏览器的安全策略，对于其他形式的 http client（ postman，自己写的 python client 、java client 等 ）无效&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="golang" scheme="https://newreport.top/categories/golang/"/>
+    
+    
+    <category term="CORS" scheme="https://newreport.top/tags/CORS/"/>
+    
+    <category term="Golang" scheme="https://newreport.top/tags/Golang/"/>
+    
+    <category term="Beego" scheme="https://newreport.top/tags/Beego/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Cloudflare 301 跳转</title>
+    <link href="https://newreport.top/2022-09-04/cloudflare-301-url/"/>
+    <id>https://newreport.top/2022-09-04/cloudflare-301-url/</id>
+    <published>2022-09-04T00:00:00.000Z</published>
+    <updated>2023-03-21T08:37:14.833Z</updated>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;购买域名、注册-cloudflare-账号&quot;&gt;&lt;a href=&quot;#购买域名、注册-cloudflare-账号&quot; class=&quot;headerlink&quot; title=&quot;购买域名、注册 cloudflare 账号&quot;&gt;&lt;/a&gt;购买域名、注册 cloudflare 账号&lt;/h1&gt;&lt;p&gt;cloudflare 官网：&lt;a href=&quot;https://www.cloudflare.com/&quot;&gt;https://www.cloudflare.com/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;namesilo 官网：&lt;a href=&quot;https://www.namesilo.com/&quot;&gt;https://www.namesilo.com/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;dnspod 官网：&lt;a href=&quot;https://www.dnspod.cn/&quot;&gt;https://www.dnspod.cn/&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;注意：如果不想 whois 查询到个人信息，建议非主流域名在 &lt;a href=&quot;https://www.namesilo.com/&quot;&gt;namesilo&lt;/a&gt; 购买，可以有免费的 whois 信息隐藏。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;dnspod 仅支持 .com、.net 等主流的一级域名进行 whois 隐藏，但不支持如.top、.xyz、.live 等域名的信息隐藏，也就是说 whois 查询能查询到本名（开盒&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="timeline" scheme="https://newreport.top/categories/timeline/"/>
+    
+    
+    <category term="Domain" scheme="https://newreport.top/tags/Domain/"/>
+    
+    <category term="Http" scheme="https://newreport.top/tags/Http/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Kubernetes 1.24 内网部署</title>
+    <link href="https://newreport.top/2022-07-27/kubernetes-1-24-inside-install/"/>
+    <id>https://newreport.top/2022-07-27/kubernetes-1-24-inside-install/</id>
+    <published>2022-07-27T00:00:01.000Z</published>
+    <updated>2023-03-21T08:37:14.833Z</updated>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;环境介绍&quot;&gt;&lt;a href=&quot;#环境介绍&quot; class=&quot;headerlink&quot; title=&quot;环境介绍&quot;&gt;&lt;/a&gt;环境介绍&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;master：成都区 2 核 4G    10.0.0.17&lt;br&gt;cd001：成都区 2 核 4G     10.0.0.11&lt;br&gt;主机：两台腾讯云轻量云，系统为 CentOS Stream8，轻量云不支持 EIP 故不能公网搭 K8s&lt;br&gt;Kubernetes 版本：V1.24.3（截至 2022-08-02，当前 k8s 最新版本为 1.24.3）&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="kubernetes/docker/podman" scheme="https://newreport.top/categories/kubernetes-docker-podman/"/>
+    
+    
+    <category term="NFS" scheme="https://newreport.top/tags/NFS/"/>
+    
+    <category term="Nginx" scheme="https://newreport.top/tags/Nginx/"/>
+    
+    <category term="MySQL" scheme="https://newreport.top/tags/MySQL/"/>
+    
+    <category term="Containerd" scheme="https://newreport.top/tags/Containerd/"/>
+    
+    <category term="K8s" scheme="https://newreport.top/tags/K8s/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>列表简介</title>
+    <link href="https://newreport.top/2021-06-23/list-introduction/"/>
+    <id>https://newreport.top/2021-06-23/list-introduction/</id>
+    <published>2021-06-23T00:00:00.000Z</published>
+    <updated>2023-03-21T08:37:14.833Z</updated>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;列表是什么&quot;&gt;&lt;a href=&quot;#列表是什么&quot; class=&quot;headerlink&quot; title=&quot;列表是什么&quot;&gt;&lt;/a&gt;列表是什么&lt;/h1&gt;&lt;p&gt;类似于c的数组&lt;/p&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;vim 19.py&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;bicycles = [&lt;span class=&quot;string&quot;&gt;&amp;#x27;trek&amp;#x27;&lt;/span&gt;,&lt;span class=&quot;string&quot;&gt;&amp;#x27;cannondale&amp;#x27;&lt;/span&gt;,&lt;span class=&quot;string&quot;&gt;&amp;#x27;redline&amp;#x27;&lt;/span&gt;,&lt;span class=&quot;string&quot;&gt;&amp;#x27;specialized&amp;#x27;&lt;/span&gt;]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;print&lt;/span&gt;(bicycles)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;figure class=&quot;highlight txt&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;[&amp;#x27;trek&amp;#x27;, &amp;#x27;cannondale&amp;#x27;, &amp;#x27;redline&amp;#x27;, &amp;#x27;specialized&amp;#x27;]&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
+    
+    
+    
+    <category term="python" scheme="https://newreport.top/categories/python/"/>
+    
+    <category term="python3 手册" scheme="https://newreport.top/categories/python/python3-%E6%89%8B%E5%86%8C/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>变量和简单数据类型</title>
+    <link href="https://newreport.top/2021-06-22/variables-and-simple-data-types/"/>
+    <id>https://newreport.top/2021-06-22/variables-and-simple-data-types/</id>
+    <published>2021-06-22T00:00:00.000Z</published>
+    <updated>2023-03-21T08:37:14.833Z</updated>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;运行hello-world&quot;&gt;&lt;a href=&quot;#运行hello-world&quot; class=&quot;headerlink&quot; title=&quot;运行hello world&quot;&gt;&lt;/a&gt;运行hello world&lt;/h1&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;vim 1.py&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;print&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;&amp;quot;hello Python world!&amp;quot;&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;figure class=&quot;highlight txt&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;hello Python world!&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
+    
+    
+    
+    <category term="python" scheme="https://newreport.top/categories/python/"/>
+    
+    <category term="python3 手册" scheme="https://newreport.top/categories/python/python3-%E6%89%8B%E5%86%8C/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Python 基础知识</title>
+    <link href="https://newreport.top/2021-06-21/python-basic-knowledge/"/>
+    <id>https://newreport.top/2021-06-21/python-basic-knowledge/</id>
+    <published>2021-06-21T00:00:00.000Z</published>
+    <updated>2023-03-21T08:37:14.833Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;运行环境&quot;&gt;&lt;a href=&quot;#运行环境&quot; class=&quot;headerlink&quot; title=&quot;运行环境&quot;&gt;&lt;/a&gt;运行环境&lt;/h1&gt;&lt;p&gt;CentOS8.2 &amp;amp;&amp;amp; Python 3&lt;/p&gt;
+&lt;figure class=&quot;highlight</summary>
+        
+      
+    
+    
+    
+    <category term="python" scheme="https://newreport.top/categories/python/"/>
+    
+    <category term="python3 手册" scheme="https://newreport.top/categories/python/python3-%E6%89%8B%E5%86%8C/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>图床&quot;永久链&quot;</title>
+    <link href="https://newreport.top/2021-01-06/img-make/"/>
+    <id>https://newreport.top/2021-01-06/img-make/</id>
+    <published>2021-01-06T00:00:01.000Z</published>
+    <updated>2023-03-21T08:37:14.833Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;需要准备对象存储及域名，理论”永久链”图床，可在各云服务商或个人服务器间迁移数据&lt;br&gt;如果你是国外的域名，markdown 是国内使用，需要绑定国内第三方 dns，这里以&lt;a href=&quot;https://www.namesilo.com/&quot;&gt;namesilo&lt;/a&gt;域名绑定&lt;a href=&quot;https://www.dnspod.cn/&quot;&gt;dnspod&lt;/a&gt;为例。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="timeline" scheme="https://newreport.top/categories/timeline/"/>
+    
+    
+    <category term="Domain" scheme="https://newreport.top/tags/Domain/"/>
+    
+    <category term="Object Storage" scheme="https://newreport.top/tags/Object-Storage/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>云函数</title>
+    <link href="https://newreport.top/2021-01-05/function-cloud/"/>
+    <id>https://newreport.top/2021-01-05/function-cloud/</id>
+    <published>2021-01-05T00:00:02.000Z</published>
+    <updated>2023-03-21T08:37:14.833Z</updated>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;https://developers.weixin.qq.com/miniprogram/dev/wxcloud/guide/functions.html&quot;&gt;云函数简介&lt;/a&gt;&lt;br&gt;长不看结论：总之就是跑脚本，也可以跑微信的推送等事件。目前我只用它在跑签到脚本。&lt;/p&gt;
+&lt;h1 id=&quot;server-酱&quot;&gt;&lt;a href=&quot;#server-酱&quot; class=&quot;headerlink&quot; title=&quot;server 酱&quot;&gt;&lt;/a&gt;server 酱&lt;/h1&gt;&lt;p&gt;原版 server 酱：&lt;a href=&quot;http://sc.ftqq.com/&quot;&gt;http://sc.ftqq.com/&lt;/a&gt;&lt;br&gt;自搭 server 酱：&lt;a href=&quot;https://www.v2ex.com/t/567927&quot;&gt;https://www.v2ex.com/t/567927&lt;/a&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="timeline" scheme="https://newreport.top/categories/timeline/"/>
+    
+    
+    <category term="CloudService" scheme="https://newreport.top/tags/CloudService/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>C# 基础</title>
+    <link href="https://newreport.top/2021-01-05/c-sharp-base/"/>
+    <id>https://newreport.top/2021-01-05/c-sharp-base/</id>
+    <published>2021-01-05T00:00:01.000Z</published>
+    <updated>2023-03-21T08:37:14.833Z</updated>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;C-语言及特点&quot;&gt;&lt;a href=&quot;#C-语言及特点&quot; class=&quot;headerlink&quot; title=&quot;C#语言及特点&quot;&gt;&lt;/a&gt;C#语言及特点&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;C#是微软公司发布的一种&lt;strong&gt;面向对象&lt;/strong&gt;的、运行于.NET Framework 和 .NET Core (完全开源，跨平台)之上的高级程序设计语言。&lt;/li&gt;
+&lt;li&gt;C#是一种&lt;strong&gt;安全的、稳定的、简单的、优雅的&lt;/strong&gt;，由 C 和 C++衍生出来的面向对象的编程语言。它在继承 C 和 C++的强大功能的同时去掉了一些它们的复杂特性。&lt;/li&gt;
+&lt;li&gt;C#是&lt;strong&gt;面向对象&lt;/strong&gt;的编程语言</summary>
+    
+    
+    
+    <category term="c#" scheme="https://newreport.top/categories/c/"/>
+    
+    
+    <category term="C#" scheme="https://newreport.top/tags/C/"/>
+    
+    <category term=".NET" scheme="https://newreport.top/tags/NET/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>域名的使用</title>
+    <link href="https://newreport.top/2021-01-05/make-domainname/"/>
+    <id>https://newreport.top/2021-01-05/make-domainname/</id>
+    <published>2021-01-05T00:00:01.000Z</published>
+    <updated>2023-03-21T08:37:14.833Z</updated>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;域名服务商&quot;&gt;&lt;a href=&quot;#域名服务商&quot; class=&quot;headerlink&quot; title=&quot;域名服务商&quot;&gt;&lt;/a&gt;域名服务商&lt;/h1&gt;&lt;p&gt;个人站除开 com、net 这两个域名，其他推荐选择国外服务商进行注册。以下仅列举一些我接触过的，还有很多其他的服务商就不一一列举了  &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;国内&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://wanwang.aliyun.com/&quot;&gt;阿里云万网&lt;/a&gt;：尚可，只提供 com 和 net、tv、cc 这四个域名的隐藏个人信息服务&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.huaweicloud.com/product/domain.html&quot;&gt;华为云 domain&lt;/a&gt;：在企鹅和阿里中间的位置&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://dnspod.cloud.tencent.com/&quot;&gt;腾讯云 dnspod&lt;/a&gt;：我目前所有 com 域名都在这个上面&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://cloud.baidu.com/product/bcd.html&quot;&gt;百度云 BCD&lt;/a&gt;：新用户优惠不好，域名隐私里写的和实际不符&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;国外&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://sg.godaddy.com/&quot;&gt;GoDaddy&lt;/a&gt;：全球最大的域名服务商，当然价格就…也是贵的，隐藏个人信息还要收费&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.namesilo.com/&quot;&gt;namesilo&lt;/a&gt;：价格便宜，比国内的稍微贵一丢丢，所有域名均支持免费 whois 隐藏个人信息&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</summary>
+    
+    
+    
+    <category term="timeline" scheme="https://newreport.top/categories/timeline/"/>
+    
+    
+    <category term="Domain" scheme="https://newreport.top/tags/Domain/"/>
+    
+    <category term="Git Page" scheme="https://newreport.top/tags/Git-Page/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>了解文件系统的和基本操作</title>
+    <link href="https://newreport.top/2021-01-04/understand-the-file-system-and-basic-operations/"/>
+    <id>https://newreport.top/2021-01-04/understand-the-file-system-and-basic-operations/</id>
+    <published>2021-01-04T00:00:00.000Z</published>
+    <updated>2023-03-21T08:37:14.833Z</updated>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;学习目标&quot;&gt;&lt;a href=&quot;#学习目标&quot; class=&quot;headerlink&quot; title=&quot;学习目标&quot;&gt;&lt;/a&gt;学习目标&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;描述分件系统重要的组成部分&lt;/li&gt;
+&lt;li&gt;复制，移动和删除文件&lt;/li&gt;
+&lt;li&gt;创建文件和文件夹&lt;/li&gt;
+&lt;li&gt;了解时间戳的概念&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&quot;Linux文件系统的组成&quot;&gt;&lt;a href=&quot;#Linux文件系统的组成&quot; class=&quot;headerlink&quot; title=&quot;Linux文件系统的组成&quot;&gt;&lt;/a&gt;Linux文件系统的组成&lt;/h1&gt;&lt;p&gt;整个文件系统由 分区–目录 对接&lt;br&gt;文件都是从根开始的，无论文件在哪个分区，都可以通过根访问到  &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;文件和目录构成单根的倒树状结构&lt;/li&gt;
+&lt;li&gt;文件系统从根目录开始，表示为一个单独的’&amp;#x2F;’(斜线)字符&lt;/li&gt;
+&lt;li&gt;命名大小写敏感&lt;/li&gt;
+&lt;li&gt;路径以’&amp;#x2F;’为分隔&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class=&quot;mermaid&quot;&gt;	graph TD
+    A(/)--&gt;B1(bin)
+    A--&gt;B2(boot)
+    A--&gt;B3(dev)
+    A--&gt;B4(etc)
+    A--&gt;B5(home)
+        B5--&gt;D1(alice)
+        B5--&gt;D2(bob)
+        B5--&gt;D3(eve)
+    A--&gt;B6(root)
+    A--&gt;B7(run)
+    A--&gt;B8(sbin)
+    A--&gt;B9(tmp)
+    A--&gt;B10(usr)
+        B10--&gt;D4(bin)
+        B10--&gt;D5(local)
+        B10--&gt;D6(sbin)
+        B10--&gt;D7(tmp)		
+    A--&gt;B11(var)
+        B11--&gt;D8(tmp)&lt;/pre&gt;</summary>
+    
+    
+    
+    <category term="linux" scheme="https://newreport.top/categories/linux/"/>
+    
+    <category term="rhel8手册" scheme="https://newreport.top/categories/linux/rhel8%E6%89%8B%E5%86%8C/"/>
+    
+    
+  </entry>
+  
+</feed>

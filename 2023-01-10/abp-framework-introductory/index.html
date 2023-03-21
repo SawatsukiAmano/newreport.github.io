@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 7.0.0-rc1">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"newreport.top","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="官网：https:&#x2F;&#x2F;docs.abp.io&#x2F;  分层 ABP 框架遵循 DDD 原则和模式去实现分层应用程序模型，该模型由四个基本层组成。   表示层: 为用户提供接口，使用应用层实现与用户交互。 应用层: 表示层与领域层的中介，编排业务对象执行特定的应用程序任务， 使用应用程序逻辑实现用例。 领域层: 包含业务对象以及业务规则，是应用程序的核心。 基础设施层: 提供通用的技术功能,支持更高的">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ABP 简介">
+<meta property="og:url" content="https://newreport.top/2023-01-10/abp-framework-introductory/index.html">
+<meta property="og:site_name" content="NewReport">
+<meta property="og:description" content="官网：https:&#x2F;&#x2F;docs.abp.io&#x2F;  分层 ABP 框架遵循 DDD 原则和模式去实现分层应用程序模型，该模型由四个基本层组成。   表示层: 为用户提供接口，使用应用层实现与用户交互。 应用层: 表示层与领域层的中介，编排业务对象执行特定的应用程序任务， 使用应用程序逻辑实现用例。 领域层: 包含业务对象以及业务规则，是应用程序的核心。 基础设施层: 提供通用的技术功能,支持更高的">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2023-01-10T00:00:01.000Z">
+<meta property="article:modified_time" content="2023-03-21T08:37:14.833Z">
+<meta property="article:author" content="haruki">
+<meta property="article:tag" content="C#">
+<meta property="article:tag" content=".NET">
+<meta property="article:tag" content="ABP">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="https://newreport.top/2023-01-10/abp-framework-introductory/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>ABP 简介 | NewReport</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+  <meta name="msvalidate.01" content="26DDE57F724CC0C30F02DAD76C17EE42" />
+<link rel="alternate" href="/atom.xml" title="NewReport" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">NewReport</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+        <li class="menu-item menu-item-sitemap">
+
+    <a href="/sitemap.xml" rel="section"><i class="fa fa-sitemap fa-fw"></i>站点地图</a>
+
+  </li>
+        <li class="menu-item menu-item-友链">
+
+    <a href="/links/" rel="section"><i class="fa fa-user fa-fw"></i>友链</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://newreport.top/2023-01-10/abp-framework-introductory/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/haruki-avatar.jpg">
+      <meta itemprop="name" content="haruki">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="NewReport">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          ABP 简介
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2023-01-10 00:00:01" itemprop="dateCreated datePublished" datetime="2023-01-10T00:00:01+00:00">2023-01-10</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2023-03-21 08:37:14" itemprop="dateModified" datetime="2023-03-21T08:37:14+00:00">2023-03-21</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/c/" itemprop="url" rel="index"><span itemprop="name">c#</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>903</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>3 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <blockquote>
+<p>官网：<a target="_blank" rel="noopener" href="https://docs.abp.io/">https://docs.abp.io/</a></p>
+</blockquote>
+<h1 id="分层"><a href="#分层" class="headerlink" title="分层"></a>分层</h1><blockquote>
+<p>ABP 框架遵循 DDD 原则和模式去实现分层应用程序模型，该模型由四个基本层组成。</p>
+</blockquote>
+<ul>
+<li><a href="#PresentationLayer">表示层</a>: 为用户提供接口，使用应用层实现与用户交互。</li>
+<li><a href="#ApplicationLayer">应用层</a>: 表示层与领域层的中介，编排业务对象执行特定的应用程序任务， 使用应用程序逻辑实现用例。</li>
+<li><a href="#DomainLayer">领域层</a>: 包含业务对象以及业务规则，是应用程序的核心。</li>
+<li><a href="#InfrastructureLayer">基础设施层</a>: 提供通用的技术功能,支持更高的层，主要使用第三方类库。</li>
+</ul>
+<span id="more"></span>
+
+<h1 id="ABP-架构各层依赖关系"><a href="#ABP-架构各层依赖关系" class="headerlink" title="ABP 架构各层依赖关系"></a>ABP 架构各层依赖关系</h1><pre class="mermaid"> graph TB
+    A(.Application)
+    B(.Application.Contracts)
+    C(.DbMigrator)
+    D(.Domain)
+    E(.Domain.Shared)
+    F(.EntityFrameworkCore)
+    G(.HttpApi)
+    H(.HttpApi.Client)
+    I(.HttpApi.Host)
+    A-->B
+    A-->D
+    B-->E
+    C-->B
+    C-->F
+    D-->E
+    F-->D
+    G-->B
+    H-->B
+    I-->A
+    I-->F
+    I-->G</pre>
+
+
+<h1 id="ABP-各层作用"><a href="#ABP-各层作用" class="headerlink" title="ABP 各层作用"></a>ABP 各层作用</h1><h2 id="表示层"><a href="#表示层" class="headerlink" title="表示层"></a><p id="PresentationLayer">表示层</a></h2><h3 id="HttpApi-Host"><a href="#HttpApi-Host" class="headerlink" title=".HttpApi.Host"></a>.HttpApi.Host</h3><p>项目作为一个独立的端点提供 HTTP API 服务，供客户端调用。</p>
+<p>该项目是一个承载解决方案 API 的应用程序。它有自己的 appsettings.json 文件(数据库连接字符串等其他配置)。</p>
+<h3 id="DbMigrator"><a href="#DbMigrator" class="headerlink" title=".DbMigrator"></a>.DbMigrator</h3><blockquote>
+<p>必要时创建数据库（没有数据库时）、应用未迁移的数据库迁移、初始化种子数据（当你需要时）。</p>
+</blockquote>
+<p>一个简单的控制台应用程序，它简化了在开发和生产环境执行数据库迁移的操作，当你执行它时，会迁移数据库结构并初始化种子数据。</p>
+<h2 id="应用层"><a href="#应用层" class="headerlink" title="应用层"></a><p id="ApplicationLayer">应用层</a></h2><h3 id="Application-Contracts"><a href="#Application-Contracts" class="headerlink" title=".Application.Contracts"></a>.Application.Contracts</h3><blockquote>
+<p>它依赖 .Domain.Shared 因为它可能会在应用接口和 DTO 中使用常量，枚举和其他的共享对象。</p>
+</blockquote>
+<p>项目主要包含 应用服务 interfaces 和应用层的 数据传输对象（DTO）。它用于分离应用层的接口和实现。这种方式可以将接口项目做为约定包共享给客户端。</p>
+<p>例如 IBookAppService 接口和 BookCreationDto 类都适合放在这个项目中。</p>
+<h3 id="Application"><a href="#Application" class="headerlink" title=".Application"></a>.Application</h3><p>应用层，用于定义 API 控制器，实现在 Contracts 项目中定义的接口。</p>
+<p>大多数情况下，你不需要手动定义 API 控制器,因为 ABP 的动态 API 功能会根据你的应用层自动创建 API 控制器。但是如果你需要编写 API 控制器，那么它是最合适的地方。</p>
+<h2 id="领域层"><a href="#领域层" class="headerlink" title="领域层"></a><p id="DomainLayer">领域层</a></h2><h3 id="Domain"><a href="#Domain" class="headerlink" title=".Domain"></a>.Domain</h3><blockquote>
+<p>它依赖 .Domain.Shared 项目，因为项目中会用到它的一些常量,枚举和定义其他对象。</p>
+</blockquote>
+<p>解决方案的领域层。它主要包含：实体、集合根、领域服务、值类型、仓储接口和解决方案的其他领域对象。</p>
+<p>例如 Book 实体和 IBookRepository 接口都适合放在这个项目中。</p>
+<h3 id="Domain-Shared"><a href="#Domain-Shared" class="headerlink" title=".Domain.Shared"></a>.Domain.Shared</h3><blockquote>
+<p>该项目不依赖解决方案中的其他项目，其他项目直接或间接依赖该项目。</p>
+</blockquote>
+<p>领域共享层，包含属于领域层，但是与其他层共享的类型。项目包含常量，枚举和其他对象，这些对象实际上是领域层的一部分，但是解决方案中所有的层&#x2F;项目中都会使用到。</p>
+<p>例如 BookType 枚举和 BookConsts 类（可能是 Book 实体用到的常数字段，像 MaxNameLength ）都适合放在这个项目中。</p>
+<h2 id="基础设施层"><a href="#基础设施层" class="headerlink" title="基础设施层"></a><p id="InfrastructureLayer">基础设施层</a></h2><h3 id="EntityFrameworkCore"><a href="#EntityFrameworkCore" class="headerlink" title=".EntityFrameworkCore"></a>.EntityFrameworkCore</h3><blockquote>
+<p>它依赖 .Domain 项目，因为它需要引用实体和仓储接。</p>
+</blockquote>
+<p>EF Core 核心基础依赖项目，这是集成 EF Core 的项目。它定义了 DbContext 并实现 .Domain 项目中定义的仓储接口，包含：数据上下文、数据库映射、EF Core 仓储实现等。</p>
+
+    </div>
+
+    
+    
+    
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>haruki
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://newreport.top/2023-01-10/abp-framework-introductory/" title="ABP 简介">https://newreport.top/2023-01-10/abp-framework-introductory/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/C/" rel="tag"># C#</a>
+              <a href="/tags/NET/" rel="tag"># .NET</a>
+              <a href="/tags/ABP/" rel="tag"># ABP</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2023-01-04/centos-stream-8-install-node-and-go/" rel="prev" title="CentOS Stream 8 安装 node 和 go">
+      <i class="fa fa-chevron-left"></i> CentOS Stream 8 安装 node 和 go
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2023-01-30/use-hexo-next-8-and-ali-iconfont/" rel="next" title="Hexo Next 8 使用阿里图标">
+      Hexo Next 8 使用阿里图标 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%88%86%E5%B1%82"><span class="nav-number">1.</span> <span class="nav-text">分层</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#ABP-%E6%9E%B6%E6%9E%84%E5%90%84%E5%B1%82%E4%BE%9D%E8%B5%96%E5%85%B3%E7%B3%BB"><span class="nav-number">2.</span> <span class="nav-text">ABP 架构各层依赖关系</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#ABP-%E5%90%84%E5%B1%82%E4%BD%9C%E7%94%A8"><span class="nav-number">3.</span> <span class="nav-text">ABP 各层作用</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A1%A8%E7%A4%BA%E5%B1%82"><span class="nav-number">3.1.</span> <span class="nav-text">表示层</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#HttpApi-Host"><span class="nav-number">3.1.1.</span> <span class="nav-text">.HttpApi.Host</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#DbMigrator"><span class="nav-number">3.1.2.</span> <span class="nav-text">.DbMigrator</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BA%94%E7%94%A8%E5%B1%82"><span class="nav-number">3.2.</span> <span class="nav-text">应用层</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Application-Contracts"><span class="nav-number">3.2.1.</span> <span class="nav-text">.Application.Contracts</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Application"><span class="nav-number">3.2.2.</span> <span class="nav-text">.Application</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A2%86%E5%9F%9F%E5%B1%82"><span class="nav-number">3.3.</span> <span class="nav-text">领域层</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Domain"><span class="nav-number">3.3.1.</span> <span class="nav-text">.Domain</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Domain-Shared"><span class="nav-number">3.3.2.</span> <span class="nav-text">.Domain.Shared</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9F%BA%E7%A1%80%E8%AE%BE%E6%96%BD%E5%B1%82"><span class="nav-number">3.4.</span> <span class="nav-text">基础设施层</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#EntityFrameworkCore"><span class="nav-number">3.4.1.</span> <span class="nav-text">.EntityFrameworkCore</span></a></li></ol></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="haruki"
+      src="/images/haruki-avatar.jpg">
+  <p class="site-author-name" itemprop="name">haruki</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">24</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">9</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">28</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/newreport" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;newreport" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:haruki959@qq.com" title="E-Mail → mailto:haruki959@qq.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://twitter.com/haruki959" title="Twitter → https:&#x2F;&#x2F;twitter.com&#x2F;haruki959" rel="noopener" target="_blank"><i class="fab fa-twitter fa-fw"></i>Twitter</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://www.yuque.com/newreport" title="YuQue → https:&#x2F;&#x2F;www.yuque.com&#x2F;newreport" rel="noopener" target="_blank"><i class="fab iconfont app-lark_grey fa-fw"></i>YuQue</a>
+      </span>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">haruki</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+      <span class="post-meta-item-text">站点总字数：</span>
+    <span title="站点总字数">17k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">57 分钟</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+&#8195;
+<div class="powered-by">
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <i class="fa fa-user-md"></i>
+    <span id="busuanzi_container_site_uv">
+        本站访客数:<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span id="busuanzi_container_site_pv">
+        本站访问量<span id="busuanzi_value_site_pv"></span>
+    </span>
+</div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+<script>
+if (document.querySelectorAll('pre.mermaid').length) {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/mermaid@8/dist/mermaid.min.js', () => {
+    mermaid.initialize({
+      theme    : 'forest',
+      logLevel : 3,
+      flowchart: { curve     : 'linear' },
+      gantt    : { axisFormat: '%m/%d/%Y' },
+      sequence : { actorMargin: 50 }
+    });
+  }, window.mermaid);
+}
+</script>
+
+
+  
+
+  
+
+</body>
+</html>

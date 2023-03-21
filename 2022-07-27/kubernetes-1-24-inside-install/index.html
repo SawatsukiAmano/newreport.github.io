@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 7.0.0-rc1">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"newreport.top","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="环境介绍 master：成都区 2 核 4G    10.0.0.17cd001：成都区 2 核 4G     10.0.0.11主机：两台腾讯云轻量云，系统为 CentOS Stream8，轻量云不支持 EIP 故不能公网搭 K8sKubernetes 版本：V1.24.3（截至 2022-08-02，当前 k8s 最新版本为 1.24.3）">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Kubernetes 1.24 内网部署">
+<meta property="og:url" content="https://newreport.top/2022-07-27/kubernetes-1-24-inside-install/index.html">
+<meta property="og:site_name" content="NewReport">
+<meta property="og:description" content="环境介绍 master：成都区 2 核 4G    10.0.0.17cd001：成都区 2 核 4G     10.0.0.11主机：两台腾讯云轻量云，系统为 CentOS Stream8，轻量云不支持 EIP 故不能公网搭 K8sKubernetes 版本：V1.24.3（截至 2022-08-02，当前 k8s 最新版本为 1.24.3）">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://gd-obj-001.gd2.qingstor.com/haruki/blog/cn/2022/871EFB1C13E616DBFBEC9E43A273852E08CA7EF3090D79DBE50647C24447E91D.png">
+<meta property="og:image" content="https://gd-obj-001.gd2.qingstor.com/haruki/blog/cn/2022/A30C9689711F26C031325D2EE82625E7A353B232C0BF266975111C1C9CE4EC80.png">
+<meta property="og:image" content="https://gd-obj-001.gd2.qingstor.com/haruki/blog/cn/2022/564E8CA73EF28D607516A539A84B538092DDF7F4D510372E9EF52AB14DE80D36.png">
+<meta property="og:image" content="https://gd-obj-001.gd2.qingstor.com/haruki/blog/cn/2022/77781C696156A40959D4159D81D2A959A873F2A9C7AFBA72C07D9EB0DF8AF7A1.png">
+<meta property="og:image" content="https://gd-obj-001.gd2.qingstor.com/haruki/blog/cn/2022/0ED4585667FEECFEFB5A26AD2C72BE3470E6E618DBBA343D6E19402FCA5688AE.png">
+<meta property="article:published_time" content="2022-07-27T00:00:01.000Z">
+<meta property="article:modified_time" content="2023-03-21T08:37:14.833Z">
+<meta property="article:author" content="haruki">
+<meta property="article:tag" content="NFS">
+<meta property="article:tag" content="Nginx">
+<meta property="article:tag" content="MySQL">
+<meta property="article:tag" content="Containerd">
+<meta property="article:tag" content="K8s">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://gd-obj-001.gd2.qingstor.com/haruki/blog/cn/2022/871EFB1C13E616DBFBEC9E43A273852E08CA7EF3090D79DBE50647C24447E91D.png">
+
+<link rel="canonical" href="https://newreport.top/2022-07-27/kubernetes-1-24-inside-install/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>Kubernetes 1.24 内网部署 | NewReport</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+  <meta name="msvalidate.01" content="26DDE57F724CC0C30F02DAD76C17EE42" />
+<link rel="alternate" href="/atom.xml" title="NewReport" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">NewReport</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+        <li class="menu-item menu-item-sitemap">
+
+    <a href="/sitemap.xml" rel="section"><i class="fa fa-sitemap fa-fw"></i>站点地图</a>
+
+  </li>
+        <li class="menu-item menu-item-友链">
+
+    <a href="/links/" rel="section"><i class="fa fa-user fa-fw"></i>友链</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://newreport.top/2022-07-27/kubernetes-1-24-inside-install/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/haruki-avatar.jpg">
+      <meta itemprop="name" content="haruki">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="NewReport">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Kubernetes 1.24 内网部署
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2022-07-27 00:00:01" itemprop="dateCreated datePublished" datetime="2022-07-27T00:00:01+00:00">2022-07-27</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2023-03-21 08:37:14" itemprop="dateModified" datetime="2023-03-21T08:37:14+00:00">2023-03-21</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/kubernetes-docker-podman/" itemprop="url" rel="index"><span itemprop="name">kubernetes/docker/podman</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>2.1k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>7 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h1 id="环境介绍"><a href="#环境介绍" class="headerlink" title="环境介绍"></a>环境介绍</h1><blockquote>
+<p>master：成都区 2 核 4G    10.0.0.17<br>cd001：成都区 2 核 4G     10.0.0.11<br>主机：两台腾讯云轻量云，系统为 CentOS Stream8，轻量云不支持 EIP 故不能公网搭 K8s<br>Kubernetes 版本：V1.24.3（截至 2022-08-02，当前 k8s 最新版本为 1.24.3）</p>
+</blockquote>
+<span id="more"></span>  
+<h1 id="Master-节点安装"><a href="#Master-节点安装" class="headerlink" title="Master 节点安装"></a>Master 节点安装</h1><h2 id="主机配置"><a href="#主机配置" class="headerlink" title="主机配置"></a>主机配置</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"> <span class="comment"># 设置主机名</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;master&quot;</span> &gt; /etc/hostname</span><br><span class="line">yum -y tc</span><br><span class="line">yum -y update </span><br><span class="line"></span><br><span class="line"><span class="comment"># 重启使master主机名生效</span></span><br><span class="line">reboot </span><br><span class="line"></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;1&quot;</span> &gt;&gt; /proc/sys/net/ipv4/ip_forward <span class="comment"># 开启ip转发</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 设置hosts 注意，每次重启后该文件会恢复，需要重新添加</span></span><br><span class="line"><span class="built_in">cat</span> &gt;&gt; /etc/hosts &lt;&lt;<span class="string">EOF</span></span><br><span class="line"><span class="string">10.0.0.17 master</span></span><br><span class="line"><span class="string">10.0.0.11 cd001</span></span><br><span class="line"><span class="string">EOF</span></span><br><span class="line"></span><br><span class="line">systemctl restart NetworkManager.service</span><br></pre></td></tr></table></figure>
+
+<h2 id="配置-containerd"><a href="#配置-containerd" class="headerlink" title="配置 containerd"></a>配置 containerd</h2><blockquote>
+<p>将 containerd 作为 k8s 的容器引擎</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 阿里镜像源</span></span><br><span class="line">wget -O /etc/yum.repos.d/docker-ce.repo https://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo</span><br><span class="line"></span><br><span class="line"><span class="built_in">cat</span> &lt;&lt; <span class="string">EOF &gt; /etc/modules-load.d/containerd.conf</span></span><br><span class="line"><span class="string">overlay</span></span><br><span class="line"><span class="string">br_netfilter</span></span><br><span class="line"><span class="string">EOF</span></span><br><span class="line"></span><br><span class="line">modprobe overlay</span><br><span class="line">modprobe br_netfilter</span><br><span class="line"></span><br><span class="line">yum install -y containerd.io --allowerasing</span><br><span class="line"></span><br><span class="line"><span class="built_in">mkdir</span>  -p /etc/containerd </span><br><span class="line"><span class="built_in">rm</span> -rf /etc/containerd/config.toml</span><br><span class="line"></span><br><span class="line">containerd config default &gt; /etc/containerd/config.toml</span><br><span class="line"></span><br><span class="line">sed -i <span class="string">&#x27;s#sandbox_image = &quot;k8s.gcr.io/pause:#sandbox_image = &quot;registry.aliyuncs.com/google_containers/pause:#g&#x27;</span> /etc/containerd/config.toml</span><br><span class="line"><span class="comment"># sed -i &#x27;s/systemd_cgroup = false/systemd_cgroup = true/g&#x27; /etc/containerd/config.toml</span></span><br><span class="line">systemctl restart containerd</span><br><span class="line"></span><br><span class="line">systemctl <span class="built_in">enable</span> containerd</span><br><span class="line">systemctl start containerd</span><br></pre></td></tr></table></figure>
+<h2 id="runc-命令行配置"><a href="#runc-命令行配置" class="headerlink" title="runc 命令行配置"></a>runc 命令行配置</h2><blockquote>
+<p>检测 runc、ctrcli、配置 k8s 源</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">ctr version</span><br><span class="line">runc -version </span><br><span class="line"></span><br><span class="line"><span class="built_in">cat</span> &lt;&lt;<span class="string">EOF &gt; /etc/yum.repos.d/kubernetes.repo</span></span><br><span class="line"><span class="string">[kubernetes]</span></span><br><span class="line"><span class="string">name=Kubernetes</span></span><br><span class="line"><span class="string">baseurl=https://mirrors.aliyun.com/kubernetes/yum/repos/kubernetes-el7-x86_64/</span></span><br><span class="line"><span class="string">enabled=1</span></span><br><span class="line"><span class="string">gpgcheck=0</span></span><br><span class="line"><span class="string">repo_gpgcheck=0</span></span><br><span class="line"><span class="string">gpgkey=https://mirrors.aliyun.com/kubernetes/yum/doc/yum-key.gpg https://mirrors.aliyun.com/kubernetes/yum/doc/rpm-package-key.gpg</span></span><br><span class="line"><span class="string">EOF</span></span><br><span class="line"></span><br><span class="line">yum clean all </span><br><span class="line">yum makecache</span><br><span class="line"><span class="comment"># k8s init时需要此应用进行网络测试</span></span><br><span class="line">yum install -y tc   </span><br></pre></td></tr></table></figure>
+<h2 id="k8s-组件安装"><a href="#k8s-组件安装" class="headerlink" title="k8s 组件安装"></a>k8s 组件安装</h2><blockquote>
+<p>安装配置 k8s 三件套并配置</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">yum install -y kubectl kubelet kubeadm</span><br><span class="line"></span><br><span class="line"><span class="comment"># 兼容性处理 systemd</span></span><br><span class="line"><span class="built_in">echo</span>  <span class="string">&#x27;KUBELET_EXTRA_ARGS=&quot;--cgroup-driver=systemd&quot;&#x27;</span> &gt; /etc/sysconfig/kubelet</span><br><span class="line"></span><br><span class="line">systemctl <span class="built_in">enable</span> kubelet</span><br><span class="line">systemctl start kubelet</span><br><span class="line"></span><br><span class="line"><span class="comment"># 配置cricl 的endpoint</span></span><br><span class="line">crictl config runtime-endpoint unix:///run/containerd/containerd.sock</span><br><span class="line">crictl config image-endpoint unix:///run/containerd/containerd.sock</span><br><span class="line"></span><br><span class="line"><span class="comment"># 配置k8s镜像版本（不配置默认拉去latest 最新版）</span></span><br><span class="line"><span class="comment"># kubeadm config images list --kubernetes-version=v1.24.3</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="kubernetes-初始化"><a href="#kubernetes-初始化" class="headerlink" title="kubernetes 初始化"></a>kubernetes 初始化</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment"># 错误处理</span></span><br><span class="line"><span class="comment"># kubeadm reset</span></span><br><span class="line"><span class="comment"># rm -fr  ~/.kube/config</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># --apiserver-advertise-address和--control-plane-endpoint 分别为apiServer和控制面板的ip地址，内网部署使用master节点内网ip，公网部署使用master节点公网ip</span></span><br><span class="line">kubeadm init --pod-network-cidr=10.224.0.0/16 --apiserver-advertise-address=10.0.0.17 --control-plane-endpoint=10.0.0.17 --image-repository registry.aliyuncs.com/google_containers --v=5</span><br><span class="line"></span><br><span class="line"><span class="built_in">mkdir</span> -p <span class="variable">$HOME</span>/.kube</span><br><span class="line">sudo <span class="built_in">cp</span> -i /etc/kubernetes/admin.conf <span class="variable">$HOME</span>/.kube/config</span><br><span class="line">sudo <span class="built_in">chown</span> $(<span class="built_in">id</span> -u):$(<span class="built_in">id</span> -g) <span class="variable">$HOME</span>/.kube/config</span><br><span class="line"></span><br><span class="line"><span class="built_in">export</span> KUBECONFIG=/etc/kubernetes/admin.conf</span><br><span class="line"></span><br><span class="line"><span class="comment"># kubeadm join 10.0.0.17:6443 --token 9t45vv.40lt4exfxmirt7q2 --discovery-token-ca-cert-hash sha256:65cfa9a08c89e81357f3e394757ebb6c6c8000020c2e7411248cac2c4ef79c2e</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 可以看到master是NotReady状态</span></span><br><span class="line">kubectl get node -o wide</span><br><span class="line"></span><br><span class="line"><span class="comment"># 可以看到coredns是pending状态</span></span><br><span class="line">kubectl get pod -A -o wide</span><br><span class="line"></span><br><span class="line"><span class="comment"># 之后安装calico或者flannel网络插件后会恢复正常</span></span><br><span class="line"></span><br><span class="line">crictl images</span><br><span class="line"></span><br><span class="line">crictl ps -a</span><br></pre></td></tr></table></figure>
+<h1 id="Node-节点安装"><a href="#Node-节点安装" class="headerlink" title="Node 节点安装"></a>Node 节点安装</h1><h2 id="主机配置-1"><a href="#主机配置-1" class="headerlink" title="主机配置"></a>主机配置</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"> <span class="comment"># 设置主机名</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;cd001&quot;</span> &gt; /etc/hostname</span><br><span class="line"></span><br><span class="line">yum install -y tc</span><br><span class="line"></span><br><span class="line">yum -y update </span><br><span class="line"></span><br><span class="line"><span class="comment"># 重启使master主机名生效</span></span><br><span class="line">reboot </span><br><span class="line"></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;1&quot;</span> &gt;&gt; /proc/sys/net/ipv4/ip_forward <span class="comment"># 开启ip转发</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 设置hosts 注意，每次重启后该文件会恢复，需要重新添加</span></span><br><span class="line"><span class="built_in">cat</span> &gt;&gt; /etc/hosts &lt;&lt;<span class="string">EOF</span></span><br><span class="line"><span class="string">10.0.0.17 master</span></span><br><span class="line"><span class="string">10.0.0.11 cd001</span></span><br><span class="line"><span class="string">EOF</span></span><br><span class="line"></span><br><span class="line">systemctl restart NetworkManager.service</span><br></pre></td></tr></table></figure>
+
+<h2 id="配置-containerd-1"><a href="#配置-containerd-1" class="headerlink" title="配置 containerd"></a>配置 containerd</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 阿里镜像源</span></span><br><span class="line">wget -O /etc/yum.repos.d/docker-ce.repo https://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo</span><br><span class="line"></span><br><span class="line"><span class="built_in">cat</span> &lt;&lt; <span class="string">EOF &gt; /etc/modules-load.d/containerd.conf</span></span><br><span class="line"><span class="string">overlay</span></span><br><span class="line"><span class="string">br_netfilter</span></span><br><span class="line"><span class="string">EOF</span></span><br><span class="line"></span><br><span class="line">modprobe overlay</span><br><span class="line">modprobe br_netfilter</span><br><span class="line"></span><br><span class="line">yum install -y containerd.io --allowerasing</span><br><span class="line"></span><br><span class="line"><span class="built_in">mkdir</span>  -p /etc/containerd </span><br><span class="line"><span class="built_in">rm</span> -rf /etc/containerd/config.toml</span><br><span class="line"></span><br><span class="line">containerd config default &gt; /etc/containerd/config.toml</span><br><span class="line"></span><br><span class="line"> sed -i <span class="string">&#x27;s#sandbox_image = &quot;k8s.gcr.io/pause:#sandbox_image = &quot;registry.aliyuncs.com/google_containers/pause:#g&#x27;</span> /etc/containerd/config.toml</span><br><span class="line"><span class="comment"># sed -i &#x27;s/systemd_cgroup = false/systemd_cgroup = true/g&#x27; /etc/containerd/config.toml</span></span><br><span class="line">systemctl restart containerd</span><br><span class="line"></span><br><span class="line">systemctl <span class="built_in">enable</span> containerd</span><br><span class="line">systemctl start containerd</span><br></pre></td></tr></table></figure>
+<h2 id="runc-命令行配置-1"><a href="#runc-命令行配置-1" class="headerlink" title="runc 命令行配置"></a>runc 命令行配置</h2><blockquote>
+<p>检测 runc 和 ctrcli、配置 k8s 源</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">ctr version</span><br><span class="line">runc -version </span><br><span class="line"></span><br><span class="line"><span class="built_in">cat</span> &lt;&lt;<span class="string">EOF &gt; /etc/yum.repos.d/kubernetes.repo</span></span><br><span class="line"><span class="string">[kubernetes]</span></span><br><span class="line"><span class="string">name=Kubernetes</span></span><br><span class="line"><span class="string">baseurl=https://mirrors.aliyun.com/kubernetes/yum/repos/kubernetes-el7-x86_64/</span></span><br><span class="line"><span class="string">enabled=1</span></span><br><span class="line"><span class="string">gpgcheck=0</span></span><br><span class="line"><span class="string">repo_gpgcheck=0</span></span><br><span class="line"><span class="string">gpgkey=https://mirrors.aliyun.com/kubernetes/yum/doc/yum-key.gpg https://mirrors.aliyun.com/kubernetes/yum/doc/rpm-package-key.gpg</span></span><br><span class="line"><span class="string">EOF</span></span><br><span class="line"></span><br><span class="line">yum clean all </span><br><span class="line">yum makecache</span><br><span class="line"></span><br><span class="line">yum install -y tc</span><br></pre></td></tr></table></figure>
+<h2 id="k8s-node-组件安装"><a href="#k8s-node-组件安装" class="headerlink" title="k8s node 组件安装"></a>k8s node 组件安装</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">yum install -y  kubelet kubeadm</span><br><span class="line"></span><br><span class="line"><span class="comment"># 兼容性处理 systemd</span></span><br><span class="line"><span class="built_in">echo</span>  <span class="string">&#x27;KUBELET_EXTRA_ARGS=&quot;--cgroup-driver=systemd&quot;&#x27;</span> &gt; /etc/sysconfig/kubelet</span><br><span class="line"></span><br><span class="line">systemctl <span class="built_in">enable</span> kubelet</span><br><span class="line">systemctl start kubelet</span><br><span class="line"></span><br><span class="line"><span class="comment"># 配置cricl 的endpoint</span></span><br><span class="line">crictl config runtime-endpoint unix:///run/containerd/containerd.sock</span><br><span class="line">crictl config image-endpoint unix:///run/containerd/containerd.sock</span><br><span class="line"></span><br><span class="line"><span class="comment"># 配置k8s镜像版本（不配置默认拉去latest 最新版）</span></span><br><span class="line"><span class="comment"># kubeadm config images list --kubernetes-version=v1.24.3</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="加入到集群"><a href="#加入到集群" class="headerlink" title="加入到集群"></a>加入到集群</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment"># 错误处理</span></span><br><span class="line"><span class="comment"># kubeadm reset</span></span><br><span class="line"><span class="comment"># rm -fr  ~/.kube/config</span></span><br><span class="line"></span><br><span class="line">kubeadm <span class="built_in">join</span> 10.0.0.17:6443 --token 9t45vv.40lt4exfxmirt7q2 --discovery-token-ca-cert-hash sha256:65cfa9a08c89e81357f3e394757ebb6c6c8000020c2e7411248cac2c4ef79c2e</span><br></pre></td></tr></table></figure>
+
+<h1 id="配置-K8s-容器网络"><a href="#配置-K8s-容器网络" class="headerlink" title="配置 K8s 容器网络"></a>配置 K8s 容器网络</h1><blockquote>
+<p>master 节点执行</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">wget https://docs.projectcalico.org/manifests/calico.yaml --no-check-certificate</span><br><span class="line">vim calico.yaml</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>配置 yaml 文件,正确的虚拟 ip 和网卡</p>
+</blockquote>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># /CALICO_IPV4POOL_CIDR 进行查找，取消注释，将值改为pod-network-cidr的值</span></span><br><span class="line"><span class="comment"># The default IPv4 pool to create on startup if none exists. Pod IPs will be</span></span><br><span class="line"><span class="comment"># chosen from this range. Changing this value after installation will have</span></span><br><span class="line"><span class="comment"># no effect. This should fall within `--cluster-cidr`.</span></span><br><span class="line"> <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">CALICO_IPV4POOL_CIDR</span></span><br><span class="line">   <span class="attr">value:</span> <span class="string">&quot;10.244.0.0/16&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># ....</span></span><br><span class="line"><span class="comment"># /k8s,bgp 查找,同级新增如下</span></span><br><span class="line"> <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">CLUSTER_TYPE</span></span><br><span class="line">   <span class="attr">value:</span> <span class="string">&quot;k8s,bgp&quot;</span></span><br><span class="line"> <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">IP_AUTODETECTION_METHOD</span></span><br><span class="line">   <span class="attr">value:</span> <span class="string">&quot;interface=eth0&quot;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">kubectl apply -f calico.yaml</span><br><span class="line"></span><br><span class="line"><span class="comment"># 如果执行后没反应或者拉去calio镜像过慢，可以在master和node上手动拉取镜像</span></span><br><span class="line"><span class="comment"># crictl pull docker.io/calico/cni</span></span><br><span class="line"><span class="comment"># crictl pull docker.io/calico/node</span></span><br><span class="line">crictl pull docker.io/calico/cni:v3.23.3</span><br><span class="line">crictl pull docker.io/calico/node:v3.23.3</span><br><span class="line"></span><br><span class="line"><span class="comment"># 检查node和containerd运行状态</span></span><br><span class="line">kubectl get node -o wide</span><br><span class="line"></span><br><span class="line">crictl ps -a</span><br></pre></td></tr></table></figure>
+<p><img src="https://gd-obj-001.gd2.qingstor.com/haruki/blog/cn/2022/871EFB1C13E616DBFBEC9E43A273852E08CA7EF3090D79DBE50647C24447E91D.png" alt="通过 crictl 查看 containerd 的容器运行状态"></p>
+<h1 id="配置-NFS-共享存储"><a href="#配置-NFS-共享存储" class="headerlink" title="配置 NFS 共享存储"></a>配置 NFS 共享存储</h1><blockquote>
+<p>由于 ceph 资源消耗太大，服务器数量和性能都不够，暂时只能用 NFS，之后大概会在自己电脑上开虚拟机试着搭下 ceph</p>
+</blockquote>
+<blockquote>
+<p>nfs server: cd001 10.0.0.11</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">yum install -y nfs-utils rpcbind <span class="comment"># 安装nfs和rpc</span></span><br><span class="line">systemctl <span class="built_in">enable</span> nfs-server</span><br><span class="line">sudo systemctl <span class="built_in">enable</span> --now nfs-server</span><br><span class="line"><span class="built_in">mkdir</span> -p /srv/nfs</span><br><span class="line"></span><br><span class="line"><span class="comment"># 查看支持的nfs版本</span></span><br><span class="line">sudo <span class="built_in">cat</span> /proc/fs/nfsd/versions</span><br><span class="line">userdel -r nfsuser</span><br><span class="line"></span><br><span class="line"><span class="comment"># nfsserver端新增一个用户，客户端操作nfs目录时会使用该用户权限进行读写</span></span><br><span class="line">adduser -s /sbin/nologin -u 1010 -M nfsuser</span><br><span class="line"><span class="comment"># -u : 指定用户uid</span></span><br><span class="line"><span class="comment"># -M: --no-create-home  不创建用户home目录</span></span><br><span class="line"><span class="comment"># -s : --shell    指定用户的shell</span></span><br><span class="line">passwd nfsuser </span><br><span class="line"></span><br><span class="line"><span class="built_in">mkdir</span> -p /srv/nfs/</span><br><span class="line"><span class="built_in">chown</span> nfsuser.nfsuser /srv/nfs</span><br><span class="line"></span><br><span class="line"><span class="comment"># 所有k8s集群内ip都需要添加进去</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;/srv/nfs/ 10.0.0.17(rw,sync,no_root_squash,anonuid=1001,anongid=1001)&quot;</span> &gt; /etc/exports</span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;/srv/nfs/ 10.0.0.11(rw,sync,no_root_squash,anonuid=1001,anongid=1001)&quot;</span> &gt;&gt; /etc/exports</span><br><span class="line"><span class="comment"># rw:可读写</span></span><br><span class="line"><span class="comment"># ro: 只读</span></span><br><span class="line"><span class="comment"># no_root_squash：对root用户不压制，如果客户端以root用户写入，在服务端都映射为服务端的root用户</span></span><br><span class="line"><span class="comment"># root_squash： nfs服务：默认情况使用的是相反参数root_squash，如果客户端是用户root操作，会被压制成nobody用户</span></span><br><span class="line"><span class="comment"># all_squash:     不管客户端的使用nfs的用户是谁，都会压制成nobody用户</span></span><br><span class="line"><span class="comment"># insecure:   允许从客户端过来的非授权访问</span></span><br><span class="line"><span class="comment"># sync:     数据同步写入到内存和硬盘</span></span><br><span class="line"><span class="comment"># async:    数据先写入内存，不直接写入到硬盘</span></span><br><span class="line"><span class="comment"># anonuid: 指定uid的值，此uid必须存在于/etc/passwd中</span></span><br><span class="line"><span class="comment"># anongid:指定gid的值</span></span><br><span class="line"></span><br><span class="line">exportfs -arv</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>nfs client: master 10.0.0.17</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 查看公开的nfs</span></span><br><span class="line">showmount -e 10.0.0.11</span><br><span class="line"></span><br><span class="line"><span class="built_in">mkdir</span> -p /mnt/nfs/cd001</span><br><span class="line"><span class="comment"># 临时挂载</span></span><br><span class="line"><span class="comment"># mount 10.0.0.11:/srv/nfs    /mnt/nfs/cd001</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 永久挂载</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;10.0.0.11:/srv/nfs    /mnt/nfs/cd001  nfs4    defaults        0       0&quot;</span> &gt;&gt;  /etc/fstab</span><br><span class="line">mount -a</span><br><span class="line"><span class="built_in">df</span> -TH</span><br><span class="line"><span class="comment"># k8s集群不需要挂载，写yaml后会自动进行持久挂载</span></span><br><span class="line">umount /mnt/nfs/cd001</span><br><span class="line"></span><br><span class="line"><span class="built_in">df</span> -TH</span><br></pre></td></tr></table></figure>
+<p><img src="https://gd-obj-001.gd2.qingstor.com/haruki/blog/cn/2022/A30C9689711F26C031325D2EE82625E7A353B232C0BF266975111C1C9CE4EC80.png" alt="nfs 挂载文件配置"></p>
+<h1 id="部署-Nginx-和-MySql"><a href="#部署-Nginx-和-MySql" class="headerlink" title="部署 Nginx 和 MySql"></a>部署 Nginx 和 MySql</h1><blockquote>
+<p>部署可以公网访问的 nginx 和持久化存储的 mysql 服务<br>master 节点</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 新增和删除命名空间</span></span><br><span class="line"><span class="comment"># kubectl create namespace my-namespace</span></span><br><span class="line"><span class="comment"># kubectl delete namespace my-namespace</span></span><br><span class="line"><span class="comment"># kucectl apply -f my-namespace.yaml</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">apiVersion:</span> <span class="string">v1</span></span><br><span class="line"><span class="attr">kind:</span> <span class="string">Namespace</span></span><br><span class="line"><span class="attr">metadata:</span></span><br><span class="line">   <span class="attr">name:</span> <span class="string">public</span></span><br><span class="line">   <span class="attr">labels:</span></span><br><span class="line">     <span class="attr">name:</span> <span class="string">public</span></span><br></pre></td></tr></table></figure>
+<h2 id="Nginx"><a href="#Nginx" class="headerlink" title="Nginx"></a>Nginx</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> ~</span><br><span class="line">vim nginx.yaml</span><br></pre></td></tr></table></figure>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">apiVersion:</span> <span class="string">apps/v1</span></span><br><span class="line"><span class="attr">kind:</span> <span class="string">Deployment</span></span><br><span class="line"><span class="attr">metadata:</span></span><br><span class="line">  <span class="attr">name:</span> <span class="string">nginx-deployment</span></span><br><span class="line"><span class="attr">spec:</span></span><br><span class="line">  <span class="attr">selector:</span></span><br><span class="line">    <span class="attr">matchLabels:</span></span><br><span class="line">      <span class="attr">app:</span> <span class="string">nginx</span></span><br><span class="line">  <span class="attr">replicas:</span> <span class="number">3</span></span><br><span class="line">  <span class="attr">template:</span></span><br><span class="line">    <span class="attr">metadata:</span></span><br><span class="line">      <span class="attr">labels:</span></span><br><span class="line">        <span class="attr">app:</span> <span class="string">nginx</span></span><br><span class="line">    <span class="attr">spec:</span></span><br><span class="line">      <span class="attr">containers:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">nginx</span></span><br><span class="line">        <span class="attr">image:</span> <span class="string">nginx:alpine</span></span><br><span class="line">        <span class="attr">ports:</span></span><br><span class="line">        <span class="bullet">-</span> <span class="attr">containerPort:</span> <span class="number">80</span></span><br><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">apiVersion:</span> <span class="string">v1</span></span><br><span class="line"><span class="attr">kind:</span> <span class="string">Service</span></span><br><span class="line"><span class="attr">metadata:</span></span><br><span class="line">  <span class="attr">name:</span> <span class="string">nginx-service</span></span><br><span class="line"><span class="attr">spec:</span></span><br><span class="line">  <span class="attr">selector:</span></span><br><span class="line">    <span class="attr">app:</span> <span class="string">nginx</span></span><br><span class="line">  <span class="attr">ports:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="attr">protocol:</span> <span class="string">TCP</span></span><br><span class="line">    <span class="attr">port:</span> <span class="number">80</span></span><br><span class="line">    <span class="attr">targetPort:</span> <span class="number">80</span></span><br><span class="line">    <span class="attr">nodePort:</span> <span class="number">30080</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">NodePort</span></span><br></pre></td></tr></table></figure>
+<p><img src="https://gd-obj-001.gd2.qingstor.com/haruki/blog/cn/2022/564E8CA73EF28D607516A539A84B538092DDF7F4D510372E9EF52AB14DE80D36.png" alt="nginx 首页显示成功"></p>
+<h2 id="MySQL"><a href="#MySQL" class="headerlink" title="MySQL"></a>MySQL</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> ~</span><br><span class="line">vim mysql.yaml</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">apiVersion:</span> <span class="string">apps/v1</span></span><br><span class="line"><span class="attr">kind:</span> <span class="string">Deployment</span></span><br><span class="line"><span class="attr">metadata:</span></span><br><span class="line">  <span class="attr">labels:</span></span><br><span class="line">    <span class="attr">app:</span> <span class="string">mysql</span> <span class="comment">#为该Deployment设置key为app，value为mysql的标签</span></span><br><span class="line">  <span class="attr">name:</span> <span class="string">mysql</span></span><br><span class="line">  <span class="attr">namespace:</span> <span class="string">default</span></span><br><span class="line"><span class="attr">spec:</span></span><br><span class="line">  <span class="attr">replicas:</span> <span class="number">1</span> <span class="comment">#副本数量</span></span><br><span class="line">  <span class="attr">selector:</span> <span class="comment">#标签选择器，与上面的标签共同作用</span></span><br><span class="line">    <span class="attr">matchLabels:</span> <span class="comment">#选择包含标签app:nginx的资源</span></span><br><span class="line">      <span class="attr">app:</span> <span class="string">mysql</span></span><br><span class="line">  <span class="attr">template:</span> <span class="comment">#这是选择或创建的Pod的模板</span></span><br><span class="line">    <span class="attr">metadata:</span> <span class="comment">#Pod的元数据</span></span><br><span class="line">      <span class="attr">labels:</span> <span class="comment">#Pod的标签，上面的selector即选择包含标签app:nginx的Pod</span></span><br><span class="line">        <span class="attr">app:</span> <span class="string">mysql</span></span><br><span class="line">    <span class="attr">spec:</span> <span class="comment">#期望Pod实现的功能（即在pod中部署）</span></span><br><span class="line">      <span class="attr">containers:</span> <span class="comment">#生成container，与docker中的container是同一种</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">mysql</span></span><br><span class="line">        <span class="attr">image:</span> <span class="string">mysql:latest</span> <span class="comment">#使用镜像mysql: 创建container，该container默认3306端口可访问</span></span><br><span class="line">        <span class="attr">ports:</span></span><br><span class="line">        <span class="bullet">-</span> <span class="attr">containerPort:</span> <span class="number">3306</span>  <span class="comment"># 开启本容器的3306端口可访问</span></span><br><span class="line">        <span class="attr">env:</span></span><br><span class="line">        <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">MYSQL_ROOT_PASSWORD</span></span><br><span class="line">          <span class="attr">value:</span> <span class="string">MTIzNDU2Cg==</span> <span class="comment"># echo &quot;123456&quot;  |base64</span></span><br><span class="line">        <span class="attr">volumeMounts:</span> <span class="comment">#挂载持久存储卷</span></span><br><span class="line">        <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">mysql-data</span>  <span class="comment">#挂载设备的名字，与volumes[*].name 需要对应</span></span><br><span class="line">          <span class="attr">mountPath:</span> <span class="string">/var/lib/mysql</span>  <span class="comment">#挂载到容器的某个路径下</span></span><br><span class="line">          </span><br><span class="line">      <span class="attr">volumes:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">mysql-data</span>  <span class="comment">#和上面保持一致 这是本地的文件路径，上面是容器内部的路径</span></span><br><span class="line">        <span class="attr">nfs:</span></span><br><span class="line">          <span class="attr">server:</span> <span class="number">10.0</span><span class="number">.0</span><span class="number">.11</span> <span class="comment">#nfs服务器地址</span></span><br><span class="line">          <span class="attr">path:</span> <span class="string">/srv/nfs/k8s_data/mysql</span>  <span class="comment">#此路径需要实现创建</span></span><br><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">apiVersion:</span> <span class="string">v1</span></span><br><span class="line"><span class="attr">kind:</span> <span class="string">Service</span> <span class="comment"># 服务类型为svc</span></span><br><span class="line"><span class="attr">metadata:</span></span><br><span class="line">  <span class="attr">name:</span> <span class="string">mysql-service</span></span><br><span class="line">  <span class="attr">namespace:</span> <span class="string">default</span></span><br><span class="line"><span class="attr">spec:</span></span><br><span class="line">  <span class="attr">selector:</span></span><br><span class="line">    <span class="attr">app:</span> <span class="string">mysql</span></span><br><span class="line">  <span class="attr">ports:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="attr">protocol:</span> <span class="string">TCP</span></span><br><span class="line">    <span class="attr">port:</span> <span class="number">3306</span>  <span class="comment"># 本service的端口</span></span><br><span class="line">    <span class="attr">targetPort:</span> <span class="number">3306</span>  <span class="comment"># 对接的容器端口</span></span><br><span class="line">    <span class="attr">nodePort:</span> <span class="number">32001</span> <span class="comment"># nodeport即主机公网访问的端口</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">NodePort</span>  <span class="comment"># svc模式为nodeport</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">kubectl apply -f mysql.yaml</span><br><span class="line"><span class="comment"># 可以正常连接mysql并且nfs服务器有持久化数据了</span></span><br></pre></td></tr></table></figure>
+<p><img src="https://gd-obj-001.gd2.qingstor.com/haruki/blog/cn/2022/77781C696156A40959D4159D81D2A959A873F2A9C7AFBA72C07D9EB0DF8AF7A1.png" alt="navicat 连接 mysql"><br><img src="https://gd-obj-001.gd2.qingstor.com/haruki/blog/cn/2022/0ED4585667FEECFEFB5A26AD2C72BE3470E6E618DBBA343D6E19402FCA5688AE.png" alt="查看 nfs 里挂载的数据"></p>
+
+    </div>
+
+    
+    
+    
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>haruki
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://newreport.top/2022-07-27/kubernetes-1-24-inside-install/" title="Kubernetes 1.24 内网部署">https://newreport.top/2022-07-27/kubernetes-1-24-inside-install/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/NFS/" rel="tag"># NFS</a>
+              <a href="/tags/Nginx/" rel="tag"># Nginx</a>
+              <a href="/tags/MySQL/" rel="tag"># MySQL</a>
+              <a href="/tags/Containerd/" rel="tag"># Containerd</a>
+              <a href="/tags/K8s/" rel="tag"># K8s</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2021-06-23/list-introduction/" rel="prev" title="列表简介">
+      <i class="fa fa-chevron-left"></i> 列表简介
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2022-09-04/cloudflare-301-url/" rel="next" title="Cloudflare 301 跳转">
+      Cloudflare 301 跳转 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%8E%AF%E5%A2%83%E4%BB%8B%E7%BB%8D"><span class="nav-number">1.</span> <span class="nav-text">环境介绍</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Master-%E8%8A%82%E7%82%B9%E5%AE%89%E8%A3%85"><span class="nav-number">2.</span> <span class="nav-text">Master 节点安装</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%BB%E6%9C%BA%E9%85%8D%E7%BD%AE"><span class="nav-number">2.1.</span> <span class="nav-text">主机配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE-containerd"><span class="nav-number">2.2.</span> <span class="nav-text">配置 containerd</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#runc-%E5%91%BD%E4%BB%A4%E8%A1%8C%E9%85%8D%E7%BD%AE"><span class="nav-number">2.3.</span> <span class="nav-text">runc 命令行配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#k8s-%E7%BB%84%E4%BB%B6%E5%AE%89%E8%A3%85"><span class="nav-number">2.4.</span> <span class="nav-text">k8s 组件安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#kubernetes-%E5%88%9D%E5%A7%8B%E5%8C%96"><span class="nav-number">2.5.</span> <span class="nav-text">kubernetes 初始化</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Node-%E8%8A%82%E7%82%B9%E5%AE%89%E8%A3%85"><span class="nav-number">3.</span> <span class="nav-text">Node 节点安装</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%BB%E6%9C%BA%E9%85%8D%E7%BD%AE-1"><span class="nav-number">3.1.</span> <span class="nav-text">主机配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE-containerd-1"><span class="nav-number">3.2.</span> <span class="nav-text">配置 containerd</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#runc-%E5%91%BD%E4%BB%A4%E8%A1%8C%E9%85%8D%E7%BD%AE-1"><span class="nav-number">3.3.</span> <span class="nav-text">runc 命令行配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#k8s-node-%E7%BB%84%E4%BB%B6%E5%AE%89%E8%A3%85"><span class="nav-number">3.4.</span> <span class="nav-text">k8s node 组件安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8A%A0%E5%85%A5%E5%88%B0%E9%9B%86%E7%BE%A4"><span class="nav-number">3.5.</span> <span class="nav-text">加入到集群</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE-K8s-%E5%AE%B9%E5%99%A8%E7%BD%91%E7%BB%9C"><span class="nav-number">4.</span> <span class="nav-text">配置 K8s 容器网络</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE-NFS-%E5%85%B1%E4%BA%AB%E5%AD%98%E5%82%A8"><span class="nav-number">5.</span> <span class="nav-text">配置 NFS 共享存储</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%83%A8%E7%BD%B2-Nginx-%E5%92%8C-MySql"><span class="nav-number">6.</span> <span class="nav-text">部署 Nginx 和 MySql</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Nginx"><span class="nav-number">6.1.</span> <span class="nav-text">Nginx</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MySQL"><span class="nav-number">6.2.</span> <span class="nav-text">MySQL</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="haruki"
+      src="/images/haruki-avatar.jpg">
+  <p class="site-author-name" itemprop="name">haruki</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">24</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">9</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">28</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/newreport" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;newreport" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:haruki959@qq.com" title="E-Mail → mailto:haruki959@qq.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://twitter.com/haruki959" title="Twitter → https:&#x2F;&#x2F;twitter.com&#x2F;haruki959" rel="noopener" target="_blank"><i class="fab fa-twitter fa-fw"></i>Twitter</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://www.yuque.com/newreport" title="YuQue → https:&#x2F;&#x2F;www.yuque.com&#x2F;newreport" rel="noopener" target="_blank"><i class="fab iconfont app-lark_grey fa-fw"></i>YuQue</a>
+      </span>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">haruki</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+      <span class="post-meta-item-text">站点总字数：</span>
+    <span title="站点总字数">17k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">57 分钟</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+&#8195;
+<div class="powered-by">
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <i class="fa fa-user-md"></i>
+    <span id="busuanzi_container_site_uv">
+        本站访客数:<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span id="busuanzi_container_site_pv">
+        本站访问量<span id="busuanzi_value_site_pv"></span>
+    </span>
+</div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+<script>
+if (document.querySelectorAll('pre.mermaid').length) {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/mermaid@8/dist/mermaid.min.js', () => {
+    mermaid.initialize({
+      theme    : 'forest',
+      logLevel : 3,
+      flowchart: { curve     : 'linear' },
+      gantt    : { axisFormat: '%m/%d/%Y' },
+      sequence : { actorMargin: 50 }
+    });
+  }, window.mermaid);
+}
+</script>
+
+
+  
+
+  
+
+</body>
+</html>
