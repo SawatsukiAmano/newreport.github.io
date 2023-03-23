@@ -6,6 +6,7 @@ tags:
  - Python
  - Pip
  - Ubuntu
+ - StableDiffusion
 categories: ai
 ---
 > 环境为 Ubuntu 22.04.1 LTS  
