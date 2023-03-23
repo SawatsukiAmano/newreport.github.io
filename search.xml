@@ -1,6 +1,398 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>WIN NAS 的安装及使用</title>
+    <url>/2023-03-24/windows-server-2022-nas-init/</url>
+    <content><![CDATA[<blockquote>
+<p>本想用 freenas 或者是黑群晖这些基于 linux 的来搭建，但是大部分 nas 系统没有虚拟机，黑裙有但不稳定，白裙那配置和价格，算了算了。  </p>
+</blockquote>
+<blockquote>
+<p>用 pve 或者 exsi 又太重了，我的需求仅仅是下 BT&#x2F;PT 和存储一些项目文件，docker 跑些应用内网穿透出去就可，而且虚拟化平台连接 WiFi 是个问题。  </p>
+</blockquote>
+<blockquote>
+<p>选来选去，看着 b 站知乎一堆推荐如上 NAS 的，自己装了好几个用了下，不太行，最后看见有人推荐 WIN NAS，我也问了下玩 NAS 的朋友，也用的 WIN 做 NAS，遂开装。</p>
+</blockquote>
+<blockquote>
+<p>系统直接选 WIN Server 2022，驱动装好可以连 WIFI，机器直接丢阳台或者隔墙，WIFI6 日常用速度肯定够的，虚拟机有 hyper-v，存储有自带的存储池，可以做 refs（单盘 raid5）或者固态加速机械，组多盘 raid 都没问题，有图形化，这配置单 U 功耗顶天 <strong>100W</strong>，闲时还能接屏幕玩下 101 和雀魂都是没问题的，唯一的缺点就是 docker 用起来麻烦点。</p>
+</blockquote>
+<h1 id="硬件"><a href="#硬件" class="headerlink" title="硬件"></a>硬件</h1><h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><table>
+<thead>
+<tr>
+<th>类型</th>
+<th>名称</th>
+<th>价格</th>
+<th>来源</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>CPU</td>
+<td>5700G 8c16t</td>
+<td>0</td>
+<td>ITX拆机</td>
+</tr>
+<tr>
+<td>散热</td>
+<td>利民AXP120</td>
+<td>0</td>
+<td>ITX拆机</td>
+</tr>
+<tr>
+<td>GPU</td>
+<td>Vega8</td>
+<td>0</td>
+<td>核显</td>
+</tr>
+<tr>
+<td>主板</td>
+<td>华硕 B550m PLUS(WIFI)</td>
+<td>0</td>
+<td>ITX拆机</td>
+</tr>
+<tr>
+<td>内存</td>
+<td>光威16G*4 DDR4 3200</td>
+<td>0</td>
+<td>ITX拆机</td>
+</tr>
+<tr>
+<td>硬盘</td>
+<td>凯侠 RC20</td>
+<td>0</td>
+<td>ITX拆机</td>
+</tr>
+<tr>
+<td>硬盘1</td>
+<td>台电1T</td>
+<td>0</td>
+<td>ITX拆机</td>
+</tr>
+<tr>
+<td>电源</td>
+<td>海韵650W</td>
+<td>0</td>
+<td>另一台拆机</td>
+</tr>
+<tr>
+<td>机箱</td>
+<td>长城阿基米德7B</td>
+<td>360</td>
+<td></td>
+</tr>
+<tr>
+<td>机箱风扇</td>
+<td>id-coolding 14cm</td>
+<td>33</td>
+<td></td>
+</tr>
+<tr>
+<td>合计</td>
+<td>-</td>
+<td>643</td>
+<td></td>
+</tr>
+</tbody></table>
+<h3 id="供电"><a href="#供电" class="headerlink" title="供电"></a>供电</h3><p>硬盘坏的原因无非有三，供电不稳或不足、碰撞震动及 roll 到了<br>机械 18T 单盘峰值可以到 28W，13*30W 算为 390W，CPU 给电 150W，其他给电 50W，650W 在峰值时刚好，日常没这么高<br>然后是噪音，4k 读写 30min，来到了 50 分贝</p>
+<h2 id="容量和速度"><a href="#容量和速度" class="headerlink" title="容量和速度"></a>容量和速度</h2><blockquote>
+<p>机械盘的随机读基本忽略吧，几 MB&#x2F;s 不用测根本不可能跑满接口<br>然后是顺序读写，13 块盘同时读写不可能，虽然硬盘顺序峰值能到 270MB&#x2F;s，但是日常没那么高，这里按照每块盘 100MB&#x2F;s 算，也算是很高的负载了  </p>
+</blockquote>
+<h3 id="PCIE"><a href="#PCIE" class="headerlink" title="PCIE"></a>PCIE</h3><blockquote>
+<p><a href="https://www.asus.com/tw/motherboards-components/motherboards/tuf-gaming/tuf-gaming-b550m-plus-wi-fi/techspec/">主板</a><br>3 个 PCIE 槽，PCIE 4.0*16 和 PCIE 3.0*16（芯片组） 和 PCIE 3.0*1（芯片组），硬件接口分别为 PCIE 16、PCIE 16、PCIE 1 展示<br>2 个 M.2 插槽，PCIE 4.0*4（CPU直连）和 PCIE 3.0*4（芯片组）<br>4 个 SATA 插槽（芯片组）</p>
+</blockquote>
+<blockquote>
+<p><a href="https://www.amd.com/en/product/11171">CPU</a>  有 24 条 PCIE 3.0，第一个 PCIE 占用 16 条，第一个 M.2 占用 4 条，南桥（芯片组）占用 4 条，即</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>PCIE 版本\通道</th>
+<th>x1</th>
+<th>x4</th>
+<th>x8</th>
+<th>x16</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1.0</td>
+<td>250MB&#x2F;s</td>
+<td>1GB&#x2F;s</td>
+<td>2GB&#x2F;s</td>
+<td>4GB&#x2F;s</td>
+</tr>
+<tr>
+<td>2.0</td>
+<td>500MB&#x2F;s</td>
+<td>2GB&#x2F;s</td>
+<td>4GB&#x2F;s</td>
+<td>8GB&#x2F;s</td>
+</tr>
+<tr>
+<td>3.0</td>
+<td>984.6MB&#x2F;s</td>
+<td>3.938GB&#x2F;s</td>
+<td>7.877GB&#x2F;s</td>
+<td>15.754GB&#x2F;s</td>
+</tr>
+<tr>
+<td>4.0</td>
+<td>1.969GB&#x2F;s</td>
+<td>7.877GGB&#x2F;s</td>
+<td>15.754GB&#x2F;s</td>
+<td>31.508GB&#x2F;s</td>
+</tr>
+<tr>
+<td>5.0</td>
+<td>3.9GB&#x2F;s</td>
+<td>15.8GB&#x2F;s</td>
+<td>31.5GB&#x2F;s</td>
+<td>63GB&#x2F;s</td>
+</tr>
+</tbody></table>
+<p>主板直连 PCIE 4.0 *16 和 （M.2）PCIE 4.0 *4  即最大速度约为 <strong>40GB&#x2F;s</strong></p>
+<p>主板南桥 PCIE 3.0 *4，即芯片组的最大速度约为 <strong>4GB&#x2F;s</strong></p>
+<p>CPU的 PCIE 3.0 *24 最大速度约为 <strong>24GB&#x2F;s</strong></p>
+<p>机械盘速度目前顺序读能到 100MB&#x2F;s，最大不会超过 250MB&#x2F;s，4k 随机速度可以忽略，所以南桥扩展 sata 给机械盘就够用了，日常根本不会跑满</p>
+<h3 id="机箱"><a href="#机箱" class="headerlink" title="机箱"></a><a href="https://item.jd.com/100022763272.html#product-detail">机箱</a></h3><p>支持 13 个 3.5 盘，2 个 2.5 盘位。最大容量为 248T + 6T  </p>
+<p>机械硬盘（单价1200） 二手企业级机械算 13*18T&#x3D;<strong>234T（100MB&#x2F;s）</strong>  </p>
+<p>sata 固态（单价800） 固态 2*3T&#x3D;<strong>6T(500MB&#x2F;s)</strong></p>
+<span id="more"></span>
+<h3 id="主板"><a href="#主板" class="headerlink" title="主板"></a><a href="https://www.asus.com/tw/motherboards-components/motherboards/tuf-gaming/tuf-gaming-b550m-plus-wi-fi/techspec/">主板</a></h3><ul>
+<li><p>直连CPU 15GB&#x2F;s(CPU阈值 24GB&#x2F;s)</p>
+<ul>
+<li>M.2_1（PCIE 4.0x4）：凯侠 RC20 <strong>1T（3GB&#x2F;s）</strong> ，系统盘</li>
+<li>PCIE_1（PCIE 4.0x16）：<a href="https://item.jd.com/10021208284029.html">扩展卡</a> 拆分为 PCIE 3.0(3GB&#x2F;s) *4 的 4 个 2T 的 3.0 M.2 硬盘，即 <strong>8T（12G&#x2F;s）</strong></li>
+</ul>
+</li>
+<li><p>南桥 234T  合计峰值 3 GB&#x2F;s (芯片组阈值 4GB&#x2F;s）</p>
+<ul>
+<li>M.2_2：台电 **1T（2GB&#x2F;s)**，每天为系统盘做备份，磁盘忽略</li>
+<li>PCIE_2（PCIE 3.0x4）：9271 8i 阵列卡 + 扩展卡 82885t<ul>
+<li>13*18T&#x3D;<strong>180T（1.3GB&#x2F;s）</strong>，即单口 750MB&#x2F;s，总共 2.5GB&#x2F;s，对于机械盘完全够用，机械顺序跑满按 150MB&#x2F;s，13 盘才 2GB&#x2F;s</li>
+</ul>
+</li>
+<li>主板 sata：4 口 6Gb&#x2F;s 接口，即和扩展卡一样<ul>
+<li>2 sata 固态 6T <strong>（1GB&#x2F;s）</strong></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="硬盘分配"><a href="#硬盘分配" class="headerlink" title="硬盘分配"></a>硬盘分配</h2><blockquote>
+<p>使用 9271 8i 阵列卡接入南桥，使用 82885t 作为扩展卡，机械盘以 250MB&#x2F;s 计算，固态以 3GB&#x2F;s 计算</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>存储池</th>
+<th>硬件</th>
+<th>容量</th>
+<th>速度</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>系统盘</td>
+<td>凯侠 RC20</td>
+<td>1T</td>
+<td>3GB&#x2F;s</td>
+<td>软件默认装系统盘</td>
+</tr>
+<tr>
+<td>系统盘备份</td>
+<td>台电</td>
+<td>1T</td>
+<td>2GB&#x2F;s（日常 0）</td>
+<td>每日备份</td>
+</tr>
+<tr>
+<td>软存储池1</td>
+<td>2T*2 的 PCIE 3.0 固态</td>
+<td>4T</td>
+<td>6GB&#x2F;s</td>
+<td>开发测试环境数据</td>
+</tr>
+<tr>
+<td>软硬存储池1</td>
+<td>2T<em>2 的 3.0 固态 + 18T</em>4（硬raid10） 的机械分层储池</td>
+<td>36T</td>
+<td>6GB&#x2F;s~0.5GB&#x2F;s</td>
+<td>生产环境数据</td>
+</tr>
+<tr>
+<td>硬存储池1</td>
+<td>18T*4(3+1)&#x3D;54T 的机械盘硬 raid5</td>
+<td>54T</td>
+<td>750MB&#x2F;s</td>
+<td>nas-tools 影视库</td>
+</tr>
+<tr>
+<td>硬存储池2</td>
+<td>18T*4(3+1)&#x3D;54T 的机械盘硬 raid5</td>
+<td>54T</td>
+<td>750MB&#x2F;s</td>
+<td>内网共享文件</td>
+</tr>
+<tr>
+<td>裸盘机械1</td>
+<td>NTFS</td>
+<td>18T</td>
+<td>250MB&#x2F;s</td>
+<td>游戏冷备</td>
+</tr>
+<tr>
+<td>裸盘sata固态1</td>
+<td>NTFS</td>
+<td>3T</td>
+<td>500MB&#x2F;s</td>
+<td>游戏</td>
+</tr>
+<tr>
+<td>裸盘sata固态2</td>
+<td>NTS</td>
+<td>3T</td>
+<td>500MB&#x2F;s</td>
+<td>其他文件</td>
+</tr>
+</tbody></table>
+<h1 id="系统安装"><a href="#系统安装" class="headerlink" title="系统安装"></a>系统安装</h1><p><a href="https://www.microsoft.com/zh-cn/evalcenter/download-windows-server-2022">Windows Server DataCenter 2022</a></p>
+<p><a href="https://rufus.ie/">写盘工具</a></p>
+<blockquote>
+<p>开机自启路径</p>
+</blockquote>
+<figure class="highlight dos"><table><tr><td class="code"><pre><span class="line"><span class="function">C:\<span class="title">ProgramData</span>\<span class="title">Microsoft</span>\<span class="title">Windows</span>\<span class="title">Start</span> <span class="title">Menu</span>\<span class="title">Programs</span>\<span class="title">Startup</span></span></span><br></pre></td></tr></table></figure>
+
+<h2 id="内网穿透"><a href="#内网穿透" class="headerlink" title="内网穿透"></a>内网穿透</h2><p><a href="https://github.com/ehang-io/nps/releases">nps</a></p>
+<p>新建 bat，然后快捷方式丢到开机路径里</p>
+<h2 id="开机自动登录"><a href="#开机自动登录" class="headerlink" title="开机自动登录"></a>开机自动登录</h2><blockquote>
+<p>win+r 运行 regedit 注册表</p>
+</blockquote>
+<figure class="highlight dos"><table><tr><td class="code"><pre><span class="line">计算机\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\PasswordLess\Device</span><br></pre></td></tr></table></figure>
+<p>DevicePasswordLessBuildVersion改为 0</p>
+<blockquote>
+<p>win+r 运行 netplwiz，取消掉必须输入选框</p>
+</blockquote>
+<h2 id="WSL2"><a href="#WSL2" class="headerlink" title="WSL2"></a>WSL2</h2><p>在服务器管理里添加角色和功能里打开 hyper-v，然后在命令行输入 wsl –install，之后重启，重启完继续 wsl –install，然后 wsl -l -v 查看版本为 2 即安装成功</p>
+<h1 id="应用"><a href="#应用" class="headerlink" title="应用"></a>应用</h1><h2 id="应用程序"><a href="#应用程序" class="headerlink" title="应用程序"></a>应用程序</h2><table>
+<thead>
+<tr>
+<th>名称</th>
+<th>功能</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><a href="https://www.7-zip.org/">7z</a></td>
+<td>解压压缩</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.docker.com/get-docker/">Docker</a></td>
+<td>容器服务</td>
+<td>务必装好 WSL2</td>
+</tr>
+<tr>
+<td><a href="https://www.todesk.com/download.html">Todesk</a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Clash</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/icsharpcode/ILSpy/releases">ILSpy</a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://visualstudio.microsoft.com/">VS</a></td>
+<td>.NET、C#、C++ 全家桶</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://code.visualstudio.com/Download">VS Code</a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://www.postman.com/">Postmam</a></td>
+<td>api、grpc、socket、mq调试</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://mqttx.app/">MQTT X</a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/qishibo/AnotherRedisDesktopManager/releases">AnotherRedisDesktopManager</a></td>
+<td>redis GUI</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://navicat.com/">Navicat</a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://www.jetbrains.com/go/">Goland</a></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h2 id="Docker-服务"><a href="#Docker-服务" class="headerlink" title="Docker 服务"></a>Docker 服务</h2><table>
+<thead>
+<tr>
+<th>名称</th>
+<th>功能</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>MySQL</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Redis</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>MongDB</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>RabbitMQ</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Superset</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Nginx Proxy Manager</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Portainer</td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h2 id="VS-Code-插件"><a href="#VS-Code-插件" class="headerlink" title="VS Code 插件"></a>VS Code 插件</h2>]]></content>
+      <categories>
+        <category>timeline</category>
+      </categories>
+      <tags>
+        <tag>NAS</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Ubuntu 下 N 卡安装原生  Stable Diffusion Webui 进行 AI 绘画</title>
     <url>/2023-03-21/ubuntu-nvidia-install-stable-diffusion-webui/</url>
     <content><![CDATA[<p>在腾讯云 T4 和 Autodl 3090 上测试通过，请手动复制粘贴按顺序执行即可</p>
@@ -83,7 +475,7 @@
       </tags>
   </entry>
   <entry>
-    <title>AMD（A卡）AI 绘画安装stable diffusion webui</title>
+    <title>A卡 安装 Stable Diffusion Webui 进行 AI 绘画</title>
     <url>/2023-02-10/amdgpu-install-stable-diffusion-webui/</url>
     <content><![CDATA[<blockquote>
 <p>环境为 Ubuntu 22.04.1 LTS<br>注：不要买 A 卡，会变得不幸</p>

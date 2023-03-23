@@ -6,7 +6,7 @@
   <link href="https://newreport.top/atom.xml" rel="self"/>
   
   <link href="https://newreport.top/"/>
-  <updated>2023-03-23T02:47:30.197Z</updated>
+  <updated>2023-03-23T18:37:17.047Z</updated>
   <id>https://newreport.top/</id>
   
   <author>
@@ -15,6 +15,175 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>WIN NAS 的安装及使用</title>
+    <link href="https://newreport.top/2023-03-24/windows-server-2022-nas-init/"/>
+    <id>https://newreport.top/2023-03-24/windows-server-2022-nas-init/</id>
+    <published>2023-03-24T00:00:00.000Z</published>
+    <updated>2023-03-23T18:37:17.047Z</updated>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;本想用 freenas 或者是黑群晖这些基于 linux 的来搭建，但是大部分 nas 系统没有虚拟机，黑裙有但不稳定，白裙那配置和价格，算了算了。  &lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;用 pve 或者 exsi 又太重了，我的需求仅仅是下 BT&amp;#x2F;PT 和存储一些项目文件，docker 跑些应用内网穿透出去就可，而且虚拟化平台连接 WiFi 是个问题。  &lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;选来选去，看着 b 站知乎一堆推荐如上 NAS 的，自己装了好几个用了下，不太行，最后看见有人推荐 WIN NAS，我也问了下玩 NAS 的朋友，也用的 WIN 做 NAS，遂开装。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;系统直接选 WIN Server 2022，驱动装好可以连 WIFI，机器直接丢阳台或者隔墙，WIFI6 日常用速度肯定够的，虚拟机有 hyper-v，存储有自带的存储池，可以做 refs（单盘 raid5）或者固态加速机械，组多盘 raid 都没问题，有图形化，这配置单 U 功耗顶天 &lt;strong&gt;100W&lt;/strong&gt;，闲时还能接屏幕玩下 101 和雀魂都是没问题的，唯一的缺点就是 docker 用起来麻烦点。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&quot;硬件&quot;&gt;&lt;a href=&quot;#硬件&quot; class=&quot;headerlink&quot; title=&quot;硬件&quot;&gt;&lt;/a&gt;硬件&lt;/h1&gt;&lt;h2 id=&quot;配置&quot;&gt;&lt;a href=&quot;#配置&quot; class=&quot;headerlink&quot; title=&quot;配置&quot;&gt;&lt;/a&gt;配置&lt;/h2&gt;&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;类型&lt;/th&gt;
+&lt;th&gt;名称&lt;/th&gt;
+&lt;th&gt;价格&lt;/th&gt;
+&lt;th&gt;来源&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;&lt;tr&gt;
+&lt;td&gt;CPU&lt;/td&gt;
+&lt;td&gt;5700G 8c16t&lt;/td&gt;
+&lt;td&gt;0&lt;/td&gt;
+&lt;td&gt;ITX拆机&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;散热&lt;/td&gt;
+&lt;td&gt;利民AXP120&lt;/td&gt;
+&lt;td&gt;0&lt;/td&gt;
+&lt;td&gt;ITX拆机&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;GPU&lt;/td&gt;
+&lt;td&gt;Vega8&lt;/td&gt;
+&lt;td&gt;0&lt;/td&gt;
+&lt;td&gt;核显&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;主板&lt;/td&gt;
+&lt;td&gt;华硕 B550m PLUS(WIFI)&lt;/td&gt;
+&lt;td&gt;0&lt;/td&gt;
+&lt;td&gt;ITX拆机&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;内存&lt;/td&gt;
+&lt;td&gt;光威16G*4 DDR4 3200&lt;/td&gt;
+&lt;td&gt;0&lt;/td&gt;
+&lt;td&gt;ITX拆机&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;硬盘&lt;/td&gt;
+&lt;td&gt;凯侠 RC20&lt;/td&gt;
+&lt;td&gt;0&lt;/td&gt;
+&lt;td&gt;ITX拆机&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;硬盘1&lt;/td&gt;
+&lt;td&gt;台电1T&lt;/td&gt;
+&lt;td&gt;0&lt;/td&gt;
+&lt;td&gt;ITX拆机&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;电源&lt;/td&gt;
+&lt;td&gt;海韵650W&lt;/td&gt;
+&lt;td&gt;0&lt;/td&gt;
+&lt;td&gt;另一台拆机&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;机箱&lt;/td&gt;
+&lt;td&gt;长城阿基米德7B&lt;/td&gt;
+&lt;td&gt;360&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;机箱风扇&lt;/td&gt;
+&lt;td&gt;id-coolding 14cm&lt;/td&gt;
+&lt;td&gt;33&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;合计&lt;/td&gt;
+&lt;td&gt;-&lt;/td&gt;
+&lt;td&gt;643&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;&lt;/table&gt;
+&lt;h3 id=&quot;供电&quot;&gt;&lt;a href=&quot;#供电&quot; class=&quot;headerlink&quot; title=&quot;供电&quot;&gt;&lt;/a&gt;供电&lt;/h3&gt;&lt;p&gt;硬盘坏的原因无非有三，供电不稳或不足、碰撞震动及 roll 到了&lt;br&gt;机械 18T 单盘峰值可以到 28W，13*30W 算为 390W，CPU 给电 150W，其他给电 50W，650W 在峰值时刚好，日常没这么高&lt;br&gt;然后是噪音，4k 读写 30min，来到了 50 分贝&lt;/p&gt;
+&lt;h2 id=&quot;容量和速度&quot;&gt;&lt;a href=&quot;#容量和速度&quot; class=&quot;headerlink&quot; title=&quot;容量和速度&quot;&gt;&lt;/a&gt;容量和速度&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;机械盘的随机读基本忽略吧，几 MB&amp;#x2F;s 不用测根本不可能跑满接口&lt;br&gt;然后是顺序读写，13 块盘同时读写不可能，虽然硬盘顺序峰值能到 270MB&amp;#x2F;s，但是日常没那么高，这里按照每块盘 100MB&amp;#x2F;s 算，也算是很高的负载了  &lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&quot;PCIE&quot;&gt;&lt;a href=&quot;#PCIE&quot; class=&quot;headerlink&quot; title=&quot;PCIE&quot;&gt;&lt;/a&gt;PCIE&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.asus.com/tw/motherboards-components/motherboards/tuf-gaming/tuf-gaming-b550m-plus-wi-fi/techspec/&quot;&gt;主板&lt;/a&gt;&lt;br&gt;3 个 PCIE 槽，PCIE 4.0*16 和 PCIE 3.0*16（芯片组） 和 PCIE 3.0*1（芯片组），硬件接口分别为 PCIE 16、PCIE 16、PCIE 1 展示&lt;br&gt;2 个 M.2 插槽，PCIE 4.0*4（CPU直连）和 PCIE 3.0*4（芯片组）&lt;br&gt;4 个 SATA 插槽（芯片组）&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.amd.com/en/product/11171&quot;&gt;CPU&lt;/a&gt;  有 24 条 PCIE 3.0，第一个 PCIE 占用 16 条，第一个 M.2 占用 4 条，南桥（芯片组）占用 4 条，即&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;PCIE 版本\通道&lt;/th&gt;
+&lt;th&gt;x1&lt;/th&gt;
+&lt;th&gt;x4&lt;/th&gt;
+&lt;th&gt;x8&lt;/th&gt;
+&lt;th&gt;x16&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;&lt;tr&gt;
+&lt;td&gt;1.0&lt;/td&gt;
+&lt;td&gt;250MB&amp;#x2F;s&lt;/td&gt;
+&lt;td&gt;1GB&amp;#x2F;s&lt;/td&gt;
+&lt;td&gt;2GB&amp;#x2F;s&lt;/td&gt;
+&lt;td&gt;4GB&amp;#x2F;s&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;2.0&lt;/td&gt;
+&lt;td&gt;500MB&amp;#x2F;s&lt;/td&gt;
+&lt;td&gt;2GB&amp;#x2F;s&lt;/td&gt;
+&lt;td&gt;4GB&amp;#x2F;s&lt;/td&gt;
+&lt;td&gt;8GB&amp;#x2F;s&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;3.0&lt;/td&gt;
+&lt;td&gt;984.6MB&amp;#x2F;s&lt;/td&gt;
+&lt;td&gt;3.938GB&amp;#x2F;s&lt;/td&gt;
+&lt;td&gt;7.877GB&amp;#x2F;s&lt;/td&gt;
+&lt;td&gt;15.754GB&amp;#x2F;s&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;4.0&lt;/td&gt;
+&lt;td&gt;1.969GB&amp;#x2F;s&lt;/td&gt;
+&lt;td&gt;7.877GGB&amp;#x2F;s&lt;/td&gt;
+&lt;td&gt;15.754GB&amp;#x2F;s&lt;/td&gt;
+&lt;td&gt;31.508GB&amp;#x2F;s&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;5.0&lt;/td&gt;
+&lt;td&gt;3.9GB&amp;#x2F;s&lt;/td&gt;
+&lt;td&gt;15.8GB&amp;#x2F;s&lt;/td&gt;
+&lt;td&gt;31.5GB&amp;#x2F;s&lt;/td&gt;
+&lt;td&gt;63GB&amp;#x2F;s&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;&lt;/table&gt;
+&lt;p&gt;主板直连 PCIE 4.0 *16 和 （M.2）PCIE 4.0 *4  即最大速度约为 &lt;strong&gt;40GB&amp;#x2F;s&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;主板南桥 PCIE 3.0 *4，即芯片组的最大速度约为 &lt;strong&gt;4GB&amp;#x2F;s&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;CPU的 PCIE 3.0 *24 最大速度约为 &lt;strong&gt;24GB&amp;#x2F;s&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;机械盘速度目前顺序读能到 100MB&amp;#x2F;s，最大不会超过 250MB&amp;#x2F;s，4k 随机速度可以忽略，所以南桥扩展 sata 给机械盘就够用了，日常根本不会跑满&lt;/p&gt;
+&lt;h3 id=&quot;机箱&quot;&gt;&lt;a href=&quot;#机箱&quot; class=&quot;headerlink&quot; title=&quot;机箱&quot;&gt;&lt;/a&gt;&lt;a href=&quot;https://item.jd.com/100022763272.html#product-detail&quot;&gt;机箱&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;支持 13 个 3.5 盘，2 个 2.5 盘位。最大容量为 248T + 6T  &lt;/p&gt;
+&lt;p&gt;机械硬盘（单价1200） 二手企业级机械算 13*18T&amp;#x3D;&lt;strong&gt;234T（100MB&amp;#x2F;s）&lt;/strong&gt;  &lt;/p&gt;
+&lt;p&gt;sata 固态（单价800） 固态 2*3T&amp;#x3D;&lt;strong&gt;6T(500MB&amp;#x2F;s)&lt;/strong&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="timeline" scheme="https://newreport.top/categories/timeline/"/>
+    
+    
+    <category term="NAS" scheme="https://newreport.top/tags/NAS/"/>
+    
+  </entry>
   
   <entry>
     <title>Ubuntu 下 N 卡安装原生  Stable Diffusion Webui 进行 AI 绘画</title>
@@ -93,11 +262,11 @@
   </entry>
   
   <entry>
-    <title>AMD（A卡）AI 绘画安装stable diffusion webui</title>
+    <title>A卡 安装 Stable Diffusion Webui 进行 AI 绘画</title>
     <link href="https://newreport.top/2023-02-10/amdgpu-install-stable-diffusion-webui/"/>
     <id>https://newreport.top/2023-02-10/amdgpu-install-stable-diffusion-webui/</id>
     <published>2023-02-10T00:00:00.000Z</published>
-    <updated>2023-03-21T08:46:04.324Z</updated>
+    <updated>2023-03-23T02:50:59.107Z</updated>
     
     
       
@@ -507,57 +676,6 @@
     <category term="Domain" scheme="https://newreport.top/tags/Domain/"/>
     
     <category term="Git Page" scheme="https://newreport.top/tags/Git-Page/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>了解文件系统的和基本操作</title>
-    <link href="https://newreport.top/2021-01-04/understand-the-file-system-and-basic-operations/"/>
-    <id>https://newreport.top/2021-01-04/understand-the-file-system-and-basic-operations/</id>
-    <published>2021-01-04T00:00:00.000Z</published>
-    <updated>2023-03-21T08:37:14.833Z</updated>
-    
-    
-    <summary type="html">&lt;h1 id=&quot;学习目标&quot;&gt;&lt;a href=&quot;#学习目标&quot; class=&quot;headerlink&quot; title=&quot;学习目标&quot;&gt;&lt;/a&gt;学习目标&lt;/h1&gt;&lt;ul&gt;
-&lt;li&gt;描述分件系统重要的组成部分&lt;/li&gt;
-&lt;li&gt;复制，移动和删除文件&lt;/li&gt;
-&lt;li&gt;创建文件和文件夹&lt;/li&gt;
-&lt;li&gt;了解时间戳的概念&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h1 id=&quot;Linux文件系统的组成&quot;&gt;&lt;a href=&quot;#Linux文件系统的组成&quot; class=&quot;headerlink&quot; title=&quot;Linux文件系统的组成&quot;&gt;&lt;/a&gt;Linux文件系统的组成&lt;/h1&gt;&lt;p&gt;整个文件系统由 分区–目录 对接&lt;br&gt;文件都是从根开始的，无论文件在哪个分区，都可以通过根访问到  &lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;文件和目录构成单根的倒树状结构&lt;/li&gt;
-&lt;li&gt;文件系统从根目录开始，表示为一个单独的’&amp;#x2F;’(斜线)字符&lt;/li&gt;
-&lt;li&gt;命名大小写敏感&lt;/li&gt;
-&lt;li&gt;路径以’&amp;#x2F;’为分隔&lt;/li&gt;
-&lt;/ul&gt;
-&lt;pre class=&quot;mermaid&quot;&gt;	graph TD
-    A(/)--&gt;B1(bin)
-    A--&gt;B2(boot)
-    A--&gt;B3(dev)
-    A--&gt;B4(etc)
-    A--&gt;B5(home)
-        B5--&gt;D1(alice)
-        B5--&gt;D2(bob)
-        B5--&gt;D3(eve)
-    A--&gt;B6(root)
-    A--&gt;B7(run)
-    A--&gt;B8(sbin)
-    A--&gt;B9(tmp)
-    A--&gt;B10(usr)
-        B10--&gt;D4(bin)
-        B10--&gt;D5(local)
-        B10--&gt;D6(sbin)
-        B10--&gt;D7(tmp)		
-    A--&gt;B11(var)
-        B11--&gt;D8(tmp)&lt;/pre&gt;</summary>
-    
-    
-    
-    <category term="linux" scheme="https://newreport.top/categories/linux/"/>
-    
-    <category term="rhel8手册" scheme="https://newreport.top/categories/linux/rhel8%E6%89%8B%E5%86%8C/"/>
-    
     
   </entry>
   

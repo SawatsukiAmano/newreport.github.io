@@ -1,5 +1,6 @@
-https://newreport.top/2023-03-21/ubuntu-nvidia-install-stable-diffusion-webui/
+https://newreport.top/2023-03-24/windows-server-2022-nas-init/
 https://newreport.top/2023-02-10/amdgpu-install-stable-diffusion-webui/
+https://newreport.top/2023-03-21/ubuntu-nvidia-install-stable-diffusion-webui/
 https://newreport.top/categories/index.html
 https://newreport.top/links/index.html
 https://newreport.top/tags/index.html
@@ -56,6 +57,7 @@ https://newreport.top/tags/Git-Page/
 https://newreport.top/tags/CloudService/
 https://newreport.top/tags/Object-Storage/
 https://newreport.top/tags/Http/
+https://newreport.top/tags/NAS/
 https://newreport.top/categories/ai/
 https://newreport.top/categories/c/
 https://newreport.top/categories/golang/
