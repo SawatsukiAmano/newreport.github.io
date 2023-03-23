@@ -849,7 +849,7 @@ hexo-word-counter@^0.1.0:
 
 hexo@^7.0.0-rc1:
   version "7.0.0-rc1"
-  resolved "https://registry.yarnpkg.com/hexo/-/hexo-7.0.0-rc1.tgz#0ba887977a55304b877bba06871e80b2391b61c2"
+  resolved "https://registry.npmmirror.com/hexo/-/hexo-7.0.0-rc1.tgz#0ba887977a55304b877bba06871e80b2391b61c2"
   integrity sha512-dCjoiNKEsAdBvxSWGKb0rv+E9cCumc/FpxQ9DhYWqKFZ7hHyxGBZuaTGaaXoV9rbsHTAdPoTLyfYYWqPHLDmwQ==
   dependencies:
     abbrev "^2.0.0"
