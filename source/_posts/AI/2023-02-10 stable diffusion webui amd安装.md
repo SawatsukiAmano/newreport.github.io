@@ -1,5 +1,5 @@
 ---
-title: AMD（A卡）AI 绘画安装stable diffusion webui
+title: A卡 安装 Stable Diffusion Webui 进行 AI 绘画
 date: 2023-02-10 00:00:00
 urlname: amdgpu-install-stable-diffusion-webui 
 tags: 
