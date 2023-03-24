@@ -28,13 +28,13 @@
 <td>CPU</td>
 <td>5700G 8c16t</td>
 <td>0</td>
-<td>ITX拆机</td>
+<td>ITX 拆机</td>
 </tr>
 <tr>
 <td>散热</td>
-<td>利民AXP120</td>
+<td>利民 AXP120</td>
 <td>0</td>
-<td>ITX拆机</td>
+<td>ITX 拆机</td>
 </tr>
 <tr>
 <td>GPU</td>
@@ -46,35 +46,35 @@
 <td>主板</td>
 <td>华硕 B550m PLUS(WIFI)</td>
 <td>0</td>
-<td>ITX拆机</td>
+<td>ITX 拆机</td>
 </tr>
 <tr>
 <td>内存</td>
-<td>光威16G*4 DDR4 3200</td>
+<td>光威 16G*4 DDR4 3200</td>
 <td>0</td>
-<td>ITX拆机</td>
+<td>ITX 拆机</td>
 </tr>
 <tr>
 <td>硬盘</td>
 <td>凯侠 RC20</td>
 <td>0</td>
-<td>ITX拆机</td>
+<td>ITX 拆机</td>
 </tr>
 <tr>
-<td>硬盘1</td>
-<td>台电1T</td>
+<td>硬盘 1</td>
+<td>台电 1T</td>
 <td>0</td>
-<td>ITX拆机</td>
+<td>ITX 拆机</td>
 </tr>
 <tr>
 <td>电源</td>
-<td>海韵650W</td>
+<td>海韵 650W</td>
 <td>0</td>
 <td>另一台拆机</td>
 </tr>
 <tr>
 <td>机箱</td>
-<td>长城阿基米德7B</td>
+<td>长城阿基米德 7B</td>
 <td>360</td>
 <td></td>
 </tr>
@@ -98,7 +98,7 @@
 <p>机械盘的随机读基本忽略吧，几 MB&#x2F;s 不用测根本不可能跑满接口<br>然后是顺序读写，13 块盘同时读写不可能，虽然硬盘顺序峰值能到 270MB&#x2F;s，但是日常没那么高，这里按照每块盘 100MB&#x2F;s 算，也算是很高的负载了  </p>
 </blockquote>
 <h3 id="PCIE"><a href="#PCIE" class="headerlink" title="PCIE"></a>PCIE</h3><blockquote>
-<p><a href="https://www.asus.com/tw/motherboards-components/motherboards/tuf-gaming/tuf-gaming-b550m-plus-wi-fi/techspec/">主板</a><br>3 个 PCIE 槽，PCIE 4.0*16 和 PCIE 3.0*16（芯片组） 和 PCIE 3.0*1（芯片组），硬件接口分别为 PCIE 16、PCIE 16、PCIE 1 展示<br>2 个 M.2 插槽，PCIE 4.0*4（CPU直连）和 PCIE 3.0*4（芯片组）<br>4 个 SATA 插槽（芯片组）</p>
+<p><a href="https://www.asus.com/tw/motherboards-components/motherboards/tuf-gaming/tuf-gaming-b550m-plus-wi-fi/techspec/">主板</a><br>3 个 PCIE 槽，PCIE 4.0*16 和 PCIE 3.0*16（芯片组） 和 PCIE 3.0*1（芯片组），硬件接口分别为 PCIE 16、PCIE 16、PCIE 1 展示<br>2 个 M.2 插槽，PCIE 4.0<em>4（CPU 直连）和 PCIE 3.0</em>4（芯片组）<br>4 个 SATA 插槽（芯片组）</p>
 </blockquote>
 <blockquote>
 <p><a href="https://www.amd.com/en/product/11171">CPU</a>  有 24 条 PCIE 3.0，第一个 PCIE 占用 16 条，第一个 M.2 占用 4 条，南桥（芯片组）占用 4 条，即</p>
@@ -151,13 +151,13 @@
 </tbody></table>
 <p>主板直连 PCIE 4.0 *16 和 （M.2）PCIE 4.0 *4  即最大速度约为 <strong>40GB&#x2F;s</strong></p>
 <p>主板南桥 PCIE 3.0 *4，即芯片组的最大速度约为 <strong>4GB&#x2F;s</strong></p>
-<p>CPU的 PCIE 3.0 *24 最大速度约为 <strong>24GB&#x2F;s</strong></p>
+<p>CPU 的 PCIE 3.0 *24 最大速度约为 <strong>24GB&#x2F;s</strong></p>
 <p>机械盘速度目前顺序读能到 100MB&#x2F;s，最大不会超过 250MB&#x2F;s，4k 随机速度可以忽略，所以南桥扩展 sata 给机械盘就够用了，日常根本不会跑满</p>
 <h3 id="机箱"><a href="#机箱" class="headerlink" title="机箱"></a><a href="https://item.jd.com/100022763272.html#product-detail">机箱</a></h3><p>支持 13 个 3.5 盘，2 个 2.5 盘位。最大容量为 60T + 6T  </p>
-<p>机械硬盘（单价1600） 二手企业级目前最大的机械按 20T 算， 13*20T&#x3D;<strong>2604T（270MB&#x2F;s）</strong>  如果阵列卡做存储池合计速度为 13*270MB&#x2F;s &#x3D;3.5GB&#x2F;s</p>
-<p>sata 固态（单价800） 固态 2*3T&#x3D;<strong>6T(500MB&#x2F;s)</strong></p>
+<p>机械硬盘（单价 1600） 二手企业级目前最大的机械按 20T 算， 13*20T&#x3D;<strong>2604T（270MB&#x2F;s）</strong>  如果阵列卡做存储池合计速度为 13*270MB&#x2F;s &#x3D;3.5GB&#x2F;s</p>
+<p>sata 固态（单价 800） 固态 2*3T&#x3D;<strong>6T(500MB&#x2F;s)</strong></p>
 <h3 id="主板"><a href="#主板" class="headerlink" title="主板"></a><a href="https://www.asus.com/tw/motherboards-components/motherboards/tuf-gaming/tuf-gaming-b550m-plus-wi-fi/techspec/">主板</a></h3><ul>
-<li><p>直连CPU 15GB&#x2F;s(CPU阈值 24GB&#x2F;s)</p>
+<li><p>直连 CPU 15GB&#x2F;s(CPU 阈值 24GB&#x2F;s)</p>
 <ul>
 <li>M.2_1（PCIE 4.0x4）：凯侠 RC20 <strong>1T（3GB&#x2F;s）</strong> ，系统盘</li>
 <li>PCIE_1（PCIE 4.0x16）：<a href="https://item.jd.com/10021208284029.html">扩展卡</a> 拆分为 PCIE 3.0(3GB&#x2F;s) *4 的 4 个 2T 的 3.0 M.2 硬盘，即 <strong>8T（12G&#x2F;s）</strong></li>
@@ -205,49 +205,49 @@
 <td>每日备份</td>
 </tr>
 <tr>
-<td>软存储池1</td>
+<td>软存储池 1</td>
 <td>2T*2 的 PCIE 3.0 固态</td>
 <td>4T</td>
 <td>6GB&#x2F;s</td>
 <td>开发测试环境数据</td>
 </tr>
 <tr>
-<td>软硬存储池1</td>
-<td>2T<em>2 的 3.0 固态 + 14T</em>4（硬raid10） 的机械分层储池</td>
+<td>软硬存储池 1</td>
+<td>2T<em>2 的 3.0 固态 + 14T</em>4（硬 raid10） 的机械分层储池</td>
 <td>28T</td>
 <td>6GB&#x2F;s~0.5GB&#x2F;s</td>
 <td>生产环境数据</td>
 </tr>
 <tr>
-<td>硬存储池1</td>
+<td>硬存储池 1</td>
 <td>14T*4(3+1)&#x3D;42T 的机械盘硬 raid5</td>
 <td>42T</td>
 <td>750MB&#x2F;s</td>
 <td>nas-tools 影视库</td>
 </tr>
 <tr>
-<td>硬存储池2</td>
+<td>硬存储池 2</td>
 <td>14T*4(3+1)&#x3D;42T 的机械盘硬 raid5</td>
 <td>42T</td>
 <td>750MB&#x2F;s</td>
 <td>内网共享文件</td>
 </tr>
 <tr>
-<td>裸盘机械1</td>
+<td>裸盘机械 1</td>
 <td>NTFS</td>
 <td>14T</td>
 <td>250MB&#x2F;s</td>
-<td>游戏冷备&amp;AI图库</td>
+<td>游戏冷备&amp;AI 图库</td>
 </tr>
 <tr>
-<td>裸盘sata固态1</td>
+<td>裸盘 sata 固态 1</td>
 <td>NTFS</td>
 <td>3T</td>
 <td>500MB&#x2F;s</td>
 <td>游戏</td>
 </tr>
 <tr>
-<td>裸盘sata固态2</td>
+<td>裸盘 sata 固态 2</td>
 <td>NTS</td>
 <td>3T</td>
 <td>500MB&#x2F;s</td>
@@ -260,14 +260,14 @@
 <p>开机自启路径</p>
 </blockquote>
 <figure class="highlight dos"><table><tr><td class="code"><pre><span class="line"><span class="function">C:\<span class="title">ProgramData</span>\<span class="title">Microsoft</span>\<span class="title">Windows</span>\<span class="title">Start</span> <span class="title">Menu</span>\<span class="title">Programs</span>\<span class="title">Startup</span></span></span><br></pre></td></tr></table></figure>
-<h2 id="Intel驱动"><a href="#Intel驱动" class="headerlink" title="Intel驱动"></a>Intel驱动</h2><p><a href="https://www.intel.com/content/www/us/en/support/detect.html">https://www.intel.com/content/www/us/en/support/detect.html</a></p>
+<h2 id="Intel-驱动"><a href="#Intel-驱动" class="headerlink" title="Intel 驱动"></a>Intel 驱动</h2><p><a href="https://www.intel.com/content/www/us/en/support/detect.html">https://www.intel.com/content/www/us/en/support/detect.html</a></p>
 <h2 id="内网穿透"><a href="#内网穿透" class="headerlink" title="内网穿透"></a>内网穿透</h2><p><a href="https://github.com/ehang-io/nps/releases">nps</a></p>
 <p>新建 bat，然后快捷方式丢到开机路径里</p>
 <h2 id="开机自动登录"><a href="#开机自动登录" class="headerlink" title="开机自动登录"></a>开机自动登录</h2><blockquote>
 <p>win+r 运行 regedit 注册表</p>
 </blockquote>
 <figure class="highlight dos"><table><tr><td class="code"><pre><span class="line">计算机\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\PasswordLess\Device</span><br></pre></td></tr></table></figure>
-<p>DevicePasswordLessBuildVersion改为 0</p>
+<p>DevicePasswordLessBuildVersion 改为 0</p>
 <blockquote>
 <p>win+r 运行 netplwiz，取消掉必须输入选框</p>
 </blockquote>
@@ -362,7 +362,7 @@
 </tr>
 <tr>
 <td><a href="https://www.postman.com/">Postmam</a></td>
-<td>api、grpc、socket、mq调试</td>
+<td>api、grpc、socket、mq 调试</td>
 <td></td>
 </tr>
 <tr>
@@ -396,7 +396,7 @@
 <td></td>
 </tr>
 <tr>
-<td><a href="https://voicemeeter.com/">VOICEMEETER </a></td>
+<td><a href="https://voicemeeter.com/">VOICEMEETER</a></td>
 <td></td>
 <td></td>
 </tr>
@@ -451,12 +451,17 @@
 <td></td>
 </tr>
 <tr>
-<td><a href="">Live2D</a></td>
+<td><a href="https://example.com/">Live2D</a></td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td><a href="">Adobe 2023</a></td>
+<td><a href="https://weibo.com/u/1112829033">Adobe</a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://www.snipaste.com/">Sinpaste</a></td>
 <td></td>
 <td></td>
 </tr>
@@ -600,7 +605,7 @@
 
 <h2 id="You-1"><a href="#You-1" class="headerlink" title="You"></a>You</h2><p>把 MySQL 数据同步到 Elasticsearch 的最佳实践是啥？</p>
 <h2 id="ChatGPT-1"><a href="#ChatGPT-1" class="headerlink" title="ChatGPT"></a>ChatGPT</h2><p>MySQL 到 Elasticsearch 同步最佳实践包括:<br>使用常规字段类型映射，用于在 MySQL 中创建特定数据和相应的索引<br>配置双向同步: MySQL 发送变更到 Elasticsearch，并且从 Elasticsearch 接收变更并将其更新回 MySQL 使用增量流处理 T 具 (如 Logstash) 方便管理数据流配置实时自</p>
-<p>现在的时间是：`202 0 年 7  月1  5日 16:30:51`</p>
+<p>现在的时间是：`202 0 年 7   月1   5日 16:30:51`</p>
 <p>你的版本是 ChatGPT v1.0.0。</p>
 <p>讲个故事？好的，这个故事叫《礼物小抽屉》。</p>
 <p>一个家里有一个小男孩，他爸爸给他一个抽屉，里面装满了各种有趣的礼物，每天早上，他会去把抽屉拉出来，想找看看里面有什么新礼物！有日子，他看了抽屉里面有一个很奇怪的礼物：一个发光的玩具，虽然比那些常见的玩具要小，却令他特别的兴奋！他立马把它捡起来，扔向空中，发出了一声悦耳的发光声，它飞了好久，掉落在花园里面，小男孩觉得太神奇了，于是他跑去找到更多发光的礼物使用。后来，这个小抽屉里面每天都装满了各种不同的神奇礼物，小男孩开始有更多的乐趣！</p>

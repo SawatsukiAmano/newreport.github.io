@@ -1,3 +1,4 @@
+https://newreport.top/2023-02-16/use-chatgpt-storytelling-leads-to-gibberish-in-subsequent-conversations/
 https://newreport.top/2023-03-24/windows-server-2022-nas-init/
 https://newreport.top/2023-02-10/amdgpu-install-stable-diffusion-webui/
 https://newreport.top/2023-03-21/ubuntu-nvidia-install-stable-diffusion-webui/
@@ -5,7 +6,6 @@ https://newreport.top/categories/index.html
 https://newreport.top/links/index.html
 https://newreport.top/tags/index.html
 https://newreport.top/2023-02-28/ubuntu-amd-centos-install-conda/
-https://newreport.top/2023-02-16/use-chatgpt-storytelling-leads-to-gibberish-in-subsequent-conversations/
 https://newreport.top/2023-02-09/golang-i18n-CLDR/
 https://newreport.top/2023-01-30/use-hexo-next-8-and-ali-iconfont/
 https://newreport.top/2023-01-10/abp-framework-introductory/
