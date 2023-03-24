@@ -29,7 +29,7 @@
 <meta property="og:description" content="本想用 freenas 或者是黑群晖这些基于 linux 的来搭建，但是大部分 nas 系统没有虚拟机，黑裙有但不稳定，白裙那配置和价格，算了算了。     用 pve 或者 exsi 又太重了，我的需求仅仅是下 BT&#x2F;PT 和存储一些项目文件，docker 跑些应用内网穿透出去就可，而且虚拟化平台连接 WiFi 是个问题。     选来选去，看着 b 站知乎一堆推荐如上 NAS 的，">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-03-24T00:00:00.000Z">
-<meta property="article:modified_time" content="2023-03-23T18:41:41.510Z">
+<meta property="article:modified_time" content="2023-03-24T07:05:30.649Z">
 <meta property="article:author" content="haruki">
 <meta property="article:tag" content="NAS">
 <meta name="twitter:card" content="summary">
@@ -230,16 +230,10 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
+              
 
-              <time title="创建时间：2023-03-24 00:00:00" itemprop="dateCreated datePublished" datetime="2023-03-24T00:00:00+00:00">2023-03-24</time>
+              <time title="创建时间：2023-03-24 00:00:00 / 修改时间：07:05:30" itemprop="dateCreated datePublished" datetime="2023-03-24T00:00:00+00:00">2023-03-24</time>
             </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-03-23 18:41:41" itemprop="dateModified" datetime="2023-03-23T18:41:41+00:00">2023-03-23</time>
-              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
@@ -256,7 +250,7 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>1.5k</span>
+              <span>1.6k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -363,6 +357,8 @@
 <td></td>
 </tr>
 </tbody></table>
+<span id="more"></span>
+
 <h3 id="供电"><a href="#供电" class="headerlink" title="供电"></a>供电</h3><p>硬盘坏的原因无非有三，供电不稳或不足、碰撞震动及 roll 到了<br>机械 18T 单盘峰值可以到 28W，13*30W 算为 390W，CPU 给电 150W，其他给电 50W，650W 在峰值时刚好，日常没这么高<br>然后是噪音，4k 读写 30min，来到了 50 分贝</p>
 <h2 id="容量和速度"><a href="#容量和速度" class="headerlink" title="容量和速度"></a>容量和速度</h2><blockquote>
 <p>机械盘的随机读基本忽略吧，几 MB&#x2F;s 不用测根本不可能跑满接口<br>然后是顺序读写，13 块盘同时读写不可能，虽然硬盘顺序峰值能到 270MB&#x2F;s，但是日常没那么高，这里按照每块盘 100MB&#x2F;s 算，也算是很高的负载了  </p>
@@ -423,10 +419,9 @@
 <p>主板南桥 PCIE 3.0 *4，即芯片组的最大速度约为 <strong>4GB&#x2F;s</strong></p>
 <p>CPU的 PCIE 3.0 *24 最大速度约为 <strong>24GB&#x2F;s</strong></p>
 <p>机械盘速度目前顺序读能到 100MB&#x2F;s，最大不会超过 250MB&#x2F;s，4k 随机速度可以忽略，所以南桥扩展 sata 给机械盘就够用了，日常根本不会跑满</p>
-<h3 id="机箱"><a href="#机箱" class="headerlink" title="机箱"></a><a target="_blank" rel="noopener" href="https://item.jd.com/100022763272.html#product-detail">机箱</a></h3><p>支持 13 个 3.5 盘，2 个 2.5 盘位。最大容量为 248T + 6T  </p>
-<p>机械硬盘（单价1200） 二手企业级机械算 13*18T&#x3D;<strong>234T（100MB&#x2F;s）</strong>  </p>
+<h3 id="机箱"><a href="#机箱" class="headerlink" title="机箱"></a><a target="_blank" rel="noopener" href="https://item.jd.com/100022763272.html#product-detail">机箱</a></h3><p>支持 13 个 3.5 盘，2 个 2.5 盘位。最大容量为 60T + 6T  </p>
+<p>机械硬盘（单价1600） 二手企业级目前最大的机械按 20T 算， 13*20T&#x3D;<strong>2604T（270MB&#x2F;s）</strong>  如果阵列卡做存储池合计速度为 13*270MB&#x2F;s &#x3D;3.5GB&#x2F;s</p>
 <p>sata 固态（单价800） 固态 2*3T&#x3D;<strong>6T(500MB&#x2F;s)</strong></p>
-<span id="more"></span>
 <h3 id="主板"><a href="#主板" class="headerlink" title="主板"></a><a target="_blank" rel="noopener" href="https://www.asus.com/tw/motherboards-components/motherboards/tuf-gaming/tuf-gaming-b550m-plus-wi-fi/techspec/">主板</a></h3><ul>
 <li><p>直连CPU 15GB&#x2F;s(CPU阈值 24GB&#x2F;s)</p>
 <ul>
@@ -436,9 +431,9 @@
 </li>
 <li><p>南桥 234T  合计峰值 3 GB&#x2F;s (芯片组阈值 4GB&#x2F;s）</p>
 <ul>
-<li>M.2_2：台电 **1T（2GB&#x2F;s)**，每天为系统盘做备份，磁盘忽略</li>
+<li>M.2_2：台电 **1T（2GB&#x2F;s)**，每天为系统盘做增量备份，速度忽略</li>
 <li>PCIE_2（PCIE 3.0x4）：9271 8i 阵列卡 + 扩展卡 82885t<ul>
-<li>13*18T&#x3D;<strong>180T（1.3GB&#x2F;s）</strong>，即单口 750MB&#x2F;s，总共 2.5GB&#x2F;s，对于机械盘完全够用，机械顺序跑满按 150MB&#x2F;s，13 盘才 2GB&#x2F;s</li>
+<li>13*20T&#x3D;<strong>260T（1.3GB&#x2F;s）</strong>，即单口 750MB&#x2F;s，总共 2.5GB&#x2F;s，对于机械盘完全够用，机械顺序跑满按 150MB&#x2F;s，13 盘才 2GB&#x2F;s</li>
 </ul>
 </li>
 <li>主板 sata：4 口 6Gb&#x2F;s 接口，即和扩展卡一样<ul>
@@ -449,7 +444,7 @@
 </li>
 </ul>
 <h2 id="硬盘分配"><a href="#硬盘分配" class="headerlink" title="硬盘分配"></a>硬盘分配</h2><blockquote>
-<p>使用 9271 8i 阵列卡接入南桥，使用 82885t 作为扩展卡，机械盘以 250MB&#x2F;s 计算，固态以 3GB&#x2F;s 计算</p>
+<p>使用 9271 8i 阵列卡接入南桥，使用 82885t 作为扩展卡，机械盘以 250MB&#x2F;s 计算，固态以 3GB&#x2F;s 计算，机械盘按 14T 算</p>
 </blockquote>
 <table>
 <thead>
@@ -484,31 +479,31 @@
 </tr>
 <tr>
 <td>软硬存储池1</td>
-<td>2T<em>2 的 3.0 固态 + 18T</em>4（硬raid10） 的机械分层储池</td>
-<td>36T</td>
+<td>2T<em>2 的 3.0 固态 + 14T</em>4（硬raid10） 的机械分层储池</td>
+<td>28T</td>
 <td>6GB&#x2F;s~0.5GB&#x2F;s</td>
 <td>生产环境数据</td>
 </tr>
 <tr>
 <td>硬存储池1</td>
-<td>18T*4(3+1)&#x3D;54T 的机械盘硬 raid5</td>
-<td>54T</td>
+<td>14T*4(3+1)&#x3D;42T 的机械盘硬 raid5</td>
+<td>42T</td>
 <td>750MB&#x2F;s</td>
 <td>nas-tools 影视库</td>
 </tr>
 <tr>
 <td>硬存储池2</td>
-<td>18T*4(3+1)&#x3D;54T 的机械盘硬 raid5</td>
-<td>54T</td>
+<td>14T*4(3+1)&#x3D;42T 的机械盘硬 raid5</td>
+<td>42T</td>
 <td>750MB&#x2F;s</td>
 <td>内网共享文件</td>
 </tr>
 <tr>
 <td>裸盘机械1</td>
 <td>NTFS</td>
-<td>18T</td>
+<td>14T</td>
 <td>250MB&#x2F;s</td>
-<td>游戏冷备</td>
+<td>游戏冷备&amp;AI图库</td>
 </tr>
 <tr>
 <td>裸盘sata固态1</td>
@@ -531,7 +526,7 @@
 <p>开机自启路径</p>
 </blockquote>
 <figure class="highlight dos"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">C:\<span class="title">ProgramData</span>\<span class="title">Microsoft</span>\<span class="title">Windows</span>\<span class="title">Start</span> <span class="title">Menu</span>\<span class="title">Programs</span>\<span class="title">Startup</span></span></span><br></pre></td></tr></table></figure>
-
+<h2 id="Intel驱动"><a href="#Intel驱动" class="headerlink" title="Intel驱动"></a>Intel驱动</h2><p><a target="_blank" rel="noopener" href="https://www.intel.com/content/www/us/en/support/detect.html">https://www.intel.com/content/www/us/en/support/detect.html</a></p>
 <h2 id="内网穿透"><a href="#内网穿透" class="headerlink" title="内网穿透"></a>内网穿透</h2><p><a target="_blank" rel="noopener" href="https://github.com/ehang-io/nps/releases">nps</a></p>
 <p>新建 bat，然后快捷方式丢到开机路径里</p>
 <h2 id="开机自动登录"><a href="#开机自动登录" class="headerlink" title="开机自动登录"></a>开机自动登录</h2><blockquote>
@@ -558,41 +553,41 @@
 </tr>
 <tr>
 <td><a target="_blank" rel="noopener" href="https://docs.docker.com/get-docker/">Docker</a></td>
-<td>容器服务</td>
+<td></td>
 <td>务必装好 WSL2</td>
 </tr>
 <tr>
-<td><a target="_blank" rel="noopener" href="https://www.todesk.com/download.html">Todesk</a></td>
+<td><a target="_blank" rel="noopener" href="https://www.todesk.com/download.html">ToDesk</a></td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td>Git</td>
+<td><a target="_blank" rel="noopener" href="https://git-scm.com/downloads">Git</a></td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td>Renamer</td>
+<td><a target="_blank" rel="noopener" href="http://www.den4b.com/">ReNamer</a></td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td>chrome</td>
+<td><a target="_blank" rel="noopener" href="https://www.google.com/chrome/">Chrome</a></td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td>百度网盘</td>
+<td><a target="_blank" rel="noopener" href="https://pan.baidu.com/download?from=header#win">百度网盘</a></td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td>阿里云盘</td>
+<td><a target="_blank" rel="noopener" href="https://www.aliyundrive.com/">阿里云盘</a></td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td>115 网盘</td>
+<td><a target="_blank" rel="noopener" href="https://115.com/">115 网盘</a></td>
 <td></td>
 <td></td>
 </tr>
@@ -602,12 +597,17 @@
 <td></td>
 </tr>
 <tr>
-<td>OBS</td>
+<td><a target="_blank" rel="noopener" href="https://115.com/">WPS</a></td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td>语雀</td>
+<td><a target="_blank" rel="noopener" href="https://obsproject.com/">OBS</a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://www.yuque.com/download">语雀</a></td>
 <td></td>
 <td></td>
 </tr>
@@ -651,8 +651,83 @@
 <td></td>
 <td></td>
 </tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://www.bandicam.cn/">Bandicam</a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://winscp.net/eng/download.php">WinSCP</a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://voicemeeter.com/">VOICEMEETER </a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://www.qbittorrent.org/download">qBittorrent</a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://telegram.org/">Telegram</a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://www.blender.org/">blender</a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://docs.conda.io/projects/conda/en/stable/user-guide/install/windows.html">conda</a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://www.kookapp.cn/">开黑啦</a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://game.maj-soul.com/1/">雀魂</a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://discord.com/">Discord</a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://www.jianguoyun.com/s/downloads">坚果云</a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://notepad-plus-plus.org/downloads/">Notepad++</a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://getquicker.net/Download">Quicker</a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="">Live2D</a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="">Adobe 2023</a></td>
+<td></td>
+<td></td>
+</tr>
 </tbody></table>
-<h2 id="Docker-服务"><a href="#Docker-服务" class="headerlink" title="Docker 服务"></a>Docker 服务</h2><table>
+<h2 id="Docker-内网服务"><a href="#Docker-内网服务" class="headerlink" title="Docker 内网服务"></a>Docker 内网服务</h2><table>
 <thead>
 <tr>
 <th>名称</th>
@@ -661,38 +736,82 @@
 </tr>
 </thead>
 <tbody><tr>
-<td>MySQL</td>
+<td><a target="_blank" rel="noopener" href="https://hub.docker.com/r/portainer/portainer">portainer</a></td>
+<td>docker webui</td>
+<td></td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/stonith404/pingvin-share">pingvin-share</a></td>
+<td>分享网盘</td>
+<td></td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/usememos/memos">memos</a></td>
+<td>便签</td>
+<td></td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://hub.docker.com/_/postgres">postgres</a></td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td>Redis</td>
+<td><a target="_blank" rel="noopener" href="https://hub.docker.com/_/mariadb">mariadb</a></td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td>MongDB</td>
+<td><a target="_blank" rel="noopener" href="https://hub.docker.com/_/redis">redis</a></td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td>RabbitMQ</td>
+<td><a target="_blank" rel="noopener" href="https://hub.docker.com/_/mongo">mongo</a></td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td>Superset</td>
+<td><a target="_blank" rel="noopener" href="https://hub.docker.com/_/rabbitmq">rabbitmq</a></td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td>Nginx Proxy Manager</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/apache/superset">superset</a></td>
+<td>数字看板</td>
+<td></td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/whyour/qinglong">qinglong</a></td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td>Portainer</td>
+<td><a target="_blank" rel="noopener" href="https://hub.docker.com/r/guacamole/guacamole">Guacamole</a></td>
 <td></td>
+<td></td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/hr3lxphr6j/bililive-go">bililive</a></td>
+<td>录播</td>
+<td></td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/louislam/uptime-kuma">uptime-kuma</a></td>
+<td>网站监控</td>
+<td></td>
+</tr>
+</tbody></table>
+<h2 id="Docker-公网服务"><a href="#Docker-公网服务" class="headerlink" title="Docker 公网服务"></a>Docker 公网服务</h2><table>
+<thead>
+<tr>
+<th>名称</th>
+<th>功能</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/NginxProxyManager/nginx-proxy-manager">Nginx Proxy Manager</a></td>
+<td>nginx GUI</td>
 <td></td>
 </tr>
 </tbody></table>
@@ -793,7 +912,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%A1%AC%E4%BB%B6"><span class="nav-number">1.</span> <span class="nav-text">硬件</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE"><span class="nav-number">1.1.</span> <span class="nav-text">配置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BE%9B%E7%94%B5"><span class="nav-number">1.1.1.</span> <span class="nav-text">供电</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%B9%E9%87%8F%E5%92%8C%E9%80%9F%E5%BA%A6"><span class="nav-number">1.2.</span> <span class="nav-text">容量和速度</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#PCIE"><span class="nav-number">1.2.1.</span> <span class="nav-text">PCIE</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9C%BA%E7%AE%B1"><span class="nav-number">1.2.2.</span> <span class="nav-text">机箱</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%BB%E6%9D%BF"><span class="nav-number">1.2.3.</span> <span class="nav-text">主板</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%A1%AC%E7%9B%98%E5%88%86%E9%85%8D"><span class="nav-number">1.3.</span> <span class="nav-text">硬盘分配</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85"><span class="nav-number">2.</span> <span class="nav-text">系统安装</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F"><span class="nav-number">2.1.</span> <span class="nav-text">内网穿透</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BC%80%E6%9C%BA%E8%87%AA%E5%8A%A8%E7%99%BB%E5%BD%95"><span class="nav-number">2.2.</span> <span class="nav-text">开机自动登录</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#WSL2"><span class="nav-number">2.3.</span> <span class="nav-text">WSL2</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%BA%94%E7%94%A8"><span class="nav-number">3.</span> <span class="nav-text">应用</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F"><span class="nav-number">3.1.</span> <span class="nav-text">应用程序</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Docker-%E6%9C%8D%E5%8A%A1"><span class="nav-number">3.2.</span> <span class="nav-text">Docker 服务</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#VS-Code-%E6%8F%92%E4%BB%B6"><span class="nav-number">3.3.</span> <span class="nav-text">VS Code 插件</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%A1%AC%E4%BB%B6"><span class="nav-number">1.</span> <span class="nav-text">硬件</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE"><span class="nav-number">1.1.</span> <span class="nav-text">配置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BE%9B%E7%94%B5"><span class="nav-number">1.1.1.</span> <span class="nav-text">供电</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%B9%E9%87%8F%E5%92%8C%E9%80%9F%E5%BA%A6"><span class="nav-number">1.2.</span> <span class="nav-text">容量和速度</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#PCIE"><span class="nav-number">1.2.1.</span> <span class="nav-text">PCIE</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9C%BA%E7%AE%B1"><span class="nav-number">1.2.2.</span> <span class="nav-text">机箱</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%BB%E6%9D%BF"><span class="nav-number">1.2.3.</span> <span class="nav-text">主板</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%A1%AC%E7%9B%98%E5%88%86%E9%85%8D"><span class="nav-number">1.3.</span> <span class="nav-text">硬盘分配</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85"><span class="nav-number">2.</span> <span class="nav-text">系统安装</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Intel%E9%A9%B1%E5%8A%A8"><span class="nav-number">2.1.</span> <span class="nav-text">Intel驱动</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F"><span class="nav-number">2.2.</span> <span class="nav-text">内网穿透</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BC%80%E6%9C%BA%E8%87%AA%E5%8A%A8%E7%99%BB%E5%BD%95"><span class="nav-number">2.3.</span> <span class="nav-text">开机自动登录</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#WSL2"><span class="nav-number">2.4.</span> <span class="nav-text">WSL2</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%BA%94%E7%94%A8"><span class="nav-number">3.</span> <span class="nav-text">应用</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F"><span class="nav-number">3.1.</span> <span class="nav-text">应用程序</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Docker-%E5%86%85%E7%BD%91%E6%9C%8D%E5%8A%A1"><span class="nav-number">3.2.</span> <span class="nav-text">Docker 内网服务</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Docker-%E5%85%AC%E7%BD%91%E6%9C%8D%E5%8A%A1"><span class="nav-number">3.3.</span> <span class="nav-text">Docker 公网服务</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#VS-Code-%E6%8F%92%E4%BB%B6"><span class="nav-number">3.4.</span> <span class="nav-text">VS Code 插件</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -876,7 +995,7 @@
       <i class="fa fa-coffee"></i>
     </span>
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">1:02</span>
+    <span title="站点阅读时长">1:03</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
   </div>

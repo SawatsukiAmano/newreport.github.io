@@ -6,7 +6,7 @@
   <link href="https://newreport.top/atom.xml" rel="self"/>
   
   <link href="https://newreport.top/"/>
-  <updated>2023-03-23T18:41:41.510Z</updated>
+  <updated>2023-03-24T07:05:30.649Z</updated>
   <id>https://newreport.top/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://newreport.top/2023-03-24/windows-server-2022-nas-init/"/>
     <id>https://newreport.top/2023-03-24/windows-server-2022-nas-init/</id>
     <published>2023-03-24T00:00:00.000Z</published>
-    <updated>2023-03-23T18:41:41.510Z</updated>
+    <updated>2023-03-24T07:05:30.649Z</updated>
     
     
     <summary type="html">&lt;blockquote&gt;
@@ -111,70 +111,7 @@
 &lt;td&gt;643&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
-&lt;/tbody&gt;&lt;/table&gt;
-&lt;h3 id=&quot;供电&quot;&gt;&lt;a href=&quot;#供电&quot; class=&quot;headerlink&quot; title=&quot;供电&quot;&gt;&lt;/a&gt;供电&lt;/h3&gt;&lt;p&gt;硬盘坏的原因无非有三，供电不稳或不足、碰撞震动及 roll 到了&lt;br&gt;机械 18T 单盘峰值可以到 28W，13*30W 算为 390W，CPU 给电 150W，其他给电 50W，650W 在峰值时刚好，日常没这么高&lt;br&gt;然后是噪音，4k 读写 30min，来到了 50 分贝&lt;/p&gt;
-&lt;h2 id=&quot;容量和速度&quot;&gt;&lt;a href=&quot;#容量和速度&quot; class=&quot;headerlink&quot; title=&quot;容量和速度&quot;&gt;&lt;/a&gt;容量和速度&lt;/h2&gt;&lt;blockquote&gt;
-&lt;p&gt;机械盘的随机读基本忽略吧，几 MB&amp;#x2F;s 不用测根本不可能跑满接口&lt;br&gt;然后是顺序读写，13 块盘同时读写不可能，虽然硬盘顺序峰值能到 270MB&amp;#x2F;s，但是日常没那么高，这里按照每块盘 100MB&amp;#x2F;s 算，也算是很高的负载了  &lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h3 id=&quot;PCIE&quot;&gt;&lt;a href=&quot;#PCIE&quot; class=&quot;headerlink&quot; title=&quot;PCIE&quot;&gt;&lt;/a&gt;PCIE&lt;/h3&gt;&lt;blockquote&gt;
-&lt;p&gt;&lt;a href=&quot;https://www.asus.com/tw/motherboards-components/motherboards/tuf-gaming/tuf-gaming-b550m-plus-wi-fi/techspec/&quot;&gt;主板&lt;/a&gt;&lt;br&gt;3 个 PCIE 槽，PCIE 4.0*16 和 PCIE 3.0*16（芯片组） 和 PCIE 3.0*1（芯片组），硬件接口分别为 PCIE 16、PCIE 16、PCIE 1 展示&lt;br&gt;2 个 M.2 插槽，PCIE 4.0*4（CPU直连）和 PCIE 3.0*4（芯片组）&lt;br&gt;4 个 SATA 插槽（芯片组）&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;a href=&quot;https://www.amd.com/en/product/11171&quot;&gt;CPU&lt;/a&gt;  有 24 条 PCIE 3.0，第一个 PCIE 占用 16 条，第一个 M.2 占用 4 条，南桥（芯片组）占用 4 条，即&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;PCIE 版本\通道&lt;/th&gt;
-&lt;th&gt;x1&lt;/th&gt;
-&lt;th&gt;x4&lt;/th&gt;
-&lt;th&gt;x8&lt;/th&gt;
-&lt;th&gt;x16&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;&lt;tr&gt;
-&lt;td&gt;1.0&lt;/td&gt;
-&lt;td&gt;250MB&amp;#x2F;s&lt;/td&gt;
-&lt;td&gt;1GB&amp;#x2F;s&lt;/td&gt;
-&lt;td&gt;2GB&amp;#x2F;s&lt;/td&gt;
-&lt;td&gt;4GB&amp;#x2F;s&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;2.0&lt;/td&gt;
-&lt;td&gt;500MB&amp;#x2F;s&lt;/td&gt;
-&lt;td&gt;2GB&amp;#x2F;s&lt;/td&gt;
-&lt;td&gt;4GB&amp;#x2F;s&lt;/td&gt;
-&lt;td&gt;8GB&amp;#x2F;s&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;3.0&lt;/td&gt;
-&lt;td&gt;984.6MB&amp;#x2F;s&lt;/td&gt;
-&lt;td&gt;3.938GB&amp;#x2F;s&lt;/td&gt;
-&lt;td&gt;7.877GB&amp;#x2F;s&lt;/td&gt;
-&lt;td&gt;15.754GB&amp;#x2F;s&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;4.0&lt;/td&gt;
-&lt;td&gt;1.969GB&amp;#x2F;s&lt;/td&gt;
-&lt;td&gt;7.877GGB&amp;#x2F;s&lt;/td&gt;
-&lt;td&gt;15.754GB&amp;#x2F;s&lt;/td&gt;
-&lt;td&gt;31.508GB&amp;#x2F;s&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;5.0&lt;/td&gt;
-&lt;td&gt;3.9GB&amp;#x2F;s&lt;/td&gt;
-&lt;td&gt;15.8GB&amp;#x2F;s&lt;/td&gt;
-&lt;td&gt;31.5GB&amp;#x2F;s&lt;/td&gt;
-&lt;td&gt;63GB&amp;#x2F;s&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;&lt;/table&gt;
-&lt;p&gt;主板直连 PCIE 4.0 *16 和 （M.2）PCIE 4.0 *4  即最大速度约为 &lt;strong&gt;40GB&amp;#x2F;s&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;主板南桥 PCIE 3.0 *4，即芯片组的最大速度约为 &lt;strong&gt;4GB&amp;#x2F;s&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;CPU的 PCIE 3.0 *24 最大速度约为 &lt;strong&gt;24GB&amp;#x2F;s&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;机械盘速度目前顺序读能到 100MB&amp;#x2F;s，最大不会超过 250MB&amp;#x2F;s，4k 随机速度可以忽略，所以南桥扩展 sata 给机械盘就够用了，日常根本不会跑满&lt;/p&gt;
-&lt;h3 id=&quot;机箱&quot;&gt;&lt;a href=&quot;#机箱&quot; class=&quot;headerlink&quot; title=&quot;机箱&quot;&gt;&lt;/a&gt;&lt;a href=&quot;https://item.jd.com/100022763272.html#product-detail&quot;&gt;机箱&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;支持 13 个 3.5 盘，2 个 2.5 盘位。最大容量为 248T + 6T  &lt;/p&gt;
-&lt;p&gt;机械硬盘（单价1200） 二手企业级机械算 13*18T&amp;#x3D;&lt;strong&gt;234T（100MB&amp;#x2F;s）&lt;/strong&gt;  &lt;/p&gt;
-&lt;p&gt;sata 固态（单价800） 固态 2*3T&amp;#x3D;&lt;strong&gt;6T(500MB&amp;#x2F;s)&lt;/strong&gt;&lt;/p&gt;</summary>
+&lt;/tbody&gt;&lt;/table&gt;</summary>
     
     
     
