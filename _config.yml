@@ -9,7 +9,7 @@ description: ''
 keywords:
 author: haruki
 language: zh-CN
-timezone: ''
+timezone: 'Asia/Shanghai'
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
@@ -45,16 +45,20 @@ post_asset_folder: false
 relative_link: false
 future: true
 highlight:
-  enable: false
-  line_number: true
+  enable: true
   auto_detect: false
+  line_number: true
+  line_threshold: 0
   tab_replace: ''
+  exclude_languages:
+    - example
   wrap: true
   hljs: false
 prismjs:
-  enable: true
+  enable: false
   preprocess: true
   line_number: true
+  line_threshold: 0
   tab_replace: ''
 
 # Home page setting

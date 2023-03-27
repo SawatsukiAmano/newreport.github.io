@@ -347,7 +347,7 @@ text_align:
   mobile: justify
 
 # Reduce padding / margin indents on devices with narrow width.
-mobile_layout_economy: false
+mobile_layout_economy: true
 
 # Browser header panel color.
 theme_color:
@@ -365,11 +365,11 @@ codeblock:
   # Code Highlight theme
   # All available themes: https://theme-next.js.org/highlight/
   theme:
-    light: base16/edge-dark
-    dark: base16/edge-dark
+    light: github-dark
+    dark: github-dark
   prism:
-    light: prism-dracula.min
-    dark: prism-dracula.min
+    light: prism
+    dark: prism-dark
   # Add copy button on codeblock
   copy_button:
     enable: true
@@ -379,9 +379,9 @@ codeblock:
 back2top:
   enable: true
   # Back to top in sidebar.
-  sidebar: false
+  sidebar: true
   # Scroll percent label in b2t button.
-  scrollpercent: false
+  scrollpercent: true
 
 # Reading progress bar
 reading_progress:
@@ -523,7 +523,7 @@ tabs:
 # So, you have to install the dependency of pdf.js if you want to use pdf tag and make it available to all browsers.
 # Dependencies: https://github.com/next-theme/theme-next-pdf
 pdf:
-  enable: true
+  enable: false
   # Default height
   height: 500px
 
@@ -921,3 +921,22 @@ vendors:
 css: css
 js: js
 images: images
+
+
+# Darkmode JS
+# For more information: https://github.com/rqh656418510/hexo-next-darkmode, https://github.com/sandoche/Darkmode.js
+darkmode_js:
+  enable: true
+  bottom: 'unset' # default: '32px'
+  right: '64px' # default: '32px'
+  left: '32px' # default: 'unset'
+  time: '0.5s' # default: '0.3s'
+  mixColor: 'transparent' # default: '#fff'
+  backgroundColor: 'transparent' # default: '#fff'
+  buttonColorDark: '#100f2c' # default: '#100f2c'
+  buttonColorLight: '#fff' # default: '#fff'
+  isActivated: false # default false
+  saveInCookies: true # default: true
+  label: '🌓' # default: ''
+  autoMatchOsTheme: true # default: true
+  libUrl: # Set custom library cdn url for Darkmode.js

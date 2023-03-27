@@ -2,6 +2,14 @@
 # yarn lockfile v1
 
 
+"@next-theme/utils@^1.2.0":
+  version "1.3.0"
+  resolved "https://registry.npmjs.org/@next-theme/utils/-/utils-1.3.0.tgz"
+  integrity sha512-iLAtLEK+t4NOGsiG3/KCMRcPfU3NBModvH8bEntITbGkkNdDYQ0buuf5qcHn83pEaoQ6j6t8xR7EwicShs0icw==
+  dependencies:
+    hexo-util "2.5.0"
+    js-yaml "4.1.0"
+
 "@tootallnate/once@2":
   version "2.0.0"
   resolved "https://registry.npmjs.org/@tootallnate/once/-/once-2.0.0.tgz"
@@ -194,6 +202,13 @@ chokidar@^3.0.0, chokidar@^3.5.3:
     readdirp "~3.6.0"
   optionalDependencies:
     fsevents "~2.3.2"
+
+clean-css@^5.1.2:
+  version "5.3.2"
+  resolved "https://registry.npmjs.org/clean-css/-/clean-css-5.3.2.tgz"
+  integrity sha512-JVJbM+f3d3Q704rF4bqQ5UUyTtuJ0JRKNbTKVEeujCCBoMdkEi+V+e8oktO9qGQNSvHrFTM6JZRXrUvGR1czww==
+  dependencies:
+    source-map "~0.6.0"
 
 color-convert@^2.0.1:
   version "2.0.1"
@@ -399,7 +414,7 @@ domexception@^4.0.0:
   dependencies:
     webidl-conversions "^7.0.0"
 
-domhandler@^4.2.0, domhandler@^4.2.2:
+domhandler@^4.0.0, domhandler@^4.2.0, domhandler@^4.2.2:
   version "4.3.1"
   resolved "https://registry.npmjs.org/domhandler/-/domhandler-4.3.1.tgz"
   integrity sha512-GrwoxYN+uWlzO8uhUXRl0P+kHE4GtVPfYzVLcUxPL7KNdHKj66vvlhiweIHqYYXWlw+T8iLMp42Lm67ghw4WMQ==
@@ -418,7 +433,7 @@ dompurify@^2.4.0:
   resolved "https://registry.npmjs.org/dompurify/-/dompurify-2.4.5.tgz"
   integrity sha512-jggCCd+8Iqp4Tsz0nIvpcb22InKEBrGz5dw3EQJMs8HPJDsKbFIO3STYtAvCfDx26Muevn1MHVI0XxjgFfmiSA==
 
-domutils@^2.8.0:
+domutils@^2.5.2, domutils@^2.8.0:
   version "2.8.0"
   resolved "https://registry.npmjs.org/domutils/-/domutils-2.8.0.tgz"
   integrity sha512-w96Cjofp72M5IIhpjgobBimYEfoPjx1Vx0BSX9P30WBdZW2WIKU0T1Bd0kz2eNZ9ikjKgHbEyKx8BB6H1L3h3A==
@@ -750,6 +765,15 @@ hexo-log@^4.0.1:
   dependencies:
     picocolors "^1.0.0"
 
+hexo-next-darkmode@^0.1.10:
+  version "0.1.10"
+  resolved "https://registry.npmjs.org/hexo-next-darkmode/-/hexo-next-darkmode-0.1.10.tgz"
+  integrity sha512-d1Pa2pqu8Wg+E4Jf3yeH7keIZuRMeejYqQ1D+ZX8NeCufCqz3qUtfF3RN3fVxU6JRNU0C7qjYEGg0NjJcykK6Q==
+  dependencies:
+    "@next-theme/utils" "^1.2.0"
+    clean-css "^5.1.2"
+    nunjucks "^3.2.3"
+
 hexo-pagination@0.0.2:
   version "0.0.2"
   resolved "https://registry.npmjs.org/hexo-pagination/-/hexo-pagination-0.0.2.tgz"
@@ -810,6 +834,20 @@ hexo-theme-landscape@^0.0.3:
   version "0.0.3"
   resolved "https://registry.npmjs.org/hexo-theme-landscape/-/hexo-theme-landscape-0.0.3.tgz"
   integrity sha512-b0Di+TUVs4ESrNX4ULEh9uQmADpO6kr10rIJ2OGZM8suNQNFKdxn+vJUjnLfKkCPJAfVmS7/S83KCNYe4tpoNw==
+
+hexo-util@2.5.0:
+  version "2.5.0"
+  resolved "https://registry.npmjs.org/hexo-util/-/hexo-util-2.5.0.tgz"
+  integrity sha512-l0zkqcg2524KPO84HQe0JROpPlCM/dEnCJaJrZ1qsq+3+/YxhDa0zxiGtUVY1dtrWzOK/V11Zj+UEklhGP8Jeg==
+  dependencies:
+    bluebird "^3.5.2"
+    camel-case "^4.0.0"
+    cross-spawn "^7.0.0"
+    deepmerge "^4.2.2"
+    highlight.js "^10.7.1"
+    htmlparser2 "^6.0.0"
+    prismjs "^1.17.1"
+    strip-indent "^3.0.0"
 
 hexo-util@2.7.0, hexo-util@^2.0.0, hexo-util@^2.1.0, hexo-util@^2.7.0:
   version "2.7.0"
@@ -877,6 +915,11 @@ hexo@^7.0.0-rc1:
     titlecase "^1.1.3"
     warehouse "^5.0.0"
 
+highlight.js@^10.7.1:
+  version "10.7.3"
+  resolved "https://registry.npmjs.org/highlight.js/-/highlight.js-10.7.3.tgz"
+  integrity sha512-tzcUFauisWKNHaRkN4Wjl/ZA07gENAjFl3J/c480dprkGTg5EQstgaNFqBfUqCq54kZRIEcreTsAgF/m2quD7A==
+
 highlight.js@^11.0.1, highlight.js@^11.6.0:
   version "11.7.0"
   resolved "https://registry.npmjs.org/highlight.js/-/highlight.js-11.7.0.tgz"
@@ -888,6 +931,16 @@ html-encoding-sniffer@^3.0.0:
   integrity sha512-oWv4T4yJ52iKrufjnyZPkrN0CH3QnrUqdB6In1g5Fe1mia8GmF36gnfNySxoZtxD5+NmYw1EElVXiBk93UeskA==
   dependencies:
     whatwg-encoding "^2.0.0"
+
+htmlparser2@^6.0.0:
+  version "6.1.0"
+  resolved "https://registry.npmjs.org/htmlparser2/-/htmlparser2-6.1.0.tgz"
+  integrity sha512-gyyPk6rgonLFEDGoeRgQNaEUvdJ4ktTmmUh/h2t7s+M8oPpIPxgNACWa+6ESR57kXstwqPiCut0V8NRpcwgU7A==
+  dependencies:
+    domelementtype "^2.0.1"
+    domhandler "^4.0.0"
+    domutils "^2.5.2"
+    entities "^2.0.0"
 
 htmlparser2@^7.0.0:
   version "7.2.0"
@@ -1037,7 +1090,7 @@ js-yaml-js-types@^1.0.0:
   dependencies:
     esprima "^4.0.1"
 
-js-yaml@^4.1.0:
+js-yaml@4.1.0, js-yaml@^4.1.0:
   version "4.1.0"
   resolved "https://registry.npmjs.org/js-yaml/-/js-yaml-4.1.0.tgz"
   integrity sha512-wpxZs9NoxZaJESJGIZTyDEaYpl0FKSA+FB9aJiyemKhMwkxQg63h4T1KJgUGHpTqPDNRcmmYLugrRjJlBtWvRA==
@@ -1501,7 +1554,7 @@ source-map-resolve@^0.6.0:
     atob "^2.1.2"
     decode-uri-component "^0.2.0"
 
-source-map@^0.6.1, source-map@~0.6.1:
+source-map@^0.6.1, source-map@~0.6.0, source-map@~0.6.1:
   version "0.6.1"
   resolved "https://registry.npmjs.org/source-map/-/source-map-0.6.1.tgz"
   integrity sha512-UjgapumWlbMhkBgzT7Ykc5YXUT46F0iKu8SGXq0bcwP5dz/h0Plj6enJqjz1Zbq2l5WaqYnrVbwWOWMyF3F47g==
