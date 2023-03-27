@@ -2,9 +2,9 @@
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
-<meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 7.0.0-rc1">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 7.0.0-rc1">
+
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
@@ -13,15 +13,13 @@
 <link rel="stylesheet" href="/css/main.css">
 
 
-<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
 
-<script id="hexo-configurations">
-    var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"newreport.top","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
-  </script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha256-/4UQcSmErDzPCMAiuOiWPVVsNN2s3ZY/NsmXNcj0IFc=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
-  <meta name="description" content="You讲个故事 ChatGPT这是一个关于枫叶花花的故事。枫叶花花是一个小女孩，生活在一座山上的一个村庄里。她每天散步到附近的钢琴店去，从钢琴的键盘中听取音乐，十分喜爱钢琴给她带来的美妙旋律每天早晨，枫叶花花都会去海边来说说话，她会问海洋里美丽的海洋动物，什么有意思的事情发生了，有什么新鲜的事情发生了，而它们也会问她最近发生了什么好玩的事情。有一天，枫叶花花走在海边，突然听到有人将歌声唱起来……">
+<script class="next-config" data-name="main" type="application/json">{"hostname":"newreport.top","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.15.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":"mac"},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":true,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="You讲个故事 ChatGPT这是一个关于枫叶花花的故事。枫叶花花是一个小女孩，生活在一座山上的一个村庄里。她每天散步到附近的钢琴店去，从钢琴的键盘中听取音乐，十分喜爱钢琴给她带来的美妙旋律每天早晨，枫叶花花都会去海边来说说话，她会问海洋里美丽的海洋动物，什么有意思的事情发生了，有什么新鲜的事情发生了，而它们也会问她最近发生了什么好玩的事情。有一天，枫叶花花走在海边，突然听到有人将歌声唱起来……">
 <meta property="og:type" content="article">
 <meta property="og:title" content="让 chatgpt 讲故事导致之后对话出现递归">
 <meta property="og:url" content="https://newreport.top/2023-02-16/use-chatgpt-storytelling-leads-to-gibberish-in-subsequent-conversations/index.html">
@@ -34,21 +32,18 @@
 <meta property="article:tag" content="ChatGPT">
 <meta name="twitter:card" content="summary">
 
+
 <link rel="canonical" href="https://newreport.top/2023-02-16/use-chatgpt-storytelling-leads-to-gibberish-in-subsequent-conversations/">
 
 
-<script id="page-configurations">
-  // https://hexo.io/docs/variables.html
-  CONFIG.page = {
-    sidebar: "",
-    isHome : false,
-    isPost : true,
-    lang   : 'zh-CN'
-  };
-</script>
 
-  <title>让 chatgpt 讲故事导致之后对话出现递归 | NewReport</title>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://newreport.top/2023-02-16/use-chatgpt-storytelling-leads-to-gibberish-in-subsequent-conversations/","path":"2023-02-16/use-chatgpt-storytelling-leads-to-gibberish-in-subsequent-conversations/","title":"让 chatgpt 讲故事导致之后对话出现递归"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>让 chatgpt 讲故事导致之后对话出现递归 | NewReport</title>
   
+
+
 
 
 
@@ -56,215 +51,197 @@
 
 
   <noscript>
-  <style>
-  .use-motion .brand,
-  .use-motion .menu-item,
-  .sidebar-inner,
-  .use-motion .post-block,
-  .use-motion .pagination,
-  .use-motion .comments,
-  .use-motion .post-header,
-  .use-motion .post-body,
-  .use-motion .collection-header { opacity: initial; }
-
-  .use-motion .site-title,
-  .use-motion .site-subtitle {
-    opacity: initial;
-    top: initial;
-  }
-
-  .use-motion .logo-line-before i { left: initial; }
-  .use-motion .logo-line-after i { right: initial; }
-  </style>
-</noscript>
-
-  <meta name="msvalidate.01" content="26DDE57F724CC0C30F02DAD76C17EE42" />
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
 <link rel="alternate" href="/atom.xml" title="NewReport" type="application/atom+xml">
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage">
-  <div class="container use-motion">
-    <div class="headband"></div>
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
 
-    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-container">
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
   <div class="site-nav-toggle">
-    <div class="toggle" aria-label="切换导航栏">
-      <span class="toggle-line toggle-line-first"></span>
-      <span class="toggle-line toggle-line-middle"></span>
-      <span class="toggle-line toggle-line-last"></span>
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
     </div>
   </div>
 
   <div class="site-meta">
 
     <a href="/" class="brand" rel="start">
-      <span class="logo-line-before"><i></i></span>
-      <h1 class="site-title">NewReport</h1>
-      <span class="logo-line-after"><i></i></span>
+      <i class="logo-line"></i>
+      <p class="site-title">NewReport</p>
+      <i class="logo-line"></i>
     </a>
   </div>
 
   <div class="site-nav-right">
-    <div class="toggle popup-trigger">
-        <i class="fa fa-search fa-fw fa-lg"></i>
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
     </div>
   </div>
 </div>
 
 
 
-
 <nav class="site-nav">
-  <ul id="menu" class="main-menu menu">
-        <li class="menu-item menu-item-home">
-
-    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
-
-  </li>
-        <li class="menu-item menu-item-about">
-
-    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
-
-  </li>
-        <li class="menu-item menu-item-tags">
-
-    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
-
-  </li>
-        <li class="menu-item menu-item-categories">
-
-    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
-
-  </li>
-        <li class="menu-item menu-item-archives">
-
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
-
-  </li>
-        <li class="menu-item menu-item-sitemap">
-
-    <a href="/sitemap.xml" rel="section"><i class="fa fa-sitemap fa-fw"></i>站点地图</a>
-
-  </li>
-        <li class="menu-item menu-item-友链">
-
-    <a href="/links/" rel="section"><i class="fa fa-user fa-fw"></i>友链</a>
-
-  </li>
-      <li class="menu-item menu-item-search">
-        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
-        </a>
-      </li>
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li><li class="menu-item menu-item-sitemap"><a href="/sitemap.xml" rel="section"><i class="fa fa-sitemap fa-fw"></i>站点地图</a></li><li class="menu-item menu-item-友链"><a href="/links/" rel="section"><i class="fa fa-user fa-fw"></i>友链</a></li>
   </ul>
 </nav>
 
 
 
-  <div class="search-pop-overlay">
-    <div class="popup search-popup">
-        <div class="search-header">
-  <span class="search-icon">
-    <i class="fa fa-search"></i>
-  </span>
-  <div class="search-input-container">
-    <input autocomplete="off" autocapitalize="off"
-           placeholder="搜索..." spellcheck="false"
-           type="search" class="search-input">
-  </div>
-  <span class="popup-btn-close">
-    <i class="fa fa-times-circle"></i>
-  </span>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#You"><span class="nav-number">1.</span> <span class="nav-text">You</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ChatGPT"><span class="nav-number">2.</span> <span class="nav-text">ChatGPT</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#You-1"><span class="nav-number">3.</span> <span class="nav-text">You</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ChatGPT-1"><span class="nav-number">4.</span> <span class="nav-text">ChatGPT</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#You-2"><span class="nav-number">5.</span> <span class="nav-text">You</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ChatGPT-2"><span class="nav-number">6.</span> <span class="nav-text">ChatGPT</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#You-3"><span class="nav-number">7.</span> <span class="nav-text">You</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ChatGPT-3"><span class="nav-number">8.</span> <span class="nav-text">ChatGPT</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#You-4"><span class="nav-number">9.</span> <span class="nav-text">You</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ChatGPT-4"><span class="nav-number">10.</span> <span class="nav-text">ChatGPT</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#You-5"><span class="nav-number">11.</span> <span class="nav-text">You</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ChatGPT-5"><span class="nav-number">12.</span> <span class="nav-text">ChatGPT</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#You-6"><span class="nav-number">13.</span> <span class="nav-text">You</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ChatGPT-6"><span class="nav-number">14.</span> <span class="nav-text">ChatGPT</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#You-7"><span class="nav-number">15.</span> <span class="nav-text">You</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ChatGPT-7"><span class="nav-number">16.</span> <span class="nav-text">ChatGPT</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#You-8"><span class="nav-number">17.</span> <span class="nav-text">You</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ChatGPT-8"><span class="nav-number">18.</span> <span class="nav-text">ChatGPT</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#You-9"><span class="nav-number">19.</span> <span class="nav-text">You</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ChatGPT-9"><span class="nav-number">20.</span> <span class="nav-text">ChatGPT</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#You-10"><span class="nav-number">21.</span> <span class="nav-text">You</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ChatGPT-10"><span class="nav-number">22.</span> <span class="nav-text">ChatGPT</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="haruki"
+      src="/images/haruki-avatar.jpg">
+  <p class="site-author-name" itemprop="name">haruki</p>
+  <div class="site-description" itemprop="description"></div>
 </div>
-<div id="search-result">
-  <div id="no-result">
-    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
-  </div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">25</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">9</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">29</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
 </div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/newreport" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;newreport" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:haruki959@qq.com" title="E-Mail → mailto:haruki959@qq.com" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://www.yuque.com/newreport" title="YuQue → https:&#x2F;&#x2F;www.yuque.com&#x2F;newreport" rel="noopener me" target="_blank"><i class="fab iconfont app-lark_grey fa-fw"></i>YuQue</a>
+      </span>
+  </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
 
     </div>
-  </div>
 
-</div>
-    </header>
-
-    
-  <div class="back-to-top">
-    <i class="fa fa-arrow-up"></i>
-    <span>0%</span>
-  </div>
-  <div class="reading-progress-bar"></div>
+    <div class="main-inner post posts-expand">
 
 
-    <main class="main">
-      <div class="main-inner">
-        <div class="content-wrap">
-          
+  
 
-          <div class="content post posts-expand">
-            
 
-    
+<div class="post-block">
   
   
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="https://newreport.top/2023-02-16/use-chatgpt-storytelling-leads-to-gibberish-in-subsequent-conversations/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/haruki-avatar.jpg">
       <meta itemprop="name" content="haruki">
-      <meta itemprop="description" content="">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="NewReport">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="让 chatgpt 讲故事导致之后对话出现递归 | NewReport">
+      <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
           让 chatgpt 讲故事导致之后对话出现递归
         </h1>
 
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建时间：2023-02-16 00:00:00" itemprop="dateCreated datePublished" datetime="2023-02-16T00:00:00+00:00">2023-02-16</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-03-24 10:14:06" itemprop="dateModified" datetime="2023-03-24T10:14:06+00:00">2023-03-24</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/ai/" itemprop="url" rel="index"><span itemprop="name">ai</span></a>
-                </span>
-            </span>
+      <time title="创建时间：2023-02-16 00:00:00" itemprop="dateCreated datePublished" datetime="2023-02-16T00:00:00+00:00">2023-02-16</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2023-03-24 10:14:06" itemprop="dateModified" datetime="2023-03-24T10:14:06+00:00">2023-03-24</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/ai/" itemprop="url" rel="index"><span itemprop="name">ai</span></a>
+        </span>
+    </span>
 
-          <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>1.3k</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>4 分钟</span>
-            </span>
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>1.3k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>4 分钟</span>
+    </span>
+</div>
 
         </div>
       </header>
@@ -273,8 +250,6 @@
     
     
     <div class="post-body" itemprop="articleBody">
-
-      
         <h2 id="You"><a href="#You" class="headerlink" title="You"></a>You</h2><p>讲个故事</p>
 <h2 id="ChatGPT"><a href="#ChatGPT" class="headerlink" title="ChatGPT"></a>ChatGPT</h2><p>这是一个关于枫叶花花的故事。枫叶花花是一个小女孩，生活在一座山上的一个村庄里。她每天散步到附近的钢琴店去，从钢琴的键盘中听取音乐，十分喜爱钢琴给她带来的美妙旋律<br>每天早晨，枫叶花花都会去海边来说说话，她会问海洋里美丽的海洋动物，什么有意思的事情发生了，有什么新鲜的事情发生了，而它们也会问她最近发生了什么好玩的事情。<br>有一天，枫叶花花走在海边，突然听到有人将歌声唱起来…… 原来是一对爱侣，他们唱起甜蜜的情歌，满满的幸福。枫叶花花感觉自己有点室息，心中十分开心，便突然勾起她苦涩的情绪……</p>
 <span id="more"></span>
@@ -318,269 +293,97 @@
     
     
     
-        
 
-<div>
-<ul class="post-copyright">
-  <li class="post-copyright-author">
-    <strong>本文作者： </strong>haruki
-  </li>
-  <li class="post-copyright-link">
-    <strong>本文链接：</strong>
-    <a href="https://newreport.top/2023-02-16/use-chatgpt-storytelling-leads-to-gibberish-in-subsequent-conversations/" title="让 chatgpt 讲故事导致之后对话出现递归">https://newreport.top/2023-02-16/use-chatgpt-storytelling-leads-to-gibberish-in-subsequent-conversations/</a>
-  </li>
-  <li class="post-copyright-license">
-    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
-  </li>
-</ul>
-</div>
-
-
-      <footer class="post-footer">
+    <footer class="post-footer">
           <div class="post-tags">
               <a href="/tags/ChatGPT/" rel="tag"># ChatGPT</a>
           </div>
 
         
 
-
-        
-    <div class="post-nav">
-      <div class="post-nav-item">
-    <a href="/2023-02-10/amdgpu-install-stable-diffusion-webui/" rel="prev" title="A卡 安装 Stable Diffusion Webui 进行 AI 绘画">
-      <i class="fa fa-chevron-left"></i> A卡 安装 Stable Diffusion Webui 进行 AI 绘画
-    </a></div>
-      <div class="post-nav-item">
-    <a href="/2023-02-28/ubuntu-amd-centos-install-conda/" rel="next" title="Ubuntu 和 CentOS 安装 conda 和 gcc 环境">
-      Ubuntu 和 CentOS 安装 conda 和 gcc 环境 <i class="fa fa-chevron-right"></i>
-    </a></div>
-    </div>
-      </footer>
-    
-  </article>
-  
-  
-  
-
-
-
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2023-02-10/amdgpu-install-stable-diffusion-webui/" rel="prev" title="A卡 安装 Stable Diffusion Webui 进行 AI 绘画">
+                  <i class="fa fa-chevron-left"></i> A卡 安装 Stable Diffusion Webui 进行 AI 绘画
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2023-02-28/ubuntu-amd-centos-install-conda/" rel="next" title="Ubuntu 和 CentOS 安装 conda 和 gcc 环境">
+                  Ubuntu 和 CentOS 安装 conda 和 gcc 环境 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
           </div>
-          
-
-<script>
-  window.addEventListener('tabs:register', () => {
-    let { activeClass } = CONFIG.comments;
-    if (CONFIG.comments.storage) {
-      activeClass = localStorage.getItem('comments_active') || activeClass;
-    }
-    if (activeClass) {
-      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
-      if (activeTab) {
-        activeTab.click();
-      }
-    }
-  });
-  if (CONFIG.comments.storage) {
-    window.addEventListener('tabs:click', event => {
-      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
-      let commentClass = event.target.classList[1];
-      localStorage.setItem('comments_active', commentClass);
-    });
-  }
-</script>
-
-        </div>
-          
-  
-  <div class="toggle sidebar-toggle">
-    <span class="toggle-line toggle-line-first"></span>
-    <span class="toggle-line toggle-line-middle"></span>
-    <span class="toggle-line toggle-line-last"></span>
-  </div>
-
-  <aside class="sidebar">
-    <div class="sidebar-inner">
-
-      <ul class="sidebar-nav motion-element">
-        <li class="sidebar-nav-toc">
-          文章目录
-        </li>
-        <li class="sidebar-nav-overview">
-          站点概览
-        </li>
-      </ul>
-
-      <!--noindex-->
-      <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#You"><span class="nav-number">1.</span> <span class="nav-text">You</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ChatGPT"><span class="nav-number">2.</span> <span class="nav-text">ChatGPT</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#You-1"><span class="nav-number">3.</span> <span class="nav-text">You</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ChatGPT-1"><span class="nav-number">4.</span> <span class="nav-text">ChatGPT</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#You-2"><span class="nav-number">5.</span> <span class="nav-text">You</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ChatGPT-2"><span class="nav-number">6.</span> <span class="nav-text">ChatGPT</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#You-3"><span class="nav-number">7.</span> <span class="nav-text">You</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ChatGPT-3"><span class="nav-number">8.</span> <span class="nav-text">ChatGPT</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#You-4"><span class="nav-number">9.</span> <span class="nav-text">You</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ChatGPT-4"><span class="nav-number">10.</span> <span class="nav-text">ChatGPT</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#You-5"><span class="nav-number">11.</span> <span class="nav-text">You</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ChatGPT-5"><span class="nav-number">12.</span> <span class="nav-text">ChatGPT</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#You-6"><span class="nav-number">13.</span> <span class="nav-text">You</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ChatGPT-6"><span class="nav-number">14.</span> <span class="nav-text">ChatGPT</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#You-7"><span class="nav-number">15.</span> <span class="nav-text">You</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ChatGPT-7"><span class="nav-number">16.</span> <span class="nav-text">ChatGPT</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#You-8"><span class="nav-number">17.</span> <span class="nav-text">You</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ChatGPT-8"><span class="nav-number">18.</span> <span class="nav-text">ChatGPT</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#You-9"><span class="nav-number">19.</span> <span class="nav-text">You</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ChatGPT-9"><span class="nav-number">20.</span> <span class="nav-text">ChatGPT</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#You-10"><span class="nav-number">21.</span> <span class="nav-text">You</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ChatGPT-10"><span class="nav-number">22.</span> <span class="nav-text">ChatGPT</span></a></li></ol></div>
-      </div>
-      <!--/noindex-->
-
-      <div class="site-overview-wrap sidebar-panel">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <img class="site-author-image" itemprop="image" alt="haruki"
-      src="/images/haruki-avatar.jpg">
-  <p class="site-author-name" itemprop="name">haruki</p>
-  <div class="site-description" itemprop="description"></div>
+    </footer>
+  </article>
 </div>
-<div class="site-state-wrap motion-element">
-  <nav class="site-state">
-      <div class="site-state-item site-state-posts">
-          <a href="/archives/">
-        
-          <span class="site-state-item-count">25</span>
-          <span class="site-state-item-name">日志</span>
-        </a>
-      </div>
-      <div class="site-state-item site-state-categories">
-            <a href="/categories/">
-          
-        <span class="site-state-item-count">9</span>
-        <span class="site-state-item-name">分类</span></a>
-      </div>
-      <div class="site-state-item site-state-tags">
-            <a href="/tags/">
-          
-        <span class="site-state-item-count">29</span>
-        <span class="site-state-item-name">标签</span></a>
-      </div>
-  </nav>
+
+
+
+
+
+
 </div>
-  <div class="links-of-author motion-element">
-      <span class="links-of-author-item">
-        <a href="https://github.com/newreport" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;newreport" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
-      </span>
-      <span class="links-of-author-item">
-        <a href="mailto:haruki959@qq.com" title="E-Mail → mailto:haruki959@qq.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
-      </span>
-      <span class="links-of-author-item">
-        <a href="https://www.yuque.com/newreport" title="YuQue → https:&#x2F;&#x2F;www.yuque.com&#x2F;newreport" rel="noopener" target="_blank"><i class="fab iconfont app-lark_grey fa-fw"></i>YuQue</a>
-      </span>
-  </div>
+  </main>
 
+  <footer class="footer">
+    <div class="footer-inner">
 
-
-      </div>
-
-    </div>
-  </aside>
-  <div id="sidebar-dimmer"></div>
-
-
-      </div>
-    </main>
-
-    <footer class="footer">
-      <div class="footer-inner">
-        
-
-        
 
 <div class="copyright">
-  
   &copy; 
   <span itemprop="copyrightYear">2023</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">haruki</span>
-    <span class="post-meta-divider">|</span>
+</div>
+<div class="wordcount">
+  <span class="post-meta-item">
     <span class="post-meta-item-icon">
-      <i class="fa fa-chart-area"></i>
+      <i class="fa fa-chart-line"></i>
     </span>
-      <span class="post-meta-item-text">站点总字数：</span>
     <span title="站点总字数">19k</span>
-    <span class="post-meta-divider">|</span>
+  </span>
+  <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-      <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
     <span title="站点阅读时长">1:03</span>
+  </span>
 </div>
-  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
-  </div>
-&#8195;
-<div class="powered-by">
-    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-    <i class="fa fa-user-md"></i>
-    <span id="busuanzi_container_site_uv">
-        本站访客数:<span id="busuanzi_value_site_uv"></span>
-    </span>
-    <span class="post-meta-divider">|</span>
-    <span id="busuanzi_container_site_pv">
-        本站访问量<span id="busuanzi_value_site_pv"></span>
-    </span>
-</div>
-
-        
-
-
-
-
-
-
-
-
-      </div>
-    </footer>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
   </div>
 
+    </div>
+  </footer>
+
   
-  <script src="/lib/anime.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
-  <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
-  <script src="/lib/velocity/velocity.min.js"></script>
-  <script src="/lib/velocity/velocity.ui.min.js"></script>
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
 
-<script src="/js/utils.js"></script>
-
-<script src="/js/motion.js"></script>
-
-
-<script src="/js/schemes/pisces.js"></script>
-
-
-<script src="/js/next-boot.js"></script>
-
-
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
 
 
   
-
-
-
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
 
   
-<script src="/js/local-search.js"></script>
+  <script class="next-config" data-name="pdf" type="application/json">{"object_url":{"url":"https://cdnjs.cloudflare.com/ajax/libs/pdfobject/2.2.8/pdfobject.min.js","integrity":"sha256-tu9j5pBilBQrWSDePOOajCUdz6hWsid/lBNzK4KgEPM="},"url":"/lib/pdf/web/viewer.html"}</script>
+  <script src="/js/third-party/tags/pdf.js"></script>
 
 
-
-
-
-
-
-
-
-
-
-<script>
-if (document.querySelectorAll('pre.mermaid').length) {
-  NexT.utils.getScript('//cdn.jsdelivr.net/npm/mermaid@8/dist/mermaid.min.js', () => {
-    mermaid.initialize({
-      theme    : 'forest',
-      logLevel : 3,
-      flowchart: { curve     : 'linear' },
-      gantt    : { axisFormat: '%m/%d/%Y' },
-      sequence : { actorMargin: 50 }
-    });
-  }, window.mermaid);
-}
-</script>
 
 
   
 
-  
+
+
+
 
 </body>
 </html>
