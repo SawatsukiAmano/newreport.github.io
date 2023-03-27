@@ -64,6 +64,6 @@ https://newreport.top/categories/golang/
 https://newreport.top/categories/kubernetes-docker-podman/
 https://newreport.top/categories/linux/
 https://newreport.top/categories/timeline/
-https://newreport.top/categories/python/
 https://newreport.top/categories/linux/rhel8%E6%89%8B%E5%86%8C/
+https://newreport.top/categories/python/
 https://newreport.top/categories/python/python3-%E6%89%8B%E5%86%8C/
