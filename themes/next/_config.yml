@@ -927,10 +927,10 @@ images: images
 # For more information: https://github.com/rqh656418510/hexo-next-darkmode, https://github.com/sandoche/Darkmode.js
 darkmode_js:
   enable: true
-  bottom: 'unset' # default: '32px'
-  right: '64px' # default: '32px'
-  left: '32px' # default: 'unset'
-  time: '0.5s' # default: '0.3s'
+  bottom: '32px' # default: '32px'
+  right: '32px' # default: '32px'
+  left: 'unset' # default: 'unset'
+  time: '0.3s' # default: '0.3s'
   mixColor: 'transparent' # default: '#fff'
   backgroundColor: 'transparent' # default: '#fff'
   buttonColorDark: '#100f2c' # default: '#100f2c'
