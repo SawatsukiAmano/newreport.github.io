@@ -1,0 +1,981 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 7.0.0-rc1">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha256-/4UQcSmErDzPCMAiuOiWPVVsNN2s3ZY/NsmXNcj0IFc=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/themes/blue/pace-theme-material.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"newreport.top","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.15.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":"mac"},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":true,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":{"gitalk":{"order":-2}}},"stickytabs":true,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="本想用 freenas 或者是黑群晖这些基于 linux 的来搭建，但是大部分 nas 系统没有虚拟机，黑裙有但不稳定，白裙那配置和价格，算了算了。     用 pve 或者 exsi 又太重了，我的需求仅仅是下 BT&#x2F;PT 和存储一些项目文件，docker 跑些应用内网穿透出去就可，而且虚拟化平台连接 WiFi 是个问题。     选来选去，看着 b 站知乎一堆推荐如上 NAS 的，">
+<meta property="og:type" content="article">
+<meta property="og:title" content="WIN NAS 的安装及使用">
+<meta property="og:url" content="https://newreport.top/2023-03-23/windows-server-2022-nas-init/index.html">
+<meta property="og:site_name" content="NewReport">
+<meta property="og:description" content="本想用 freenas 或者是黑群晖这些基于 linux 的来搭建，但是大部分 nas 系统没有虚拟机，黑裙有但不稳定，白裙那配置和价格，算了算了。     用 pve 或者 exsi 又太重了，我的需求仅仅是下 BT&#x2F;PT 和存储一些项目文件，docker 跑些应用内网穿透出去就可，而且虚拟化平台连接 WiFi 是个问题。     选来选去，看着 b 站知乎一堆推荐如上 NAS 的，">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2023-03-23T16:00:00.000Z">
+<meta property="article:modified_time" content="2023-03-24T10:14:06.989Z">
+<meta property="article:author" content="haruki">
+<meta property="article:tag" content="NAS">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://newreport.top/2023-03-23/windows-server-2022-nas-init/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://newreport.top/2023-03-23/windows-server-2022-nas-init/","path":"2023-03-23/windows-server-2022-nas-init/","title":"WIN NAS 的安装及使用"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>WIN NAS 的安装及使用 | NewReport</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<link rel="alternate" href="/atom.xml" title="NewReport" type="application/atom+xml">
+<style>.darkmode--activated{--body-bg-color:#282828;--content-bg-color:#333;--card-bg-color:#555;--text-color:#ccc;--blockquote-color:#bbb;--link-color:#ccc;--link-hover-color:#eee;--brand-color:#ddd;--brand-hover-color:#ddd;--table-row-odd-bg-color:#282828;--table-row-hover-bg-color:#363636;--menu-item-bg-color:#555;--btn-default-bg:#222;--btn-default-color:#ccc;--btn-default-border-color:#555;--btn-default-hover-bg:#666;--btn-default-hover-color:#ccc;--btn-default-hover-border-color:#666;--highlight-background:#282b2e;--highlight-foreground:#a9b7c6;--highlight-gutter-background:#34393d;--highlight-gutter-foreground:#9ca9b6}.darkmode--activated img{opacity:.75}.darkmode--activated img:hover{opacity:.9}.darkmode--activated code{color:#69dbdc;background:0 0}button.darkmode-toggle{z-index:9999}.darkmode-ignore,img{display:flex!important}.beian img{display:inline-block!important}</style></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">NewReport</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li><li class="menu-item menu-item-sitemap"><a href="/sitemap.xml" rel="section"><i class="fa fa-sitemap fa-fw"></i>站点地图</a></li><li class="menu-item menu-item-友链"><a href="/links/" rel="section"><i class="fa fa-user fa-fw"></i>友链</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%A1%AC%E4%BB%B6"><span class="nav-number">1.</span> <span class="nav-text">硬件</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE"><span class="nav-number">1.1.</span> <span class="nav-text">配置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BE%9B%E7%94%B5"><span class="nav-number">1.1.1.</span> <span class="nav-text">供电</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%B9%E9%87%8F%E5%92%8C%E9%80%9F%E5%BA%A6"><span class="nav-number">1.2.</span> <span class="nav-text">容量和速度</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#PCIE"><span class="nav-number">1.2.1.</span> <span class="nav-text">PCIE</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9C%BA%E7%AE%B1"><span class="nav-number">1.2.2.</span> <span class="nav-text">机箱</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%BB%E6%9D%BF"><span class="nav-number">1.2.3.</span> <span class="nav-text">主板</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%A1%AC%E7%9B%98%E5%88%86%E9%85%8D"><span class="nav-number">1.3.</span> <span class="nav-text">硬盘分配</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85"><span class="nav-number">2.</span> <span class="nav-text">系统安装</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Intel-%E9%A9%B1%E5%8A%A8"><span class="nav-number">2.1.</span> <span class="nav-text">Intel 驱动</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F"><span class="nav-number">2.2.</span> <span class="nav-text">内网穿透</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BC%80%E6%9C%BA%E8%87%AA%E5%8A%A8%E7%99%BB%E5%BD%95"><span class="nav-number">2.3.</span> <span class="nav-text">开机自动登录</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#WSL2"><span class="nav-number">2.4.</span> <span class="nav-text">WSL2</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%BA%94%E7%94%A8"><span class="nav-number">3.</span> <span class="nav-text">应用</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F"><span class="nav-number">3.1.</span> <span class="nav-text">应用程序</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Docker-%E5%86%85%E7%BD%91%E6%9C%8D%E5%8A%A1"><span class="nav-number">3.2.</span> <span class="nav-text">Docker 内网服务</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Docker-%E5%85%AC%E7%BD%91%E6%9C%8D%E5%8A%A1"><span class="nav-number">3.3.</span> <span class="nav-text">Docker 公网服务</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#VS-Code-%E6%8F%92%E4%BB%B6"><span class="nav-number">3.4.</span> <span class="nav-text">VS Code 插件</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="haruki"
+      src="/images/haruki-avatar.jpg">
+  <p class="site-author-name" itemprop="name">haruki</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">25</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">9</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">29</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/newreport" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;newreport" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:haruki959@qq.com" title="E-Mail → mailto:haruki959@qq.com" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://www.yuque.com/newreport" title="YuQue → https:&#x2F;&#x2F;www.yuque.com&#x2F;newreport" rel="noopener me" target="_blank"><i class="fab iconfont app-lark_grey fa-fw"></i>YuQue</a>
+      </span>
+  </div>
+
+        </div>
+      </div>
+        <div class="back-to-top animated" role="button" aria-label="返回顶部">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://newreport.top/2023-03-23/windows-server-2022-nas-init/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/haruki-avatar.jpg">
+      <meta itemprop="name" content="haruki">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="NewReport">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="WIN NAS 的安装及使用 | NewReport">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          WIN NAS 的安装及使用
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2023-03-24 00:00:00 / 修改时间：18:14:06" itemprop="dateCreated datePublished" datetime="2023-03-24T00:00:00+08:00">2023-03-24</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/timeline/" itemprop="url" rel="index"><span itemprop="name">timeline</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>1.6k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>5 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <blockquote>
+<p>本想用 freenas 或者是黑群晖这些基于 linux 的来搭建，但是大部分 nas 系统没有虚拟机，黑裙有但不稳定，白裙那配置和价格，算了算了。  </p>
+</blockquote>
+<blockquote>
+<p>用 pve 或者 exsi 又太重了，我的需求仅仅是下 BT&#x2F;PT 和存储一些项目文件，docker 跑些应用内网穿透出去就可，而且虚拟化平台连接 WiFi 是个问题。  </p>
+</blockquote>
+<blockquote>
+<p>选来选去，看着 b 站知乎一堆推荐如上 NAS 的，自己装了好几个用了下，不太行，最后看见有人推荐 WIN NAS，我也问了下玩 NAS 的朋友，也用的 WIN 做 NAS，遂开装。</p>
+</blockquote>
+<blockquote>
+<p>系统直接选 WIN Server 2022，驱动装好可以连 WIFI，机器直接丢阳台或者隔墙，WIFI6 日常用速度肯定够的，虚拟机有 hyper-v，存储有自带的存储池，可以做 refs（单盘 raid5）或者固态加速机械，组多盘 raid 都没问题，有图形化，这配置单 U 功耗顶天 <strong>100W</strong>，闲时还能接屏幕玩下 101 和雀魂都是没问题的，唯一的缺点就是 docker 用起来麻烦点。</p>
+</blockquote>
+<h1 id="硬件"><a href="#硬件" class="headerlink" title="硬件"></a>硬件</h1><h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><table>
+<thead>
+<tr>
+<th>类型</th>
+<th>名称</th>
+<th>价格</th>
+<th>来源</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>CPU</td>
+<td>5700G 8c16t</td>
+<td>0</td>
+<td>ITX 拆机</td>
+</tr>
+<tr>
+<td>散热</td>
+<td>利民 AXP120</td>
+<td>0</td>
+<td>ITX 拆机</td>
+</tr>
+<tr>
+<td>GPU</td>
+<td>Vega8</td>
+<td>0</td>
+<td>核显</td>
+</tr>
+<tr>
+<td>主板</td>
+<td>华硕 B550m PLUS(WIFI)</td>
+<td>0</td>
+<td>ITX 拆机</td>
+</tr>
+<tr>
+<td>内存</td>
+<td>光威 16G*4 DDR4 3200</td>
+<td>0</td>
+<td>ITX 拆机</td>
+</tr>
+<tr>
+<td>硬盘</td>
+<td>凯侠 RC20</td>
+<td>0</td>
+<td>ITX 拆机</td>
+</tr>
+<tr>
+<td>硬盘 1</td>
+<td>台电 1T</td>
+<td>0</td>
+<td>ITX 拆机</td>
+</tr>
+<tr>
+<td>电源</td>
+<td>海韵 650W</td>
+<td>0</td>
+<td>另一台拆机</td>
+</tr>
+<tr>
+<td>机箱</td>
+<td>长城阿基米德 7B</td>
+<td>360</td>
+<td></td>
+</tr>
+<tr>
+<td>机箱风扇</td>
+<td>id-coolding 14cm</td>
+<td>33</td>
+<td></td>
+</tr>
+<tr>
+<td>合计</td>
+<td>-</td>
+<td>643</td>
+<td></td>
+</tr>
+</tbody></table>
+<span id="more"></span>
+
+<h3 id="供电"><a href="#供电" class="headerlink" title="供电"></a>供电</h3><p>硬盘坏的原因无非有三，供电不稳或不足、碰撞震动及 roll 到了<br>机械 18T 单盘峰值可以到 28W，13*30W 算为 390W，CPU 给电 150W，其他给电 50W，650W 在峰值时刚好，日常没这么高<br>然后是噪音，4k 读写 30min，来到了 50 分贝</p>
+<h2 id="容量和速度"><a href="#容量和速度" class="headerlink" title="容量和速度"></a>容量和速度</h2><blockquote>
+<p>机械盘的随机读基本忽略吧，几 MB&#x2F;s 不用测根本不可能跑满接口<br>然后是顺序读写，13 块盘同时读写不可能，虽然硬盘顺序峰值能到 270MB&#x2F;s，但是日常没那么高，这里按照每块盘 100MB&#x2F;s 算，也算是很高的负载了  </p>
+</blockquote>
+<h3 id="PCIE"><a href="#PCIE" class="headerlink" title="PCIE"></a>PCIE</h3><blockquote>
+<p><a target="_blank" rel="noopener" href="https://www.asus.com/tw/motherboards-components/motherboards/tuf-gaming/tuf-gaming-b550m-plus-wi-fi/techspec/">主板</a><br>3 个 PCIE 槽，PCIE 4.0*16 和 PCIE 3.0*16（芯片组） 和 PCIE 3.0*1（芯片组），硬件接口分别为 PCIE 16、PCIE 16、PCIE 1 展示<br>2 个 M.2 插槽，PCIE 4.0<em>4（CPU 直连）和 PCIE 3.0</em>4（芯片组）<br>4 个 SATA 插槽（芯片组）</p>
+</blockquote>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://www.amd.com/en/product/11171">CPU</a>  有 24 条 PCIE 3.0，第一个 PCIE 占用 16 条，第一个 M.2 占用 4 条，南桥（芯片组）占用 4 条，即</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>PCIE 版本\通道</th>
+<th>x1</th>
+<th>x4</th>
+<th>x8</th>
+<th>x16</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1.0</td>
+<td>250MB&#x2F;s</td>
+<td>1GB&#x2F;s</td>
+<td>2GB&#x2F;s</td>
+<td>4GB&#x2F;s</td>
+</tr>
+<tr>
+<td>2.0</td>
+<td>500MB&#x2F;s</td>
+<td>2GB&#x2F;s</td>
+<td>4GB&#x2F;s</td>
+<td>8GB&#x2F;s</td>
+</tr>
+<tr>
+<td>3.0</td>
+<td>984.6MB&#x2F;s</td>
+<td>3.938GB&#x2F;s</td>
+<td>7.877GB&#x2F;s</td>
+<td>15.754GB&#x2F;s</td>
+</tr>
+<tr>
+<td>4.0</td>
+<td>1.969GB&#x2F;s</td>
+<td>7.877GGB&#x2F;s</td>
+<td>15.754GB&#x2F;s</td>
+<td>31.508GB&#x2F;s</td>
+</tr>
+<tr>
+<td>5.0</td>
+<td>3.9GB&#x2F;s</td>
+<td>15.8GB&#x2F;s</td>
+<td>31.5GB&#x2F;s</td>
+<td>63GB&#x2F;s</td>
+</tr>
+</tbody></table>
+<p>主板直连 PCIE 4.0 *16 和 （M.2）PCIE 4.0 *4  即最大速度约为 <strong>40GB&#x2F;s</strong></p>
+<p>主板南桥 PCIE 3.0 *4，即芯片组的最大速度约为 <strong>4GB&#x2F;s</strong></p>
+<p>CPU 的 PCIE 3.0 *24 最大速度约为 <strong>24GB&#x2F;s</strong></p>
+<p>机械盘速度目前顺序读能到 100MB&#x2F;s，最大不会超过 250MB&#x2F;s，4k 随机速度可以忽略，所以南桥扩展 sata 给机械盘就够用了，日常根本不会跑满</p>
+<h3 id="机箱"><a href="#机箱" class="headerlink" title="机箱"></a><a target="_blank" rel="noopener" href="https://item.jd.com/100022763272.html#product-detail">机箱</a></h3><p>支持 13 个 3.5 盘，2 个 2.5 盘位。最大容量为 60T + 6T  </p>
+<p>机械硬盘（单价 1600） 二手企业级目前最大的机械按 20T 算， 13*20T&#x3D;<strong>2604T（270MB&#x2F;s）</strong>  如果阵列卡做存储池合计速度为 13*270MB&#x2F;s &#x3D;3.5GB&#x2F;s</p>
+<p>sata 固态（单价 800） 固态 2*3T&#x3D;<strong>6T(500MB&#x2F;s)</strong></p>
+<h3 id="主板"><a href="#主板" class="headerlink" title="主板"></a><a target="_blank" rel="noopener" href="https://www.asus.com/tw/motherboards-components/motherboards/tuf-gaming/tuf-gaming-b550m-plus-wi-fi/techspec/">主板</a></h3><ul>
+<li><p>直连 CPU 15GB&#x2F;s(CPU 阈值 24GB&#x2F;s)</p>
+<ul>
+<li>M.2_1（PCIE 4.0x4）：凯侠 RC20 <strong>1T（3GB&#x2F;s）</strong> ，系统盘</li>
+<li>PCIE_1（PCIE 4.0x16）：<a target="_blank" rel="noopener" href="https://item.jd.com/10021208284029.html">扩展卡</a> 拆分为 PCIE 3.0(3GB&#x2F;s) *4 的 4 个 2T 的 3.0 M.2 硬盘，即 <strong>8T（12G&#x2F;s）</strong></li>
+</ul>
+</li>
+<li><p>南桥 234T  合计峰值 3 GB&#x2F;s (芯片组阈值 4GB&#x2F;s）</p>
+<ul>
+<li>M.2_2：台电 **1T（2GB&#x2F;s)**，每天为系统盘做增量备份，速度忽略</li>
+<li>PCIE_2（PCIE 3.0x4）：9271 8i 阵列卡 + 扩展卡 82885t<ul>
+<li>13*20T&#x3D;<strong>260T（1.3GB&#x2F;s）</strong>，即单口 750MB&#x2F;s，总共 2.5GB&#x2F;s，对于机械盘完全够用，机械顺序跑满按 150MB&#x2F;s，13 盘才 2GB&#x2F;s</li>
+</ul>
+</li>
+<li>主板 sata：4 口 6Gb&#x2F;s 接口，即和扩展卡一样<ul>
+<li>2 sata 固态 6T <strong>（1GB&#x2F;s）</strong></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="硬盘分配"><a href="#硬盘分配" class="headerlink" title="硬盘分配"></a>硬盘分配</h2><blockquote>
+<p>使用 9271 8i 阵列卡接入南桥，使用 82885t 作为扩展卡，机械盘以 250MB&#x2F;s 计算，固态以 3GB&#x2F;s 计算，机械盘按 14T 算</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>存储池</th>
+<th>硬件</th>
+<th>容量</th>
+<th>速度</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>系统盘</td>
+<td>凯侠 RC20</td>
+<td>1T</td>
+<td>3GB&#x2F;s</td>
+<td>软件默认装系统盘</td>
+</tr>
+<tr>
+<td>系统盘备份</td>
+<td>台电</td>
+<td>1T</td>
+<td>2GB&#x2F;s（日常 0）</td>
+<td>每日备份</td>
+</tr>
+<tr>
+<td>软存储池 1</td>
+<td>2T*2 的 PCIE 3.0 固态</td>
+<td>4T</td>
+<td>6GB&#x2F;s</td>
+<td>开发测试环境数据</td>
+</tr>
+<tr>
+<td>软硬存储池 1</td>
+<td>2T<em>2 的 3.0 固态 + 14T</em>4（硬 raid10） 的机械分层储池</td>
+<td>28T</td>
+<td>6GB&#x2F;s~0.5GB&#x2F;s</td>
+<td>生产环境数据</td>
+</tr>
+<tr>
+<td>硬存储池 1</td>
+<td>14T*4(3+1)&#x3D;42T 的机械盘硬 raid5</td>
+<td>42T</td>
+<td>750MB&#x2F;s</td>
+<td>nas-tools 影视库</td>
+</tr>
+<tr>
+<td>硬存储池 2</td>
+<td>14T*4(3+1)&#x3D;42T 的机械盘硬 raid5</td>
+<td>42T</td>
+<td>750MB&#x2F;s</td>
+<td>内网共享文件</td>
+</tr>
+<tr>
+<td>裸盘机械 1</td>
+<td>NTFS</td>
+<td>14T</td>
+<td>250MB&#x2F;s</td>
+<td>游戏冷备&amp;AI 图库</td>
+</tr>
+<tr>
+<td>裸盘 sata 固态 1</td>
+<td>NTFS</td>
+<td>3T</td>
+<td>500MB&#x2F;s</td>
+<td>游戏</td>
+</tr>
+<tr>
+<td>裸盘 sata 固态 2</td>
+<td>NTS</td>
+<td>3T</td>
+<td>500MB&#x2F;s</td>
+<td>其他文件</td>
+</tr>
+</tbody></table>
+<h1 id="系统安装"><a href="#系统安装" class="headerlink" title="系统安装"></a>系统安装</h1><p><a target="_blank" rel="noopener" href="https://www.microsoft.com/zh-cn/evalcenter/download-windows-server-2022">Windows Server DataCenter 2022</a></p>
+<p><a target="_blank" rel="noopener" href="https://rufus.ie/">写盘工具</a></p>
+<blockquote>
+<p>开机自启路径</p>
+</blockquote>
+<figure class="highlight dos"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">C:\<span class="title">ProgramData</span>\<span class="title">Microsoft</span>\<span class="title">Windows</span>\<span class="title">Start</span> <span class="title">Menu</span>\<span class="title">Programs</span>\<span class="title">Startup</span></span></span><br></pre></td></tr></table></figure>
+<h2 id="Intel-驱动"><a href="#Intel-驱动" class="headerlink" title="Intel 驱动"></a>Intel 驱动</h2><p><a target="_blank" rel="noopener" href="https://www.intel.com/content/www/us/en/support/detect.html">https://www.intel.com/content/www/us/en/support/detect.html</a></p>
+<h2 id="内网穿透"><a href="#内网穿透" class="headerlink" title="内网穿透"></a>内网穿透</h2><p><a target="_blank" rel="noopener" href="https://github.com/ehang-io/nps/releases">nps</a></p>
+<p>新建 bat，然后快捷方式丢到开机路径里</p>
+<h2 id="开机自动登录"><a href="#开机自动登录" class="headerlink" title="开机自动登录"></a>开机自动登录</h2><blockquote>
+<p>win+r 运行 regedit 注册表</p>
+</blockquote>
+<figure class="highlight dos"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">计算机\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\PasswordLess\Device</span><br></pre></td></tr></table></figure>
+<p>DevicePasswordLessBuildVersion 改为 0</p>
+<blockquote>
+<p>win+r 运行 netplwiz，取消掉必须输入选框</p>
+</blockquote>
+<h2 id="WSL2"><a href="#WSL2" class="headerlink" title="WSL2"></a>WSL2</h2><p>在服务器管理里添加角色和功能里打开 hyper-v，然后在命令行输入 wsl –install，之后重启，重启完继续 wsl –install，然后 wsl -l -v 查看版本为 2 即安装成功</p>
+<h1 id="应用"><a href="#应用" class="headerlink" title="应用"></a>应用</h1><h2 id="应用程序"><a href="#应用程序" class="headerlink" title="应用程序"></a>应用程序</h2><table>
+<thead>
+<tr>
+<th>名称</th>
+<th>功能</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><a target="_blank" rel="noopener" href="https://www.7-zip.org/">7z</a></td>
+<td>解压压缩</td>
+<td></td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://docs.docker.com/get-docker/">Docker</a></td>
+<td></td>
+<td>务必装好 WSL2</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://www.todesk.com/download.html">ToDesk</a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://git-scm.com/downloads">Git</a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="http://www.den4b.com/">ReNamer</a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://www.google.com/chrome/">Chrome</a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://pan.baidu.com/download?from=header#win">百度网盘</a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://www.aliyundrive.com/">阿里云盘</a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://115.com/">115 网盘</a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Clash</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://115.com/">WPS</a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://obsproject.com/">OBS</a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://www.yuque.com/download">语雀</a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/icsharpcode/ILSpy/releases">ILSpy</a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://visualstudio.microsoft.com/">VS</a></td>
+<td>.NET、C#、C++ 全家桶</td>
+<td></td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://code.visualstudio.com/Download">VS Code</a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://www.postman.com/">Postmam</a></td>
+<td>api、grpc、socket、mq 调试</td>
+<td></td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://mqttx.app/">MQTT X</a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/qishibo/AnotherRedisDesktopManager/releases">AnotherRedisDesktopManager</a></td>
+<td>redis GUI</td>
+<td></td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://navicat.com/">Navicat</a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://www.jetbrains.com/go/">Goland</a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://www.bandicam.cn/">Bandicam</a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://winscp.net/eng/download.php">WinSCP</a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://voicemeeter.com/">VOICEMEETER</a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://www.qbittorrent.org/download">qBittorrent</a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://telegram.org/">Telegram</a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://www.blender.org/">blender</a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://docs.conda.io/projects/conda/en/stable/user-guide/install/windows.html">conda</a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://www.kookapp.cn/">开黑啦</a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://game.maj-soul.com/1/">雀魂</a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://discord.com/">Discord</a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://www.jianguoyun.com/s/downloads">坚果云</a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://notepad-plus-plus.org/downloads/">Notepad++</a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://getquicker.net/Download">Quicker</a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://example.com/">Live2D</a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://weibo.com/u/1112829033">Adobe</a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://www.snipaste.com/">Sinpaste</a></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h2 id="Docker-内网服务"><a href="#Docker-内网服务" class="headerlink" title="Docker 内网服务"></a>Docker 内网服务</h2><table>
+<thead>
+<tr>
+<th>名称</th>
+<th>功能</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><a target="_blank" rel="noopener" href="https://hub.docker.com/r/portainer/portainer">portainer</a></td>
+<td>docker webui</td>
+<td></td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/stonith404/pingvin-share">pingvin-share</a></td>
+<td>分享网盘</td>
+<td></td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/usememos/memos">memos</a></td>
+<td>便签</td>
+<td></td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://hub.docker.com/_/postgres">postgres</a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://hub.docker.com/_/mariadb">mariadb</a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://hub.docker.com/_/redis">redis</a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://hub.docker.com/_/mongo">mongo</a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://hub.docker.com/_/rabbitmq">rabbitmq</a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/apache/superset">superset</a></td>
+<td>数字看板</td>
+<td></td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/whyour/qinglong">qinglong</a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://hub.docker.com/r/guacamole/guacamole">Guacamole</a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/hr3lxphr6j/bililive-go">bililive</a></td>
+<td>录播</td>
+<td></td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/louislam/uptime-kuma">uptime-kuma</a></td>
+<td>网站监控</td>
+<td></td>
+</tr>
+</tbody></table>
+<h2 id="Docker-公网服务"><a href="#Docker-公网服务" class="headerlink" title="Docker 公网服务"></a>Docker 公网服务</h2><table>
+<thead>
+<tr>
+<th>名称</th>
+<th>功能</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/NginxProxyManager/nginx-proxy-manager">Nginx Proxy Manager</a></td>
+<td>nginx GUI</td>
+<td></td>
+</tr>
+</tbody></table>
+<h2 id="VS-Code-插件"><a href="#VS-Code-插件" class="headerlink" title="VS Code 插件"></a>VS Code 插件</h2>
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/NAS/" rel="tag"># NAS</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2023-03-20/ubuntu-nvidia-install-stable-diffusion-webui/" rel="prev" title="Ubuntu 下 N 卡安装原生  Stable Diffusion Webui 进行 AI 绘画">
+                  <i class="fa fa-chevron-left"></i> Ubuntu 下 N 卡安装原生  Stable Diffusion Webui 进行 AI 绘画
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    <div class="comments gitalk-container"></div>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">haruki</span>
+</div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+    <span title="站点总字数">19k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">1:03</span>
+  </span>
+</div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/medium-zoom/1.0.8/medium-zoom.min.js" integrity="sha256-7PhEpEWEW0XXQ0k6kQrPKwuoIomz8R8IYyuU1Qew4P8=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lozad.js/1.16.0/lozad.min.js" integrity="sha256-mOFREFhqmHeQbXpK2lp4nA3qooVgACfh88fpJftLBbc=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pangu/4.0.7/pangu.min.js" integrity="sha256-j+yj56cdEY2CwkVtGyz18fNybFGpMGJ8JxG3GSyO2+I=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+  <script class="next-config" data-name="mermaid" type="application/json">{"enable":true,"theme":{"light":"default","dark":"dark"},"js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mermaid/9.4.0/mermaid.min.js","integrity":"sha256-3JloMMI/ZQx6ryuhhZTsQJQmGAkXeni6PkshX7UUO2s="}}</script>
+  <script src="/js/third-party/tags/mermaid.js"></script>
+
+
+  <script src="/js/third-party/pace.js"></script>
+
+  
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+<script src="https://unpkg.com/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
+
+<script>
+var options = {
+  bottom: 'unset',
+  right: '64px',
+  left: '32px',
+  time: '0.5s',
+  mixColor: 'transparent',
+  backgroundColor: 'transparent',
+  buttonColorDark: '#100f2c',
+  buttonColorLight: '#fff',
+  saveInCookies: true,
+  label: '🌓',
+  autoMatchOsTheme: true
+}
+const darkmode = new Darkmode(options);
+window.darkmode = darkmode;
+darkmode.showWidget();
+</script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.css" integrity="sha256-AJnUHL7dBv6PGaeyPQJcgQPDjt/Hn/PvYZde1iqfp8U=" crossorigin="anonymous">
+
+<script class="next-config" data-name="gitalk" type="application/json">{"enable":true,"github_id":"newreport","repo":"newreport.github.io","client_id":"455a006066c6a6133196","client_secret":"c925c01067a3e247496e1564c2da1f4d1e150735","admin_user":"newreport","distraction_free_mode":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token","language":null,"js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.min.js","integrity":"sha256-MVK9MGD/XJaGyIghSVrONSnoXoGh3IFxLw0zfvzpxR4="},"path_md5":"a693b299e41698a7ea9b49b269d76881"}</script>
+<script src="/js/third-party/comments/gitalk.js"></script>
+
+</body>
+</html>

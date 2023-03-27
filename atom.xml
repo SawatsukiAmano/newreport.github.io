@@ -18,9 +18,9 @@
   
   <entry>
     <title>WIN NAS 的安装及使用</title>
-    <link href="https://newreport.top/2023-03-24/windows-server-2022-nas-init/"/>
-    <id>https://newreport.top/2023-03-24/windows-server-2022-nas-init/</id>
-    <published>2023-03-24T00:00:00.000Z</published>
+    <link href="https://newreport.top/2023-03-23/windows-server-2022-nas-init/"/>
+    <id>https://newreport.top/2023-03-23/windows-server-2022-nas-init/</id>
+    <published>2023-03-23T16:00:00.000Z</published>
     <updated>2023-03-24T10:14:06.989Z</updated>
     
     
@@ -124,9 +124,9 @@
   
   <entry>
     <title>Ubuntu 下 N 卡安装原生  Stable Diffusion Webui 进行 AI 绘画</title>
-    <link href="https://newreport.top/2023-03-21/ubuntu-nvidia-install-stable-diffusion-webui/"/>
-    <id>https://newreport.top/2023-03-21/ubuntu-nvidia-install-stable-diffusion-webui/</id>
-    <published>2023-03-21T00:00:00.000Z</published>
+    <link href="https://newreport.top/2023-03-20/ubuntu-nvidia-install-stable-diffusion-webui/"/>
+    <id>https://newreport.top/2023-03-20/ubuntu-nvidia-install-stable-diffusion-webui/</id>
+    <published>2023-03-20T16:00:00.000Z</published>
     <updated>2023-03-23T02:47:30.197Z</updated>
     
     
@@ -150,9 +150,9 @@
   
   <entry>
     <title>Ubuntu 和 CentOS 安装 conda 和 gcc 环境</title>
-    <link href="https://newreport.top/2023-02-28/ubuntu-amd-centos-install-conda/"/>
-    <id>https://newreport.top/2023-02-28/ubuntu-amd-centos-install-conda/</id>
-    <published>2023-02-28T00:00:00.000Z</published>
+    <link href="https://newreport.top/2023-02-27/ubuntu-amd-centos-install-conda/"/>
+    <id>https://newreport.top/2023-02-27/ubuntu-amd-centos-install-conda/</id>
+    <published>2023-02-27T16:00:00.000Z</published>
     <updated>2023-03-21T08:37:14.833Z</updated>
     
     
@@ -180,9 +180,9 @@
   
   <entry>
     <title>让 chatgpt 讲故事导致之后对话出现递归</title>
-    <link href="https://newreport.top/2023-02-16/use-chatgpt-storytelling-leads-to-gibberish-in-subsequent-conversations/"/>
-    <id>https://newreport.top/2023-02-16/use-chatgpt-storytelling-leads-to-gibberish-in-subsequent-conversations/</id>
-    <published>2023-02-16T00:00:00.000Z</published>
+    <link href="https://newreport.top/2023-02-15/use-chatgpt-storytelling-leads-to-gibberish-in-subsequent-conversations/"/>
+    <id>https://newreport.top/2023-02-15/use-chatgpt-storytelling-leads-to-gibberish-in-subsequent-conversations/</id>
+    <published>2023-02-15T16:00:00.000Z</published>
     <updated>2023-03-24T10:14:06.993Z</updated>
     
     
@@ -200,9 +200,9 @@
   
   <entry>
     <title>A卡 安装 Stable Diffusion Webui 进行 AI 绘画</title>
-    <link href="https://newreport.top/2023-02-10/amdgpu-install-stable-diffusion-webui/"/>
-    <id>https://newreport.top/2023-02-10/amdgpu-install-stable-diffusion-webui/</id>
-    <published>2023-02-10T00:00:00.000Z</published>
+    <link href="https://newreport.top/2023-02-09/amdgpu-install-stable-diffusion-webui/"/>
+    <id>https://newreport.top/2023-02-09/amdgpu-install-stable-diffusion-webui/</id>
+    <published>2023-02-09T16:00:00.000Z</published>
     <updated>2023-03-23T02:50:59.107Z</updated>
     
     
@@ -234,9 +234,9 @@
   
   <entry>
     <title>Golang 国际化及 CLDR</title>
-    <link href="https://newreport.top/2023-02-09/golang-i18n-CLDR/"/>
-    <id>https://newreport.top/2023-02-09/golang-i18n-CLDR/</id>
-    <published>2023-02-09T00:00:00.000Z</published>
+    <link href="https://newreport.top/2023-02-08/golang-i18n-CLDR/"/>
+    <id>https://newreport.top/2023-02-08/golang-i18n-CLDR/</id>
+    <published>2023-02-08T16:00:00.000Z</published>
     <updated>2023-03-21T08:37:14.833Z</updated>
     
     
@@ -266,9 +266,9 @@
   
   <entry>
     <title>Hexo Next 8 使用阿里图标</title>
-    <link href="https://newreport.top/2023-01-30/use-hexo-next-8-and-ali-iconfont/"/>
-    <id>https://newreport.top/2023-01-30/use-hexo-next-8-and-ali-iconfont/</id>
-    <published>2023-01-30T00:00:00.000Z</published>
+    <link href="https://newreport.top/2023-01-29/use-hexo-next-8-and-ali-iconfont/"/>
+    <id>https://newreport.top/2023-01-29/use-hexo-next-8-and-ali-iconfont/</id>
+    <published>2023-01-29T16:00:00.000Z</published>
     <updated>2023-03-21T08:37:14.833Z</updated>
     
     
@@ -285,9 +285,9 @@
   
   <entry>
     <title>ABP 简介</title>
-    <link href="https://newreport.top/2023-01-10/abp-framework-introductory/"/>
-    <id>https://newreport.top/2023-01-10/abp-framework-introductory/</id>
-    <published>2023-01-10T00:00:01.000Z</published>
+    <link href="https://newreport.top/2023-01-09/abp-framework-introductory/"/>
+    <id>https://newreport.top/2023-01-09/abp-framework-introductory/</id>
+    <published>2023-01-09T16:00:01.000Z</published>
     <updated>2023-03-21T08:37:14.833Z</updated>
     
     
@@ -319,9 +319,9 @@
   
   <entry>
     <title>CentOS Stream 8 安装 node 和 go</title>
-    <link href="https://newreport.top/2023-01-04/centos-stream-8-install-node-and-go/"/>
-    <id>https://newreport.top/2023-01-04/centos-stream-8-install-node-and-go/</id>
-    <published>2023-01-04T00:00:02.000Z</published>
+    <link href="https://newreport.top/2023-01-03/centos-stream-8-install-node-and-go/"/>
+    <id>https://newreport.top/2023-01-03/centos-stream-8-install-node-and-go/</id>
+    <published>2023-01-03T16:00:02.000Z</published>
     <updated>2023-03-21T08:37:14.833Z</updated>
     
     
@@ -340,9 +340,9 @@
   
   <entry>
     <title>CentOS Stream 8 安装 Docker 并连接 Portainer</title>
-    <link href="https://newreport.top/2023-01-04/centos-stream-8-install-docker-and-link-portainer/"/>
-    <id>https://newreport.top/2023-01-04/centos-stream-8-install-docker-and-link-portainer/</id>
-    <published>2023-01-04T00:00:01.000Z</published>
+    <link href="https://newreport.top/2023-01-03/centos-stream-8-install-docker-and-link-portainer/"/>
+    <id>https://newreport.top/2023-01-03/centos-stream-8-install-docker-and-link-portainer/</id>
+    <published>2023-01-03T16:00:01.000Z</published>
     <updated>2023-03-21T08:37:14.833Z</updated>
     
     
@@ -366,9 +366,9 @@
   
   <entry>
     <title>beego 拦截器及 CORS</title>
-    <link href="https://newreport.top/2022-11-27/beego-filter-cors/"/>
-    <id>https://newreport.top/2022-11-27/beego-filter-cors/</id>
-    <published>2022-11-27T00:00:00.000Z</published>
+    <link href="https://newreport.top/2022-11-26/beego-filter-cors/"/>
+    <id>https://newreport.top/2022-11-26/beego-filter-cors/</id>
+    <published>2022-11-26T16:00:00.000Z</published>
     <updated>2023-03-21T08:37:14.833Z</updated>
     
     
@@ -391,9 +391,9 @@
   
   <entry>
     <title>Cloudflare 301 跳转</title>
-    <link href="https://newreport.top/2022-09-04/cloudflare-301-url/"/>
-    <id>https://newreport.top/2022-09-04/cloudflare-301-url/</id>
-    <published>2022-09-04T00:00:00.000Z</published>
+    <link href="https://newreport.top/2022-09-03/cloudflare-301-url/"/>
+    <id>https://newreport.top/2022-09-03/cloudflare-301-url/</id>
+    <published>2022-09-03T16:00:00.000Z</published>
     <updated>2023-03-21T08:37:14.833Z</updated>
     
     
@@ -420,9 +420,9 @@
   
   <entry>
     <title>Kubernetes 1.24 内网部署</title>
-    <link href="https://newreport.top/2022-07-27/kubernetes-1-24-inside-install/"/>
-    <id>https://newreport.top/2022-07-27/kubernetes-1-24-inside-install/</id>
-    <published>2022-07-27T00:00:01.000Z</published>
+    <link href="https://newreport.top/2022-07-26/kubernetes-1-24-inside-install/"/>
+    <id>https://newreport.top/2022-07-26/kubernetes-1-24-inside-install/</id>
+    <published>2022-07-26T16:00:01.000Z</published>
     <updated>2023-03-21T08:37:14.833Z</updated>
     
     
@@ -449,9 +449,9 @@
   
   <entry>
     <title>列表简介</title>
-    <link href="https://newreport.top/2021-06-23/list-introduction/"/>
-    <id>https://newreport.top/2021-06-23/list-introduction/</id>
-    <published>2021-06-23T00:00:00.000Z</published>
+    <link href="https://newreport.top/2021-06-22/list-introduction/"/>
+    <id>https://newreport.top/2021-06-22/list-introduction/</id>
+    <published>2021-06-22T16:00:00.000Z</published>
     <updated>2023-03-21T08:37:14.833Z</updated>
     
     
@@ -471,9 +471,9 @@
   
   <entry>
     <title>变量和简单数据类型</title>
-    <link href="https://newreport.top/2021-06-22/variables-and-simple-data-types/"/>
-    <id>https://newreport.top/2021-06-22/variables-and-simple-data-types/</id>
-    <published>2021-06-22T00:00:00.000Z</published>
+    <link href="https://newreport.top/2021-06-21/variables-and-simple-data-types/"/>
+    <id>https://newreport.top/2021-06-21/variables-and-simple-data-types/</id>
+    <published>2021-06-21T16:00:00.000Z</published>
     <updated>2023-03-21T08:37:14.833Z</updated>
     
     
@@ -492,9 +492,9 @@
   
   <entry>
     <title>Python 基础知识</title>
-    <link href="https://newreport.top/2021-06-21/python-basic-knowledge/"/>
-    <id>https://newreport.top/2021-06-21/python-basic-knowledge/</id>
-    <published>2021-06-21T00:00:00.000Z</published>
+    <link href="https://newreport.top/2021-06-20/python-basic-knowledge/"/>
+    <id>https://newreport.top/2021-06-20/python-basic-knowledge/</id>
+    <published>2021-06-20T16:00:00.000Z</published>
     <updated>2023-03-21T08:37:14.833Z</updated>
     
     
@@ -518,9 +518,9 @@
   
   <entry>
     <title>图床&quot;永久链&quot;</title>
-    <link href="https://newreport.top/2021-01-06/img-make/"/>
-    <id>https://newreport.top/2021-01-06/img-make/</id>
-    <published>2021-01-06T00:00:01.000Z</published>
+    <link href="https://newreport.top/2021-01-05/img-make/"/>
+    <id>https://newreport.top/2021-01-05/img-make/</id>
+    <published>2021-01-05T16:00:01.000Z</published>
     <updated>2023-03-21T08:37:14.833Z</updated>
     
     
@@ -539,9 +539,9 @@
   
   <entry>
     <title>云函数</title>
-    <link href="https://newreport.top/2021-01-05/function-cloud/"/>
-    <id>https://newreport.top/2021-01-05/function-cloud/</id>
-    <published>2021-01-05T00:00:02.000Z</published>
+    <link href="https://newreport.top/2021-01-04/function-cloud/"/>
+    <id>https://newreport.top/2021-01-04/function-cloud/</id>
+    <published>2021-01-04T16:00:02.000Z</published>
     <updated>2023-03-21T08:37:14.833Z</updated>
     
     
@@ -559,9 +559,9 @@
   
   <entry>
     <title>C# 基础</title>
-    <link href="https://newreport.top/2021-01-05/c-sharp-base/"/>
-    <id>https://newreport.top/2021-01-05/c-sharp-base/</id>
-    <published>2021-01-05T00:00:01.000Z</published>
+    <link href="https://newreport.top/2021-01-04/c-sharp-base/"/>
+    <id>https://newreport.top/2021-01-04/c-sharp-base/</id>
+    <published>2021-01-04T16:00:01.000Z</published>
     <updated>2023-03-21T08:37:14.833Z</updated>
     
     
@@ -583,9 +583,9 @@
   
   <entry>
     <title>域名的使用</title>
-    <link href="https://newreport.top/2021-01-05/make-domainname/"/>
-    <id>https://newreport.top/2021-01-05/make-domainname/</id>
-    <published>2021-01-05T00:00:01.000Z</published>
+    <link href="https://newreport.top/2021-01-04/make-domainname/"/>
+    <id>https://newreport.top/2021-01-04/make-domainname/</id>
+    <published>2021-01-04T16:00:01.000Z</published>
     <updated>2023-03-21T08:37:14.833Z</updated>
     
     
