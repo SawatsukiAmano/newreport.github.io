@@ -6,7 +6,7 @@
   <link href="https://newreport.top/atom.xml" rel="self"/>
   
   <link href="https://newreport.top/"/>
-  <updated>2023-03-24T10:14:06.989Z</updated>
+  <updated>2023-03-27T08:24:45.446Z</updated>
   <id>https://newreport.top/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://newreport.top/2023-03-23/windows-server-2022-nas-init/"/>
     <id>https://newreport.top/2023-03-23/windows-server-2022-nas-init/</id>
     <published>2023-03-23T16:00:00.000Z</published>
-    <updated>2023-03-24T10:14:06.989Z</updated>
+    <updated>2023-03-27T08:24:45.446Z</updated>
     
     
     <summary type="html">&lt;blockquote&gt;
@@ -88,6 +88,12 @@
 &lt;td&gt;ITX 拆机&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
+&lt;td&gt;硬盘 2&lt;/td&gt;
+&lt;td&gt;银河 16T&lt;/td&gt;
+&lt;td&gt;990&lt;/td&gt;
+&lt;td&gt;tb&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
 &lt;td&gt;电源&lt;/td&gt;
 &lt;td&gt;海韵 650W&lt;/td&gt;
 &lt;td&gt;0&lt;/td&gt;
@@ -96,19 +102,19 @@
 &lt;tr&gt;
 &lt;td&gt;机箱&lt;/td&gt;
 &lt;td&gt;长城阿基米德 7B&lt;/td&gt;
-&lt;td&gt;360&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;261&lt;/td&gt;
+&lt;td&gt;pdd&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;机箱风扇&lt;/td&gt;
 &lt;td&gt;id-coolding 14cm&lt;/td&gt;
 &lt;td&gt;33&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;jd&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;合计&lt;/td&gt;
 &lt;td&gt;-&lt;/td&gt;
-&lt;td&gt;643&lt;/td&gt;
+&lt;td&gt;1283&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;&lt;/table&gt;</summary>
