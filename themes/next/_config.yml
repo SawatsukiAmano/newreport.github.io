@@ -42,7 +42,7 @@ custom_file_path:
 scheme: Gemini
 
 # Dark Mode
-darkmode: false
+darkmode: true
 
 
 # ---------------------------------------------------------------
@@ -634,14 +634,14 @@ motion:
 # Progress bar in the top during page loading.
 # For more information: https://github.com/CodeByZach/pace
 pace:
-  enable: false
+  enable: true
   # All available colors:
   # black | blue | green | orange | pink | purple | red | silver | white | yellow
   color: blue
   # All available themes:
   # big-counter | bounce | barber-shop | center-atom | center-circle | center-radar | center-simple
   # corner-indicator | fill-left | flat-top | flash | loading-bar | mac-osx | material | minimal
-  theme: material
+  theme:  material
 
 # Generate a ribbon in your website with HTML5 canvas.
 # For more information: https://github.com/hustcc/ribbon.js
@@ -673,8 +673,8 @@ comments:
     #disqus:
     #  text: Load Disqus
     #  order: -1
-    #gitalk:
-    #  order: -2
+    gitalk:
+      order: -2
 
 # Disqus
 # For more information: https://disqus.com
@@ -713,7 +713,7 @@ livere_uid: # <your_uid>
 gitalk:
   enable: true
   github_id: newreport # GitHub repo owner
-  repo: https://github.com/newreport/newreport.github.io.git # Repository name to store issues
+  repo: newreport.github.io # Repository name to store issues
   client_id: 455a006066c6a6133196 # GitHub Application Client ID
   client_secret: c925c01067a3e247496e1564c2da1f4d1e150735 # GitHub Application Client Secret
   admin_user: newreport # GitHub repo owner and collaborators, only these guys can initialize gitHub issues
