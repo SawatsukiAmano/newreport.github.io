@@ -30,7 +30,7 @@
     "hexo-server": "^3.0.0",
     "hexo-theme-landscape": "^0.0.3",
     "hexo-word-counter": "^0.1.0",
-    "lint-md": "^0.0.1",
+    "lint-md": "^0.2.0",
     "prismjs": "^1.29.0"
   }
 }
