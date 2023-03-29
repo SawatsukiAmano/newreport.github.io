@@ -6,7 +6,7 @@
   <link href="https://newreport.top/atom.xml" rel="self"/>
   
   <link href="https://newreport.top/"/>
-  <updated>2023-03-27T08:24:45.446Z</updated>
+  <updated>2023-03-29T08:03:40.149Z</updated>
   <id>https://newreport.top/</id>
   
   <author>
@@ -17,11 +17,135 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Linux 配置 SSH Key</title>
+    <link href="https://newreport.top/2023-03-29/linux-setting-ssh-key/"/>
+    <id>https://newreport.top/2023-03-29/linux-setting-ssh-key/</id>
+    <published>2023-03-29T16:00:00.000Z</published>
+    <updated>2023-03-29T08:03:40.149Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;ol&gt;
+&lt;li&gt;putty 生成 key&lt;/li&gt;
+&lt;li&gt;允许 root 密钥登陆&lt;ol&gt;
+&lt;li&gt;&lt;blockquote&gt;
+&lt;p&gt;&amp;#x2F;etc&amp;#x2F;ssh&amp;#x2F;sshd_config</summary>
+        
+      
+    
+    
+    
+    <category term="linux" scheme="https://newreport.top/categories/linux/"/>
+    
+    
+    <category term="SSH" scheme="https://newreport.top/tags/SSH/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Ubuntu 2204 安装 Docker</title>
+    <link href="https://newreport.top/2023-03-28/ubuntu-2204-install-docker-and-link-portainer/"/>
+    <id>https://newreport.top/2023-03-28/ubuntu-2204-install-docker-and-link-portainer/</id>
+    <published>2023-03-28T16:00:02.000Z</published>
+    <updated>2023-03-29T08:03:50.353Z</updated>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&quot;https://docs.docker.com/engine/install/ubuntu/&quot;&gt;https://docs.docker.com/engine/install/ubuntu/&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="kubernetes/docker/podman" scheme="https://newreport.top/categories/kubernetes-docker-podman/"/>
+    
+    
+    <category term="Docker" scheme="https://newreport.top/tags/Docker/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Ubuntu 安装 X11 和 Chrome 并远程（openai）</title>
+    <link href="https://newreport.top/2023-03-28/ubuntu-install-x11-chrome-remote-openai/"/>
+    <id>https://newreport.top/2023-03-28/ubuntu-install-x11-chrome-remote-openai/</id>
+    <published>2023-03-28T16:00:01.000Z</published>
+    <updated>2023-03-29T09:32:58.694Z</updated>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;安装-chrome&quot;&gt;&lt;a href=&quot;#安装-chrome&quot; class=&quot;headerlink&quot; title=&quot;安装 chrome&quot;&gt;&lt;/a&gt;安装 chrome&lt;/h1&gt;</summary>
+    
+    
+    
+    <category term="linux" scheme="https://newreport.top/categories/linux/"/>
+    
+    
+    <category term="Docker" scheme="https://newreport.top/tags/Docker/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Docker 迁移</title>
+    <link href="https://newreport.top/2023-03-28/docker-migration/"/>
+    <id>https://newreport.top/2023-03-28/docker-migration/</id>
+    <published>2023-03-28T16:00:00.000Z</published>
+    <updated>2023-03-29T08:28:33.976Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span</summary>
+        
+      
+    
+    
+    
+    <category term="kubernetes/docker/podman" scheme="https://newreport.top/categories/kubernetes-docker-podman/"/>
+    
+    
+    <category term="Docker" scheme="https://newreport.top/tags/Docker/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>WSL2 迁移 Docker</title>
+    <link href="https://newreport.top/2023-03-27/docker-transfer-in-wsl2/"/>
+    <id>https://newreport.top/2023-03-27/docker-transfer-in-wsl2/</id>
+    <published>2023-03-27T16:00:00.000Z</published>
+    <updated>2023-03-29T07:03:38.267Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;迁移前关闭 Docker Desktop&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;figure class=&quot;highlight dos&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span</summary>
+        
+      
+    
+    
+    
+    <category term="kubernetes/docker/podman" scheme="https://newreport.top/categories/kubernetes-docker-podman/"/>
+    
+    
+    <category term="Docker" scheme="https://newreport.top/tags/Docker/"/>
+    
+    <category term="WSL2" scheme="https://newreport.top/tags/WSL2/"/>
+    
+  </entry>
+  
+  <entry>
     <title>WIN NAS 的安装及使用</title>
     <link href="https://newreport.top/2023-03-23/windows-server-2022-nas-init/"/>
     <id>https://newreport.top/2023-03-23/windows-server-2022-nas-init/</id>
     <published>2023-03-23T16:00:00.000Z</published>
-    <updated>2023-03-27T08:24:45.446Z</updated>
+    <updated>2023-03-29T08:50:48.249Z</updated>
     
     
     <summary type="html">&lt;blockquote&gt;
@@ -94,10 +218,16 @@
 &lt;td&gt;tb&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
+&lt;td&gt;硬盘3&lt;/td&gt;
+&lt;td&gt;广威长江256G&lt;/td&gt;
+&lt;td&gt;0&lt;/td&gt;
+&lt;td&gt;MATX拆机&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
 &lt;td&gt;电源&lt;/td&gt;
 &lt;td&gt;海韵 650W&lt;/td&gt;
 &lt;td&gt;0&lt;/td&gt;
-&lt;td&gt;另一台拆机&lt;/td&gt;
+&lt;td&gt;MATX拆机&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;机箱&lt;/td&gt;
@@ -155,11 +285,11 @@
   </entry>
   
   <entry>
-    <title>Ubuntu 和 CentOS 安装 conda 和 gcc 环境</title>
+    <title>Ubuntu 和 CentOS 安装 Conda 和 GCC 环境</title>
     <link href="https://newreport.top/2023-02-27/ubuntu-amd-centos-install-conda/"/>
     <id>https://newreport.top/2023-02-27/ubuntu-amd-centos-install-conda/</id>
     <published>2023-02-27T16:00:00.000Z</published>
-    <updated>2023-03-21T08:37:14.833Z</updated>
+    <updated>2023-03-29T07:54:00.546Z</updated>
     
     
       
@@ -185,11 +315,11 @@
   </entry>
   
   <entry>
-    <title>让 chatgpt 讲故事导致之后对话出现递归</title>
+    <title>让 ChatGPT 讲故事导致之后对话出现递归</title>
     <link href="https://newreport.top/2023-02-15/use-chatgpt-storytelling-leads-to-gibberish-in-subsequent-conversations/"/>
     <id>https://newreport.top/2023-02-15/use-chatgpt-storytelling-leads-to-gibberish-in-subsequent-conversations/</id>
     <published>2023-02-15T16:00:00.000Z</published>
-    <updated>2023-03-24T10:14:06.993Z</updated>
+    <updated>2023-03-29T07:54:02.290Z</updated>
     
     
     <summary type="html">&lt;h2 id=&quot;You&quot;&gt;&lt;a href=&quot;#You&quot; class=&quot;headerlink&quot; title=&quot;You&quot;&gt;&lt;/a&gt;You&lt;/h2&gt;&lt;p&gt;讲个故事&lt;/p&gt;
@@ -324,11 +454,11 @@
   </entry>
   
   <entry>
-    <title>CentOS Stream 8 安装 node 和 go</title>
+    <title>CentOS Stream 8 安装 Node 和 Go</title>
     <link href="https://newreport.top/2023-01-03/centos-stream-8-install-node-and-go/"/>
     <id>https://newreport.top/2023-01-03/centos-stream-8-install-node-and-go/</id>
     <published>2023-01-03T16:00:02.000Z</published>
-    <updated>2023-03-21T08:37:14.833Z</updated>
+    <updated>2023-03-29T07:47:19.595Z</updated>
     
     
     <summary type="html">&lt;h1 id=&quot;安装-node-和-npm&quot;&gt;&lt;a href=&quot;#安装-node-和-npm&quot; class=&quot;headerlink&quot; title=&quot;安装 node 和 npm&quot;&gt;&lt;/a&gt;安装 node 和 npm&lt;/h1&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;yum install -y nodejs npm  &lt;span class=&quot;comment&quot;&gt;# yum 安装node和npm&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;node -v &lt;span class=&quot;comment&quot;&gt;# 查看 node 版本&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;npm install -g n &lt;span class=&quot;comment&quot;&gt;# 安装 n 工具&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;n stable &lt;span class=&quot;comment&quot;&gt;# 更新 node 到最新稳定版本&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# n latest # 更新 node 到最新版&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# bash # 刷新bash&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;node -v &lt;span class=&quot;comment&quot;&gt;# 查看 node 已经更新至新版&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;npm install -g yarn &lt;span class=&quot;comment&quot;&gt;# 安装 yarn&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;yarn -v &lt;span class=&quot;comment&quot;&gt;# 查看 yarn 版本&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;yarn add vite &lt;span class=&quot;comment&quot;&gt;# 安装 vite&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
@@ -371,11 +501,11 @@
   </entry>
   
   <entry>
-    <title>beego 拦截器及 CORS</title>
+    <title>Beego 拦截器及 CORS</title>
     <link href="https://newreport.top/2022-11-26/beego-filter-cors/"/>
     <id>https://newreport.top/2022-11-26/beego-filter-cors/</id>
     <published>2022-11-26T16:00:00.000Z</published>
-    <updated>2023-03-21T08:37:14.833Z</updated>
+    <updated>2023-03-29T07:48:28.840Z</updated>
     
     
     <summary type="html">&lt;blockquote&gt;
@@ -493,132 +623,6 @@
     
     <category term="python3 手册" scheme="https://newreport.top/categories/python/python3-%E6%89%8B%E5%86%8C/"/>
     
-    
-  </entry>
-  
-  <entry>
-    <title>Python 基础知识</title>
-    <link href="https://newreport.top/2021-06-20/python-basic-knowledge/"/>
-    <id>https://newreport.top/2021-06-20/python-basic-knowledge/</id>
-    <published>2021-06-20T16:00:00.000Z</published>
-    <updated>2023-03-21T08:37:14.833Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;运行环境&quot;&gt;&lt;a href=&quot;#运行环境&quot; class=&quot;headerlink&quot; title=&quot;运行环境&quot;&gt;&lt;/a&gt;运行环境&lt;/h1&gt;&lt;p&gt;CentOS8.2 &amp;amp;&amp;amp; Python 3&lt;/p&gt;
-&lt;figure class=&quot;highlight</summary>
-        
-      
-    
-    
-    
-    <category term="python" scheme="https://newreport.top/categories/python/"/>
-    
-    <category term="python3 手册" scheme="https://newreport.top/categories/python/python3-%E6%89%8B%E5%86%8C/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>图床&quot;永久链&quot;</title>
-    <link href="https://newreport.top/2021-01-05/img-make/"/>
-    <id>https://newreport.top/2021-01-05/img-make/</id>
-    <published>2021-01-05T16:00:01.000Z</published>
-    <updated>2023-03-21T08:37:14.833Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;需要准备对象存储及域名，理论”永久链”图床，可在各云服务商或个人服务器间迁移数据&lt;br&gt;如果你是国外的域名，markdown 是国内使用，需要绑定国内第三方 dns，这里以&lt;a href=&quot;https://www.namesilo.com/&quot;&gt;namesilo&lt;/a&gt;域名绑定&lt;a href=&quot;https://www.dnspod.cn/&quot;&gt;dnspod&lt;/a&gt;为例。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="timeline" scheme="https://newreport.top/categories/timeline/"/>
-    
-    
-    <category term="Domain" scheme="https://newreport.top/tags/Domain/"/>
-    
-    <category term="Object Storage" scheme="https://newreport.top/tags/Object-Storage/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>云函数</title>
-    <link href="https://newreport.top/2021-01-04/function-cloud/"/>
-    <id>https://newreport.top/2021-01-04/function-cloud/</id>
-    <published>2021-01-04T16:00:02.000Z</published>
-    <updated>2023-03-21T08:37:14.833Z</updated>
-    
-    
-    <summary type="html">&lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;https://developers.weixin.qq.com/miniprogram/dev/wxcloud/guide/functions.html&quot;&gt;云函数简介&lt;/a&gt;&lt;br&gt;长不看结论：总之就是跑脚本，也可以跑微信的推送等事件。目前我只用它在跑签到脚本。&lt;/p&gt;
-&lt;h1 id=&quot;server-酱&quot;&gt;&lt;a href=&quot;#server-酱&quot; class=&quot;headerlink&quot; title=&quot;server 酱&quot;&gt;&lt;/a&gt;server 酱&lt;/h1&gt;&lt;p&gt;原版 server 酱：&lt;a href=&quot;http://sc.ftqq.com/&quot;&gt;http://sc.ftqq.com/&lt;/a&gt;&lt;br&gt;自搭 server 酱：&lt;a href=&quot;https://www.v2ex.com/t/567927&quot;&gt;https://www.v2ex.com/t/567927&lt;/a&gt;&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="timeline" scheme="https://newreport.top/categories/timeline/"/>
-    
-    
-    <category term="CloudService" scheme="https://newreport.top/tags/CloudService/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>C# 基础</title>
-    <link href="https://newreport.top/2021-01-04/c-sharp-base/"/>
-    <id>https://newreport.top/2021-01-04/c-sharp-base/</id>
-    <published>2021-01-04T16:00:01.000Z</published>
-    <updated>2023-03-21T08:37:14.833Z</updated>
-    
-    
-    <summary type="html">&lt;h1 id=&quot;C-语言及特点&quot;&gt;&lt;a href=&quot;#C-语言及特点&quot; class=&quot;headerlink&quot; title=&quot;C#语言及特点&quot;&gt;&lt;/a&gt;C#语言及特点&lt;/h1&gt;&lt;ul&gt;
-&lt;li&gt;C#是微软公司发布的一种&lt;strong&gt;面向对象&lt;/strong&gt;的、运行于.NET Framework 和 .NET Core (完全开源，跨平台)之上的高级程序设计语言。&lt;/li&gt;
-&lt;li&gt;C#是一种&lt;strong&gt;安全的、稳定的、简单的、优雅的&lt;/strong&gt;，由 C 和 C++衍生出来的面向对象的编程语言。它在继承 C 和 C++的强大功能的同时去掉了一些它们的复杂特性。&lt;/li&gt;
-&lt;li&gt;C#是&lt;strong&gt;面向对象&lt;/strong&gt;的编程语言</summary>
-    
-    
-    
-    <category term="c#" scheme="https://newreport.top/categories/c/"/>
-    
-    
-    <category term="C#" scheme="https://newreport.top/tags/C/"/>
-    
-    <category term=".NET" scheme="https://newreport.top/tags/NET/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>域名的使用</title>
-    <link href="https://newreport.top/2021-01-04/make-domainname/"/>
-    <id>https://newreport.top/2021-01-04/make-domainname/</id>
-    <published>2021-01-04T16:00:01.000Z</published>
-    <updated>2023-03-21T08:37:14.833Z</updated>
-    
-    
-    <summary type="html">&lt;h1 id=&quot;域名服务商&quot;&gt;&lt;a href=&quot;#域名服务商&quot; class=&quot;headerlink&quot; title=&quot;域名服务商&quot;&gt;&lt;/a&gt;域名服务商&lt;/h1&gt;&lt;p&gt;个人站除开 com、net 这两个域名，其他推荐选择国外服务商进行注册。以下仅列举一些我接触过的，还有很多其他的服务商就不一一列举了  &lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;国内&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://wanwang.aliyun.com/&quot;&gt;阿里云万网&lt;/a&gt;：尚可，只提供 com 和 net、tv、cc 这四个域名的隐藏个人信息服务&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.huaweicloud.com/product/domain.html&quot;&gt;华为云 domain&lt;/a&gt;：在企鹅和阿里中间的位置&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://dnspod.cloud.tencent.com/&quot;&gt;腾讯云 dnspod&lt;/a&gt;：我目前所有 com 域名都在这个上面&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://cloud.baidu.com/product/bcd.html&quot;&gt;百度云 BCD&lt;/a&gt;：新用户优惠不好，域名隐私里写的和实际不符&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;国外&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://sg.godaddy.com/&quot;&gt;GoDaddy&lt;/a&gt;：全球最大的域名服务商，当然价格就…也是贵的，隐藏个人信息还要收费&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.namesilo.com/&quot;&gt;namesilo&lt;/a&gt;：价格便宜，比国内的稍微贵一丢丢，所有域名均支持免费 whois 隐藏个人信息&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;</summary>
-    
-    
-    
-    <category term="timeline" scheme="https://newreport.top/categories/timeline/"/>
-    
-    
-    <category term="Domain" scheme="https://newreport.top/tags/Domain/"/>
-    
-    <category term="Git Page" scheme="https://newreport.top/tags/Git-Page/"/>
     
   </entry>
   

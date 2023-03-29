@@ -1,6 +1,97 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Linux 配置 SSH Key</title>
+    <url>/2023-03-29/linux-setting-ssh-key/</url>
+    <content><![CDATA[<ol>
+<li>putty 生成 key</li>
+<li>允许 root 密钥登陆<ol>
+<li><blockquote>
+<p>&#x2F;etc&#x2F;ssh&#x2F;sshd_config </p>
+</blockquote>
+</li>
+<li>取消注释或新增行：PermitRootLogin prohibit-password</li>
+</ol>
+</li>
+<li>上传公钥<ol>
+<li><blockquote>
+<p>~&#x2F;.ssh&#x2F;authorized_keys</p>
+</blockquote>
+</li>
+</ol>
+</li>
+<li>重启 ssh<ol>
+<li><blockquote>
+<p>systemcetl restart sshd</p>
+</blockquote>
+</li>
+</ol>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>linux</category>
+      </categories>
+      <tags>
+        <tag>SSH</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Ubuntu 2204 安装 Docker</title>
+    <url>/2023-03-28/ubuntu-2204-install-docker-and-link-portainer/</url>
+    <content><![CDATA[<blockquote>
+<p><a href="https://docs.docker.com/engine/install/ubuntu/">https://docs.docker.com/engine/install/ubuntu/</a></p>
+</blockquote>
+<span id="more"></span>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 卸载旧版 Docker 和命令行引擎</span></span><br><span class="line">sudo apt-get remove docker docker-engine docker.io containerd runc</span><br><span class="line"></span><br><span class="line">sudo apt-get update</span><br><span class="line"></span><br><span class="line">sudo apt-get upgrade</span><br><span class="line"></span><br><span class="line">sudo apt-get install ca-certificates curl gnupg</span><br><span class="line"></span><br><span class="line">sudo <span class="built_in">mkdir</span> -m 0755 -p /etc/apt/keyrings</span><br><span class="line"></span><br><span class="line">curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="built_in">echo</span> \</span><br><span class="line">  <span class="string">&quot;deb [arch=&quot;</span>$(dpkg --print-architecture)<span class="string">&quot; signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \</span></span><br><span class="line"><span class="string">  &quot;</span>$(. /etc/os-release &amp;&amp; <span class="built_in">echo</span> <span class="string">&quot;<span class="variable">$VERSION_CODENAME</span>&quot;</span>)<span class="string">&quot; stable&quot;</span> | \</span><br><span class="line">  sudo <span class="built_in">tee</span> /etc/apt/sources.list.d/docker.list &gt; /dev/null</span><br><span class="line"></span><br><span class="line">sudo apt-get update</span><br><span class="line"></span><br><span class="line">sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin</span><br><span class="line"></span><br><span class="line">docker images</span><br><span class="line"></span><br><span class="line">docker ps</span><br><span class="line"></span><br><span class="line">docker volumes</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>kubernetes/docker/podman</category>
+      </categories>
+      <tags>
+        <tag>Docker</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Ubuntu 安装 X11 和 Chrome 并远程（openai）</title>
+    <url>/2023-03-28/ubuntu-install-x11-chrome-remote-openai/</url>
+    <content><![CDATA[<h1 id="安装-chrome"><a href="#安装-chrome" class="headerlink" title="安装 chrome"></a>安装 chrome</h1><span id="more"></span>
+<h1 id="安装-Docker"><a href="#安装-Docker" class="headerlink" title="安装 Docker"></a>安装 Docker</h1><p><a href="%5D(../../2023-01-04/centos-stream-8-install-docker-and-link-portainer)">CentOS Stream</a><br><a href="%5D(../../2023-03-29/ubuntu-2204-install-docker-and-link-portainer)">Ubuntu 2204</a></p>
+<h1 id="安装-X11"><a href="#安装-X11" class="headerlink" title="安装 X11"></a>安装 X11</h1><h1 id="安装-VNC-chrome"><a href="#安装-VNC-chrome" class="headerlink" title="安装 VNC chrome"></a>安装 VNC chrome</h1><p><a href="https://hub.docker.com/r/oldiy/chrome-novnc">https://hub.docker.com/r/oldiy/chrome-novnc</a><br><a href="https://hub.docker.com/r/oldiy/firefox-novnc">https://hub.docker.com/r/oldiy/firefox-novnc</a><br><a href="https://hub.docker.com/r/oldiy/firefox-enpass-novnc">https://hub.docker.com/r/oldiy/firefox-enpass-novnc</a></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker run -d --restart=always --name remote-chrome -p 8083:8083 -p 5900:5900 oldiy/chrome-novnc:latest</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>linux</category>
+      </categories>
+      <tags>
+        <tag>Docker</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Docker 迁移</title>
+    <url>/2023-03-28/docker-migration/</url>
+    <content><![CDATA[<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 打包 volume</span></span><br><span class="line">tar -zcvf volumes.tar.gz /var/lib/docker/volumes</span><br><span class="line"></span><br><span class="line"><span class="comment"># 将容器保存为镜像</span></span><br><span class="line">docker commit container-id image-name </span><br><span class="line"></span><br><span class="line"><span class="comment"># 解压 volumes</span></span><br><span class="line">tar zxvf volumes.tar.gz /var/lib/docker</span><br><span class="line"></span><br><span class="line"><span class="comment"># 变更权限</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 加载镜像</span></span><br><span class="line"><span class="built_in">cat</span> image-name.tar | docker load </span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>kubernetes/docker/podman</category>
+      </categories>
+      <tags>
+        <tag>Docker</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>WSL2 迁移 Docker</title>
+    <url>/2023-03-27/docker-transfer-in-wsl2/</url>
+    <content><![CDATA[<blockquote>
+<p>迁移前关闭 Docker Desktop</p>
+</blockquote>
+<figure class="highlight dos"><table><tr><td class="code"><pre><span class="line">wsl --shutdown</span><br><span class="line"></span><br><span class="line">wsl --export docker-desktop D:Docker-desktop.tar</span><br><span class="line">wsl --export docker-desktop-data Ddocker-desktop-data.tar</span><br><span class="line"></span><br><span class="line">wsl --unregister docker-desktop</span><br><span class="line">wsl --unregister docker-desktop-data</span><br><span class="line"></span><br><span class="line">wsl --import docker-desktop D:\wsl D:docker-desktop.tar --version <span class="number">2</span></span><br><span class="line">wsl --import docker-desktop-data D:\wsl D:docker-desktop-data.tar --version <span class="number">2</span></span><br><span class="line"></span><br><span class="line">wsl</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>kubernetes/docker/podman</category>
+      </categories>
+      <tags>
+        <tag>Docker</tag>
+        <tag>WSL2</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>WIN NAS 的安装及使用</title>
     <url>/2023-03-23/windows-server-2022-nas-init/</url>
     <content><![CDATA[<blockquote>
@@ -73,10 +164,16 @@
 <td>tb</td>
 </tr>
 <tr>
+<td>硬盘3</td>
+<td>广威长江256G</td>
+<td>0</td>
+<td>MATX拆机</td>
+</tr>
+<tr>
 <td>电源</td>
 <td>海韵 650W</td>
 <td>0</td>
-<td>另一台拆机</td>
+<td>MATX拆机</td>
 </tr>
 <tr>
 <td>机箱</td>
@@ -230,10 +327,10 @@
 <td></td>
 </tr>
 <tr>
-<td>裸盘3</td>
-<td>机械</td>
+<td>分层层储池</td>
+<td>256G sata+机械</td>
 <td>16T</td>
-<td>250MB&#x2F;s</td>
+<td>500MB&#x2F;s~250MB&#x2F;s</td>
 <td>AI</td>
 <td>√</td>
 </tr>
@@ -564,6 +661,7 @@
 <td></td>
 </tr>
 </tbody></table>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">lsky        docker run -d --restart=always --name lsky -p 40000:80 -v lsky-data:/var/www/html halcyonazure/lsky-pro-docker:latest</span><br><span class="line"></span><br><span class="line">memos       docker run -d --restart=always --name memos -p 40001:5230 -v memos-data:/var/opt/memos neosmemo/memos:latest</span><br><span class="line"></span><br><span class="line">share       docker run -d --restart=always --name share -p 40002:3000 -v share-data:/opt/app/backend/data stonith404/pingvin-share:latest</span><br><span class="line"></span><br><span class="line">alltube     docker run -d --restart=always --name alltube -p 40003:80 rudloff/alltube:latest</span><br><span class="line"></span><br><span class="line">bililive    docker run -d --restart=always --name blive -p 40004:8080 -v blive-data:/srv/bililive chigusa/bililive-go:latest</span><br><span class="line"></span><br><span class="line">qinglong    docker run -d --restart=always --name qinglong -p 40005:5700 -v qinglong-data:/ql/data whyour/qinglong:latest</span><br><span class="line"></span><br><span class="line">kuma        docker run -d --restart=always --name uptime-kuma -p 40006:3001 -v uptime-kuma:/app/data louislam/uptime-kuma:latest</span><br><span class="line"></span><br><span class="line">redis       docker run -d --restart=always --name redis -p 40007:6379 -v redis-data:/data -v redis-conf:/usr/local/etc/redis redis:latest</span><br><span class="line"></span><br><span class="line">mongo       docker run -d --restart=always --name mongo -p 40008:27017 -e MONGO_INITDB_ROOT_USERNAME=admin -e MONGO_INITDB_ROOT_PASSWORD=admin -v mongo-data:/data/db mongo:latest</span><br><span class="line"></span><br><span class="line">postgres    docker run -d --restart=always --name postgres -p 40009:5432 -e POSTGRES_PASSWORD=admin -v postgres-data:/var/lib/postgresql/data postgres:latest</span><br><span class="line"></span><br><span class="line">guacamole   docker run -d --restart=always --name guacamole -p 40010:8080 -v guaca-data:/config jwetzell/guacamole:latest</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 <h2 id="Docker-公网服务器"><a href="#Docker-公网服务器" class="headerlink" title="Docker 公网服务器"></a>Docker 公网服务器</h2><table>
 <thead>
 <tr>
@@ -578,6 +676,8 @@
 <td></td>
 </tr>
 </tbody></table>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm             docker run -d --restart=always --name nginx-proxy-manager  -p 80:80 -p 443:443 -p 81:81 -v npm-data:/data -v npm-letsencrypt:/etc/letsencrypt jc21/nginx-proxy-manager:latest</span><br><span class="line"></span><br><span class="line">portainer       docker run -d --restart=always --name portainer -p 8000:8000 -p 9000:9000 -p 9443:9443 -v poartainer-data:/data -v /var/run/docker.sock:/var/run/docker.sock 	portainer/portainer-ce:latest</span><br><span class="line"></span><br><span class="line">openai-proxy    docker run -d --restart=always --name openai-proxy -p 5333:5333 -e PROXY_DOMAIN=api.openai.com yqchilde/openai-proxy:latest</span><br><span class="line"></span><br><span class="line">remote-chrome   docker run -d --name firefox -p 8083:8083 -p 8083:5900 oldiy/chrome-novnc:latest</span><br></pre></td></tr></table></figure>
+
 <h2 id="VS-Code-插件"><a href="#VS-Code-插件" class="headerlink" title="VS Code 插件"></a>VS Code 插件</h2>]]></content>
       <categories>
         <category>timeline</category>
@@ -599,7 +699,7 @@
       </tags>
   </entry>
   <entry>
-    <title>Ubuntu 和 CentOS 安装 conda 和 gcc 环境</title>
+    <title>Ubuntu 和 CentOS 安装 Conda 和 GCC 环境</title>
     <url>/2023-02-27/ubuntu-amd-centos-install-conda/</url>
     <content><![CDATA[<h1 id="安装-conda"><a href="#安装-conda" class="headerlink" title="安装 conda"></a>安装 conda</h1><blockquote>
 <p>conda 是一个 python 的包和环境管理工具。<br>官网：<a href="https://conda.io/">https://conda.io/</a><br>Download：<a href="https://docs.conda.io/projects/conda/en/stable/user-guide/install/linux.html">https://docs.conda.io/projects/conda/en/stable/user-guide/install/linux.html</a>  </p>
@@ -621,7 +721,7 @@
       </tags>
   </entry>
   <entry>
-    <title>让 chatgpt 讲故事导致之后对话出现递归</title>
+    <title>让 ChatGPT 讲故事导致之后对话出现递归</title>
     <url>/2023-02-15/use-chatgpt-storytelling-leads-to-gibberish-in-subsequent-conversations/</url>
     <content><![CDATA[<h2 id="You"><a href="#You" class="headerlink" title="You"></a>You</h2><p>讲个故事</p>
 <h2 id="ChatGPT"><a href="#ChatGPT" class="headerlink" title="ChatGPT"></a>ChatGPT</h2><p>这是一个关于枫叶花花的故事。枫叶花花是一个小女孩，生活在一座山上的一个村庄里。她每天散步到附近的钢琴店去，从钢琴的键盘中听取音乐，十分喜爱钢琴给她带来的美妙旋律<br>每天早晨，枫叶花花都会去海边来说说话，她会问海洋里美丽的海洋动物，什么有意思的事情发生了，有什么新鲜的事情发生了，而它们也会问她最近发生了什么好玩的事情。<br>有一天，枫叶花花走在海边，突然听到有人将歌声唱起来…… 原来是一对爱侣，他们唱起甜蜜的情歌，满满的幸福。枫叶花花感觉自己有点室息，心中十分开心，便突然勾起她苦涩的情绪……</p>
@@ -849,7 +949,7 @@
       </tags>
   </entry>
   <entry>
-    <title>CentOS Stream 8 安装 node 和 go</title>
+    <title>CentOS Stream 8 安装 Node 和 Go</title>
     <url>/2023-01-03/centos-stream-8-install-node-and-go/</url>
     <content><![CDATA[<h1 id="安装-node-和-npm"><a href="#安装-node-和-npm" class="headerlink" title="安装 node 和 npm"></a>安装 node 和 npm</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">yum install -y nodejs npm  <span class="comment"># yum 安装node和npm</span></span><br><span class="line">node -v <span class="comment"># 查看 node 版本</span></span><br><span class="line">npm install -g n <span class="comment"># 安装 n 工具</span></span><br><span class="line">n stable <span class="comment"># 更新 node 到最新稳定版本</span></span><br><span class="line"><span class="comment"># n latest # 更新 node 到最新版</span></span><br><span class="line"><span class="comment"># bash # 刷新bash</span></span><br><span class="line">node -v <span class="comment"># 查看 node 已经更新至新版</span></span><br><span class="line">npm install -g yarn <span class="comment"># 安装 yarn</span></span><br><span class="line">yarn -v <span class="comment"># 查看 yarn 版本</span></span><br><span class="line">yarn add vite <span class="comment"># 安装 vite</span></span><br></pre></td></tr></table></figure>
 <span id="more"></span>  
@@ -907,7 +1007,7 @@
       </tags>
   </entry>
   <entry>
-    <title>beego 拦截器及 CORS</title>
+    <title>Beego 拦截器及 CORS</title>
     <url>/2022-11-26/beego-filter-cors/</url>
     <content><![CDATA[<blockquote>
 <p>跨域仅为浏览器的安全策略，对于其他形式的 http client（ postman，自己写的 python client 、java client 等 ）无效</p>
@@ -1333,31 +1433,6 @@ func init() &#123;
       </tags>
   </entry>
   <entry>
-    <title>C# 基础</title>
-    <url>/2021-01-04/c-sharp-base/</url>
-    <content><![CDATA[<h1 id="C-语言及特点"><a href="#C-语言及特点" class="headerlink" title="C#语言及特点"></a>C#语言及特点</h1><ul>
-<li>C#是微软公司发布的一种<strong>面向对象</strong>的、运行于.NET Framework 和 .NET Core (完全开源，跨平台)之上的高级程序设计语言。</li>
-<li>C#是一种<strong>安全的、稳定的、简单的、优雅的</strong>，由 C 和 C++衍生出来的面向对象的编程语言。它在继承 C 和 C++的强大功能的同时去掉了一些它们的复杂特性。</li>
-<li>C#是<strong>面向对象</strong>的编程语言<span id="more"></span></li>
-</ul>
-<h1 id="认识-NET-Framework-x2F-NET-Core"><a href="#认识-NET-Framework-x2F-NET-Core" class="headerlink" title="认识 .NET Framework &#x2F; .NET Core"></a>认识 .NET Framework &#x2F; .NET Core</h1><pre class="mermaid">graph LR
-A[.NET平台] -->B(C#语言)
-A[.NET平台] -->C(Visual Basic语言)
-A[.NET平台] -->D(C++语言)
-A[.NET平台] -->E(F#语言)
-A[.NET平台] -->F(...语言)</pre>
-<h1 id="Visual-Studio-安装使用"><a href="#Visual-Studio-安装使用" class="headerlink" title="Visual Studio 安装使用"></a>Visual Studio 安装使用</h1><p><a href="https://visualstudio.microsoft.com/zh-hans/downloads/">https://visualstudio.microsoft.com/zh-hans/downloads/</a></p>
-<h1 id="创建第一个程序"><a href="#创建第一个程序" class="headerlink" title="创建第一个程序"></a>创建第一个程序</h1><p>Windows 窗体应用（.net framwork）</p>
-<figure class="highlight c#"><table><tr><td class="code"><pre><span class="line"><span class="keyword">namespace</span> <span class="title">WindowsFormsApp1</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">partial</span> <span class="keyword">class</span> <span class="title">Form1</span> : <span class="title">Form</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="title">Form1</span>()</span></span><br><span class="line">        &#123;</span><br><span class="line">            InitializeComponent();</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">Label1_Click</span>(<span class="params"><span class="built_in">object</span> sender, EventArgs e</span>)</span></span><br><span class="line">        &#123;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>c#</category>
-      </categories>
-      <tags>
-        <tag>C#</tag>
-        <tag>.NET</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>域名的使用</title>
     <url>/2021-01-04/make-domainname/</url>
     <content><![CDATA[<h1 id="域名服务商"><a href="#域名服务商" class="headerlink" title="域名服务商"></a>域名服务商</h1><p>个人站除开 com、net 这两个域名，其他推荐选择国外服务商进行注册。以下仅列举一些我接触过的，还有很多其他的服务商就不一一列举了  </p>
@@ -1402,6 +1477,31 @@ A[.NET平台] -->F(...语言)</pre>
       <tags>
         <tag>Domain</tag>
         <tag>Git Page</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>C# 基础</title>
+    <url>/2021-01-04/c-sharp-base/</url>
+    <content><![CDATA[<h1 id="C-语言及特点"><a href="#C-语言及特点" class="headerlink" title="C#语言及特点"></a>C#语言及特点</h1><ul>
+<li>C#是微软公司发布的一种<strong>面向对象</strong>的、运行于.NET Framework 和 .NET Core (完全开源，跨平台)之上的高级程序设计语言。</li>
+<li>C#是一种<strong>安全的、稳定的、简单的、优雅的</strong>，由 C 和 C++衍生出来的面向对象的编程语言。它在继承 C 和 C++的强大功能的同时去掉了一些它们的复杂特性。</li>
+<li>C#是<strong>面向对象</strong>的编程语言<span id="more"></span></li>
+</ul>
+<h1 id="认识-NET-Framework-x2F-NET-Core"><a href="#认识-NET-Framework-x2F-NET-Core" class="headerlink" title="认识 .NET Framework &#x2F; .NET Core"></a>认识 .NET Framework &#x2F; .NET Core</h1><pre class="mermaid">graph LR
+A[.NET平台] -->B(C#语言)
+A[.NET平台] -->C(Visual Basic语言)
+A[.NET平台] -->D(C++语言)
+A[.NET平台] -->E(F#语言)
+A[.NET平台] -->F(...语言)</pre>
+<h1 id="Visual-Studio-安装使用"><a href="#Visual-Studio-安装使用" class="headerlink" title="Visual Studio 安装使用"></a>Visual Studio 安装使用</h1><p><a href="https://visualstudio.microsoft.com/zh-hans/downloads/">https://visualstudio.microsoft.com/zh-hans/downloads/</a></p>
+<h1 id="创建第一个程序"><a href="#创建第一个程序" class="headerlink" title="创建第一个程序"></a>创建第一个程序</h1><p>Windows 窗体应用（.net framwork）</p>
+<figure class="highlight c#"><table><tr><td class="code"><pre><span class="line"><span class="keyword">namespace</span> <span class="title">WindowsFormsApp1</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">partial</span> <span class="keyword">class</span> <span class="title">Form1</span> : <span class="title">Form</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="title">Form1</span>()</span></span><br><span class="line">        &#123;</span><br><span class="line">            InitializeComponent();</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">Label1_Click</span>(<span class="params"><span class="built_in">object</span> sender, EventArgs e</span>)</span></span><br><span class="line">        &#123;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>c#</category>
+      </categories>
+      <tags>
+        <tag>C#</tag>
+        <tag>.NET</tag>
       </tags>
   </entry>
   <entry>
@@ -2059,7 +2159,7 @@ A[.NET平台] -->F(...语言)</pre>
       </categories>
   </entry>
   <entry>
-    <title>hexo-next7 食用方法</title>
+    <title>Hexo Next7 食用方法</title>
     <url>/2020-12-20/use-hexo-next-7/</url>
     <content><![CDATA[<h1 id="博客启用（前略环境搭建）"><a href="#博客启用（前略环境搭建）" class="headerlink" title="博客启用（前略环境搭建）"></a>博客启用（前略环境搭建）</h1><p>新建文件夹，之后在其中执行：hexo init。<br>hexo-next7 官方 git：<a href="https://github.com/theme-next/hexo-theme-next">https://github.com/theme-next/hexo-theme-next</a><br>hexo-next8 官方 git：<a href="https://github.com/next-theme/hexo-theme-next">https://github.com/next-theme/hexo-theme-next</a><br>git 配置：npm install –save hexo-deployer-git；多用户指定其一：githubgit config –global user.email “邮箱”和 git config –global user.name “用户名”</p>
 <span id="more"></span>
