@@ -1,5 +1,5 @@
 ---
-title:  Ubuntu 和 CentOS 安装 conda 和 gcc 环境
+title:  Ubuntu 和 CentOS 安装 Conda 和 GCC 环境
 copyright: true
 date: 2023-02-28 00:00:00
 urlname: ubuntu-amd-centos-install-conda

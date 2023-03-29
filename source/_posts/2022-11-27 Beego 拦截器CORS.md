@@ -1,5 +1,5 @@
 ---
-title: beego 拦截器及 CORS
+title: Beego 拦截器及 CORS
 copyright: true
 date: 2022-11-27 00:00:00
 urlname: beego-filter-cors
