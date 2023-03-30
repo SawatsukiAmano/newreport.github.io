@@ -2,6 +2,69 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://newreport.top/2023-02-15/use-chatgpt-storytelling-leads-to-gibberish-in-subsequent-conversations/</loc>
+    
+    <lastmod>2023-03-30</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://newreport.top/2021-06-22/list-introduction/</loc>
+    
+    <lastmod>2023-03-30</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://newreport.top/2021-06-21/variables-and-simple-data-types/</loc>
+    
+    <lastmod>2023-03-30</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://newreport.top/2021-01-03/understand-the-file-system-and-basic-operations/</loc>
+    
+    <lastmod>2023-03-30</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://newreport.top/2021-01-02/run-commands-and-get-help/</loc>
+    
+    <lastmod>2023-03-30</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://newreport.top/2021-01-01/linux-basic-use/</loc>
+    
+    <lastmod>2023-03-30</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://newreport.top/2020-12-31/linux-introduction-and-installation/</loc>
+    
+    <lastmod>2023-03-30</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://newreport.top/2023-03-23/windows-server-2022-nas-init/</loc>
     
     <lastmod>2023-03-30</lastmod>
@@ -47,15 +110,6 @@
   </url>
   
   <url>
-    <loc>https://newreport.top/2020-12-31/linux-introduction-and-installation/</loc>
-    
-    <lastmod>2023-03-30</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://newreport.top/2023-03-28/ubuntu-install-chrome-remote-openai-newbing/</loc>
     
     <lastmod>2023-03-30</lastmod>
@@ -84,15 +138,6 @@
   
   <url>
     <loc>https://newreport.top/2023-03-29/linux-setting-ssh-key/</loc>
-    
-    <lastmod>2023-03-29</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://newreport.top/2023-02-15/use-chatgpt-storytelling-leads-to-gibberish-in-subsequent-conversations/</loc>
     
     <lastmod>2023-03-29</lastmod>
     
@@ -236,24 +281,6 @@
   </url>
   
   <url>
-    <loc>https://newreport.top/2021-06-22/list-introduction/</loc>
-    
-    <lastmod>2023-03-21</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://newreport.top/2021-06-21/variables-and-simple-data-types/</loc>
-    
-    <lastmod>2023-03-21</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://newreport.top/2021-06-20/python-basic-knowledge/</loc>
     
     <lastmod>2023-03-21</lastmod>
@@ -282,33 +309,6 @@
   
   <url>
     <loc>https://newreport.top/2021-01-04/c-sharp-base/</loc>
-    
-    <lastmod>2023-03-21</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://newreport.top/2021-01-03/understand-the-file-system-and-basic-operations/</loc>
-    
-    <lastmod>2023-03-21</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://newreport.top/2021-01-02/run-commands-and-get-help/</loc>
-    
-    <lastmod>2023-03-21</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://newreport.top/2021-01-01/linux-basic-use/</loc>
     
     <lastmod>2023-03-21</lastmod>
     

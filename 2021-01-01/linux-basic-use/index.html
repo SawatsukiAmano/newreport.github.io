@@ -22,15 +22,15 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"newreport.top","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.15.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":"mac"},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":true,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":{"gitalk":{"order":-2}}},"stickytabs":true,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="学习目标 登录Red Hat Enterprise Linux系统 从控制台启动图形 执行简单的linux命令 编辑纯文本文件 掌握root特性  简单的命令   命令 功能    date 显示日期   cal 显示日历   passwd 修改密码   id 显示当前用户信息   useradd 创建用户   su - 切换用户   vim 文本编辑器的使用">
+    <meta name="description" content="学习目标 登录 Red Hat Enterprise Linux 系统 从控制台启动图形 执行简单的 linux 命令 编辑纯文本文件 掌握 root 特性  简单的命令   命令 功能    date 显示日期   cal 显示日历   passwd 修改密码   id 显示当前用户信息   useradd 创建用户   su - 切换用户   vim 文本编辑器的使用">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Linux 的基本使用">
 <meta property="og:url" content="https://newreport.top/2021-01-01/linux-basic-use/index.html">
 <meta property="og:site_name" content="NewReport">
-<meta property="og:description" content="学习目标 登录Red Hat Enterprise Linux系统 从控制台启动图形 执行简单的linux命令 编辑纯文本文件 掌握root特性  简单的命令   命令 功能    date 显示日期   cal 显示日历   passwd 修改密码   id 显示当前用户信息   useradd 创建用户   su - 切换用户   vim 文本编辑器的使用">
+<meta property="og:description" content="学习目标 登录 Red Hat Enterprise Linux 系统 从控制台启动图形 执行简单的 linux 命令 编辑纯文本文件 掌握 root 特性  简单的命令   命令 功能    date 显示日期   cal 显示日历   passwd 修改密码   id 显示当前用户信息   useradd 创建用户   su - 切换用户   vim 文本编辑器的使用">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2021-01-01T16:00:00.000Z">
-<meta property="article:modified_time" content="2023-03-21T08:37:14.833Z">
+<meta property="article:modified_time" content="2023-03-30T06:07:26.416Z">
 <meta property="article:author" content="haruki">
 <meta name="twitter:card" content="summary">
 
@@ -142,7 +142,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AD%A6%E4%B9%A0%E7%9B%AE%E6%A0%87"><span class="nav-number">1.</span> <span class="nav-text">学习目标</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AE%80%E5%8D%95%E7%9A%84%E5%91%BD%E4%BB%A4"><span class="nav-number">2.</span> <span class="nav-text">简单的命令</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8E%86%E5%8F%B2%E8%AE%B0%E5%BD%95%EF%BC%88history%EF%BC%89"><span class="nav-number">3.</span> <span class="nav-text">历史记录（history）</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9B%BE%E5%BD%A2%E7%95%8C%E9%9D%A2"><span class="nav-number">4.</span> <span class="nav-text">图形界面</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#gnome-terminal%E6%A1%8C%E9%9D%A2%E5%B7%A5%E5%85%B7"><span class="nav-number">5.</span> <span class="nav-text">gnome-terminal桌面工具</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8D%95%E5%85%83%E5%B0%8F%E7%BB%93"><span class="nav-number">6.</span> <span class="nav-text">单元小结</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AD%A6%E4%B9%A0%E7%9B%AE%E6%A0%87"><span class="nav-number">1.</span> <span class="nav-text">学习目标</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AE%80%E5%8D%95%E7%9A%84%E5%91%BD%E4%BB%A4"><span class="nav-number">2.</span> <span class="nav-text">简单的命令</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8E%86%E5%8F%B2%E8%AE%B0%E5%BD%95%EF%BC%88history%EF%BC%89"><span class="nav-number">3.</span> <span class="nav-text">历史记录（history）</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9B%BE%E5%BD%A2%E7%95%8C%E9%9D%A2"><span class="nav-number">4.</span> <span class="nav-text">图形界面</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#gnome-terminal-%E6%A1%8C%E9%9D%A2%E5%B7%A5%E5%85%B7"><span class="nav-number">5.</span> <span class="nav-text">gnome-terminal 桌面工具</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8D%95%E5%85%83%E5%B0%8F%E7%BB%93"><span class="nav-number">6.</span> <span class="nav-text">单元小结</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -246,7 +246,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2023-03-21 16:37:14" itemprop="dateModified" datetime="2023-03-21T16:37:14+08:00">2023-03-21</time>
+      <time title="修改时间：2023-03-30 14:07:26" itemprop="dateModified" datetime="2023-03-30T14:07:26+08:00">2023-03-30</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -295,11 +295,11 @@
     
     <div class="post-body" itemprop="articleBody">
         <h1 id="学习目标"><a href="#学习目标" class="headerlink" title="学习目标"></a>学习目标</h1><ul>
-<li>登录Red Hat Enterprise Linux系统</li>
+<li>登录 Red Hat Enterprise Linux 系统</li>
 <li>从控制台启动图形</li>
-<li>执行简单的linux命令</li>
+<li>执行简单的 linux 命令</li>
 <li>编辑纯文本文件</li>
-<li>掌握root特性</li>
+<li>掌握 root 特性</li>
 </ul>
 <h1 id="简单的命令"><a href="#简单的命令" class="headerlink" title="简单的命令"></a>简单的命令</h1><table>
 <thead>
@@ -352,15 +352,15 @@
 </tr>
 <tr>
 <td>history N</td>
-<td>列出最近的N条历史记录</td>
+<td>列出最近的 N 条历史记录</td>
 </tr>
 <tr>
 <td>!N</td>
-<td>调用第N条历史记录</td>
+<td>调用第 N 条历史记录</td>
 </tr>
 <tr>
 <td>!string</td>
-<td>调用最近一条以string开头的命令</td>
+<td>调用最近一条以 string 开头的命令</td>
 </tr>
 <tr>
 <td>!$</td>
@@ -383,15 +383,15 @@
 <td>调用上一条命令的最后一个参数</td>
 </tr>
 </tbody></table>
-<h1 id="图形界面"><a href="#图形界面" class="headerlink" title="图形界面"></a>图形界面</h1><p>如果最开始没有装GUI图形界面，还需要装X-window，有两种桌面工具 GNOME和KDE<br>控制台（以前）：键盘、鼠标、显示器等硬件<br>控制台（现在）：即命令行、图形界面等操作界面</p>
+<h1 id="图形界面"><a href="#图形界面" class="headerlink" title="图形界面"></a>图形界面</h1><p>如果最开始没有装 GUI 图形界面，还需要装 X-window，有两种桌面工具 GNOME 和 KDE<br>控制台（以前）：键盘、鼠标、显示器等硬件<br>控制台（现在）：即命令行、图形界面等操作界面</p>
 <ul>
-<li>典型的Linux系统运行5个虚拟控制台和1个图形控制台</li>
-<li>按CTRL-ALT-F1键可进入图形控制台</li>
-<li>使用CTRL-ALT-F[2-6]键可切换不同虚拟控制台</li>
-<li>在虚拟控制台执行startx可以运行图形，前提是装了图形界面（startx没有切换控制台，只是在当前</li>
+<li>典型的 Linux 系统运行 5 个虚拟控制台和 1 个图形控制台</li>
+<li>按 CTRL-ALT-F1 键可进入图形控制台</li>
+<li>使用 CTRL-ALT-F[2-6]键可切换不同虚拟控制台</li>
+<li>在虚拟控制台执行 startx 可以运行图形，前提是装了图形界面（startx 没有切换控制台，只是在当前</li>
 <li>控制台开启了图形应用程序）</li>
 </ul>
-<h1 id="gnome-terminal桌面工具"><a href="#gnome-terminal桌面工具" class="headerlink" title="gnome-terminal桌面工具"></a>gnome-terminal桌面工具</h1><table>
+<h1 id="gnome-terminal-桌面工具"><a href="#gnome-terminal-桌面工具" class="headerlink" title="gnome-terminal 桌面工具"></a>gnome-terminal 桌面工具</h1><table>
 <thead>
 <tr>
 <th>操作</th>
@@ -438,9 +438,9 @@
 <h1 id="单元小结"><a href="#单元小结" class="headerlink" title="单元小结"></a>单元小结</h1><ul>
 <li>登录操作系统</li>
 <li>掌握桌面图形工具的使用</li>
-<li>root用户的本质</li>
+<li>root 用户的本质</li>
 <li>一些简单命令的执行</li>
-<li>tab的使用</li>
+<li>tab 的使用</li>
 <li>历史记录的调用</li>
 </ul>
 
@@ -502,7 +502,7 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">1:05</span>
+    <span title="站点阅读时长">1:06</span>
   </span>
 </div>
 <div class="busuanzi-count">
