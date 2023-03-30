@@ -3,6 +3,7 @@ title:  Ubuntu 安装 Docker Chrome 并远程（openai、newbing）
 copyright: true
 date: 2023-03-29 00:00:01
 urlname: ubuntu-install-chrome-remote-openai-newbing
+keywords: Docker CentOS Stream web VNC Chrome Edge Firefox Ubuntu 2204
 tags: 
  - Docker
 categories: linux

@@ -471,13 +471,13 @@ font:
 index_with_subtitle: true
 
 # Automatically add external URL with Base64 encrypt & decrypt.
-exturl: false
+exturl: true
 # If true, an icon will be attached to each external URL
 exturl_icon: true
 
 # Google Webmaster tools verification.
 # See: https://developers.google.com/search
-google_site_verification:
+google_site_verification: 5JrLvrJMlBjdcPpp-Vdmej5Xam1RZCIO0aFLGbDqjtI
 
 # Bing Webmaster tools verification.
 # See: https://www.bing.com/webmasters
