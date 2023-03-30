@@ -10,6 +10,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
   <link rel="mask-icon" href="/images/logo.svg" color="#222">
+  <meta name="google-site-verification" content="5JrLvrJMlBjdcPpp-Vdmej5Xam1RZCIO0aFLGbDqjtI">
 
 <link rel="stylesheet" href="/css/main.css">
 
@@ -20,7 +21,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/themes/blue/pace-theme-material.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"newreport.top","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.15.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":"mac"},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":true,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":{"gitalk":{"order":-2}}},"stickytabs":true,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+<script class="next-config" data-name="main" type="application/json">{"hostname":"newreport.top","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.15.0","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":"mac"},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":true,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":{"gitalk":{"order":-2}}},"stickytabs":true,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
     <meta name="description" content="博客启用（前略环境搭建）新建文件夹，之后在其中执行：hexo init。hexo-next7 官方 git：https:&#x2F;&#x2F;github.com&#x2F;theme-next&#x2F;hexo-theme-nexthexo-next8 官方 git：https:&#x2F;&#x2F;github.com&#x2F;next-theme&#x2F;hexo-theme-nextgit 配置：npm install –save hexo-deployer">
 <meta property="og:type" content="article">
@@ -178,13 +179,13 @@
 </div>
   <div class="links-of-author animated">
       <span class="links-of-author-item">
-        <a href="https://github.com/newreport" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;newreport" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+        <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL25ld3JlcG9ydA==" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;newreport"><i class="fab fa-github fa-fw"></i>GitHub</span>
       </span>
       <span class="links-of-author-item">
-        <a href="mailto:haruki959@qq.com" title="E-Mail → mailto:haruki959@qq.com" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+        <span class="exturl" data-url="bWFpbHRvOmhhcnVraTk1OUBxcS5jb20=" title="E-Mail → mailto:haruki959@qq.com"><i class="fa fa-envelope fa-fw"></i>E-Mail</span>
       </span>
       <span class="links-of-author-item">
-        <a href="https://www.yuque.com/newreport" title="YuQue → https:&#x2F;&#x2F;www.yuque.com&#x2F;newreport" rel="noopener me" target="_blank"><i class="fab iconfont app-lark_grey fa-fw"></i>YuQue</a>
+        <span class="exturl" data-url="aHR0cHM6Ly93d3cueXVxdWUuY29tL25ld3JlcG9ydA==" title="YuQue → https:&#x2F;&#x2F;www.yuque.com&#x2F;newreport"><i class="fab iconfont app-lark_grey fa-fw"></i>YuQue</span>
       </span>
   </div>
 
@@ -228,6 +229,7 @@
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
       <meta itemprop="name" content="Hexo Next7 食用方法 | NewReport">
       <meta itemprop="description" content="">
+      <meta itemprop="keywords" content="">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
@@ -293,18 +295,18 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <h1 id="博客启用（前略环境搭建）"><a href="#博客启用（前略环境搭建）" class="headerlink" title="博客启用（前略环境搭建）"></a>博客启用（前略环境搭建）</h1><p>新建文件夹，之后在其中执行：hexo init。<br>hexo-next7 官方 git：<a target="_blank" rel="noopener" href="https://github.com/theme-next/hexo-theme-next">https://github.com/theme-next/hexo-theme-next</a><br>hexo-next8 官方 git：<a target="_blank" rel="noopener" href="https://github.com/next-theme/hexo-theme-next">https://github.com/next-theme/hexo-theme-next</a><br>git 配置：npm install –save hexo-deployer-git；多用户指定其一：githubgit config –global user.email “邮箱”和 git config –global user.name “用户名”</p>
+        <h1 id="博客启用（前略环境搭建）"><a href="#博客启用（前略环境搭建）" class="headerlink" title="博客启用（前略环境搭建）"></a>博客启用（前略环境搭建）</h1><p>新建文件夹，之后在其中执行：hexo init。<br>hexo-next7 官方 git：<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3RoZW1lLW5leHQvaGV4by10aGVtZS1uZXh0">https://github.com/theme-next/hexo-theme-next<i class="fa fa-external-link-alt"></i></span><br>hexo-next8 官方 git：<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL25leHQtdGhlbWUvaGV4by10aGVtZS1uZXh0">https://github.com/next-theme/hexo-theme-next<i class="fa fa-external-link-alt"></i></span><br>git 配置：npm install –save hexo-deployer-git；多用户指定其一：githubgit config –global user.email “邮箱”和 git config –global user.name “用户名”</p>
 <span id="more"></span>
 
 
-<h1 id="可能会用到的工具"><a href="#可能会用到的工具" class="headerlink" title="可能会用到的工具"></a>可能会用到的工具</h1><p>RSS 订阅：npm install hexo-generator-feed；<br>参考：<a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_36537546/article/details/90730068">https://blog.csdn.net/qq_36537546/article/details/90730068</a>  </p>
-<p>站点地图：npm install hexo-generator-sitemap –save；<br>参考：<a target="_blank" rel="noopener" href="https://www.cnblogs.com/brady-wang/p/8493181.html">https://www.cnblogs.com/brady-wang/p/8493181.html</a>  </p>
-<p>next7 的搜索功能：npm install hexo-generator-searchdb –save；<br>参考：<a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_41086511/article/details/103537522">https://blog.csdn.net/qq_41086511/article/details/103537522</a>  </p>
-<p>背景图片及透明度调整：\themes\next-7.7.2\source\css_common\components\pages\pages.styl，能找到此页面样式文件的均可。<br>参考：<a target="_blank" rel="noopener" href="https://blog.csdn.net/Louis_li51/article/details/105227430%EF%BC%9B">https://blog.csdn.net/Louis_li51/article/details/105227430；</a><br>注：带搜索框后不能开启菜单栏和搜索栏的透明度，否则会透明度过高看不清，但可以给头像的框加透明度。   </p>
-<p>next7 单独友链参考：<a target="_blank" rel="noopener" href="https://blog.csdn.net/Aoman_Hao/article/details/103758829">https://blog.csdn.net/Aoman_Hao/article/details/103758829</a>  </p>
-<p>文章置顶：node_modules&#x2F;hexo-generator-index&#x2F;lib&#x2F;generator；<br>参考：<a target="_blank" rel="noopener" href="https://www.jianshu.com/p/42a4efcdf8d7">https://www.jianshu.com/p/42a4efcdf8d7</a>  </p>
-<p>图片压缩工具：<a target="_blank" rel="noopener" href="https://tinypng.com/">https://tinypng.com/</a> 或者<a target="_blank" rel="noopener" href="https://docsmall.com/image-compress">https://docsmall.com/image-compress</a>  </p>
-<p>图片批量重命名工具（可为图片 hash 值）：<a target="_blank" rel="noopener" href="https://renamer.en.softonic.com/">ReNamer</a>  </p>
+<h1 id="可能会用到的工具"><a href="#可能会用到的工具" class="headerlink" title="可能会用到的工具"></a>可能会用到的工具</h1><p>RSS 订阅：npm install hexo-generator-feed；<br>参考：<span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM2NTM3NTQ2L2FydGljbGUvZGV0YWlscy85MDczMDA2OA==">https://blog.csdn.net/qq_36537546/article/details/90730068<i class="fa fa-external-link-alt"></i></span>  </p>
+<p>站点地图：npm install hexo-generator-sitemap –save；<br>参考：<span class="exturl" data-url="aHR0cHM6Ly93d3cuY25ibG9ncy5jb20vYnJhZHktd2FuZy9wLzg0OTMxODEuaHRtbA==">https://www.cnblogs.com/brady-wang/p/8493181.html<i class="fa fa-external-link-alt"></i></span>  </p>
+<p>next7 的搜索功能：npm install hexo-generator-searchdb –save；<br>参考：<span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMDg2NTExL2FydGljbGUvZGV0YWlscy8xMDM1Mzc1MjI=">https://blog.csdn.net/qq_41086511/article/details/103537522<i class="fa fa-external-link-alt"></i></span>  </p>
+<p>背景图片及透明度调整：\themes\next-7.7.2\source\css_common\components\pages\pages.styl，能找到此页面样式文件的均可。<br>参考：<span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0xvdWlzX2xpNTEvYXJ0aWNsZS9kZXRhaWxzLzEwNTIyNzQzMCVFRiVCQyU5Qg==">https://blog.csdn.net/Louis_li51/article/details/105227430；<i class="fa fa-external-link-alt"></i></span><br>注：带搜索框后不能开启菜单栏和搜索栏的透明度，否则会透明度过高看不清，但可以给头像的框加透明度。   </p>
+<p>next7 单独友链参考：<span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0FvbWFuX0hhby9hcnRpY2xlL2RldGFpbHMvMTAzNzU4ODI5">https://blog.csdn.net/Aoman_Hao/article/details/103758829<i class="fa fa-external-link-alt"></i></span>  </p>
+<p>文章置顶：node_modules&#x2F;hexo-generator-index&#x2F;lib&#x2F;generator；<br>参考：<span class="exturl" data-url="aHR0cHM6Ly93d3cuamlhbnNodS5jb20vcC80MmE0ZWZjZGY4ZDc=">https://www.jianshu.com/p/42a4efcdf8d7<i class="fa fa-external-link-alt"></i></span>  </p>
+<p>图片压缩工具：<span class="exturl" data-url="aHR0cHM6Ly90aW55cG5nLmNvbS8=">https://tinypng.com/<i class="fa fa-external-link-alt"></i></span> 或者<span class="exturl" data-url="aHR0cHM6Ly9kb2NzbWFsbC5jb20vaW1hZ2UtY29tcHJlc3M=">https://docsmall.com/image-compress<i class="fa fa-external-link-alt"></i></span>  </p>
+<p>图片批量重命名工具（可为图片 hash 值）：<span class="exturl" data-url="aHR0cHM6Ly9yZW5hbWVyLmVuLnNvZnRvbmljLmNvbS8=">ReNamer<i class="fa fa-external-link-alt"></i></span>  </p>
 
     </div>
 
@@ -385,7 +387,7 @@
       </span>
     </span>
 </div>
-  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  <div class="powered-by">由 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & <span class="exturl" data-url="aHR0cHM6Ly90aGVtZS1uZXh0LmpzLm9yZw==">NexT.Gemini</span> 强力驱动
   </div>
 
     </div>

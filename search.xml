@@ -40,7 +40,7 @@
     <title>Ubuntu 2204 安装 Docker</title>
     <url>/2023-03-28/ubuntu-2204-install-docker-and-link-portainer/</url>
     <content><![CDATA[<blockquote>
-<p><a href="https://docs.docker.com/engine/install/ubuntu/">https://docs.docker.com/engine/install/ubuntu/</a></p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9kb2NzLmRvY2tlci5jb20vZW5naW5lL2luc3RhbGwvdWJ1bnR1Lw==">https://docs.docker.com/engine/install/ubuntu/<i class="fa fa-external-link-alt"></i></span></p>
 </blockquote>
 <span id="more"></span>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 卸载旧版 Docker 和命令行引擎</span></span><br><span class="line">sudo apt-get remove docker docker-engine docker.io containerd runc</span><br><span class="line"></span><br><span class="line">sudo apt-get update</span><br><span class="line"></span><br><span class="line">sudo apt-get upgrade</span><br><span class="line"></span><br><span class="line">sudo apt-get install ca-certificates curl gnupg</span><br><span class="line"></span><br><span class="line">sudo <span class="built_in">mkdir</span> -m 0755 -p /etc/apt/keyrings</span><br><span class="line"></span><br><span class="line">curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="built_in">echo</span> \</span><br><span class="line">  <span class="string">&quot;deb [arch=&quot;</span>$(dpkg --print-architecture)<span class="string">&quot; signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \</span></span><br><span class="line"><span class="string">  &quot;</span>$(. /etc/os-release &amp;&amp; <span class="built_in">echo</span> <span class="string">&quot;<span class="variable">$VERSION_CODENAME</span>&quot;</span>)<span class="string">&quot; stable&quot;</span> | \</span><br><span class="line">  sudo <span class="built_in">tee</span> /etc/apt/sources.list.d/docker.list &gt; /dev/null</span><br><span class="line"></span><br><span class="line">sudo apt-get update</span><br><span class="line"></span><br><span class="line">sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin</span><br><span class="line"></span><br><span class="line">docker images</span><br><span class="line"></span><br><span class="line">docker ps</span><br><span class="line"></span><br><span class="line">docker volumes</span><br></pre></td></tr></table></figure>]]></content>
@@ -59,7 +59,7 @@
 </blockquote>
 <h1 id="安装-Docker"><a href="#安装-Docker" class="headerlink" title="安装 Docker"></a>安装 Docker</h1><p><a href="%5D(../../2023-01-04/centos-stream-8-install-docker-and-link-portainer)">CentOS Stream</a><br><a href="%5D(../../2023-03-29/ubuntu-2204-install-docker-and-link-portainer)">Ubuntu 2204</a></p>
 <h1 id="安装-VNC-chrome"><a href="#安装-VNC-chrome" class="headerlink" title="安装 VNC chrome"></a>安装 VNC chrome</h1><blockquote>
-<p><a href="https://github.com/SeleniumHQ/docker-selenium">https://github.com/SeleniumHQ/docker-selenium</a></p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL1NlbGVuaXVtSFEvZG9ja2VyLXNlbGVuaXVt">https://github.com/SeleniumHQ/docker-selenium<i class="fa fa-external-link-alt"></i></span></p>
 </blockquote>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker run -d -p 4444:4444 -p 7900:7900 --shm-size=<span class="string">&quot;2g&quot;</span> selenium/standalone-chrome</span><br><span class="line">docker run -d -p 4445:4444 -p 7901:7900 --shm-size=<span class="string">&quot;2g&quot;</span> selenium/standalone-edge</span><br><span class="line">docker run -d -p 4446:4444 -p 7902:7900 --shm-size=<span class="string">&quot;2g&quot;</span> selenium/standalone-firefox</span><br></pre></td></tr></table></figure>]]></content>
       <categories>
@@ -206,10 +206,10 @@
 <p>机械盘的随机读基本忽略吧，几 MB&#x2F;s 不用测根本不可能跑满接口<br>然后是顺序读写，13 块盘同时读写不可能，虽然硬盘顺序峰值能到 270MB&#x2F;s，但是日常没那么高，这里按照每块盘 100MB&#x2F;s 算，也算是很高的负载了  </p>
 </blockquote>
 <h3 id="PCIE"><a href="#PCIE" class="headerlink" title="PCIE"></a>PCIE</h3><blockquote>
-<p><a href="https://www.asus.com/tw/motherboards-components/motherboards/tuf-gaming/tuf-gaming-b550m-plus-wi-fi/techspec/">主板</a><br>3 个 PCIE 槽，PCIE 4.0*16 和 PCIE 3.0*16（芯片组） 和 PCIE 3.0*1（芯片组），硬件接口分别为 PCIE 16、PCIE 16、PCIE 1 展示<br>2 个 M.2 插槽，PCIE 4.0<em>4（CPU 直连）和 PCIE 3.0</em>4（芯片组）<br>4 个 SATA 插槽（芯片组）</p>
+<p><span class="exturl" data-url="aHR0cHM6Ly93d3cuYXN1cy5jb20vdHcvbW90aGVyYm9hcmRzLWNvbXBvbmVudHMvbW90aGVyYm9hcmRzL3R1Zi1nYW1pbmcvdHVmLWdhbWluZy1iNTUwbS1wbHVzLXdpLWZpL3RlY2hzcGVjLw==">主板<i class="fa fa-external-link-alt"></i></span><br>3 个 PCIE 槽，PCIE 4.0*16 和 PCIE 3.0*16（芯片组） 和 PCIE 3.0*1（芯片组），硬件接口分别为 PCIE 16、PCIE 16、PCIE 1 展示<br>2 个 M.2 插槽，PCIE 4.0<em>4（CPU 直连）和 PCIE 3.0</em>4（芯片组）<br>4 个 SATA 插槽（芯片组）</p>
 </blockquote>
 <blockquote>
-<p><a href="https://www.amd.com/en/product/11171">CPU</a>  有 24 条 PCIE 3.0，第一个 PCIE 占用 16 条，第一个 M.2 占用 4 条，南桥（芯片组）占用 4 条，即</p>
+<p><span class="exturl" data-url="aHR0cHM6Ly93d3cuYW1kLmNvbS9lbi9wcm9kdWN0LzExMTcx">CPU<i class="fa fa-external-link-alt"></i></span>  有 24 条 PCIE 3.0，第一个 PCIE 占用 16 条，第一个 M.2 占用 4 条，南桥（芯片组）占用 4 条，即</p>
 </blockquote>
 <table>
 <thead>
@@ -261,14 +261,14 @@
 <p>主板南桥 PCIE 3.0 *4，即芯片组的最大速度约为 <strong>4GB&#x2F;s</strong></p>
 <p>CPU 的 PCIE 3.0 *24 最大速度约为 <strong>24GB&#x2F;s</strong></p>
 <p>机械盘速度目前顺序读能到 100MB&#x2F;s，最大不会超过 250MB&#x2F;s，4k 随机速度可以忽略，所以南桥扩展 sata 给机械盘就够用了，日常根本不会跑满</p>
-<h3 id="机箱"><a href="#机箱" class="headerlink" title="机箱"></a><a href="https://item.jd.com/100022763272.html#product-detail">机箱</a></h3><p>支持 13 个 3.5 盘，2 个 2.5 盘位。最大容量为 260T + 6T  </p>
+<h3 id="机箱"><a href="#机箱" class="headerlink" title="机箱"></a><span class="exturl" data-url="aHR0cHM6Ly9pdGVtLmpkLmNvbS8xMDAwMjI3NjMyNzIuaHRtbCNwcm9kdWN0LWRldGFpbA==">机箱<i class="fa fa-external-link-alt"></i></span></h3><p>支持 13 个 3.5 盘，2 个 2.5 盘位。最大容量为 260T + 6T  </p>
 <p>机械硬盘（单价 1600） 二手企业级目前最大的机械按 20T 算， 13*20T&#x3D;<strong>260T（270MB&#x2F;s）</strong>  如果阵列卡做存储池合计速度为 13*270MB&#x2F;s &#x3D;3.5GB&#x2F;s</p>
 <p>sata 固态（单价 800） 固态 2*3T&#x3D;<strong>6T(500MB&#x2F;s)</strong></p>
-<h3 id="主板"><a href="#主板" class="headerlink" title="主板"></a><a href="https://www.asus.com/tw/motherboards-components/motherboards/tuf-gaming/tuf-gaming-b550m-plus-wi-fi/techspec/">主板</a></h3><ul>
+<h3 id="主板"><a href="#主板" class="headerlink" title="主板"></a><span class="exturl" data-url="aHR0cHM6Ly93d3cuYXN1cy5jb20vdHcvbW90aGVyYm9hcmRzLWNvbXBvbmVudHMvbW90aGVyYm9hcmRzL3R1Zi1nYW1pbmcvdHVmLWdhbWluZy1iNTUwbS1wbHVzLXdpLWZpL3RlY2hzcGVjLw==">主板<i class="fa fa-external-link-alt"></i></span></h3><ul>
 <li><p>直连 CPU 15GB&#x2F;s(CPU 阈值 24GB&#x2F;s)</p>
 <ul>
 <li>M.2_1（PCIE 4.0x4）：凯侠 RC20 <strong>1T（3GB&#x2F;s）</strong> ，系统盘</li>
-<li>PCIE_1（PCIE 4.0x16）：<a href="https://item.jd.com/10021208284029.html">扩展卡</a> 拆分为 PCIE 3.0(3GB&#x2F;s) *4 的 4 个 2T 的 3.0 M.2 硬盘，即 <strong>8T（12G&#x2F;s）</strong></li>
+<li>PCIE_1（PCIE 4.0x16）：<span class="exturl" data-url="aHR0cHM6Ly9pdGVtLmpkLmNvbS8xMDAyMTIwODI4NDAyOS5odG1s">扩展卡<i class="fa fa-external-link-alt"></i></span> 拆分为 PCIE 3.0(3GB&#x2F;s) *4 的 4 个 2T 的 3.0 M.2 硬盘，即 <strong>8T（12G&#x2F;s）</strong></li>
 </ul>
 </li>
 <li><p>南桥 234T  合计峰值 3 GB&#x2F;s (芯片组阈值 4GB&#x2F;s）</p>
@@ -380,14 +380,14 @@
 <td></td>
 </tr>
 </tbody></table>
-<h1 id="系统安装"><a href="#系统安装" class="headerlink" title="系统安装"></a>系统安装</h1><p><a href="https://www.microsoft.com/zh-cn/evalcenter/download-windows-server-2022">Windows Server DataCenter 2022</a></p>
-<p><a href="https://rufus.ie/">写盘工具</a></p>
+<h1 id="系统安装"><a href="#系统安装" class="headerlink" title="系统安装"></a>系统安装</h1><p><span class="exturl" data-url="aHR0cHM6Ly93d3cubWljcm9zb2Z0LmNvbS96aC1jbi9ldmFsY2VudGVyL2Rvd25sb2FkLXdpbmRvd3Mtc2VydmVyLTIwMjI=">Windows Server DataCenter 2022<i class="fa fa-external-link-alt"></i></span></p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9ydWZ1cy5pZS8=">写盘工具<i class="fa fa-external-link-alt"></i></span></p>
 <blockquote>
 <p>开机自启路径</p>
 </blockquote>
 <figure class="highlight dos"><table><tr><td class="code"><pre><span class="line"><span class="function">C:\<span class="title">ProgramData</span>\<span class="title">Microsoft</span>\<span class="title">Windows</span>\<span class="title">Start</span> <span class="title">Menu</span>\<span class="title">Programs</span>\<span class="title">Startup</span></span></span><br></pre></td></tr></table></figure>
-<h2 id="Intel-驱动"><a href="#Intel-驱动" class="headerlink" title="Intel 驱动"></a>Intel 驱动</h2><p><a href="https://www.intel.com/content/www/us/en/support/detect.html">https://www.intel.com/content/www/us/en/support/detect.html</a></p>
-<h2 id="内网穿透"><a href="#内网穿透" class="headerlink" title="内网穿透"></a>内网穿透</h2><p><a href="https://github.com/ehang-io/nps/releases">nps</a></p>
+<h2 id="Intel-驱动"><a href="#Intel-驱动" class="headerlink" title="Intel 驱动"></a>Intel 驱动</h2><p><span class="exturl" data-url="aHR0cHM6Ly93d3cuaW50ZWwuY29tL2NvbnRlbnQvd3d3L3VzL2VuL3N1cHBvcnQvZGV0ZWN0Lmh0bWw=">https://www.intel.com/content/www/us/en/support/detect.html<i class="fa fa-external-link-alt"></i></span></p>
+<h2 id="内网穿透"><a href="#内网穿透" class="headerlink" title="内网穿透"></a>内网穿透</h2><p><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2VoYW5nLWlvL25wcy9yZWxlYXNlcw==">nps<i class="fa fa-external-link-alt"></i></span></p>
 <p>新建 bat，然后快捷方式丢到开机自启路径里</p>
 <h2 id="开机自动登录"><a href="#开机自动登录" class="headerlink" title="开机自动登录"></a>开机自动登录</h2><blockquote>
 <p>win+r 运行 regedit 注册表</p>
@@ -407,47 +407,47 @@
 </tr>
 </thead>
 <tbody><tr>
-<td><a href="https://www.7-zip.org/">7z</a></td>
+<td><span class="exturl" data-url="aHR0cHM6Ly93d3cuNy16aXAub3JnLw==">7z<i class="fa fa-external-link-alt"></i></span></td>
 <td>解压压缩</td>
 <td></td>
 </tr>
 <tr>
-<td><a href="https://docs.docker.com/get-docker/">Docker</a></td>
+<td><span class="exturl" data-url="aHR0cHM6Ly9kb2NzLmRvY2tlci5jb20vZ2V0LWRvY2tlci8=">Docker<i class="fa fa-external-link-alt"></i></span></td>
 <td></td>
 <td>务必装好 WSL2</td>
 </tr>
 <tr>
-<td><a href="https://www.todesk.com/download.html">ToDesk</a></td>
+<td><span class="exturl" data-url="aHR0cHM6Ly93d3cudG9kZXNrLmNvbS9kb3dubG9hZC5odG1s">ToDesk<i class="fa fa-external-link-alt"></i></span></td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td><a href="https://git-scm.com/downloads">Git</a></td>
+<td><span class="exturl" data-url="aHR0cHM6Ly9naXQtc2NtLmNvbS9kb3dubG9hZHM=">Git<i class="fa fa-external-link-alt"></i></span></td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td><a href="http://www.den4b.com/">ReNamer</a></td>
+<td><span class="exturl" data-url="aHR0cDovL3d3dy5kZW40Yi5jb20v">ReNamer<i class="fa fa-external-link-alt"></i></span></td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td><a href="https://www.google.com/chrome/">Chrome</a></td>
+<td><span class="exturl" data-url="aHR0cHM6Ly93d3cuZ29vZ2xlLmNvbS9jaHJvbWUv">Chrome<i class="fa fa-external-link-alt"></i></span></td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td><a href="https://pan.baidu.com/download?from=header#win">百度网盘</a></td>
+<td><span class="exturl" data-url="aHR0cHM6Ly9wYW4uYmFpZHUuY29tL2Rvd25sb2FkP2Zyb209aGVhZGVyI3dpbg==">百度网盘<i class="fa fa-external-link-alt"></i></span></td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td><a href="https://www.aliyundrive.com/">阿里云盘</a></td>
+<td><span class="exturl" data-url="aHR0cHM6Ly93d3cuYWxpeXVuZHJpdmUuY29tLw==">阿里云盘<i class="fa fa-external-link-alt"></i></span></td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td><a href="https://115.com/">115 网盘</a></td>
+<td><span class="exturl" data-url="aHR0cHM6Ly8xMTUuY29tLw==">115 网盘<i class="fa fa-external-link-alt"></i></span></td>
 <td></td>
 <td></td>
 </tr>
@@ -457,172 +457,172 @@
 <td></td>
 </tr>
 <tr>
-<td><a href="https://115.com/">WPS</a></td>
+<td><span class="exturl" data-url="aHR0cHM6Ly8xMTUuY29tLw==">WPS<i class="fa fa-external-link-alt"></i></span></td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td><a href="https://obsproject.com/">OBS</a></td>
+<td><span class="exturl" data-url="aHR0cHM6Ly9vYnNwcm9qZWN0LmNvbS8=">OBS<i class="fa fa-external-link-alt"></i></span></td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td><a href="https://www.yuque.com/download">语雀</a></td>
+<td><span class="exturl" data-url="aHR0cHM6Ly93d3cueXVxdWUuY29tL2Rvd25sb2Fk">语雀<i class="fa fa-external-link-alt"></i></span></td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td><a href="https://github.com/icsharpcode/ILSpy/releases">ILSpy</a></td>
+<td><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2ljc2hhcnBjb2RlL0lMU3B5L3JlbGVhc2Vz">ILSpy<i class="fa fa-external-link-alt"></i></span></td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td><a href="https://visualstudio.microsoft.com/">VS</a></td>
+<td><span class="exturl" data-url="aHR0cHM6Ly92aXN1YWxzdHVkaW8ubWljcm9zb2Z0LmNvbS8=">VS<i class="fa fa-external-link-alt"></i></span></td>
 <td>.NET、C#、C++ 全家桶</td>
 <td></td>
 </tr>
 <tr>
-<td><a href="https://code.visualstudio.com/Download">VS Code</a></td>
+<td><span class="exturl" data-url="aHR0cHM6Ly9jb2RlLnZpc3VhbHN0dWRpby5jb20vRG93bmxvYWQ=">VS Code<i class="fa fa-external-link-alt"></i></span></td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td><a href="https://www.postman.com/">Postmam</a></td>
+<td><span class="exturl" data-url="aHR0cHM6Ly93d3cucG9zdG1hbi5jb20v">Postmam<i class="fa fa-external-link-alt"></i></span></td>
 <td>api、grpc、socket、mq 调试</td>
 <td></td>
 </tr>
 <tr>
-<td><a href="https://mqttx.app/">MQTT X</a></td>
+<td><span class="exturl" data-url="aHR0cHM6Ly9tcXR0eC5hcHAv">MQTT X<i class="fa fa-external-link-alt"></i></span></td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td><a href="https://github.com/qishibo/AnotherRedisDesktopManager/releases">AnotherRedisDesktopManager</a></td>
+<td><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3Fpc2hpYm8vQW5vdGhlclJlZGlzRGVza3RvcE1hbmFnZXIvcmVsZWFzZXM=">AnotherRedisDesktopManager<i class="fa fa-external-link-alt"></i></span></td>
 <td>redis GUI</td>
 <td></td>
 </tr>
 <tr>
-<td><a href="https://navicat.com/">Navicat</a></td>
+<td><span class="exturl" data-url="aHR0cHM6Ly9uYXZpY2F0LmNvbS8=">Navicat<i class="fa fa-external-link-alt"></i></span></td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td><a href="https://www.jetbrains.com/go/">Goland</a></td>
+<td><span class="exturl" data-url="aHR0cHM6Ly93d3cuamV0YnJhaW5zLmNvbS9nby8=">Goland<i class="fa fa-external-link-alt"></i></span></td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td><a href="https://www.bandicam.cn/">Bandicam</a></td>
+<td><span class="exturl" data-url="aHR0cHM6Ly93d3cuYmFuZGljYW0uY24v">Bandicam<i class="fa fa-external-link-alt"></i></span></td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td><a href="https://winscp.net/eng/download.php">WinSCP</a></td>
+<td><span class="exturl" data-url="aHR0cHM6Ly93aW5zY3AubmV0L2VuZy9kb3dubG9hZC5waHA=">WinSCP<i class="fa fa-external-link-alt"></i></span></td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td><a href="https://voicemeeter.com/">VOICEMEETER</a></td>
+<td><span class="exturl" data-url="aHR0cHM6Ly92b2ljZW1lZXRlci5jb20v">VOICEMEETER<i class="fa fa-external-link-alt"></i></span></td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td><a href="https://www.qbittorrent.org/download">qBittorrent</a></td>
+<td><span class="exturl" data-url="aHR0cHM6Ly93d3cucWJpdHRvcnJlbnQub3JnL2Rvd25sb2Fk">qBittorrent<i class="fa fa-external-link-alt"></i></span></td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td><a href="https://telegram.org/">Telegram</a></td>
+<td><span class="exturl" data-url="aHR0cHM6Ly90ZWxlZ3JhbS5vcmcv">Telegram<i class="fa fa-external-link-alt"></i></span></td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td><a href="https://www.blender.org/">blender</a></td>
+<td><span class="exturl" data-url="aHR0cHM6Ly93d3cuYmxlbmRlci5vcmcv">blender<i class="fa fa-external-link-alt"></i></span></td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td><a href="https://docs.conda.io/projects/conda/en/stable/user-guide/install/windows.html">conda</a></td>
+<td><span class="exturl" data-url="aHR0cHM6Ly9kb2NzLmNvbmRhLmlvL3Byb2plY3RzL2NvbmRhL2VuL3N0YWJsZS91c2VyLWd1aWRlL2luc3RhbGwvd2luZG93cy5odG1s">conda<i class="fa fa-external-link-alt"></i></span></td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td><a href="https://www.kookapp.cn/">开黑啦</a></td>
+<td><span class="exturl" data-url="aHR0cHM6Ly93d3cua29va2FwcC5jbi8=">开黑啦<i class="fa fa-external-link-alt"></i></span></td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td><a href="https://game.maj-soul.com/1/">雀魂</a></td>
+<td><span class="exturl" data-url="aHR0cHM6Ly9nYW1lLm1hai1zb3VsLmNvbS8xLw==">雀魂<i class="fa fa-external-link-alt"></i></span></td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td><a href="https://discord.com/">Discord</a></td>
+<td><span class="exturl" data-url="aHR0cHM6Ly9kaXNjb3JkLmNvbS8=">Discord<i class="fa fa-external-link-alt"></i></span></td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td><a href="https://www.jianguoyun.com/s/downloads">坚果云</a></td>
+<td><span class="exturl" data-url="aHR0cHM6Ly93d3cuamlhbmd1b3l1bi5jb20vcy9kb3dubG9hZHM=">坚果云<i class="fa fa-external-link-alt"></i></span></td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td><a href="https://notepad-plus-plus.org/downloads/">Notepad++</a></td>
+<td><span class="exturl" data-url="aHR0cHM6Ly9ub3RlcGFkLXBsdXMtcGx1cy5vcmcvZG93bmxvYWRzLw==">Notepad++<i class="fa fa-external-link-alt"></i></span></td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td><a href="https://getquicker.net/Download">Quicker</a></td>
+<td><span class="exturl" data-url="aHR0cHM6Ly9nZXRxdWlja2VyLm5ldC9Eb3dubG9hZA==">Quicker<i class="fa fa-external-link-alt"></i></span></td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td><a href="https://example.com/">Live2D</a></td>
+<td><span class="exturl" data-url="aHR0cHM6Ly9leGFtcGxlLmNvbS8=">Live2D<i class="fa fa-external-link-alt"></i></span></td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td><a href="https://weibo.com/u/1112829033">Adobe</a></td>
+<td><span class="exturl" data-url="aHR0cHM6Ly93ZWliby5jb20vdS8xMTEyODI5MDMz">Adobe<i class="fa fa-external-link-alt"></i></span></td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td><a href="https://www.snipaste.com/">Sinpaste</a></td>
+<td><span class="exturl" data-url="aHR0cHM6Ly93d3cuc25pcGFzdGUuY29tLw==">Sinpaste<i class="fa fa-external-link-alt"></i></span></td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td><a href="https://www.sumatrapdfreader.org/free-pdf-reader.html">SumatraPDF</a></td>
+<td><span class="exturl" data-url="aHR0cHM6Ly93d3cuc3VtYXRyYXBkZnJlYWRlci5vcmcvZnJlZS1wZGYtcmVhZGVyLmh0bWw=">SumatraPDF<i class="fa fa-external-link-alt"></i></span></td>
 <td>开源的体积极小的本地 pdf 阅读器</td>
 <td></td>
 </tr>
 <tr>
-<td><a href="http://www.uderzo.it/main_products/space_sniffer/">spacesniffer</a></td>
+<td><span class="exturl" data-url="aHR0cDovL3d3dy51ZGVyem8uaXQvbWFpbl9wcm9kdWN0cy9zcGFjZV9zbmlmZmVyLw==">spacesniffer<i class="fa fa-external-link-alt"></i></span></td>
 <td>硬盘可视化为区块图的工具</td>
 <td></td>
 </tr>
 <tr>
-<td><a href="https://www.screentogif.com/">screentogif</a></td>
+<td><span class="exturl" data-url="aHR0cHM6Ly93d3cuc2NyZWVudG9naWYuY29tLw==">screentogif<i class="fa fa-external-link-alt"></i></span></td>
 <td>gif 制作工具</td>
 <td></td>
 </tr>
 <tr>
-<td><a href="https://potplayer.daum.net/">PotPlayer</a></td>
+<td><span class="exturl" data-url="aHR0cHM6Ly9wb3RwbGF5ZXIuZGF1bS5uZXQv">PotPlayer<i class="fa fa-external-link-alt"></i></span></td>
 <td>本地视频播放器</td>
 <td></td>
 </tr>
 <tr>
-<td><a href="http://chainlp.o.oo7.jp/">ChainLP</a></td>
+<td><span class="exturl" data-url="aHR0cDovL2NoYWlubHAuby5vbzcuanAv">ChainLP<i class="fa fa-external-link-alt"></i></span></td>
 <td>漫画制作工具，图片转 epub&#x2F;mobi，kindle 可用，支持 apple book 观看</td>
 <td></td>
 </tr>
 <tr>
-<td><a href="https://calibre-ebook.com/">calibre</a></td>
+<td><span class="exturl" data-url="aHR0cHM6Ly9jYWxpYnJlLWVib29rLmNvbS8=">calibre<i class="fa fa-external-link-alt"></i></span></td>
 <td>管理 epub、mobi、azw3 等格式的电子书工具，配合 kindle 使用极佳</td>
 <td></td>
 </tr>
 <tr>
-<td><a href="https://www.bandicam.cn/">Bandicam</a></td>
+<td><span class="exturl" data-url="aHR0cHM6Ly93d3cuYmFuZGljYW0uY24v">Bandicam<i class="fa fa-external-link-alt"></i></span></td>
 <td>录屏&#x2F;屏幕录制工具，国区目前 249CNY&#x2F;一台、376CNY&#x2F;两台授权码</td>
 <td></td>
 </tr>
@@ -636,67 +636,67 @@
 </tr>
 </thead>
 <tbody><tr>
-<td><a href="https://hub.docker.com/r/portainer/portainer">portainer</a></td>
+<td><span class="exturl" data-url="aHR0cHM6Ly9odWIuZG9ja2VyLmNvbS9yL3BvcnRhaW5lci9wb3J0YWluZXI=">portainer<i class="fa fa-external-link-alt"></i></span></td>
 <td>docker webui</td>
 <td></td>
 </tr>
 <tr>
-<td><a href="https://github.com/stonith404/pingvin-share">pingvin-share</a></td>
+<td><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3N0b25pdGg0MDQvcGluZ3Zpbi1zaGFyZQ==">pingvin-share<i class="fa fa-external-link-alt"></i></span></td>
 <td>分享网盘</td>
 <td></td>
 </tr>
 <tr>
-<td><a href="https://github.com/usememos/memos">memos</a></td>
+<td><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3VzZW1lbW9zL21lbW9z">memos<i class="fa fa-external-link-alt"></i></span></td>
 <td>便签</td>
 <td></td>
 </tr>
 <tr>
-<td><a href="https://hub.docker.com/_/postgres">postgres</a></td>
+<td><span class="exturl" data-url="aHR0cHM6Ly9odWIuZG9ja2VyLmNvbS9fL3Bvc3RncmVz">postgres<i class="fa fa-external-link-alt"></i></span></td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td><a href="https://hub.docker.com/_/mariadb">mariadb</a></td>
+<td><span class="exturl" data-url="aHR0cHM6Ly9odWIuZG9ja2VyLmNvbS9fL21hcmlhZGI=">mariadb<i class="fa fa-external-link-alt"></i></span></td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td><a href="https://hub.docker.com/_/redis">redis</a></td>
+<td><span class="exturl" data-url="aHR0cHM6Ly9odWIuZG9ja2VyLmNvbS9fL3JlZGlz">redis<i class="fa fa-external-link-alt"></i></span></td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td><a href="https://hub.docker.com/_/mongo">mongo</a></td>
+<td><span class="exturl" data-url="aHR0cHM6Ly9odWIuZG9ja2VyLmNvbS9fL21vbmdv">mongo<i class="fa fa-external-link-alt"></i></span></td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td><a href="https://hub.docker.com/_/rabbitmq">rabbitmq</a></td>
+<td><span class="exturl" data-url="aHR0cHM6Ly9odWIuZG9ja2VyLmNvbS9fL3JhYmJpdG1x">rabbitmq<i class="fa fa-external-link-alt"></i></span></td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td><a href="https://github.com/apache/superset">superset</a></td>
+<td><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FwYWNoZS9zdXBlcnNldA==">superset<i class="fa fa-external-link-alt"></i></span></td>
 <td>数字看板</td>
 <td></td>
 </tr>
 <tr>
-<td><a href="https://github.com/whyour/qinglong">qinglong</a></td>
+<td><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3doeW91ci9xaW5nbG9uZw==">qinglong<i class="fa fa-external-link-alt"></i></span></td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td><a href="https://hub.docker.com/r/guacamole/guacamole">Guacamole</a></td>
+<td><span class="exturl" data-url="aHR0cHM6Ly9odWIuZG9ja2VyLmNvbS9yL2d1YWNhbW9sZS9ndWFjYW1vbGU=">Guacamole<i class="fa fa-external-link-alt"></i></span></td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td><a href="https://github.com/hr3lxphr6j/bililive-go">bililive</a></td>
+<td><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2hyM2x4cGhyNmovYmlsaWxpdmUtZ28=">bililive<i class="fa fa-external-link-alt"></i></span></td>
 <td>录播</td>
 <td></td>
 </tr>
 <tr>
-<td><a href="https://github.com/louislam/uptime-kuma">uptime-kuma</a></td>
+<td><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2xvdWlzbGFtL3VwdGltZS1rdW1h">uptime-kuma<i class="fa fa-external-link-alt"></i></span></td>
 <td>网站监控</td>
 <td></td>
 </tr>
@@ -711,7 +711,7 @@
 </tr>
 </thead>
 <tbody><tr>
-<td><a href="https://github.com/NginxProxyManager/nginx-proxy-manager">Nginx Proxy Manager</a></td>
+<td><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL05naW54UHJveHlNYW5hZ2VyL25naW54LXByb3h5LW1hbmFnZXI=">Nginx Proxy Manager<i class="fa fa-external-link-alt"></i></span></td>
 <td>nginx GUI</td>
 <td></td>
 </tr>
@@ -746,7 +746,7 @@
     <title>Ubuntu 和 CentOS 安装 Conda 和 GCC 环境</title>
     <url>/2023-02-27/ubuntu-amd-centos-install-conda/</url>
     <content><![CDATA[<h1 id="安装-conda"><a href="#安装-conda" class="headerlink" title="安装 conda"></a>安装 conda</h1><blockquote>
-<p>conda 是一个 python 的包和环境管理工具。<br>官网：<a href="https://conda.io/">https://conda.io/</a><br>Download：<a href="https://docs.conda.io/projects/conda/en/stable/user-guide/install/linux.html">https://docs.conda.io/projects/conda/en/stable/user-guide/install/linux.html</a>  </p>
+<p>conda 是一个 python 的包和环境管理工具。<br>官网：<span class="exturl" data-url="aHR0cHM6Ly9jb25kYS5pby8=">https://conda.io/<i class="fa fa-external-link-alt"></i></span><br>Download：<span class="exturl" data-url="aHR0cHM6Ly9kb2NzLmNvbmRhLmlvL3Byb2plY3RzL2NvbmRhL2VuL3N0YWJsZS91c2VyLWd1aWRlL2luc3RhbGwvbGludXguaHRtbA==">https://docs.conda.io/projects/conda/en/stable/user-guide/install/linux.html<i class="fa fa-external-link-alt"></i></span>  </p>
 </blockquote>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">wget https://repo.anaconda.com/archive/Anaconda3-2022.10-Linux-x86_64.sh</span><br><span class="line"></span><br><span class="line">bash Anaconda3-2022.10-Linux-x86_64.sh </span><br></pre></td></tr></table></figure>
 <blockquote>
@@ -854,7 +854,7 @@
     <title>Golang 国际化及 CLDR</title>
     <url>/2023-02-08/golang-i18n-CLDR/</url>
     <content><![CDATA[<h1 id="CLDR-复数形式"><a href="#CLDR-复数形式" class="headerlink" title="CLDR 复数形式"></a>CLDR 复数形式</h1><blockquote>
-<p><a href="https://cldr.unicode.org/">https://cldr.unicode.org/</a><br><a href="http://docs.translatehouse.org/projects/localization-guide/en/latest/l10n/pluralforms.html">http://docs.translatehouse.org/projects/localization-guide/en/latest/l10n/pluralforms.html</a></p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9jbGRyLnVuaWNvZGUub3JnLw==">https://cldr.unicode.org/<i class="fa fa-external-link-alt"></i></span><br><span class="exturl" data-url="aHR0cDovL2RvY3MudHJhbnNsYXRlaG91c2Uub3JnL3Byb2plY3RzL2xvY2FsaXphdGlvbi1ndWlkZS9lbi9sYXRlc3QvbDEwbi9wbHVyYWxmb3Jtcy5odG1s">http://docs.translatehouse.org/projects/localization-guide/en/latest/l10n/pluralforms.html<i class="fa fa-external-link-alt"></i></span></p>
 </blockquote>
 <blockquote>
 <p>不同语言的名词可以有几种复数形式。 它们的用法取决于单词前面的数字，以指示该单词表示的数目。<br>例如，当谈论不同数量时，英语单词有两种单词形式。例如 ‘one star’ 或 ‘two stars’。 无论您说的是五颗星，二十六颗星还是五百三十二颗星，结尾 ‘s’ 都将保持不变。 但是有些语言只有一种形式，反之，有些语言也可以有更多种复数形式。<br>与英语相比，波兰语里的名词具有三种复数形式。 在说单数形式时使用一种形式，复数形式时以 2-4 数字为结尾的名词（不包括 12-14）使用另一种形式。但还有第三种形式，前面带有其他数字的单词。</p>
@@ -866,8 +866,8 @@
 <span id="more"></span>
 
 
-<h1 id="go-i18n"><a href="#go-i18n" class="headerlink" title="go-i18n"></a>go-i18n</h1><p>官网：<a href="https://github.com/nicksnyder/go-i18n">https://github.com/nicksnyder/go-i18n</a></p>
-<p>语言：<a href="https://www.unicode.org/cldr/cldr-aux/charts/28/supplemental/language_plural_rules.html">https://www.unicode.org/cldr/cldr-aux/charts/28/supplemental/language_plural_rules.html</a></p>
+<h1 id="go-i18n"><a href="#go-i18n" class="headerlink" title="go-i18n"></a>go-i18n</h1><p>官网：<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL25pY2tzbnlkZXIvZ28taTE4bg==">https://github.com/nicksnyder/go-i18n<i class="fa fa-external-link-alt"></i></span></p>
+<p>语言：<span class="exturl" data-url="aHR0cHM6Ly93d3cudW5pY29kZS5vcmcvY2xkci9jbGRyLWF1eC9jaGFydHMvMjgvc3VwcGxlbWVudGFsL2xhbmd1YWdlX3BsdXJhbF9ydWxlcy5odG1s">https://www.unicode.org/cldr/cldr-aux/charts/28/supplemental/language_plural_rules.html<i class="fa fa-external-link-alt"></i></span></p>
 <blockquote>
 <p>active.zh.toml</p>
 </blockquote>
@@ -903,7 +903,7 @@
   <entry>
     <title>Hexo Next 8 使用阿里图标</title>
     <url>/2023-01-29/use-hexo-next-8-and-ali-iconfont/</url>
-    <content><![CDATA[<h1 id="官网"><a href="#官网" class="headerlink" title="官网"></a>官网</h1><p><a href="https://iconfont.cn/">https://iconfont.cn</a></p>
+    <content><![CDATA[<h1 id="官网"><a href="#官网" class="headerlink" title="官网"></a>官网</h1><p><span class="exturl" data-url="aHR0cHM6Ly9pY29uZm9udC5jbi8=">https://iconfont.cn<i class="fa fa-external-link-alt"></i></span></p>
 <span id="more"></span>
 <h1 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h1><p>将项目或者图标下载后，将项目下的 css 文件内容复制到 themes&#x2F;next&#x2F;source&#x2F;lib&#x2F;font-awesome&#x2F;css&#x2F;all.min.css 后面即可</p>
 ]]></content>
@@ -918,7 +918,7 @@
     <title>ABP 简介</title>
     <url>/2023-01-09/abp-framework-introductory/</url>
     <content><![CDATA[<blockquote>
-<p>官网：<a href="https://docs.abp.io/">https://docs.abp.io/</a></p>
+<p>官网：<span class="exturl" data-url="aHR0cHM6Ly9kb2NzLmFicC5pby8=">https://docs.abp.io/<i class="fa fa-external-link-alt"></i></span></p>
 </blockquote>
 <h1 id="分层"><a href="#分层" class="headerlink" title="分层"></a>分层</h1><blockquote>
 <p>ABP 框架遵循 DDD 原则和模式去实现分层应用程序模型，该模型由四个基本层组成。</p>
@@ -999,10 +999,10 @@
 <span id="more"></span>  
 
 <h1 id="安装-golang-和-beego-x2F-bee"><a href="#安装-golang-和-beego-x2F-bee" class="headerlink" title="安装 golang 和 beego&#x2F;bee"></a>安装 golang 和 beego&#x2F;bee</h1><blockquote>
-<p>golang 官网 <a href="https://golang.google.cn/learn/">https://golang.google.cn/learn/</a></p>
+<p>golang 官网 <span class="exturl" data-url="aHR0cHM6Ly9nb2xhbmcuZ29vZ2xlLmNuL2xlYXJuLw==">https://golang.google.cn/learn/<i class="fa fa-external-link-alt"></i></span></p>
 </blockquote>
 <blockquote>
-<p>安装教程 <a href="https://golang.google.cn/doc/install">https://golang.google.cn/doc/install</a></p>
+<p>安装教程 <span class="exturl" data-url="aHR0cHM6Ly9nb2xhbmcuZ29vZ2xlLmNuL2RvYy9pbnN0YWxs">https://golang.google.cn/doc/install<i class="fa fa-external-link-alt"></i></span></p>
 </blockquote>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">wget https://golang.google.cn/dl/go1.19.4.linux-amd64.tar.gz <span class="comment"># 下载 golang</span></span><br><span class="line"><span class="built_in">rm</span> -rf /usr/local/go &amp;&amp; tar -C /usr/local -xzf go1.19.4.linux-amd64.tar.gz <span class="comment"># 解压到对应位置</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;PATH=\$PATH:/usr/local/go/bin&quot;</span> &gt;&gt; /etc/profile <span class="comment"># 写入全局变量</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;PATH=\$PATH:/root/go/bin&quot;</span> &gt;&gt; /etc/profile <span class="comment"># 写入全局变量</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;source /etc/profile&quot;</span> &gt;&gt; ~/.bashrc <span class="comment"># 写入本地用户刷新</span></span><br><span class="line"><span class="built_in">source</span> ~/.bashrc <span class="comment"># 刷新 bash 变量</span></span><br><span class="line">go -v <span class="comment"># 查看 go 版本</span></span><br><span class="line">go <span class="built_in">env</span> -w GOPROXY=https://goproxy.cn,direct <span class="comment"># 设置代理</span></span><br><span class="line">go install github.com/beego/bee/v2@latest <span class="comment"># 安装 bee</span></span><br><span class="line">bee version <span class="comment"># 查询 bee 版本</span></span><br></pre></td></tr></table></figure>]]></content>
       <categories>
@@ -1132,11 +1132,11 @@ func init() &#123;
   <entry>
     <title>Cloudflare 301 跳转</title>
     <url>/2022-09-03/cloudflare-301-url/</url>
-    <content><![CDATA[<h1 id="购买域名、注册-cloudflare-账号"><a href="#购买域名、注册-cloudflare-账号" class="headerlink" title="购买域名、注册 cloudflare 账号"></a>购买域名、注册 cloudflare 账号</h1><p>cloudflare 官网：<a href="https://www.cloudflare.com/">https://www.cloudflare.com/</a></p>
-<p>namesilo 官网：<a href="https://www.namesilo.com/">https://www.namesilo.com/</a></p>
-<p>dnspod 官网：<a href="https://www.dnspod.cn/">https://www.dnspod.cn/</a></p>
+    <content><![CDATA[<h1 id="购买域名、注册-cloudflare-账号"><a href="#购买域名、注册-cloudflare-账号" class="headerlink" title="购买域名、注册 cloudflare 账号"></a>购买域名、注册 cloudflare 账号</h1><p>cloudflare 官网：<span class="exturl" data-url="aHR0cHM6Ly93d3cuY2xvdWRmbGFyZS5jb20v">https://www.cloudflare.com/<i class="fa fa-external-link-alt"></i></span></p>
+<p>namesilo 官网：<span class="exturl" data-url="aHR0cHM6Ly93d3cubmFtZXNpbG8uY29tLw==">https://www.namesilo.com/<i class="fa fa-external-link-alt"></i></span></p>
+<p>dnspod 官网：<span class="exturl" data-url="aHR0cHM6Ly93d3cuZG5zcG9kLmNuLw==">https://www.dnspod.cn/<i class="fa fa-external-link-alt"></i></span></p>
 <blockquote>
-<p>注意：如果不想 whois 查询到个人信息，建议非主流域名在 <a href="https://www.namesilo.com/">namesilo</a> 购买，可以有免费的 whois 信息隐藏。</p>
+<p>注意：如果不想 whois 查询到个人信息，建议非主流域名在 <span class="exturl" data-url="aHR0cHM6Ly93d3cubmFtZXNpbG8uY29tLw==">namesilo<i class="fa fa-external-link-alt"></i></span> 购买，可以有免费的 whois 信息隐藏。</p>
 </blockquote>
 <blockquote>
 <p>dnspod 仅支持 .com、.net 等主流的一级域名进行 whois 隐藏，但不支持如.top、.xyz、.live 等域名的信息隐藏，也就是说 whois 查询能查询到本名（开盒</p>
@@ -1147,18 +1147,18 @@ func init() &#123;
 <p><img data-src="https://lsky.sfhj.top/i/main/2023-03/4C146869F59CF5BF6400C5CE2CB63F98186F4DF75CFE5F86F720457FA97E01E9.png"></p>
 <p><img data-src="https://lsky.sfhj.top/i/main/2023-03/829C11EA78DD0E39B8D94FA4DCAA06CC104F451282F6CC014D92CE7431C6A94C.png" alt="复制两个NS值"></p>
 <h2 id="dnspod-修改-ns-服务器"><a href="#dnspod-修改-ns-服务器" class="headerlink" title="dnspod 修改 ns 服务器"></a>dnspod 修改 ns 服务器</h2><blockquote>
-<p><a href="https://console.cloud.tencent.com/domain/all-domain">https://console.cloud.tencent.com/domain/all-domain</a></p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9jb25zb2xlLmNsb3VkLnRlbmNlbnQuY29tL2RvbWFpbi9hbGwtZG9tYWlu">https://console.cloud.tencent.com/domain/all-domain<i class="fa fa-external-link-alt"></i></span></p>
 </blockquote>
 <p><img data-src="https://lsky.sfhj.top/i/main/2023-03/63CDA084EA205938EFDD34965DA0B14777989D16F72A4BF9FCBAD5CABCE6F827.png" alt="NS记录填写到这里"></p>
 <h2 id="namesilo-修改-ns-服务器"><a href="#namesilo-修改-ns-服务器" class="headerlink" title="namesilo 修改 ns 服务器"></a>namesilo 修改 ns 服务器</h2><blockquote>
-<p><a href="https://www.namesilo.com/account_domains.php">https://www.namesilo.com/account_domains.php</a></p>
+<p><span class="exturl" data-url="aHR0cHM6Ly93d3cubmFtZXNpbG8uY29tL2FjY291bnRfZG9tYWlucy5waHA=">https://www.namesilo.com/account_domains.php<i class="fa fa-external-link-alt"></i></span></p>
 </blockquote>
 <p><img data-src="https://lsky.sfhj.top/i/main/2023-03/B5DDEDA418F36157C835DA235BA775A9AC354B93EE763D05C05F83CADC9A77D5.png" alt="选择域名"></p>
 <p><img data-src="https://lsky.sfhj.top/i/main/2023-03/9FDF844D910F637DEB6C82647EC4E10E232B109A22E974EBEC582E07597BB683.png" alt="修改NameServer"></p>
 <h1 id="添加-DNS-解析和-Workers"><a href="#添加-DNS-解析和-Workers" class="headerlink" title="添加 DNS 解析和 Workers"></a>添加 DNS 解析和 Workers</h1><p><img data-src="https://lsky.sfhj.top/i/main/2023-03/36C2EE20809A34E19037B12D9B2971DB4EF122F94257EDDE75CB0B5D11D98360.png" alt="编辑Workers"></p>
 <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> rules = [</span><br><span class="line">&#123;<span class="string">&quot;oldurl&quot;</span>:<span class="string">&quot;short-test.newreport.top&quot;</span>,<span class="string">&quot;newurl&quot;</span>:<span class="string">&quot;newreport.top/2022-09-04/cloudflare-301-url&quot;</span>&#125;,</span><br><span class="line"></span><br><span class="line">];</span><br><span class="line"></span><br><span class="line"><span class="keyword">async</span> <span class="keyword">function</span> <span class="title function_">handleRequest</span>(<span class="params">request</span>) &#123;</span><br><span class="line">    <span class="keyword">let</span> url = request.<span class="property">url</span>;</span><br><span class="line">    <span class="keyword">let</span> hostname = <span class="keyword">new</span> <span class="title function_">URL</span>(request.<span class="property">url</span>).<span class="property">hostname</span>;</span><br><span class="line">    <span class="keyword">let</span> isExist = <span class="literal">false</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>, l = rules.<span class="property">length</span>; i &lt; l; i++) &#123;</span><br><span class="line">        <span class="keyword">if</span> (rules[i].<span class="property">oldurl</span> == hostname) &#123;</span><br><span class="line">            url = url.<span class="title function_">replace</span>(rules[i].<span class="property">oldurl</span>, rules[i].<span class="property">newurl</span>);</span><br><span class="line">            isExist = <span class="literal">true</span>;</span><br><span class="line">            <span class="comment">// url = url.replace(/([\w\W]+)\/$/,&quot;$1&quot;);//删除最后一个/</span></span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (isExist) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="title class_">Response</span>.<span class="title function_">redirect</span>(<span class="keyword">new</span> <span class="title function_">URL</span>(url), <span class="number">301</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="title function_">fetch</span>(request)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="title function_">addEventListener</span>(<span class="string">&#x27;fetch&#x27;</span>, <span class="keyword">async</span> event =&gt; &#123;</span><br><span class="line">    event.<span class="title function_">respondWith</span>(<span class="title function_">handleRequest</span>(event.<span class="property">request</span>))</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
 <blockquote>
-<p>验证 <a href="https://short-test.newreport.top/">https://short-test.newreport.top</a></p>
+<p>验证 <span class="exturl" data-url="aHR0cHM6Ly9zaG9ydC10ZXN0Lm5ld3JlcG9ydC50b3Av">https://short-test.newreport.top<i class="fa fa-external-link-alt"></i></span></p>
 </blockquote>
 ]]></content>
       <categories>
@@ -1435,7 +1435,7 @@ func init() &#123;
   <entry>
     <title>图床&quot;永久链&quot;</title>
     <url>/2021-01-05/img-make/</url>
-    <content><![CDATA[<p>需要准备对象存储及域名，理论”永久链”图床，可在各云服务商或个人服务器间迁移数据<br>如果你是国外的域名，markdown 是国内使用，需要绑定国内第三方 dns，这里以<a href="https://www.namesilo.com/">namesilo</a>域名绑定<a href="https://www.dnspod.cn/">dnspod</a>为例。</p>
+    <content><![CDATA[<p>需要准备对象存储及域名，理论”永久链”图床，可在各云服务商或个人服务器间迁移数据<br>如果你是国外的域名，markdown 是国内使用，需要绑定国内第三方 dns，这里以<span class="exturl" data-url="aHR0cHM6Ly93d3cubmFtZXNpbG8uY29tLw==">namesilo<i class="fa fa-external-link-alt"></i></span>域名绑定<span class="exturl" data-url="aHR0cHM6Ly93d3cuZG5zcG9kLmNuLw==">dnspod<i class="fa fa-external-link-alt"></i></span>为例。</p>
 <span id="more"></span>  
 
 <h1 id="namesilo-配置-国内备案域名可跳过此步骤"><a href="#namesilo-配置-国内备案域名可跳过此步骤" class="headerlink" title="namesilo 配置(国内备案域名可跳过此步骤)"></a>namesilo 配置(国内备案域名可跳过此步骤)</h1><p><img data-src="https://lsky.sfhj.top/i/main/2023-03/281BCA8978E663D1AA05423137C07932E35E89FDDDCA7A23445455A7723F219C.png" alt="选择域名"></p>
@@ -1460,14 +1460,14 @@ func init() &#123;
   <entry>
     <title>云函数</title>
     <url>/2021-01-04/function-cloud/</url>
-    <content><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p><a href="https://developers.weixin.qq.com/miniprogram/dev/wxcloud/guide/functions.html">云函数简介</a><br>长不看结论：总之就是跑脚本，也可以跑微信的推送等事件。目前我只用它在跑签到脚本。</p>
-<h1 id="server-酱"><a href="#server-酱" class="headerlink" title="server 酱"></a>server 酱</h1><p>原版 server 酱：<a href="http://sc.ftqq.com/">http://sc.ftqq.com/</a><br>自搭 server 酱：<a href="https://www.v2ex.com/t/567927">https://www.v2ex.com/t/567927</a></p>
+    <content><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p><span class="exturl" data-url="aHR0cHM6Ly9kZXZlbG9wZXJzLndlaXhpbi5xcS5jb20vbWluaXByb2dyYW0vZGV2L3d4Y2xvdWQvZ3VpZGUvZnVuY3Rpb25zLmh0bWw=">云函数简介<i class="fa fa-external-link-alt"></i></span><br>长不看结论：总之就是跑脚本，也可以跑微信的推送等事件。目前我只用它在跑签到脚本。</p>
+<h1 id="server-酱"><a href="#server-酱" class="headerlink" title="server 酱"></a>server 酱</h1><p>原版 server 酱：<span class="exturl" data-url="aHR0cDovL3NjLmZ0cXEuY29tLw==">http://sc.ftqq.com/<i class="fa fa-external-link-alt"></i></span><br>自搭 server 酱：<span class="exturl" data-url="aHR0cHM6Ly93d3cudjJleC5jb20vdC81Njc5Mjc=">https://www.v2ex.com/t/567927<i class="fa fa-external-link-alt"></i></span></p>
 <span id="more"></span>
 
-<h1 id="哔哩哔哩签到"><a href="#哔哩哔哩签到" class="headerlink" title="哔哩哔哩签到"></a>哔哩哔哩签到</h1><p>项目地址：<a href="https://github.com/happy888888/BiliExp">https://github.com/happy888888/BiliExp</a><br>油猴脚本：<a href="https://greasyfork.org/zh-CN/scripts/393096-bilibiliexp/versions">https://greasyfork.org/zh-CN/scripts/393096-bilibiliexp/versions</a><br>注意事项：云函数方式为 cookie 签到</p>
-<h1 id="天翼云盘签到和抽奖"><a href="#天翼云盘签到和抽奖" class="headerlink" title="天翼云盘签到和抽奖"></a>天翼云盘签到和抽奖</h1><p>项目地址：<a href="https://github.com/FingerSword/Cloud189-Sign-In">https://github.com/FingerSword/Cloud189-Sign-In</a><br>注意事项：不改密码就 ok  </p>
-<h1 id="网易云音乐签到"><a href="#网易云音乐签到" class="headerlink" title="网易云音乐签到"></a>网易云音乐签到</h1><p>地址：<a href="https://www.coolapk.com/feed/22733317">https://www.coolapk.com/feed/22733317</a><br>注意事项：不改密码就 ok  </p>
-<h1 id="有道云笔记签到"><a href="#有道云笔记签到" class="headerlink" title="有道云笔记签到"></a>有道云笔记签到</h1><p>签到 1.0：<a href="https://www.coolapk.com/feed/18049127">https://www.coolapk.com/feed/18049127</a><br>签到 2.0：<a href="https://www.coolapk.com/feed/19750209">https://www.coolapk.com/feed/19750209</a></p>
+<h1 id="哔哩哔哩签到"><a href="#哔哩哔哩签到" class="headerlink" title="哔哩哔哩签到"></a>哔哩哔哩签到</h1><p>项目地址：<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2hhcHB5ODg4ODg4L0JpbGlFeHA=">https://github.com/happy888888/BiliExp<i class="fa fa-external-link-alt"></i></span><br>油猴脚本：<span class="exturl" data-url="aHR0cHM6Ly9ncmVhc3lmb3JrLm9yZy96aC1DTi9zY3JpcHRzLzM5MzA5Ni1iaWxpYmlsaWV4cC92ZXJzaW9ucw==">https://greasyfork.org/zh-CN/scripts/393096-bilibiliexp/versions<i class="fa fa-external-link-alt"></i></span><br>注意事项：云函数方式为 cookie 签到</p>
+<h1 id="天翼云盘签到和抽奖"><a href="#天翼云盘签到和抽奖" class="headerlink" title="天翼云盘签到和抽奖"></a>天翼云盘签到和抽奖</h1><p>项目地址：<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL0ZpbmdlclN3b3JkL0Nsb3VkMTg5LVNpZ24tSW4=">https://github.com/FingerSword/Cloud189-Sign-In<i class="fa fa-external-link-alt"></i></span><br>注意事项：不改密码就 ok  </p>
+<h1 id="网易云音乐签到"><a href="#网易云音乐签到" class="headerlink" title="网易云音乐签到"></a>网易云音乐签到</h1><p>地址：<span class="exturl" data-url="aHR0cHM6Ly93d3cuY29vbGFway5jb20vZmVlZC8yMjczMzMxNw==">https://www.coolapk.com/feed/22733317<i class="fa fa-external-link-alt"></i></span><br>注意事项：不改密码就 ok  </p>
+<h1 id="有道云笔记签到"><a href="#有道云笔记签到" class="headerlink" title="有道云笔记签到"></a>有道云笔记签到</h1><p>签到 1.0：<span class="exturl" data-url="aHR0cHM6Ly93d3cuY29vbGFway5jb20vZmVlZC8xODA0OTEyNw==">https://www.coolapk.com/feed/18049127<i class="fa fa-external-link-alt"></i></span><br>签到 2.0：<span class="exturl" data-url="aHR0cHM6Ly93d3cuY29vbGFway5jb20vZmVlZC8xOTc1MDIwOQ==">https://www.coolapk.com/feed/19750209<i class="fa fa-external-link-alt"></i></span></p>
 ]]></content>
       <categories>
         <category>timeline</category>
@@ -1482,22 +1482,22 @@ func init() &#123;
     <content><![CDATA[<h1 id="域名服务商"><a href="#域名服务商" class="headerlink" title="域名服务商"></a>域名服务商</h1><p>个人站除开 com、net 这两个域名，其他推荐选择国外服务商进行注册。以下仅列举一些我接触过的，还有很多其他的服务商就不一一列举了  </p>
 <ul>
 <li>国内<ul>
-<li><a href="https://wanwang.aliyun.com/">阿里云万网</a>：尚可，只提供 com 和 net、tv、cc 这四个域名的隐藏个人信息服务</li>
-<li><a href="https://www.huaweicloud.com/product/domain.html">华为云 domain</a>：在企鹅和阿里中间的位置</li>
-<li><a href="https://dnspod.cloud.tencent.com/">腾讯云 dnspod</a>：我目前所有 com 域名都在这个上面</li>
-<li><a href="https://cloud.baidu.com/product/bcd.html">百度云 BCD</a>：新用户优惠不好，域名隐私里写的和实际不符</li>
+<li><span class="exturl" data-url="aHR0cHM6Ly93YW53YW5nLmFsaXl1bi5jb20v">阿里云万网<i class="fa fa-external-link-alt"></i></span>：尚可，只提供 com 和 net、tv、cc 这四个域名的隐藏个人信息服务</li>
+<li><span class="exturl" data-url="aHR0cHM6Ly93d3cuaHVhd2VpY2xvdWQuY29tL3Byb2R1Y3QvZG9tYWluLmh0bWw=">华为云 domain<i class="fa fa-external-link-alt"></i></span>：在企鹅和阿里中间的位置</li>
+<li><span class="exturl" data-url="aHR0cHM6Ly9kbnNwb2QuY2xvdWQudGVuY2VudC5jb20v">腾讯云 dnspod<i class="fa fa-external-link-alt"></i></span>：我目前所有 com 域名都在这个上面</li>
+<li><span class="exturl" data-url="aHR0cHM6Ly9jbG91ZC5iYWlkdS5jb20vcHJvZHVjdC9iY2QuaHRtbA==">百度云 BCD<i class="fa fa-external-link-alt"></i></span>：新用户优惠不好，域名隐私里写的和实际不符</li>
 </ul>
 </li>
 <li>国外<ul>
-<li><a href="https://sg.godaddy.com/">GoDaddy</a>：全球最大的域名服务商，当然价格就…也是贵的，隐藏个人信息还要收费</li>
-<li><a href="https://www.namesilo.com/">namesilo</a>：价格便宜，比国内的稍微贵一丢丢，所有域名均支持免费 whois 隐藏个人信息</li>
+<li><span class="exturl" data-url="aHR0cHM6Ly9zZy5nb2RhZGR5LmNvbS8=">GoDaddy<i class="fa fa-external-link-alt"></i></span>：全球最大的域名服务商，当然价格就…也是贵的，隐藏个人信息还要收费</li>
+<li><span class="exturl" data-url="aHR0cHM6Ly93d3cubmFtZXNpbG8uY29tLw==">namesilo<i class="fa fa-external-link-alt"></i></span>：价格便宜，比国内的稍微贵一丢丢，所有域名均支持免费 whois 隐藏个人信息</li>
 </ul>
 </li>
 </ul>
 <span id="more"></span>
 
-<h1 id="选购指南"><a href="#选购指南" class="headerlink" title="选购指南"></a>选购指南</h1><p>对于正常内容的网站，.com 和.net 选国内的就可以了，价格比国外便宜，安全性几个顶级服务商一般不会出问题，而且这两个后缀的域名默认隐藏 whois 个人信息。<br>其他的域名，比如 work、link、site、me…请参考各个国内服务商的域名隐私保护指南(<a href="https://wanwang.aliyun.com/domain/whoisprotect/">阿里云</a>、<a href="https://support.huaweicloud.com/domain_faq/domain_faq_0002.html">华为云</a>、<a href="https://cloud.tencent.com/document/product/242/30404">腾讯云</a>、<a href="https://cloud.baidu.com/doc/BCD/s/bjwvym8qn">百度云</a>)，他们是不支持非主流域名隐藏注册人姓名和注册邮箱的，根据我的实践，腾讯和阿里的 top 域名，百度和腾讯的 xyz 域名，均不支持 whois 隐藏，虽然 ICANN 和欧盟在 2018 年已经要求 whois 查询结果不再展示域名所有者、联系邮箱等信息，但有些域名服务商对于非主流域名并没有默认隐藏。<br>这些非主流的域名，我一般作为跳转域名用，当然也可以给小网站，出于 whois 查询隐私考虑，这些域名最好选择国外的，好处有很多就不多说了，至少 whois 查询不到注册人。<br>然后是国外服务商的选择，我选择的是 namesilo，因为便宜且支持隐藏个人信息，无需备案就可跳转。<br>使用方法参考：<a href="https://zhuanlan.zhihu.com/p/33921436">https://zhuanlan.zhihu.com/p/33921436</a> 。<br>跳转指定 url 参考：<a href="https://www.namesilo.com/Support/Domain-Forwarding">https://www.namesilo.com/Support/Domain-Forwarding</a> 。<br>Google 邮箱注册在移动端 gmail 注册即可不绑定手机，最开始的手机号只为验证是否真人。</p>
-<p>价格对比 1：<a href="https://www.domain265.com/">https://www.domain265.com/</a><br>价格对比 2: <a href="https://namebeta.com/">https://namebeta.com/</a><br>whois 查询：<a href="https://domain.163yun.com/">https://domain.163yun.com/</a><br>ICANN 更多信息：<a href="https://www.icann.org/news/announcement-2018-05-22-zh">https://www.icann.org/news/announcement-2018-05-22-zh</a></p>
+<h1 id="选购指南"><a href="#选购指南" class="headerlink" title="选购指南"></a>选购指南</h1><p>对于正常内容的网站，.com 和.net 选国内的就可以了，价格比国外便宜，安全性几个顶级服务商一般不会出问题，而且这两个后缀的域名默认隐藏 whois 个人信息。<br>其他的域名，比如 work、link、site、me…请参考各个国内服务商的域名隐私保护指南(<span class="exturl" data-url="aHR0cHM6Ly93YW53YW5nLmFsaXl1bi5jb20vZG9tYWluL3dob2lzcHJvdGVjdC8=">阿里云<i class="fa fa-external-link-alt"></i></span>、<span class="exturl" data-url="aHR0cHM6Ly9zdXBwb3J0Lmh1YXdlaWNsb3VkLmNvbS9kb21haW5fZmFxL2RvbWFpbl9mYXFfMDAwMi5odG1s">华为云<i class="fa fa-external-link-alt"></i></span>、<span class="exturl" data-url="aHR0cHM6Ly9jbG91ZC50ZW5jZW50LmNvbS9kb2N1bWVudC9wcm9kdWN0LzI0Mi8zMDQwNA==">腾讯云<i class="fa fa-external-link-alt"></i></span>、<span class="exturl" data-url="aHR0cHM6Ly9jbG91ZC5iYWlkdS5jb20vZG9jL0JDRC9zL2Jqd3Z5bThxbg==">百度云<i class="fa fa-external-link-alt"></i></span>)，他们是不支持非主流域名隐藏注册人姓名和注册邮箱的，根据我的实践，腾讯和阿里的 top 域名，百度和腾讯的 xyz 域名，均不支持 whois 隐藏，虽然 ICANN 和欧盟在 2018 年已经要求 whois 查询结果不再展示域名所有者、联系邮箱等信息，但有些域名服务商对于非主流域名并没有默认隐藏。<br>这些非主流的域名，我一般作为跳转域名用，当然也可以给小网站，出于 whois 查询隐私考虑，这些域名最好选择国外的，好处有很多就不多说了，至少 whois 查询不到注册人。<br>然后是国外服务商的选择，我选择的是 namesilo，因为便宜且支持隐藏个人信息，无需备案就可跳转。<br>使用方法参考：<span class="exturl" data-url="aHR0cHM6Ly96aHVhbmxhbi56aGlodS5jb20vcC8zMzkyMTQzNg==">https://zhuanlan.zhihu.com/p/33921436<i class="fa fa-external-link-alt"></i></span> 。<br>跳转指定 url 参考：<span class="exturl" data-url="aHR0cHM6Ly93d3cubmFtZXNpbG8uY29tL1N1cHBvcnQvRG9tYWluLUZvcndhcmRpbmc=">https://www.namesilo.com/Support/Domain-Forwarding<i class="fa fa-external-link-alt"></i></span> 。<br>Google 邮箱注册在移动端 gmail 注册即可不绑定手机，最开始的手机号只为验证是否真人。</p>
+<p>价格对比 1：<span class="exturl" data-url="aHR0cHM6Ly93d3cuZG9tYWluMjY1LmNvbS8=">https://www.domain265.com/<i class="fa fa-external-link-alt"></i></span><br>价格对比 2: <span class="exturl" data-url="aHR0cHM6Ly9uYW1lYmV0YS5jb20v">https://namebeta.com/<i class="fa fa-external-link-alt"></i></span><br>whois 查询：<span class="exturl" data-url="aHR0cHM6Ly9kb21haW4uMTYzeXVuLmNvbS8=">https://domain.163yun.com/<i class="fa fa-external-link-alt"></i></span><br>ICANN 更多信息：<span class="exturl" data-url="aHR0cHM6Ly93d3cuaWNhbm4ub3JnL25ld3MvYW5ub3VuY2VtZW50LTIwMTgtMDUtMjItemg=">https://www.icann.org/news/announcement-2018-05-22-zh<i class="fa fa-external-link-alt"></i></span></p>
 <h1 id="域名跳转指定-url-方案"><a href="#域名跳转指定-url-方案" class="headerlink" title="域名跳转指定 url 方案"></a>域名跳转指定 url 方案</h1><blockquote>
 <p>2022-08-08 更新，现在可以使用 cloudflare 的 <a href="../../2022-09-04/cloudflare-301-url">workers</a> 进行显示 url 跳转</p>
 </blockquote>
@@ -1537,7 +1537,7 @@ A[.NET平台] -->C(Visual Basic语言)
 A[.NET平台] -->D(C++语言)
 A[.NET平台] -->E(F#语言)
 A[.NET平台] -->F(...语言)</pre>
-<h1 id="Visual-Studio-安装使用"><a href="#Visual-Studio-安装使用" class="headerlink" title="Visual Studio 安装使用"></a>Visual Studio 安装使用</h1><p><a href="https://visualstudio.microsoft.com/zh-hans/downloads/">https://visualstudio.microsoft.com/zh-hans/downloads/</a></p>
+<h1 id="Visual-Studio-安装使用"><a href="#Visual-Studio-安装使用" class="headerlink" title="Visual Studio 安装使用"></a>Visual Studio 安装使用</h1><p><span class="exturl" data-url="aHR0cHM6Ly92aXN1YWxzdHVkaW8ubWljcm9zb2Z0LmNvbS96aC1oYW5zL2Rvd25sb2Fkcy8=">https://visualstudio.microsoft.com/zh-hans/downloads/<i class="fa fa-external-link-alt"></i></span></p>
 <h1 id="创建第一个程序"><a href="#创建第一个程序" class="headerlink" title="创建第一个程序"></a>创建第一个程序</h1><p>Windows 窗体应用（.net framwork）</p>
 <figure class="highlight c#"><table><tr><td class="code"><pre><span class="line"><span class="keyword">namespace</span> <span class="title">WindowsFormsApp1</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">partial</span> <span class="keyword">class</span> <span class="title">Form1</span> : <span class="title">Form</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="title">Form1</span>()</span></span><br><span class="line">        &#123;</span><br><span class="line">            InitializeComponent();</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">Label1_Click</span>(<span class="params"><span class="built_in">object</span> sender, EventArgs e</span>)</span></span><br><span class="line">        &#123;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
       <categories>
@@ -1939,7 +1939,7 @@ A[.NET平台] -->F(...语言)</pre>
 </tr>
 </tbody></table>
 <p><strong>RPM 包文档</strong><br>本地帮助文档<br>安装软件包后，在 doc 目录下释放文档<br>&#x2F;usr&#x2F;share&#x2F;doc&#x2F;pa<br>可使用浏览器查看</p>
-<p><strong>redhat 在线文档</strong><br>红帽官方文档 <a href="https://access.redhat.com/">https://access.redhat.com</a></p>
+<p><strong>redhat 在线文档</strong><br>红帽官方文档 <span class="exturl" data-url="aHR0cHM6Ly9hY2Nlc3MucmVkaGF0LmNvbS8=">https://access.redhat.com<i class="fa fa-external-link-alt"></i></span></p>
 <h1 id="单元小结"><a href="#单元小结" class="headerlink" title="单元小结"></a>单元小结</h1><ul>
 <li>命令的语法规则</li>
 <li>man 帮助使用</li>
@@ -2122,13 +2122,13 @@ A[.NET平台] -->F(...语言)</pre>
 <li>其他 Linux 系统的发行版</li>
 <li>了解 linux 的基本原理</li>
 </ul>
-<h1 id="linux-系统安装"><a href="#linux-系统安装" class="headerlink" title="linux 系统安装"></a>linux 系统安装</h1><p>CentOS 下载：<a href="https://www.centos.org/download/">https://www.centos.org/download/</a><br>DVD ISO：标准安装版，一般下载这个就可以了（推荐）<br>Everything ISO：对完整版安装盘的软件进行补充，集成所有软件。（包含一套完整的软件包，可以用来安装系统或者填充本地镜像）<br>Minimal ISO：迷你版，小巧、安装快速、自带的软件少<br>CentOS 所有历史版本的下载地址：<a href="http://archive.kernel.org/centos-vault/">http://archive.kernel.org/centos-vault/</a><br><a href="https://www.lofter.com/lpost/4ba01091_1cabbd565">rhel8 安装手册</a></p>
+<h1 id="linux-系统安装"><a href="#linux-系统安装" class="headerlink" title="linux 系统安装"></a>linux 系统安装</h1><p>CentOS 下载：<span class="exturl" data-url="aHR0cHM6Ly93d3cuY2VudG9zLm9yZy9kb3dubG9hZC8=">https://www.centos.org/download/<i class="fa fa-external-link-alt"></i></span><br>DVD ISO：标准安装版，一般下载这个就可以了（推荐）<br>Everything ISO：对完整版安装盘的软件进行补充，集成所有软件。（包含一套完整的软件包，可以用来安装系统或者填充本地镜像）<br>Minimal ISO：迷你版，小巧、安装快速、自带的软件少<br>CentOS 所有历史版本的下载地址：<span class="exturl" data-url="aHR0cDovL2FyY2hpdmUua2VybmVsLm9yZy9jZW50b3MtdmF1bHQv">http://archive.kernel.org/centos-vault/<i class="fa fa-external-link-alt"></i></span><br><span class="exturl" data-url="aHR0cHM6Ly93d3cubG9mdGVyLmNvbS9scG9zdC80YmEwMTA5MV8xY2FiYmQ1NjU=">rhel8 安装手册<i class="fa fa-external-link-alt"></i></span></p>
 <span id="more"></span>  
 
 <h1 id="什么是操作系统？"><a href="#什么是操作系统？" class="headerlink" title="什么是操作系统？"></a>什么是操作系统？</h1><p>操作系统，英文名称 Operating System，简称 OS，是计算机系统中必不可少的基础系统软件，它是应用程序运行以及用户操作必备的基础环境支撑，是计算机系统的核心。  </p>
 <p><img data-src="https://lsky.sfhj.top/i/main/2023-03/96F0C320ADD182842FBA7D0D28146A5183660388D3149919CAB5C0163FAC9C5A.png" alt="操作系统与计算机硬件软件关系"></p>
 <h1 id="什么是-Linux？"><a href="#什么是-Linux？" class="headerlink" title="什么是 Linux？"></a>什么是 Linux？</h1><p>和 Windows 操作系统软件一样，Linux 也是一个操作系统软件。<br>Linux 内核最初只是由芬兰人李纳斯·托瓦兹（Linus Torvalds）在赫尔辛基大学上学时出于个人爱好而编写的。<br>Linux 是一套免费使用和自由传播的，是一个基于 POSIX（POSIX 表示可移植操作系统接口，是个标准）的多用户、多任务、支持多线程和多 CPU 的操作系统。 </p>
-<p><strong>Linux 的内核版本和发行版本</strong><br>内核版本下载地址：<a href="https://www.kernel.org/">https://www.kernel.org/</a> ，只有 99M 多一点是 Linux 操作系统的真正的核心。<br>Linux 的发行版说简单点就是将 Linux 内核与应用软件做一个打包。<br>目前市面上较知名的发行版有：Ubuntu、RedHat、CentOS、Debian、Fedora、SuSE、OpenSUSE、TurboLinux、BluePoint、RedFlag、Xterm、SlackWare 等很多很多，发行版本可能有上千种之多，各个发行版本之间的主要区别就是安装软件的方式可能不同，其他主要的操作命令啊什么的基本雷同，因为都是一个内核。  </p>
+<p><strong>Linux 的内核版本和发行版本</strong><br>内核版本下载地址：<span class="exturl" data-url="aHR0cHM6Ly93d3cua2VybmVsLm9yZy8=">https://www.kernel.org/<i class="fa fa-external-link-alt"></i></span> ，只有 99M 多一点是 Linux 操作系统的真正的核心。<br>Linux 的发行版说简单点就是将 Linux 内核与应用软件做一个打包。<br>目前市面上较知名的发行版有：Ubuntu、RedHat、CentOS、Debian、Fedora、SuSE、OpenSUSE、TurboLinux、BluePoint、RedFlag、Xterm、SlackWare 等很多很多，发行版本可能有上千种之多，各个发行版本之间的主要区别就是安装软件的方式可能不同，其他主要的操作命令啊什么的基本雷同，因为都是一个内核。  </p>
 <p><strong>Linux 应用领域</strong><br>物联网、云计算、大数据使用的嵌入式、c++、JAVA、PHP 等底层应用软件都是在 Linux 操作系统上,各种场合都有使用各种 Linux 发行版，通常服务器使用 Linux，未来国产化服务器都是安装的 Linux 操作系统。</p>
 <p><strong>Linux 发展史</strong>  </p>
 <ul>
@@ -2205,18 +2205,18 @@ A[.NET平台] -->F(...语言)</pre>
   <entry>
     <title>Hexo Next7 食用方法</title>
     <url>/2020-12-20/use-hexo-next-7/</url>
-    <content><![CDATA[<h1 id="博客启用（前略环境搭建）"><a href="#博客启用（前略环境搭建）" class="headerlink" title="博客启用（前略环境搭建）"></a>博客启用（前略环境搭建）</h1><p>新建文件夹，之后在其中执行：hexo init。<br>hexo-next7 官方 git：<a href="https://github.com/theme-next/hexo-theme-next">https://github.com/theme-next/hexo-theme-next</a><br>hexo-next8 官方 git：<a href="https://github.com/next-theme/hexo-theme-next">https://github.com/next-theme/hexo-theme-next</a><br>git 配置：npm install –save hexo-deployer-git；多用户指定其一：githubgit config –global user.email “邮箱”和 git config –global user.name “用户名”</p>
+    <content><![CDATA[<h1 id="博客启用（前略环境搭建）"><a href="#博客启用（前略环境搭建）" class="headerlink" title="博客启用（前略环境搭建）"></a>博客启用（前略环境搭建）</h1><p>新建文件夹，之后在其中执行：hexo init。<br>hexo-next7 官方 git：<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3RoZW1lLW5leHQvaGV4by10aGVtZS1uZXh0">https://github.com/theme-next/hexo-theme-next<i class="fa fa-external-link-alt"></i></span><br>hexo-next8 官方 git：<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL25leHQtdGhlbWUvaGV4by10aGVtZS1uZXh0">https://github.com/next-theme/hexo-theme-next<i class="fa fa-external-link-alt"></i></span><br>git 配置：npm install –save hexo-deployer-git；多用户指定其一：githubgit config –global user.email “邮箱”和 git config –global user.name “用户名”</p>
 <span id="more"></span>
 
 
-<h1 id="可能会用到的工具"><a href="#可能会用到的工具" class="headerlink" title="可能会用到的工具"></a>可能会用到的工具</h1><p>RSS 订阅：npm install hexo-generator-feed；<br>参考：<a href="https://blog.csdn.net/qq_36537546/article/details/90730068">https://blog.csdn.net/qq_36537546/article/details/90730068</a>  </p>
-<p>站点地图：npm install hexo-generator-sitemap –save；<br>参考：<a href="https://www.cnblogs.com/brady-wang/p/8493181.html">https://www.cnblogs.com/brady-wang/p/8493181.html</a>  </p>
-<p>next7 的搜索功能：npm install hexo-generator-searchdb –save；<br>参考：<a href="https://blog.csdn.net/qq_41086511/article/details/103537522">https://blog.csdn.net/qq_41086511/article/details/103537522</a>  </p>
-<p>背景图片及透明度调整：\themes\next-7.7.2\source\css_common\components\pages\pages.styl，能找到此页面样式文件的均可。<br>参考：<a href="https://blog.csdn.net/Louis_li51/article/details/105227430%EF%BC%9B">https://blog.csdn.net/Louis_li51/article/details/105227430；</a><br>注：带搜索框后不能开启菜单栏和搜索栏的透明度，否则会透明度过高看不清，但可以给头像的框加透明度。   </p>
-<p>next7 单独友链参考：<a href="https://blog.csdn.net/Aoman_Hao/article/details/103758829">https://blog.csdn.net/Aoman_Hao/article/details/103758829</a>  </p>
-<p>文章置顶：node_modules&#x2F;hexo-generator-index&#x2F;lib&#x2F;generator；<br>参考：<a href="https://www.jianshu.com/p/42a4efcdf8d7">https://www.jianshu.com/p/42a4efcdf8d7</a>  </p>
-<p>图片压缩工具：<a href="https://tinypng.com/">https://tinypng.com/</a> 或者<a href="https://docsmall.com/image-compress">https://docsmall.com/image-compress</a>  </p>
-<p>图片批量重命名工具（可为图片 hash 值）：<a href="https://renamer.en.softonic.com/">ReNamer</a>  </p>
+<h1 id="可能会用到的工具"><a href="#可能会用到的工具" class="headerlink" title="可能会用到的工具"></a>可能会用到的工具</h1><p>RSS 订阅：npm install hexo-generator-feed；<br>参考：<span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM2NTM3NTQ2L2FydGljbGUvZGV0YWlscy85MDczMDA2OA==">https://blog.csdn.net/qq_36537546/article/details/90730068<i class="fa fa-external-link-alt"></i></span>  </p>
+<p>站点地图：npm install hexo-generator-sitemap –save；<br>参考：<span class="exturl" data-url="aHR0cHM6Ly93d3cuY25ibG9ncy5jb20vYnJhZHktd2FuZy9wLzg0OTMxODEuaHRtbA==">https://www.cnblogs.com/brady-wang/p/8493181.html<i class="fa fa-external-link-alt"></i></span>  </p>
+<p>next7 的搜索功能：npm install hexo-generator-searchdb –save；<br>参考：<span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMDg2NTExL2FydGljbGUvZGV0YWlscy8xMDM1Mzc1MjI=">https://blog.csdn.net/qq_41086511/article/details/103537522<i class="fa fa-external-link-alt"></i></span>  </p>
+<p>背景图片及透明度调整：\themes\next-7.7.2\source\css_common\components\pages\pages.styl，能找到此页面样式文件的均可。<br>参考：<span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0xvdWlzX2xpNTEvYXJ0aWNsZS9kZXRhaWxzLzEwNTIyNzQzMCVFRiVCQyU5Qg==">https://blog.csdn.net/Louis_li51/article/details/105227430；<i class="fa fa-external-link-alt"></i></span><br>注：带搜索框后不能开启菜单栏和搜索栏的透明度，否则会透明度过高看不清，但可以给头像的框加透明度。   </p>
+<p>next7 单独友链参考：<span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0FvbWFuX0hhby9hcnRpY2xlL2RldGFpbHMvMTAzNzU4ODI5">https://blog.csdn.net/Aoman_Hao/article/details/103758829<i class="fa fa-external-link-alt"></i></span>  </p>
+<p>文章置顶：node_modules&#x2F;hexo-generator-index&#x2F;lib&#x2F;generator；<br>参考：<span class="exturl" data-url="aHR0cHM6Ly93d3cuamlhbnNodS5jb20vcC80MmE0ZWZjZGY4ZDc=">https://www.jianshu.com/p/42a4efcdf8d7<i class="fa fa-external-link-alt"></i></span>  </p>
+<p>图片压缩工具：<span class="exturl" data-url="aHR0cHM6Ly90aW55cG5nLmNvbS8=">https://tinypng.com/<i class="fa fa-external-link-alt"></i></span> 或者<span class="exturl" data-url="aHR0cHM6Ly9kb2NzbWFsbC5jb20vaW1hZ2UtY29tcHJlc3M=">https://docsmall.com/image-compress<i class="fa fa-external-link-alt"></i></span>  </p>
+<p>图片批量重命名工具（可为图片 hash 值）：<span class="exturl" data-url="aHR0cHM6Ly9yZW5hbWVyLmVuLnNvZnRvbmljLmNvbS8=">ReNamer<i class="fa fa-external-link-alt"></i></span>  </p>
 ]]></content>
       <categories>
         <category>timeline</category>

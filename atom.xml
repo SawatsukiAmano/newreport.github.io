@@ -6,7 +6,7 @@
   <link href="https://newreport.top/atom.xml" rel="self"/>
   
   <link href="https://newreport.top/"/>
-  <updated>2023-03-29T08:03:40.149Z</updated>
+  <updated>2023-03-30T08:36:58.557Z</updated>
   <id>https://newreport.top/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://newreport.top/2023-03-29/linux-setting-ssh-key/"/>
     <id>https://newreport.top/2023-03-29/linux-setting-ssh-key/</id>
     <published>2023-03-29T16:00:00.000Z</published>
-    <updated>2023-03-29T08:03:40.149Z</updated>
+    <updated>2023-03-30T08:36:58.557Z</updated>
     
     
       
@@ -54,7 +54,7 @@
     
     
     <summary type="html">&lt;blockquote&gt;
-&lt;p&gt;&lt;a href=&quot;https://docs.docker.com/engine/install/ubuntu/&quot;&gt;https://docs.docker.com/engine/install/ubuntu/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;exturl&quot; data-url=&quot;aHR0cHM6Ly9kb2NzLmRvY2tlci5jb20vZW5naW5lL2luc3RhbGwvdWJ1bnR1Lw==&quot;&gt;https://docs.docker.com/engine/install/ubuntu/&lt;i class=&quot;fa fa-external-link-alt&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;/blockquote&gt;</summary>
     
     
@@ -71,7 +71,7 @@
     <link href="https://newreport.top/2023-03-28/ubuntu-install-chrome-remote-openai-newbing/"/>
     <id>https://newreport.top/2023-03-28/ubuntu-install-chrome-remote-openai-newbing/</id>
     <published>2023-03-28T16:00:01.000Z</published>
-    <updated>2023-03-30T01:30:09.682Z</updated>
+    <updated>2023-03-30T08:59:47.100Z</updated>
     
     
       
@@ -154,7 +154,7 @@
     <link href="https://newreport.top/2023-03-23/windows-server-2022-nas-init/"/>
     <id>https://newreport.top/2023-03-23/windows-server-2022-nas-init/</id>
     <published>2023-03-23T16:00:00.000Z</published>
-    <updated>2023-03-30T06:11:32.274Z</updated>
+    <updated>2023-03-30T08:53:55.085Z</updated>
     
     
     <summary type="html">&lt;blockquote&gt;
@@ -387,7 +387,7 @@
     
     
     <summary type="html">&lt;h1 id=&quot;CLDR-复数形式&quot;&gt;&lt;a href=&quot;#CLDR-复数形式&quot; class=&quot;headerlink&quot; title=&quot;CLDR 复数形式&quot;&gt;&lt;/a&gt;CLDR 复数形式&lt;/h1&gt;&lt;blockquote&gt;
-&lt;p&gt;&lt;a href=&quot;https://cldr.unicode.org/&quot;&gt;https://cldr.unicode.org/&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://docs.translatehouse.org/projects/localization-guide/en/latest/l10n/pluralforms.html&quot;&gt;http://docs.translatehouse.org/projects/localization-guide/en/latest/l10n/pluralforms.html&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;exturl&quot; data-url=&quot;aHR0cHM6Ly9jbGRyLnVuaWNvZGUub3JnLw==&quot;&gt;https://cldr.unicode.org/&lt;i class=&quot;fa fa-external-link-alt&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;exturl&quot; data-url=&quot;aHR0cDovL2RvY3MudHJhbnNsYXRlaG91c2Uub3JnL3Byb2plY3RzL2xvY2FsaXphdGlvbi1ndWlkZS9lbi9sYXRlc3QvbDEwbi9wbHVyYWxmb3Jtcy5odG1s&quot;&gt;http://docs.translatehouse.org/projects/localization-guide/en/latest/l10n/pluralforms.html&lt;i class=&quot;fa fa-external-link-alt&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;blockquote&gt;
 &lt;p&gt;不同语言的名词可以有几种复数形式。 它们的用法取决于单词前面的数字，以指示该单词表示的数目。&lt;br&gt;例如，当谈论不同数量时，英语单词有两种单词形式。例如 ‘one star’ 或 ‘two stars’。 无论您说的是五颗星，二十六颗星还是五百三十二颗星，结尾 ‘s’ 都将保持不变。 但是有些语言只有一种形式，反之，有些语言也可以有更多种复数形式。&lt;br&gt;与英语相比，波兰语里的名词具有三种复数形式。 在说单数形式时使用一种形式，复数形式时以 2-4 数字为结尾的名词（不包括 12-14）使用另一种形式。但还有第三种形式，前面带有其他数字的单词。&lt;/p&gt;
@@ -418,7 +418,7 @@
     <updated>2023-03-21T08:37:14.833Z</updated>
     
     
-    <summary type="html">&lt;h1 id=&quot;官网&quot;&gt;&lt;a href=&quot;#官网&quot; class=&quot;headerlink&quot; title=&quot;官网&quot;&gt;&lt;/a&gt;官网&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;https://iconfont.cn/&quot;&gt;https://iconfont.cn&lt;/a&gt;&lt;/p&gt;</summary>
+    <summary type="html">&lt;h1 id=&quot;官网&quot;&gt;&lt;a href=&quot;#官网&quot; class=&quot;headerlink&quot; title=&quot;官网&quot;&gt;&lt;/a&gt;官网&lt;/h1&gt;&lt;p&gt;&lt;span class=&quot;exturl&quot; data-url=&quot;aHR0cHM6Ly9pY29uZm9udC5jbi8=&quot;&gt;https://iconfont.cn&lt;i class=&quot;fa fa-external-link-alt&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/p&gt;</summary>
     
     
     
@@ -438,7 +438,7 @@
     
     
     <summary type="html">&lt;blockquote&gt;
-&lt;p&gt;官网：&lt;a href=&quot;https://docs.abp.io/&quot;&gt;https://docs.abp.io/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;官网：&lt;span class=&quot;exturl&quot; data-url=&quot;aHR0cHM6Ly9kb2NzLmFicC5pby8=&quot;&gt;https://docs.abp.io/&lt;i class=&quot;fa fa-external-link-alt&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h1 id=&quot;分层&quot;&gt;&lt;a href=&quot;#分层&quot; class=&quot;headerlink&quot; title=&quot;分层&quot;&gt;&lt;/a&gt;分层&lt;/h1&gt;&lt;blockquote&gt;
 &lt;p&gt;ABP 框架遵循 DDD 原则和模式去实现分层应用程序模型，该模型由四个基本层组成。&lt;/p&gt;
@@ -543,11 +543,11 @@
     <updated>2023-03-30T03:50:55.171Z</updated>
     
     
-    <summary type="html">&lt;h1 id=&quot;购买域名、注册-cloudflare-账号&quot;&gt;&lt;a href=&quot;#购买域名、注册-cloudflare-账号&quot; class=&quot;headerlink&quot; title=&quot;购买域名、注册 cloudflare 账号&quot;&gt;&lt;/a&gt;购买域名、注册 cloudflare 账号&lt;/h1&gt;&lt;p&gt;cloudflare 官网：&lt;a href=&quot;https://www.cloudflare.com/&quot;&gt;https://www.cloudflare.com/&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;namesilo 官网：&lt;a href=&quot;https://www.namesilo.com/&quot;&gt;https://www.namesilo.com/&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;dnspod 官网：&lt;a href=&quot;https://www.dnspod.cn/&quot;&gt;https://www.dnspod.cn/&lt;/a&gt;&lt;/p&gt;
+    <summary type="html">&lt;h1 id=&quot;购买域名、注册-cloudflare-账号&quot;&gt;&lt;a href=&quot;#购买域名、注册-cloudflare-账号&quot; class=&quot;headerlink&quot; title=&quot;购买域名、注册 cloudflare 账号&quot;&gt;&lt;/a&gt;购买域名、注册 cloudflare 账号&lt;/h1&gt;&lt;p&gt;cloudflare 官网：&lt;span class=&quot;exturl&quot; data-url=&quot;aHR0cHM6Ly93d3cuY2xvdWRmbGFyZS5jb20v&quot;&gt;https://www.cloudflare.com/&lt;i class=&quot;fa fa-external-link-alt&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;namesilo 官网：&lt;span class=&quot;exturl&quot; data-url=&quot;aHR0cHM6Ly93d3cubmFtZXNpbG8uY29tLw==&quot;&gt;https://www.namesilo.com/&lt;i class=&quot;fa fa-external-link-alt&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;dnspod 官网：&lt;span class=&quot;exturl&quot; data-url=&quot;aHR0cHM6Ly93d3cuZG5zcG9kLmNuLw==&quot;&gt;https://www.dnspod.cn/&lt;i class=&quot;fa fa-external-link-alt&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;注意：如果不想 whois 查询到个人信息，建议非主流域名在 &lt;a href=&quot;https://www.namesilo.com/&quot;&gt;namesilo&lt;/a&gt; 购买，可以有免费的 whois 信息隐藏。&lt;/p&gt;
+&lt;p&gt;注意：如果不想 whois 查询到个人信息，建议非主流域名在 &lt;span class=&quot;exturl&quot; data-url=&quot;aHR0cHM6Ly93d3cubmFtZXNpbG8uY29tLw==&quot;&gt;namesilo&lt;i class=&quot;fa fa-external-link-alt&quot;&gt;&lt;/i&gt;&lt;/span&gt; 购买，可以有免费的 whois 信息隐藏。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;blockquote&gt;
 &lt;p&gt;dnspod 仅支持 .com、.net 等主流的一级域名进行 whois 隐藏，但不支持如.top、.xyz、.live 等域名的信息隐藏，也就是说 whois 查询能查询到本名（开盒&lt;/p&gt;

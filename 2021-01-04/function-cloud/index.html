@@ -10,6 +10,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
   <link rel="mask-icon" href="/images/logo.svg" color="#222">
+  <meta name="google-site-verification" content="5JrLvrJMlBjdcPpp-Vdmej5Xam1RZCIO0aFLGbDqjtI">
 
 <link rel="stylesheet" href="/css/main.css">
 
@@ -20,7 +21,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/themes/blue/pace-theme-material.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"newreport.top","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.15.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":"mac"},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":true,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":{"gitalk":{"order":-2}}},"stickytabs":true,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+<script class="next-config" data-name="main" type="application/json">{"hostname":"newreport.top","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.15.0","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":"mac"},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":true,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":{"gitalk":{"order":-2}}},"stickytabs":true,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
     <meta name="description" content="前言云函数简介长不看结论：总之就是跑脚本，也可以跑微信的推送等事件。目前我只用它在跑签到脚本。 server 酱原版 server 酱：http:&#x2F;&#x2F;sc.ftqq.com&#x2F;自搭 server 酱：https:&#x2F;&#x2F;www.v2ex.com&#x2F;t&#x2F;567927">
 <meta property="og:type" content="article">
@@ -178,13 +179,13 @@
 </div>
   <div class="links-of-author animated">
       <span class="links-of-author-item">
-        <a href="https://github.com/newreport" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;newreport" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+        <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL25ld3JlcG9ydA==" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;newreport"><i class="fab fa-github fa-fw"></i>GitHub</span>
       </span>
       <span class="links-of-author-item">
-        <a href="mailto:haruki959@qq.com" title="E-Mail → mailto:haruki959@qq.com" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+        <span class="exturl" data-url="bWFpbHRvOmhhcnVraTk1OUBxcS5jb20=" title="E-Mail → mailto:haruki959@qq.com"><i class="fa fa-envelope fa-fw"></i>E-Mail</span>
       </span>
       <span class="links-of-author-item">
-        <a href="https://www.yuque.com/newreport" title="YuQue → https:&#x2F;&#x2F;www.yuque.com&#x2F;newreport" rel="noopener me" target="_blank"><i class="fab iconfont app-lark_grey fa-fw"></i>YuQue</a>
+        <span class="exturl" data-url="aHR0cHM6Ly93d3cueXVxdWUuY29tL25ld3JlcG9ydA==" title="YuQue → https:&#x2F;&#x2F;www.yuque.com&#x2F;newreport"><i class="fab iconfont app-lark_grey fa-fw"></i>YuQue</span>
       </span>
   </div>
 
@@ -228,6 +229,7 @@
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
       <meta itemprop="name" content="云函数 | NewReport">
       <meta itemprop="description" content="">
+      <meta itemprop="keywords" content="">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
@@ -293,14 +295,14 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p><a target="_blank" rel="noopener" href="https://developers.weixin.qq.com/miniprogram/dev/wxcloud/guide/functions.html">云函数简介</a><br>长不看结论：总之就是跑脚本，也可以跑微信的推送等事件。目前我只用它在跑签到脚本。</p>
-<h1 id="server-酱"><a href="#server-酱" class="headerlink" title="server 酱"></a>server 酱</h1><p>原版 server 酱：<a target="_blank" rel="noopener" href="http://sc.ftqq.com/">http://sc.ftqq.com/</a><br>自搭 server 酱：<a target="_blank" rel="noopener" href="https://www.v2ex.com/t/567927">https://www.v2ex.com/t/567927</a></p>
+        <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p><span class="exturl" data-url="aHR0cHM6Ly9kZXZlbG9wZXJzLndlaXhpbi5xcS5jb20vbWluaXByb2dyYW0vZGV2L3d4Y2xvdWQvZ3VpZGUvZnVuY3Rpb25zLmh0bWw=">云函数简介<i class="fa fa-external-link-alt"></i></span><br>长不看结论：总之就是跑脚本，也可以跑微信的推送等事件。目前我只用它在跑签到脚本。</p>
+<h1 id="server-酱"><a href="#server-酱" class="headerlink" title="server 酱"></a>server 酱</h1><p>原版 server 酱：<span class="exturl" data-url="aHR0cDovL3NjLmZ0cXEuY29tLw==">http://sc.ftqq.com/<i class="fa fa-external-link-alt"></i></span><br>自搭 server 酱：<span class="exturl" data-url="aHR0cHM6Ly93d3cudjJleC5jb20vdC81Njc5Mjc=">https://www.v2ex.com/t/567927<i class="fa fa-external-link-alt"></i></span></p>
 <span id="more"></span>
 
-<h1 id="哔哩哔哩签到"><a href="#哔哩哔哩签到" class="headerlink" title="哔哩哔哩签到"></a>哔哩哔哩签到</h1><p>项目地址：<a target="_blank" rel="noopener" href="https://github.com/happy888888/BiliExp">https://github.com/happy888888/BiliExp</a><br>油猴脚本：<a target="_blank" rel="noopener" href="https://greasyfork.org/zh-CN/scripts/393096-bilibiliexp/versions">https://greasyfork.org/zh-CN/scripts/393096-bilibiliexp/versions</a><br>注意事项：云函数方式为 cookie 签到</p>
-<h1 id="天翼云盘签到和抽奖"><a href="#天翼云盘签到和抽奖" class="headerlink" title="天翼云盘签到和抽奖"></a>天翼云盘签到和抽奖</h1><p>项目地址：<a target="_blank" rel="noopener" href="https://github.com/FingerSword/Cloud189-Sign-In">https://github.com/FingerSword/Cloud189-Sign-In</a><br>注意事项：不改密码就 ok  </p>
-<h1 id="网易云音乐签到"><a href="#网易云音乐签到" class="headerlink" title="网易云音乐签到"></a>网易云音乐签到</h1><p>地址：<a target="_blank" rel="noopener" href="https://www.coolapk.com/feed/22733317">https://www.coolapk.com/feed/22733317</a><br>注意事项：不改密码就 ok  </p>
-<h1 id="有道云笔记签到"><a href="#有道云笔记签到" class="headerlink" title="有道云笔记签到"></a>有道云笔记签到</h1><p>签到 1.0：<a target="_blank" rel="noopener" href="https://www.coolapk.com/feed/18049127">https://www.coolapk.com/feed/18049127</a><br>签到 2.0：<a target="_blank" rel="noopener" href="https://www.coolapk.com/feed/19750209">https://www.coolapk.com/feed/19750209</a></p>
+<h1 id="哔哩哔哩签到"><a href="#哔哩哔哩签到" class="headerlink" title="哔哩哔哩签到"></a>哔哩哔哩签到</h1><p>项目地址：<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2hhcHB5ODg4ODg4L0JpbGlFeHA=">https://github.com/happy888888/BiliExp<i class="fa fa-external-link-alt"></i></span><br>油猴脚本：<span class="exturl" data-url="aHR0cHM6Ly9ncmVhc3lmb3JrLm9yZy96aC1DTi9zY3JpcHRzLzM5MzA5Ni1iaWxpYmlsaWV4cC92ZXJzaW9ucw==">https://greasyfork.org/zh-CN/scripts/393096-bilibiliexp/versions<i class="fa fa-external-link-alt"></i></span><br>注意事项：云函数方式为 cookie 签到</p>
+<h1 id="天翼云盘签到和抽奖"><a href="#天翼云盘签到和抽奖" class="headerlink" title="天翼云盘签到和抽奖"></a>天翼云盘签到和抽奖</h1><p>项目地址：<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL0ZpbmdlclN3b3JkL0Nsb3VkMTg5LVNpZ24tSW4=">https://github.com/FingerSword/Cloud189-Sign-In<i class="fa fa-external-link-alt"></i></span><br>注意事项：不改密码就 ok  </p>
+<h1 id="网易云音乐签到"><a href="#网易云音乐签到" class="headerlink" title="网易云音乐签到"></a>网易云音乐签到</h1><p>地址：<span class="exturl" data-url="aHR0cHM6Ly93d3cuY29vbGFway5jb20vZmVlZC8yMjczMzMxNw==">https://www.coolapk.com/feed/22733317<i class="fa fa-external-link-alt"></i></span><br>注意事项：不改密码就 ok  </p>
+<h1 id="有道云笔记签到"><a href="#有道云笔记签到" class="headerlink" title="有道云笔记签到"></a>有道云笔记签到</h1><p>签到 1.0：<span class="exturl" data-url="aHR0cHM6Ly93d3cuY29vbGFway5jb20vZmVlZC8xODA0OTEyNw==">https://www.coolapk.com/feed/18049127<i class="fa fa-external-link-alt"></i></span><br>签到 2.0：<span class="exturl" data-url="aHR0cHM6Ly93d3cuY29vbGFway5jb20vZmVlZC8xOTc1MDIwOQ==">https://www.coolapk.com/feed/19750209<i class="fa fa-external-link-alt"></i></span></p>
 
     </div>
 
@@ -384,7 +386,7 @@
       </span>
     </span>
 </div>
-  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  <div class="powered-by">由 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & <span class="exturl" data-url="aHR0cHM6Ly90aGVtZS1uZXh0LmpzLm9yZw==">NexT.Gemini</span> 强力驱动
   </div>
 
     </div>
