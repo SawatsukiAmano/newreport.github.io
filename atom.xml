@@ -154,7 +154,7 @@
     <link href="https://newreport.top/2023-03-23/windows-server-2022-nas-init/"/>
     <id>https://newreport.top/2023-03-23/windows-server-2022-nas-init/</id>
     <published>2023-03-23T16:00:00.000Z</published>
-    <updated>2023-03-30T06:07:26.412Z</updated>
+    <updated>2023-03-30T06:10:36.342Z</updated>
     
     
     <summary type="html">&lt;blockquote&gt;
@@ -167,7 +167,7 @@
 &lt;p&gt;选来选去，看着 b 站知乎一堆推荐如上 NAS 的，自己装了好几个用了下，不太行，最后看见有人推荐 WIN NAS，我也问了下玩 NAS 的朋友，也用的 WIN 做 NAS，遂开装。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;blockquote&gt;
-&lt;p&gt;系统直接选 WIN Server 2022，驱动装好可以连 WIFI，机器直接丢阳台或者隔墙，WIFI6 日常用速度肯定够的，虚拟机有 hyper-v，存储有自带的存储池，可以做 refs（单盘 raid5）或者固态加速机械，组多盘 raid 都没问题，有图形化，这配置单 U 功耗顶天 &lt;strong&gt;100W&lt;/strong&gt;，闲时还能接屏幕玩下 101 和雀魂都是没问题的，唯一的缺点就是 docker 用起来麻烦点。&lt;/p&gt;
+&lt;p&gt;系统直接选 WIN Server 2022，驱动装好可以连 WIFI，机器直接丢阳台或者隔墙，WIFI6 日常用速度肯定够的，虚拟机有 hyper-v，存储有自带的存储池，可以做 refs（单盘 raid5）或者固态加速机械，组多盘 raid 都没问题，有图形化，这配置单 U 功耗顶天 &lt;strong&gt;100W&lt;/strong&gt;，闲时还能接屏幕玩下 101 和雀魂都是没问题的，唯一的缺点就是 docker 用起来麻烦点。&lt;br&gt;&lt;img data-src=&quot;https://lsky.sfhj.top/i/main/2023-03/9C7540E74C7CCD48C3CDA190CEFE877D791A261C644B09F0C1C190A64E70EE24.png&quot; alt=&quot;9C7540E74C7CCD48C3CDA190CEFE877D791A261C644B09F0C1C190A64E70EE24.PNG&quot;&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h1 id=&quot;硬件&quot;&gt;&lt;a href=&quot;#硬件&quot; class=&quot;headerlink&quot; title=&quot;硬件&quot;&gt;&lt;/a&gt;硬件&lt;/h1&gt;&lt;h2 id=&quot;配置&quot;&gt;&lt;a href=&quot;#配置&quot; class=&quot;headerlink&quot; title=&quot;配置&quot;&gt;&lt;/a&gt;配置&lt;/h2&gt;&lt;table&gt;
 &lt;thead&gt;
