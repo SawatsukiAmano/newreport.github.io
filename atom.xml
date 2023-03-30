@@ -67,14 +67,23 @@
   </entry>
   
   <entry>
-    <title>Ubuntu 安装 X11 和 Chrome 并远程（openai）</title>
-    <link href="https://newreport.top/2023-03-28/ubuntu-install-x11-chrome-remote-openai/"/>
-    <id>https://newreport.top/2023-03-28/ubuntu-install-x11-chrome-remote-openai/</id>
+    <title>Ubuntu 安装 Docker Chrome 并远程（openai、newbing）</title>
+    <link href="https://newreport.top/2023-03-28/ubuntu-install-chrome-remote-openai-newbing/"/>
+    <id>https://newreport.top/2023-03-28/ubuntu-install-chrome-remote-openai-newbing/</id>
     <published>2023-03-28T16:00:01.000Z</published>
-    <updated>2023-03-29T09:32:58.694Z</updated>
+    <updated>2023-03-30T01:30:09.682Z</updated>
     
     
-    <summary type="html">&lt;h1 id=&quot;安装-chrome&quot;&gt;&lt;a href=&quot;#安装-chrome&quot; class=&quot;headerlink&quot; title=&quot;安装 chrome&quot;&gt;&lt;/a&gt;安装 chrome&lt;/h1&gt;</summary>
+      
+      
+        
+        
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;使用代理访问 openai 和 newbing 也是可以的，但是速度和稳定性都很差，刚好我有台机子在日本，不如直接在此上面安装 chrome 进行 web vnc 连接&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1</summary>
+        
+      
     
     
     
@@ -90,7 +99,7 @@
     <link href="https://newreport.top/2023-03-28/docker-migration/"/>
     <id>https://newreport.top/2023-03-28/docker-migration/</id>
     <published>2023-03-28T16:00:00.000Z</published>
-    <updated>2023-03-29T08:28:33.976Z</updated>
+    <updated>2023-03-29T09:48:12.931Z</updated>
     
     
       
@@ -145,7 +154,7 @@
     <link href="https://newreport.top/2023-03-23/windows-server-2022-nas-init/"/>
     <id>https://newreport.top/2023-03-23/windows-server-2022-nas-init/</id>
     <published>2023-03-23T16:00:00.000Z</published>
-    <updated>2023-03-29T08:50:48.249Z</updated>
+    <updated>2023-03-30T01:26:37.735Z</updated>
     
     
     <summary type="html">&lt;blockquote&gt;
@@ -219,7 +228,7 @@
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;硬盘3&lt;/td&gt;
-&lt;td&gt;广威长江256G&lt;/td&gt;
+&lt;td&gt;光威长江256G&lt;/td&gt;
 &lt;td&gt;0&lt;/td&gt;
 &lt;td&gt;MATX拆机&lt;/td&gt;
 &lt;/tr&gt;

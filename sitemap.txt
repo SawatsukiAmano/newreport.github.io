@@ -1,4 +1,4 @@
-https://newreport.top/2023-03-28/ubuntu-install-x11-chrome-remote-openai/
+https://newreport.top/2023-03-28/ubuntu-install-chrome-remote-openai-newbing/
 https://newreport.top/2023-03-23/windows-server-2022-nas-init/
 https://newreport.top/2023-03-28/docker-migration/
 https://newreport.top/2023-03-28/ubuntu-2204-install-docker-and-link-portainer/
@@ -39,13 +39,13 @@ https://newreport.top/tags/Domain/
 https://newreport.top/tags/Git-Page/
 https://newreport.top/tags/CloudService/
 https://newreport.top/tags/Object-Storage/
-https://newreport.top/tags/C/
-https://newreport.top/tags/NET/
 https://newreport.top/tags/NFS/
 https://newreport.top/tags/Nginx/
 https://newreport.top/tags/MySQL/
 https://newreport.top/tags/Containerd/
 https://newreport.top/tags/K8s/
+https://newreport.top/tags/C/
+https://newreport.top/tags/NET/
 https://newreport.top/tags/Http/
 https://newreport.top/tags/CORS/
 https://newreport.top/tags/Golang/
@@ -69,8 +69,8 @@ https://newreport.top/categories/timeline/
 https://newreport.top/categories/linux/
 https://newreport.top/categories/linux/rhel8%E6%89%8B%E5%86%8C/
 https://newreport.top/categories/python/
-https://newreport.top/categories/c/
 https://newreport.top/categories/kubernetes-docker-podman/
+https://newreport.top/categories/c/
 https://newreport.top/categories/golang/
 https://newreport.top/categories/python/python3-%E6%89%8B%E5%86%8C/
 https://newreport.top/categories/ai/

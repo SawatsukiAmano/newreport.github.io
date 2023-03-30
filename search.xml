@@ -52,12 +52,16 @@
       </tags>
   </entry>
   <entry>
-    <title>Ubuntu 安装 X11 和 Chrome 并远程（openai）</title>
-    <url>/2023-03-28/ubuntu-install-x11-chrome-remote-openai/</url>
-    <content><![CDATA[<h1 id="安装-chrome"><a href="#安装-chrome" class="headerlink" title="安装 chrome"></a>安装 chrome</h1><span id="more"></span>
+    <title>Ubuntu 安装 Docker Chrome 并远程（openai、newbing）</title>
+    <url>/2023-03-28/ubuntu-install-chrome-remote-openai-newbing/</url>
+    <content><![CDATA[<blockquote>
+<p>使用代理访问 openai 和 newbing 也是可以的，但是速度和稳定性都很差，刚好我有台机子在日本，不如直接在此上面安装 chrome 进行 web vnc 连接</p>
+</blockquote>
 <h1 id="安装-Docker"><a href="#安装-Docker" class="headerlink" title="安装 Docker"></a>安装 Docker</h1><p><a href="%5D(../../2023-01-04/centos-stream-8-install-docker-and-link-portainer)">CentOS Stream</a><br><a href="%5D(../../2023-03-29/ubuntu-2204-install-docker-and-link-portainer)">Ubuntu 2204</a></p>
-<h1 id="安装-X11"><a href="#安装-X11" class="headerlink" title="安装 X11"></a>安装 X11</h1><h1 id="安装-VNC-chrome"><a href="#安装-VNC-chrome" class="headerlink" title="安装 VNC chrome"></a>安装 VNC chrome</h1><p><a href="https://hub.docker.com/r/oldiy/chrome-novnc">https://hub.docker.com/r/oldiy/chrome-novnc</a><br><a href="https://hub.docker.com/r/oldiy/firefox-novnc">https://hub.docker.com/r/oldiy/firefox-novnc</a><br><a href="https://hub.docker.com/r/oldiy/firefox-enpass-novnc">https://hub.docker.com/r/oldiy/firefox-enpass-novnc</a></p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker run -d --restart=always --name remote-chrome -p 8083:8083 -p 5900:5900 oldiy/chrome-novnc:latest</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+<h1 id="安装-VNC-chrome"><a href="#安装-VNC-chrome" class="headerlink" title="安装 VNC chrome"></a>安装 VNC chrome</h1><blockquote>
+<p><a href="https://github.com/SeleniumHQ/docker-selenium">https://github.com/SeleniumHQ/docker-selenium</a></p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker run -d -p 4444:4444 -p 7900:7900 --shm-size=<span class="string">&quot;2g&quot;</span> selenium/standalone-chrome</span><br><span class="line">docker run -d -p 4445:4444 -p 7901:7900 --shm-size=<span class="string">&quot;2g&quot;</span> selenium/standalone-edge</span><br><span class="line">docker run -d -p 4446:4444 -p 7902:7900 --shm-size=<span class="string">&quot;2g&quot;</span> selenium/standalone-firefox</span><br></pre></td></tr></table></figure>]]></content>
       <categories>
         <category>linux</category>
       </categories>
@@ -68,7 +72,7 @@
   <entry>
     <title>Docker 迁移</title>
     <url>/2023-03-28/docker-migration/</url>
-    <content><![CDATA[<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 打包 volume</span></span><br><span class="line">tar -zcvf volumes.tar.gz /var/lib/docker/volumes</span><br><span class="line"></span><br><span class="line"><span class="comment"># 将容器保存为镜像</span></span><br><span class="line">docker commit container-id image-name </span><br><span class="line"></span><br><span class="line"><span class="comment"># 解压 volumes</span></span><br><span class="line">tar zxvf volumes.tar.gz /var/lib/docker</span><br><span class="line"></span><br><span class="line"><span class="comment"># 变更权限</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 加载镜像</span></span><br><span class="line"><span class="built_in">cat</span> image-name.tar | docker load </span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+    <content><![CDATA[<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 打包 volume</span></span><br><span class="line">tar -zcvf volumes.tar.gz /var/lib/docker/volumes</span><br><span class="line"></span><br><span class="line"><span class="comment"># 将容器保存为镜像</span></span><br><span class="line">docker commit container-id image-name </span><br><span class="line"></span><br><span class="line"><span class="comment"># 解压 volumes</span></span><br><span class="line">tar zxvf volumes.tar.gz /var/lib/docker</span><br><span class="line"></span><br><span class="line"><span class="comment"># 变更权限</span></span><br><span class="line"><span class="built_in">chown</span> -R root /var/lib/docker/volumes</span><br><span class="line"><span class="built_in">chmod</span> -R 755 /var/lib/docker/volumes</span><br><span class="line"></span><br><span class="line"><span class="comment"># 加载镜像</span></span><br><span class="line"><span class="built_in">cat</span> image-name.tar | docker load </span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
       <categories>
         <category>kubernetes/docker/podman</category>
       </categories>
@@ -165,7 +169,7 @@
 </tr>
 <tr>
 <td>硬盘3</td>
-<td>广威长江256G</td>
+<td>光威长江256G</td>
 <td>0</td>
 <td>MATX拆机</td>
 </tr>
