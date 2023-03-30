@@ -1,10 +1,10 @@
+https://newreport.top/2023-03-23/windows-server-2022-nas-init/
 https://newreport.top/2022-09-03/cloudflare-301-url/
 https://newreport.top/2023-02-09/amdgpu-install-stable-diffusion-webui/
 https://newreport.top/2022-07-26/kubernetes-1-24-inside-install/
 https://newreport.top/2021-01-05/img-make/
 https://newreport.top/2020-12-31/linux-introduction-and-installation/
 https://newreport.top/2023-03-28/ubuntu-install-chrome-remote-openai-newbing/
-https://newreport.top/2023-03-23/windows-server-2022-nas-init/
 https://newreport.top/2023-03-28/docker-migration/
 https://newreport.top/2023-03-28/ubuntu-2204-install-docker-and-link-portainer/
 https://newreport.top/2023-03-29/linux-setting-ssh-key/

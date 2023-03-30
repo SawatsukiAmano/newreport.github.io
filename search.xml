@@ -681,8 +681,8 @@
 </tr>
 </tbody></table>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm             docker run -d --restart=always --name nginx-proxy-manager  -p 80:80 -p 443:443 -p 81:81 -v npm-data:/data -v npm-letsencrypt:/etc/letsencrypt jc21/nginx-proxy-manager:latest</span><br><span class="line"></span><br><span class="line">portainer       docker run -d --restart=always --name portainer -p 8000:8000 -p 9000:9000 -p 9443:9443 -v poartainer-data:/data -v /var/run/docker.sock:/var/run/docker.sock 	portainer/portainer-ce:latest</span><br><span class="line"></span><br><span class="line">openai-proxy    docker run -d --restart=always --name openai-proxy -p 5333:5333 -e PROXY_DOMAIN=api.openai.com yqchilde/openai-proxy:latest</span><br><span class="line"></span><br><span class="line">remote-chrome   docker run -d --name firefox -p 8083:8083 -p 8083:5900 oldiy/chrome-novnc:latest</span><br></pre></td></tr></table></figure>
-
-<h2 id="VS-Code-插件"><a href="#VS-Code-插件" class="headerlink" title="VS Code 插件"></a>VS Code 插件</h2>]]></content>
+<p><a href="https://lsky.sfhj.top/i/main/2023-03/AD016CFDDA8CA216D7088F29F0D4967FD9EF7809FEBC23E712936C6163532B8B.png"><img data-src="https://lsky.sfhj.top/i/main/2023-03/AD016CFDDA8CA216D7088F29F0D4967FD9EF7809FEBC23E712936C6163532B8B.png" alt="Docker"></a></p>
+]]></content>
       <categories>
         <category>timeline</category>
       </categories>
