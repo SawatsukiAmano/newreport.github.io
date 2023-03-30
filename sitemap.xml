@@ -2,6 +2,51 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://newreport.top/2022-09-03/cloudflare-301-url/</loc>
+    
+    <lastmod>2023-03-30</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://newreport.top/2023-02-09/amdgpu-install-stable-diffusion-webui/</loc>
+    
+    <lastmod>2023-03-30</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://newreport.top/2022-07-26/kubernetes-1-24-inside-install/</loc>
+    
+    <lastmod>2023-03-30</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://newreport.top/2021-01-05/img-make/</loc>
+    
+    <lastmod>2023-03-30</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://newreport.top/2020-12-31/linux-introduction-and-installation/</loc>
+    
+    <lastmod>2023-03-30</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://newreport.top/2023-03-28/ubuntu-install-chrome-remote-openai-newbing/</loc>
     
     <lastmod>2023-03-30</lastmod>
@@ -137,15 +182,6 @@
   </url>
   
   <url>
-    <loc>https://newreport.top/2023-02-09/amdgpu-install-stable-diffusion-webui/</loc>
-    
-    <lastmod>2023-03-23</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://newreport.top/2023-03-20/ubuntu-nvidia-install-stable-diffusion-webui/</loc>
     
     <lastmod>2023-03-23</lastmod>
@@ -200,24 +236,6 @@
   </url>
   
   <url>
-    <loc>https://newreport.top/2022-09-03/cloudflare-301-url/</loc>
-    
-    <lastmod>2023-03-21</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://newreport.top/2022-07-26/kubernetes-1-24-inside-install/</loc>
-    
-    <lastmod>2023-03-21</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://newreport.top/2021-06-22/list-introduction/</loc>
     
     <lastmod>2023-03-21</lastmod>
@@ -237,15 +255,6 @@
   
   <url>
     <loc>https://newreport.top/2021-06-20/python-basic-knowledge/</loc>
-    
-    <lastmod>2023-03-21</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://newreport.top/2021-01-05/img-make/</loc>
     
     <lastmod>2023-03-21</lastmod>
     
@@ -307,15 +316,6 @@
     <priority>0.6</priority>
   </url>
   
-  <url>
-    <loc>https://newreport.top/2020-12-31/linux-introduction-and-installation/</loc>
-    
-    <lastmod>2023-03-21</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
 
   <url>
     <loc>https://newreport.top/</loc>
@@ -361,6 +361,20 @@
   </url>
   
   <url>
+    <loc>https://newreport.top/tags/C/</loc>
+    <lastmod>2023-03-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://newreport.top/tags/NET/</loc>
+    <lastmod>2023-03-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://newreport.top/tags/NFS/</loc>
     <lastmod>2023-03-30</lastmod>
     <changefreq>weekly</changefreq>
@@ -390,20 +404,6 @@
   
   <url>
     <loc>https://newreport.top/tags/K8s/</loc>
-    <lastmod>2023-03-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://newreport.top/tags/C/</loc>
-    <lastmod>2023-03-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://newreport.top/tags/NET/</loc>
     <lastmod>2023-03-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -573,14 +573,14 @@
   </url>
   
   <url>
-    <loc>https://newreport.top/categories/kubernetes-docker-podman/</loc>
+    <loc>https://newreport.top/categories/c/</loc>
     <lastmod>2023-03-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://newreport.top/categories/c/</loc>
+    <loc>https://newreport.top/categories/kubernetes-docker-podman/</loc>
     <lastmod>2023-03-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
