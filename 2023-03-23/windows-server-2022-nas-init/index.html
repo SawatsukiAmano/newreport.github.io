@@ -30,15 +30,15 @@
 <meta property="og:site_name" content="NewReport">
 <meta property="og:description" content="本想用 freenas 或者是黑群晖这些基于 linux 的来搭建，但是大部分 nas 系统没有虚拟机，黑裙有但不稳定，白裙那配置和价格，算了算了。     用 pve 或者 exsi 又太重了，我的需求仅仅是下 BT&#x2F;PT 和存储一些项目文件，docker 跑些应用内网穿透出去就可，而且虚拟化平台连接 WiFi 是个问题。     选来选去，看着 b 站知乎一堆推荐如上 NAS 的，">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://lsky.sfhj.top/i/main/2023-03/9C7540E74C7CCD48C3CDA190CEFE877D791A261C644B09F0C1C190A64E70EE24.png">
-<meta property="og:image" content="https://lsky.sfhj.top/i/main/2023-03/79099B82C10E479193FE89D2722800FB013309797DBA2DA5A154A447FC7F3D2C.jpg">
-<meta property="og:image" content="https://lsky.sfhj.top/i/main/2023-03/AD016CFDDA8CA216D7088F29F0D4967FD9EF7809FEBC23E712936C6163532B8B.png">
+<meta property="og:image" content="https://lsky.vtbai.com/i/main/2023-03/9C7540E74C7CCD48C3CDA190CEFE877D791A261C644B09F0C1C190A64E70EE24.png">
+<meta property="og:image" content="https://lsky.vtbai.com/i/main/2023-03/79099B82C10E479193FE89D2722800FB013309797DBA2DA5A154A447FC7F3D2C.jpg">
+<meta property="og:image" content="https://lsky.vtbai.com/i/main/2023-03/AD016CFDDA8CA216D7088F29F0D4967FD9EF7809FEBC23E712936C6163532B8B.png">
 <meta property="article:published_time" content="2023-03-23T16:00:00.000Z">
-<meta property="article:modified_time" content="2023-03-30T08:53:55.085Z">
+<meta property="article:modified_time" content="2023-04-19T08:41:46.770Z">
 <meta property="article:author" content="haruki">
 <meta property="article:tag" content="NAS">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://lsky.sfhj.top/i/main/2023-03/9C7540E74C7CCD48C3CDA190CEFE877D791A261C644B09F0C1C190A64E70EE24.png">
+<meta name="twitter:image" content="https://lsky.vtbai.com/i/main/2023-03/9C7540E74C7CCD48C3CDA190CEFE877D791A261C644B09F0C1C190A64E70EE24.png">
 
 
 <link rel="canonical" href="https://newreport.top/2023-03-23/windows-server-2022-nas-init/">
@@ -165,7 +165,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">30</span>
+          <span class="site-state-item-count">31</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -255,7 +255,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2023-03-30 16:53:55" itemprop="dateModified" datetime="2023-03-30T16:53:55+08:00">2023-03-30</time>
+      <time title="修改时间：2023-04-19 16:41:46" itemprop="dateModified" datetime="2023-04-19T16:41:46+08:00">2023-04-19</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -311,7 +311,7 @@
 <blockquote>
 <p>系统直接选 WIN Server 2022，驱动装好可以连 WIFI，机器直接丢阳台或者隔墙，WIFI6 日常用速度肯定够的，虚拟机有 hyper-v，存储有自带的存储池，可以做 refs（单盘 raid5）或者固态加速机械，组多盘 raid 都没问题，有图形化，这配置单 U 功耗顶天 <strong>100W</strong>，闲时还能接屏幕玩下 101 和雀魂都是没问题的，唯一的缺点就是 docker 用起来麻烦点。</p>
 </blockquote>
-<p><img data-src="https://lsky.sfhj.top/i/main/2023-03/9C7540E74C7CCD48C3CDA190CEFE877D791A261C644B09F0C1C190A64E70EE24.png" alt="9C7540E74C7CCD48C3CDA190CEFE877D791A261C644B09F0C1C190A64E70EE24.PNG"></p>
+<p><img data-src="https://lsky.vtbai.com/i/main/2023-03/9C7540E74C7CCD48C3CDA190CEFE877D791A261C644B09F0C1C190A64E70EE24.png" alt="9C7540E74C7CCD48C3CDA190CEFE877D791A261C644B09F0C1C190A64E70EE24.PNG"></p>
 <h1 id="硬件"><a href="#硬件" class="headerlink" title="硬件"></a>硬件</h1><h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><table>
 <thead>
 <tr>
@@ -402,7 +402,7 @@
 </tbody></table>
 <span id="more"></span>
 
-<h3 id="供电"><a href="#供电" class="headerlink" title="供电"></a>供电</h3><p>硬盘坏的原因无非有三，供电不稳或不足、碰撞震动及 roll 到了<br>机械 18T 单盘峰值可以到 28W，13*30W 算为 390W，CPU 给电 150W，其他给电 50W，650W 在峰值时刚好，日常没这么高<br>然后是噪音，4k 读写 30min，来到了 50 分贝<br><img data-src="https://lsky.sfhj.top/i/main/2023-03/79099B82C10E479193FE89D2722800FB013309797DBA2DA5A154A447FC7F3D2C.jpg" alt="插排接了冰箱和另一台 5900X 主机，实际待机功耗为 30W 左右"></p>
+<h3 id="供电"><a href="#供电" class="headerlink" title="供电"></a>供电</h3><p>硬盘坏的原因无非有三，供电不稳或不足、碰撞震动及 roll 到了<br>机械 18T 单盘峰值可以到 28W，13*30W 算为 390W，CPU 给电 150W，其他给电 50W，650W 在峰值时刚好，日常没这么高<br>然后是噪音，4k 读写 30min，来到了 50 分贝<br><img data-src="https://lsky.vtbai.com/i/main/2023-03/79099B82C10E479193FE89D2722800FB013309797DBA2DA5A154A447FC7F3D2C.jpg" alt="插排接了冰箱和另一台 5900X 主机，实际待机功耗为 30W 左右"></p>
 <h2 id="容量和速度"><a href="#容量和速度" class="headerlink" title="容量和速度"></a>容量和速度</h2><blockquote>
 <p>机械盘的随机读基本忽略吧，几 MB&#x2F;s 不用测根本不可能跑满接口<br>然后是顺序读写，13 块盘同时读写不可能，虽然硬盘顺序峰值能到 270MB&#x2F;s，但是日常没那么高，这里按照每块盘 100MB&#x2F;s 算，也算是很高的负载了  </p>
 </blockquote>
@@ -918,7 +918,7 @@
 </tr>
 </tbody></table>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">npm             docker run -d --restart=always --name nginx-proxy-manager  -p 80:80 -p 443:443 -p 81:81 -v npm-data:/data -v npm-letsencrypt:/etc/letsencrypt jc21/nginx-proxy-manager:latest</span><br><span class="line"></span><br><span class="line">portainer       docker run -d --restart=always --name portainer -p 8000:8000 -p 9000:9000 -p 9443:9443 -v poartainer-data:/data -v /var/run/docker.sock:/var/run/docker.sock 	portainer/portainer-ce:latest</span><br><span class="line"></span><br><span class="line">openai-proxy    docker run -d --restart=always --name openai-proxy -p 5333:5333 -e PROXY_DOMAIN=api.openai.com yqchilde/openai-proxy:latest</span><br><span class="line"></span><br><span class="line">remote-chrome   docker run -d --name firefox -p 8083:8083 -p 8083:5900 oldiy/chrome-novnc:latest</span><br></pre></td></tr></table></figure>
-<p><a target="_blank" rel="noopener" href="https://lsky.sfhj.top/i/main/2023-03/AD016CFDDA8CA216D7088F29F0D4967FD9EF7809FEBC23E712936C6163532B8B.png"><img data-src="https://lsky.sfhj.top/i/main/2023-03/AD016CFDDA8CA216D7088F29F0D4967FD9EF7809FEBC23E712936C6163532B8B.png" alt="Docker"></a></p>
+<p><a target="_blank" rel="noopener" href="https://lsky.vtbai.com/i/main/2023-03/AD016CFDDA8CA216D7088F29F0D4967FD9EF7809FEBC23E712936C6163532B8B.png"><img data-src="https://lsky.vtbai.com/i/main/2023-03/AD016CFDDA8CA216D7088F29F0D4967FD9EF7809FEBC23E712936C6163532B8B.png" alt="Docker"></a></p>
 <h1 id="缺点"><a href="#缺点" class="headerlink" title="缺点"></a>缺点</h1><ol>
 <li>驱动：win server 虽然稳定，但是很多家用驱动这里没有</li>
 <li>docker：wsl 的挂载是真的不好用，还有同一个镜像在 ubuntu 的 docker 跑没问题，在 wsl docker 跑就起不来，原因是 ubuntu 的配置文件会在自动创建 volume 中生成配置，而 wsl 不行</li>

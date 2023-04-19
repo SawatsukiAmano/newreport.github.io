@@ -6,7 +6,7 @@
   <link href="https://newreport.top/atom.xml" rel="self"/>
   
   <link href="https://newreport.top/"/>
-  <updated>2023-03-30T08:36:58.557Z</updated>
+  <updated>2023-04-19T08:48:28.151Z</updated>
   <id>https://newreport.top/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Docker 应用清单</title>
+    <link href="https://newreport.top/2023-04-18/kubernetes-1-24-inside-install/"/>
+    <id>https://newreport.top/2023-04-18/kubernetes-1-24-inside-install/</id>
+    <published>2023-04-18T16:00:00.000Z</published>
+    <updated>2023-04-19T08:48:28.151Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;兰空图床&quot;&gt;&lt;a href=&quot;#兰空图床&quot; class=&quot;headerlink&quot; title=&quot;兰空图床&quot;&gt;&lt;/a&gt;&lt;span class=&quot;exturl&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="kubernetes/docker/podman" scheme="https://newreport.top/categories/kubernetes-docker-podman/"/>
+    
+    
+    <category term="Containerd" scheme="https://newreport.top/tags/Containerd/"/>
+    
+  </entry>
   
   <entry>
     <title>Linux 配置 SSH Key</title>
@@ -154,7 +179,7 @@
     <link href="https://newreport.top/2023-03-23/windows-server-2022-nas-init/"/>
     <id>https://newreport.top/2023-03-23/windows-server-2022-nas-init/</id>
     <published>2023-03-23T16:00:00.000Z</published>
-    <updated>2023-03-30T08:53:55.085Z</updated>
+    <updated>2023-04-19T08:41:46.770Z</updated>
     
     
     <summary type="html">&lt;blockquote&gt;
@@ -169,7 +194,7 @@
 &lt;blockquote&gt;
 &lt;p&gt;系统直接选 WIN Server 2022，驱动装好可以连 WIFI，机器直接丢阳台或者隔墙，WIFI6 日常用速度肯定够的，虚拟机有 hyper-v，存储有自带的存储池，可以做 refs（单盘 raid5）或者固态加速机械，组多盘 raid 都没问题，有图形化，这配置单 U 功耗顶天 &lt;strong&gt;100W&lt;/strong&gt;，闲时还能接屏幕玩下 101 和雀魂都是没问题的，唯一的缺点就是 docker 用起来麻烦点。&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;&lt;img data-src=&quot;https://lsky.sfhj.top/i/main/2023-03/9C7540E74C7CCD48C3CDA190CEFE877D791A261C644B09F0C1C190A64E70EE24.png&quot; alt=&quot;9C7540E74C7CCD48C3CDA190CEFE877D791A261C644B09F0C1C190A64E70EE24.PNG&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&quot;https://lsky.vtbai.com/i/main/2023-03/9C7540E74C7CCD48C3CDA190CEFE877D791A261C644B09F0C1C190A64E70EE24.png&quot; alt=&quot;9C7540E74C7CCD48C3CDA190CEFE877D791A261C644B09F0C1C190A64E70EE24.PNG&quot;&gt;&lt;/p&gt;
 &lt;h1 id=&quot;硬件&quot;&gt;&lt;a href=&quot;#硬件&quot; class=&quot;headerlink&quot; title=&quot;硬件&quot;&gt;&lt;/a&gt;硬件&lt;/h1&gt;&lt;h2 id=&quot;配置&quot;&gt;&lt;a href=&quot;#配置&quot; class=&quot;headerlink&quot; title=&quot;配置&quot;&gt;&lt;/a&gt;配置&lt;/h2&gt;&lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -349,7 +374,7 @@
     <link href="https://newreport.top/2023-02-09/amdgpu-install-stable-diffusion-webui/"/>
     <id>https://newreport.top/2023-02-09/amdgpu-install-stable-diffusion-webui/</id>
     <published>2023-02-09T16:00:00.000Z</published>
-    <updated>2023-03-30T03:50:29.823Z</updated>
+    <updated>2023-04-19T08:41:46.770Z</updated>
     
     
       
@@ -540,7 +565,7 @@
     <link href="https://newreport.top/2022-09-03/cloudflare-301-url/"/>
     <id>https://newreport.top/2022-09-03/cloudflare-301-url/</id>
     <published>2022-09-03T16:00:00.000Z</published>
-    <updated>2023-03-30T03:50:55.171Z</updated>
+    <updated>2023-04-19T08:41:46.770Z</updated>
     
     
     <summary type="html">&lt;h1 id=&quot;购买域名、注册-cloudflare-账号&quot;&gt;&lt;a href=&quot;#购买域名、注册-cloudflare-账号&quot; class=&quot;headerlink&quot; title=&quot;购买域名、注册 cloudflare 账号&quot;&gt;&lt;/a&gt;购买域名、注册 cloudflare 账号&lt;/h1&gt;&lt;p&gt;cloudflare 官网：&lt;span class=&quot;exturl&quot; data-url=&quot;aHR0cHM6Ly93d3cuY2xvdWRmbGFyZS5jb20v&quot;&gt;https://www.cloudflare.com/&lt;i class=&quot;fa fa-external-link-alt&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/p&gt;
@@ -569,7 +594,7 @@
     <link href="https://newreport.top/2022-07-26/kubernetes-1-24-inside-install/"/>
     <id>https://newreport.top/2022-07-26/kubernetes-1-24-inside-install/</id>
     <published>2022-07-26T16:00:01.000Z</published>
-    <updated>2023-03-30T03:50:29.823Z</updated>
+    <updated>2023-04-19T08:41:46.770Z</updated>
     
     
     <summary type="html">&lt;h1 id=&quot;环境介绍&quot;&gt;&lt;a href=&quot;#环境介绍&quot; class=&quot;headerlink&quot; title=&quot;环境介绍&quot;&gt;&lt;/a&gt;环境介绍&lt;/h1&gt;&lt;blockquote&gt;
@@ -605,27 +630,6 @@
 &lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;vim 19.py&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;bicycles = [&lt;span class=&quot;string&quot;&gt;&amp;#x27;trek&amp;#x27;&lt;/span&gt;,&lt;span class=&quot;string&quot;&gt;&amp;#x27;cannondale&amp;#x27;&lt;/span&gt;,&lt;span class=&quot;string&quot;&gt;&amp;#x27;redline&amp;#x27;&lt;/span&gt;,&lt;span class=&quot;string&quot;&gt;&amp;#x27;specialized&amp;#x27;&lt;/span&gt;]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;print&lt;/span&gt;(bicycles)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;figure class=&quot;highlight txt&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;[&amp;#x27;trek&amp;#x27;, &amp;#x27;cannondale&amp;#x27;, &amp;#x27;redline&amp;#x27;, &amp;#x27;specialized&amp;#x27;]&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
-    
-    
-    
-    <category term="python" scheme="https://newreport.top/categories/python/"/>
-    
-    <category term="python3 手册" scheme="https://newreport.top/categories/python/python3-%E6%89%8B%E5%86%8C/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>变量和简单数据类型</title>
-    <link href="https://newreport.top/2021-06-21/variables-and-simple-data-types/"/>
-    <id>https://newreport.top/2021-06-21/variables-and-simple-data-types/</id>
-    <published>2021-06-21T16:00:00.000Z</published>
-    <updated>2023-03-30T06:07:26.416Z</updated>
-    
-    
-    <summary type="html">&lt;h1 id=&quot;运行-hello-world&quot;&gt;&lt;a href=&quot;#运行-hello-world&quot; class=&quot;headerlink&quot; title=&quot;运行 hello world&quot;&gt;&lt;/a&gt;运行 hello world&lt;/h1&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;vim 1.py&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;print&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;&amp;quot;hello Python world!&amp;quot;&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;figure class=&quot;highlight txt&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;hello Python world!&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
     
     
     
