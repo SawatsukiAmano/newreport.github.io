@@ -58,8 +58,8 @@ wget https://huggingface.co/stabilityai/stable-diffusion-2-1/resolve/main/v2-1_7
 HSA_OVERRIDE_GFX_VERSION=10.3.0 ./venv/bin/python webui.py --listen --enable-insecure-extension-access
 ```
 
-![启动 webui](https://lsky.sfhj.top/i/main/2023-03/305C18A512B0160FC51946D292243A79F2D523F23063A0E3ABA5477F2F95F6F5.PNG)
+![启动 webui](https://lsky.vtbai.com/i/main/2023-03/305C18A512B0160FC51946D292243A79F2D523F23063A0E3ABA5477F2F95F6F5.PNG)
 
-![webui 首页](https://lsky.sfhj.top/i/main/2023-03/28F9CDD62F18C958176FA02F37A2D0E5F2DC3E11AC61289D80E96B2852684072.PNG)
+![webui 首页](https://lsky.vtbai.com/i/main/2023-03/28F9CDD62F18C958176FA02F37A2D0E5F2DC3E11AC61289D80E96B2852684072.PNG)
 
-![🐎骑🐎](https://lsky.sfhj.top/i/main/2023-03/77B728E8FEAF0126B816696D327D7744FA16C86CBA765C454708B723C0A4C3FA.PNG)
+![🐎骑🐎](https://lsky.vtbai.com/i/main/2023-03/77B728E8FEAF0126B816696D327D7744FA16C86CBA765C454708B723C0A4C3FA.PNG)

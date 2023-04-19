@@ -273,7 +273,7 @@ kubectl get node -o wide
 
 crictl ps -a
 ```
-![通过 crictl 查看 containerd 的容器运行状态](https://lsky.sfhj.top/i/main/2023-03/871EFB1C13E616DBFBEC9E43A273852E08CA7EF3090D79DBE50647C24447E91D.png)
+![通过 crictl 查看 containerd 的容器运行状态](https://lsky.vtbai.com/i/main/2023-03/871EFB1C13E616DBFBEC9E43A273852E08CA7EF3090D79DBE50647C24447E91D.png)
 # 配置 NFS 共享存储
 > 由于 ceph 资源消耗太大，服务器数量和性能都不够，暂时只能用 NFS，之后大概会在自己电脑上开虚拟机试着搭下 ceph
 
@@ -332,7 +332,7 @@ umount /mnt/nfs/cd001
 
 df -TH
 ```
-![nfs 挂载文件配置](https://lsky.sfhj.top/i/main/2023-03/A30C9689711F26C031325D2EE82625E7A353B232C0BF266975111C1C9CE4EC80.png)
+![nfs 挂载文件配置](https://lsky.vtbai.com/i/main/2023-03/A30C9689711F26C031325D2EE82625E7A353B232C0BF266975111C1C9CE4EC80.png)
 
 # 部署 Nginx 和 MySql
 > 部署可以公网访问的 nginx 和持久化存储的 mysql 服务
@@ -392,7 +392,7 @@ spec:
     nodePort: 30080
   type: NodePort
 ```
-![nginx 首页显示成功](https://lsky.sfhj.top/i/main/2023-03/564E8CA73EF28D607516A539A84B538092DDF7F4D510372E9EF52AB14DE80D36.png)
+![nginx 首页显示成功](https://lsky.vtbai.com/i/main/2023-03/564E8CA73EF28D607516A539A84B538092DDF7F4D510372E9EF52AB14DE80D36.png)
 ## MySQL
 ```bash
 cd ~
@@ -454,5 +454,5 @@ spec:
 kubectl apply -f mysql.yaml
 # 可以正常连接mysql并且nfs服务器有持久化数据了
 ```
-![navicat 连接 mysql](https://lsky.sfhj.top/i/main/2023-03/77781C696156A40959D4159D81D2A959A873F2A9C7AFBA72C07D9EB0DF8AF7A1.png)
-![查看 nfs 里挂载的数据](https://lsky.sfhj.top/i/main/2023-03/0ED4585667FEECFEFB5A26AD2C72BE3470E6E618DBBA343D6E19402FCA5688AE.png)
+![navicat 连接 mysql](https://lsky.vtbai.com/i/main/2023-03/77781C696156A40959D4159D81D2A959A873F2A9C7AFBA72C07D9EB0DF8AF7A1.png)
+![查看 nfs 里挂载的数据](https://lsky.vtbai.com/i/main/2023-03/0ED4585667FEECFEFB5A26AD2C72BE3470E6E618DBBA343D6E19402FCA5688AE.png)
