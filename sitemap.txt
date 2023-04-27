@@ -1,7 +1,7 @@
+https://blog.newreport.top/2023-04-18/kubernetes-1-24-inside-install/
 https://blog.newreport.top/links/index.html
 https://blog.newreport.top/tags/index.html
 https://blog.newreport.top/about/index.html
-https://blog.newreport.top/2023-04-18/kubernetes-1-24-inside-install/
 https://blog.newreport.top/2020-12-31/linux-introduction-and-installation/
 https://blog.newreport.top/2023-03-23/windows-server-2022-nas-init/
 https://blog.newreport.top/2023-02-09/amdgpu-install-stable-diffusion-webui/

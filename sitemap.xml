@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://blog.newreport.top/2023-04-18/kubernetes-1-24-inside-install/</loc>
+    
+    <lastmod>2023-04-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://blog.newreport.top/links/index.html</loc>
     
     <lastmod>2023-04-26</lastmod>
@@ -23,15 +32,6 @@
     <loc>https://blog.newreport.top/about/index.html</loc>
     
     <lastmod>2023-04-26</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.newreport.top/2023-04-18/kubernetes-1-24-inside-install/</loc>
-    
-    <lastmod>2023-04-19</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -328,7 +328,7 @@
 
   <url>
     <loc>https://blog.newreport.top/</loc>
-    <lastmod>2023-04-26</lastmod>
+    <lastmod>2023-04-27</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -336,217 +336,217 @@
   
   <url>
     <loc>https://blog.newreport.top/tags/Hexo/</loc>
-    <lastmod>2023-04-26</lastmod>
+    <lastmod>2023-04-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.newreport.top/tags/Domain/</loc>
-    <lastmod>2023-04-26</lastmod>
+    <lastmod>2023-04-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.newreport.top/tags/Git-Page/</loc>
-    <lastmod>2023-04-26</lastmod>
+    <lastmod>2023-04-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.newreport.top/tags/CloudService/</loc>
-    <lastmod>2023-04-26</lastmod>
+    <lastmod>2023-04-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.newreport.top/tags/Object-Storage/</loc>
-    <lastmod>2023-04-26</lastmod>
+    <lastmod>2023-04-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.newreport.top/tags/C/</loc>
-    <lastmod>2023-04-26</lastmod>
+    <lastmod>2023-04-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.newreport.top/tags/NET/</loc>
-    <lastmod>2023-04-26</lastmod>
+    <lastmod>2023-04-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.newreport.top/tags/NFS/</loc>
-    <lastmod>2023-04-26</lastmod>
+    <lastmod>2023-04-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.newreport.top/tags/Nginx/</loc>
-    <lastmod>2023-04-26</lastmod>
+    <lastmod>2023-04-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.newreport.top/tags/MySQL/</loc>
-    <lastmod>2023-04-26</lastmod>
+    <lastmod>2023-04-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.newreport.top/tags/Containerd/</loc>
-    <lastmod>2023-04-26</lastmod>
+    <lastmod>2023-04-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.newreport.top/tags/K8s/</loc>
-    <lastmod>2023-04-26</lastmod>
+    <lastmod>2023-04-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.newreport.top/tags/Http/</loc>
-    <lastmod>2023-04-26</lastmod>
+    <lastmod>2023-04-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.newreport.top/tags/CORS/</loc>
-    <lastmod>2023-04-26</lastmod>
+    <lastmod>2023-04-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.newreport.top/tags/Golang/</loc>
-    <lastmod>2023-04-26</lastmod>
+    <lastmod>2023-04-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.newreport.top/tags/Beego/</loc>
-    <lastmod>2023-04-26</lastmod>
+    <lastmod>2023-04-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.newreport.top/tags/Docker/</loc>
-    <lastmod>2023-04-26</lastmod>
+    <lastmod>2023-04-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.newreport.top/tags/Portainer/</loc>
-    <lastmod>2023-04-26</lastmod>
+    <lastmod>2023-04-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.newreport.top/tags/Node/</loc>
-    <lastmod>2023-04-26</lastmod>
+    <lastmod>2023-04-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.newreport.top/tags/ABP/</loc>
-    <lastmod>2023-04-26</lastmod>
+    <lastmod>2023-04-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.newreport.top/tags/CLDR/</loc>
-    <lastmod>2023-04-26</lastmod>
+    <lastmod>2023-04-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.newreport.top/tags/i18n/</loc>
-    <lastmod>2023-04-26</lastmod>
+    <lastmod>2023-04-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.newreport.top/tags/Python/</loc>
-    <lastmod>2023-04-26</lastmod>
+    <lastmod>2023-04-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.newreport.top/tags/Pip/</loc>
-    <lastmod>2023-04-26</lastmod>
+    <lastmod>2023-04-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.newreport.top/tags/Ubuntu/</loc>
-    <lastmod>2023-04-26</lastmod>
+    <lastmod>2023-04-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.newreport.top/tags/StableDiffusion/</loc>
-    <lastmod>2023-04-26</lastmod>
+    <lastmod>2023-04-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.newreport.top/tags/ChatGPT/</loc>
-    <lastmod>2023-04-26</lastmod>
+    <lastmod>2023-04-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.newreport.top/tags/Conda/</loc>
-    <lastmod>2023-04-26</lastmod>
+    <lastmod>2023-04-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.newreport.top/tags/NAS/</loc>
-    <lastmod>2023-04-26</lastmod>
+    <lastmod>2023-04-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.newreport.top/tags/WSL2/</loc>
-    <lastmod>2023-04-26</lastmod>
+    <lastmod>2023-04-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.newreport.top/tags/SSH/</loc>
-    <lastmod>2023-04-26</lastmod>
+    <lastmod>2023-04-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
@@ -555,63 +555,63 @@
   
   <url>
     <loc>https://blog.newreport.top/categories/timeline/</loc>
-    <lastmod>2023-04-26</lastmod>
+    <lastmod>2023-04-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.newreport.top/categories/linux/</loc>
-    <lastmod>2023-04-26</lastmod>
+    <lastmod>2023-04-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.newreport.top/categories/linux/rhel8%E6%89%8B%E5%86%8C/</loc>
-    <lastmod>2023-04-26</lastmod>
+    <lastmod>2023-04-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.newreport.top/categories/python/</loc>
-    <lastmod>2023-04-26</lastmod>
+    <lastmod>2023-04-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.newreport.top/categories/c/</loc>
-    <lastmod>2023-04-26</lastmod>
+    <lastmod>2023-04-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.newreport.top/categories/kubernetes-docker-podman/</loc>
-    <lastmod>2023-04-26</lastmod>
+    <lastmod>2023-04-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.newreport.top/categories/golang/</loc>
-    <lastmod>2023-04-26</lastmod>
+    <lastmod>2023-04-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.newreport.top/categories/python/python3-%E6%89%8B%E5%86%8C/</loc>
-    <lastmod>2023-04-26</lastmod>
+    <lastmod>2023-04-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.newreport.top/categories/ai/</loc>
-    <lastmod>2023-04-26</lastmod>
+    <lastmod>2023-04-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
