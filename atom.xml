@@ -6,7 +6,7 @@
   <link href="https://blog.newreport.top/atom.xml" rel="self"/>
   
   <link href="https://blog.newreport.top/"/>
-  <updated>2023-04-27T07:28:24.483Z</updated>
+  <updated>2023-05-09T02:26:21.544Z</updated>
   <id>https://blog.newreport.top/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://blog.newreport.top/2023-04-18/kubernetes-1-24-inside-install/"/>
     <id>https://blog.newreport.top/2023-04-18/kubernetes-1-24-inside-install/</id>
     <published>2023-04-18T16:00:00.000Z</published>
-    <updated>2023-04-27T07:28:24.483Z</updated>
+    <updated>2023-05-09T02:26:21.544Z</updated>
     
     
     <summary type="html">&lt;h1 id=&quot;lsky&quot;&gt;&lt;a href=&quot;#lsky&quot; class=&quot;headerlink&quot; title=&quot;lsky&quot;&gt;&lt;/a&gt;&lt;span class=&quot;exturl&quot; data-url=&quot;aHR0cHM6Ly9naXRodWIuY29tL2xza3ktb3JnL2xza3ktcHJv&quot;&gt;lsky&lt;i class=&quot;fa fa-external-link-alt&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/h1&gt;&lt;blockquote&gt;
@@ -184,7 +184,7 @@
     <link href="https://blog.newreport.top/2023-03-23/windows-server-2022-nas-init/"/>
     <id>https://blog.newreport.top/2023-03-23/windows-server-2022-nas-init/</id>
     <published>2023-03-23T16:00:00.000Z</published>
-    <updated>2023-05-04T09:07:41.435Z</updated>
+    <updated>2023-05-09T02:24:19.795Z</updated>
     
     
     <summary type="html">&lt;blockquote&gt;
@@ -199,7 +199,8 @@
 &lt;blockquote&gt;
 &lt;p&gt;系统直接选 WIN Server 2022，驱动装好可以连 WIFI，机器直接丢阳台或者隔墙，WIFI6 日常用速度肯定够的，虚拟机有 hyper-v，存储有自带的存储池，可以做 refs（单盘 raid5）或者固态加速机械，组多盘 raid 都没问题，有图形化，这配置单 U 功耗顶天 &lt;strong&gt;100W&lt;/strong&gt;，闲时还能接屏幕玩下 101 和雀魂都是没问题的，唯一的缺点就是 docker 用起来麻烦点。&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;&lt;img data-src=&quot;https://lsky.vtbai.com/i/main/2023-03/9C7540E74C7CCD48C3CDA190CEFE877D791A261C644B09F0C1C190A64E70EE24.png&quot; alt=&quot;9C7540E74C7CCD48C3CDA190CEFE877D791A261C644B09F0C1C190A64E70EE24.png&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&quot;https://lsky.vtbai.com/i/main/2023-03/9C7540E74C7CCD48C3CDA190CEFE877D791A261C644B09F0C1C190A64E70EE24.png&quot; alt=&quot;系统配置及软件&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&quot;https://lsky.vtbai.com/i/main/2023-05/30BAE4BA10BD8C63D8947472365ED5B17BEEE2C5CC5B0773A74267B69DF7465C.png&quot; alt=&quot;容器资源占用&quot;&gt;&lt;/p&gt;
 &lt;h1 id=&quot;硬件&quot;&gt;&lt;a href=&quot;#硬件&quot; class=&quot;headerlink&quot; title=&quot;硬件&quot;&gt;&lt;/a&gt;硬件&lt;/h1&gt;&lt;h2 id=&quot;配置&quot;&gt;&lt;a href=&quot;#配置&quot; class=&quot;headerlink&quot; title=&quot;配置&quot;&gt;&lt;/a&gt;配置&lt;/h2&gt;&lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -379,7 +380,7 @@
     <link href="https://blog.newreport.top/2023-02-09/amdgpu-install-stable-diffusion-webui/"/>
     <id>https://blog.newreport.top/2023-02-09/amdgpu-install-stable-diffusion-webui/</id>
     <published>2023-02-09T16:00:00.000Z</published>
-    <updated>2023-05-04T09:07:41.435Z</updated>
+    <updated>2023-05-09T02:21:27.769Z</updated>
     
     
       
@@ -570,7 +571,7 @@
     <link href="https://blog.newreport.top/2022-09-03/cloudflare-301-url/"/>
     <id>https://blog.newreport.top/2022-09-03/cloudflare-301-url/</id>
     <published>2022-09-03T16:00:00.000Z</published>
-    <updated>2023-04-19T08:41:46.770Z</updated>
+    <updated>2023-05-09T02:21:27.769Z</updated>
     
     
     <summary type="html">&lt;h1 id=&quot;购买域名、注册-cloudflare-账号&quot;&gt;&lt;a href=&quot;#购买域名、注册-cloudflare-账号&quot; class=&quot;headerlink&quot; title=&quot;购买域名、注册 cloudflare 账号&quot;&gt;&lt;/a&gt;购买域名、注册 cloudflare 账号&lt;/h1&gt;&lt;p&gt;cloudflare 官网：&lt;span class=&quot;exturl&quot; data-url=&quot;aHR0cHM6Ly93d3cuY2xvdWRmbGFyZS5jb20v&quot;&gt;https://www.cloudflare.com/&lt;i class=&quot;fa fa-external-link-alt&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/p&gt;
@@ -599,7 +600,7 @@
     <link href="https://blog.newreport.top/2022-07-26/kubernetes-1-24-inside-install/"/>
     <id>https://blog.newreport.top/2022-07-26/kubernetes-1-24-inside-install/</id>
     <published>2022-07-26T16:00:01.000Z</published>
-    <updated>2023-04-19T08:41:46.770Z</updated>
+    <updated>2023-05-09T02:21:27.769Z</updated>
     
     
     <summary type="html">&lt;h1 id=&quot;环境介绍&quot;&gt;&lt;a href=&quot;#环境介绍&quot; class=&quot;headerlink&quot; title=&quot;环境介绍&quot;&gt;&lt;/a&gt;环境介绍&lt;/h1&gt;&lt;blockquote&gt;
