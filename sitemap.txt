@@ -1,5 +1,7 @@
-https://blog.newreport.top/2023-03-27/docker-transfer-in-wsl2/
+https://blog.newreport.top/2023-06-14/linux-reboot-auto-launch-podman/
 https://blog.newreport.top/2023-04-18/kubernetes-1-24-inside-install/
+https://blog.newreport.top/2023-02-15/use-chatgpt-storytelling-leads-to-gibberish-in-subsequent-conversations/
+https://blog.newreport.top/2023-03-27/docker-transfer-in-wsl2/
 https://blog.newreport.top/2023-03-23/windows-server-2022-nas-init/
 https://blog.newreport.top/2023-02-09/amdgpu-install-stable-diffusion-webui/
 https://blog.newreport.top/2022-09-03/cloudflare-301-url/
@@ -11,7 +13,6 @@ https://blog.newreport.top/tags/index.html
 https://blog.newreport.top/about/index.html
 https://blog.newreport.top/2023-03-28/ubuntu-install-chrome-remote-openai-newbing/
 https://blog.newreport.top/2023-03-29/linux-setting-ssh-key/
-https://blog.newreport.top/2023-02-15/use-chatgpt-storytelling-leads-to-gibberish-in-subsequent-conversations/
 https://blog.newreport.top/2021-06-22/list-introduction/
 https://blog.newreport.top/2021-06-21/variables-and-simple-data-types/
 https://blog.newreport.top/2021-01-03/understand-the-file-system-and-basic-operations/

@@ -6,7 +6,7 @@
   <link href="https://blog.newreport.top/atom.xml" rel="self"/>
   
   <link href="https://blog.newreport.top/"/>
-  <updated>2023-05-09T02:26:21.544Z</updated>
+  <updated>2023-06-15T01:36:56.754Z</updated>
   <id>https://blog.newreport.top/</id>
   
   <author>
@@ -17,11 +17,39 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>设置 Podman 开机自动动容器</title>
+    <link href="https://blog.newreport.top/2023-06-14/linux-reboot-auto-launch-podman/"/>
+    <id>https://blog.newreport.top/2023-06-14/linux-reboot-auto-launch-podman/</id>
+    <published>2023-06-14T16:00:00.000Z</published>
+    <updated>2023-06-15T01:36:56.754Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;系统为 Rocky Linux，podman 已设置别名为 docker&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td</summary>
+        
+      
+    
+    
+    
+    <category term="kubernetes/docker/podman" scheme="https://blog.newreport.top/categories/kubernetes-docker-podman/"/>
+    
+    
+    <category term="Containerd" scheme="https://blog.newreport.top/tags/Containerd/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Docker 应用清单</title>
     <link href="https://blog.newreport.top/2023-04-18/kubernetes-1-24-inside-install/"/>
     <id>https://blog.newreport.top/2023-04-18/kubernetes-1-24-inside-install/</id>
     <published>2023-04-18T16:00:00.000Z</published>
-    <updated>2023-05-09T02:26:21.544Z</updated>
+    <updated>2023-06-15T01:36:48.942Z</updated>
     
     
     <summary type="html">&lt;h1 id=&quot;lsky&quot;&gt;&lt;a href=&quot;#lsky&quot; class=&quot;headerlink&quot; title=&quot;lsky&quot;&gt;&lt;/a&gt;&lt;span class=&quot;exturl&quot; data-url=&quot;aHR0cHM6Ly9naXRodWIuY29tL2xza3ktb3JnL2xza3ktcHJv&quot;&gt;lsky&lt;i class=&quot;fa fa-external-link-alt&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/h1&gt;&lt;blockquote&gt;
@@ -360,7 +388,7 @@
     <link href="https://blog.newreport.top/2023-02-15/use-chatgpt-storytelling-leads-to-gibberish-in-subsequent-conversations/"/>
     <id>https://blog.newreport.top/2023-02-15/use-chatgpt-storytelling-leads-to-gibberish-in-subsequent-conversations/</id>
     <published>2023-02-15T16:00:00.000Z</published>
-    <updated>2023-03-30T06:07:26.416Z</updated>
+    <updated>2023-06-15T01:36:48.942Z</updated>
     
     
     <summary type="html">&lt;h2 id=&quot;You&quot;&gt;&lt;a href=&quot;#You&quot; class=&quot;headerlink&quot; title=&quot;You&quot;&gt;&lt;/a&gt;You&lt;/h2&gt;&lt;p&gt;讲个故事&lt;/p&gt;
@@ -621,28 +649,6 @@
     <category term="Containerd" scheme="https://blog.newreport.top/tags/Containerd/"/>
     
     <category term="K8s" scheme="https://blog.newreport.top/tags/K8s/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>列表简介</title>
-    <link href="https://blog.newreport.top/2021-06-22/list-introduction/"/>
-    <id>https://blog.newreport.top/2021-06-22/list-introduction/</id>
-    <published>2021-06-22T16:00:00.000Z</published>
-    <updated>2023-03-30T06:07:26.416Z</updated>
-    
-    
-    <summary type="html">&lt;h1 id=&quot;列表是什么&quot;&gt;&lt;a href=&quot;#列表是什么&quot; class=&quot;headerlink&quot; title=&quot;列表是什么&quot;&gt;&lt;/a&gt;列表是什么&lt;/h1&gt;&lt;p&gt;类似于 c 的数组&lt;/p&gt;
-&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;vim 19.py&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;bicycles = [&lt;span class=&quot;string&quot;&gt;&amp;#x27;trek&amp;#x27;&lt;/span&gt;,&lt;span class=&quot;string&quot;&gt;&amp;#x27;cannondale&amp;#x27;&lt;/span&gt;,&lt;span class=&quot;string&quot;&gt;&amp;#x27;redline&amp;#x27;&lt;/span&gt;,&lt;span class=&quot;string&quot;&gt;&amp;#x27;specialized&amp;#x27;&lt;/span&gt;]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;print&lt;/span&gt;(bicycles)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;figure class=&quot;highlight txt&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;[&amp;#x27;trek&amp;#x27;, &amp;#x27;cannondale&amp;#x27;, &amp;#x27;redline&amp;#x27;, &amp;#x27;specialized&amp;#x27;]&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
-    
-    
-    
-    <category term="python" scheme="https://blog.newreport.top/categories/python/"/>
-    
-    <category term="python3 手册" scheme="https://blog.newreport.top/categories/python/python3-%E6%89%8B%E5%86%8C/"/>
-    
     
   </entry>
   

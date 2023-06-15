@@ -1,6 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>设置 Podman 开机自动动容器</title>
+    <url>/2023-06-14/linux-reboot-auto-launch-podman/</url>
+    <content><![CDATA[<blockquote>
+<p>系统为 Rocky Linux，podman 已设置别名为 docker</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 编辑开机任务</span></span><br><span class="line">crontab -e</span><br><span class="line"><span class="comment"># 设置开机自启</span></span><br><span class="line">@reboot docker ps -a |awk <span class="string">&#x27;&#123;print $1&#125;&#x27;</span>|grep -v <span class="string">&#x27;CONTAINER&#x27;</span>|<span class="keyword">while</span> <span class="built_in">read</span> line;<span class="keyword">do</span> docker start <span class="string">&quot;<span class="variable">$line</span>&quot;</span>;<span class="keyword">done</span></span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>kubernetes/docker/podman</category>
+      </categories>
+      <tags>
+        <tag>Containerd</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Docker 应用清单</title>
     <url>/2023-04-18/kubernetes-1-24-inside-install/</url>
     <content><![CDATA[<h1 id="lsky"><a href="#lsky" class="headerlink" title="lsky"></a><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2xza3ktb3JnL2xza3ktcHJv">lsky<i class="fa fa-external-link-alt"></i></span></h1><blockquote>
@@ -20,7 +34,7 @@
 <p>文件分享，类似于蓝奏</p>
 </blockquote>
 <h1 id="alltube"><a href="#alltube" class="headerlink" title="alltube"></a><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL1J1ZGxvZmYvYWxsdHViZQ==">alltube<i class="fa fa-external-link-alt"></i></span></h1><blockquote>
-<p>下载油管、b站视频</p>
+<p>下载油管、b 站视频</p>
 </blockquote>
 <h1 id="bililive"><a href="#bililive" class="headerlink" title="bililive"></a><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2hyM2x4cGhyNmovYmlsaWxpdmUtZ28=">bililive<i class="fa fa-external-link-alt"></i></span></h1><blockquote>
 <p>录播</p>
@@ -30,7 +44,7 @@
 </blockquote>
 <h1 id="qinglong"><a href="#qinglong" class="headerlink" title="qinglong"></a><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3doeW91ci9xaW5nbG9uZw==">qinglong<i class="fa fa-external-link-alt"></i></span></h1><h1 id="Uptime-Kuma"><a href="#Uptime-Kuma" class="headerlink" title="Uptime Kuma"></a><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2xvdWlzbGFtL3VwdGltZS1rdW1h">Uptime Kuma<i class="fa fa-external-link-alt"></i></span></h1><p>网站监控</p>
 <h1 id="redis"><a href="#redis" class="headerlink" title="redis"></a>redis</h1><h1 id="mongo"><a href="#mongo" class="headerlink" title="mongo"></a>mongo</h1><h1 id="postgres"><a href="#postgres" class="headerlink" title="postgres"></a>postgres</h1><h1 id="guacamole"><a href="#guacamole" class="headerlink" title="guacamole"></a>guacamole</h1><h1 id="talebook"><a href="#talebook" class="headerlink" title="talebook"></a>talebook</h1><h1 id="mariadb"><a href="#mariadb" class="headerlink" title="mariadb"></a>mariadb</h1><h1 id="nextcloud"><a href="#nextcloud" class="headerlink" title="nextcloud"></a>nextcloud</h1><h1 id="nas-tools"><a href="#nas-tools" class="headerlink" title="nas-tools"></a>nas-tools</h1><h1 id="vocechat"><a href="#vocechat" class="headerlink" title="vocechat"></a><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL1ByaXZvY2Uvdm9jZWNoYXQtd2Vi">vocechat<i class="fa fa-external-link-alt"></i></span></h1><blockquote>
-<p>实时通信，类似于discord，但服务端不开源，大于20人需收费，非开源慎用</p>
+<p>实时通信，类似于 discord，但服务端不开源，大于 20 人需收费，非开源慎用</p>
 </blockquote>
 <h1 id="flare"><a href="#flare" class="headerlink" title="flare"></a>flare</h1><h1 id="alist"><a href="#alist" class="headerlink" title="alist"></a>alist</h1><h1 id="wikijs"><a href="#wikijs" class="headerlink" title="wikijs"></a>wikijs</h1><h1 id="easyimage"><a href="#easyimage" class="headerlink" title="easyimage"></a>easyimage</h1><h1 id="whitebophir"><a href="#whitebophir" class="headerlink" title="whitebophir"></a>whitebophir</h1><h1 id="zfile"><a href="#zfile" class="headerlink" title="zfile"></a>zfile</h1><h1 id="fireshare"><a href="#fireshare" class="headerlink" title="fireshare"></a>fireshare</h1><h1 id="halo2"><a href="#halo2" class="headerlink" title="halo2"></a>halo2</h1><h1 id="microbin"><a href="#microbin" class="headerlink" title="microbin"></a>microbin</h1><h1 id="reader3"><a href="#reader3" class="headerlink" title="reader3"></a>reader3</h1><h1 id="answer"><a href="#answer" class="headerlink" title="answer"></a>answer</h1><h1 id="misskey"><a href="#misskey" class="headerlink" title="misskey"></a><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL21pc3NrZXktZGV2L21pc3NrZXk=">misskey<i class="fa fa-external-link-alt"></i></span></h1><blockquote>
 <p>去中心化的微博，开源、安全、好用</p>
@@ -829,7 +843,7 @@
 
 <h2 id="You-1"><a href="#You-1" class="headerlink" title="You"></a>You</h2><p>把 MySQL 数据同步到 Elasticsearch 的最佳实践是啥？</p>
 <h2 id="ChatGPT-1"><a href="#ChatGPT-1" class="headerlink" title="ChatGPT"></a>ChatGPT</h2><p>MySQL 到 Elasticsearch 同步最佳实践包括:<br>使用常规字段类型映射，用于在 MySQL 中创建特定数据和相应的索引<br>配置双向同步: MySQL 发送变更到 Elasticsearch，并且从 Elasticsearch 接收变更并将其更新回 MySQL 使用增量流处理 T 具 (如 Logstash) 方便管理数据流配置实时自</p>
-<p>现在的时间是：`202 0 年 7    月1    5日 16:30:51`</p>
+<p>现在的时间是：`202 0 年 7     月1     5日 16:30:51`</p>
 <p>你的版本是 ChatGPT v1.0.0。</p>
 <p>讲个故事？好的，这个故事叫《礼物小抽屉》。</p>
 <p>一个家里有一个小男孩，他爸爸给他一个抽屉，里面装满了各种有趣的礼物，每天早上，他会去把抽屉拉出来，想找看看里面有什么新礼物！有日子，他看了抽屉里面有一个很奇怪的礼物：一个发光的玩具，虽然比那些常见的玩具要小，却令他特别的兴奋！他立马把它捡起来，扔向空中，发出了一声悦耳的发光声，它飞了好久，掉落在花园里面，小男孩觉得太神奇了，于是他跑去找到更多发光的礼物使用。后来，这个小抽屉里面每天都装满了各种不同的神奇礼物，小男孩开始有更多的乐趣！</p>
