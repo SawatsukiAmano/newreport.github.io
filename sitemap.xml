@@ -621,13 +621,6 @@
   </url>
   
   <url>
-    <loc>https://blog.newreport.top/categories/python/python3-%E6%89%8B%E5%86%8C/</loc>
-    <lastmod>2023-06-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://blog.newreport.top/categories/kubernetes-docker-podman/</loc>
     <lastmod>2023-06-19</lastmod>
     <changefreq>weekly</changefreq>
@@ -636,6 +629,13 @@
   
   <url>
     <loc>https://blog.newreport.top/categories/golang/</loc>
+    <lastmod>2023-06-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.newreport.top/categories/python/python3-%E6%89%8B%E5%86%8C/</loc>
     <lastmod>2023-06-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>

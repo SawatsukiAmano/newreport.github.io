@@ -25,6 +25,7 @@
 <li><strong>电源</strong>：海韵 650W </li>
 <li><strong>机箱</strong>：长城阿基米德 7b（13 个 3.5 存机械，8 个 2.5 寸 sata 位）</li>
 </ul>
+<span id="more"></span>
 <h2 id="Docker-服务器（Rocky-Linux-9-2）"><a href="#Docker-服务器（Rocky-Linux-9-2）" class="headerlink" title="Docker 服务器（Rocky Linux 9.2）"></a>Docker 服务器（Rocky Linux 9.2）</h2><blockquote>
 <p>只是容器机器罢了</p>
 </blockquote>

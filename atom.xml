@@ -6,7 +6,7 @@
   <link href="https://blog.newreport.top/atom.xml" rel="self"/>
   
   <link href="https://blog.newreport.top/"/>
-  <updated>2023-06-19T09:37:10.213Z</updated>
+  <updated>2023-06-19T09:38:28.369Z</updated>
   <id>https://blog.newreport.top/</id>
   
   <author>
@@ -21,17 +21,31 @@
     <link href="https://blog.newreport.top/2023-06-18/thoughts-on-home-server-configuration/"/>
     <id>https://blog.newreport.top/2023-06-18/thoughts-on-home-server-configuration/</id>
     <published>2023-06-18T16:00:00.000Z</published>
-    <updated>2023-06-19T09:37:10.213Z</updated>
+    <updated>2023-06-19T09:38:28.369Z</updated>
     
     
-      
-      
-        
-        
     <summary type="html">&lt;blockquote&gt;
-&lt;p&gt;之前有写过一篇 &lt;a href=&quot;../../2023-03-24/windows-server-2022-nas-init&quot;&gt;WINNAS&lt;/a&gt;，这个虽然有图形化，但是有个很严重的问题，windows 下的 docker 损耗太大，win</summary>
-        
-      
+&lt;p&gt;之前有写过一篇 &lt;a href=&quot;../../2023-03-24/windows-server-2022-nas-init&quot;&gt;WINNAS&lt;/a&gt;，这个虽然有图形化，但是有个很严重的问题，windows 下的 docker 损耗太大，win server 下各种 amd 驱动不兼容，而且各种监控不好安装，并且不知道为啥，128G 内存分给 docker 只有 64G，就这还影响 OS 系统干其他事情，遂有以下配置&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;该方案使用 windows 作为 nfs 服务器，使用 win server 自带的软 raid 进行数据保护，共享给 linux 使用，这样即不因为 windows 的垃圾 docker 支持而浪费资源，又可以拥有不错的图形化界面进行配置，虽然能用 zfs 进行单机，但还是图形化舒服些&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&quot;硬件配置&quot;&gt;&lt;a href=&quot;#硬件配置&quot; class=&quot;headerlink&quot; title=&quot;硬件配置&quot;&gt;&lt;/a&gt;硬件配置&lt;/h1&gt;&lt;h2 id=&quot;NFS-服务器（WIN-Server-2022）&quot;&gt;&lt;a href=&quot;#NFS-服务器（WIN-Server-2022）&quot; class=&quot;headerlink&quot; title=&quot;NFS 服务器（WIN Server 2022）&quot;&gt;&lt;/a&gt;NFS 服务器（WIN Server 2022）&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;只用来做 nfs 服务器当然很浪费，日常会多开安卓虚拟机，登陆阿里云，百度云等作为 allinone&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;cpu&lt;/strong&gt;：13700 16c 24t&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;主板&lt;/strong&gt;：彩虹 z790 冰霜巡洋舰 d4 wifi，4 个 m.2，6 个 sata&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;内存&lt;/strong&gt;：阿斯加特 32G（3200）*4 128G&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;散热&lt;/strong&gt;：AX120&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;系统盘&lt;/strong&gt;：kc3000 2T&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;系统盘备份&lt;/strong&gt;：s590 2T&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;傲腾加速固态&lt;/strong&gt;：&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;NFS&lt;/strong&gt;：3 块 16T 机械，软 raid5&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Appstore&lt;/strong&gt;：P7000Z&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;电源&lt;/strong&gt;：海韵 650W &lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;机箱&lt;/strong&gt;：长城阿基米德 7b（13 个 3.5 存机械，8 个 2.5 寸 sata 位）&lt;/li&gt;
+&lt;/ul&gt;</summary>
     
     
     
