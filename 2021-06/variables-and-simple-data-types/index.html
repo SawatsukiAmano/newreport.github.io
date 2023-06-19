@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 7.0.0-rc1">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+  <meta name="google-site-verification" content="5JrLvrJMlBjdcPpp-Vdmej5Xam1RZCIO0aFLGbDqjtI">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha256-/4UQcSmErDzPCMAiuOiWPVVsNN2s3ZY/NsmXNcj0IFc=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/themes/blue/pace-theme-minimal.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"blog.newreport.top","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.15.0","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":"mac"},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":true,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":{"gitalk":{"order":-2}}},"stickytabs":true,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="运行 hello world1vim 1.py 1print(&quot;hello Python world!&quot;) 1hello Python world!">
+<meta property="og:type" content="article">
+<meta property="og:title" content="变量和简单数据类型">
+<meta property="og:url" content="https://blog.newreport.top/2021-06/variables-and-simple-data-types/index.html">
+<meta property="og:site_name" content="NewReport">
+<meta property="og:description" content="运行 hello world1vim 1.py 1print(&quot;hello Python world!&quot;) 1hello Python world!">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2021-06-21T16:00:01.000Z">
+<meta property="article:modified_time" content="2023-06-19T09:40:29.345Z">
+<meta property="article:author" content="haruki">
+<meta property="article:tag" content="linux、docker、k8s、nas、go、c#、python">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://blog.newreport.top/2021-06/variables-and-simple-data-types/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://blog.newreport.top/2021-06/variables-and-simple-data-types/","path":"2021-06/variables-and-simple-data-types/","title":"变量和简单数据类型"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>变量和简单数据类型 | NewReport</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3458409223761019"
+     crossorigin="anonymous"></script>
+<link rel="alternate" href="/atom.xml" title="NewReport" type="application/atom+xml">
+<style>.darkmode--activated{--body-bg-color:#282828;--content-bg-color:#333;--card-bg-color:#555;--text-color:#ccc;--blockquote-color:#bbb;--link-color:#ccc;--link-hover-color:#eee;--brand-color:#ddd;--brand-hover-color:#ddd;--table-row-odd-bg-color:#282828;--table-row-hover-bg-color:#363636;--menu-item-bg-color:#555;--btn-default-bg:#222;--btn-default-color:#ccc;--btn-default-border-color:#555;--btn-default-hover-bg:#666;--btn-default-hover-color:#ccc;--btn-default-hover-border-color:#666;--highlight-background:#282b2e;--highlight-foreground:#a9b7c6;--highlight-gutter-background:#34393d;--highlight-gutter-foreground:#9ca9b6}.darkmode--activated img{opacity:.75}.darkmode--activated img:hover{opacity:.9}.darkmode--activated code{color:#69dbdc;background:0 0}button.darkmode-toggle{z-index:9999}.darkmode-ignore,img{display:flex!important}.beian img{display:inline-block!important}</style></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">NewReport</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li><li class="menu-item menu-item-sitemap"><a href="/sitemap.xml" rel="section"><i class="fa fa-sitemap fa-fw"></i>站点地图</a></li><li class="menu-item menu-item-友链"><a href="/links/" rel="section"><i class="fa fa-user fa-fw"></i>友链</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%BF%90%E8%A1%8C-hello-world"><span class="nav-number">1.</span> <span class="nav-text">运行 hello world</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8F%98%E9%87%8F"><span class="nav-number">2.</span> <span class="nav-text">变量</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%98%E9%87%8F%E5%91%BD%E5%90%8D%E5%92%8C%E4%BD%BF%E7%94%A8"><span class="nav-number">2.1.</span> <span class="nav-text">变量命名和使用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8%E5%8F%98%E9%87%8F%E6%97%B6%E7%9A%84%E9%94%99%E8%AF%AF"><span class="nav-number">2.2.</span> <span class="nav-text">使用变量时的错误</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2"><span class="nav-number">3.</span> <span class="nav-text">字符串</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95%E4%BF%AE%E6%94%B9%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%A4%A7%E5%B0%8F%E5%86%99"><span class="nav-number">3.1.</span> <span class="nav-text">使用方法修改字符串大小写</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%90%88%E5%B9%B6%E5%AD%97%E7%AC%A6%E4%B8%B2"><span class="nav-number">3.2.</span> <span class="nav-text">合并字符串</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8%E5%88%B6%E8%A1%A8%E7%AC%A6%E6%88%96%E6%8D%A2%E8%A1%8C%E7%AC%A6%E6%9D%A5%E6%B7%BB%E5%8A%A0%E7%A9%BA%E7%99%BD"><span class="nav-number">3.3.</span> <span class="nav-text">使用制表符或换行符来添加空白</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%A0%E9%99%A4%E7%A9%BA%E7%99%BD"><span class="nav-number">3.4.</span> <span class="nav-text">删除空白</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%97%B6%E9%81%BF%E5%85%8D%E8%AF%AD%E6%B3%95%E9%94%99%E8%AF%AF"><span class="nav-number">3.5.</span> <span class="nav-text">使用字符串时避免语法错误</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Python-2-%E4%B8%AD%E7%9A%84-print-%E8%AF%AD%E5%8F%A5"><span class="nav-number">3.6.</span> <span class="nav-text">Python 2 中的 print 语句</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%95%B0%E5%AD%97"><span class="nav-number">4.</span> <span class="nav-text">数字</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%95%B4%E6%95%B0"><span class="nav-number">4.1.</span> <span class="nav-text">整数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B5%AE%E7%82%B9%E5%9E%8B"><span class="nav-number">4.2.</span> <span class="nav-text">浮点型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8%E5%87%BD%E6%95%B0-str-%E9%81%BF%E5%85%8D%E7%B1%BB%E5%9E%8B%E9%94%99%E8%AF%AF"><span class="nav-number">4.3.</span> <span class="nav-text">使用函数 str()避免类型错误</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Python-2-%E4%B8%AD%E7%9A%84%E6%95%B4%E6%95%B0"><span class="nav-number">4.4.</span> <span class="nav-text">Python 2 中的整数</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%B3%A8%E9%87%8A"><span class="nav-number">5.</span> <span class="nav-text">注释</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Python-%E4%B9%8B%E7%A6%85"><span class="nav-number">6.</span> <span class="nav-text">Python 之禅</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="haruki"
+      src="/images/haruki-avatar.jpg">
+  <p class="site-author-name" itemprop="name">haruki</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">33</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">9</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">33</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL25ld3JlcG9ydA==" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;newreport"><i class="fab fa-github fa-fw"></i>GitHub</span>
+      </span>
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="bWFpbHRvOmhhcnVraTk1OUBxcS5jb20=" title="E-Mail → mailto:haruki959@qq.com"><i class="fa fa-envelope fa-fw"></i>E-Mail</span>
+      </span>
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="aHR0cHM6Ly93d3cueXVxdWUuY29tL25ld3JlcG9ydA==" title="YuQue → https:&#x2F;&#x2F;www.yuque.com&#x2F;newreport"><i class="fab iconfont app-lark_grey fa-fw"></i>YuQue</span>
+      </span>
+  </div>
+
+        </div>
+      </div>
+        <div class="back-to-top animated" role="button" aria-label="返回顶部">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://blog.newreport.top/2021-06/variables-and-simple-data-types/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/haruki-avatar.jpg">
+      <meta itemprop="name" content="haruki">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="NewReport">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="变量和简单数据类型 | NewReport">
+      <meta itemprop="description" content="">
+      <meta itemprop="keywords" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          变量和简单数据类型
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-06-22 00:00:01" itemprop="dateCreated datePublished" datetime="2021-06-22T00:00:01+08:00">2021-06-22</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2023-06-19 17:40:29" itemprop="dateModified" datetime="2023-06-19T17:40:29+08:00">2023-06-19</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/python/" itemprop="url" rel="index"><span itemprop="name">python</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/python/python3-%E6%89%8B%E5%86%8C/" itemprop="url" rel="index"><span itemprop="name">python3 手册</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>889</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>3 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h1 id="运行-hello-world"><a href="#运行-hello-world" class="headerlink" title="运行 hello world"></a>运行 hello world</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim 1.py</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="string">&quot;hello Python world!&quot;</span>)</span><br></pre></td></tr></table></figure>
+<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hello Python world!</span><br></pre></td></tr></table></figure>
+<span id="more"></span>  
+
+<h1 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim 2.py</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">message = <span class="string">&quot;Hello Python world!&quot;</span></span><br><span class="line"><span class="built_in">print</span>(message)</span><br></pre></td></tr></table></figure>
+<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hello Python world!</span><br></pre></td></tr></table></figure>
+<hr>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim 3.py</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">message = <span class="string">&quot;Hello Python world!&quot;</span></span><br><span class="line"><span class="built_in">print</span>(message)</span><br><span class="line">message = <span class="string">&quot;Hello world!&quot;</span></span><br><span class="line"><span class="built_in">print</span>(message)</span><br></pre></td></tr></table></figure>
+<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hello Python world!</span><br><span class="line">Hello world!</span><br></pre></td></tr></table></figure>
+
+<h2 id="变量命名和使用"><a href="#变量命名和使用" class="headerlink" title="变量命名和使用"></a>变量命名和使用</h2><ul>
+<li><p>变量名只能包含<strong>字母、数字</strong>和<strong>下划线</strong>。变量名只能是<strong>字母</strong>或<strong>下划线</strong>开头。例：message_1</p>
+</li>
+<li><p>变量名不能包含<strong>空格</strong>，但可以使用<strong>下划线</strong>来分隔单词</p>
+</li>
+<li><p>不能将<strong>Python 关键字</strong>和<strong>函数名</strong>作为变量名使用，如：print</p>
+</li>
+</ul>
+<h2 id="使用变量时的错误"><a href="#使用变量时的错误" class="headerlink" title="使用变量时的错误"></a>使用变量时的错误</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim 4.py</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">message = <span class="string">&quot;Hello world!&quot;</span></span><br><span class="line"><span class="built_in">print</span>(mesage)</span><br></pre></td></tr></table></figure>
+<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Traceback (most recent call last):</span><br><span class="line">  File &quot;4.py&quot;, line 2, in &lt;module&gt;      //第二行代码错误</span><br><span class="line">    print(mesage)       //列出了这个错误</span><br><span class="line">NameError: name &#x27;mesage&#x27; is not defined     //mesage无法识别</span><br></pre></td></tr></table></figure>
+<h1 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h1><p>字符串就是一系列字符。在 Python 中，用引号括起来的都是字符串，其中的引号可以是<strong>单引号</strong>也可以是<strong>双引号</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;This is a string.&quot;</span></span><br><span class="line"><span class="string">&#x27;This is also a string.&quot;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="使用方法修改字符串大小写"><a href="#使用方法修改字符串大小写" class="headerlink" title="使用方法修改字符串大小写"></a>使用方法修改字符串大小写</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim 5.py</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">name = <span class="string">&quot;ada lovelace&quot;</span></span><br><span class="line"><span class="built_in">print</span>(name.title())</span><br></pre></td></tr></table></figure>
+<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Ada Lovelace</span><br></pre></td></tr></table></figure>
+<p>titile（）以首字母大写的方式显示每个单词，即将每个单词的首字母都改为大写。</p>
+<hr>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim 6.py</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">name = <span class="string">&quot;ada lovelace&quot;</span></span><br><span class="line"><span class="built_in">print</span>(name.title())</span><br><span class="line"><span class="built_in">print</span>(name.lower())</span><br><span class="line"><span class="built_in">print</span>(name)</span><br></pre></td></tr></table></figure>
+<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Ada Lovelace</span><br><span class="line">ada lovelace</span><br><span class="line">ada lovelace</span><br></pre></td></tr></table></figure>
+
+<h2 id="合并字符串"><a href="#合并字符串" class="headerlink" title="合并字符串"></a>合并字符串</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim 7.py</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">first_name = <span class="string">&quot;ada&quot;</span></span><br><span class="line">last_name = <span class="string">&quot;lovelace&quot;</span></span><br><span class="line">full_name = first_name + <span class="string">&quot; &quot;</span> + last_name</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(full_name)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;Hello,&quot;</span> + full_name + <span class="string">&quot;!&quot;</span>)</span><br><span class="line">message = <span class="string">&quot;Hello,&quot;</span> + full_name.title() + <span class="string">&quot;!&quot;</span></span><br><span class="line"><span class="built_in">print</span>(message)</span><br></pre></td></tr></table></figure>
+<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ada lovelace</span><br><span class="line">Hello,ada lovelace!</span><br><span class="line">Hello,Ada Lovelace!</span><br></pre></td></tr></table></figure>
+
+<h2 id="使用制表符或换行符来添加空白"><a href="#使用制表符或换行符来添加空白" class="headerlink" title="使用制表符或换行符来添加空白"></a>使用制表符或换行符来添加空白</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim 8.py</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="string">&quot;Python&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;Languages:\nPython\nC\nJava&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;Languages:\n\tPython\n\tC\n\tJava&quot;</span>)</span><br></pre></td></tr></table></figure>
+<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">Python</span><br><span class="line">Languages:</span><br><span class="line">Python</span><br><span class="line">C</span><br><span class="line">Java</span><br><span class="line">Languages:</span><br><span class="line">        Python</span><br><span class="line">        C</span><br><span class="line">        Java</span><br></pre></td></tr></table></figure>
+
+<h2 id="删除空白"><a href="#删除空白" class="headerlink" title="删除空白"></a>删除空白</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim 9.py</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">favorite_language = <span class="string">&#x27; python &#x27;</span></span><br><span class="line"><span class="built_in">print</span>(favorite_language)</span><br><span class="line"><span class="built_in">print</span>(favorite_language.rstrip())</span><br><span class="line"><span class="built_in">print</span>(favorite_language.strip())</span><br></pre></td></tr></table></figure>
+<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"> python </span><br><span class="line"> python</span><br><span class="line">python </span><br></pre></td></tr></table></figure>
+
+<h2 id="使用字符串时避免语法错误"><a href="#使用字符串时避免语法错误" class="headerlink" title="使用字符串时避免语法错误"></a>使用字符串时避免语法错误</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim 10.py</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">message = <span class="string">&#x27;One of Python&#x27;</span>s strengths <span class="keyword">is</span> its diverse community.<span class="string">&#x27;</span></span><br><span class="line"><span class="string">print(message)</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">  File &quot;10.py&quot;, line 1</span><br><span class="line">    message = &#x27;One of Python&#x27;s strengths is its diverse community.&#x27;</span><br><span class="line">                             ^</span><br><span class="line">SyntaxError: invalid syntax</span><br></pre></td></tr></table></figure>
+<hr>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim 11.py</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">message = <span class="string">&quot;One of Python&#x27;s strengths is its diverse community.&quot;</span></span><br><span class="line"><span class="built_in">print</span>(message)</span><br></pre></td></tr></table></figure>
+<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">One of Python&#x27;s strengths is its diverse community.</span><br></pre></td></tr></table></figure>
+
+<h2 id="Python-2-中的-print-语句"><a href="#Python-2-中的-print-语句" class="headerlink" title="Python 2 中的 print 语句"></a>Python 2 中的 print 语句</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim 12.py</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span> <span class="string">&quot;Hello Python 2.7 World!&quot;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Hello Python 2.7 World!</span><br></pre></td></tr></table></figure>
+
+<h1 id="数字"><a href="#数字" class="headerlink" title="数字"></a>数字</h1><h2 id="整数"><a href="#整数" class="headerlink" title="整数"></a>整数</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim 13.py</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>( <span class="number">2</span> + <span class="number">3</span> )</span><br><span class="line"><span class="built_in">print</span>( <span class="number">3</span> - <span class="number">2</span> )</span><br><span class="line"><span class="built_in">print</span>( <span class="number">2</span> * <span class="number">3</span> )</span><br><span class="line"><span class="built_in">print</span>( <span class="number">3</span> / <span class="number">2</span> )</span><br></pre></td></tr></table></figure>
+<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">5</span><br><span class="line">1</span><br><span class="line">6</span><br><span class="line">1.5</span><br></pre></td></tr></table></figure>
+<hr>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim 14.py</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>( <span class="number">3</span> ** <span class="number">2</span> )</span><br><span class="line"><span class="built_in">print</span>( <span class="number">3</span> ** <span class="number">3</span> )</span><br><span class="line"><span class="built_in">print</span>( <span class="number">10</span> ** <span class="number">6</span> )</span><br><span class="line"><span class="built_in">print</span>( <span class="number">2</span> + <span class="number">3</span> * <span class="number">4</span> )</span><br><span class="line"><span class="built_in">print</span>( ( <span class="number">2</span> + <span class="number">3</span> ) * <span class="number">4</span> )</span><br></pre></td></tr></table></figure>
+<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">9</span><br><span class="line">27</span><br><span class="line">1000000</span><br><span class="line">14</span><br><span class="line">20</span><br></pre></td></tr></table></figure>
+
+<h2 id="浮点型"><a href="#浮点型" class="headerlink" title="浮点型"></a>浮点型</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim 15.py</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>( <span class="number">0.1</span> + <span class="number">0.1</span> )</span><br><span class="line"><span class="built_in">print</span>( <span class="number">0.2</span> + <span class="number">0.2</span> )</span><br><span class="line"><span class="built_in">print</span>( <span class="number">2</span> * <span class="number">0.1</span> )</span><br><span class="line"><span class="built_in">print</span>( <span class="number">2</span> * <span class="number">0.2</span> )</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;-------------------&quot;</span>)       <span class="comment">#结果包含的小数可能是不确定的</span></span><br><span class="line"><span class="built_in">print</span>( <span class="number">0.2</span> + <span class="number">0.1</span> )</span><br><span class="line"><span class="built_in">print</span>( <span class="number">3</span> * <span class="number">0.1</span> )</span><br></pre></td></tr></table></figure>
+<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">0.2</span><br><span class="line">0.4</span><br><span class="line">0.2</span><br><span class="line">0.4</span><br><span class="line">-------------------</span><br><span class="line">0.30000000000000004</span><br><span class="line">0.30000000000000004</span><br></pre></td></tr></table></figure>
+
+<h2 id="使用函数-str-避免类型错误"><a href="#使用函数-str-避免类型错误" class="headerlink" title="使用函数 str()避免类型错误"></a>使用函数 str()避免类型错误</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim 16.py</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">age = <span class="number">23</span></span><br><span class="line">message = <span class="string">&quot;Happy &quot;</span> + age + <span class="string">&quot;rd Birthday!&quot;</span>   <span class="comment">#类型错误</span></span><br><span class="line"><span class="built_in">print</span>(message)</span><br></pre></td></tr></table></figure>
+<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Traceback (most recent call last):</span><br><span class="line">  File &quot;16.py&quot;, line 2, in &lt;module&gt;</span><br><span class="line">    message = &quot;Happy &quot; + age + &quot;rd Birthday!&quot;</span><br><span class="line">TypeError: must be str, not int</span><br></pre></td></tr></table></figure>
+<hr>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim 17.py</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">age = <span class="number">23</span></span><br><span class="line">message = <span class="string">&quot;Happy &quot;</span> + <span class="built_in">str</span>(age) + <span class="string">&quot;rd Birthday!&quot;</span></span><br><span class="line"><span class="built_in">print</span>(message)</span><br></pre></td></tr></table></figure>
+<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Happy 23rd Birthday!</span><br></pre></td></tr></table></figure>
+
+<h2 id="Python-2-中的整数"><a href="#Python-2-中的整数" class="headerlink" title="Python 2 中的整数"></a>Python 2 中的整数</h2><p>与 c 语言类似，3&#x2F;2&#x3D;1 而不是 1.5</p>
+<h1 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim 18.py</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 向大家问好</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;Hello Python people!&quot;</span>)</span><br></pre></td></tr></table></figure>
+<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Hello Python people!</span><br></pre></td></tr></table></figure>
+
+<h1 id="Python-之禅"><a href="#Python-之禅" class="headerlink" title="Python 之禅"></a>Python 之禅</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim 19.py</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> this</span><br></pre></td></tr></table></figure>
+<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">The Zen of Python, by Tim Peters</span><br><span class="line"></span><br><span class="line">Beautiful is better than ugly.</span><br><span class="line">Explicit is better than implicit.</span><br><span class="line">Simple is better than complex.</span><br><span class="line">Complex is better than complicated.</span><br><span class="line">Flat is better than nested.</span><br><span class="line">Sparse is better than dense.</span><br><span class="line">Readability counts.</span><br><span class="line">Special cases aren&#x27;t special enough to break the rules.</span><br><span class="line">Although practicality beats purity.</span><br><span class="line">Errors should never pass silently.</span><br><span class="line">Unless explicitly silenced.</span><br><span class="line">In the face of ambiguity, refuse the temptation to guess.</span><br><span class="line">There should be one-- and preferably only one --obvious way to do it.</span><br><span class="line">Although that way may not be obvious at first unless you&#x27;re Dutch.</span><br><span class="line">Now is better than never.</span><br><span class="line">Although never is often better than *right* now.</span><br><span class="line">If the implementation is hard to explain, it&#x27;s a bad idea.</span><br><span class="line">If the implementation is easy to explain, it may be a good idea.</span><br><span class="line">Namespaces are one honking great idea -- let&#x27;s do more of those!</span><br></pre></td></tr></table></figure>
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2021-06/python-basic-knowledge/" rel="prev" title="Python 基础知识">
+                  <i class="fa fa-chevron-left"></i> Python 基础知识
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2021-06/list-introduction/" rel="next" title="列表简介">
+                  列表简介 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    <div class="comments gitalk-container"></div>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">haruki</span>
+</div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+    <span title="站点总字数">21k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">1:09</span>
+  </span>
+</div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+  <div class="powered-by">由 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & <span class="exturl" data-url="aHR0cHM6Ly90aGVtZS1uZXh0LmpzLm9yZw==">NexT.Gemini</span> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/medium-zoom/1.0.8/medium-zoom.min.js" integrity="sha256-7PhEpEWEW0XXQ0k6kQrPKwuoIomz8R8IYyuU1Qew4P8=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lozad.js/1.16.0/lozad.min.js" integrity="sha256-mOFREFhqmHeQbXpK2lp4nA3qooVgACfh88fpJftLBbc=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pangu/4.0.7/pangu.min.js" integrity="sha256-j+yj56cdEY2CwkVtGyz18fNybFGpMGJ8JxG3GSyO2+I=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+  <script class="next-config" data-name="mermaid" type="application/json">{"enable":true,"theme":{"light":"default","dark":"dark"},"js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mermaid/9.4.0/mermaid.min.js","integrity":"sha256-3JloMMI/ZQx6ryuhhZTsQJQmGAkXeni6PkshX7UUO2s="}}</script>
+  <script src="/js/third-party/tags/mermaid.js"></script>
+
+
+  <script src="/js/third-party/pace.js"></script>
+
+  
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+<script src="https://unpkg.com/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
+
+<script>
+var options = {
+  bottom: '32px',
+  right: '32px',
+  left: 'unset',
+  time: '0.3s',
+  mixColor: 'transparent',
+  backgroundColor: 'transparent',
+  buttonColorDark: '#100f2c',
+  buttonColorLight: '#fff',
+  saveInCookies: true,
+  label: '🌓',
+  autoMatchOsTheme: true
+}
+const darkmode = new Darkmode(options);
+window.darkmode = darkmode;
+darkmode.showWidget();
+</script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.css" integrity="sha256-AJnUHL7dBv6PGaeyPQJcgQPDjt/Hn/PvYZde1iqfp8U=" crossorigin="anonymous">
+
+<script class="next-config" data-name="gitalk" type="application/json">{"enable":true,"github_id":"newreport","repo":"newreport.github.io","client_id":"455a006066c6a6133196","client_secret":"c925c01067a3e247496e1564c2da1f4d1e150735","admin_user":"newreport","distraction_free_mode":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token","language":null,"js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.min.js","integrity":"sha256-MVK9MGD/XJaGyIghSVrONSnoXoGh3IFxLw0zfvzpxR4="},"path_md5":"7e519819172bfd3ca36c1057e6bdb99a"}</script>
+<script src="/js/third-party/comments/gitalk.js"></script>
+
+</body>
+</html>

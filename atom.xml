@@ -6,7 +6,7 @@
   <link href="https://blog.newreport.top/atom.xml" rel="self"/>
   
   <link href="https://blog.newreport.top/"/>
-  <updated>2023-06-19T09:40:29.345Z</updated>
+  <updated>2023-06-19T09:53:39.913Z</updated>
   <id>https://blog.newreport.top/</id>
   
   <author>
@@ -18,14 +18,14 @@
   
   <entry>
     <title>关于家用服务器配置的思考</title>
-    <link href="https://blog.newreport.top/2023-06-18/thoughts-on-home-server-configuration/"/>
-    <id>https://blog.newreport.top/2023-06-18/thoughts-on-home-server-configuration/</id>
+    <link href="https://blog.newreport.top/2023-06/thoughts-on-home-server-configuration/"/>
+    <id>https://blog.newreport.top/2023-06/thoughts-on-home-server-configuration/</id>
     <published>2023-06-18T16:00:01.000Z</published>
-    <updated>2023-06-19T09:40:29.345Z</updated>
+    <updated>2023-06-19T09:53:39.913Z</updated>
     
     
     <summary type="html">&lt;blockquote&gt;
-&lt;p&gt;之前有写过一篇 &lt;a href=&quot;../../2023-03-24/windows-server-2022-nas-init&quot;&gt;WINNAS&lt;/a&gt;，这个虽然有图形化，但是有个很严重的问题，windows 下的 docker 损耗太大，win server 下各种 amd 驱动不兼容，而且各种监控不好安装，并且不知道为啥，128G 内存分给 docker 只有 64G，就这还影响 OS 系统干其他事情，遂有以下配置&lt;/p&gt;
+&lt;p&gt;之前有写过一篇 &lt;a href=&quot;../../2023-03/windows-server-2022-nas-init&quot;&gt;WINNAS&lt;/a&gt;，这个虽然有图形化，但是有个很严重的问题，windows 下的 docker 损耗太大，win server 下各种 amd 驱动不兼容，而且各种监控不好安装，并且不知道为啥，128G 内存分给 docker 只有 64G，就这还影响 OS 系统干其他事情，遂有以下配置&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;blockquote&gt;
 &lt;p&gt;该方案使用 windows 作为 nfs 服务器，使用 win server 自带的软 raid 进行数据保护，共享给 linux 使用，这样即不因为 windows 的垃圾 docker 支持而浪费资源，又可以拥有不错的图形化界面进行配置，虽然能用 zfs 进行单机，但还是图形化舒服些&lt;/p&gt;
@@ -64,8 +64,8 @@
   
   <entry>
     <title>设置 Podman 开机自动动容器</title>
-    <link href="https://blog.newreport.top/2023-06-14/linux-reboot-auto-launch-podman/"/>
-    <id>https://blog.newreport.top/2023-06-14/linux-reboot-auto-launch-podman/</id>
+    <link href="https://blog.newreport.top/2023-06/linux-reboot-auto-launch-podman/"/>
+    <id>https://blog.newreport.top/2023-06/linux-reboot-auto-launch-podman/</id>
     <published>2023-06-14T16:00:01.000Z</published>
     <updated>2023-06-19T09:40:29.345Z</updated>
     
@@ -96,8 +96,8 @@
   
   <entry>
     <title>Docker 应用清单</title>
-    <link href="https://blog.newreport.top/2023-04-18/kubernetes-1-24-inside-install/"/>
-    <id>https://blog.newreport.top/2023-04-18/kubernetes-1-24-inside-install/</id>
+    <link href="https://blog.newreport.top/2023-04/kubernetes-1-24-inside-install/"/>
+    <id>https://blog.newreport.top/2023-04/kubernetes-1-24-inside-install/</id>
     <published>2023-04-18T16:00:01.000Z</published>
     <updated>2023-06-19T09:40:29.345Z</updated>
     
@@ -126,8 +126,8 @@
   
   <entry>
     <title>Linux 配置 SSH Key</title>
-    <link href="https://blog.newreport.top/2023-03-29/linux-setting-ssh-key/"/>
-    <id>https://blog.newreport.top/2023-03-29/linux-setting-ssh-key/</id>
+    <link href="https://blog.newreport.top/2023-03/linux-setting-ssh-key/"/>
+    <id>https://blog.newreport.top/2023-03/linux-setting-ssh-key/</id>
     <published>2023-03-29T16:00:01.000Z</published>
     <updated>2023-06-19T09:40:29.345Z</updated>
     
@@ -155,8 +155,8 @@
   
   <entry>
     <title>Ubuntu 2204 安装 Docker</title>
-    <link href="https://blog.newreport.top/2023-03-28/ubuntu-2204-install-docker-and-link-portainer/"/>
-    <id>https://blog.newreport.top/2023-03-28/ubuntu-2204-install-docker-and-link-portainer/</id>
+    <link href="https://blog.newreport.top/2023-03/ubuntu-2204-install-docker-and-link-portainer/"/>
+    <id>https://blog.newreport.top/2023-03/ubuntu-2204-install-docker-and-link-portainer/</id>
     <published>2023-03-28T16:00:03.000Z</published>
     <updated>2023-06-19T09:41:49.261Z</updated>
     
@@ -175,36 +175,11 @@
   </entry>
   
   <entry>
-    <title>Docker 迁移</title>
-    <link href="https://blog.newreport.top/2023-03-28/docker-migration/"/>
-    <id>https://blog.newreport.top/2023-03-28/docker-migration/</id>
-    <published>2023-03-28T16:00:01.000Z</published>
-    <updated>2023-06-19T09:40:29.345Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span</summary>
-        
-      
-    
-    
-    
-    <category term="kubernetes/docker/podman" scheme="https://blog.newreport.top/categories/kubernetes-docker-podman/"/>
-    
-    
-    <category term="Docker" scheme="https://blog.newreport.top/tags/Docker/"/>
-    
-  </entry>
-  
-  <entry>
     <title>Ubuntu 安装 Docker Chrome 并远程（openai、newbing）</title>
-    <link href="https://blog.newreport.top/2023-03-28/ubuntu-install-chrome-remote-openai-newbing/"/>
-    <id>https://blog.newreport.top/2023-03-28/ubuntu-install-chrome-remote-openai-newbing/</id>
-    <published>2023-03-28T16:00:01.000Z</published>
-    <updated>2023-03-30T08:59:47.100Z</updated>
+    <link href="https://blog.newreport.top/2023-03/ubuntu-install-chrome-remote-openai-newbing/"/>
+    <id>https://blog.newreport.top/2023-03/ubuntu-install-chrome-remote-openai-newbing/</id>
+    <published>2023-03-28T16:00:02.000Z</published>
+    <updated>2023-06-19T09:53:57.141Z</updated>
     
     
       
@@ -228,9 +203,34 @@
   </entry>
   
   <entry>
+    <title>Docker 迁移</title>
+    <link href="https://blog.newreport.top/2023-03/docker-migration/"/>
+    <id>https://blog.newreport.top/2023-03/docker-migration/</id>
+    <published>2023-03-28T16:00:01.000Z</published>
+    <updated>2023-06-19T09:40:29.345Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span</summary>
+        
+      
+    
+    
+    
+    <category term="kubernetes/docker/podman" scheme="https://blog.newreport.top/categories/kubernetes-docker-podman/"/>
+    
+    
+    <category term="Docker" scheme="https://blog.newreport.top/tags/Docker/"/>
+    
+  </entry>
+  
+  <entry>
     <title>WSL2 迁移 Docker</title>
-    <link href="https://blog.newreport.top/2023-03-27/docker-transfer-in-wsl2/"/>
-    <id>https://blog.newreport.top/2023-03-27/docker-transfer-in-wsl2/</id>
+    <link href="https://blog.newreport.top/2023-03/docker-transfer-in-wsl2/"/>
+    <id>https://blog.newreport.top/2023-03/docker-transfer-in-wsl2/</id>
     <published>2023-03-27T16:00:01.000Z</published>
     <updated>2023-06-19T09:40:29.345Z</updated>
     
@@ -259,8 +259,8 @@
   
   <entry>
     <title>WIN NAS 的安装及使用</title>
-    <link href="https://blog.newreport.top/2023-03-23/windows-server-2022-nas-init/"/>
-    <id>https://blog.newreport.top/2023-03-23/windows-server-2022-nas-init/</id>
+    <link href="https://blog.newreport.top/2023-03/windows-server-2022-nas-init/"/>
+    <id>https://blog.newreport.top/2023-03/windows-server-2022-nas-init/</id>
     <published>2023-03-23T16:00:00.000Z</published>
     <updated>2023-05-09T02:24:19.795Z</updated>
     
@@ -379,8 +379,8 @@
   
   <entry>
     <title>Ubuntu 下 N 卡安装原生  Stable Diffusion Webui 进行 AI 绘画</title>
-    <link href="https://blog.newreport.top/2023-03-20/ubuntu-nvidia-install-stable-diffusion-webui/"/>
-    <id>https://blog.newreport.top/2023-03-20/ubuntu-nvidia-install-stable-diffusion-webui/</id>
+    <link href="https://blog.newreport.top/2023-03/ubuntu-nvidia-install-stable-diffusion-webui/"/>
+    <id>https://blog.newreport.top/2023-03/ubuntu-nvidia-install-stable-diffusion-webui/</id>
     <published>2023-03-20T16:00:01.000Z</published>
     <updated>2023-06-19T09:40:29.345Z</updated>
     
@@ -405,8 +405,8 @@
   
   <entry>
     <title>Ubuntu 和 CentOS 安装 Conda 和 GCC 环境</title>
-    <link href="https://blog.newreport.top/2023-02-27/ubuntu-amd-centos-install-conda/"/>
-    <id>https://blog.newreport.top/2023-02-27/ubuntu-amd-centos-install-conda/</id>
+    <link href="https://blog.newreport.top/2023-02/ubuntu-amd-centos-install-conda/"/>
+    <id>https://blog.newreport.top/2023-02/ubuntu-amd-centos-install-conda/</id>
     <published>2023-02-27T16:00:01.000Z</published>
     <updated>2023-06-19T09:40:29.345Z</updated>
     
@@ -435,8 +435,8 @@
   
   <entry>
     <title>让 ChatGPT 讲故事导致之后对话出现递归</title>
-    <link href="https://blog.newreport.top/2023-02-15/use-chatgpt-storytelling-leads-to-gibberish-in-subsequent-conversations/"/>
-    <id>https://blog.newreport.top/2023-02-15/use-chatgpt-storytelling-leads-to-gibberish-in-subsequent-conversations/</id>
+    <link href="https://blog.newreport.top/2023-02/use-chatgpt-storytelling-leads-to-gibberish-in-subsequent-conversations/"/>
+    <id>https://blog.newreport.top/2023-02/use-chatgpt-storytelling-leads-to-gibberish-in-subsequent-conversations/</id>
     <published>2023-02-15T16:00:01.000Z</published>
     <updated>2023-06-19T09:40:29.345Z</updated>
     
@@ -455,8 +455,8 @@
   
   <entry>
     <title>A卡 安装 Stable Diffusion Webui 进行 AI 绘画</title>
-    <link href="https://blog.newreport.top/2023-02-09/amdgpu-install-stable-diffusion-webui/"/>
-    <id>https://blog.newreport.top/2023-02-09/amdgpu-install-stable-diffusion-webui/</id>
+    <link href="https://blog.newreport.top/2023-02/amdgpu-install-stable-diffusion-webui/"/>
+    <id>https://blog.newreport.top/2023-02/amdgpu-install-stable-diffusion-webui/</id>
     <published>2023-02-09T16:00:01.000Z</published>
     <updated>2023-06-19T09:40:29.345Z</updated>
     
@@ -489,8 +489,8 @@
   
   <entry>
     <title>Golang 国际化及 CLDR</title>
-    <link href="https://blog.newreport.top/2023-02-08/golang-i18n-CLDR/"/>
-    <id>https://blog.newreport.top/2023-02-08/golang-i18n-CLDR/</id>
+    <link href="https://blog.newreport.top/2023-02/golang-i18n-CLDR/"/>
+    <id>https://blog.newreport.top/2023-02/golang-i18n-CLDR/</id>
     <published>2023-02-08T16:00:01.000Z</published>
     <updated>2023-06-19T09:40:29.345Z</updated>
     
@@ -521,8 +521,8 @@
   
   <entry>
     <title>Hexo Next 8 使用阿里图标</title>
-    <link href="https://blog.newreport.top/2023-01-29/use-hexo-next-8-and-ali-iconfont/"/>
-    <id>https://blog.newreport.top/2023-01-29/use-hexo-next-8-and-ali-iconfont/</id>
+    <link href="https://blog.newreport.top/2023-01/use-hexo-next-8-and-ali-iconfont/"/>
+    <id>https://blog.newreport.top/2023-01/use-hexo-next-8-and-ali-iconfont/</id>
     <published>2023-01-29T16:00:01.000Z</published>
     <updated>2023-06-19T09:40:29.345Z</updated>
     
@@ -540,8 +540,8 @@
   
   <entry>
     <title>ABP 简介</title>
-    <link href="https://blog.newreport.top/2023-01-09/abp-framework-introductory/"/>
-    <id>https://blog.newreport.top/2023-01-09/abp-framework-introductory/</id>
+    <link href="https://blog.newreport.top/2023-01/abp-framework-introductory/"/>
+    <id>https://blog.newreport.top/2023-01/abp-framework-introductory/</id>
     <published>2023-01-09T16:00:01.000Z</published>
     <updated>2023-03-21T08:37:14.833Z</updated>
     
@@ -574,8 +574,8 @@
   
   <entry>
     <title>CentOS Stream 8 安装 Node 和 Go</title>
-    <link href="https://blog.newreport.top/2023-01-03/centos-stream-8-install-node-and-go/"/>
-    <id>https://blog.newreport.top/2023-01-03/centos-stream-8-install-node-and-go/</id>
+    <link href="https://blog.newreport.top/2023-01/centos-stream-8-install-node-and-go/"/>
+    <id>https://blog.newreport.top/2023-01/centos-stream-8-install-node-and-go/</id>
     <published>2023-01-03T16:00:02.000Z</published>
     <updated>2023-03-29T07:47:19.595Z</updated>
     
@@ -595,8 +595,8 @@
   
   <entry>
     <title>CentOS Stream 8 安装 Docker 并连接 Portainer</title>
-    <link href="https://blog.newreport.top/2023-01-03/centos-stream-8-install-docker-and-link-portainer/"/>
-    <id>https://blog.newreport.top/2023-01-03/centos-stream-8-install-docker-and-link-portainer/</id>
+    <link href="https://blog.newreport.top/2023-01/centos-stream-8-install-docker-and-link-portainer/"/>
+    <id>https://blog.newreport.top/2023-01/centos-stream-8-install-docker-and-link-portainer/</id>
     <published>2023-01-03T16:00:01.000Z</published>
     <updated>2023-03-21T08:37:14.833Z</updated>
     
@@ -621,8 +621,8 @@
   
   <entry>
     <title>Beego 拦截器及 CORS</title>
-    <link href="https://blog.newreport.top/2022-11-26/beego-filter-cors/"/>
-    <id>https://blog.newreport.top/2022-11-26/beego-filter-cors/</id>
+    <link href="https://blog.newreport.top/2022-11/beego-filter-cors/"/>
+    <id>https://blog.newreport.top/2022-11/beego-filter-cors/</id>
     <published>2022-11-26T16:00:01.000Z</published>
     <updated>2023-06-19T09:40:29.345Z</updated>
     
@@ -646,8 +646,8 @@
   
   <entry>
     <title>Cloudflare 301 跳转</title>
-    <link href="https://blog.newreport.top/2022-09-03/cloudflare-301-url/"/>
-    <id>https://blog.newreport.top/2022-09-03/cloudflare-301-url/</id>
+    <link href="https://blog.newreport.top/2022-09/cloudflare-301-url/"/>
+    <id>https://blog.newreport.top/2022-09/cloudflare-301-url/</id>
     <published>2022-09-03T16:00:01.000Z</published>
     <updated>2023-06-19T09:40:29.345Z</updated>
     
