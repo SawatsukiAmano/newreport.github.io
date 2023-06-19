@@ -1,7 +1,7 @@
 ---
 title:  Linux 配置 SSH Key
 copyright: true
-date: 2023-03-30 00:00:00
+date: 2023-03-30 00:00:01
 urlname: linux-setting-ssh-key
 keywords: ssh openssh linux ubuntu centos
 tags: 
