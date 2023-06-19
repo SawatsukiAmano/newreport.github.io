@@ -1,5 +1,5 @@
-https://blog.newreport.top/2023-03/ubuntu-install-chrome-remote-openai-newbing/
 https://blog.newreport.top/2023-06/thoughts-on-home-server-configuration/
+https://blog.newreport.top/2023-03/ubuntu-install-chrome-remote-openai-newbing/
 https://blog.newreport.top/2023-03/ubuntu-2204-install-docker-and-link-portainer/
 https://blog.newreport.top/2023-06/linux-reboot-auto-launch-podman/
 https://blog.newreport.top/2023-04/kubernetes-1-24-inside-install/
