@@ -6,7 +6,7 @@
   <link href="https://blog.newreport.top/atom.xml" rel="self"/>
   
   <link href="https://blog.newreport.top/"/>
-  <updated>2023-06-19T09:38:28.369Z</updated>
+  <updated>2023-06-19T09:40:29.345Z</updated>
   <id>https://blog.newreport.top/</id>
   
   <author>
@@ -20,8 +20,8 @@
     <title>关于家用服务器配置的思考</title>
     <link href="https://blog.newreport.top/2023-06-18/thoughts-on-home-server-configuration/"/>
     <id>https://blog.newreport.top/2023-06-18/thoughts-on-home-server-configuration/</id>
-    <published>2023-06-18T16:00:00.000Z</published>
-    <updated>2023-06-19T09:38:28.369Z</updated>
+    <published>2023-06-18T16:00:01.000Z</published>
+    <updated>2023-06-19T09:40:29.345Z</updated>
     
     
     <summary type="html">&lt;blockquote&gt;
@@ -66,8 +66,8 @@
     <title>设置 Podman 开机自动动容器</title>
     <link href="https://blog.newreport.top/2023-06-14/linux-reboot-auto-launch-podman/"/>
     <id>https://blog.newreport.top/2023-06-14/linux-reboot-auto-launch-podman/</id>
-    <published>2023-06-14T16:00:00.000Z</published>
-    <updated>2023-06-19T08:52:45.061Z</updated>
+    <published>2023-06-14T16:00:01.000Z</published>
+    <updated>2023-06-19T09:40:29.345Z</updated>
     
     
       
@@ -98,8 +98,8 @@
     <title>Docker 应用清单</title>
     <link href="https://blog.newreport.top/2023-04-18/kubernetes-1-24-inside-install/"/>
     <id>https://blog.newreport.top/2023-04-18/kubernetes-1-24-inside-install/</id>
-    <published>2023-04-18T16:00:00.000Z</published>
-    <updated>2023-06-15T01:36:48.942Z</updated>
+    <published>2023-04-18T16:00:01.000Z</published>
+    <updated>2023-06-19T09:40:29.345Z</updated>
     
     
     <summary type="html">&lt;h1 id=&quot;lsky&quot;&gt;&lt;a href=&quot;#lsky&quot; class=&quot;headerlink&quot; title=&quot;lsky&quot;&gt;&lt;/a&gt;&lt;span class=&quot;exturl&quot; data-url=&quot;aHR0cHM6Ly9naXRodWIuY29tL2xza3ktb3JnL2xza3ktcHJv&quot;&gt;lsky&lt;i class=&quot;fa fa-external-link-alt&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/h1&gt;&lt;blockquote&gt;
@@ -128,8 +128,8 @@
     <title>Linux 配置 SSH Key</title>
     <link href="https://blog.newreport.top/2023-03-29/linux-setting-ssh-key/"/>
     <id>https://blog.newreport.top/2023-03-29/linux-setting-ssh-key/</id>
-    <published>2023-03-29T16:00:00.000Z</published>
-    <updated>2023-03-30T08:36:58.557Z</updated>
+    <published>2023-03-29T16:00:01.000Z</published>
+    <updated>2023-06-19T09:40:29.345Z</updated>
     
     
       
@@ -157,13 +157,38 @@
     <title>Ubuntu 2204 安装 Docker</title>
     <link href="https://blog.newreport.top/2023-03-28/ubuntu-2204-install-docker-and-link-portainer/"/>
     <id>https://blog.newreport.top/2023-03-28/ubuntu-2204-install-docker-and-link-portainer/</id>
-    <published>2023-03-28T16:00:02.000Z</published>
-    <updated>2023-03-29T08:03:50.353Z</updated>
+    <published>2023-03-28T16:00:03.000Z</published>
+    <updated>2023-06-19T09:41:49.261Z</updated>
     
     
     <summary type="html">&lt;blockquote&gt;
 &lt;p&gt;&lt;span class=&quot;exturl&quot; data-url=&quot;aHR0cHM6Ly9kb2NzLmRvY2tlci5jb20vZW5naW5lL2luc3RhbGwvdWJ1bnR1Lw==&quot;&gt;https://docs.docker.com/engine/install/ubuntu/&lt;i class=&quot;fa fa-external-link-alt&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="kubernetes/docker/podman" scheme="https://blog.newreport.top/categories/kubernetes-docker-podman/"/>
+    
+    
+    <category term="Docker" scheme="https://blog.newreport.top/tags/Docker/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Docker 迁移</title>
+    <link href="https://blog.newreport.top/2023-03-28/docker-migration/"/>
+    <id>https://blog.newreport.top/2023-03-28/docker-migration/</id>
+    <published>2023-03-28T16:00:01.000Z</published>
+    <updated>2023-06-19T09:40:29.345Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span</summary>
+        
+      
     
     
     
@@ -203,36 +228,11 @@
   </entry>
   
   <entry>
-    <title>Docker 迁移</title>
-    <link href="https://blog.newreport.top/2023-03-28/docker-migration/"/>
-    <id>https://blog.newreport.top/2023-03-28/docker-migration/</id>
-    <published>2023-03-28T16:00:00.000Z</published>
-    <updated>2023-03-29T09:48:12.931Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span</summary>
-        
-      
-    
-    
-    
-    <category term="kubernetes/docker/podman" scheme="https://blog.newreport.top/categories/kubernetes-docker-podman/"/>
-    
-    
-    <category term="Docker" scheme="https://blog.newreport.top/tags/Docker/"/>
-    
-  </entry>
-  
-  <entry>
     <title>WSL2 迁移 Docker</title>
     <link href="https://blog.newreport.top/2023-03-27/docker-transfer-in-wsl2/"/>
     <id>https://blog.newreport.top/2023-03-27/docker-transfer-in-wsl2/</id>
-    <published>2023-03-27T16:00:00.000Z</published>
-    <updated>2023-05-26T02:51:19.505Z</updated>
+    <published>2023-03-27T16:00:01.000Z</published>
+    <updated>2023-06-19T09:40:29.345Z</updated>
     
     
       
@@ -381,8 +381,8 @@
     <title>Ubuntu 下 N 卡安装原生  Stable Diffusion Webui 进行 AI 绘画</title>
     <link href="https://blog.newreport.top/2023-03-20/ubuntu-nvidia-install-stable-diffusion-webui/"/>
     <id>https://blog.newreport.top/2023-03-20/ubuntu-nvidia-install-stable-diffusion-webui/</id>
-    <published>2023-03-20T16:00:00.000Z</published>
-    <updated>2023-03-23T02:47:30.197Z</updated>
+    <published>2023-03-20T16:00:01.000Z</published>
+    <updated>2023-06-19T09:40:29.345Z</updated>
     
     
       
@@ -407,8 +407,8 @@
     <title>Ubuntu 和 CentOS 安装 Conda 和 GCC 环境</title>
     <link href="https://blog.newreport.top/2023-02-27/ubuntu-amd-centos-install-conda/"/>
     <id>https://blog.newreport.top/2023-02-27/ubuntu-amd-centos-install-conda/</id>
-    <published>2023-02-27T16:00:00.000Z</published>
-    <updated>2023-03-29T07:54:00.546Z</updated>
+    <published>2023-02-27T16:00:01.000Z</published>
+    <updated>2023-06-19T09:40:29.345Z</updated>
     
     
       
@@ -437,8 +437,8 @@
     <title>让 ChatGPT 讲故事导致之后对话出现递归</title>
     <link href="https://blog.newreport.top/2023-02-15/use-chatgpt-storytelling-leads-to-gibberish-in-subsequent-conversations/"/>
     <id>https://blog.newreport.top/2023-02-15/use-chatgpt-storytelling-leads-to-gibberish-in-subsequent-conversations/</id>
-    <published>2023-02-15T16:00:00.000Z</published>
-    <updated>2023-06-19T09:36:26.333Z</updated>
+    <published>2023-02-15T16:00:01.000Z</published>
+    <updated>2023-06-19T09:40:29.345Z</updated>
     
     
     <summary type="html">&lt;h2 id=&quot;You&quot;&gt;&lt;a href=&quot;#You&quot; class=&quot;headerlink&quot; title=&quot;You&quot;&gt;&lt;/a&gt;You&lt;/h2&gt;&lt;p&gt;讲个故事&lt;/p&gt;
@@ -457,8 +457,8 @@
     <title>A卡 安装 Stable Diffusion Webui 进行 AI 绘画</title>
     <link href="https://blog.newreport.top/2023-02-09/amdgpu-install-stable-diffusion-webui/"/>
     <id>https://blog.newreport.top/2023-02-09/amdgpu-install-stable-diffusion-webui/</id>
-    <published>2023-02-09T16:00:00.000Z</published>
-    <updated>2023-05-09T02:21:27.769Z</updated>
+    <published>2023-02-09T16:00:01.000Z</published>
+    <updated>2023-06-19T09:40:29.345Z</updated>
     
     
       
@@ -491,8 +491,8 @@
     <title>Golang 国际化及 CLDR</title>
     <link href="https://blog.newreport.top/2023-02-08/golang-i18n-CLDR/"/>
     <id>https://blog.newreport.top/2023-02-08/golang-i18n-CLDR/</id>
-    <published>2023-02-08T16:00:00.000Z</published>
-    <updated>2023-03-21T08:37:14.833Z</updated>
+    <published>2023-02-08T16:00:01.000Z</published>
+    <updated>2023-06-19T09:40:29.345Z</updated>
     
     
     <summary type="html">&lt;h1 id=&quot;CLDR-复数形式&quot;&gt;&lt;a href=&quot;#CLDR-复数形式&quot; class=&quot;headerlink&quot; title=&quot;CLDR 复数形式&quot;&gt;&lt;/a&gt;CLDR 复数形式&lt;/h1&gt;&lt;blockquote&gt;
@@ -523,8 +523,8 @@
     <title>Hexo Next 8 使用阿里图标</title>
     <link href="https://blog.newreport.top/2023-01-29/use-hexo-next-8-and-ali-iconfont/"/>
     <id>https://blog.newreport.top/2023-01-29/use-hexo-next-8-and-ali-iconfont/</id>
-    <published>2023-01-29T16:00:00.000Z</published>
-    <updated>2023-03-21T08:37:14.833Z</updated>
+    <published>2023-01-29T16:00:01.000Z</published>
+    <updated>2023-06-19T09:40:29.345Z</updated>
     
     
     <summary type="html">&lt;h1 id=&quot;官网&quot;&gt;&lt;a href=&quot;#官网&quot; class=&quot;headerlink&quot; title=&quot;官网&quot;&gt;&lt;/a&gt;官网&lt;/h1&gt;&lt;p&gt;&lt;span class=&quot;exturl&quot; data-url=&quot;aHR0cHM6Ly9pY29uZm9udC5jbi8=&quot;&gt;https://iconfont.cn&lt;i class=&quot;fa fa-external-link-alt&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/p&gt;</summary>
@@ -623,8 +623,8 @@
     <title>Beego 拦截器及 CORS</title>
     <link href="https://blog.newreport.top/2022-11-26/beego-filter-cors/"/>
     <id>https://blog.newreport.top/2022-11-26/beego-filter-cors/</id>
-    <published>2022-11-26T16:00:00.000Z</published>
-    <updated>2023-03-29T07:48:28.840Z</updated>
+    <published>2022-11-26T16:00:01.000Z</published>
+    <updated>2023-06-19T09:40:29.345Z</updated>
     
     
     <summary type="html">&lt;blockquote&gt;
@@ -648,8 +648,8 @@
     <title>Cloudflare 301 跳转</title>
     <link href="https://blog.newreport.top/2022-09-03/cloudflare-301-url/"/>
     <id>https://blog.newreport.top/2022-09-03/cloudflare-301-url/</id>
-    <published>2022-09-03T16:00:00.000Z</published>
-    <updated>2023-05-09T02:21:27.769Z</updated>
+    <published>2022-09-03T16:00:01.000Z</published>
+    <updated>2023-06-19T09:40:29.345Z</updated>
     
     
     <summary type="html">&lt;h1 id=&quot;购买域名、注册-cloudflare-账号&quot;&gt;&lt;a href=&quot;#购买域名、注册-cloudflare-账号&quot; class=&quot;headerlink&quot; title=&quot;购买域名、注册 cloudflare 账号&quot;&gt;&lt;/a&gt;购买域名、注册 cloudflare 账号&lt;/h1&gt;&lt;p&gt;cloudflare 官网：&lt;span class=&quot;exturl&quot; data-url=&quot;aHR0cHM6Ly93d3cuY2xvdWRmbGFyZS5jb20v&quot;&gt;https://www.cloudflare.com/&lt;i class=&quot;fa fa-external-link-alt&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/p&gt;

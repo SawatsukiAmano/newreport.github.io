@@ -2,43 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://blog.newreport.top/2023-03-28/ubuntu-2204-install-docker-and-link-portainer/</loc>
+    
+    <lastmod>2023-06-19</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://blog.newreport.top/2023-06-18/thoughts-on-home-server-configuration/</loc>
-    
-    <lastmod>2023-06-19</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.newreport.top/2023-02-15/use-chatgpt-storytelling-leads-to-gibberish-in-subsequent-conversations/</loc>
-    
-    <lastmod>2023-06-19</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.newreport.top/2021-01-01/linux-basic-use/</loc>
-    
-    <lastmod>2023-06-19</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.newreport.top/2020-12-31/linux-introduction-and-installation/</loc>
-    
-    <lastmod>2023-06-19</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.newreport.top/2020-12-20/use-hexo-next-7/</loc>
     
     <lastmod>2023-06-19</lastmod>
     
@@ -58,7 +31,25 @@
   <url>
     <loc>https://blog.newreport.top/2023-04-18/kubernetes-1-24-inside-install/</loc>
     
-    <lastmod>2023-06-15</lastmod>
+    <lastmod>2023-06-19</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.newreport.top/2023-03-29/linux-setting-ssh-key/</loc>
+    
+    <lastmod>2023-06-19</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.newreport.top/2023-03-28/docker-migration/</loc>
+    
+    <lastmod>2023-06-19</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -67,16 +58,34 @@
   <url>
     <loc>https://blog.newreport.top/2023-03-27/docker-transfer-in-wsl2/</loc>
     
-    <lastmod>2023-05-26</lastmod>
+    <lastmod>2023-06-19</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://blog.newreport.top/2023-03-23/windows-server-2022-nas-init/</loc>
+    <loc>https://blog.newreport.top/2023-03-20/ubuntu-nvidia-install-stable-diffusion-webui/</loc>
     
-    <lastmod>2023-05-09</lastmod>
+    <lastmod>2023-06-19</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.newreport.top/2023-02-27/ubuntu-amd-centos-install-conda/</loc>
+    
+    <lastmod>2023-06-19</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.newreport.top/2023-02-15/use-chatgpt-storytelling-leads-to-gibberish-in-subsequent-conversations/</loc>
+    
+    <lastmod>2023-06-19</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -85,7 +94,34 @@
   <url>
     <loc>https://blog.newreport.top/2023-02-09/amdgpu-install-stable-diffusion-webui/</loc>
     
-    <lastmod>2023-05-09</lastmod>
+    <lastmod>2023-06-19</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.newreport.top/2023-02-08/golang-i18n-CLDR/</loc>
+    
+    <lastmod>2023-06-19</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.newreport.top/2023-01-29/use-hexo-next-8-and-ali-iconfont/</loc>
+    
+    <lastmod>2023-06-19</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.newreport.top/2022-11-26/beego-filter-cors/</loc>
+    
+    <lastmod>2023-06-19</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -93,6 +129,78 @@
   
   <url>
     <loc>https://blog.newreport.top/2022-09-03/cloudflare-301-url/</loc>
+    
+    <lastmod>2023-06-19</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.newreport.top/2021-06-22/list-introduction/</loc>
+    
+    <lastmod>2023-06-19</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.newreport.top/2021-06-21/variables-and-simple-data-types/</loc>
+    
+    <lastmod>2023-06-19</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.newreport.top/2021-06-20/python-basic-knowledge/</loc>
+    
+    <lastmod>2023-06-19</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.newreport.top/2021-01-03/understand-the-file-system-and-basic-operations/</loc>
+    
+    <lastmod>2023-06-19</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.newreport.top/2021-01-01/linux-basic-use/</loc>
+    
+    <lastmod>2023-06-19</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.newreport.top/2020-12-20/use-hexo-next-7/</loc>
+    
+    <lastmod>2023-06-19</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.newreport.top/2020-12-31/linux-introduction-and-installation/</loc>
+    
+    <lastmod>2023-06-19</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.newreport.top/2023-03-23/windows-server-2022-nas-init/</loc>
     
     <lastmod>2023-05-09</lastmod>
     
@@ -155,72 +263,9 @@
   </url>
   
   <url>
-    <loc>https://blog.newreport.top/2023-03-29/linux-setting-ssh-key/</loc>
-    
-    <lastmod>2023-03-30</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.newreport.top/2021-06-22/list-introduction/</loc>
-    
-    <lastmod>2023-03-30</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.newreport.top/2021-06-21/variables-and-simple-data-types/</loc>
-    
-    <lastmod>2023-03-30</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.newreport.top/2021-01-03/understand-the-file-system-and-basic-operations/</loc>
-    
-    <lastmod>2023-03-30</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://blog.newreport.top/2021-01-02/run-commands-and-get-help/</loc>
     
     <lastmod>2023-03-30</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.newreport.top/2023-03-28/docker-migration/</loc>
-    
-    <lastmod>2023-03-29</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.newreport.top/2023-03-28/ubuntu-2204-install-docker-and-link-portainer/</loc>
-    
-    <lastmod>2023-03-29</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.newreport.top/2023-02-27/ubuntu-amd-centos-install-conda/</loc>
-    
-    <lastmod>2023-03-29</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -245,45 +290,9 @@
   </url>
   
   <url>
-    <loc>https://blog.newreport.top/2022-11-26/beego-filter-cors/</loc>
-    
-    <lastmod>2023-03-29</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://blog.newreport.top/2023-01-03/centos-stream-8-install-node-and-go/</loc>
     
     <lastmod>2023-03-29</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.newreport.top/2023-03-20/ubuntu-nvidia-install-stable-diffusion-webui/</loc>
-    
-    <lastmod>2023-03-23</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.newreport.top/2023-02-08/golang-i18n-CLDR/</loc>
-    
-    <lastmod>2023-03-21</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.newreport.top/2023-01-29/use-hexo-next-8-and-ali-iconfont/</loc>
-    
-    <lastmod>2023-03-21</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -300,15 +309,6 @@
   
   <url>
     <loc>https://blog.newreport.top/2023-01-03/centos-stream-8-install-docker-and-link-portainer/</loc>
-    
-    <lastmod>2023-03-21</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.newreport.top/2021-06-20/python-basic-knowledge/</loc>
     
     <lastmod>2023-03-21</lastmod>
     

@@ -170,6 +170,17 @@
       </tags>
   </entry>
   <entry>
+    <title>Docker 迁移</title>
+    <url>/2023-03-28/docker-migration/</url>
+    <content><![CDATA[<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 打包 volume</span></span><br><span class="line">tar -zcvf volumes.tar.gz /var/lib/docker/volumes</span><br><span class="line"></span><br><span class="line"><span class="comment"># 将容器保存为镜像</span></span><br><span class="line">docker commit container-id image-name </span><br><span class="line"></span><br><span class="line"><span class="comment"># 解压 volumes</span></span><br><span class="line">tar zxvf volumes.tar.gz /var/lib/docker</span><br><span class="line"></span><br><span class="line"><span class="comment"># 变更权限</span></span><br><span class="line"><span class="built_in">chown</span> -R root /var/lib/docker/volumes</span><br><span class="line"><span class="built_in">chmod</span> -R 755 /var/lib/docker/volumes</span><br><span class="line"></span><br><span class="line"><span class="comment"># 加载镜像</span></span><br><span class="line"><span class="built_in">cat</span> image-name.tar | docker load </span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>kubernetes/docker/podman</category>
+      </categories>
+      <tags>
+        <tag>Docker</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Ubuntu 安装 Docker Chrome 并远程（openai、newbing）</title>
     <url>/2023-03-28/ubuntu-install-chrome-remote-openai-newbing/</url>
     <content><![CDATA[<blockquote>
@@ -182,17 +193,6 @@
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker run -d -p 4444:4444 -p 7900:7900 --shm-size=<span class="string">&quot;2g&quot;</span> selenium/standalone-chrome</span><br><span class="line">docker run -d -p 4445:4444 -p 7901:7900 --shm-size=<span class="string">&quot;2g&quot;</span> selenium/standalone-edge</span><br><span class="line">docker run -d -p 4446:4444 -p 7902:7900 --shm-size=<span class="string">&quot;2g&quot;</span> selenium/standalone-firefox</span><br></pre></td></tr></table></figure>]]></content>
       <categories>
         <category>linux</category>
-      </categories>
-      <tags>
-        <tag>Docker</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Docker 迁移</title>
-    <url>/2023-03-28/docker-migration/</url>
-    <content><![CDATA[<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 打包 volume</span></span><br><span class="line">tar -zcvf volumes.tar.gz /var/lib/docker/volumes</span><br><span class="line"></span><br><span class="line"><span class="comment"># 将容器保存为镜像</span></span><br><span class="line">docker commit container-id image-name </span><br><span class="line"></span><br><span class="line"><span class="comment"># 解压 volumes</span></span><br><span class="line">tar zxvf volumes.tar.gz /var/lib/docker</span><br><span class="line"></span><br><span class="line"><span class="comment"># 变更权限</span></span><br><span class="line"><span class="built_in">chown</span> -R root /var/lib/docker/volumes</span><br><span class="line"><span class="built_in">chmod</span> -R 755 /var/lib/docker/volumes</span><br><span class="line"></span><br><span class="line"><span class="comment"># 加载镜像</span></span><br><span class="line"><span class="built_in">cat</span> image-name.tar | docker load </span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>kubernetes/docker/podman</category>
       </categories>
       <tags>
         <tag>Docker</tag>
