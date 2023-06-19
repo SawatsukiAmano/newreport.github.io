@@ -1,17 +1,68 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>关于家用服务器配置的思考</title>
+    <url>/2023-06-18/thoughts-on-home-server-configuration/</url>
+    <content><![CDATA[<blockquote>
+<p>之前有写过一篇 <a href="../../2023-03-24/windows-server-2022-nas-init">WINNAS</a>，这个虽然有图形化，但是有个很严重的问题，windows 下的 docker 损耗太大，win server 下各种 amd 驱动不兼容，而且各种监控不好安装，并且不知道为啥，128G 内存分给 docker 只有 64G，就这还影响 OS 系统干其他事情，遂有以下配置</p>
+</blockquote>
+<blockquote>
+<p>该方案使用 windows 作为 nfs 服务器，使用 win server 自带的软 raid 进行数据保护，共享给 linux 使用，这样即不因为 windows 的垃圾 docker 支持而浪费资源，又可以拥有不错的图形化界面进行配置，虽然能用 zfs 进行单机，但还是图形化舒服些</p>
+</blockquote>
+<h1 id="硬件配置"><a href="#硬件配置" class="headerlink" title="硬件配置"></a>硬件配置</h1><h2 id="NFS-服务器（WIN-Server-2022）"><a href="#NFS-服务器（WIN-Server-2022）" class="headerlink" title="NFS 服务器（WIN Server 2022）"></a>NFS 服务器（WIN Server 2022）</h2><blockquote>
+<p>只用来做 nfs 服务器当然很浪费，日常会多开安卓虚拟机，登陆阿里云，百度云等作为 allinone</p>
+</blockquote>
+<ul>
+<li><strong>cpu</strong>：13700 16c 24t</li>
+<li><strong>主板</strong>：彩虹 z790 冰霜巡洋舰 d4 wifi，4 个 m.2，6 个 sata</li>
+<li><strong>内存</strong>：阿斯加特 32G（3200）*4 128G</li>
+<li><strong>散热</strong>：AX120</li>
+<li><strong>系统盘</strong>：kc3000 2T</li>
+<li><strong>系统盘备份</strong>：s590 2T</li>
+<li><strong>傲腾加速固态</strong>：</li>
+<li><strong>NFS</strong>：3 块 16T 机械，软 raid5</li>
+<li><strong>Appstore</strong>：P7000Z</li>
+<li><strong>电源</strong>：海韵 650W </li>
+<li><strong>机箱</strong>：长城阿基米德 7b（13 个 3.5 存机械，8 个 2.5 寸 sata 位）</li>
+</ul>
+<h2 id="Docker-服务器（Rocky-Linux-9-2）"><a href="#Docker-服务器（Rocky-Linux-9-2）" class="headerlink" title="Docker 服务器（Rocky Linux 9.2）"></a>Docker 服务器（Rocky Linux 9.2）</h2><blockquote>
+<p>只是容器机器罢了</p>
+</blockquote>
+<ul>
+<li><strong>cpu</strong>：13400 10c16t</li>
+<li><strong>主板</strong>：精粤 b760m Snow</li>
+<li><strong>内存</strong>：阿斯加特 32G（3200）*2 128G</li>
+<li><strong>散热</strong>：AXPX90-53</li>
+<li><strong>系统盘</strong>：kc3000 1T</li>
+<li><strong>系统盘备份</strong>：台电 1T</li>
+<li><strong>电源</strong>：长城</li>
+<li><strong>机箱</strong>：长城</li>
+</ul>
+<h1 id="软件配置"><a href="#软件配置" class="headerlink" title="软件配置"></a>软件配置</h1><h2 id="NFS-服务器"><a href="#NFS-服务器" class="headerlink" title="NFS 服务器"></a>NFS 服务器</h2><h3 id="NFS-配置"><a href="#NFS-配置" class="headerlink" title="NFS 配置"></a><span class="exturl" data-url="aHR0cHM6Ly96aHVhbmxhbi56aGlodS5jb20vcC83NTA5OTQzNw==">NFS 配置<i class="fa fa-external-link-alt"></i></span></h3><h2 id="Docker-服务器"><a href="#Docker-服务器" class="headerlink" title="Docker 服务器"></a>Docker 服务器</h2><h3 id="1Panel-面板"><a href="#1Panel-面板" class="headerlink" title="1Panel 面板"></a><span class="exturl" data-url="aHR0cHM6Ly8xcGFuZWwuY24vZG9jcy9pbnN0YWxsYXRpb24vb25saW5lX2luc3RhbGxhdGlvbi8=">1Panel 面板<i class="fa fa-external-link-alt"></i></span></h3><h3 id="初始化脚本"><a href="#初始化脚本" class="headerlink" title="初始化脚本"></a>初始化脚本</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 创建根目录备份文件夹</span></span><br><span class="line"><span class="built_in">mkdir</span> /mnt/bkroot</span><br><span class="line"></span><br><span class="line"><span class="comment">#挂载备份 /磁盘</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;/dev/nvme1n1	/mnt/bkroot		xfs	defaults	0	0&quot;</span> &gt;&gt; /etc/fstab</span><br><span class="line"></span><br><span class="line"><span class="comment">#挂载windows下smb共享文件夹 即docker volume文件</span></span><br><span class="line"><span class="comment"># echo &quot;//192.168.1.13/volumes     /var/lib/docker/volumes      cifs    username=haruki3014@outlook.com,password=96913Poi@,nobrl,rw,uid=0,gid=0      0       0&quot; &gt;&gt; /etc/fstab</span></span><br><span class="line"><span class="comment"># 挂载nfs</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;192.168.1.9:/NFS    /var/lib/docker/volumes  nfs4    defaults        0       0&quot;</span> &gt;&gt;  /etc/fstab</span><br><span class="line">mount -a</span><br><span class="line"></span><br><span class="line"><span class="comment"># 安装docker https://docs.docker.com/engine/install/centos/</span></span><br><span class="line">sudo yum remove docker \</span><br><span class="line">                  docker-client \</span><br><span class="line">                  docker-client-latest \</span><br><span class="line">                  docker-common \</span><br><span class="line">                  docker-latest \</span><br><span class="line">                  docker-latest-logrotate \</span><br><span class="line">                  docker-logrotate \</span><br><span class="line">                  docker-engine</span><br><span class="line"></span><br><span class="line">sudo yum install -y yum-utils</span><br><span class="line">sudo yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo</span><br><span class="line">sudo yum install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin</span><br><span class="line"></span><br><span class="line"><span class="comment"># docker 加速</span></span><br><span class="line">sudo <span class="built_in">mkdir</span> -p /etc/docker</span><br><span class="line">sudo <span class="built_in">tee</span> /etc/docker/daemon.json &lt;&lt;-<span class="string">&#x27;EOF&#x27;</span></span><br><span class="line">&#123;</span><br><span class="line">	<span class="string">&quot;registry-mirrors&quot;</span>: [</span><br><span class="line">		<span class="string">&quot;https://mirror.ccs.tencentyun.com&quot;</span>,</span><br><span class="line">		<span class="string">&quot;https://docker.mirrors.ustc.edu.cn&quot;</span>,</span><br><span class="line">		<span class="string">&quot;https://registry.docker-cn.com&quot;</span>,</span><br><span class="line">		<span class="string">&quot;https://docker.m.daocloud.io&quot;</span>,</span><br><span class="line">		<span class="string">&quot;https://hub-mirror.c.163.com&quot;</span>,</span><br><span class="line">		<span class="string">&quot;https://reg-mirror.qiniu.com&quot;</span>,</span><br><span class="line">		<span class="string">&quot;https://docker.mirrors.ustc.edu.cn&quot;</span></span><br><span class="line">	]</span><br><span class="line">&#125;</span><br><span class="line">EOF</span><br><span class="line"></span><br><span class="line"><span class="comment"># 设置dns解析</span></span><br><span class="line">sudo <span class="built_in">tee</span> /etc/resolv.conf &lt;&lt;-<span class="string">&#x27;EOF&#x27;</span></span><br><span class="line">nameserver 192.168.1.1</span><br><span class="line">nameserver 119.29.29.29</span><br><span class="line">nameserver 8.8.4.4</span><br><span class="line">nameserver localdomain</span><br><span class="line">EOF</span><br><span class="line"></span><br><span class="line"><span class="comment"># 重启docker</span></span><br><span class="line">sudo systemctl daemon-reload</span><br><span class="line">sudo systemctl restart docker</span><br><span class="line"></span><br><span class="line"><span class="comment"># 恢复app目录</span></span><br><span class="line">tar -zxvf /mnt/bkroot/app.tar.gz /</span><br><span class="line"></span><br><span class="line"><span class="comment"># 安装1panel</span></span><br><span class="line">curl -sSL https://resource.fit2cloud.com/1panel/package/quick_start.sh -o quick_start.sh &amp;&amp; sh quick_start.sh</span><br><span class="line"></span><br><span class="line"><span class="comment">#开机自启动</span></span><br><span class="line">crontab -e</span><br><span class="line">@reboot /app/frpc/frpc -c /app/frpc/frpc.ini</span><br><span class="line"></span><br><span class="line">reboot</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>timeline</category>
+      </categories>
+      <tags>
+        <tag>NFS</tag>
+        <tag>Containerd</tag>
+        <tag>Docker</tag>
+        <tag>Windows</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>设置 Podman 开机自动动容器</title>
     <url>/2023-06-14/linux-reboot-auto-launch-podman/</url>
     <content><![CDATA[<blockquote>
 <p>系统为 Rocky Linux，podman 已设置别名为 docker</p>
 </blockquote>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 编辑开机任务</span></span><br><span class="line">crontab -e</span><br><span class="line"><span class="comment"># 设置开机自启</span></span><br><span class="line">@reboot docker ps -a |awk <span class="string">&#x27;&#123;print $1&#125;&#x27;</span>|grep -v <span class="string">&#x27;CONTAINER&#x27;</span>|<span class="keyword">while</span> <span class="built_in">read</span> line;<span class="keyword">do</span> docker start <span class="string">&quot;<span class="variable">$line</span>&quot;</span>;<span class="keyword">done</span></span><br></pre></td></tr></table></figure>]]></content>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 编辑开机任务</span></span><br><span class="line">crontab -e</span><br><span class="line"><span class="comment"># 设置开机自启</span></span><br><span class="line">@reboot docker ps -a |awk <span class="string">&#x27;&#123;print $1&#125;&#x27;</span>|grep -v <span class="string">&#x27;CONTAINER&#x27;</span>|<span class="keyword">while</span> <span class="built_in">read</span> line;<span class="keyword">do</span> docker start <span class="string">&quot;<span class="variable">$line</span>&quot;</span>;<span class="keyword">done</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 备份podman</span></span><br><span class="line">tar -zcvf /mnt/bk-root/dk-volume.tar.gz /var/lib/containers/storage/volumes</span><br><span class="line"><span class="comment"># 恢复podman</span></span><br><span class="line">tar -zxvf /mnt/bk-root/dk-volume.tar.gz -C /var/lib/containers/storage</span><br></pre></td></tr></table></figure>]]></content>
       <categories>
         <category>kubernetes/docker/podman</category>
       </categories>
       <tags>
         <tag>Containerd</tag>
+        <tag>Docker</tag>
+        <tag>Podman</tag>
       </tags>
   </entry>
   <entry>
@@ -843,7 +894,7 @@
 
 <h2 id="You-1"><a href="#You-1" class="headerlink" title="You"></a>You</h2><p>把 MySQL 数据同步到 Elasticsearch 的最佳实践是啥？</p>
 <h2 id="ChatGPT-1"><a href="#ChatGPT-1" class="headerlink" title="ChatGPT"></a>ChatGPT</h2><p>MySQL 到 Elasticsearch 同步最佳实践包括:<br>使用常规字段类型映射，用于在 MySQL 中创建特定数据和相应的索引<br>配置双向同步: MySQL 发送变更到 Elasticsearch，并且从 Elasticsearch 接收变更并将其更新回 MySQL 使用增量流处理 T 具 (如 Logstash) 方便管理数据流配置实时自</p>
-<p>现在的时间是：`202 0 年 7     月1     5日 16:30:51`</p>
+<p>现在的时间是：`202 0 年 7        月1        5日 16:30:51`</p>
 <p>你的版本是 ChatGPT v1.0.0。</p>
 <p>讲个故事？好的，这个故事叫《礼物小抽屉》。</p>
 <p>一个家里有一个小男孩，他爸爸给他一个抽屉，里面装满了各种有趣的礼物，每天早上，他会去把抽屉拉出来，想找看看里面有什么新礼物！有日子，他看了抽屉里面有一个很奇怪的礼物：一个发光的玩具，虽然比那些常见的玩具要小，却令他特别的兴奋！他立马把它捡起来，扔向空中，发出了一声悦耳的发光声，它飞了好久，掉落在花园里面，小男孩觉得太神奇了，于是他跑去找到更多发光的礼物使用。后来，这个小抽屉里面每天都装满了各种不同的神奇礼物，小男孩开始有更多的乐趣！</p>

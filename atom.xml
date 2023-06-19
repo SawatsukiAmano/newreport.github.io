@@ -6,7 +6,7 @@
   <link href="https://blog.newreport.top/atom.xml" rel="self"/>
   
   <link href="https://blog.newreport.top/"/>
-  <updated>2023-06-15T01:36:56.754Z</updated>
+  <updated>2023-06-19T09:37:10.213Z</updated>
   <id>https://blog.newreport.top/</id>
   
   <author>
@@ -17,11 +17,43 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>关于家用服务器配置的思考</title>
+    <link href="https://blog.newreport.top/2023-06-18/thoughts-on-home-server-configuration/"/>
+    <id>https://blog.newreport.top/2023-06-18/thoughts-on-home-server-configuration/</id>
+    <published>2023-06-18T16:00:00.000Z</published>
+    <updated>2023-06-19T09:37:10.213Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;之前有写过一篇 &lt;a href=&quot;../../2023-03-24/windows-server-2022-nas-init&quot;&gt;WINNAS&lt;/a&gt;，这个虽然有图形化，但是有个很严重的问题，windows 下的 docker 损耗太大，win</summary>
+        
+      
+    
+    
+    
+    <category term="timeline" scheme="https://blog.newreport.top/categories/timeline/"/>
+    
+    
+    <category term="NFS" scheme="https://blog.newreport.top/tags/NFS/"/>
+    
+    <category term="Containerd" scheme="https://blog.newreport.top/tags/Containerd/"/>
+    
+    <category term="Docker" scheme="https://blog.newreport.top/tags/Docker/"/>
+    
+    <category term="Windows" scheme="https://blog.newreport.top/tags/Windows/"/>
+    
+  </entry>
+  
+  <entry>
     <title>设置 Podman 开机自动动容器</title>
     <link href="https://blog.newreport.top/2023-06-14/linux-reboot-auto-launch-podman/"/>
     <id>https://blog.newreport.top/2023-06-14/linux-reboot-auto-launch-podman/</id>
     <published>2023-06-14T16:00:00.000Z</published>
-    <updated>2023-06-15T01:36:56.754Z</updated>
+    <updated>2023-06-19T08:52:45.061Z</updated>
     
     
       
@@ -41,6 +73,10 @@
     
     
     <category term="Containerd" scheme="https://blog.newreport.top/tags/Containerd/"/>
+    
+    <category term="Docker" scheme="https://blog.newreport.top/tags/Docker/"/>
+    
+    <category term="Podman" scheme="https://blog.newreport.top/tags/Podman/"/>
     
   </entry>
   
@@ -388,7 +424,7 @@
     <link href="https://blog.newreport.top/2023-02-15/use-chatgpt-storytelling-leads-to-gibberish-in-subsequent-conversations/"/>
     <id>https://blog.newreport.top/2023-02-15/use-chatgpt-storytelling-leads-to-gibberish-in-subsequent-conversations/</id>
     <published>2023-02-15T16:00:00.000Z</published>
-    <updated>2023-06-15T01:36:48.942Z</updated>
+    <updated>2023-06-19T09:36:26.333Z</updated>
     
     
     <summary type="html">&lt;h2 id=&quot;You&quot;&gt;&lt;a href=&quot;#You&quot; class=&quot;headerlink&quot; title=&quot;You&quot;&gt;&lt;/a&gt;You&lt;/h2&gt;&lt;p&gt;讲个故事&lt;/p&gt;
@@ -620,35 +656,6 @@
     <category term="Domain" scheme="https://blog.newreport.top/tags/Domain/"/>
     
     <category term="Http" scheme="https://blog.newreport.top/tags/Http/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Kubernetes 1.24 内网部署</title>
-    <link href="https://blog.newreport.top/2022-07-26/kubernetes-1-24-inside-install/"/>
-    <id>https://blog.newreport.top/2022-07-26/kubernetes-1-24-inside-install/</id>
-    <published>2022-07-26T16:00:01.000Z</published>
-    <updated>2023-05-09T02:21:27.769Z</updated>
-    
-    
-    <summary type="html">&lt;h1 id=&quot;环境介绍&quot;&gt;&lt;a href=&quot;#环境介绍&quot; class=&quot;headerlink&quot; title=&quot;环境介绍&quot;&gt;&lt;/a&gt;环境介绍&lt;/h1&gt;&lt;blockquote&gt;
-&lt;p&gt;master：成都区 2 核 4G    10.0.0.17&lt;br&gt;cd001：成都区 2 核 4G     10.0.0.11&lt;br&gt;主机：两台腾讯云轻量云，系统为 CentOS Stream8，轻量云不支持 EIP 故不能公网搭 K8s&lt;br&gt;Kubernetes 版本：V1.24.3（截至 2022-08-02，当前 k8s 最新版本为 1.24.3）&lt;/p&gt;
-&lt;/blockquote&gt;</summary>
-    
-    
-    
-    <category term="kubernetes/docker/podman" scheme="https://blog.newreport.top/categories/kubernetes-docker-podman/"/>
-    
-    
-    <category term="NFS" scheme="https://blog.newreport.top/tags/NFS/"/>
-    
-    <category term="Nginx" scheme="https://blog.newreport.top/tags/Nginx/"/>
-    
-    <category term="MySQL" scheme="https://blog.newreport.top/tags/MySQL/"/>
-    
-    <category term="Containerd" scheme="https://blog.newreport.top/tags/Containerd/"/>
-    
-    <category term="K8s" scheme="https://blog.newreport.top/tags/K8s/"/>
     
   </entry>
   

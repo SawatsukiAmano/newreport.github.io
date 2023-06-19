@@ -23,28 +23,31 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"blog.newreport.top","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.15.0","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":"mac"},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":true,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":{"gitalk":{"order":-2}}},"stickytabs":true,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="官网https:&#x2F;&#x2F;iconfont.cn">
+    <meta name="description" content="之前有写过一篇 WINNAS，这个虽然有图形化，但是有个很严重的问题，windows 下的 docker 损耗太大，win server 下各种 amd 驱动不兼容，而且各种监控不好安装，并且不知道为啥，128G 内存分给 docker 只有 64G，就这还影响 OS 系统干其他事情，遂有以下配置   该方案使用 windows 作为 nfs 服务器，使用 win server 自带的软 rai">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hexo Next 8 使用阿里图标">
-<meta property="og:url" content="https://blog.newreport.top/2023-01-29/use-hexo-next-8-and-ali-iconfont/index.html">
+<meta property="og:title" content="关于家用服务器配置的思考">
+<meta property="og:url" content="https://blog.newreport.top/2023-06-18/thoughts-on-home-server-configuration/index.html">
 <meta property="og:site_name" content="NewReport">
-<meta property="og:description" content="官网https:&#x2F;&#x2F;iconfont.cn">
+<meta property="og:description" content="之前有写过一篇 WINNAS，这个虽然有图形化，但是有个很严重的问题，windows 下的 docker 损耗太大，win server 下各种 amd 驱动不兼容，而且各种监控不好安装，并且不知道为啥，128G 内存分给 docker 只有 64G，就这还影响 OS 系统干其他事情，遂有以下配置   该方案使用 windows 作为 nfs 服务器，使用 win server 自带的软 rai">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2023-01-29T16:00:00.000Z">
-<meta property="article:modified_time" content="2023-03-21T08:37:14.833Z">
+<meta property="article:published_time" content="2023-06-18T16:00:00.000Z">
+<meta property="article:modified_time" content="2023-06-19T09:37:10.213Z">
 <meta property="article:author" content="haruki">
-<meta property="article:tag" content="Hexo">
+<meta property="article:tag" content="NFS">
+<meta property="article:tag" content="Containerd">
+<meta property="article:tag" content="Docker">
+<meta property="article:tag" content="Windows">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="https://blog.newreport.top/2023-01-29/use-hexo-next-8-and-ali-iconfont/">
+<link rel="canonical" href="https://blog.newreport.top/2023-06-18/thoughts-on-home-server-configuration/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://blog.newreport.top/2023-01-29/use-hexo-next-8-and-ali-iconfont/","path":"2023-01-29/use-hexo-next-8-and-ali-iconfont/","title":"Hexo Next 8 使用阿里图标"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://blog.newreport.top/2023-06-18/thoughts-on-home-server-configuration/","path":"2023-06-18/thoughts-on-home-server-configuration/","title":"关于家用服务器配置的思考"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>Hexo Next 8 使用阿里图标 | NewReport</title>
+<title>关于家用服务器配置的思考 | NewReport</title>
   
 
 
@@ -146,7 +149,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AE%98%E7%BD%91"><span class="nav-number">1.</span> <span class="nav-text">官网</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%AD%A5%E9%AA%A4"><span class="nav-number">2.</span> <span class="nav-text">步骤</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%A1%AC%E4%BB%B6%E9%85%8D%E7%BD%AE"><span class="nav-number">1.</span> <span class="nav-text">硬件配置</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#NFS-%E6%9C%8D%E5%8A%A1%E5%99%A8%EF%BC%88WIN-Server-2022%EF%BC%89"><span class="nav-number">1.1.</span> <span class="nav-text">NFS 服务器（WIN Server 2022）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Docker-%E6%9C%8D%E5%8A%A1%E5%99%A8%EF%BC%88Rocky-Linux-9-2%EF%BC%89"><span class="nav-number">1.2.</span> <span class="nav-text">Docker 服务器（Rocky Linux 9.2）</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%BD%AF%E4%BB%B6%E9%85%8D%E7%BD%AE"><span class="nav-number">2.</span> <span class="nav-text">软件配置</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#NFS-%E6%9C%8D%E5%8A%A1%E5%99%A8"><span class="nav-number">2.1.</span> <span class="nav-text">NFS 服务器</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#NFS-%E9%85%8D%E7%BD%AE"><span class="nav-number">2.1.1.</span> <span class="nav-text">NFS 配置</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Docker-%E6%9C%8D%E5%8A%A1%E5%99%A8"><span class="nav-number">2.2.</span> <span class="nav-text">Docker 服务器</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1Panel-%E9%9D%A2%E6%9D%BF"><span class="nav-number">2.2.1.</span> <span class="nav-text">1Panel 面板</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%9D%E5%A7%8B%E5%8C%96%E8%84%9A%E6%9C%AC"><span class="nav-number">2.2.2.</span> <span class="nav-text">初始化脚本</span></a></li></ol></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -214,7 +217,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://blog.newreport.top/2023-01-29/use-hexo-next-8-and-ali-iconfont/">
+    <link itemprop="mainEntityOfPage" href="https://blog.newreport.top/2023-06-18/thoughts-on-home-server-configuration/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/haruki-avatar.jpg">
@@ -227,13 +230,13 @@
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="Hexo Next 8 使用阿里图标 | NewReport">
+      <meta itemprop="name" content="关于家用服务器配置的思考 | NewReport">
       <meta itemprop="description" content="">
-      <meta itemprop="keywords" content="">
+      <meta itemprop="keywords" content="服务器">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          Hexo Next 8 使用阿里图标
+          关于家用服务器配置的思考
         </h1>
 
         <div class="post-meta-container">
@@ -243,15 +246,9 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
+      
 
-      <time title="创建时间：2023-01-30 00:00:00" itemprop="dateCreated datePublished" datetime="2023-01-30T00:00:00+08:00">2023-01-30</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2023-03-21 16:37:14" itemprop="dateModified" datetime="2023-03-21T16:37:14+08:00">2023-03-21</time>
+      <time title="创建时间：2023-06-19 00:00:00 / 修改时间：17:37:10" itemprop="dateCreated datePublished" datetime="2023-06-19T00:00:00+08:00">2023-06-19</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -277,14 +274,14 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>42</span>
+      <span>647</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>1 分钟</span>
+      <span>2 分钟</span>
     </span>
 </div>
 
@@ -295,10 +292,42 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <h1 id="官网"><a href="#官网" class="headerlink" title="官网"></a>官网</h1><p><span class="exturl" data-url="aHR0cHM6Ly9pY29uZm9udC5jbi8=">https://iconfont.cn<i class="fa fa-external-link-alt"></i></span></p>
-<span id="more"></span>
-<h1 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h1><p>将项目或者图标下载后，将项目下的 css 文件内容复制到 themes&#x2F;next&#x2F;source&#x2F;lib&#x2F;font-awesome&#x2F;css&#x2F;all.min.css 后面即可</p>
-
+        <blockquote>
+<p>之前有写过一篇 <a href="../../2023-03-24/windows-server-2022-nas-init">WINNAS</a>，这个虽然有图形化，但是有个很严重的问题，windows 下的 docker 损耗太大，win server 下各种 amd 驱动不兼容，而且各种监控不好安装，并且不知道为啥，128G 内存分给 docker 只有 64G，就这还影响 OS 系统干其他事情，遂有以下配置</p>
+</blockquote>
+<blockquote>
+<p>该方案使用 windows 作为 nfs 服务器，使用 win server 自带的软 raid 进行数据保护，共享给 linux 使用，这样即不因为 windows 的垃圾 docker 支持而浪费资源，又可以拥有不错的图形化界面进行配置，虽然能用 zfs 进行单机，但还是图形化舒服些</p>
+</blockquote>
+<h1 id="硬件配置"><a href="#硬件配置" class="headerlink" title="硬件配置"></a>硬件配置</h1><h2 id="NFS-服务器（WIN-Server-2022）"><a href="#NFS-服务器（WIN-Server-2022）" class="headerlink" title="NFS 服务器（WIN Server 2022）"></a>NFS 服务器（WIN Server 2022）</h2><blockquote>
+<p>只用来做 nfs 服务器当然很浪费，日常会多开安卓虚拟机，登陆阿里云，百度云等作为 allinone</p>
+</blockquote>
+<ul>
+<li><strong>cpu</strong>：13700 16c 24t</li>
+<li><strong>主板</strong>：彩虹 z790 冰霜巡洋舰 d4 wifi，4 个 m.2，6 个 sata</li>
+<li><strong>内存</strong>：阿斯加特 32G（3200）*4 128G</li>
+<li><strong>散热</strong>：AX120</li>
+<li><strong>系统盘</strong>：kc3000 2T</li>
+<li><strong>系统盘备份</strong>：s590 2T</li>
+<li><strong>傲腾加速固态</strong>：</li>
+<li><strong>NFS</strong>：3 块 16T 机械，软 raid5</li>
+<li><strong>Appstore</strong>：P7000Z</li>
+<li><strong>电源</strong>：海韵 650W </li>
+<li><strong>机箱</strong>：长城阿基米德 7b（13 个 3.5 存机械，8 个 2.5 寸 sata 位）</li>
+</ul>
+<h2 id="Docker-服务器（Rocky-Linux-9-2）"><a href="#Docker-服务器（Rocky-Linux-9-2）" class="headerlink" title="Docker 服务器（Rocky Linux 9.2）"></a>Docker 服务器（Rocky Linux 9.2）</h2><blockquote>
+<p>只是容器机器罢了</p>
+</blockquote>
+<ul>
+<li><strong>cpu</strong>：13400 10c16t</li>
+<li><strong>主板</strong>：精粤 b760m Snow</li>
+<li><strong>内存</strong>：阿斯加特 32G（3200）*2 128G</li>
+<li><strong>散热</strong>：AXPX90-53</li>
+<li><strong>系统盘</strong>：kc3000 1T</li>
+<li><strong>系统盘备份</strong>：台电 1T</li>
+<li><strong>电源</strong>：长城</li>
+<li><strong>机箱</strong>：长城</li>
+</ul>
+<h1 id="软件配置"><a href="#软件配置" class="headerlink" title="软件配置"></a>软件配置</h1><h2 id="NFS-服务器"><a href="#NFS-服务器" class="headerlink" title="NFS 服务器"></a>NFS 服务器</h2><h3 id="NFS-配置"><a href="#NFS-配置" class="headerlink" title="NFS 配置"></a><span class="exturl" data-url="aHR0cHM6Ly96aHVhbmxhbi56aGlodS5jb20vcC83NTA5OTQzNw==">NFS 配置<i class="fa fa-external-link-alt"></i></span></h3><h2 id="Docker-服务器"><a href="#Docker-服务器" class="headerlink" title="Docker 服务器"></a>Docker 服务器</h2><h3 id="1Panel-面板"><a href="#1Panel-面板" class="headerlink" title="1Panel 面板"></a><span class="exturl" data-url="aHR0cHM6Ly8xcGFuZWwuY24vZG9jcy9pbnN0YWxsYXRpb24vb25saW5lX2luc3RhbGxhdGlvbi8=">1Panel 面板<i class="fa fa-external-link-alt"></i></span></h3><h3 id="初始化脚本"><a href="#初始化脚本" class="headerlink" title="初始化脚本"></a>初始化脚本</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 创建根目录备份文件夹</span></span><br><span class="line"><span class="built_in">mkdir</span> /mnt/bkroot</span><br><span class="line"></span><br><span class="line"><span class="comment">#挂载备份 /磁盘</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;/dev/nvme1n1	/mnt/bkroot		xfs	defaults	0	0&quot;</span> &gt;&gt; /etc/fstab</span><br><span class="line"></span><br><span class="line"><span class="comment">#挂载windows下smb共享文件夹 即docker volume文件</span></span><br><span class="line"><span class="comment"># echo &quot;//192.168.1.13/volumes     /var/lib/docker/volumes      cifs    username=haruki3014@outlook.com,password=96913Poi@,nobrl,rw,uid=0,gid=0      0       0&quot; &gt;&gt; /etc/fstab</span></span><br><span class="line"><span class="comment"># 挂载nfs</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;192.168.1.9:/NFS    /var/lib/docker/volumes  nfs4    defaults        0       0&quot;</span> &gt;&gt;  /etc/fstab</span><br><span class="line">mount -a</span><br><span class="line"></span><br><span class="line"><span class="comment"># 安装docker https://docs.docker.com/engine/install/centos/</span></span><br><span class="line">sudo yum remove docker \</span><br><span class="line">                  docker-client \</span><br><span class="line">                  docker-client-latest \</span><br><span class="line">                  docker-common \</span><br><span class="line">                  docker-latest \</span><br><span class="line">                  docker-latest-logrotate \</span><br><span class="line">                  docker-logrotate \</span><br><span class="line">                  docker-engine</span><br><span class="line"></span><br><span class="line">sudo yum install -y yum-utils</span><br><span class="line">sudo yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo</span><br><span class="line">sudo yum install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin</span><br><span class="line"></span><br><span class="line"><span class="comment"># docker 加速</span></span><br><span class="line">sudo <span class="built_in">mkdir</span> -p /etc/docker</span><br><span class="line">sudo <span class="built_in">tee</span> /etc/docker/daemon.json &lt;&lt;-<span class="string">&#x27;EOF&#x27;</span></span><br><span class="line">&#123;</span><br><span class="line">	<span class="string">&quot;registry-mirrors&quot;</span>: [</span><br><span class="line">		<span class="string">&quot;https://mirror.ccs.tencentyun.com&quot;</span>,</span><br><span class="line">		<span class="string">&quot;https://docker.mirrors.ustc.edu.cn&quot;</span>,</span><br><span class="line">		<span class="string">&quot;https://registry.docker-cn.com&quot;</span>,</span><br><span class="line">		<span class="string">&quot;https://docker.m.daocloud.io&quot;</span>,</span><br><span class="line">		<span class="string">&quot;https://hub-mirror.c.163.com&quot;</span>,</span><br><span class="line">		<span class="string">&quot;https://reg-mirror.qiniu.com&quot;</span>,</span><br><span class="line">		<span class="string">&quot;https://docker.mirrors.ustc.edu.cn&quot;</span></span><br><span class="line">	]</span><br><span class="line">&#125;</span><br><span class="line">EOF</span><br><span class="line"></span><br><span class="line"><span class="comment"># 设置dns解析</span></span><br><span class="line">sudo <span class="built_in">tee</span> /etc/resolv.conf &lt;&lt;-<span class="string">&#x27;EOF&#x27;</span></span><br><span class="line">nameserver 192.168.1.1</span><br><span class="line">nameserver 119.29.29.29</span><br><span class="line">nameserver 8.8.4.4</span><br><span class="line">nameserver localdomain</span><br><span class="line">EOF</span><br><span class="line"></span><br><span class="line"><span class="comment"># 重启docker</span></span><br><span class="line">sudo systemctl daemon-reload</span><br><span class="line">sudo systemctl restart docker</span><br><span class="line"></span><br><span class="line"><span class="comment"># 恢复app目录</span></span><br><span class="line">tar -zxvf /mnt/bkroot/app.tar.gz /</span><br><span class="line"></span><br><span class="line"><span class="comment"># 安装1panel</span></span><br><span class="line">curl -sSL https://resource.fit2cloud.com/1panel/package/quick_start.sh -o quick_start.sh &amp;&amp; sh quick_start.sh</span><br><span class="line"></span><br><span class="line"><span class="comment">#开机自启动</span></span><br><span class="line">crontab -e</span><br><span class="line">@reboot /app/frpc/frpc -c /app/frpc/frpc.ini</span><br><span class="line"></span><br><span class="line">reboot</span><br></pre></td></tr></table></figure>
     </div>
 
     
@@ -307,21 +336,21 @@
 
     <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/Hexo/" rel="tag"># Hexo</a>
+              <a href="/tags/NFS/" rel="tag"># NFS</a>
+              <a href="/tags/Containerd/" rel="tag"># Containerd</a>
+              <a href="/tags/Docker/" rel="tag"># Docker</a>
+              <a href="/tags/Windows/" rel="tag"># Windows</a>
           </div>
 
         
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2023-01-09/abp-framework-introductory/" rel="prev" title="ABP 简介">
-                  <i class="fa fa-chevron-left"></i> ABP 简介
+                <a href="/2023-06-14/linux-reboot-auto-launch-podman/" rel="prev" title="设置 Podman 开机自动动容器">
+                  <i class="fa fa-chevron-left"></i> 设置 Podman 开机自动动容器
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2023-02-08/golang-i18n-CLDR/" rel="next" title="Golang 国际化及 CLDR">
-                  Golang 国际化及 CLDR <i class="fa fa-chevron-right"></i>
-                </a>
             </div>
           </div>
     </footer>
@@ -439,7 +468,7 @@ darkmode.showWidget();
 </script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.css" integrity="sha256-AJnUHL7dBv6PGaeyPQJcgQPDjt/Hn/PvYZde1iqfp8U=" crossorigin="anonymous">
 
-<script class="next-config" data-name="gitalk" type="application/json">{"enable":true,"github_id":"newreport","repo":"newreport.github.io","client_id":"455a006066c6a6133196","client_secret":"c925c01067a3e247496e1564c2da1f4d1e150735","admin_user":"newreport","distraction_free_mode":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token","language":null,"js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.min.js","integrity":"sha256-MVK9MGD/XJaGyIghSVrONSnoXoGh3IFxLw0zfvzpxR4="},"path_md5":"6d3fa7235435d694bd4772173cabfe39"}</script>
+<script class="next-config" data-name="gitalk" type="application/json">{"enable":true,"github_id":"newreport","repo":"newreport.github.io","client_id":"455a006066c6a6133196","client_secret":"c925c01067a3e247496e1564c2da1f4d1e150735","admin_user":"newreport","distraction_free_mode":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token","language":null,"js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.min.js","integrity":"sha256-MVK9MGD/XJaGyIghSVrONSnoXoGh3IFxLw0zfvzpxR4="},"path_md5":"0a26a213c9057a6050e458dc5bea2c4a"}</script>
 <script src="/js/third-party/comments/gitalk.js"></script>
 
 </body>
