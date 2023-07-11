@@ -704,9 +704,9 @@ hexo-filter-mermaid-diagrams@^1.0.5:
   dependencies:
     deep-assign "^2.0.0"
 
-hexo-front-matter@^4.0.0:
+hexo-front-matter@4.0.0:
   version "4.0.0"
-  resolved "https://registry.npmjs.org/hexo-front-matter/-/hexo-front-matter-4.0.0.tgz"
+  resolved "https://registry.yarnpkg.com/hexo-front-matter/-/hexo-front-matter-4.0.0.tgz#73ba7dce374b0048e215b21c9e3ab01507487951"
   integrity sha512-2pQ24inDCdqbxuKQ4cK+1ak0AhSEVC1zTY/kVVyqi5m3lB/wYtAjSWp+elp+FqBmJOynogMpoBnUry/4fJkmAg==
   dependencies:
     js-yaml "^4.1.0"
@@ -932,16 +932,16 @@ hexo-word-counter@^0.1.0:
     cargo-cp-artifact "^0.1"
     hexo-util "2.7.0"
 
-hexo@^7.0.0-rc1:
-  version "7.0.0-rc1"
-  resolved "https://registry.npmjs.org/hexo/-/hexo-7.0.0-rc1.tgz"
-  integrity sha512-dCjoiNKEsAdBvxSWGKb0rv+E9cCumc/FpxQ9DhYWqKFZ7hHyxGBZuaTGaaXoV9rbsHTAdPoTLyfYYWqPHLDmwQ==
+hexo@^7.0.0-rc2:
+  version "7.0.0-rc2"
+  resolved "https://registry.yarnpkg.com/hexo/-/hexo-7.0.0-rc2.tgz#c1450eb0dc5473a9505a0c7b20e6d56ba223df6f"
+  integrity sha512-+s0lm5e5QKWo+vdb+5C/tDaU0FI0tRqoJze9/2Gvakrykhq96/xfmqBhSo7FvfObgnN1u1ff+pJ66lrWN46NBw==
   dependencies:
     abbrev "^2.0.0"
     archy "^1.0.0"
     bluebird "^3.7.2"
     hexo-cli "^4.3.0"
-    hexo-front-matter "^4.0.0"
+    hexo-front-matter "4.0.0"
     hexo-fs "^4.1.1"
     hexo-i18n "^2.0.0"
     hexo-log "^4.0.1"
@@ -949,7 +949,7 @@ hexo@^7.0.0-rc1:
     js-yaml "^4.1.0"
     js-yaml-js-types "^1.0.0"
     micromatch "^4.0.4"
-    moize "^6.1.0"
+    moize "^6.1.6"
     moment "^2.29.1"
     moment-timezone "^0.5.34"
     nunjucks "^3.2.3"
@@ -1269,10 +1269,10 @@ marked@^4.3.0:
   resolved "https://registry.yarnpkg.com/marked/-/marked-4.3.0.tgz#796362821b019f734054582038b116481b456cf3"
   integrity sha512-PRsaiG84bK+AMvxziE/lCFss8juXjNaWzVbN5tXAm4XjeaS9NAHhop+PjQxz2A9h8Q4M/xGmzP8vqNwy6JeK0A==
 
-micro-memoize@^4.0.11:
-  version "4.0.14"
-  resolved "https://registry.npmjs.org/micro-memoize/-/micro-memoize-4.0.14.tgz"
-  integrity sha512-2tzWP1w2Hh+r7kCYa4f//jpBEA6dAueiuLco38NxfjF9Py3KCCI7wVOTdCvOhmTC043t+ulclVBdl3v+s+UJIQ==
+micro-memoize@^4.1.2:
+  version "4.1.2"
+  resolved "https://registry.yarnpkg.com/micro-memoize/-/micro-memoize-4.1.2.tgz#ce719c1ba1e41592f1cd91c64c5f41dcbf135f36"
+  integrity sha512-+HzcV2H+rbSJzApgkj0NdTakkC+bnyeiUxgT6/m7mjcz1CmM22KYFKp+EVj1sWe4UYcnriJr5uqHQD/gMHLD+g==
 
 micromatch@^4.0.2, micromatch@^4.0.4:
   version "4.0.5"
@@ -1328,13 +1328,13 @@ minimist@^1.2.5:
   resolved "https://registry.npmjs.org/minimist/-/minimist-1.2.8.tgz"
   integrity sha512-2yyAR8qBkN3YuheJanUpWC5U3bb5osDywNB8RzDVlDwDHbocAJveqqj1u8+SVD7jkWT4yvsHCpWqqWqAxb0zCA==
 
-moize@^6.1.0:
-  version "6.1.5"
-  resolved "https://registry.npmjs.org/moize/-/moize-6.1.5.tgz"
-  integrity sha512-Fu46qKV9F8DOi2vXimR3yRw/JAJfFRQEFZeclvOFnG92AEFERqwFtu4PIxETYFtCghHGlU1itKcvvNioKgWGIw==
+moize@^6.1.6:
+  version "6.1.6"
+  resolved "https://registry.yarnpkg.com/moize/-/moize-6.1.6.tgz#ac2e723e74b951875fe2c0c3433405c2b098c3e6"
+  integrity sha512-vSKdIUO61iCmTqhdoIDrqyrtp87nWZUmBPniNjO0fX49wEYmyDO4lvlnFXiGcaH1JLE/s/9HbiK4LSHsbiUY6Q==
   dependencies:
     fast-equals "^3.0.1"
-    micro-memoize "^4.0.11"
+    micro-memoize "^4.1.2"
 
 moment-timezone@^0.5.34:
   version "0.5.42"
