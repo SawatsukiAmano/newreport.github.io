@@ -7,7 +7,6 @@ keywords: Docker CentOS Stream web VNC Chrome Edge Firefox Ubuntu 2204
 tags: 
  - Docker
 categories: linux
-
 ---
 > 使用代理访问 openai 和 newbing 也是可以的，但是速度和稳定性都很差，刚好我有台机子在日本，不如直接在此上面安装 chrome 进行 web vnc 连接
 # 安装 Docker

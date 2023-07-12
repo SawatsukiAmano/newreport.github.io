@@ -7,7 +7,6 @@ keywords: ssh openssh linux ubuntu centos
 tags: 
  - SSH
 categories: linux
-copyright: true
 ---
 1. putty 生成 key
 2. 允许 root 密钥登陆
