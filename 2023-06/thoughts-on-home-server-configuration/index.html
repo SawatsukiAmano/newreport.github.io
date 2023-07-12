@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 7.0.0-rc1">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+  <meta name="google-site-verification" content="5JrLvrJMlBjdcPpp-Vdmej5Xam1RZCIO0aFLGbDqjtI">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha256-/4UQcSmErDzPCMAiuOiWPVVsNN2s3ZY/NsmXNcj0IFc=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/themes/blue/pace-theme-minimal.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"blog.newreport.top","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.15.0","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":"mac"},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":true,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":{"gitalk":{"order":-2}}},"stickytabs":true,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="之前有写过一篇 WINNAS，这个虽然有图形化，但是有个很严重的问题，windows 下的 docker 损耗太大，win server 下各种 amd 驱动不兼容，而且各种监控不好安装，并且不知道为啥，128G 内存分给 docker 只有 64G，就这还影响 OS 系统干其他事情，遂有以下配置   该方案使用 windows 作为 nfs 服务器，使用 win server 自带的软 rai">
+<meta property="og:type" content="article">
+<meta property="og:title" content="关于家用服务器配置的思考">
+<meta property="og:url" content="https://blog.newreport.top/2023-06/thoughts-on-home-server-configuration/index.html">
+<meta property="og:site_name" content="NewReport">
+<meta property="og:description" content="之前有写过一篇 WINNAS，这个虽然有图形化，但是有个很严重的问题，windows 下的 docker 损耗太大，win server 下各种 amd 驱动不兼容，而且各种监控不好安装，并且不知道为啥，128G 内存分给 docker 只有 64G，就这还影响 OS 系统干其他事情，遂有以下配置   该方案使用 windows 作为 nfs 服务器，使用 win server 自带的软 rai">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2023-06-18T16:00:01.000Z">
+<meta property="article:modified_time" content="2023-07-12T06:41:30.468Z">
+<meta property="article:author" content="haruki">
+<meta property="article:tag" content="NFS">
+<meta property="article:tag" content="Containerd">
+<meta property="article:tag" content="Docker">
+<meta property="article:tag" content="Windows">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://blog.newreport.top/2023-06/thoughts-on-home-server-configuration/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://blog.newreport.top/2023-06/thoughts-on-home-server-configuration/","path":"2023-06/thoughts-on-home-server-configuration/","title":"关于家用服务器配置的思考"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>关于家用服务器配置的思考 | NewReport</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3458409223761019"
+     crossorigin="anonymous"></script>
+<link rel="alternate" href="/atom.xml" title="NewReport" type="application/atom+xml">
+<style>.darkmode--activated{--body-bg-color:#282828;--content-bg-color:#333;--card-bg-color:#555;--text-color:#ccc;--blockquote-color:#bbb;--link-color:#ccc;--link-hover-color:#eee;--brand-color:#ddd;--brand-hover-color:#ddd;--table-row-odd-bg-color:#282828;--table-row-hover-bg-color:#363636;--menu-item-bg-color:#555;--btn-default-bg:#222;--btn-default-color:#ccc;--btn-default-border-color:#555;--btn-default-hover-bg:#666;--btn-default-hover-color:#ccc;--btn-default-hover-border-color:#666;--highlight-background:#282b2e;--highlight-foreground:#a9b7c6;--highlight-gutter-background:#34393d;--highlight-gutter-foreground:#9ca9b6}.darkmode--activated img{opacity:.75}.darkmode--activated img:hover{opacity:.9}.darkmode--activated code{color:#69dbdc;background:0 0}button.darkmode-toggle{z-index:9999}.darkmode-ignore,img{display:flex!important}.beian img{display:inline-block!important}</style></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">NewReport</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li><li class="menu-item menu-item-sitemap"><a href="/sitemap.xml" rel="section"><i class="fa fa-sitemap fa-fw"></i>站点地图</a></li><li class="menu-item menu-item-友链"><a href="/links/" rel="section"><i class="fa fa-user fa-fw"></i>友链</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%A1%AC%E4%BB%B6%E9%85%8D%E7%BD%AE"><span class="nav-number">1.</span> <span class="nav-text">硬件配置</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#NFS-%E6%9C%8D%E5%8A%A1%E5%99%A8%EF%BC%88WIN-Server-2022%EF%BC%89"><span class="nav-number">1.1.</span> <span class="nav-text">NFS 服务器（WIN Server 2022）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Docker-%E6%9C%8D%E5%8A%A1%E5%99%A8%EF%BC%88Rocky-Linux-9-2%EF%BC%89"><span class="nav-number">1.2.</span> <span class="nav-text">Docker 服务器（Rocky Linux 9.2）</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%BD%AF%E4%BB%B6%E9%85%8D%E7%BD%AE"><span class="nav-number">2.</span> <span class="nav-text">软件配置</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#NFS-%E6%9C%8D%E5%8A%A1%E5%99%A8"><span class="nav-number">2.1.</span> <span class="nav-text">NFS 服务器</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#NFS-Server"><span class="nav-number">2.1.1.</span> <span class="nav-text">NFS Server</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#QBittorrent"><span class="nav-number">2.1.2.</span> <span class="nav-text">QBittorrent</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%99%BE%E5%BA%A6%E7%BD%91%E7%9B%98"><span class="nav-number">2.1.3.</span> <span class="nav-text">百度网盘</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%98%BF%E9%87%8C%E4%BA%91%E7%9B%98"><span class="nav-number">2.1.4.</span> <span class="nav-text">阿里云盘</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#115%E7%BD%91%E7%9B%98"><span class="nav-number">2.1.5.</span> <span class="nav-text">115网盘</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9D%9A%E6%9E%9C%E4%BA%91"><span class="nav-number">2.1.6.</span> <span class="nav-text">坚果云</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BE%AE%E5%8A%9B%E5%90%8C%E6%AD%A5"><span class="nav-number">2.1.7.</span> <span class="nav-text">微力同步</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A4%9C%E7%A5%9E%E6%A8%A1%E6%8B%9F%E5%99%A8"><span class="nav-number">2.1.8.</span> <span class="nav-text">夜神模拟器</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Docker-%E6%9C%8D%E5%8A%A1%E5%99%A8"><span class="nav-number">2.2.</span> <span class="nav-text">Docker 服务器</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1Panel-%E9%9D%A2%E6%9D%BF"><span class="nav-number">2.2.1.</span> <span class="nav-text">1Panel 面板</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%9D%E5%A7%8B%E5%8C%96%E8%84%9A%E6%9C%AC"><span class="nav-number">2.2.2.</span> <span class="nav-text">初始化脚本</span></a></li></ol></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="haruki"
+      src="/images/haruki-avatar.jpg">
+  <p class="site-author-name" itemprop="name">haruki</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">34</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">9</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">34</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL25ld3JlcG9ydA==" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;newreport"><i class="fab fa-github fa-fw"></i>GitHub</span>
+      </span>
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="bWFpbHRvOmhhcnVraTk1OUBxcS5jb20=" title="E-Mail → mailto:haruki959@qq.com"><i class="fa fa-envelope fa-fw"></i>E-Mail</span>
+      </span>
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="aHR0cHM6Ly93d3cueXVxdWUuY29tL25ld3JlcG9ydA==" title="YuQue → https:&#x2F;&#x2F;www.yuque.com&#x2F;newreport"><i class="fab iconfont app-lark_grey fa-fw"></i>YuQue</span>
+      </span>
+  </div>
+
+        </div>
+      </div>
+        <div class="back-to-top animated" role="button" aria-label="返回顶部">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://blog.newreport.top/2023-06/thoughts-on-home-server-configuration/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/haruki-avatar.jpg">
+      <meta itemprop="name" content="haruki">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="NewReport">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="关于家用服务器配置的思考 | NewReport">
+      <meta itemprop="description" content="">
+      <meta itemprop="keywords" content="服务器">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          关于家用服务器配置的思考
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2023-06-19 00:00:01" itemprop="dateCreated datePublished" datetime="2023-06-19T00:00:01+08:00">2023-06-19</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2023-07-12 14:41:30" itemprop="dateModified" datetime="2023-07-12T14:41:30+08:00">2023-07-12</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/timeline/" itemprop="url" rel="index"><span itemprop="name">timeline</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>734</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>2 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <blockquote>
+<p>之前有写过一篇 <a href="../../2023-03/windows-server-2022-nas-init">WINNAS</a>，这个虽然有图形化，但是有个很严重的问题，windows 下的 docker 损耗太大，win server 下各种 amd 驱动不兼容，而且各种监控不好安装，并且不知道为啥，128G 内存分给 docker 只有 64G，就这还影响 OS 系统干其他事情，遂有以下配置</p>
+</blockquote>
+<blockquote>
+<p>该方案使用 windows 作为 nfs 服务器，使用 win server 自带的软 raid 进行数据保护，共享给 linux 使用，这样即不因为 windows 的垃圾 docker 支持而浪费资源，又可以拥有不错的图形化界面进行配置，虽然能用 zfs 进行单机，但还是图形化舒服些</p>
+</blockquote>
+<h1 id="硬件配置"><a href="#硬件配置" class="headerlink" title="硬件配置"></a>硬件配置</h1><h2 id="NFS-服务器（WIN-Server-2022）"><a href="#NFS-服务器（WIN-Server-2022）" class="headerlink" title="NFS 服务器（WIN Server 2022）"></a>NFS 服务器（WIN Server 2022）</h2><blockquote>
+<p>只用来做 nfs 服务器当然很浪费，日常会多开安卓虚拟机，登陆阿里云，百度云等作为 allinone</p>
+</blockquote>
+<ul>
+<li><strong>cpu</strong>：13700 16c 24t</li>
+<li><strong>主板</strong>：彩虹 z790 冰霜巡洋舰 d4 wifi，4 个 m.2，6 个 sata</li>
+<li><strong>内存</strong>：阿斯加特 32G（3200）*4 128G</li>
+<li><strong>散热</strong>：AX120</li>
+<li><strong>系统盘</strong>：kc3000 2T</li>
+<li><strong>系统盘备份</strong>：s590 2T</li>
+<li><strong>傲腾加速固态</strong>：</li>
+<li><strong>NFS</strong>：3 块 16T 机械，软 raid5</li>
+<li><strong>Appstore</strong>：P7000Z</li>
+<li><strong>电源</strong>：海韵 650W </li>
+<li><strong>机箱</strong>：长城阿基米德 7b（13 个 3.5 存机械，8 个 2.5 寸 sata 位）</li>
+</ul>
+<span id="more"></span>
+<h2 id="Docker-服务器（Rocky-Linux-9-2）"><a href="#Docker-服务器（Rocky-Linux-9-2）" class="headerlink" title="Docker 服务器（Rocky Linux 9.2）"></a>Docker 服务器（Rocky Linux 9.2）</h2><blockquote>
+<p>只是容器机器罢了</p>
+</blockquote>
+<ul>
+<li><strong>cpu</strong>：13400 10c16t</li>
+<li><strong>主板</strong>：精粤 b760m Snow</li>
+<li><strong>内存</strong>：阿斯加特 32G（3200）*2 128G</li>
+<li><strong>散热</strong>：AXPX90-53</li>
+<li><strong>系统盘</strong>：kc3000 1T</li>
+<li><strong>系统盘备份</strong>：台电 1T</li>
+<li><strong>电源</strong>：长城</li>
+<li><strong>机箱</strong>：长城</li>
+</ul>
+<h1 id="软件配置"><a href="#软件配置" class="headerlink" title="软件配置"></a>软件配置</h1><h2 id="NFS-服务器"><a href="#NFS-服务器" class="headerlink" title="NFS 服务器"></a>NFS 服务器</h2><h3 id="NFS-Server"><a href="#NFS-Server" class="headerlink" title="NFS Server"></a><span class="exturl" data-url="aHR0cHM6Ly96aHVhbmxhbi56aGlodS5jb20vcC83NTA5OTQzNw==">NFS Server<i class="fa fa-external-link-alt"></i></span></h3><blockquote>
+<p>win server自带有nfs，配置简单，当然需要先raid5&#x2F;6出去使用</p>
+</blockquote>
+<h3 id="QBittorrent"><a href="#QBittorrent" class="headerlink" title="QBittorrent"></a><span class="exturl" data-url="aHR0cHM6Ly93d3cucWJpdHRvcnJlbnQub3JnL2Rvd25sb2Fk">QBittorrent<i class="fa fa-external-link-alt"></i></span></h3><blockquote>
+<p>bt下载工具，连不上节点先去下一个ubuntu的种子打通<br><span class="exturl" data-url="aHR0cHM6Ly9jbi51YnVudHUuY29tL2Rvd25sb2FkL2FsdGVybmF0aXZlLWRvd25sb2Fk">https://cn.ubuntu.com/download/alternative-download<i class="fa fa-external-link-alt"></i></span></p>
+</blockquote>
+<h3 id="百度网盘"><a href="#百度网盘" class="headerlink" title="百度网盘"></a><span class="exturl" data-url="aHR0cHM6Ly9wYW4uYmFpZHUuY29tLw==">百度网盘<i class="fa fa-external-link-alt"></i></span></h3><h3 id="阿里云盘"><a href="#阿里云盘" class="headerlink" title="阿里云盘"></a><span class="exturl" data-url="aHR0cHM6Ly93d3cuYWxpeXVuZHJpdmUuY29tLw==">阿里云盘<i class="fa fa-external-link-alt"></i></span></h3><h3 id="115网盘"><a href="#115网盘" class="headerlink" title="115网盘"></a><span class="exturl" data-url="aHR0cHM6Ly8xMTUuY29tLw==">115网盘<i class="fa fa-external-link-alt"></i></span></h3><blockquote>
+<p>Appstore冷备份</p>
+</blockquote>
+<h3 id="坚果云"><a href="#坚果云" class="headerlink" title="坚果云"></a><span class="exturl" data-url="aHR0cHM6Ly93d3cuamlhbmd1b3l1bi5jb20v">坚果云<i class="fa fa-external-link-alt"></i></span></h3><h3 id="微力同步"><a href="#微力同步" class="headerlink" title="微力同步"></a><span class="exturl" data-url="aHR0cDovL3d3dy52ZXJ5c3luYy5jb20v">微力同步<i class="fa fa-external-link-alt"></i></span></h3><h3 id="夜神模拟器"><a href="#夜神模拟器" class="headerlink" title="夜神模拟器"></a><span class="exturl" data-url="aHR0cHM6Ly93d3cueWVzaGVuLmNvbS8=">夜神模拟器<i class="fa fa-external-link-alt"></i></span></h3><h2 id="Docker-服务器"><a href="#Docker-服务器" class="headerlink" title="Docker 服务器"></a>Docker 服务器</h2><h3 id="1Panel-面板"><a href="#1Panel-面板" class="headerlink" title="1Panel 面板"></a><span class="exturl" data-url="aHR0cHM6Ly8xcGFuZWwuY24vZG9jcy9pbnN0YWxsYXRpb24vb25saW5lX2luc3RhbGxhdGlvbi8=">1Panel 面板<i class="fa fa-external-link-alt"></i></span></h3><blockquote>
+<p>1panel是开源的，使用的是GPL协议</p>
+</blockquote>
+<h3 id="初始化脚本"><a href="#初始化脚本" class="headerlink" title="初始化脚本"></a>初始化脚本</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 创建根目录备份文件夹</span></span><br><span class="line"><span class="built_in">mkdir</span> /mnt/bkroot</span><br><span class="line"></span><br><span class="line"><span class="comment">#挂载备份 /磁盘</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;/dev/nvme1n1	/mnt/bkroot		xfs	defaults	0	0&quot;</span> &gt;&gt; /etc/fstab</span><br><span class="line"></span><br><span class="line"><span class="comment">#挂载windows下smb共享文件夹 即docker volume文件</span></span><br><span class="line"><span class="comment"># echo &quot;//192.168.1.13/volumes     /var/lib/docker/volumes      cifs    username=haruki3014@outlook.com,password=96913Poi@,nobrl,rw,uid=0,gid=0      0       0&quot; &gt;&gt; /etc/fstab</span></span><br><span class="line"><span class="comment"># 挂载nfs</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;192.168.1.9:/NFS    /var/lib/docker/volumes  nfs4    defaults        0       0&quot;</span> &gt;&gt;  /etc/fstab</span><br><span class="line">mount -a</span><br><span class="line"></span><br><span class="line"><span class="comment"># 安装docker https://docs.docker.com/engine/install/centos/</span></span><br><span class="line">sudo yum remove docker \</span><br><span class="line">                  docker-client \</span><br><span class="line">                  docker-client-latest \</span><br><span class="line">                  docker-common \</span><br><span class="line">                  docker-latest \</span><br><span class="line">                  docker-latest-logrotate \</span><br><span class="line">                  docker-logrotate \</span><br><span class="line">                  docker-engine</span><br><span class="line"></span><br><span class="line">sudo yum install -y yum-utils</span><br><span class="line">sudo yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo</span><br><span class="line">sudo yum install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin</span><br><span class="line"></span><br><span class="line"><span class="comment"># docker 加速</span></span><br><span class="line">sudo <span class="built_in">mkdir</span> -p /etc/docker</span><br><span class="line">sudo <span class="built_in">tee</span> /etc/docker/daemon.json &lt;&lt;-<span class="string">&#x27;EOF&#x27;</span></span><br><span class="line">&#123;</span><br><span class="line">	<span class="string">&quot;registry-mirrors&quot;</span>: [</span><br><span class="line">		<span class="string">&quot;https://mirror.ccs.tencentyun.com&quot;</span>,</span><br><span class="line">		<span class="string">&quot;https://docker.mirrors.ustc.edu.cn&quot;</span>,</span><br><span class="line">		<span class="string">&quot;https://registry.docker-cn.com&quot;</span>,</span><br><span class="line">		<span class="string">&quot;https://docker.m.daocloud.io&quot;</span>,</span><br><span class="line">		<span class="string">&quot;https://hub-mirror.c.163.com&quot;</span>,</span><br><span class="line">		<span class="string">&quot;https://reg-mirror.qiniu.com&quot;</span>,</span><br><span class="line">		<span class="string">&quot;https://docker.mirrors.ustc.edu.cn&quot;</span></span><br><span class="line">	]</span><br><span class="line">&#125;</span><br><span class="line">EOF</span><br><span class="line"></span><br><span class="line"><span class="comment"># 设置dns解析</span></span><br><span class="line">sudo <span class="built_in">tee</span> /etc/resolv.conf &lt;&lt;-<span class="string">&#x27;EOF&#x27;</span></span><br><span class="line">nameserver 192.168.1.1</span><br><span class="line">nameserver 119.29.29.29</span><br><span class="line">nameserver 8.8.4.4</span><br><span class="line">nameserver localdomain</span><br><span class="line">EOF</span><br><span class="line"></span><br><span class="line"><span class="comment"># 重启docker</span></span><br><span class="line">sudo systemctl daemon-reload</span><br><span class="line">sudo systemctl restart docker</span><br><span class="line"></span><br><span class="line"><span class="comment"># 恢复app目录</span></span><br><span class="line">tar -zxvf /mnt/bkroot/app.tar.gz /</span><br><span class="line"></span><br><span class="line"><span class="comment"># 安装1panel</span></span><br><span class="line">curl -sSL https://resource.fit2cloud.com/1panel/package/quick_start.sh -o quick_start.sh &amp;&amp; sh quick_start.sh</span><br><span class="line"></span><br><span class="line"><span class="comment">#开机自启动</span></span><br><span class="line">crontab -e</span><br><span class="line">@reboot /app/frpc/frpc -c /app/frpc/frpc.ini</span><br><span class="line"></span><br><span class="line">reboot</span><br></pre></td></tr></table></figure>
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/NFS/" rel="tag"># NFS</a>
+              <a href="/tags/Containerd/" rel="tag"># Containerd</a>
+              <a href="/tags/Docker/" rel="tag"># Docker</a>
+              <a href="/tags/Windows/" rel="tag"># Windows</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2023-06/linux-reboot-auto-launch-podman/" rel="prev" title="设置 Podman 开机自动动容器">
+                  <i class="fa fa-chevron-left"></i> 设置 Podman 开机自动动容器
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    <div class="comments gitalk-container"></div>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">haruki</span>
+</div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+    <span title="站点总字数">21k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">1:10</span>
+  </span>
+</div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+  <div class="powered-by">由 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & <span class="exturl" data-url="aHR0cHM6Ly90aGVtZS1uZXh0LmpzLm9yZw==">NexT.Gemini</span> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/medium-zoom/1.0.8/medium-zoom.min.js" integrity="sha256-7PhEpEWEW0XXQ0k6kQrPKwuoIomz8R8IYyuU1Qew4P8=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lozad.js/1.16.0/lozad.min.js" integrity="sha256-mOFREFhqmHeQbXpK2lp4nA3qooVgACfh88fpJftLBbc=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pangu/4.0.7/pangu.min.js" integrity="sha256-j+yj56cdEY2CwkVtGyz18fNybFGpMGJ8JxG3GSyO2+I=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+  <script class="next-config" data-name="mermaid" type="application/json">{"enable":true,"theme":{"light":"default","dark":"dark"},"js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mermaid/9.4.0/mermaid.min.js","integrity":"sha256-3JloMMI/ZQx6ryuhhZTsQJQmGAkXeni6PkshX7UUO2s="}}</script>
+  <script src="/js/third-party/tags/mermaid.js"></script>
+
+
+  <script src="/js/third-party/pace.js"></script>
+
+  
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+<script src="https://unpkg.com/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
+
+<script>
+var options = {
+  bottom: '32px',
+  right: '32px',
+  left: 'unset',
+  time: '0.3s',
+  mixColor: 'transparent',
+  backgroundColor: 'transparent',
+  buttonColorDark: '#100f2c',
+  buttonColorLight: '#fff',
+  saveInCookies: true,
+  label: '🌓',
+  autoMatchOsTheme: true
+}
+const darkmode = new Darkmode(options);
+window.darkmode = darkmode;
+darkmode.showWidget();
+</script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.css" integrity="sha256-AJnUHL7dBv6PGaeyPQJcgQPDjt/Hn/PvYZde1iqfp8U=" crossorigin="anonymous">
+
+<script class="next-config" data-name="gitalk" type="application/json">{"enable":true,"github_id":"newreport","repo":"newreport.github.io","client_id":"455a006066c6a6133196","client_secret":"c925c01067a3e247496e1564c2da1f4d1e150735","admin_user":"newreport","distraction_free_mode":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token","language":null,"js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.min.js","integrity":"sha256-MVK9MGD/XJaGyIghSVrONSnoXoGh3IFxLw0zfvzpxR4="},"path_md5":"aaa0fd00d572b8f8bc73c91a3677fed6"}</script>
+<script src="/js/third-party/comments/gitalk.js"></script>
+
+</body>
+</html>

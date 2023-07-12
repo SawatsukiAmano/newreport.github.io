@@ -156,7 +156,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">29</span>
+          <span class="site-state-item-count">34</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -167,7 +167,7 @@
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">31</span>
+        <span class="site-state-item-count">34</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -199,6 +199,135 @@
     </div>
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://blog.newreport.top/2023-06/thoughts-on-home-server-configuration/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/haruki-avatar.jpg">
+      <meta itemprop="name" content="haruki">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="NewReport">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | NewReport">
+      <meta itemprop="description" content="">
+      <meta itemprop="keywords" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2023-06/thoughts-on-home-server-configuration/" class="post-title-link" itemprop="url">关于家用服务器配置的思考</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2023-06-19 00:00:01" itemprop="dateCreated datePublished" datetime="2023-06-19T00:00:01+08:00">2023-06-19</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2023-07-12 14:41:30" itemprop="dateModified" datetime="2023-07-12T14:41:30+08:00">2023-07-12</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/timeline/" itemprop="url" rel="index"><span itemprop="name">timeline</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>734</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>2 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <blockquote>
+<p>之前有写过一篇 <a href="../../2023-03/windows-server-2022-nas-init">WINNAS</a>，这个虽然有图形化，但是有个很严重的问题，windows 下的 docker 损耗太大，win server 下各种 amd 驱动不兼容，而且各种监控不好安装，并且不知道为啥，128G 内存分给 docker 只有 64G，就这还影响 OS 系统干其他事情，遂有以下配置</p>
+</blockquote>
+<blockquote>
+<p>该方案使用 windows 作为 nfs 服务器，使用 win server 自带的软 raid 进行数据保护，共享给 linux 使用，这样即不因为 windows 的垃圾 docker 支持而浪费资源，又可以拥有不错的图形化界面进行配置，虽然能用 zfs 进行单机，但还是图形化舒服些</p>
+</blockquote>
+<h1 id="硬件配置"><a href="#硬件配置" class="headerlink" title="硬件配置"></a>硬件配置</h1><h2 id="NFS-服务器（WIN-Server-2022）"><a href="#NFS-服务器（WIN-Server-2022）" class="headerlink" title="NFS 服务器（WIN Server 2022）"></a>NFS 服务器（WIN Server 2022）</h2><blockquote>
+<p>只用来做 nfs 服务器当然很浪费，日常会多开安卓虚拟机，登陆阿里云，百度云等作为 allinone</p>
+</blockquote>
+<ul>
+<li><strong>cpu</strong>：13700 16c 24t</li>
+<li><strong>主板</strong>：彩虹 z790 冰霜巡洋舰 d4 wifi，4 个 m.2，6 个 sata</li>
+<li><strong>内存</strong>：阿斯加特 32G（3200）*4 128G</li>
+<li><strong>散热</strong>：AX120</li>
+<li><strong>系统盘</strong>：kc3000 2T</li>
+<li><strong>系统盘备份</strong>：s590 2T</li>
+<li><strong>傲腾加速固态</strong>：</li>
+<li><strong>NFS</strong>：3 块 16T 机械，软 raid5</li>
+<li><strong>Appstore</strong>：P7000Z</li>
+<li><strong>电源</strong>：海韵 650W </li>
+<li><strong>机箱</strong>：长城阿基米德 7b（13 个 3.5 存机械，8 个 2.5 寸 sata 位）</li>
+</ul>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2023-06/thoughts-on-home-server-configuration/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -245,7 +374,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2023-06-19 17:40:29" itemprop="dateModified" datetime="2023-06-19T17:40:29+08:00">2023-06-19</time>
+      <time title="修改时间：2023-07-12 14:39:46" itemprop="dateModified" datetime="2023-07-12T14:39:46+08:00">2023-07-12</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -311,6 +440,360 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://blog.newreport.top/2023-04/kubernetes-1-24-inside-install/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/haruki-avatar.jpg">
+      <meta itemprop="name" content="haruki">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="NewReport">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | NewReport">
+      <meta itemprop="description" content="">
+      <meta itemprop="keywords" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2023-04/kubernetes-1-24-inside-install/" class="post-title-link" itemprop="url">Docker 应用清单</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2023-04-19 00:00:01" itemprop="dateCreated datePublished" datetime="2023-04-19T00:00:01+08:00">2023-04-19</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2023-07-12 14:39:49" itemprop="dateModified" datetime="2023-07-12T14:39:49+08:00">2023-07-12</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/kubernetes-docker-podman/" itemprop="url" rel="index"><span itemprop="name">kubernetes/docker/podman</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>126</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="lsky"><a href="#lsky" class="headerlink" title="lsky"></a><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2xza3ktb3JnL2xza3ktcHJv">lsky<i class="fa fa-external-link-alt"></i></span></h1><blockquote>
+<p>兰空图床</p>
+</blockquote>
+<blockquote>
+<p><span class="exturl" data-url="aHR0cHM6Ly9sc2t5LnZ0YmFpLmNvbS8=">https://lsky.vtbai.com/<i class="fa fa-external-link-alt"></i></span></p>
+</blockquote>
+<h1 id="memos"><a href="#memos" class="headerlink" title="memos"></a><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3VzZW1lbW9zL21lbW9z">memos<i class="fa fa-external-link-alt"></i></span></h1><blockquote>
+<p>便签</p>
+</blockquote>
+<blockquote>
+<p><span class="exturl" data-url="aHR0cHM6Ly9tZW1vcy52dGJhaS5jb20v">https://memos.vtbai.com/<i class="fa fa-external-link-alt"></i></span></p>
+</blockquote>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2023-04/kubernetes-1-24-inside-install/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://blog.newreport.top/2023-03/linux-setting-ssh-key/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/haruki-avatar.jpg">
+      <meta itemprop="name" content="haruki">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="NewReport">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | NewReport">
+      <meta itemprop="description" content="">
+      <meta itemprop="keywords" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2023-03/linux-setting-ssh-key/" class="post-title-link" itemprop="url">Linux 配置 SSH Key</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2023-03-30 00:00:01" itemprop="dateCreated datePublished" datetime="2023-03-30T00:00:01+08:00">2023-03-30</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2023-07-12 14:39:51" itemprop="dateModified" datetime="2023-07-12T14:39:51+08:00">2023-07-12</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/linux/" itemprop="url" rel="index"><span itemprop="name">linux</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>45</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <ol>
+<li>putty 生成 key</li>
+<li>允许 root 密钥登陆<ol>
+<li><blockquote>
+<p>&#x2F;etc&#x2F;ssh&#x2F;sshd_config </p>
+</blockquote>
+</li>
+<li>取消注释或新增行：PermitRootLogin prohibit-password</li>
+</ol>
+</li>
+<li>上传公钥<ol>
+<li><blockquote>
+<p>~&#x2F;.ssh&#x2F;authorized_keys</p>
+</blockquote>
+</li>
+</ol>
+</li>
+<li>重启 ssh<ol>
+<li><blockquote>
+<p>systemcetl restart sshd</p>
+</blockquote>
+</li>
+</ol>
+</li>
+</ol>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://blog.newreport.top/2023-03/ubuntu-2204-install-docker-and-link-portainer/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/haruki-avatar.jpg">
+      <meta itemprop="name" content="haruki">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="NewReport">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | NewReport">
+      <meta itemprop="description" content="">
+      <meta itemprop="keywords" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2023-03/ubuntu-2204-install-docker-and-link-portainer/" class="post-title-link" itemprop="url">Ubuntu 2204 安装 Docker</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2023-03-29 00:00:03" itemprop="dateCreated datePublished" datetime="2023-03-29T00:00:03+08:00">2023-03-29</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2023-07-12 14:39:53" itemprop="dateModified" datetime="2023-07-12T14:39:53+08:00">2023-07-12</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/kubernetes-docker-podman/" itemprop="url" rel="index"><span itemprop="name">kubernetes/docker/podman</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>123</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <blockquote>
+<p><span class="exturl" data-url="aHR0cHM6Ly9kb2NzLmRvY2tlci5jb20vZW5naW5lL2luc3RhbGwvdWJ1bnR1Lw==">https://docs.docker.com/engine/install/ubuntu/<i class="fa fa-external-link-alt"></i></span></p>
+</blockquote>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2023-03/ubuntu-2204-install-docker-and-link-portainer/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
     <link itemprop="mainEntityOfPage" href="https://blog.newreport.top/2023-03/ubuntu-install-chrome-remote-openai-newbing/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -348,7 +831,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2023-07-12 14:30:43" itemprop="dateModified" datetime="2023-07-12T14:30:43+08:00">2023-07-12</time>
+      <time title="修改时间：2023-07-12 14:40:00" itemprop="dateModified" datetime="2023-07-12T14:40:00+08:00">2023-07-12</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -455,7 +938,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2023-06-19 17:40:29" itemprop="dateModified" datetime="2023-06-19T17:40:29+08:00">2023-06-19</time>
+      <time title="修改时间：2023-07-12 14:40:03" itemprop="dateModified" datetime="2023-07-12T14:40:03+08:00">2023-07-12</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -518,6 +1001,112 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://blog.newreport.top/2023-03/docker-transfer-in-wsl2/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/haruki-avatar.jpg">
+      <meta itemprop="name" content="haruki">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="NewReport">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | NewReport">
+      <meta itemprop="description" content="">
+      <meta itemprop="keywords" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2023-03/docker-transfer-in-wsl2/" class="post-title-link" itemprop="url">WSL2 迁移 Docker</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2023-03-28 00:00:01" itemprop="dateCreated datePublished" datetime="2023-03-28T00:00:01+08:00">2023-03-28</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2023-07-12 14:40:05" itemprop="dateModified" datetime="2023-07-12T14:40:05+08:00">2023-07-12</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/kubernetes-docker-podman/" itemprop="url" rel="index"><span itemprop="name">kubernetes/docker/podman</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>133</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <blockquote>
+<p>迁移前关闭 Docker Desktop</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 关闭 wsl </span></span><br><span class="line">wsl --shutdown</span><br><span class="line"></span><br><span class="line"><span class="comment"># vhd 文件压缩为 tar 并保存在 d 盘</span></span><br><span class="line">wsl --<span class="built_in">export</span> docker-desktop D:Docker-desktop.tar</span><br><span class="line">wsl --<span class="built_in">export</span> docker-desktop-data D:Ddocker-desktop-data.tar</span><br><span class="line"></span><br><span class="line"><span class="comment"># 卸载原有的 docker 本体，和 docker data 即 volume</span></span><br><span class="line">wsl --unregister docker-desktop</span><br><span class="line">wsl --unregister docker-desktop-data</span><br><span class="line"></span><br><span class="line"><span class="comment"># 使用 D 盘的 tar 文件，将文件导入到 docker，并指定导入（解压）后的 vhd 数据保存在 E 盘</span></span><br><span class="line">wsl --import docker-desktop E:\wsl D:docker-desktop.tar --version 2</span><br><span class="line">wsl --import docker-desktop-data E:\wsl D:docker-desktop-data.tar --version 2</span><br><span class="line"></span><br><span class="line"><span class="comment"># 启动 wsl 和 docker</span></span><br><span class="line">wsl</span><br><span class="line"><span class="comment"># 查看结果</span></span><br><span class="line">wsl -l -v</span><br></pre></td></tr></table></figure>
+
+<p><img data-src="https://lsky.vtbai.com/i/main/2023-05/0CCDC5C47BA6723B10B45DE9DBEE49591C9A4D59D57B628D27B1784C3992B078.png" alt="0CCDC5C47BA6723B10B45DE9DBEE49591C9A4D59D57B628D27B1784C3992B078.png"><br><img data-src="https://lsky.vtbai.com/i/main/2023-05/02C761A030AB6EC8DDEED412F6F415EAEDE67F66B2A351C5410E5F91F0336318.png" alt="02C761A030AB6EC8DDEED412F6F415EAEDE67F66B2A351C5410E5F91F0336318.png"></p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
     <link itemprop="mainEntityOfPage" href="https://blog.newreport.top/2023-03/windows-server-2022-nas-init/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -555,7 +1144,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2023-07-12 14:31:16" itemprop="dateModified" datetime="2023-07-12T14:31:16+08:00">2023-07-12</time>
+      <time title="修改时间：2023-07-12 14:40:09" itemprop="dateModified" datetime="2023-07-12T14:40:09+08:00">2023-07-12</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -820,575 +1409,8 @@
 
 
 
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://blog.newreport.top/2023-02/ubuntu-amd-centos-install-conda/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/haruki-avatar.jpg">
-      <meta itemprop="name" content="haruki">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="NewReport">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | NewReport">
-      <meta itemprop="description" content="">
-      <meta itemprop="keywords" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2023-02/ubuntu-amd-centos-install-conda/" class="post-title-link" itemprop="url">Ubuntu 和 CentOS 安装 Conda 和 GCC 环境</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2023-02-28 00:00:01" itemprop="dateCreated datePublished" datetime="2023-02-28T00:00:01+08:00">2023-02-28</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2023-06-19 17:40:29" itemprop="dateModified" datetime="2023-06-19T17:40:29+08:00">2023-06-19</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/linux/" itemprop="url" rel="index"><span itemprop="name">linux</span></a>
-        </span>
-    </span>
-
-  
-    <span class="post-meta-break"></span>
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>99</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>1 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="安装-conda"><a href="#安装-conda" class="headerlink" title="安装 conda"></a>安装 conda</h1><blockquote>
-<p>conda 是一个 python 的包和环境管理工具。<br>官网：<span class="exturl" data-url="aHR0cHM6Ly9jb25kYS5pby8=">https://conda.io/<i class="fa fa-external-link-alt"></i></span><br>Download：<span class="exturl" data-url="aHR0cHM6Ly9kb2NzLmNvbmRhLmlvL3Byb2plY3RzL2NvbmRhL2VuL3N0YWJsZS91c2VyLWd1aWRlL2luc3RhbGwvbGludXguaHRtbA==">https://docs.conda.io/projects/conda/en/stable/user-guide/install/linux.html<i class="fa fa-external-link-alt"></i></span>  </p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">wget https://repo.anaconda.com/archive/Anaconda3-2022.10-Linux-x86_64.sh</span><br><span class="line"></span><br><span class="line">bash Anaconda3-2022.10-Linux-x86_64.sh </span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>之后回车 yes 回车即可</p>
-</blockquote>
-<h1 id="安装-gcc"><a href="#安装-gcc" class="headerlink" title="安装 gcc"></a>安装 gcc</h1><h2 id="CentOS"><a href="#CentOS" class="headerlink" title="CentOS"></a>CentOS</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">yum check-update</span><br><span class="line">yum update</span><br><span class="line">yum groupinstall <span class="string">&quot;Development Tools&quot;</span></span><br><span class="line">yum install gcc-c++</span><br><span class="line">gcc--version</span><br></pre></td></tr></table></figure>
-
-<h2 id="Ubuntu"><a href="#Ubuntu" class="headerlink" title="Ubuntu"></a>Ubuntu</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get upgrade</span><br><span class="line">sudo apt-get  build-depgcc</span><br><span class="line">sudo apt-get  install  build-essential</span><br><span class="line">gcc--version</span><br></pre></td></tr></table></figure>
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://blog.newreport.top/2023-02/use-chatgpt-storytelling-leads-to-gibberish-in-subsequent-conversations/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/haruki-avatar.jpg">
-      <meta itemprop="name" content="haruki">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="NewReport">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | NewReport">
-      <meta itemprop="description" content="">
-      <meta itemprop="keywords" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2023-02/use-chatgpt-storytelling-leads-to-gibberish-in-subsequent-conversations/" class="post-title-link" itemprop="url">让 ChatGPT 讲故事导致之后对话出现递归</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2023-02-16 00:00:01" itemprop="dateCreated datePublished" datetime="2023-02-16T00:00:01+08:00">2023-02-16</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2023-07-12 14:31:35" itemprop="dateModified" datetime="2023-07-12T14:31:35+08:00">2023-07-12</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/ai/" itemprop="url" rel="index"><span itemprop="name">ai</span></a>
-        </span>
-    </span>
-
-  
-    <span class="post-meta-break"></span>
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>1.3k</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>4 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h2 id="You"><a href="#You" class="headerlink" title="You"></a>You</h2><p>讲个故事</p>
-<h2 id="ChatGPT"><a href="#ChatGPT" class="headerlink" title="ChatGPT"></a>ChatGPT</h2><p>这是一个关于枫叶花花的故事。枫叶花花是一个小女孩，生活在一座山上的一个村庄里。她每天散步到附近的钢琴店去，从钢琴的键盘中听取音乐，十分喜爱钢琴给她带来的美妙旋律<br>每天早晨，枫叶花花都会去海边来说说话，她会问海洋里美丽的海洋动物，什么有意思的事情发生了，有什么新鲜的事情发生了，而它们也会问她最近发生了什么好玩的事情。<br>有一天，枫叶花花走在海边，突然听到有人将歌声唱起来…… 原来是一对爱侣，他们唱起甜蜜的情歌，满满的幸福。枫叶花花感觉自己有点室息，心中十分开心，便突然勾起她苦涩的情绪……</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2023-02/use-chatgpt-storytelling-leads-to-gibberish-in-subsequent-conversations/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://blog.newreport.top/2023-02/amdgpu-install-stable-diffusion-webui/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/haruki-avatar.jpg">
-      <meta itemprop="name" content="haruki">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="NewReport">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | NewReport">
-      <meta itemprop="description" content="">
-      <meta itemprop="keywords" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2023-02/amdgpu-install-stable-diffusion-webui/" class="post-title-link" itemprop="url">A卡 安装 Stable Diffusion Webui 进行 AI 绘画</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2023-02-10 00:00:01" itemprop="dateCreated datePublished" datetime="2023-02-10T00:00:01+08:00">2023-02-10</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2023-06-19 17:40:29" itemprop="dateModified" datetime="2023-06-19T17:40:29+08:00">2023-06-19</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/ai/" itemprop="url" rel="index"><span itemprop="name">ai</span></a>
-        </span>
-    </span>
-
-  
-    <span class="post-meta-break"></span>
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>205</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>1 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <blockquote>
-<p>环境为 Ubuntu 22.04.1 LTS<br>注：不要买 A 卡，会变得不幸</p>
-</blockquote>
-<h1 id="安装-3-10-版本-python"><a href="#安装-3-10-版本-python" class="headerlink" title="安装 3.10 版本 python"></a>安装 3.10 版本 python</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">apt install git</span><br><span class="line">apt install python3.10</span><br><span class="line"><span class="comment"># 设置别名</span></span><br><span class="line"><span class="built_in">alias</span> python=<span class="string">&quot;python3&quot;</span></span><br></pre></td></tr></table></figure>
-
-<h1 id="安装-webui"><a href="#安装-webui" class="headerlink" title="安装 webui"></a>安装 webui</h1><blockquote>
-<p>clone 项目和设置虚拟环境</p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 从 github 拉取 webui</span></span><br><span class="line">git <span class="built_in">clone</span> https://github.com/AUTOMATIC1111/stable-diffusion-webui</span><br><span class="line"><span class="comment"># 进入目录</span></span><br><span class="line"><span class="built_in">cd</span> stable-diffusion-webui</span><br><span class="line"><span class="comment"># 设置 python 虚拟环境</span></span><br><span class="line">python -m venv venv</span><br><span class="line"><span class="comment"># source bash</span></span><br><span class="line"><span class="built_in">source</span> venv/bin/activate</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>安装 pip</p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">python -m pip install --upgrade pip wheel</span><br><span class="line"></span><br><span class="line">python -m pip install xformers</span><br><span class="line"></span><br><span class="line">apt install -y miopenkernels-gfx1030-36kdb</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>运行 launch 自动安装依赖</p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">TORCH_COMMAND=<span class="string">&#x27;pip install torch torchvision --extra-index-url https://download.pytorch.org/whl/rocm5.1.1&#x27;</span> </span><br><span class="line">python launch.py --precision full --no-half --skip-torch-cuda-test </span><br></pre></td></tr></table></figure>
-<h1 id="下载模型"><a href="#下载模型" class="headerlink" title="下载模型"></a>下载模型</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> models/Stable-diffusion/</span><br><span class="line"><span class="comment"># sd 1.5</span></span><br><span class="line">wget https://huggingface.co/runwayml/stable-diffusion-v1-5/resolve/main/v1-5-pruned.ckpt</span><br><span class="line"><span class="comment"># sd 2.1</span></span><br><span class="line">wget https://huggingface.co/stabilityai/stable-diffusion-2-1/resolve/main/v2-1_768-ema-pruned.ckpt</span><br></pre></td></tr></table></figure>
-
-<h1 id="启动-webui"><a href="#启动-webui" class="headerlink" title="启动 webui"></a>启动 webui</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">HSA_OVERRIDE_GFX_VERSION=10.3.0 ./venv/bin/python webui.py --listen --enable-insecure-extension-access</span><br></pre></td></tr></table></figure>
-
-<p><img data-src="https://lsky.vtbai.com/i/main/2023-03/305C18A512B0160FC51946D292243A79F2D523F23063A0E3ABA5477F2F95F6F5.png" alt="启动 webui"></p>
-<p><img data-src="https://lsky.vtbai.com/i/main/2023-03/28F9CDD62F18C958176FA02F37A2D0E5F2DC3E11AC61289D80E96B2852684072.png" alt="webui 首页"></p>
-<p><img data-src="https://lsky.vtbai.com/i/main/2023-03/77B728E8FEAF0126B816696D327D7744FA16C86CBA765C454708B723C0A4C3FA.png" alt="🐎骑🐎"></p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://blog.newreport.top/2023-02/golang-i18n-CLDR/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/haruki-avatar.jpg">
-      <meta itemprop="name" content="haruki">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="NewReport">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | NewReport">
-      <meta itemprop="description" content="">
-      <meta itemprop="keywords" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2023-02/golang-i18n-CLDR/" class="post-title-link" itemprop="url">Golang 国际化及 CLDR</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2023-02-09 00:00:01" itemprop="dateCreated datePublished" datetime="2023-02-09T00:00:01+08:00">2023-02-09</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2023-06-19 17:40:29" itemprop="dateModified" datetime="2023-06-19T17:40:29+08:00">2023-06-19</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/golang/" itemprop="url" rel="index"><span itemprop="name">golang</span></a>
-        </span>
-    </span>
-
-  
-    <span class="post-meta-break"></span>
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>611</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>2 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="CLDR-复数形式"><a href="#CLDR-复数形式" class="headerlink" title="CLDR 复数形式"></a>CLDR 复数形式</h1><blockquote>
-<p><span class="exturl" data-url="aHR0cHM6Ly9jbGRyLnVuaWNvZGUub3JnLw==">https://cldr.unicode.org/<i class="fa fa-external-link-alt"></i></span><br><span class="exturl" data-url="aHR0cDovL2RvY3MudHJhbnNsYXRlaG91c2Uub3JnL3Byb2plY3RzL2xvY2FsaXphdGlvbi1ndWlkZS9lbi9sYXRlc3QvbDEwbi9wbHVyYWxmb3Jtcy5odG1s">http://docs.translatehouse.org/projects/localization-guide/en/latest/l10n/pluralforms.html<i class="fa fa-external-link-alt"></i></span></p>
-</blockquote>
-<blockquote>
-<p>不同语言的名词可以有几种复数形式。 它们的用法取决于单词前面的数字，以指示该单词表示的数目。<br>例如，当谈论不同数量时，英语单词有两种单词形式。例如 ‘one star’ 或 ‘two stars’。 无论您说的是五颗星，二十六颗星还是五百三十二颗星，结尾 ‘s’ 都将保持不变。 但是有些语言只有一种形式，反之，有些语言也可以有更多种复数形式。<br>与英语相比，波兰语里的名词具有三种复数形式。 在说单数形式时使用一种形式，复数形式时以 2-4 数字为结尾的名词（不包括 12-14）使用另一种形式。但还有第三种形式，前面带有其他数字的单词。</p>
-</blockquote>
-<p>中文的名词，对于无生命的是没有复数形式的，例如桌子们、椅子们、电脑们都是不可取的。  </p>
-<p>对于动物，也不会讲猫们、狗们、兔子们，而是那些兔子、那些猫、这些狗等。但是在以动物为主角的纪录片或者电影中，出现拟人态势时，可以讲<strong>猎犬们</strong>和<strong>狮子们</strong>在争抢食物。  </p>
-<p>对于人类这种高智慧性、高生命度的，则会讲你们、我们、他们、老师们、同志们、工人们。  </p>
-<p>所以中文的 CLDR 在 i18n 中很是有限，因此在做 i18n 时，默认中日英时只用做英文的复数，在对待<strong>人</strong>时，再做中文的 CLDR 即可。</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2023-02/golang-i18n-CLDR/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://blog.newreport.top/2023-01/use-hexo-next-8-and-ali-iconfont/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/haruki-avatar.jpg">
-      <meta itemprop="name" content="haruki">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="NewReport">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | NewReport">
-      <meta itemprop="description" content="">
-      <meta itemprop="keywords" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2023-01/use-hexo-next-8-and-ali-iconfont/" class="post-title-link" itemprop="url">Hexo Next 8 使用阿里图标</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2023-01-30 00:00:01" itemprop="dateCreated datePublished" datetime="2023-01-30T00:00:01+08:00">2023-01-30</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2023-06-19 17:40:29" itemprop="dateModified" datetime="2023-06-19T17:40:29+08:00">2023-06-19</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/timeline/" itemprop="url" rel="index"><span itemprop="name">timeline</span></a>
-        </span>
-    </span>
-
-  
-    <span class="post-meta-break"></span>
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>42</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>1 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="官网"><a href="#官网" class="headerlink" title="官网"></a>官网</h1><p><span class="exturl" data-url="aHR0cHM6Ly9pY29uZm9udC5jbi8=">https://iconfont.cn<i class="fa fa-external-link-alt"></i></span></p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2023-01/use-hexo-next-8-and-ali-iconfont/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
   <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" title="下一页" aria-label="下一页" href="/page/2/"><i class="fa fa-angle-right"></i></a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" title="下一页" aria-label="下一页" href="/page/2/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 </div>
@@ -1411,13 +1433,13 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-line"></i>
     </span>
-    <span title="站点总字数">20k</span>
+    <span title="站点总字数">21k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">1:06</span>
+    <span title="站点阅读时长">1:10</span>
   </span>
 </div>
 <div class="busuanzi-count">

@@ -6,7 +6,7 @@
   <link href="https://blog.newreport.top/atom.xml" rel="self"/>
   
   <link href="https://blog.newreport.top/"/>
-  <updated>2023-06-19T09:40:29.345Z</updated>
+  <updated>2023-07-12T06:41:30.468Z</updated>
   <id>https://blog.newreport.top/</id>
   
   <author>
@@ -17,11 +17,57 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>关于家用服务器配置的思考</title>
+    <link href="https://blog.newreport.top/2023-06/thoughts-on-home-server-configuration/"/>
+    <id>https://blog.newreport.top/2023-06/thoughts-on-home-server-configuration/</id>
+    <published>2023-06-18T16:00:01.000Z</published>
+    <updated>2023-07-12T06:41:30.468Z</updated>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;之前有写过一篇 &lt;a href=&quot;../../2023-03/windows-server-2022-nas-init&quot;&gt;WINNAS&lt;/a&gt;，这个虽然有图形化，但是有个很严重的问题，windows 下的 docker 损耗太大，win server 下各种 amd 驱动不兼容，而且各种监控不好安装，并且不知道为啥，128G 内存分给 docker 只有 64G，就这还影响 OS 系统干其他事情，遂有以下配置&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;该方案使用 windows 作为 nfs 服务器，使用 win server 自带的软 raid 进行数据保护，共享给 linux 使用，这样即不因为 windows 的垃圾 docker 支持而浪费资源，又可以拥有不错的图形化界面进行配置，虽然能用 zfs 进行单机，但还是图形化舒服些&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&quot;硬件配置&quot;&gt;&lt;a href=&quot;#硬件配置&quot; class=&quot;headerlink&quot; title=&quot;硬件配置&quot;&gt;&lt;/a&gt;硬件配置&lt;/h1&gt;&lt;h2 id=&quot;NFS-服务器（WIN-Server-2022）&quot;&gt;&lt;a href=&quot;#NFS-服务器（WIN-Server-2022）&quot; class=&quot;headerlink&quot; title=&quot;NFS 服务器（WIN Server 2022）&quot;&gt;&lt;/a&gt;NFS 服务器（WIN Server 2022）&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;只用来做 nfs 服务器当然很浪费，日常会多开安卓虚拟机，登陆阿里云，百度云等作为 allinone&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;cpu&lt;/strong&gt;：13700 16c 24t&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;主板&lt;/strong&gt;：彩虹 z790 冰霜巡洋舰 d4 wifi，4 个 m.2，6 个 sata&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;内存&lt;/strong&gt;：阿斯加特 32G（3200）*4 128G&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;散热&lt;/strong&gt;：AX120&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;系统盘&lt;/strong&gt;：kc3000 2T&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;系统盘备份&lt;/strong&gt;：s590 2T&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;傲腾加速固态&lt;/strong&gt;：&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;NFS&lt;/strong&gt;：3 块 16T 机械，软 raid5&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Appstore&lt;/strong&gt;：P7000Z&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;电源&lt;/strong&gt;：海韵 650W &lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;机箱&lt;/strong&gt;：长城阿基米德 7b（13 个 3.5 存机械，8 个 2.5 寸 sata 位）&lt;/li&gt;
+&lt;/ul&gt;</summary>
+    
+    
+    
+    <category term="timeline" scheme="https://blog.newreport.top/categories/timeline/"/>
+    
+    
+    <category term="NFS" scheme="https://blog.newreport.top/tags/NFS/"/>
+    
+    <category term="Containerd" scheme="https://blog.newreport.top/tags/Containerd/"/>
+    
+    <category term="Docker" scheme="https://blog.newreport.top/tags/Docker/"/>
+    
+    <category term="Windows" scheme="https://blog.newreport.top/tags/Windows/"/>
+    
+  </entry>
+  
+  <entry>
     <title>设置 Podman 开机自动动容器</title>
     <link href="https://blog.newreport.top/2023-06/linux-reboot-auto-launch-podman/"/>
     <id>https://blog.newreport.top/2023-06/linux-reboot-auto-launch-podman/</id>
     <published>2023-06-14T16:00:01.000Z</published>
-    <updated>2023-06-19T09:40:29.345Z</updated>
+    <updated>2023-07-12T06:39:46.372Z</updated>
     
     
       
@@ -49,11 +95,91 @@
   </entry>
   
   <entry>
+    <title>Docker 应用清单</title>
+    <link href="https://blog.newreport.top/2023-04/kubernetes-1-24-inside-install/"/>
+    <id>https://blog.newreport.top/2023-04/kubernetes-1-24-inside-install/</id>
+    <published>2023-04-18T16:00:01.000Z</published>
+    <updated>2023-07-12T06:39:49.236Z</updated>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;lsky&quot;&gt;&lt;a href=&quot;#lsky&quot; class=&quot;headerlink&quot; title=&quot;lsky&quot;&gt;&lt;/a&gt;&lt;span class=&quot;exturl&quot; data-url=&quot;aHR0cHM6Ly9naXRodWIuY29tL2xza3ktb3JnL2xza3ktcHJv&quot;&gt;lsky&lt;i class=&quot;fa fa-external-link-alt&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;兰空图床&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;span class=&quot;exturl&quot; data-url=&quot;aHR0cHM6Ly9sc2t5LnZ0YmFpLmNvbS8=&quot;&gt;https://lsky.vtbai.com/&lt;i class=&quot;fa fa-external-link-alt&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&quot;memos&quot;&gt;&lt;a href=&quot;#memos&quot; class=&quot;headerlink&quot; title=&quot;memos&quot;&gt;&lt;/a&gt;&lt;span class=&quot;exturl&quot; data-url=&quot;aHR0cHM6Ly9naXRodWIuY29tL3VzZW1lbW9zL21lbW9z&quot;&gt;memos&lt;i class=&quot;fa fa-external-link-alt&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;便签&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;span class=&quot;exturl&quot; data-url=&quot;aHR0cHM6Ly9tZW1vcy52dGJhaS5jb20v&quot;&gt;https://memos.vtbai.com/&lt;i class=&quot;fa fa-external-link-alt&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="kubernetes/docker/podman" scheme="https://blog.newreport.top/categories/kubernetes-docker-podman/"/>
+    
+    
+    <category term="Containerd" scheme="https://blog.newreport.top/tags/Containerd/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Linux 配置 SSH Key</title>
+    <link href="https://blog.newreport.top/2023-03/linux-setting-ssh-key/"/>
+    <id>https://blog.newreport.top/2023-03/linux-setting-ssh-key/</id>
+    <published>2023-03-29T16:00:01.000Z</published>
+    <updated>2023-07-12T06:39:51.468Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;ol&gt;
+&lt;li&gt;putty 生成 key&lt;/li&gt;
+&lt;li&gt;允许 root 密钥登陆&lt;ol&gt;
+&lt;li&gt;&lt;blockquote&gt;
+&lt;p&gt;&amp;#x2F;etc&amp;#x2F;ssh&amp;#x2F;sshd_config</summary>
+        
+      
+    
+    
+    
+    <category term="linux" scheme="https://blog.newreport.top/categories/linux/"/>
+    
+    
+    <category term="SSH" scheme="https://blog.newreport.top/tags/SSH/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Ubuntu 2204 安装 Docker</title>
+    <link href="https://blog.newreport.top/2023-03/ubuntu-2204-install-docker-and-link-portainer/"/>
+    <id>https://blog.newreport.top/2023-03/ubuntu-2204-install-docker-and-link-portainer/</id>
+    <published>2023-03-28T16:00:03.000Z</published>
+    <updated>2023-07-12T06:39:53.780Z</updated>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;&lt;span class=&quot;exturl&quot; data-url=&quot;aHR0cHM6Ly9kb2NzLmRvY2tlci5jb20vZW5naW5lL2luc3RhbGwvdWJ1bnR1Lw==&quot;&gt;https://docs.docker.com/engine/install/ubuntu/&lt;i class=&quot;fa fa-external-link-alt&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="kubernetes/docker/podman" scheme="https://blog.newreport.top/categories/kubernetes-docker-podman/"/>
+    
+    
+    <category term="Docker" scheme="https://blog.newreport.top/tags/Docker/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Ubuntu 安装 Docker Chrome 并远程（openai、newbing）</title>
     <link href="https://blog.newreport.top/2023-03/ubuntu-install-chrome-remote-openai-newbing/"/>
     <id>https://blog.newreport.top/2023-03/ubuntu-install-chrome-remote-openai-newbing/</id>
     <published>2023-03-28T16:00:02.000Z</published>
-    <updated>2023-07-12T06:30:43.524Z</updated>
+    <updated>2023-07-12T06:40:00.648Z</updated>
     
     
       
@@ -81,7 +207,7 @@
     <link href="https://blog.newreport.top/2023-03/docker-migration/"/>
     <id>https://blog.newreport.top/2023-03/docker-migration/</id>
     <published>2023-03-28T16:00:01.000Z</published>
-    <updated>2023-06-19T09:40:29.345Z</updated>
+    <updated>2023-07-12T06:40:03.424Z</updated>
     
     
       
@@ -102,11 +228,41 @@
   </entry>
   
   <entry>
+    <title>WSL2 迁移 Docker</title>
+    <link href="https://blog.newreport.top/2023-03/docker-transfer-in-wsl2/"/>
+    <id>https://blog.newreport.top/2023-03/docker-transfer-in-wsl2/</id>
+    <published>2023-03-27T16:00:01.000Z</published>
+    <updated>2023-07-12T06:40:05.756Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;迁移前关闭 Docker Desktop&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span</summary>
+        
+      
+    
+    
+    
+    <category term="kubernetes/docker/podman" scheme="https://blog.newreport.top/categories/kubernetes-docker-podman/"/>
+    
+    
+    <category term="Docker" scheme="https://blog.newreport.top/tags/Docker/"/>
+    
+    <category term="WSL2" scheme="https://blog.newreport.top/tags/WSL2/"/>
+    
+  </entry>
+  
+  <entry>
     <title>WIN NAS 的安装及使用</title>
     <link href="https://blog.newreport.top/2023-03/windows-server-2022-nas-init/"/>
     <id>https://blog.newreport.top/2023-03/windows-server-2022-nas-init/</id>
     <published>2023-03-23T16:00:01.000Z</published>
-    <updated>2023-07-12T06:31:16.104Z</updated>
+    <updated>2023-07-12T06:40:09.004Z</updated>
     
     
     <summary type="html">&lt;blockquote&gt;
@@ -514,125 +670,6 @@
     <category term="Domain" scheme="https://blog.newreport.top/tags/Domain/"/>
     
     <category term="Http" scheme="https://blog.newreport.top/tags/Http/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Kubernetes 1.24 内网部署</title>
-    <link href="https://blog.newreport.top/2022-07/kubernetes-1-24-inside-install/"/>
-    <id>https://blog.newreport.top/2022-07/kubernetes-1-24-inside-install/</id>
-    <published>2022-07-26T16:00:01.000Z</published>
-    <updated>2023-05-09T02:21:27.769Z</updated>
-    
-    
-    <summary type="html">&lt;h1 id=&quot;环境介绍&quot;&gt;&lt;a href=&quot;#环境介绍&quot; class=&quot;headerlink&quot; title=&quot;环境介绍&quot;&gt;&lt;/a&gt;环境介绍&lt;/h1&gt;&lt;blockquote&gt;
-&lt;p&gt;master：成都区 2 核 4G    10.0.0.17&lt;br&gt;cd001：成都区 2 核 4G     10.0.0.11&lt;br&gt;主机：两台腾讯云轻量云，系统为 CentOS Stream8，轻量云不支持 EIP 故不能公网搭 K8s&lt;br&gt;Kubernetes 版本：V1.24.3（截至 2022-08-02，当前 k8s 最新版本为 1.24.3）&lt;/p&gt;
-&lt;/blockquote&gt;</summary>
-    
-    
-    
-    <category term="kubernetes/docker/podman" scheme="https://blog.newreport.top/categories/kubernetes-docker-podman/"/>
-    
-    
-    <category term="NFS" scheme="https://blog.newreport.top/tags/NFS/"/>
-    
-    <category term="Nginx" scheme="https://blog.newreport.top/tags/Nginx/"/>
-    
-    <category term="MySQL" scheme="https://blog.newreport.top/tags/MySQL/"/>
-    
-    <category term="Containerd" scheme="https://blog.newreport.top/tags/Containerd/"/>
-    
-    <category term="K8s" scheme="https://blog.newreport.top/tags/K8s/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>列表简介</title>
-    <link href="https://blog.newreport.top/2021-06/list-introduction/"/>
-    <id>https://blog.newreport.top/2021-06/list-introduction/</id>
-    <published>2021-06-22T16:00:01.000Z</published>
-    <updated>2023-06-19T09:40:29.345Z</updated>
-    
-    
-    <summary type="html">&lt;h1 id=&quot;列表是什么&quot;&gt;&lt;a href=&quot;#列表是什么&quot; class=&quot;headerlink&quot; title=&quot;列表是什么&quot;&gt;&lt;/a&gt;列表是什么&lt;/h1&gt;&lt;p&gt;类似于 c 的数组&lt;/p&gt;
-&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;vim 19.py&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;bicycles = [&lt;span class=&quot;string&quot;&gt;&amp;#x27;trek&amp;#x27;&lt;/span&gt;,&lt;span class=&quot;string&quot;&gt;&amp;#x27;cannondale&amp;#x27;&lt;/span&gt;,&lt;span class=&quot;string&quot;&gt;&amp;#x27;redline&amp;#x27;&lt;/span&gt;,&lt;span class=&quot;string&quot;&gt;&amp;#x27;specialized&amp;#x27;&lt;/span&gt;]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;print&lt;/span&gt;(bicycles)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;figure class=&quot;highlight txt&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;[&amp;#x27;trek&amp;#x27;, &amp;#x27;cannondale&amp;#x27;, &amp;#x27;redline&amp;#x27;, &amp;#x27;specialized&amp;#x27;]&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
-    
-    
-    
-    <category term="python" scheme="https://blog.newreport.top/categories/python/"/>
-    
-    <category term="python3 手册" scheme="https://blog.newreport.top/categories/python/python3-%E6%89%8B%E5%86%8C/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>变量和简单数据类型</title>
-    <link href="https://blog.newreport.top/2021-06/variables-and-simple-data-types/"/>
-    <id>https://blog.newreport.top/2021-06/variables-and-simple-data-types/</id>
-    <published>2021-06-21T16:00:01.000Z</published>
-    <updated>2023-06-19T09:40:29.345Z</updated>
-    
-    
-    <summary type="html">&lt;h1 id=&quot;运行-hello-world&quot;&gt;&lt;a href=&quot;#运行-hello-world&quot; class=&quot;headerlink&quot; title=&quot;运行 hello world&quot;&gt;&lt;/a&gt;运行 hello world&lt;/h1&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;vim 1.py&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;print&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;&amp;quot;hello Python world!&amp;quot;&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;figure class=&quot;highlight txt&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;hello Python world!&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
-    
-    
-    
-    <category term="python" scheme="https://blog.newreport.top/categories/python/"/>
-    
-    <category term="python3 手册" scheme="https://blog.newreport.top/categories/python/python3-%E6%89%8B%E5%86%8C/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Python 基础知识</title>
-    <link href="https://blog.newreport.top/2021-06/python-basic-knowledge/"/>
-    <id>https://blog.newreport.top/2021-06/python-basic-knowledge/</id>
-    <published>2021-06-20T16:00:01.000Z</published>
-    <updated>2023-06-19T09:40:29.345Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;运行环境&quot;&gt;&lt;a href=&quot;#运行环境&quot; class=&quot;headerlink&quot; title=&quot;运行环境&quot;&gt;&lt;/a&gt;运行环境&lt;/h1&gt;&lt;p&gt;CentOS8.2 &amp;amp;&amp;amp; Python 3&lt;/p&gt;
-&lt;figure class=&quot;highlight</summary>
-        
-      
-    
-    
-    
-    <category term="python" scheme="https://blog.newreport.top/categories/python/"/>
-    
-    <category term="python3 手册" scheme="https://blog.newreport.top/categories/python/python3-%E6%89%8B%E5%86%8C/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>图床&quot;永久链&quot;</title>
-    <link href="https://blog.newreport.top/2021-01/img-make/"/>
-    <id>https://blog.newreport.top/2021-01/img-make/</id>
-    <published>2021-01-05T16:00:01.000Z</published>
-    <updated>2023-05-09T02:21:27.769Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;需要准备对象存储及域名，理论”永久链”图床，可在各云服务商或个人服务器间迁移数据&lt;br&gt;如果你是国外的域名，markdown 是国内使用，需要绑定国内第三方 dns，这里以&lt;span class=&quot;exturl&quot; data-url=&quot;aHR0cHM6Ly93d3cubmFtZXNpbG8uY29tLw==&quot;&gt;namesilo&lt;i class=&quot;fa fa-external-link-alt&quot;&gt;&lt;/i&gt;&lt;/span&gt;域名绑定&lt;span class=&quot;exturl&quot; data-url=&quot;aHR0cHM6Ly93d3cuZG5zcG9kLmNuLw==&quot;&gt;dnspod&lt;i class=&quot;fa fa-external-link-alt&quot;&gt;&lt;/i&gt;&lt;/span&gt;为例。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="timeline" scheme="https://blog.newreport.top/categories/timeline/"/>
-    
-    
-    <category term="Domain" scheme="https://blog.newreport.top/tags/Domain/"/>
-    
-    <category term="Object Storage" scheme="https://blog.newreport.top/tags/Object-Storage/"/>
     
   </entry>
   
