@@ -1,14 +1,12 @@
-https://blog.newreport.top/2023-06/thoughts-on-home-server-configuration/
+https://blog.newreport.top/2023-02/use-chatgpt-storytelling-leads-to-gibberish-in-subsequent-conversations/
+https://blog.newreport.top/2020-12/tools/
+https://blog.newreport.top/2023-03/windows-server-2022-nas-init/
 https://blog.newreport.top/2023-03/ubuntu-install-chrome-remote-openai-newbing/
-https://blog.newreport.top/2023-03/ubuntu-2204-install-docker-and-link-portainer/
+https://blog.newreport.top/2020-12/use-hexo-next-7/
 https://blog.newreport.top/2023-06/linux-reboot-auto-launch-podman/
-https://blog.newreport.top/2023-04/kubernetes-1-24-inside-install/
-https://blog.newreport.top/2023-03/linux-setting-ssh-key/
 https://blog.newreport.top/2023-03/docker-migration/
-https://blog.newreport.top/2023-03/docker-transfer-in-wsl2/
 https://blog.newreport.top/2023-03/ubuntu-nvidia-install-stable-diffusion-webui/
 https://blog.newreport.top/2023-02/ubuntu-amd-centos-install-conda/
-https://blog.newreport.top/2023-02/use-chatgpt-storytelling-leads-to-gibberish-in-subsequent-conversations/
 https://blog.newreport.top/2023-02/amdgpu-install-stable-diffusion-webui/
 https://blog.newreport.top/2023-02/golang-i18n-CLDR/
 https://blog.newreport.top/2023-01/use-hexo-next-8-and-ali-iconfont/
@@ -19,9 +17,7 @@ https://blog.newreport.top/2021-06/variables-and-simple-data-types/
 https://blog.newreport.top/2021-06/python-basic-knowledge/
 https://blog.newreport.top/2021-01/understand-the-file-system-and-basic-operations/
 https://blog.newreport.top/2021-01/linux-basic-use/
-https://blog.newreport.top/2020-12/use-hexo-next-7/
 https://blog.newreport.top/2020-12/linux-introduction-and-installation/
-https://blog.newreport.top/2023-03/windows-server-2022-nas-init/
 https://blog.newreport.top/2022-07/kubernetes-1-24-inside-install/
 https://blog.newreport.top/2021-01/img-make/
 https://blog.newreport.top/links/index.html
@@ -38,6 +34,7 @@ https://blog.newreport.top/2021-01/make-domainname/
 https://blog.newreport.top/2021-01/c-sharp-base/
 https://blog.newreport.top/
 https://blog.newreport.top/tags/Hexo/
+https://blog.newreport.top/tags/tools/
 https://blog.newreport.top/tags/Domain/
 https://blog.newreport.top/tags/Git-Page/
 https://blog.newreport.top/tags/CloudService/
@@ -66,10 +63,7 @@ https://blog.newreport.top/tags/StableDiffusion/
 https://blog.newreport.top/tags/ChatGPT/
 https://blog.newreport.top/tags/Conda/
 https://blog.newreport.top/tags/NAS/
-https://blog.newreport.top/tags/WSL2/
-https://blog.newreport.top/tags/SSH/
 https://blog.newreport.top/tags/Podman/
-https://blog.newreport.top/tags/Windows/
 https://blog.newreport.top/categories/timeline/
 https://blog.newreport.top/categories/linux/
 https://blog.newreport.top/categories/linux/rhel8%E6%89%8B%E5%86%8C/
