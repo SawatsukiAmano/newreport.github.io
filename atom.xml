@@ -6,7 +6,7 @@
   <link href="https://blog.newreport.top/atom.xml" rel="self"/>
   
   <link href="https://blog.newreport.top/"/>
-  <updated>2023-07-12T06:41:30.468Z</updated>
+  <updated>2023-07-31T06:04:49.727Z</updated>
   <id>https://blog.newreport.top/</id>
   
   <author>
@@ -17,11 +17,36 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>C# list 转 tree</title>
+    <link href="https://blog.newreport.top/2023-07/csarp-list2tree/"/>
+    <id>https://blog.newreport.top/2023-07/csarp-list2tree/</id>
+    <published>2023-07-30T16:00:01.000Z</published>
+    <updated>2023-07-31T06:04:49.727Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;方法一&quot;&gt;&lt;a href=&quot;#方法一&quot; class=&quot;headerlink&quot; title=&quot;方法一&quot;&gt;&lt;/a&gt;方法一&lt;/h1&gt;&lt;figure class=&quot;highlight c#&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td</summary>
+        
+      
+    
+    
+    
+    <category term="timeline" scheme="https://blog.newreport.top/categories/timeline/"/>
+    
+    
+    <category term="DataStructure" scheme="https://blog.newreport.top/tags/DataStructure/"/>
+    
+  </entry>
+  
+  <entry>
     <title>关于家用服务器配置的思考</title>
     <link href="https://blog.newreport.top/2023-06/thoughts-on-home-server-configuration/"/>
     <id>https://blog.newreport.top/2023-06/thoughts-on-home-server-configuration/</id>
     <published>2023-06-18T16:00:01.000Z</published>
-    <updated>2023-07-12T06:41:30.468Z</updated>
+    <updated>2023-07-31T06:05:17.579Z</updated>
     
     
     <summary type="html">&lt;blockquote&gt;
@@ -438,7 +463,7 @@
     <link href="https://blog.newreport.top/2023-02/use-chatgpt-storytelling-leads-to-gibberish-in-subsequent-conversations/"/>
     <id>https://blog.newreport.top/2023-02/use-chatgpt-storytelling-leads-to-gibberish-in-subsequent-conversations/</id>
     <published>2023-02-15T16:00:01.000Z</published>
-    <updated>2023-07-12T06:31:35.480Z</updated>
+    <updated>2023-07-31T06:05:17.583Z</updated>
     
     
     <summary type="html">&lt;h2 id=&quot;You&quot;&gt;&lt;a href=&quot;#You&quot; class=&quot;headerlink&quot; title=&quot;You&quot;&gt;&lt;/a&gt;You&lt;/h2&gt;&lt;p&gt;讲个故事&lt;/p&gt;
@@ -641,35 +666,6 @@
     <category term="Golang" scheme="https://blog.newreport.top/tags/Golang/"/>
     
     <category term="Beego" scheme="https://blog.newreport.top/tags/Beego/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Cloudflare 301 跳转</title>
-    <link href="https://blog.newreport.top/2022-09/cloudflare-301-url/"/>
-    <id>https://blog.newreport.top/2022-09/cloudflare-301-url/</id>
-    <published>2022-09-03T16:00:01.000Z</published>
-    <updated>2023-06-19T09:40:29.345Z</updated>
-    
-    
-    <summary type="html">&lt;h1 id=&quot;购买域名、注册-cloudflare-账号&quot;&gt;&lt;a href=&quot;#购买域名、注册-cloudflare-账号&quot; class=&quot;headerlink&quot; title=&quot;购买域名、注册 cloudflare 账号&quot;&gt;&lt;/a&gt;购买域名、注册 cloudflare 账号&lt;/h1&gt;&lt;p&gt;cloudflare 官网：&lt;span class=&quot;exturl&quot; data-url=&quot;aHR0cHM6Ly93d3cuY2xvdWRmbGFyZS5jb20v&quot;&gt;https://www.cloudflare.com/&lt;i class=&quot;fa fa-external-link-alt&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;namesilo 官网：&lt;span class=&quot;exturl&quot; data-url=&quot;aHR0cHM6Ly93d3cubmFtZXNpbG8uY29tLw==&quot;&gt;https://www.namesilo.com/&lt;i class=&quot;fa fa-external-link-alt&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;dnspod 官网：&lt;span class=&quot;exturl&quot; data-url=&quot;aHR0cHM6Ly93d3cuZG5zcG9kLmNuLw==&quot;&gt;https://www.dnspod.cn/&lt;i class=&quot;fa fa-external-link-alt&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;注意：如果不想 whois 查询到个人信息，建议非主流域名在 &lt;span class=&quot;exturl&quot; data-url=&quot;aHR0cHM6Ly93d3cubmFtZXNpbG8uY29tLw==&quot;&gt;namesilo&lt;i class=&quot;fa fa-external-link-alt&quot;&gt;&lt;/i&gt;&lt;/span&gt; 购买，可以有免费的 whois 信息隐藏。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;blockquote&gt;
-&lt;p&gt;dnspod 仅支持 .com、.net 等主流的一级域名进行 whois 隐藏，但不支持如.top、.xyz、.live 等域名的信息隐藏，也就是说 whois 查询能查询到本名（开盒&lt;/p&gt;
-&lt;/blockquote&gt;</summary>
-    
-    
-    
-    <category term="timeline" scheme="https://blog.newreport.top/categories/timeline/"/>
-    
-    
-    <category term="Domain" scheme="https://blog.newreport.top/tags/Domain/"/>
-    
-    <category term="Http" scheme="https://blog.newreport.top/tags/Http/"/>
     
   </entry>
   
