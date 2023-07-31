@@ -427,6 +427,13 @@
   </url>
   
   <url>
+    <loc>https://blog.newreport.top/tags/Http/</loc>
+    <lastmod>2023-07-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://blog.newreport.top/tags/NFS/</loc>
     <lastmod>2023-07-31</lastmod>
     <changefreq>weekly</changefreq>
@@ -456,13 +463,6 @@
   
   <url>
     <loc>https://blog.newreport.top/tags/K8s/</loc>
-    <lastmod>2023-07-31</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.newreport.top/tags/Http/</loc>
     <lastmod>2023-07-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -560,13 +560,6 @@
   </url>
   
   <url>
-    <loc>https://blog.newreport.top/tags/ChatGPT/</loc>
-    <lastmod>2023-07-31</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://blog.newreport.top/tags/Conda/</loc>
     <lastmod>2023-07-31</lastmod>
     <changefreq>weekly</changefreq>
@@ -574,7 +567,7 @@
   </url>
   
   <url>
-    <loc>https://blog.newreport.top/tags/NAS/</loc>
+    <loc>https://blog.newreport.top/tags/ChatGPT/</loc>
     <lastmod>2023-07-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -582,6 +575,13 @@
   
   <url>
     <loc>https://blog.newreport.top/tags/WSL2/</loc>
+    <lastmod>2023-07-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.newreport.top/tags/NAS/</loc>
     <lastmod>2023-07-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
