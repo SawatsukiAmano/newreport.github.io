@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://blog.newreport.top/2023-07/csarp-list2tree/</loc>
+    
+    <lastmod>2023-07-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://blog.newreport.top/2023-02/use-chatgpt-storytelling-leads-to-gibberish-in-subsequent-conversations/</loc>
     
     <lastmod>2023-07-31</lastmod>
@@ -12,15 +21,6 @@
   
   <url>
     <loc>https://blog.newreport.top/2023-06/thoughts-on-home-server-configuration/</loc>
-    
-    <lastmod>2023-07-31</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.newreport.top/2023-07/csarp-list2tree/</loc>
     
     <lastmod>2023-07-31</lastmod>
     
